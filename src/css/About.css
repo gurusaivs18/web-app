@@ -1,4 +1,4 @@
-/* ─── WHO WE ARE ─────────────────────────────────────────────────────────────── */
+/* ─── WHO WE ARE ───────────────────────────────────────────── */
 .about-who {
   background: var(--white);
 }
@@ -27,7 +27,6 @@
   font-size: 18px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 1px;
   margin-bottom: 16px;
 }
 
@@ -37,7 +36,7 @@
   line-height: 1.85;
 }
 
-/* ─── VISION / MISSION / PURPOSE ────────────────────────────────────────────── */
+/* ─── VISION / MISSION / PURPOSE ───────────────────────────── */
 .vmp-section {
   background: var(--gray-light);
 }
@@ -45,30 +44,16 @@
 .vmp-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 4px;
+  gap: 20px;
 }
 
 .vmp-card {
   background: var(--gray-card);
-  border-radius: 4px;
+  border-radius: 6px;
   overflow: hidden;
 }
 
-.vmp-card-img {
-  width: 100%;
-  height: 160px;
-  background: #888;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.vmp-card-body {
-  padding: 20px;
-}
-
-/* ─── ARCHITECT SECTION (FIXED FULL OVERLAY) ───────────────────────────── */
-
+/* ─── ARCHITECT (FIXED RESPONSIVE OVERLAY) ─────────────────── */
 .architect-section {
   background: var(--white);
 }
@@ -76,7 +61,7 @@
 .architect-banner {
   position: relative;
   width: 100%;
-  height: clamp(420px, 35vw, 700px);
+  height: clamp(320px, 40vw, 650px);
   overflow: hidden;
 }
 
@@ -89,58 +74,56 @@
   object-position: center;
 }
 
-/* dark overlay */
 .architect-banner::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.35);
 }
 
 /* label */
 .architect-label {
   position: absolute;
-  top: 30px;
-  right: 40px;
+  top: 20px;
+  right: 20px;
   font-family: var(--font-heading);
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 700;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   text-transform: uppercase;
   color: var(--white);
   z-index: 3;
 }
 
-/* content overlay */
+/* content */
 .architect-content {
   position: absolute;
   inset: 0;
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
-  padding: 60px;
+  padding: 40px;
   z-index: 2;
 }
 
-/* text */
 .architect-info {
-  max-width: 420px;
+  max-width: 450px;
   text-align: right;
   color: var(--white);
 }
 
 .architect-info h3 {
   font-family: var(--font-heading);
-  font-size: 34px;
+  font-size: 30px;
   font-weight: 800;
   text-transform: uppercase;
   margin-bottom: 6px;
 }
 
 .architect-info .role {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 600;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .architect-info p {
@@ -148,37 +131,31 @@
   line-height: 1.7;
 }
 
-/* ─── DIRECTORS + PARTNERS ───────────────────────────────────────────────────── */
-
-.pillars-section {
-  background: var(--white);
-}
-
-.directors-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 200px));
-  gap: 20px;
-  justify-content: center;
-}
-
+/* ─── DIRECTORS (FIXED PERFECT ALIGNMENT) ─────────────────── */
+.directors-grid,
 .directors-grid-2 {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 200px));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
   justify-content: center;
+  align-items: stretch;
 }
 
+/* ─── PARTNERS (FIXED GRID) ───────────────────────────────── */
 .partners-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 20px;
 }
 
-/* cards */
+/* ─── CARD DESIGN (UNIFIED FIX) ───────────────────────────── */
 .director-card {
-  border: 4px solid #9c9c9c;
-  border-radius: 2px;
+  border: 3px solid #9c9c9c;
+  border-radius: 6px;
   overflow: hidden;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
 }
 
 .director-photo {
@@ -186,6 +163,7 @@
   height: 220px;
   background: #d9d9d9;
   position: relative;
+  flex-shrink: 0;
 }
 
 .director-label {
@@ -195,18 +173,37 @@
   background: #a3161c;
   color: #fff;
   text-align: center;
-  padding: 14px 0;
+  padding: 12px 0;
   font-family: var(--font-heading);
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
 }
 
-/* ─── RESPONSIVE FIX ───────────────────────────────────────────────────────── */
+.director-name {
+  font-weight: 700;
+  padding: 10px 12px 0;
+  text-align: center;
+}
 
+.director-role-text {
+  font-size: 13px;
+  color: #666;
+  text-align: center;
+  padding: 4px 12px;
+}
+
+.director-desc {
+  font-size: 12px;
+  color: #777;
+  text-align: center;
+  padding: 8px 12px 16px;
+  line-height: 1.5;
+}
+
+/* ─── RESPONSIVE FIXES ───────────────────────────────────── */
 @media (max-width: 900px) {
   .about-who-grid {
     grid-template-columns: 1fr;
-    gap: 30px;
   }
 
   .vmp-grid {
@@ -215,45 +212,41 @@
 }
 
 @media (max-width: 768px) {
-  /* 🔥 KEEP OVERLAY INSTEAD OF BREAKING IT */
-  .architect-content {
-    padding: 30px;
-  }
-
-  .architect-info {
-    max-width: 80%;
-  }
-
-  .architect-label {
-    top: 15px;
-    right: 15px;
-    font-size: 12px;
-  }
-}
-
-@media (max-width: 480px) {
   .architect-content {
     padding: 20px;
   }
 
   .architect-info {
-    max-width: 90%;
+    max-width: 85%;
   }
 
   .architect-info h3 {
     font-size: 22px;
   }
 
-  .architect-info .role {
-    font-size: 13px;
-  }
-
   .architect-info p {
     font-size: 13px;
   }
+}
 
-  .partners-grid {
+@media (max-width: 480px) {
+  .architect-content {
+    padding: 15px;
+  }
+
+  .architect-label {
+    font-size: 12px;
+    top: 10px;
+    right: 10px;
+  }
+
+  .architect-info {
+    max-width: 95%;
+  }
+
+  .partners-grid,
+  .directors-grid,
+  .directors-grid-2 {
     grid-template-columns: 1fr;
   }
 }
-
