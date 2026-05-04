@@ -1,0 +1,378 @@
+/* ─── WHO WE ARE ─────────────────────────────────────────────────────────────── */
+.about-who {
+  background: var(--white);
+}
+
+.about-who-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.about-who-img-placeholder {
+  width: 100%;
+  height: 280px;
+  background: #bbb;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 13px;
+}
+
+.about-who-text h3 {
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+}
+
+.about-who-text p {
+  font-size: 14px;
+  color: var(--text-mid);
+  line-height: 1.85;
+}
+
+/* ─── VISION / MISSION / PURPOSE ────────────────────────────────────────────── */
+.vmp-section {
+  background: var(--gray-light);
+}
+
+.vmp-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+}
+
+.vmp-card {
+  background: var(--gray-card);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.vmp-card-img {
+  width: 100%;
+  height: 160px;
+  background: #888;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vmp-card-body {
+  padding: 20px;
+}
+
+.vmp-card-body h3 {
+  font-family: var(--font-heading);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.vmp-card-body p {
+  font-size: 13px;
+  color: var(--text-mid);
+  line-height: 1.7;
+}
+
+/* ─── ARCHITECT SECTION ──────────────────────────────────────────────────────── */
+.architect-section {
+  background: var(--white);
+}
+
+.architect-banner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.architect-banner-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  z-index: 0;
+}
+
+.architect-label {
+  position: absolute;
+  top: 28px;
+  right: 36px;
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #000;
+  z-index: 3;
+}
+
+.architect-content {
+  position: relative;
+  z-index: 2;
+  min-height: 520px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 52px;
+  box-sizing: border-box;
+}
+
+.architect-info {
+  max-width: 400px;
+  text-align: right;
+}
+
+.architect-info h3 {
+  font-family: var(--font-heading);
+  font-size: 32px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #000;
+  margin-bottom: 6px;
+  line-height: 1.15;
+}
+
+.architect-info .role {
+  font-family: var(--font-heading);
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #000;
+  margin-bottom: 14px;
+}
+
+.architect-info p {
+  font-size: 16px;
+  line-height: 1.75;
+  color: #000;
+}
+
+/* ─── DIRECTORS + PARTNERS ───────────────────────────────────────────────────── */
+
+.pillars-section {
+  background: var(--white);
+}
+
+.directors-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 200px));
+  gap: 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.directors-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 200px));
+  gap: 20px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.partners-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* CARD */
+.director-card {
+  border: 4px solid #9c9c9c;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+/* IMAGE AREA */
+.director-photo {
+  width: 100%;
+  height: 220px;
+  background: #d9d9d9;
+  position: relative;
+}
+
+/* RED STRIP */
+.director-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #a3161c;
+  color: #fff;
+  text-align: center;
+  padding: 14px 0;
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.director-name {
+  padding: 14px 16px 4px;
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.director-role-text {
+  padding: 0 16px 14px;
+  font-size: 12px;
+  color: var(--red);
+  font-weight: 600;
+}
+
+.director-desc {
+  padding: 0 16px 14px;
+  font-size: 12px;
+  color: var(--text-mid);
+  line-height: 1.6;
+}
+
+/* ─── RESPONSIVE ─────────────────────────────────────────────────────────────── */
+
+@media (max-width: 900px) {
+  .about-who-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .vmp-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .architect-content {
+    min-height: 420px;
+    padding: 32px 28px;
+  }
+
+  .architect-info {
+    text-align: right;
+    max-width: 45%;
+  }
+
+  .architect-label {
+    top: 20px;
+    right: 20px;
+  }
+
+  .directors-grid {
+    grid-template-columns: repeat(2, minmax(0, 200px));
+  }
+
+  .directors-grid-2 {
+    grid-template-columns: repeat(2, minmax(0, 200px));
+  }
+
+  .partners-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .architect-content {
+    min-height: 320px;
+    padding: 20px 18px;
+  }
+
+  .architect-info {
+    max-width: 50%;
+    text-align: right;
+  }
+
+  .architect-info h3 {
+    font-size: 16px;
+  }
+
+  .architect-info .role {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+  }
+
+  .architect-info p {
+    font-size: 12px;
+  }
+
+  .architect-label {
+    top: 14px;
+    right: 14px;
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+
+  .directors-grid {
+    grid-template-columns: repeat(2, minmax(0, 200px));
+  }
+
+  .directors-grid-2 {
+    grid-template-columns: repeat(2, minmax(0, 200px));
+  }
+
+  .partners-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 380px) {
+  .architect-content {
+    min-height: 260px;
+    padding: 16px 12px;
+  }
+
+  .architect-info {
+    max-width: 55%;
+  }
+
+  .architect-info h3 {
+    font-size: 14px;
+  }
+
+  .directors-grid {
+    grid-template-columns: minmax(0, 200px);
+  }
+
+  .directors-grid-2 {
+    grid-template-columns: minmax(0, 200px);
+  }
+
+  .partners-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 320px) {
+  .architect-content {
+    min-height: 240px;
+    padding: 14px 10px;
+  }
+
+  .architect-info {
+    max-width: 60%;
+  }
+
+  .architect-info h3 {
+    font-size: 13px;
+  }
+
+  .architect-info .role {
+    font-size: 10px;
+  }
+
+  .architect-info p {
+    font-size: 11px;
+  }
+}

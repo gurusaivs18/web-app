@@ -1,0 +1,148 @@
+.footer {
+  background: #0f0f0f;
+  color: #fff;
+  padding: 60px 20px 20px;
+}
+
+/* container fix */
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* =========================
+   TOP SECTION (DESKTOP)
+========================= */
+.footer-top {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 50px;
+}
+
+/* COLUMN */
+.footer-col {
+  display: flex;
+  flex-direction: column;
+}
+
+/* HEADINGS */
+.footer-col h4 {
+  font-family: var(--font-heading);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+/* ADDRESS */
+.footer-address p {
+  font-family: var(--font-heading);
+  font-size: 14.5px;
+  letter-spacing: 0.3px;
+  color: #bbb;
+  margin: 4px 0;
+}
+
+/* LINKS */
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+/* link base */
+.footer-col ul li a {
+  font-family: var(--font-heading);
+  font-size: 14.5px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+
+  position: relative;
+  color: #bbb;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* underline animation */
+.footer-col ul li a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: red;
+  transform: translateX(-50%);
+  transition: width 0.35s ease;
+}
+
+.footer-col ul li a:hover {
+  color: red;
+}
+
+.footer-col ul li a:hover::after {
+  width: 100%;
+}
+
+/* SOCIAL */
+.footer-social {
+  display: flex;
+  gap: 12px;
+}
+
+.footer-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #1c1c1c;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.footer-social a:hover {
+  background: red;
+  transform: translateY(-3px);
+}
+
+/* BOTTOM */
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 15px;
+  border-top: 1px solid #222;
+  color: #777;
+  font-size: 13px;
+}
+
+/* =========================
+   📱 TABLET (≤ 992px)
+========================= */
+@media (max-width: 992px) {
+  .footer-top {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+}
+
+/* =========================
+   📱 MOBILE (≤ 600px)
+========================= */
+@media (max-width: 600px) {
+  .footer-top {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+}

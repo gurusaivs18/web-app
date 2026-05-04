@@ -1,0 +1,67 @@
+.company-logo {
+  height: 55px;
+  width: auto;
+  display: block;
+  margin-right: 0 auto;
+}
+.logo-link {
+  display: flex;
+  align-items: center;
+}
+
+/* 
+
+
+
+
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.company-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1;
+  user-select: none;
+}
+
+.logo-top {
+  display: flex;
+  align-items: baseline;
+  font-family: "Arial Black", "Franklin Gothic Heavy", "Impact", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+  font-size: 38px;
+  letter-spacing: -1px;
+  line-height: 1;
+}
+
+.logo-j,
+.logo-b {
+  color: #ffffff;
+  -webkit-text-stroke: 1.5px #1a1a1a;
+}
+
+.logo-s {
+  color: #8b1a1a; 
+  -webkit-text-stroke: 0px;
+}
+
+.logo-bottom {
+  font-family: "Arial Black", "Franklin Gothic Heavy", "Impact", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+  font-size: 20px;
+  letter-spacing: 2px;
+  color: #ffffff;
+  -webkit-text-stroke: 1px #1a1a1a;
+  line-height: 1;
+  margin-top: -2px;
+
+  width: 100%;
+}
+ */
