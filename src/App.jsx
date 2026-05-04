@@ -10,7 +10,7 @@ import Newsroom from "./pages/Newsroom";
 import "./css/global.css";
 import Home from "./pages/Home";
 import ContactUs from "./pages/ContactUs";
-import ScrollToTop from "./Components/ScrollToTop";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (

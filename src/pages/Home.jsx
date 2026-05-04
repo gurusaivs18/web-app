@@ -116,7 +116,8 @@ function Home() {
     );
     if (sectionRef.current) observer.observe(sectionRef.current);
     return () => {
-      clearTimeout(resetTimer);``
+      clearTimeout(resetTimer);
+      ``;
       observer.disconnect();
     };
   }, []);
