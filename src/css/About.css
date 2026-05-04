@@ -67,28 +67,12 @@
   padding: 20px;
 }
 
-.vmp-card-body h3 {
-  font-family: var(--font-heading);
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-}
-
-.vmp-card-body p {
-  font-size: 13px;
-  color: var(--text-mid);
-  line-height: 1.7;
-}
-
-/* ─── ARCHITECT SECTION ─────────────────────────────────────────────────────── */
+/* ─── ARCHITECT SECTION (FIXED FULL OVERLAY) ───────────────────────────── */
 
 .architect-section {
   background: var(--white);
 }
 
-/* banner */
 .architect-banner {
   position: relative;
   width: 100%;
@@ -96,7 +80,6 @@
   overflow: hidden;
 }
 
-/* image */
 .architect-banner-bg {
   position: absolute;
   inset: 0;
@@ -104,16 +87,14 @@
   height: 100%;
   object-fit: cover;
   object-position: center;
-  z-index: 0;
 }
 
-/* overlay */
+/* dark overlay */
 .architect-banner::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.25);
-  z-index: 1;
+  background: rgba(0, 0, 0, 0.3);
 }
 
 /* label */
@@ -130,16 +111,15 @@
   z-index: 3;
 }
 
-/* content */
+/* content overlay */
 .architect-content {
-  position: relative;
-  z-index: 2;
-  height: 100%;
+  position: absolute;
+  inset: 0;
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
   padding: 60px;
-  box-sizing: border-box;
+  z-index: 2;
 }
 
 /* text */
@@ -155,14 +135,12 @@
   font-weight: 800;
   text-transform: uppercase;
   margin-bottom: 6px;
-  line-height: 1.2;
 }
 
 .architect-info .role {
   font-size: 16px;
   font-weight: 600;
   margin-bottom: 12px;
-  text-transform: uppercase;
 }
 
 .architect-info p {
@@ -180,7 +158,6 @@
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 200px));
   gap: 20px;
-  margin: 20px 0;
   justify-content: center;
 }
 
@@ -188,7 +165,6 @@
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 200px));
   gap: 20px;
-  margin: 20px 0;
   justify-content: center;
 }
 
@@ -198,7 +174,7 @@
   gap: 20px;
 }
 
-/* CARD */
+/* cards */
 .director-card {
   border: 4px solid #9c9c9c;
   border-radius: 2px;
@@ -215,7 +191,6 @@
 .director-label {
   position: absolute;
   bottom: 0;
-  left: 0;
   width: 100%;
   background: #a3161c;
   color: #fff;
@@ -224,32 +199,9 @@
   font-family: var(--font-heading);
   font-size: 18px;
   font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
 }
 
-.director-name {
-  padding: 14px 16px 4px;
-  font-family: var(--font-heading);
-  font-size: 13px;
-  font-weight: 700;
-}
-
-.director-role-text {
-  padding: 0 16px 14px;
-  font-size: 12px;
-  color: var(--red);
-  font-weight: 600;
-}
-
-.director-desc {
-  padding: 0 16px 14px;
-  font-size: 12px;
-  color: var(--text-mid);
-  line-height: 1.6;
-}
-
-/* ─── RESPONSIVE (CLEANED) ─────────────────────────────────────────────────── */
+/* ─── RESPONSIVE FIX ───────────────────────────────────────────────────────── */
 
 @media (max-width: 900px) {
   .about-who-grid {
@@ -260,57 +212,34 @@
   .vmp-grid {
     grid-template-columns: 1fr;
   }
-
-  .architect-content {
-    align-items: center;
-    padding: 40px 24px;
-  }
-
-  .architect-info {
-    max-width: 420px;
-  }
-
-  .directors-grid {
-    grid-template-columns: repeat(2, minmax(0, 200px));
-  }
-
-  .directors-grid-2 {
-    grid-template-columns: repeat(2, minmax(0, 200px));
-  }
-
-  .partners-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
 
 @media (max-width: 768px) {
-  .architect-banner {
-    height: auto;
-  }
-
-  .architect-banner-bg {
-    position: relative;
-    height: 260px;
-  }
-
+  /* 🔥 KEEP OVERLAY INSTEAD OF BREAKING IT */
   .architect-content {
-    position: static;
-    display: block;
-    padding: 20px;
+    padding: 30px;
   }
 
   .architect-info {
-    max-width: 100%;
-    text-align: left;
-    color: var(--text-dark);
+    max-width: 80%;
   }
 
-  .architect-banner::after {
-    display: none;
+  .architect-label {
+    top: 15px;
+    right: 15px;
+    font-size: 12px;
   }
 }
 
 @media (max-width: 480px) {
+  .architect-content {
+    padding: 20px;
+  }
+
+  .architect-info {
+    max-width: 90%;
+  }
+
   .architect-info h3 {
     font-size: 22px;
   }
@@ -327,3 +256,4 @@
     grid-template-columns: 1fr;
   }
 }
+
