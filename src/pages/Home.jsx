@@ -137,23 +137,28 @@ function Home() {
       </section>
 
       {/* CEO — no section class, image section bleeds edge to edge with no extra padding */}
-      <section className="ceo-section">
-        <div className="ceo-content">
-          <img src={ceoImage} alt="CEO" className="ceo-img" loading="lazy" />
-          <div className="ceo-info">
-            <h3>Neelesh Bhatnagar</h3>
-            <p className="ceo-role">CEO & Founder</p>
-            <p>
-              Entrepreneur with over three decades of experience spanning the
-              Middle East and India.
-            </p>
-            <a href="/about" className="read-more-link">
-              Read More
-            </a>
-          </div>
-        </div>
-      </section>
+<section className="ceo-section">
+  <div className="ceo-content">
+    <img
+      src={ceoImage}
+      alt="Neelesh Bhatnagar"
+      className="ceo-img"
+      loading="lazy"
+    />
 
+    <div className="ceo-info">
+      <h3>Neelesh Bhatnagar</h3>
+      <p className="ceo-role">CEO & Founder</p>
+      <p>
+        Entrepreneur with over three decades of experience spanning the
+        Middle East and India.
+      </p>
+      <a href="/about" className="read-more-link">
+        Read More
+      </a>
+    </div>
+  </div>
+</section>
       {/* VERTICALS — no section class, padding controlled in CSS */}
       <section className="home-verticals-logos">
         <div className="container">
