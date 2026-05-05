@@ -1,6 +1,5 @@
 /* =================================================================
    HOME.CSS  –  JSB Group Homepage
-   Strictly follows the approved website design (PDF v3.2)
    ================================================================= */
 
 /* ================= INTRO ================= */
@@ -28,12 +27,6 @@
   text-align: center;
 }
 
-/* ================= CEO SECTION ================= */
-/*
-  Design: full-width two-column strip.
-  Left (~30%): CEO photo, no gap to left edge but contained in the layout.
-  Right (~70%): light off-white / very light gray panel with text left-aligned.
-*/
 /* ================= CEO SECTION ================= */
 .ceo-section {
   width: 100%;
@@ -105,7 +98,6 @@
   width: 100%;
 }
 
-/* ── CEO RESPONSIVE ── */
 @media (max-width: 768px) {
   .ceo-content {
     height: 320px;
@@ -133,101 +125,380 @@
     right: 15px;
   }
 }
-/* ================= VERTICALS LOGOS ================= */
+
+/* ================= DIRECTORS SLIDER ================= */
+.directors-section {
+  background: var(--white);
+  padding: 60px 0 50px;
+}
+
+.directors-slider-wrap {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.dir-arrow {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid var(--red);
+  background: transparent;
+  color: var(--red);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.2s ease,
+    box-shadow 0.25s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.dir-arrow:hover {
+  background: var(--red);
+  color: var(--white);
+  transform: scale(1.08);
+  box-shadow: 0 6px 20px rgba(200, 0, 0, 0.25);
+}
+
+/* =========================
+   FIXED CARD GRID SYSTEM
+========================= */
+
+.director-card {
+  background: var(--gray-light);
+  border-radius: 10px;
+
+  height: 320px;
+  flex: 0 0 320px;
+
+  padding: 26px 22px;
+
+  display: flex;
+  flex-direction: column;
+
+  box-sizing: border-box;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+/* KEY FIX: creates a shared LEFT COLUMN SYSTEM */
+.director-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--red);
+  color: var(--white);
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 800;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 10px;
+}
+
+/* THIS IS THE REAL FIX (alignment system) */
+.director-allign {
+  display: flex;
+  flex-direction: column;
+
+  /* IMPORTANT: forces same column start */
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  width: 100%;
+  padding-left: 0;
+  margin-left: 0;
+
+  gap: 4px;
+}
+
+/* NAME FIXED ALIGNMENT */
+.director-name {
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--text-dark);
+
+  margin: 0;
+  line-height: 1.6;
+
+  /* KEY: ensures identical starting axis */
+  align-self: flex-start;
+}
+
+/* ROLE */
+.director-role {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--red);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+
+  margin: 0;
+  align-self: flex-start;
+}
+
+/* BIO */
+.director-bio {
+  font-size: 12px;
+  color: var(--text-mid);
+  line-height: 1.6;
+
+  margin: 4px 0 0;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+
+  flex: 1;
+
+  align-self: flex-start;
+}
+
+/* VIEW MORE FIXED ALIGNMENT */
+.director-know-more {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--red);
+  text-decoration: none;
+  letter-spacing: 0.3px;
+
+  margin-top: auto;
+
+  /* CRITICAL: same starting axis as name */
+  align-self: flex-start;
+}
+
+/* =========================
+   MARQUEE (UNCHANGED LOGIC)
+========================= */
+
+.directors-marquee {
+  overflow: hidden;
+  width: 100%;
+  margin-top: 30px;
+
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 6%,
+    black 94%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 6%,
+    black 94%,
+    transparent 100%
+  );
+}
+
+.directors-track-marquee {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  animation: directorScroll 35s linear infinite;
+}
+
+.directors-track-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* FIXED CARD WIDTH CONSISTENCY */
+.director-card {
+  flex: 0 0 320px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .director-card {
+    flex: 0 0 280px;
+    height: 320px;
+  }
+
+  .dir-arrow {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 580px) {
+  .director-card {
+    flex: 0 0 260px;
+    height: 320px;
+  }
+
+  .dir-arrow {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+@keyframes directorScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+/* ================= VERTICALS AUTO-SLIDER ================= */
 .home-verticals-logos {
   background: var(--white);
   padding: 60px 0 60px;
+  overflow: hidden;
 }
-.brand-logo-strip {
+
+.verticals-slider-outer {
+  overflow: hidden;
+  width: 100%;
+  margin-top: 36px;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 6%,
+    black 94%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 6%,
+    black 94%,
+    transparent 100%
+  );
+}
+.verticals-track {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
+  width: max-content;
+  animation: verticalScroll 40s linear infinite;
+  align-items: stretch;
+  will-change: transform;
 }
-.brand-logo-item {
-  width: 140px;
-  height: 90px;
-  border-radius: 6px;
+.verticals-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes verticalScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Each card — fixed-width flex column */
+.vertical-slide-item {
+  width: 210px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
   background: var(--white);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transform: translateY(18px);
-  animation: fadeStagger 0.6s ease forwards;
+  border: 1px solid var(--gray-mid);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-right: 20px;
   transition:
-    transform 0.3s ease,
-    filter 0.3s ease;
+    box-shadow 0.3s,
+    transform 0.3s;
 }
-.brand-logo-item:hover {
+.vertical-slide-item:hover {
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.11);
   transform: translateY(-4px);
-  filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.12));
 }
-.brand-logo-item a {
+
+/* Logo zone — strict fixed height, nothing bleeds into text */
+.vertical-logo-box {
+  width: 100%;
+  height: 100px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 20px;
+  background: var(--white);
+  box-sizing: border-box;
+}
+.vertical-logo-box a {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   height: 100%;
-  padding: 12px 14px;
-  text-decoration: none;
 }
-.brand-logo-img-wrap {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.brand-logo-img-wrap img {
-  width: 100%;
-  height: 100%;
+.vertical-logo-box img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
   object-fit: contain;
   display: block;
-  transition: transform 0.3s ease;
-}
-.brand-logo-item:hover .brand-logo-img-wrap img {
-  transform: scale(1.06);
 }
 
-@keyframes fadeStagger {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* Divider between logo and text */
+.vertical-card-divider {
+  height: 1px;
+  background: var(--gray-mid);
+  flex-shrink: 0;
 }
 
-@media (max-width: 900px) {
-  .brand-logo-item {
-    width: 120px;
-    height: 78px;
-  }
+/* Text block — always below divider */
+.vertical-card-body {
+  padding: 14px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
 }
-@media (max-width: 600px) {
-  .brand-logo-strip {
-    gap: 14px;
-  }
-  .brand-logo-item {
-    width: calc(33.33% - 12px);
-    height: 72px;
-  }
+.vertical-brand-name {
+  font-family: var(--font-heading);
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--text-dark);
+  margin: 0;
 }
-@media (max-width: 400px) {
-  .brand-logo-item {
-    width: calc(50% - 10px);
-    height: 68px;
-  }
+.vertical-brand-desc {
+  font-size: 11px;
+  color: var(--text-mid);
+  line-height: 1.65;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.vertical-know-more {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--red);
+  text-decoration: none;
+  letter-spacing: 0.3px;
+  margin-top: auto;
+  padding-top: 6px;
+  transition: opacity 0.2s;
+  display: inline-block;
+}
+.vertical-know-more:hover {
+  opacity: 0.7;
 }
 
 /* ================= IMPACT ================= */
-/*
-  Design: full-width light-gray background band.
-  Section title centred, intro paragraph centred, then 4 stat columns.
-  Each stat: large red circle icon at top (overflows top of gray band),
-  red bold number, uppercase label, smaller description text below.
-  No card borders or shadows — statistics float directly on the gray bg.
-*/
 .home-impact {
   background: var(--gray-light);
   padding: var(--section-padding);
@@ -253,7 +524,6 @@
   padding: 0 20px 32px;
   position: relative;
 }
-/* Thin vertical separator between stat boxes (not on last) */
 .stat-box:not(:last-child)::after {
   content: "";
   position: absolute;
@@ -333,14 +603,6 @@
 }
 
 /* ================= GROUP PHOTO GRID ================= */
-/*
-  Design: white background inside container.
-  3-column layout with rounded-corner cards:
-    Col 1 (left, ~38%):   1 tall photo spanning full height
-    Col 2 (centre, ~37%): 1 square-ish photo centred vertically
-    Col 3 (right, ~25%):  2 photos stacked with a gap between them
-  All cards have border-radius: 12px and light shadow.
-*/
 .home-group-photos {
   background: var(--white);
   padding: 60px 0;
@@ -352,7 +614,6 @@
   height: clamp(320px, 36vw, 560px);
 }
 
-/* Column wrappers */
 .gp-col-left,
 .gp-col-mid {
   display: flex;
@@ -364,7 +625,6 @@
   gap: 16px;
 }
 
-/* Card base */
 .gp-card {
   border-radius: 12px;
   overflow: hidden;
@@ -383,13 +643,11 @@
   transform: scale(1.04);
 }
 
-/* Tall left card fills full grid height */
 .gp-card--tall {
   flex: 1;
   height: 100%;
 }
 
-/* Centre card is slightly shorter — aligned middle */
 .gp-col-mid {
   justify-content: center;
 }
@@ -397,12 +655,10 @@
   height: 82%;
 }
 
-/* Right stacked cards each take ~half */
 .gp-card--sm {
   flex: 1;
 }
 
-/* Placeholder shown until real photos are added */
 .group-photo-placeholder {
   width: 100%;
   height: 100%;
@@ -429,7 +685,6 @@
   opacity: 0.5;
 }
 
-/* Group photo responsive */
 @media (max-width: 900px) {
   .group-photo-grid {
     grid-template-columns: 1fr 1fr;
@@ -480,24 +735,10 @@
 }
 
 /* ================= TESTIMONIALS ================= */
-/*
-  Design: very light gray / near-white background with a subtle
-  semi-transparent tech/city image overlay (optional).
-  Left: dark bold heading "OUR CLIENT / THAT TRUST OUR SERVICE"
-        (second line in red), light subtext paragraph.
-  Right: 2 white rounded cards side-by-side, each with large red
-         opening " at top-left and closing " at bottom-right.
-*/
 .home-testimonials {
   width: 100%;
   position: relative;
   background-color: var(--gray-light);
-  /*
-    Uncomment for background image:
-    background-image: url("../assets/jsbGroupWebsite/testimonials-bg.webp");
-    background-size: cover;
-    background-position: center;
-  */
 }
 .testimonials-overlay {
   background: rgba(240, 240, 240, 0.9);
@@ -510,7 +751,6 @@
   align-items: center;
 }
 
-/* Left heading */
 .testimonials-heading {
   color: var(--text-dark);
 }
@@ -533,7 +773,6 @@
   max-width: 360px;
 }
 
-/* Right cards */
 .testimonials-cards {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -556,7 +795,6 @@
   transform: translateY(-5px);
   box-shadow: 0 12px 36px rgba(0, 0, 0, 0.13);
 }
-/* Large decorative quote marks */
 .tq-open,
 .tq-close {
   font-family: Georgia, "Times New Roman", serif;
@@ -581,7 +819,6 @@
   flex: 1;
 }
 
-/* Testimonials responsive */
 @media (max-width: 900px) {
   .testimonials-inner {
     grid-template-columns: 1fr;
@@ -601,13 +838,6 @@
 }
 
 /* ================= GET IN TOUCH ================= */
-/*
-  Design: full-width light gray section.
-  Inside container: two columns.
-    Left (~55%): dark red rounded box. YouTube icon (white circle) top-left.
-                 "GET IN TOUCH" bold white heading. Two white body paragraphs.
-    Right (~45%): plain area with 3 stacked text paragraphs.
-*/
 .home-contact {
   background: var(--gray-light);
   padding: clamp(40px, 6vw, 80px) 0;
@@ -619,7 +849,6 @@
   align-items: stretch;
 }
 
-/* Left red panel */
 .contact-red-panel {
   background: var(--red);
   border-radius: 10px;
@@ -659,7 +888,6 @@
   color: rgba(255, 255, 255, 0.85);
 }
 
-/* Right text blocks */
 .contact-text-blocks {
   display: flex;
   flex-direction: column;
@@ -678,7 +906,6 @@
   padding-bottom: 0;
 }
 
-/* Contact responsive */
 @media (max-width: 900px) {
   .contact-inner {
     grid-template-columns: 1fr;
