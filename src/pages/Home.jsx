@@ -6,6 +6,11 @@ import "../css/Home.css";
 
 import ceoImage from "../assets/jsbGroupWebsite/jsbgroupwebsite-01.webp";
 
+// ── Group photos: swap these placeholders for your real images ──
+// import groupPhoto1 from "../assets/jsbGroupWebsite/group-1.webp";
+// import groupPhoto2 from "../assets/jsbGroupWebsite/group-2.webp";
+// import groupPhoto3 from "../assets/jsbGroupWebsite/group-3.webp";
+
 import uaeBulls from "../assets/Brand-Logos/UAE bulls-2025.webp";
 import motiv8 from "../assets/Brand-Logos/Motiv8 (4).webp";
 import pressmans from "../assets/Brand-Logos/Pressmans logo (11).webp";
@@ -37,6 +42,22 @@ const brandLogos = [
   { img: pressmans, url: "https://pressmans.com/", order: 5 },
   { img: motiv8, url: "https://motiv8.ae/", order: 6 },
   { img: denaster, url: "https://www.denaster.com/", order: 7 },
+];
+
+// ── Testimonials: replace quote/author/role with real content ──
+const testimonials = [
+  {
+    quote:
+      "Working with JSB Group has been a transformative experience. Their strategic vision and hands-on approach made all the difference in our growth journey across the region.",
+    author: "Client Name",
+    role: "CEO, Partner Company",
+  },
+  {
+    quote:
+      "The JSB team brings unmatched depth of experience across sectors. Their commitment to excellence and long-term relationships sets them apart from any other group we've worked with.",
+    author: "Client Name",
+    role: "Director, Partner Company",
+  },
 ];
 
 function easeOutExpo(t) {
@@ -126,7 +147,7 @@ function Home() {
     <>
       <Hero />
 
-      {/* INTRO */}
+      {/* ── INTRO ── */}
       <section className="section home-intro">
         <div className="container">
           <div className="home-intro-text">
@@ -136,13 +157,13 @@ function Home() {
         </div>
       </section>
 
-      {/* CEO */}
+      {/* ── CEO ── */}
       <section className="ceo-section">
         <div className="ceo-content">
           <img src={ceoImage} alt="CEO" className="ceo-img" loading="lazy" />
           <div className="ceo-info">
             <h3>Neelesh Bhatnagar</h3>
-            <p className="ceo-role">CEO & Founder</p>
+            <p className="ceo-role">CEO &amp; Founder</p>
             <p>
               Entrepreneur with over three decades of experience spanning the
               Middle East and India.
@@ -154,7 +175,7 @@ function Home() {
         </div>
       </section>
 
-      {/* VERTICALS */}
+      {/* ── VERTICALS ── */}
       <section className="home-verticals-logos">
         <div className="container">
           <div className="section-title-wrap">
@@ -180,7 +201,7 @@ function Home() {
         </div>
       </section>
 
-      {/* IMPACT */}
+      {/* ── IMPACT ── */}
       <section className="section home-impact" ref={sectionRef}>
         <div className="container">
           <div className="section-title-wrap">
@@ -196,6 +217,152 @@ function Home() {
                 trigger={triggered}
               />
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── GROUP PHOTO GRID ──
+          Layout: one large image left, two stacked images right.
+          To use real photos, uncomment the <img> tags and remove the
+          .group-photo-placeholder divs. Import your images at the top of
+          this file (see commented imports above). */}
+      <section className="home-group-photos">
+        <div className="group-photo-grid">
+          {/* Left: tall primary photo */}
+          <div className="group-photo-main">
+            {/* <img src={groupPhoto1} alt="JSB Group" loading="lazy" /> */}
+            <div className="group-photo-placeholder">
+              <svg viewBox="0 0 48 48" fill="none">
+                <rect
+                  x="4"
+                  y="8"
+                  width="40"
+                  height="32"
+                  rx="3"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                />
+                <circle
+                  cx="18"
+                  cy="20"
+                  r="5"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                />
+                <path
+                  d="M4 36l10-10 8 8 8-10 14 12"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinejoin="round"
+                />
+              </svg>
+              <span>Add Group Photo</span>
+            </div>
+          </div>
+
+          {/* Right: two stacked secondary photos */}
+          <div className="group-photo-stack">
+            <div className="group-photo-secondary">
+              {/* <img src={groupPhoto2} alt="JSB Group event" loading="lazy" /> */}
+              <div className="group-photo-placeholder">
+                <svg viewBox="0 0 48 48" fill="none">
+                  <rect
+                    x="4"
+                    y="8"
+                    width="40"
+                    height="32"
+                    rx="3"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  />
+                  <circle
+                    cx="18"
+                    cy="20"
+                    r="5"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  />
+                  <path
+                    d="M4 36l10-10 8 8 8-10 14 12"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+                <span>Add Group Photo</span>
+              </div>
+            </div>
+            <div className="group-photo-secondary">
+              {/* <img src={groupPhoto3} alt="JSB Group office" loading="lazy" /> */}
+              <div className="group-photo-placeholder">
+                <svg viewBox="0 0 48 48" fill="none">
+                  <rect
+                    x="4"
+                    y="8"
+                    width="40"
+                    height="32"
+                    rx="3"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  />
+                  <circle
+                    cx="18"
+                    cy="20"
+                    r="5"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  />
+                  <path
+                    d="M4 36l10-10 8 8 8-10 14 12"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+                <span>Add Group Photo</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── TESTIMONIALS ──
+          The section uses a dark overlay. If you have a background image,
+          add it to .home-testimonials in Home.css:
+            background-image: url("../assets/jsbGroupWebsite/testimonials-bg.webp"); */}
+      <section className="home-testimonials">
+        <div className="testimonials-overlay">
+          <div className="container">
+            <div className="testimonials-inner">
+              {/* Left: heading */}
+              <div className="testimonials-heading">
+                <p className="testimonials-label">Testimonials</p>
+                <h2>
+                  Our Clients
+                  <br />
+                  <span>That Trust Our Service</span>
+                </h2>
+                <p className="testimonials-sub">
+                  Trusted by leaders across industries — our partnerships are
+                  built on results, integrity, and a shared vision for growth.
+                </p>
+              </div>
+
+              {/* Right: cards */}
+              <div className="testimonials-cards">
+                {testimonials.map((t, i) => (
+                  <div key={i} className="testimonial-card">
+                    <div className="tq-open">&#8220;</div>
+                    <p className="testimonial-text">{t.quote}</p>
+                    <div className="tq-close">&#8221;</div>
+                    <div className="testimonial-author">
+                      <strong>{t.author}</strong>
+                      <span>{t.role}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
