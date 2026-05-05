@@ -1,7 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Open+Sans:wght@400;500;600&display=swap");
+
+/* ================================================================
+   GLOBAL.CSS  –  JSB Group Website
+   Single source of truth for design tokens, resets, and utilities.
+   ================================================================ */
+
+/* ── Design tokens ── */
 :root {
+  /* Brand colours */
   --red: #b71c1c;
   --red-dark: #8b0000;
+
+  /* Neutrals */
   --black: #111111;
   --dark: #1a1a1a;
   --dark-footer: #1c1c1c;
@@ -9,80 +19,120 @@
   --gray-mid: #e0e0e0;
   --gray-card: #d9d9d9;
   --white: #ffffff;
+
+  /* Typography colours */
   --text-dark: #1a1a1a;
   --text-mid: #444444;
   --text-light: #777777;
+
+  /* Fonts */
   --font-heading: "Montserrat", sans-serif;
   --font-body: "Open Sans", sans-serif;
+
+  /* Layout */
   --max-width: 1200px;
-  --section-padding: 60px 0;
-  --section-padding-sm: 40px 0;
+  --section-padding: 80px 0;
+  --section-padding-sm: 48px 0;
 }
-* {
+
+/* ── Reset ── */
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--font-body);
   background: var(--white);
   color: var(--text-dark);
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ── Layout utilities ── */
 .container {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 0 40px;
 }
+
 .section {
   padding: var(--section-padding);
-} /* SECTION TITLE with red lines */
+}
+
+/* ── Section title with red flanking lines ── */
 .section-title-wrap {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 20px;
-  margin-bottom: 32px;
+  margin-bottom: 36px;
 }
 .section-title-wrap::before,
 .section-title-wrap::after {
   content: "";
   flex: 1;
-  max-width: 160px;
+  max-width: 180px;
   height: 2px;
   background: var(--red);
 }
 .section-title {
   font-family: var(--font-heading);
-  font-size: 22px;
-  font-weight: 700;
-  letter-spacing: 2px;
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 3px;
   text-transform: uppercase;
   color: var(--text-dark);
   white-space: nowrap;
-} /* BUTTON */
+}
+
+/* ── Primary button ── */
 .btn {
   display: inline-block;
-  padding: 12px 32px;
+  padding: 13px 36px;
   background: var(--red);
   color: var(--white);
   font-family: var(--font-heading);
   font-size: 13px;
   font-weight: 700;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
   border: none;
   cursor: pointer;
   text-decoration: none;
-  transition: background 0.2s;
+  border-radius: 2px;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
 }
 .btn:hover {
   background: var(--red-dark);
-} /* PAGE HERO (inner pages) */
+  transform: translateY(-1px);
+}
+
+/* ── Page hero (inner pages: About, Verticals, etc.) ── */
 .page-hero {
   width: 100%;
-  height: 220px;
-  background: #555;
+  height: 240px;
+  background: var(--dark);
   position: relative;
   overflow: hidden;
   display: flex;
@@ -101,26 +151,46 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.55);
 }
 .page-hero h1 {
   position: relative;
   z-index: 2;
   font-family: var(--font-heading);
-  font-size: 32px;
+  font-size: clamp(22px, 4vw, 36px);
   font-weight: 800;
-  letter-spacing: 4px;
+  letter-spacing: 5px;
   text-transform: uppercase;
   color: var(--white);
+}
+
+/* ── Responsive container ── */
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 32px;
+  }
 }
 @media (max-width: 768px) {
   .container {
     padding: 0 20px;
   }
   .section {
-    padding: 50px 0;
+    padding: var(--section-padding-sm);
   }
   .section-title {
-    font-size: 18px;
+    font-size: 17px;
+    letter-spacing: 2px;
+  }
+  .section-title-wrap {
+    gap: 14px;
+    margin-bottom: 28px;
+  }
+}
+@media (max-width: 480px) {
+  .container {
+    padding: 0 16px;
+  }
+  .page-hero {
+    height: 180px;
   }
 }

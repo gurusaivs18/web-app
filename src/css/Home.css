@@ -1,26 +1,39 @@
+/* =================================================================
+   HOME.CSS  –  JSB Group Homepage
+   Strictly follows the approved website design (PDF v3.2)
+   ================================================================= */
+
 /* ================= INTRO ================= */
 .home-intro {
   background: var(--white);
   text-align: center;
 }
 .home-intro-text {
-  max-width: 760px;
+  max-width: 820px;
   margin: 0 auto;
 }
 .home-intro-text h2 {
   font-family: var(--font-heading);
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 1px;
-  margin-bottom: 20px;
+  color: var(--text-dark);
+  margin-bottom: 24px;
 }
 .home-intro-text p {
   font-size: 14px;
   color: var(--text-mid);
-  line-height: 1.85;
+  line-height: 1.9;
+  text-align: center;
 }
 
+/* ================= CEO SECTION ================= */
+/*
+  Design: full-width two-column strip.
+  Left (~30%): CEO photo, no gap to left edge but contained in the layout.
+  Right (~70%): light off-white / very light gray panel with text left-aligned.
+*/
 /* ================= CEO SECTION ================= */
 .ceo-section {
   width: 100%;
@@ -120,26 +133,23 @@
     right: 15px;
   }
 }
-
 /* ================= VERTICALS LOGOS ================= */
 .home-verticals-logos {
   background: var(--white);
-  padding: 60px 0 0;
+  padding: 60px 0 60px;
 }
-
 .brand-logo-strip {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: stretch;
-  gap: 16px;
+  align-items: center;
+  gap: 20px;
 }
-
 .brand-logo-item {
-  width: 190px;
-  height: 120px;
-  border-radius: 8px;
-  background: var(--gray-light);
+  width: 140px;
+  height: 90px;
+  border-radius: 6px;
+  background: var(--white);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -148,11 +158,11 @@
   animation: fadeStagger 0.6s ease forwards;
   transition:
     transform 0.3s ease,
-    box-shadow 0.3s ease;
+    filter 0.3s ease;
 }
 .brand-logo-item:hover {
-  transform: translateY(-6px) scale(1.05);
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+  filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.12));
 }
 .brand-logo-item a {
   display: flex;
@@ -160,7 +170,7 @@
   justify-content: center;
   width: 100%;
   height: 100%;
-  padding: 16px 18px;
+  padding: 12px 14px;
   text-decoration: none;
 }
 .brand-logo-img-wrap {
@@ -178,29 +188,7 @@
   transition: transform 0.3s ease;
 }
 .brand-logo-item:hover .brand-logo-img-wrap img {
-  transform: scale(1.08);
-}
-
-@media (max-width: 900px) {
-  .brand-logo-item {
-    width: 160px;
-    height: 105px;
-  }
-}
-@media (max-width: 600px) {
-  .brand-logo-strip {
-    gap: 12px;
-  }
-  .brand-logo-item {
-    width: calc(50% - 8px);
-    height: 95px;
-  }
-}
-@media (max-width: 360px) {
-  .brand-logo-item {
-    width: calc(50% - 6px);
-    height: 82px;
-  }
+  transform: scale(1.06);
 }
 
 @keyframes fadeStagger {
@@ -210,122 +198,215 @@
   }
 }
 
+@media (max-width: 900px) {
+  .brand-logo-item {
+    width: 120px;
+    height: 78px;
+  }
+}
+@media (max-width: 600px) {
+  .brand-logo-strip {
+    gap: 14px;
+  }
+  .brand-logo-item {
+    width: calc(33.33% - 12px);
+    height: 72px;
+  }
+}
+@media (max-width: 400px) {
+  .brand-logo-item {
+    width: calc(50% - 10px);
+    height: 68px;
+  }
+}
+
 /* ================= IMPACT ================= */
+/*
+  Design: full-width light-gray background band.
+  Section title centred, intro paragraph centred, then 4 stat columns.
+  Each stat: large red circle icon at top (overflows top of gray band),
+  red bold number, uppercase label, smaller description text below.
+  No card borders or shadows — statistics float directly on the gray bg.
+*/
 .home-impact {
-  background: var(--white);
+  background: var(--gray-light);
+  padding: var(--section-padding);
+}
+.impact-intro {
+  text-align: center;
+  font-size: 14px;
+  color: var(--text-mid);
+  line-height: 1.85;
+  max-width: 680px;
+  margin: 0 auto 48px;
 }
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
+  gap: 0;
 }
 .stat-box {
-  background: var(--gray-light);
-  border-radius: 8px;
-  padding: 36px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
+  padding: 0 20px 32px;
+  position: relative;
+}
+/* Thin vertical separator between stat boxes (not on last) */
+.stat-box:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 60px;
+  bottom: 0;
+  width: 1px;
+  background: var(--gray-mid);
 }
 .stat-icon {
-  width: 56px;
-  height: 56px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   background: var(--red);
-  margin: 0 auto 16px;
+  margin: 0 auto 20px;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
 }
 .stat-icon svg {
-  width: 24px;
-  height: 24px;
+  width: 36px;
+  height: 36px;
   fill: var(--white);
 }
 .stat-box h2 {
   font-family: var(--font-heading);
-  font-size: 28px;
+  font-size: clamp(26px, 3vw, 36px);
   font-weight: 800;
   color: var(--red);
+  margin-bottom: 6px;
+  line-height: 1;
 }
-.stat-box p {
+.stat-label {
+  font-family: var(--font-heading);
   font-size: 11px;
-  font-weight: 700;
+  font-weight: 800;
   text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--text-dark);
+  margin-bottom: 16px;
 }
-.stat-box small {
-  font-size: 12px;
-  color: var(--text-light);
+.stat-desc {
+  font-size: 13px;
+  color: var(--text-mid);
+  line-height: 1.6;
 }
 
 @media (max-width: 900px) {
   .stats-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 32px 0;
+  }
+  .stat-box:not(:last-child)::after {
+    display: none;
+  }
+  .stat-box {
+    padding: 0 16px 24px;
   }
 }
 @media (max-width: 480px) {
   .stats-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
+    gap: 28px 0;
   }
-  .stat-box {
-    padding: 24px 14px;
+  .stat-icon {
+    width: 64px;
+    height: 64px;
+  }
+  .stat-icon svg {
+    width: 28px;
+    height: 28px;
   }
   .stat-box h2 {
-    font-size: 22px;
+    font-size: 24px;
   }
 }
 
 /* ================= GROUP PHOTO GRID ================= */
+/*
+  Design: white background inside container.
+  3-column layout with rounded-corner cards:
+    Col 1 (left, ~38%):   1 tall photo spanning full height
+    Col 2 (centre, ~37%): 1 square-ish photo centred vertically
+    Col 3 (right, ~25%):  2 photos stacked with a gap between them
+  All cards have border-radius: 12px and light shadow.
+*/
 .home-group-photos {
-  width: 100%;
-  /* No extra padding — the grid bleeds edge to edge like the CEO section */
+  background: var(--white);
+  padding: 60px 0;
 }
-
 .group-photo-grid {
   display: grid;
-  /*
-    Left column: wider (takes ~58% of width)
-    Right column: two stacked images (~42%)
-  */
-  grid-template-columns: 58fr 42fr;
-  grid-template-rows: 1fr;
-  gap: 6px;
-  height: clamp(340px, 38vw, 600px);
+  grid-template-columns: 38fr 37fr 25fr;
+  gap: 16px;
+  height: clamp(320px, 36vw, 560px);
 }
 
-/* Left: single tall image spanning full row height */
-.group-photo-main {
-  position: relative;
-  overflow: hidden;
+/* Column wrappers */
+.gp-col-left,
+.gp-col-mid {
+  display: flex;
+  flex-direction: column;
 }
-.group-photo-main img,
-.group-photo-stack img {
+.gp-col-right {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Card base */
+.gp-card {
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--gray-light);
+  position: relative;
+  flex-shrink: 0;
+}
+.gp-card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
   transition: transform 0.5s ease;
 }
-.group-photo-main:hover img,
-.group-photo-secondary:hover img {
+.gp-card:hover img {
   transform: scale(1.04);
 }
 
-/* Right column: two rows stacked */
-.group-photo-stack {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  gap: 6px;
+/* Tall left card fills full grid height */
+.gp-card--tall {
+  flex: 1;
+  height: 100%;
 }
-.group-photo-secondary {
-  position: relative;
-  overflow: hidden;
+
+/* Centre card is slightly shorter — aligned middle */
+.gp-col-mid {
+  justify-content: center;
+}
+.gp-card--mid {
+  height: 82%;
+}
+
+/* Right stacked cards each take ~half */
+.gp-card--sm {
+  flex: 1;
 }
 
 /* Placeholder shown until real photos are added */
 .group-photo-placeholder {
   width: 100%;
   height: 100%;
-  background: var(--gray-mid);
+  background: var(--gray-light);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -334,90 +415,113 @@
   color: var(--text-light);
 }
 .group-photo-placeholder svg {
-  width: 48px;
-  height: 48px;
+  width: 44px;
+  height: 44px;
   color: var(--text-light);
+  opacity: 0.5;
 }
 .group-photo-placeholder span {
   font-family: var(--font-heading);
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
+  opacity: 0.5;
 }
 
-/* ── Group photo responsive ── */
-@media (max-width: 768px) {
+/* Group photo responsive */
+@media (max-width: 900px) {
   .group-photo-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
     height: auto;
   }
-  .group-photo-main {
-    height: 260px;
+  .gp-col-left {
+    grid-column: 1;
+    grid-row: 1 / 3;
+    height: 400px;
   }
-  .group-photo-stack {
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr 1fr;
-    height: 180px;
+  .gp-col-mid {
+    grid-column: 2;
+    grid-row: 1;
+    height: 190px;
+  }
+  .gp-col-right {
+    grid-column: 2;
+    grid-row: 2;
+    height: 190px;
+    flex-direction: row;
+  }
+  .gp-card--mid {
+    height: 100%;
   }
 }
-@media (max-width: 480px) {
-  .group-photo-main {
+@media (max-width: 600px) {
+  .group-photo-grid {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+  .gp-col-left {
+    grid-column: 1;
+    grid-row: auto;
     height: 220px;
   }
-  .group-photo-stack {
-    height: 150px;
+  .gp-col-mid {
+    grid-column: 1;
+    grid-row: auto;
+    height: 180px;
+  }
+  .gp-col-right {
+    grid-column: 1;
+    grid-row: auto;
+    height: 180px;
+    flex-direction: row;
   }
 }
 
 /* ================= TESTIMONIALS ================= */
+/*
+  Design: very light gray / near-white background with a subtle
+  semi-transparent tech/city image overlay (optional).
+  Left: dark bold heading "OUR CLIENT / THAT TRUST OUR SERVICE"
+        (second line in red), light subtext paragraph.
+  Right: 2 white rounded cards side-by-side, each with large red
+         opening " at top-left and closing " at bottom-right.
+*/
 .home-testimonials {
   width: 100%;
   position: relative;
+  background-color: var(--gray-light);
   /*
-    If you have a background image, uncomment and update:
+    Uncomment for background image:
     background-image: url("../assets/jsbGroupWebsite/testimonials-bg.webp");
     background-size: cover;
     background-position: center;
   */
-  background-color: #1a1a1a; /* fallback dark bg */
 }
-
-/* Semi-transparent overlay on top of bg image */
 .testimonials-overlay {
-  background: rgba(20, 20, 20, 0.88);
+  background: rgba(240, 240, 240, 0.9);
   padding: clamp(60px, 8vw, 100px) 0;
 }
-
-/* Two-column layout: heading left, cards right */
 .testimonials-inner {
   display: grid;
-  grid-template-columns: 1fr 1.4fr;
-  gap: clamp(40px, 5vw, 80px);
+  grid-template-columns: 1fr 1.6fr;
+  gap: clamp(40px, 6vw, 90px);
   align-items: center;
 }
 
-/* ── Left heading ── */
+/* Left heading */
 .testimonials-heading {
-  color: var(--white);
-}
-.testimonials-label {
-  font-family: var(--font-heading);
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: var(--red);
-  margin-bottom: 14px;
+  color: var(--text-dark);
 }
 .testimonials-heading h2 {
   font-family: var(--font-heading);
-  font-size: clamp(24px, 3vw, 36px);
-  font-weight: 800;
+  font-size: clamp(22px, 2.5vw, 34px);
+  font-weight: 900;
   text-transform: uppercase;
-  line-height: 1.2;
+  line-height: 1.15;
   margin-bottom: 20px;
+  color: var(--text-dark);
 }
 .testimonials-heading h2 span {
   color: var(--red);
@@ -425,53 +529,51 @@
 .testimonials-sub {
   font-size: 13px;
   line-height: 1.85;
-  color: rgba(255, 255, 255, 0.65);
-  max-width: 340px;
+  color: var(--text-mid);
+  max-width: 360px;
 }
 
-/* ── Right: cards ── */
+/* Right cards */
 .testimonials-cards {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
+  align-items: stretch;
 }
-
 .testimonial-card {
   background: var(--white);
-  border-radius: 6px;
-  padding: 28px 24px 22px;
+  border-radius: 10px;
+  padding: 28px 22px 24px;
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
 }
 .testimonial-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.24);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.13);
 }
-
 /* Large decorative quote marks */
 .tq-open,
 .tq-close {
-  font-family: Georgia, serif;
-  font-size: 52px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 56px;
   line-height: 1;
   color: var(--red);
   font-weight: 900;
+  display: block;
 }
 .tq-open {
-  align-self: flex-start;
-  margin-bottom: -8px;
+  margin-bottom: -4px;
 }
 .tq-close {
-  align-self: flex-end;
-  margin-top: -8px;
+  text-align: right;
+  margin-top: auto;
+  padding-top: 8px;
 }
-
 .testimonial-text {
   font-size: 13px;
   line-height: 1.8;
@@ -479,33 +581,11 @@
   flex: 1;
 }
 
-.testimonial-author {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-  padding-top: 12px;
-  border-top: 1px solid var(--gray-mid);
-}
-.testimonial-author strong {
-  font-family: var(--font-heading);
-  font-size: 12px;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: var(--text-dark);
-}
-.testimonial-author span {
-  font-size: 11px;
-  color: var(--text-light);
-}
-
-/* ── Testimonials responsive ── */
+/* Testimonials responsive */
 @media (max-width: 900px) {
   .testimonials-inner {
     grid-template-columns: 1fr;
     gap: 40px;
-  }
-  .testimonials-heading h2 {
-    font-size: 26px;
   }
   .testimonials-sub {
     max-width: 100%;
@@ -517,5 +597,95 @@
   }
   .testimonial-card {
     padding: 22px 18px 18px;
+  }
+}
+
+/* ================= GET IN TOUCH ================= */
+/*
+  Design: full-width light gray section.
+  Inside container: two columns.
+    Left (~55%): dark red rounded box. YouTube icon (white circle) top-left.
+                 "GET IN TOUCH" bold white heading. Two white body paragraphs.
+    Right (~45%): plain area with 3 stacked text paragraphs.
+*/
+.home-contact {
+  background: var(--gray-light);
+  padding: clamp(40px, 6vw, 80px) 0;
+}
+.contact-inner {
+  display: grid;
+  grid-template-columns: 55fr 45fr;
+  gap: clamp(24px, 4vw, 48px);
+  align-items: stretch;
+}
+
+/* Left red panel */
+.contact-red-panel {
+  background: var(--red);
+  border-radius: 10px;
+  padding: clamp(36px, 5vw, 56px) clamp(32px, 4vw, 48px);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.contact-yt-icon {
+  width: 44px;
+  height: 44px;
+  background: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4px;
+  flex-shrink: 0;
+}
+.contact-yt-icon svg {
+  width: 22px;
+  height: 22px;
+  color: var(--red);
+}
+.contact-red-panel h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(22px, 2.5vw, 32px);
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--white);
+  letter-spacing: 1px;
+  line-height: 1.1;
+}
+.contact-red-panel p {
+  font-size: 13px;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* Right text blocks */
+.contact-text-blocks {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+}
+.contact-text-block {
+  font-size: 13px;
+  line-height: 1.8;
+  color: var(--text-mid);
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--gray-mid);
+}
+.contact-text-block:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+/* Contact responsive */
+@media (max-width: 900px) {
+  .contact-inner {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 480px) {
+  .contact-red-panel {
+    padding: 32px 24px;
   }
 }
