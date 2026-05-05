@@ -132,9 +132,6 @@
   padding: 60px 0 50px;
 }
 
-/* =========================
-   MARQUEE WRAPPER
-========================= */
 .directors-marquee {
   overflow: hidden;
   width: 100%;
@@ -189,7 +186,7 @@
   flex: 0 0 220px;
 
   display: flex;
-  flex-direction: column; /* photo on top, text below */
+  flex-direction: column;
   align-items: stretch;
 
   box-sizing: border-box;
@@ -210,18 +207,17 @@
 .director-photo-wrap {
   position: relative;
   width: 100%;
-  height: 210px; /* fixed portrait height */
+  height: 210px;
   flex-shrink: 0;
   background: var(--gray-light);
   overflow: hidden;
 }
 
-/* Actual headshot */
 .director-photo {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: top center; /* keep face in frame */
+  object-position: top center;
   display: block;
   transition: transform 0.4s ease;
 }
@@ -230,7 +226,6 @@
   transform: scale(1.04);
 }
 
-/* Subtle dark-to-transparent gradient over the photo bottom edge */
 .director-photo-wrap::after {
   content: "";
   position: absolute;
@@ -243,7 +238,6 @@
   pointer-events: none;
 }
 
-/* Red accent bar at bottom of photo */
 .director-photo-accent {
   position: absolute;
   bottom: 0;
@@ -261,7 +255,6 @@
 
 /* =========================
    FALLBACK AVATAR
-   (shown when no img is supplied)
 ========================= */
 .director-avatar-fallback {
   width: 100%;
@@ -441,15 +434,15 @@
   transform: translateY(-4px);
 }
 
-/* Logo zone — fixed height, logo always same display size */
+/* Logo zone — all logos fill the same box equally */
 .vertical-logo-box {
   width: 100%;
-  height: 110px;
+  height: 120px;
   flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 18px 24px;
+  padding: 16px 20px;
   background: var(--white);
   box-sizing: border-box;
 }
@@ -462,15 +455,14 @@
   height: 100%;
 }
 
-/* KEY FIX: force every logo to the same fixed display size.
-   This overrides the image's natural aspect ratio so all logos
-   appear equally prominent — no logo is tiny or huge. */
+/* Every logo fills the same padded box — object-fit: contain
+   keeps the aspect ratio so nothing gets stretched or squashed */
 .vertical-logo-box img {
-  width: 130px;
-  height: 60px;
-  object-fit: contain; /* still respects aspect ratio within the box */
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
   display: block;
-  flex-shrink: 0;
+  box-sizing: border-box;
 }
 
 /* Divider between logo and text */
@@ -777,7 +769,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(240, 240, 240, 0); /* adjust */
+  background: rgba(240, 240, 240, 0);
   z-index: -1;
 }
 .testimonials-inner {

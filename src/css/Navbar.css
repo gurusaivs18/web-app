@@ -17,30 +17,32 @@
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  position: relative;
 }
 
-/* Logo — pinned LEFT */
+/* ✅ LOGO - LEFT SIDE */
 .logo-link {
   text-decoration: none;
   display: flex;
   align-items: center;
   flex-shrink: 0;
-  margin-left: 0;
-  margin-right: 0;
   order: 0;
+  margin-right: auto; /* pushes everything else to the right */
 }
 
-/* Menu — pushed right with generous left padding so it starts near centre */
+/* ✅ MENU - STARTS FROM CENTER AREA TO RIGHT */
 .nav-menu {
   list-style: none;
   display: flex;
   gap: 28px;
   align-items: center;
-  margin-left: auto;
-  padding-left: clamp(60px, 12vw, 200px);
+
   order: 1;
+
+  margin-left: auto; /* pushes menu away from logo */
+  margin-right: 0;
+
+  /* creates “starts from middle” feel */
+  padding-left: clamp(80px, 15vw, 240px);
 }
 
 /* Links */
@@ -56,7 +58,7 @@
   transition: color 0.3s ease;
 }
 
-/* Underline animation */
+/* underline animation */
 .nav-menu li a::after {
   content: "";
   position: absolute;
@@ -72,6 +74,7 @@
 .nav-menu li a:hover {
   color: red;
 }
+
 .nav-menu li a:hover::after {
   width: 100%;
 }
@@ -79,6 +82,7 @@
 .nav-menu li a.active {
   color: red;
 }
+
 .nav-menu li a.active::after {
   width: 100%;
 }
@@ -93,6 +97,7 @@
   border: none;
   padding: 4px;
 }
+
 .nav-hamburger span {
   display: block;
   width: 20px;
@@ -104,15 +109,7 @@
 @media (max-width: 768px) {
   .nav-hamburger {
     display: flex;
-    order: 2;
     margin-left: auto;
-  }
-
-  /* Logo stays left on mobile too */
-  .logo-link {
-    margin-left: 0;
-    margin-right: 0;
-    order: 0;
   }
 
   .nav-menu {
@@ -127,9 +124,9 @@
     gap: 16px;
     z-index: 9999;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+
     margin-left: 0;
-    padding-left: 24px;
-    order: 3;
+    padding-left: clamp(80px, 10vw, 160px);
   }
 
   .nav-menu.open {
@@ -141,8 +138,13 @@
     display: block;
     padding: 6px 0;
   }
+
   .nav-menu li a::after {
     background: red;
+  }
+
+  .logo-link {
+    margin-right: auto;
   }
 }
 
