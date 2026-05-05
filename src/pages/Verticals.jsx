@@ -20,7 +20,7 @@ const allBrandLogos = [
   { name: "UAE BULLS", logo: uaeBulls, url: "https://uaebulls.ae/" },
   { name: "Motiv8", logo: motiv8, url: "https://motiv8.ae/" },
   { name: "MONKEY BOX", logo: monkeyBox, url: "https://monkeybox.ai/" },
-  { name: "PRESSMAN'S", logo: pressmans, url: "https://pressma.comns/" },
+  { name: "PRESSMAN'S", logo: pressmans, url: "https://pressmans.com/" },
   {
     name: "VK TECHNOLOGIES",
     logo: vkTech,
@@ -44,11 +44,7 @@ const categories = [
     title: "Retail",
     brands: [
       { name: "Motiv8", logo: motiv8, url: "https://motiv8.ae/" },
-      {
-        name: "Garmin by Activ8",
-        logo: garmin,
-        url: " https://www.garmin.ae/",
-      },
+      { name: "Garmin by Activ8", logo: garmin, url: "https://www.garmin.ae/" },
       { name: "ZeroG Beds", logo: zeroG, url: "https://zerogmattress.ae/" },
       { name: "VIP Cosmetics", logo: vipCosm, url: null },
     ],
@@ -69,11 +65,11 @@ const categories = [
       {
         name: "Snap Fitness",
         logo: snap,
-        url: " https://www.snapfitness.com/ae",
+        url: "https://www.snapfitness.com/ae",
       },
-      { name: "U-Pro", logo: null, url: " https://unitedprosports.ae/dubai/" },
+      { name: "U-Pro", logo: null, url: "https://unitedprosports.ae/dubai/" },
       { name: "UAE Bulls", logo: uaeBulls, url: "https://uaebulls.ae/" },
-      { name: "BVB League", logo: bvb, url: " https://bvbpro.com/" },
+      { name: "BVB League", logo: bvb, url: "https://bvbpro.com/" },
     ],
   },
   {
@@ -89,7 +85,7 @@ const categories = [
   {
     title: "Fittings & Fitouts",
     brands: [
-      { name: "Epic Fitouts", logo: null, url: " https://www.epicoutdoor.ae/" },
+      { name: "Epic Fitouts", logo: null, url: "https://www.epicoutdoor.ae/" },
     ],
   },
   {
@@ -104,6 +100,30 @@ const categories = [
   },
 ];
 
+/* Reusable logo card — identical treatment everywhere */
+function LogoCard({ name, logo, url, delay = 0 }) {
+  const content = logo ? (
+    <div className="logo-card-img-wrap">
+      <img src={logo} alt={name} loading="lazy" />
+    </div>
+  ) : (
+    <span className="logo-card-text">{name}</span>
+  );
+
+  return (
+    <a
+      href={url || "#"}
+      target={url ? "_blank" : "_self"}
+      rel="noopener noreferrer"
+      className="logo-card"
+      aria-label={name}
+      style={{ animationDelay: `${delay}s` }}
+    >
+      {content}
+    </a>
+  );
+}
+
 function Verticals() {
   return (
     <>
@@ -111,21 +131,12 @@ function Verticals() {
         <h1>Verticals</h1>
       </div>
 
-      {/* ── ALL BRAND LOGOS ── */}
+      {/* ── ALL BRAND LOGOS strip ── */}
       <section className="section">
         <div className="container">
           <div className="verticals-logo-strip">
             {allBrandLogos.map((item, i) => (
-              <a
-                key={i}
-                href={item.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="verticals-logo-item"
-                aria-label={item.name}
-              >
-                <img src={item.logo} alt={item.name} />
-              </a>
+              <LogoCard key={i} {...item} delay={i * 0.07} />
             ))}
           </div>
         </div>
@@ -139,32 +150,9 @@ function Verticals() {
               <span className="section-title">{cat.title}</span>
             </div>
             <div className="vertical-brands-grid">
-              {cat.brands.map((brand, j) =>
-                brand.logo ? (
-                  /* ── Has a logo → render as image link ── */
-                  <a
-                    key={j}
-                    href={brand.url || "#"}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="verticals-logo-item"
-                    aria-label={brand.name}
-                  >
-                    <img src={brand.logo} alt={brand.name} />
-                  </a>
-                ) : (
-                  /* ── No logo file yet → styled text fallback ── */
-                  <a
-                    key={j}
-                    href={brand.url || "#"}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="vertical-brand-logo"
-                  >
-                    {brand.name}
-                  </a>
-                ),
-              )}
+              {cat.brands.map((brand, j) => (
+                <LogoCard key={j} {...brand} delay={j * 0.07} />
+              ))}
             </div>
           </div>
         </section>

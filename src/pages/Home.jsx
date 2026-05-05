@@ -8,7 +8,6 @@ import ceoImage from "../assets/jsbGroupWebsite/jsbgroupwebsite-01.webp";
 
 import uaeBulls from "../assets/Brand-Logos/UAE bulls-2025.webp";
 import motiv8 from "../assets/Brand-Logos/Motiv8 (4).webp";
-// import monkeyBox from "../assets/Brand-Logos/Monkey Box logo.webp";
 import pressmans from "../assets/Brand-Logos/Pressmans logo (11).webp";
 import vkTech from "../assets/Brand-Logos/VKTECHNOLOGIES LOGO (3).webp";
 import targetOne from "../assets/Brand-Logos/targetone.webp";
@@ -29,15 +28,17 @@ const statIcons = [
     <path d="M20 4H4v2l8 5 8-5V4zM4 13v7h7v-5h2v5h7v-7L12 8z" />
   </svg>,
 ];
+
 const brandLogos = [
   { img: uaeBulls, url: "https://uaebulls.ae", order: 3 },
   { img: vkTech, url: "https://vktechnologiesme.com/", order: 2 },
   { img: nbVentures, url: "https://nbventuresme.com/", order: 1 },
   { img: targetOne, url: "https://targetoneme.com/", order: 4 },
-  { img: pressmans, url: "https://pressmans.com/", order: 5 }, // fixed
+  { img: pressmans, url: "https://pressmans.com/", order: 5 },
   { img: motiv8, url: "https://motiv8.ae/", order: 6 },
   { img: denaster, url: "https://www.denaster.com/", order: 7 },
 ];
+
 function easeOutExpo(t) {
   return t === 1 ? 1 : 1 - Math.pow(2, -10 * t);
 }
@@ -117,7 +118,6 @@ function Home() {
     if (sectionRef.current) observer.observe(sectionRef.current);
     return () => {
       clearTimeout(resetTimer);
-      ``;
       observer.disconnect();
     };
   }, []);
@@ -136,7 +136,7 @@ function Home() {
         </div>
       </section>
 
-      {/* CEO — no section class, image section bleeds edge to edge with no extra padding */}
+      {/* CEO */}
       <section className="ceo-section">
         <div className="ceo-content">
           <img src={ceoImage} alt="CEO" className="ceo-img" loading="lazy" />
@@ -154,7 +154,7 @@ function Home() {
         </div>
       </section>
 
-      {/* VERTICALS — no section class, padding controlled in CSS */}
+      {/* VERTICALS */}
       <section className="home-verticals-logos">
         <div className="container">
           <div className="section-title-wrap">
@@ -170,7 +170,9 @@ function Home() {
                   style={{ animationDelay: `${i * 0.08}s` }}
                 >
                   <a href={logo.url} target="_blank" rel="noopener noreferrer">
-                    <img src={logo.img} alt="brand logo" loading="lazy" />
+                    <div className="brand-logo-img-wrap">
+                      <img src={logo.img} alt="brand logo" loading="lazy" />
+                    </div>
                   </a>
                 </div>
               ))}

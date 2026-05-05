@@ -1,45 +1,65 @@
+/* ==========================================================
+   VERTICALS.CSS
+   Key fix: every logo card is a fixed-size box. The image
+   inside uses object-fit: contain so it scales proportionally
+   within that box — no cropping, no breaking, uniform sizing.
+   ========================================================== */
+
+/* ========================= LOGO STRIP (top of page) ========================= */
 .verticals-logo-strip {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: clamp(22px, 3vw, 60px);
+  gap: clamp(14px, 2.5vw, 36px);
   padding: 10px 0;
-} /* ========================= LOGO ITEM (RESPONSIVE + BIGGER) ========================= */
-.verticals-logo-item {
-  height: clamp(80px, 10vw, 120px);
-  width: clamp(130px, 14vw, 200px);
+}
+
+/* ========================= SHARED LOGO CARD ========================= */
+/*
+  One class handles every logo across both the strip and category grids.
+  Fixed width + height ensures all cards are identical in size.
+  overflow is NOT hidden — we allow the image to breathe inside the padding.
+*/
+.logo-card {
+  /* Card dimensions — uniform across every logo */
+  width: 160px;
+  height: 100px;
+
+  /* Layout */
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 14px 16px;
+  border-radius: 8px;
+  background: var(--gray-light);
+  text-decoration: none;
   cursor: pointer;
+
+  /* DO NOT set overflow: hidden — it clips logos with unusual aspect ratios */
   position: relative;
-  overflow: hidden;
-  transition: all 0.35s ease;
-  animation: fadeUp 0.6s ease forwards;
+
+  /* Entrance animation */
   opacity: 0;
-  filter: grayscale(5%);
-} /* HOVER EFFECT (FLOAT + DEPTH) */
-.verticals-logo-item:hover {
-  transform: translateY(-10px) scale(1.08);
-  filter: grayscale(0%);
-  box-shadow:
-    0 12px 30px rgba(0, 0, 0, 0.12),
-    0 6px 14px rgba(0, 0, 0, 0.08);
-} /* LOGO IMAGE */
-.verticals-logo-item img {
-  max-width: 85%;
-  max-height: 70%;
-  object-fit: contain;
+  animation: fadeUp 0.55s ease forwards;
+
+  /* Hover transition */
   transition:
-    transform 0.35s ease,
-    filter 0.35s ease;
-} /* IMAGE HOVER POP */
-.verticals-logo-item:hover img {
-  transform: scale(1.12);
-  filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.18));
-} /* SOFT DARK SWEEP EFFECT */
-.verticals-logo-item::before {
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+}
+
+.logo-card:hover {
+  transform: translateY(-8px) scale(1.06);
+  background: var(--white);
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.1),
+    0 4px 10px rgba(0, 0, 0, 0.06);
+}
+
+/* Shimmer sweep on hover */
+.logo-card::before {
   content: "";
   position: absolute;
   top: 0;
@@ -49,111 +69,136 @@
   background: linear-gradient(
     120deg,
     transparent,
-    rgba(0, 0, 0, 0.08),
+    rgba(0, 0, 0, 0.07),
     transparent
   );
   transform: skewX(-20deg);
   opacity: 0;
+  pointer-events: none;
 }
-.verticals-logo-item:hover::before {
+.logo-card:hover::before {
   opacity: 1;
-  animation: shineDark 0.8s ease;
-} /* ========================= CATEGORY SECTION ========================= */
+  animation: shineDark 0.7s ease;
+}
+
+/* ========================= IMAGE WRAPPER ========================= */
+/*
+  Inner wrapper fills the card's content area (card minus padding).
+  The image is constrained here — not by overflow:hidden but by
+  max-width/max-height + object-fit: contain.
+*/
+.logo-card-img-wrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-card-img-wrap img {
+  /* Scale proportionally to fit — never overflow the card */
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+
+  /* Smooth pop on hover */
+  transition:
+    transform 0.3s ease,
+    filter 0.3s ease;
+}
+
+.logo-card:hover .logo-card-img-wrap img {
+  transform: scale(1.1);
+  filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.15));
+}
+
+/* ========================= TEXT FALLBACK (no logo image) ========================= */
+.logo-card-text {
+  font-family: var(--font-heading);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-mid);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  line-height: 1.4;
+  /* Prevent text from overflowing the card */
+  word-break: break-word;
+  hyphens: auto;
+}
+
+/* ========================= CATEGORY SECTION ========================= */
 .vertical-category {
   background: var(--white);
   padding: clamp(50px, 6vw, 80px) 0;
 }
 .vertical-category:nth-child(even) {
   background: var(--gray-light);
-} /* ========================= BRAND GRID ========================= */
+}
+
+/* ========================= BRAND GRID ========================= */
 .vertical-brands-grid {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: clamp(20px, 2.5vw, 44px);
-} /* CATEGORY BRAND BOX */
-.vertical-brand-logo {
-  height: clamp(70px, 8vw, 90px);
-  width: clamp(120px, 13vw, 170px);
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 16px;
-  font-family: var(--font-heading);
-  font-size: 12px;
-  font-weight: 700;
-  color: var(--text-mid);
-  text-align: center;
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
-  transition: all 0.35s ease;
-  animation: fadeUp 0.6s ease forwards;
-  opacity: 0;
-} /* HOVER */
-.vertical-brand-logo:hover {
-  transform: translateY(-8px) scale(1.06);
-  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.15);
-} /* DARK SWEEP */
-.vertical-brand-logo::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -80%;
-  width: 45%;
-  height: 100%;
-  background: linear-gradient(
-    120deg,
-    transparent,
-    rgba(0, 0, 0, 0.08),
-    transparent
-  );
-  transform: skewX(-20deg);
-  opacity: 0;
+  gap: clamp(14px, 2.5vw, 32px);
 }
-.vertical-brand-logo:hover::before {
-  opacity: 1;
-  animation: shineDark 0.8s ease;
-} /* ========================= ANIMATIONS ========================= */
+
+/* ========================= ANIMATIONS ========================= */
 @keyframes shineDark {
   100% {
     left: 130%;
   }
 }
+
 @keyframes fadeUp {
   from {
     opacity: 0;
-    transform: translateY(12px);
+    transform: translateY(14px);
   }
   to {
     opacity: 1;
     transform: translateY(0);
   }
-} /* ========================= TABLET ========================= */
+}
+
+/* ========================= TABLET (max 992px) ========================= */
 @media (max-width: 992px) {
-  .verticals-logo-item {
-    height: 95px;
-    width: 160px;
+  .logo-card {
+    width: 145px;
+    height: 92px;
+    padding: 12px 14px;
   }
-  .verticals-logo-strip {
-    gap: 28px 40px;
-  }
-} /* ========================= MOBILE ========================= */
+}
+
+/* ========================= MOBILE (max 600px) ========================= */
 @media (max-width: 600px) {
-  .verticals-logo-item {
-    height: 80px;
-    width: 140px;
+  .verticals-logo-strip,
+  .vertical-brands-grid {
+    gap: 12px;
   }
-  .verticals-logo-strip {
-    gap: 22px 26px;
+
+  .logo-card {
+    /* Two per row on mobile — fills width evenly */
+    width: calc(50% - 6px);
+    height: 85px;
+    padding: 10px 12px;
   }
-  .verticals-logo-item img {
-    max-width: 80%;
+}
+
+/* ========================= SMALL MOBILE (max 360px) ========================= */
+@media (max-width: 360px) {
+  .logo-card {
+    width: calc(50% - 4px);
+    height: 75px;
+    padding: 8px 10px;
   }
-  .vertical-brand-logo {
-    width: 130px;
-    height: 70px;
+
+  .logo-card-text {
+    font-size: 10px;
   }
 }
