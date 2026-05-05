@@ -913,14 +913,13 @@ function DirectorsSlider() {
                   .join("")
                   .slice(0, 2)}
               </div>
-              
+
               <h4 className="director-name">{d.name}</h4>
               <p className="director-role">{d.role}</p>
               <p className="director-bio">{d.bio}</p>
               <a href={`/about#${d.slug}`} className="director-know-more">
                 Know More →
               </a>
-              
             </div>
           ))}
         </div>
@@ -963,7 +962,9 @@ function VerticalsSlider() {
                 <p className="vertical-brand-name">{logo.name}</p>
                 <p className="vertical-brand-desc">{logo.desc}</p>
                 <a
-                  href={`/verticals#${logo.slug}`}
+                  href={logo.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="vertical-know-more"
                 >
                   Know More →
