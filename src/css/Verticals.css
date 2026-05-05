@@ -3,61 +3,42 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-
   gap: clamp(22px, 3vw, 60px);
   padding: 10px 0;
-}
-
-/* =========================
-   LOGO ITEM (RESPONSIVE + BIGGER)
-========================= */
+} /* ========================= LOGO ITEM (RESPONSIVE + BIGGER) ========================= */
 .verticals-logo-item {
   height: clamp(80px, 10vw, 120px);
   width: clamp(130px, 14vw, 200px);
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   cursor: pointer;
   position: relative;
   overflow: hidden;
-
   transition: all 0.35s ease;
   animation: fadeUp 0.6s ease forwards;
   opacity: 0;
-
   filter: grayscale(5%);
-}
-
-/* HOVER EFFECT (FLOAT + DEPTH) */
+} /* HOVER EFFECT (FLOAT + DEPTH) */
 .verticals-logo-item:hover {
   transform: translateY(-10px) scale(1.08);
   filter: grayscale(0%);
-
   box-shadow:
     0 12px 30px rgba(0, 0, 0, 0.12),
     0 6px 14px rgba(0, 0, 0, 0.08);
-}
-
-/* LOGO IMAGE */
+} /* LOGO IMAGE */
 .verticals-logo-item img {
   max-width: 85%;
   max-height: 70%;
   object-fit: contain;
-
   transition:
     transform 0.35s ease,
     filter 0.35s ease;
-}
-
-/* IMAGE HOVER POP */
+} /* IMAGE HOVER POP */
 .verticals-logo-item:hover img {
   transform: scale(1.12);
   filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.18));
-}
-
-/* SOFT DARK SWEEP EFFECT */
+} /* SOFT DARK SWEEP EFFECT */
 .verticals-logo-item::before {
   content: "";
   position: absolute;
@@ -65,83 +46,57 @@
   left: -80%;
   width: 45%;
   height: 100%;
-
   background: linear-gradient(
     120deg,
     transparent,
     rgba(0, 0, 0, 0.08),
     transparent
   );
-
   transform: skewX(-20deg);
   opacity: 0;
 }
-
 .verticals-logo-item:hover::before {
   opacity: 1;
   animation: shineDark 0.8s ease;
-}
-
-/* =========================
-   CATEGORY SECTION
-========================= */
+} /* ========================= CATEGORY SECTION ========================= */
 .vertical-category {
   background: var(--white);
   padding: clamp(50px, 6vw, 80px) 0;
 }
-
 .vertical-category:nth-child(even) {
   background: var(--gray-light);
-}
-
-/* =========================
-   BRAND GRID
-========================= */
+} /* ========================= BRAND GRID ========================= */
 .vertical-brands-grid {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-
   gap: clamp(20px, 2.5vw, 44px);
-}
-
-/* CATEGORY BRAND BOX */
+} /* CATEGORY BRAND BOX */
 .vertical-brand-logo {
   height: clamp(70px, 8vw, 90px);
   width: clamp(120px, 13vw, 170px);
-
   border-radius: 8px;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   padding: 10px 16px;
-
   font-family: var(--font-heading);
   font-size: 12px;
   font-weight: 700;
   color: var(--text-mid);
-
   text-align: center;
   cursor: pointer;
-
   position: relative;
   overflow: hidden;
-
   transition: all 0.35s ease;
   animation: fadeUp 0.6s ease forwards;
   opacity: 0;
-}
-
-/* HOVER */
+} /* HOVER */
 .vertical-brand-logo:hover {
   transform: translateY(-8px) scale(1.06);
   box-shadow: 0 14px 35px rgba(0, 0, 0, 0.15);
-}
-
-/* DARK SWEEP */
+} /* DARK SWEEP */
 .vertical-brand-logo::before {
   content: "";
   position: absolute;
@@ -149,32 +104,24 @@
   left: -80%;
   width: 45%;
   height: 100%;
-
   background: linear-gradient(
     120deg,
     transparent,
     rgba(0, 0, 0, 0.08),
     transparent
   );
-
   transform: skewX(-20deg);
   opacity: 0;
 }
-
 .vertical-brand-logo:hover::before {
   opacity: 1;
   animation: shineDark 0.8s ease;
-}
-
-/* =========================
-   ANIMATIONS
-========================= */
+} /* ========================= ANIMATIONS ========================= */
 @keyframes shineDark {
   100% {
     left: 130%;
   }
 }
-
 @keyframes fadeUp {
   from {
     opacity: 0;
@@ -184,39 +131,27 @@
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-/* =========================
-   TABLET
-========================= */
+} /* ========================= TABLET ========================= */
 @media (max-width: 992px) {
   .verticals-logo-item {
     height: 95px;
     width: 160px;
   }
-
   .verticals-logo-strip {
     gap: 28px 40px;
   }
-}
-
-/* =========================
-   MOBILE
-========================= */
+} /* ========================= MOBILE ========================= */
 @media (max-width: 600px) {
   .verticals-logo-item {
     height: 80px;
     width: 140px;
   }
-
   .verticals-logo-strip {
     gap: 22px 26px;
   }
-
   .verticals-logo-item img {
     max-width: 80%;
   }
-
   .vertical-brand-logo {
     width: 130px;
     height: 70px;

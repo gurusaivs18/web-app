@@ -1,14 +1,11 @@
-/* ================= HOME INTRO ================= */
 .home-intro {
   background: var(--white);
   text-align: center;
 }
-
 .home-intro-text {
   max-width: 760px;
   margin: 0 auto;
 }
-
 .home-intro-text h2 {
   font-family: var(--font-heading);
   font-size: 20px;
@@ -17,25 +14,20 @@
   letter-spacing: 1px;
   margin-bottom: 20px;
 }
-
 .home-intro-text p {
   font-size: 14px;
   color: var(--text-mid);
   line-height: 1.85;
-}
-
-/* ================= CEO SECTION ================= */
+} /* ================= CEO SECTION ================= */
 .ceo-section {
   width: 100%;
 }
-
 .ceo-content {
   position: relative;
   width: 100%;
   height: clamp(420px, 35vw, 650px);
   overflow: hidden;
 }
-
 .ceo-img {
   position: absolute;
   inset: 0;
@@ -44,14 +36,12 @@
   object-fit: cover;
   object-position: center;
 }
-
 .ceo-content::after {
   content: "";
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.35);
 }
-
 .ceo-info {
   position: absolute;
   top: 50%;
@@ -62,33 +52,28 @@
   color: var(--white);
   z-index: 2;
 }
-
 .ceo-info h3 {
   font-family: var(--font-heading);
   font-size: 30px;
   font-weight: 800;
   text-transform: uppercase;
 }
-
 .ceo-info .ceo-role {
   font-size: 16px;
   font-weight: 600;
   margin-bottom: 12px;
 }
-
 .ceo-info p {
   font-size: 14px;
   line-height: 1.7;
   margin-bottom: 16px;
 }
-
 .read-more-link {
   position: relative;
   text-decoration: none;
   color: var(--red);
   font-weight: 600;
 }
-
 .read-more-link::after {
   content: "";
   position: absolute;
@@ -100,150 +85,112 @@
   transform: translateX(-50%);
   transition: 0.3s;
 }
-
 .read-more-link:hover::after {
   width: 100%;
-}
-
-/* ================= CEO RESPONSIVE ================= */
+} /* ================= CEO RESPONSIVE ================= */
 @media (max-width: 768px) {
   .ceo-content {
     height: 320px;
   }
-
   .ceo-info {
     right: 20px;
     max-width: 70%;
   }
-
   .ceo-info h3 {
     font-size: 22px;
   }
-
   .ceo-info .ceo-role {
     font-size: 13px;
   }
-
   .ceo-info p {
     font-size: 12px;
   }
 }
-
 @media (max-width: 480px) {
   .ceo-content {
     height: 280px;
   }
-
   .ceo-info {
     max-width: 85%;
     right: 15px;
   }
 }
-
 .home-verticals-logos {
   background: var(--white);
   padding: 60px 0 0;
-}
-
-/* container */
+} /* container */
 .brand-logo-strip {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 22px;
-}
-
-/* logo box */
+} /* logo box */
 .brand-logo-item {
   width: 170px;
   height: 95px;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   padding: 12px;
   border-radius: 8px;
-
   overflow: hidden;
-
   transition: transform 0.3s ease;
-}
-
-/* IMPORTANT: logo visibility fix */
+} /* IMPORTANT: logo visibility fix */
 .brand-logo-item img {
   max-width: 92%;
   max-height: 75%;
-
   min-width: 60px;
   min-height: 30px;
-
   object-fit: contain;
-
   transition: transform 0.3s ease;
-}
-
-/* hover effect */
+} /* hover effect */
 .brand-logo-item:hover {
   transform: translateY(-6px) scale(1.05);
-}
-
-/* animation */
+} /* animation */
 .brand-logo-item {
   opacity: 0;
   transform: translateY(18px);
   animation: fadeStagger 0.6s ease forwards;
 }
-
 @keyframes fadeStagger {
   to {
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-/* RESPONSIVE */
+} /* RESPONSIVE */
 @media (max-width: 900px) {
   .brand-logo-item {
     width: 140px;
     height: 85px;
   }
 }
-
 @media (max-width: 480px) {
   .brand-logo-item {
     width: 45%;
     height: 80px;
   }
-}
-
-/* animation */
+} /* animation */
 @keyframes fadeStagger {
   to {
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-/* ================= IMPACT ================= */
+} /* ================= IMPACT ================= */
 .home-impact {
   background: var(--white);
 }
-
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
 }
-
 .stat-box {
   background: var(--gray-light);
   border-radius: 8px;
   padding: 36px 20px;
   text-align: center;
 }
-
 .stat-icon {
   width: 56px;
   height: 56px;
@@ -254,47 +201,38 @@
   align-items: center;
   justify-content: center;
 }
-
 .stat-icon svg {
   width: 24px;
   height: 24px;
   fill: var(--white);
 }
-
 .stat-box h2 {
   font-family: var(--font-heading);
   font-size: 28px;
   font-weight: 800;
   color: var(--red);
 }
-
 .stat-box p {
   font-size: 11px;
   font-weight: 700;
   text-transform: uppercase;
 }
-
 .stat-box small {
   font-size: 12px;
   color: var(--text-light);
-}
-
-/* ================= RESPONSIVE ================= */
+} /* ================= RESPONSIVE ================= */
 @media (max-width: 900px) {
   .stats-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-
   .brand-logo-item {
     flex: 0 1 140px;
   }
 }
-
 @media (max-width: 480px) {
   .stats-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-
   .brand-logo-item {
     flex: 0 1 45%;
   }
