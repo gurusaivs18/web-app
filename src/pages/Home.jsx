@@ -517,11 +517,6 @@ function Home() {
         <div className="container">
           <div className="contact-inner">
             <div className="contact-red-panel">
-              <div className="contact-yt-icon">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M21.8 8s-.2-1.4-.8-2c-.8-.8-1.7-.8-2.1-.9C16.2 5 12 5 12 5s-4.2 0-6.9.1c-.4.1-1.3.1-2.1.9-.6.6-.8 2-.8 2S2 9.6 2 11.2v1.5c0 1.6.2 3.2.2 3.2s.2 1.4.8 2c.8.8 1.8.8 2.3.8C6.8 19 12 19 12 19s4.2 0 6.9-.2c.4-.1 1.3-.1 2.1-.9.6-.6.8-2 .8-2s.2-1.6.2-3.2v-1.5C22 9.6 21.8 8 21.8 8zM9.7 14.5V9l5.7 2.8-5.7 2.7z" />
-                </svg>
-              </div>
               <h2>Get In Touch</h2>
               <p>Archita Patel</p>
               <p>Marketing Manager</p>
