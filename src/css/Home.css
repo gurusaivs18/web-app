@@ -867,7 +867,7 @@
 
 /* ================= GET IN TOUCH ================= */
 .home-contact {
-  background: var(--gray-light);
+  background: var(--black);
   padding: clamp(40px, 6vw, 80px) 0;
 }
 .contact-inner {
@@ -901,19 +901,11 @@
   height: 22px;
   color: var(--red);
 }
-.contact-red-panel h2 {
-  font-family: var(--font-heading);
-  font-size: clamp(22px, 2.5vw, 32px);
-  font-weight: 800;
-  text-transform: uppercase;
-  color: var(--white);
-  letter-spacing: 1px;
-  line-height: 1.1;
-}
+
 .contact-red-panel p {
   font-size: 13px;
   line-height: 1.75;
-  color: rgba(255, 255, 255, 0.85);
+  color: rgb(255, 255, 255);
 }
 
 .contact-text-blocks {
@@ -944,3 +936,4 @@
     padding: 32px 24px;
   }
 }
+

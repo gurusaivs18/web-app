@@ -93,8 +93,6 @@ const brandLogos = [
   },
 ];
 
-
-
 const directors = [
   {
     name: "Praveen Bhatnagar",
