@@ -82,7 +82,8 @@
 .read-more-link {
   position: relative;
   text-decoration: none;
-  color: var(--red);
+  color: black
+  ;
   font-weight: 600;
 }
 .read-more-link::after {
@@ -92,7 +93,7 @@
   bottom: -3px;
   width: 0%;
   height: 2px;
-  background: var(--white);
+  background:red;
   transform: translateX(-50%);
   transition: 0.3s;
 }

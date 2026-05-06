@@ -128,7 +128,7 @@ function Verticals() {
   return (
     <>
       <div className="page-hero">
-        <h1>Verticals</h1>
+        <h1 style={{ textAlign: "center", marginTop: "5px" }}>Verticals</h1>
       </div>
 
       {/* ── ALL BRAND LOGOS strip ── */}

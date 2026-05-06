@@ -44,7 +44,7 @@ function About() {
   return (
     <>
       <div className="page-hero">
-        <h1>About Us</h1>
+        <h1 style={{ textAlign: "center", marginTop: "5px" }}>About Us</h1>
       </div>
 
       {/* WHO WE ARE */}
