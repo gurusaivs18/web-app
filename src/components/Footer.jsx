@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { FaLinkedinIn } from "react-icons/fa";
 import "../css/Footer.css";
 import Logo from "./Logo";
+import { verticals } from "../data/verticals"; // ✅ added
 
 function Footer() {
   return (
@@ -47,42 +48,15 @@ function Footer() {
           <div className="footer-col">
             <h4>Quick Links</h4>
             <ul>
-              <li>
-                <a
-                  href="https://www.snapfitness.com/ae"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Snap Fitness
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://nbventuresme.com/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  NB Venture
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://vktechnologiesme.com/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Vanity Kart
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://pressmans.com/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Pressmans
-                </a>
-              </li>
+              {verticals.map((section, i) =>
+                section.items.map((item, j) => (
+                  <li key={`${i}-${j}`}>
+                    <a href={item.link || "#"} target="_blank" rel="noreferrer">
+                      {item.name}
+                    </a>
+                  </li>
+                )),
+              )}
             </ul>
           </div>
 

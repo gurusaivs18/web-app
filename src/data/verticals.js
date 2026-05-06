@@ -4,58 +4,28 @@ export const verticals = [
     items: [
       {
         name: "Pressman's Sandwiches",
-        desc: "Homegrown brand specializing in healthy fresh sandwiches and salads. 10+ UAE locations and India cloud kitchen presence.",
+        link: "https://pressmans.com/",
       },
     ],
   },
   {
     title: "Retail & Distribution",
     items: [
-      {
-        name: "Target One",
-        desc: "Leading distributor of world-class electronic brands including Marshall, Jabra, Titan, and more.",
-      },
-      {
-        name: "Denaster",
-        desc: "Distribution company with brands like Shokz, Ring, Sphero, and more. Joined the group in 2021.",
-      },
-      {
-        name: "Harrison / Inov8",
-        desc: "Duty Free operator with presence in Dubai, Abu Dhabi, and Qatar Duty Free.",
-      },
-      {
-        name: "Garmin by Activ8",
-        desc: "Authorized Garmin retailer with 6 active locations across UAE.",
-      },
-      {
-        name: "Motiv8",
-        desc: "Athleisure multi-designer women's only retail store.",
-      },
-      {
-        name: "ZeroG Beds",
-        desc: "Homegrown beds and mattresses brand focused on health and perfect sleep.",
-      },
+      { name: "Target One", link: "https://targetoneme.com/" },
+      { name: "Denaster", link: "https://www.denaster.com/" },
+      { name: "Harrison / Inov8", link: "https://www.inov8.ae/" },
+      { name: "Garmin by Activ8", link: "https://www.garmin.ae/" },
+      { name: "Motiv8", link: "https://motiv8.ae/" },
+      { name: "ZeroG Beds", link: "https://zerogmattress.ae" },
     ],
   },
   {
     title: "Sports & Fitness",
     items: [
-      {
-        name: "Snap Fitness",
-        desc: "Global franchise with 1,000+ clubs across 20+ countries. 4 UAE locations.",
-      },
-      {
-        name: "U-Pro",
-        desc: "46,000 sq ft indoor sports facility in Al Quoz, Dubai.",
-      },
-      {
-        name: "UAE Bulls",
-        desc: "Cricket team — Champions of Season 9 (2025–26).",
-      },
-      {
-        name: "BVB League",
-        desc: "First-of-its-kind franchise beach volleyball league. UAE launch 2027.",
-      },
+      { name: "Snap Fitness", link: "https://www.snapfitness.com/ae" },
+      { name: "U-Pro", link: "https://www.upro.ae/" },
+      { name: "UAE Bulls", link: "https://uaebulls.ae" },
+      { name: "BVB League", link: "https://www.bvbleague.ae/" },
     ],
   },
   {
@@ -63,7 +33,7 @@ export const verticals = [
     items: [
       {
         name: "VK Technology",
-        desc: "Custom software, POS systems, reporting, e-commerce, and ERP integrations.",
+        link: "https://vktechnologiesme.com/",
       },
     ],
   },
@@ -72,7 +42,7 @@ export const verticals = [
     items: [
       {
         name: "Epic Fitouts",
-        desc: "Premier interior design, fitout services, and outdoor furniture solutions.",
+        link: "https://epicfitouts.ae",
       },
     ],
   },
