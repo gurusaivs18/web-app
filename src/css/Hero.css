@@ -31,7 +31,7 @@
   left: 80px;
   top: 50%;
   transform: translateY(-50%);
-  color: var(--white);
+
   max-width: 600px;
 }
 
@@ -41,12 +41,14 @@
   font-weight: 800;
   line-height: 1.2;
   margin-bottom: 12px;
+  color: white;
 }
 
 .hero-content p {
   font-size: 16px;
   margin-bottom: 24px;
   opacity: 0.9;
+  color: white;
 }
 
 /* BUTTON */
