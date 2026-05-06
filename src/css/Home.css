@@ -82,8 +82,7 @@
 .read-more-link {
   position: relative;
   text-decoration: none;
-  color: black
-  ;
+  color: black;
   font-weight: 600;
 }
 .read-more-link::after {
@@ -93,7 +92,7 @@
   bottom: -3px;
   width: 0%;
   height: 2px;
-  background:red;
+  background: red;
   transform: translateX(-50%);
   transition: 0.3s;
 }
@@ -247,7 +246,7 @@
   left: 0;
   width: 40px;
   height: 3px;
- 
+
   z-index: 2;
   transition: width 0.35s ease;
 }
@@ -874,6 +873,7 @@
 .home-contact {
   background: var(--black);
   padding: clamp(40px, 6vw, 80px) 0;
+  
 }
 .contact-inner {
   display: grid;
@@ -889,22 +889,6 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
-}
-.contact-yt-icon {
-  width: 44px;
-  height: 44px;
-  background: var(--white);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 4px;
-  flex-shrink: 0;
-}
-.contact-yt-icon svg {
-  width: 22px;
-  height: 22px;
-  color: var(--red);
 }
 
 .contact-red-panel p {
