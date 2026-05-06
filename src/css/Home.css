@@ -870,11 +870,12 @@
 }
 
 /* ================= GET IN TOUCH ================= */
+/* ================= GET IN TOUCH ================= */
 .home-contact {
   background: var(--black);
   padding: clamp(40px, 6vw, 80px) 0;
-  
 }
+
 .contact-inner {
   display: grid;
   grid-template-columns: 55fr 45fr;
@@ -882,48 +883,84 @@
   align-items: stretch;
 }
 
+/* LEFT RED CARD */
 .contact-red-panel {
   background: var(--red);
   border-radius: 10px;
-  padding: clamp(36px, 5vw, 56px) clamp(32px, 4vw, 48px);
+  padding: 32px 28px;
+
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 18px;
 }
 
-.contact-red-panel p {
-  font-size: 13px;
-  line-height: 1.75;
-  color: rgb(255, 255, 255);
-}
+/* TITLE */
 .contact-red-panel h2 {
-  color: white;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 800;
+  margin: 0;
+  letter-spacing: 0.5px;
 }
+
+/* CONTACT INFO BLOCK */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* equal spacing */
+}
+
+/* RESET DEFAULT SPACING */
+.contact-info p,
+.contact-info a {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #fff;
+}
+
+/* EMAIL STYLE */
+.contact-info a {
+  text-decoration: none;
+  font-weight: 600;
+  opacity: 0.95;
+  transition: opacity 0.2s ease;
+}
+
+.contact-info a:hover {
+  opacity: 0.7;
+}
+
+/* RIGHT SIDE TEXT BLOCKS */
 .contact-text-blocks {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 24px;
+  gap: 20px;
 }
+
 .contact-text-block {
   font-size: 13px;
   line-height: 1.8;
   color: var(--text-mid);
-  padding-bottom: 24px;
+  padding-bottom: 20px;
   border-bottom: 1px solid var(--gray-mid);
 }
+
 .contact-text-block:last-child {
   border-bottom: none;
   padding-bottom: 0;
 }
 
+/* RESPONSIVE */
 @media (max-width: 900px) {
   .contact-inner {
     grid-template-columns: 1fr;
   }
 }
+
 @media (max-width: 480px) {
   .contact-red-panel {
-    padding: 32px 24px;
+    padding: 24px;
   }
 }

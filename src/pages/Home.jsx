@@ -283,7 +283,7 @@ function DirectorsSlider() {
     <section className="directors-section">
       <div className="container">
         <div className="section-title-wrap">
-          <span className="section-title">Leadership</span>
+          <span className="section-title">Pillars</span>
         </div>
       </div>
 
@@ -516,18 +516,21 @@ function Home() {
       <section className="home-contact">
         <div className="container">
           <div className="contact-inner">
+            {/* LEFT BOX */}
             <div className="contact-red-panel">
               <h2>Get In Touch</h2>
-              <p>Archita Patel</p>
-              <p>Marketing Manager</p>
-              <a
-                href="mailto:archita@nbventuresme.com"
-                style={{ color: "white" }}
-              >
-                archita@nbventuresme.com
-              </a>
-              <p>050-6785243</p>
+
+              <div className="contact-info">
+                <p>Archita Patel</p>
+                <p>Marketing Manager</p>
+                <a href="mailto:archita@nbventuresme.com">
+                  archita@nbventuresme.com
+                </a>
+                <p>050-6785243</p>
+              </div>
             </div>
+
+            {/* RIGHT BLOCKS */}
             <div className="contact-text-blocks">
               {contactBlocks.map((block, i) => (
                 <p key={i} className="contact-text-block">
