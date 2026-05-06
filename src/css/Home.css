@@ -58,7 +58,7 @@
   transform: translateY(-50%);
   max-width: 420px;
   text-align: right;
-  color: var(--white);
+  color: var(--black);
   z-index: 2;
 }
 .ceo-info h3 {
@@ -66,6 +66,7 @@
   font-size: 30px;
   font-weight: 800;
   text-transform: uppercase;
+  color: white;
 }
 .ceo-info .ceo-role {
   font-size: 16px;
@@ -76,6 +77,7 @@
   font-size: 14px;
   line-height: 1.7;
   margin-bottom: 16px;
+  color: white;
 }
 .read-more-link {
   position: relative;
@@ -131,7 +133,7 @@
   background: var(--white);
   padding: 60px 0 50px;
 }
-
+/* 
 .directors-marquee {
   overflow: hidden;
   width: 100%;
@@ -150,7 +152,7 @@
     black 94%,
     transparent 100%
   );
-}
+} */
 
 .directors-track-marquee {
   display: flex;
@@ -375,20 +377,20 @@
   overflow: hidden;
   width: 100%;
   margin-top: 36px;
-  -webkit-mask-image: linear-gradient(
+  /* -webkit-mask-image: linear-gradient(
     to right,
     transparent 0%,
     black 6%,
     black 94%,
     transparent 100%
-  );
-  mask-image: linear-gradient(
+  ); */
+  /* mask-image: linear-gradient(
     to right,
     transparent 0%,
     black 6%,
     black 94%,
     transparent 100%
-  );
+  ); */
 }
 
 .verticals-track {
@@ -638,6 +640,7 @@
 .gp-col-mid {
   display: flex;
   flex-direction: column;
+  background: grey;
 }
 .gp-col-right {
   display: flex;
@@ -648,7 +651,7 @@
 .gp-card {
   border-radius: 12px;
   overflow: hidden;
-  background: var(--gray-light);
+
   position: relative;
   flex-shrink: 0;
 }
@@ -677,6 +680,7 @@
 
 .gp-card--sm {
   flex: 1;
+  background: grey;
 }
 
 .group-photo-placeholder {
@@ -907,7 +911,9 @@
   line-height: 1.75;
   color: rgb(255, 255, 255);
 }
-
+.contact-red-panel h2 {
+  color: white;
+}
 .contact-text-blocks {
   display: flex;
   flex-direction: column;
@@ -936,4 +942,3 @@
     padding: 32px 24px;
   }
 }
-

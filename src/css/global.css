@@ -271,7 +271,7 @@ p:last-child {
   align-items: center;
   justify-content: center;
   gap: var(--sp-4);
-  font-size: var(--text-sm);
+  font-size: var(--text-lg);
   font-weight: var(--fw-bold);
   text-transform: uppercase;
   letter-spacing: 0.14em;

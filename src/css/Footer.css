@@ -30,15 +30,18 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 18px;
-  color: #ffffff;
+  color: red;
 }
 
 /* TEXT */
 .footer-about p {
   font-size: 14px;
-  color: #bdbdbd;
+  color: white;
   margin: 4px 0;
   line-height: 1.5;
+  font-family: var(--font-primary);
+  font-size: var(--text-base);
+  font-weight: var(--fw-regular);
 }
 
 .footer-about .highlight {
@@ -60,6 +63,7 @@
 
 .footer-col ul li {
   margin-bottom: 10px;
+  font-family: var(--font-primary);
 }
 
 .footer-col ul li a {
