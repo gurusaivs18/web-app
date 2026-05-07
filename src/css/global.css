@@ -9,9 +9,6 @@
 /* --------------------------------------------------------------------------
    1. DESIGN TOKENS
    -------------------------------------------------------------------------- */
-/* --------------------------------------------------------------------------
-   1. DESIGN TOKENS
-   -------------------------------------------------------------------------- */
 :root {
   /* ── Brand Colors ── */
   --color-primary: #9b1c1c;
@@ -40,15 +37,15 @@
   --fw-bold: 700;
   --fw-black: 900;
 
-  --text-xs: 0.75rem;
-  --text-sm: 0.875rem;
-  --text-base: 1rem;
-  --text-md: 1.125rem;
-  --text-lg: 1.25rem;
-  --text-xl: 1.5rem;
-  --text-2xl: 2rem;
-  --text-3xl: 2.5rem;
-  --text-4xl: 3rem;
+  --text-xs: 0.75rem; /* 12px */
+  --text-sm: 0.875rem; /* 14px */
+  --text-base: 1rem; /* 16px */
+  --text-md: 1.125rem; /* 18px */
+  --text-lg: 1.25rem; /* 20px */
+  --text-xl: 1.5rem; /* 24px */
+  --text-2xl: 2rem; /* 32px */
+  --text-3xl: 2.5rem; /* 40px */
+  --text-4xl: 3rem; /* 48px */
 
   --lh-tight: 1.2;
   --lh-normal: 1.6;
@@ -82,21 +79,14 @@
   --ease-normal: 250ms ease;
   --ease-slow: 400ms ease;
 
-  /* ── Short aliases ── */
+  /* ── Short aliases — used by Navbar.css, Footer.css, GetInTouch.css ── */
   --white: #ffffff;
-
-  /* FIXED */
-  --black: #000000;
-
+  --black: white; /* Get In Touch section background           */
   --red: #9b1c1c;
-  --text-mid: #1a1a1a;
-
-  /* OPTIONAL FIX */
-  --gray-light: #f2f2f2;
-
-  /* OPTIONAL FIX */
-  --gray-mid: #d6d6d6;
+  --text-mid: #1a1a1a; /* right panel p tags — black                */
+  --gray-mid: ; /* divider lines inside dark section         */
 }
+
 /* --------------------------------------------------------------------------
    2. RESET & BASE
    -------------------------------------------------------------------------- */

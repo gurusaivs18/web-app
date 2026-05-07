@@ -2,27 +2,6 @@
    HOME.CSS  –  JSB Group Homepage
    ================================================================= */
 
-/* ── Fix: prevent any section overflowing viewport width ──────── */
-.directors-section,
-.home-verticals-logos,
-.home-impact,
-.home-group-photos,
-.home-testimonials,
-.home-contact,
-.home-intro,
-.ceo-section {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-/* ── Fix: container should never exceed screen width ─────────── */
-.container {
-  width: 100%;
-  box-sizing: border-box;
-  padding-left: clamp(16px, 4vw, 40px);
-  padding-right: clamp(16px, 4vw, 40px);
-}
-
 /* ================= INTRO ================= */
 .home-intro {
   background: var(--white);
@@ -46,17 +25,6 @@
   color: var(--text-mid);
   line-height: 1.9;
   text-align: center;
-}
-
-@media (max-width: 480px) {
-  .home-intro-text h2 {
-    font-size: 16px;
-    letter-spacing: 0.5px;
-  }
-  .home-intro-text p {
-    font-size: 13px;
-    line-height: 1.75;
-  }
 }
 
 /* ================= CEO SECTION ================= */
@@ -137,42 +105,26 @@
     height: 320px;
   }
   .ceo-info {
-    right: 16px;
-    left: 16px;
-    max-width: calc(100% - 32px);
-    text-align: left;
+    right: 20px;
+    max-width: 70%;
   }
   .ceo-info h3 {
-    font-size: 20px;
+    font-size: 22px;
   }
   .ceo-info .ceo-role {
-    font-size: 12px;
-    margin-bottom: 8px;
+    font-size: 13px;
   }
   .ceo-info p {
     font-size: 12px;
-    line-height: 1.5;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
   }
 }
-
 @media (max-width: 480px) {
   .ceo-content {
-    height: 260px;
+    height: 280px;
   }
   .ceo-info {
-    right: 12px;
-    left: 12px;
-    max-width: calc(100% - 24px);
-    top: auto;
-    bottom: 16px;
-    transform: none;
-  }
-  .ceo-info h3 {
-    font-size: 17px;
+    max-width: 85%;
+    right: 15px;
   }
 }
 
@@ -181,13 +133,26 @@
   background: var(--white);
   padding: 60px 0 50px;
 }
-
-/* ── Fix: directors-marquee was commented out but used in JSX ── */
+/* 
 .directors-marquee {
   overflow: hidden;
   width: 100%;
   margin-top: 30px;
-}
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 6%,
+    black 94%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 6%,
+    black 94%,
+    transparent 100%
+  );
+} */
 
 .directors-track-marquee {
   display: flex;
@@ -401,25 +366,6 @@
   }
 }
 
-@media (max-width: 480px) {
-  .director-card {
-    width: 160px;
-    flex: 0 0 160px;
-  }
-  .director-photo-wrap {
-    height: 155px;
-  }
-  .director-name {
-    font-size: 11.5px;
-  }
-  .director-role {
-    font-size: 9px;
-  }
-  .director-bio {
-    font-size: 10px;
-  }
-}
-
 /* ================= VERTICALS AUTO-SLIDER ================= */
 .home-verticals-logos {
   background: var(--white);
@@ -431,6 +377,20 @@
   overflow: hidden;
   width: 100%;
   margin-top: 36px;
+  /* -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 6%,
+    black 94%,
+    transparent 100%
+  ); */
+  /* mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 6%,
+    black 94%,
+    transparent 100%
+  ); */
 }
 
 .verticals-track {
@@ -497,6 +457,8 @@
   height: 100%;
 }
 
+/* Every logo fills the same padded box — object-fit: contain
+   keeps the aspect ratio so nothing gets stretched or squashed */
 .vertical-logo-box img {
   width: 100%;
   height: 100%;
@@ -556,27 +518,6 @@
 
 .vertical-know-more:hover {
   opacity: 0.7;
-}
-
-@media (max-width: 480px) {
-  .vertical-slide-item {
-    width: 180px;
-    margin-right: 14px;
-  }
-  .vertical-logo-box {
-    height: 100px;
-    padding: 12px 14px;
-  }
-  .vertical-card-body {
-    padding: 10px 12px 12px;
-  }
-  .vertical-brand-name {
-    font-size: 11px;
-  }
-  .vertical-brand-desc {
-    font-size: 10px;
-    -webkit-line-clamp: 3;
-  }
 }
 
 /* ================= IMPACT ================= */
@@ -665,39 +606,21 @@
     padding: 0 16px 24px;
   }
 }
-
 @media (max-width: 480px) {
   .stats-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 24px 0;
-  }
-  .stat-box:nth-child(odd)::after {
-    display: block;
-  }
-  .stat-box:nth-child(even)::after {
-    display: none;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px 0;
   }
   .stat-icon {
-    width: 56px;
-    height: 56px;
+    width: 64px;
+    height: 64px;
   }
   .stat-icon svg {
-    width: 24px;
-    height: 24px;
+    width: 28px;
+    height: 28px;
   }
   .stat-box h2 {
-    font-size: 22px;
-  }
-  .stat-label {
-    font-size: 9.5px;
-    letter-spacing: 0.8px;
-  }
-  .stat-desc {
-    font-size: 11px;
-  }
-  .impact-intro {
-    font-size: 13px;
-    padding: 0 4px;
+    font-size: 24px;
   }
 }
 
@@ -812,38 +735,26 @@
     height: 100%;
   }
 }
-
 @media (max-width: 600px) {
   .group-photo-grid {
     grid-template-columns: 1fr;
     height: auto;
-    gap: 10px;
   }
   .gp-col-left {
     grid-column: 1;
     grid-row: auto;
-    height: 200px;
+    height: 220px;
   }
   .gp-col-mid {
     grid-column: 1;
     grid-row: auto;
-    height: 170px;
-    justify-content: flex-start;
-  }
-  .gp-card--mid {
-    height: 100%;
-    width: 100%;
+    height: 180px;
   }
   .gp-col-right {
     grid-column: 1;
     grid-row: auto;
-    height: 160px;
+    height: 180px;
     flex-direction: row;
-    gap: 10px;
-  }
-  .gp-card--sm {
-    flex: 1;
-    min-width: 0;
   }
 }
 
@@ -949,30 +860,16 @@
     max-width: 100%;
   }
 }
-
 @media (max-width: 600px) {
-  .testimonials-inner {
-    gap: 28px;
-  }
-  .testimonials-heading h2 {
-    font-size: 20px;
-  }
   .testimonials-cards {
     grid-template-columns: 1fr;
-    gap: 16px;
   }
   .testimonial-card {
-    padding: 18px 16px 14px;
-  }
-  .tq-open,
-  .tq-close {
-    font-size: 40px;
-  }
-  .testimonial-text {
-    font-size: 12.5px;
+    padding: 22px 18px 18px;
   }
 }
 
+/* ================= GET IN TOUCH ================= */
 /* ================= GET IN TOUCH ================= */
 .home-contact {
   background: var(--black);
@@ -1010,7 +907,7 @@
 .contact-info {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 10px; /* equal spacing */
 }
 
 /* RESET DEFAULT SPACING */
@@ -1059,28 +956,11 @@
 @media (max-width: 900px) {
   .contact-inner {
     grid-template-columns: 1fr;
-    gap: 20px;
   }
 }
 
 @media (max-width: 480px) {
-  .home-contact {
-    padding: 32px 0;
-  }
   .contact-red-panel {
-    padding: 20px 18px;
-    gap: 14px;
-  }
-  .contact-red-panel h2 {
-    font-size: 17px;
-  }
-  .contact-info p,
-  .contact-info a {
-    font-size: 12px;
-  }
-  .contact-text-block {
-    font-size: 12px;
-    line-height: 1.7;
-    padding-bottom: 14px;
+    padding: 24px;
   }
 }
