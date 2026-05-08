@@ -963,3 +963,52 @@
     padding: 24px;
   }
 }
+/* =========================================================
+   MOBILE LINK FIXES FOR AUTO-SCROLLING MARQUEES
+========================================================= */
+
+/* Prevent animated wrappers from swallowing touch events */
+.directors-track-marquee,
+.verticals-track {
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+  pointer-events: none;
+}
+
+/* Re-enable interaction on actual cards/content */
+.director-card,
+.vertical-slide-item,
+.director-card *,
+.vertical-slide-item * {
+  pointer-events: auto;
+}
+
+/* Ensure links stay above transformed layers */
+.director-know-more,
+.vertical-know-more,
+.vertical-logo-box a,
+.read-more-link {
+  position: relative;
+  z-index: 20;
+  pointer-events: auto;
+  touch-action: manipulation;
+}
+
+/* Better mobile tap handling */
+.verticals-slider-outer,
+.directors-marquee {
+  touch-action: pan-y;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Safari/iOS transform fix */
+.director-card,
+.vertical-slide-item {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Improve tap response on mobile */
+a {
+  -webkit-tap-highlight-color: transparent;
+}
