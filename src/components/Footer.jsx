@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { FaLinkedinIn } from "react-icons/fa";
 import "../css/Footer.css";
 import Logo from "./Logo";
-import { verticals } from "../data/verticals"; // ✅ added
+import { verticals } from "../data/verticals";
 
 function Footer() {
   return (
@@ -47,7 +47,8 @@ function Footer() {
           {/* QUICK LINKS */}
           <div className="footer-col">
             <h4>Quick Links</h4>
-            <ul>
+
+            <ul className="quick-links-list">
               {verticals.map((section, i) =>
                 section.items.map((item, j) => (
                   <li key={`${i}-${j}`}>

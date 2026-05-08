@@ -73,8 +73,13 @@
   letter-spacing: 0.5px;
   transition: 0.3s ease;
   position: relative;
+  white-space: nowrap;
 }
-
+.quick-links-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px 30px;
+}
 .footer-col ul li a:hover {
   color: #ff2e2e;
 }
@@ -173,5 +178,9 @@
   .footer-col ul li a::after {
     left: 50%;
     transform: translateX(-50%);
+  }
+
+  .quick-links-list {
+    grid-template-columns: 1fr;
   }
 }
