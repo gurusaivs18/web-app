@@ -433,6 +433,7 @@ function Home() {
       </section>
 
       <DirectorsSlider />
+
       <VerticalsSlider />
 
       <section className="section home-impact" ref={sectionRef}>
