@@ -42,7 +42,19 @@ export const verticals = [
       { name: "BVB League", link: "https://www.bvbleague.ae/" },
     ],
   },
-
+  {
+    title: "Interior Fitout & Outdoor Furniture",
+    description:
+      "JSB Group delivers premium interior fitout and outdoor furniture solutions for residential, commercial, and hospitality environments.",
+    readMore:
+      "Epic Fitouts specializes in interior design, fitout execution, and customized outdoor furniture solutions. From concept development to final execution, the company focuses on creating functional and aesthetically refined environments. The outdoor furniture division works closely with architects and designers to transform exterior spaces into modern and practical lifestyle destinations.",
+    items: [
+      {
+        name: "Epic Fitouts",
+        link: "",
+      },
+    ],
+  },
   {
     title: "Technology",
     description:
