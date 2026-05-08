@@ -1,3 +1,5 @@
+/* ───────────────── NAVBAR BASE ───────────────── */
+
 .navbar {
   width: 100%;
   background-color: rgb(12, 12, 12);
@@ -10,6 +12,7 @@
   box-shadow: 0 6px 10px rgba(17, 16, 16, 0.25);
 }
 
+/* CONTAINER */
 .nav-container {
   max-width: var(--max-width);
   margin: 0 auto;
@@ -19,33 +22,31 @@
   align-items: center;
 }
 
-/* ✅ LOGO - LEFT SIDE */
+/* ───────────────── LOGO ───────────────── */
+
 .logo-link {
   text-decoration: none;
   display: flex;
   align-items: center;
   flex-shrink: 0;
-  order: 0;
-  margin-right: auto; /* pushes everything else to the right */
+  margin-right: auto;
 }
 
-/* ✅ MENU - STARTS FROM CENTER AREA TO RIGHT */
+/* ───────────────── MENU (DESKTOP) ───────────────── */
+
 .nav-menu {
   list-style: none;
   display: flex;
   gap: 28px;
   align-items: center;
 
-  order: 1;
+  margin-left: auto;
 
-  margin-left: auto; /* pushes menu away from logo */
-  margin-right: 0;
-
-  /* creates “starts from middle” feel */
-  padding-left: clamp(80px, 15vw, 240px);
+  /* desktop spacing illusion */
+  padding-left: clamp(60px, 12vw, 200px);
 }
 
-/* Links */
+/* LINKS */
 .nav-menu li a {
   position: relative;
   color: var(--white);
@@ -58,7 +59,7 @@
   transition: color 0.3s ease;
 }
 
-/* underline animation */
+/* underline */
 .nav-menu li a::after {
   content: "";
   position: absolute;
@@ -75,7 +76,8 @@
   color: red;
 }
 
-.nav-menu li a:hover::after {
+.nav-menu li a:hover::after,
+.nav-menu li a.active::after {
   width: 100%;
 }
 
@@ -83,11 +85,8 @@
   color: red;
 }
 
-.nav-menu li a.active::after {
-  width: 100%;
-}
+/* ───────────────── HAMBURGER ───────────────── */
 
-/* Hamburger */
 .nav-hamburger {
   display: none;
   flex-direction: column;
@@ -105,28 +104,37 @@
   background: var(--white);
 }
 
-/* ── Mobile ── */
+/* ───────────────── TABLET & MOBILE ───────────────── */
+
 @media (max-width: 768px) {
-  .nav-hamburger {
-    display: flex;
-    margin-left: auto;
+  .nav-container {
+    justify-content: space-between;
   }
 
+  /* SHOW HAMBURGER */
+  .nav-hamburger {
+    display: flex;
+  }
+
+  /* MOBILE MENU */
   .nav-menu {
     display: none;
     flex-direction: column;
+
     position: absolute;
     top: 70px;
     left: 0;
     width: 100%;
+
     background: white;
     padding: 16px 24px;
     gap: 16px;
+
     z-index: 9999;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 
     margin-left: 0;
-    padding-left: clamp(80px, 10vw, 160px);
+    padding-left: 0; /* FIX: remove desktop spacing */
   }
 
   .nav-menu.open {
@@ -142,11 +150,9 @@
   .nav-menu li a::after {
     background: red;
   }
-
-  .logo-link {
-    margin-right: auto;
-  }
 }
+
+/* ───────────────── MOBILE SMALL ───────────────── */
 
 @media (max-width: 480px) {
   .nav-container {

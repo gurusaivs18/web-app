@@ -1,7 +1,20 @@
+import { useState } from "react";
 import { companyInfo } from "../data/company";
 import "../css/About.css";
 import ceoImage from "../assets/jsbGroupWebsite/jsbgroupwebsite-01.webp";
-import Hero from "../components/Hero";
+
+// ── Director images ──
+// import praveenImg from "../assets/Partners/Deep 1.webp";
+import rushabImg from "../assets/Partners/Rushab.JPG.webp";
+import deepImg from "../assets/Partners/Deep 2.webp";
+import sanjeevImg from "../assets/Partners/Sanjeev Sir 2.webp";
+// import ashikImg from "../assets/directors/mohammed-ashik.webp";
+
+// ── Partner images ──
+// import nazImg from "../assets/partners/naz-ayat.webp";
+// import afshadImg from "../assets/partners/afshad-mistry.webp";
+import sanalImg from "../assets/Partners/Sanal Sir 2.webp";
+// import manishImg from "../assets/partners/manish-kishore.webp";
 
 const CloudIcon = () => (
   <svg
@@ -13,34 +26,131 @@ const CloudIcon = () => (
   </svg>
 );
 
+const ceoWriteup = `Neelesh Bhatnagar is an entrepreneur with over three decades of experience spanning the Middle East and India. As the CEO & Founder of JSB Group, he has built a diversified conglomerate with interests across retail, fitness, hospitality, healthcare, and technology.
+
+His vision has been the driving force behind JSB Group's expansion into multiple verticals, creating an ecosystem of businesses that complement and strengthen one another. Under his leadership, JSB Group has grown from a single venture into a multi-faceted organisation with a presence across the UAE and beyond.
+
+Neelesh is known for his ability to identify opportunities ahead of the curve, his hands-on leadership style, and his commitment to building businesses that create lasting value — not just for shareholders, but for communities and people.
+
+His journey is one of resilience, vision, and an unwavering belief in the power of entrepreneurship to transform lives.`;
+
 const allDirectors = [
   {
     name: "Praveen Bhatnagar",
     role: "Director",
-    desc: "CPA with expertise in finance and business strategy across Retail, Fitness, Hospitality, and Healthcare.",
+    img: null,
+    writeup: `Praveen Bhatnagar is a Certified Public Accountant (CPA) with deep expertise in finance and business strategy. Over the course of his career, he has worked across Retail, Fitness, Hospitality, and Healthcare sectors, bringing financial rigour and strategic clarity to each venture he has been part of.\n\nAs a Director at JSB Group, Praveen plays a key role in shaping the financial architecture of the group's diverse portfolio, ensuring sustainable growth and sound governance across all business units.`,
   },
   {
     name: "Rushab Bhatnagar",
     role: "Director",
-    desc: "Co-Founder and CEO of NOVO Labs. Strategic Director for NB Ventures.",
+    img: rushabImg,
+    writeup: `Rushab Bhatnagar is the Co-Founder and CEO of NOVO Labs, and serves as Strategic Director for NB Ventures. With a sharp focus on innovation and technology-driven business models, Rushab brings a forward-thinking perspective to the JSB Group board.\n\nHis work spans venture building, strategic investments, and scaling early-stage companies into market leaders.`,
   },
   {
     name: "Deep Bhogal",
     role: "Managing Director",
-    desc: "30+ years in retail and distribution. Managing Director of Denaster.",
+    img: deepImg,
+    writeup: `Deep Bhogal brings over 30 years of experience in retail and distribution to the JSB Group. As Managing Director of Denaster, he has built and led large-scale operations across multiple markets, with a reputation for operational excellence and commercial acumen.\n\nHis decades of experience make him a cornerstone of the group's operational leadership.`,
   },
-  { name: "Sanjeev Sinha", role: "Director", desc: "" },
-  { name: "Mohammed Ashik", role: "Director", desc: "" },
+  {
+    name: "Sanjeev Sinha",
+    role: "Director",
+    img: sanjeevImg,
+    writeup: `Sanjeev Sinha is a seasoned business leader and Director at JSB Group, contributing strategic oversight and sector expertise to the group's growing portfolio of businesses.`,
+  },
+  {
+    name: "Mohammed Ashik",
+    role: "Director",
+    img: null,
+    writeup: `Mohammed Ashik is a Director at JSB Group, bringing valuable regional expertise and leadership experience that supports the group's expansion across key markets.`,
+  },
 ];
 
 const allPartners = [
-  { name: "Naz Ayat", role: "Partner" },
-  { name: "Afshad Mistry", role: "Partner" },
-  { name: "Sanal Kumar", role: "Partner" },
-  { name: "Partner", role: "Partner" },
+  {
+    name: "Naz Ayat",
+    role: "Partner",
+    img: null,
+    writeup: `Naz Ayat is a Partner at JSB Group, contributing expertise and strategic guidance across the group's diverse business interests.`,
+  },
+  {
+    name: "Afshad Mistry",
+    role: "Partner",
+    img: null,
+    writeup: `Afshad Mistry is a Partner at JSB Group, playing an integral role in supporting the group's mission and growth objectives.`,
+  },
+  {
+    name: "Sanal Kumar",
+    role: "Partner",
+    img: sanalImg,
+    writeup: `Sanal Kumar is a Partner at JSB Group, bringing deep professional experience and commitment to the group's values and vision.`,
+  },
+  {
+    name: "Manish Kishore",
+    role: "Partner",
+    img: null,
+    writeup: ``,
+  },
 ];
 
+function Modal({ person, onClose }) {
+  return (
+    <div className="modal-overlay" onClick={onClose}>
+      <div className="modal-box" onClick={(e) => e.stopPropagation()}>
+        <button className="modal-close" onClick={onClose}>
+          ✕
+        </button>
+        <h3 className="modal-name">{person.name}</h3>
+        <p className="modal-role">{person.role}</p>
+        <div className="modal-writeup">
+          {person.writeup.split("\n\n").map((para, i) => (
+            <p key={i}>{para}</p>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function PersonCard({ person, labelType }) {
+  const [open, setOpen] = useState(false);
+  return (
+    <>
+      <div className="director-card">
+        {/* Photo zone */}
+        <div className="director-photo">
+          {person.img ? (
+            <img
+              src={person.img}
+              alt={person.name}
+              className="director-photo-img"
+            />
+          ) : (
+            <div className="director-photo-placeholder" />
+          )}
+          <div className="director-label">{labelType}</div>
+        </div>
+
+        {/* Text below the photo — always rendered */}
+        <div className="director-card-body">
+          <p className="director-name">{person.name}</p>
+          <p className="director-role-text">{person.role}</p>
+          {person.writeup && person.writeup.trim() !== "" && (
+            <button className="read-more-btn" onClick={() => setOpen(true)}>
+              Read More →
+            </button>
+          )}
+        </div>
+      </div>
+      {open && <Modal person={person} onClose={() => setOpen(false)} />}
+    </>
+  );
+}
+
 function About() {
+  const [ceoOpen, setCeoOpen] = useState(false);
+
   return (
     <>
       <div className="page-hero">
@@ -91,7 +201,7 @@ function About() {
         </div>
       </section>
 
-      {/* THE ARCHITECT */}
+      {/* THE ARCHITECT — CEO */}
       <section className="section architect-section">
         <div className="section-title-wrap">
           <span className="section-title">The Architect & Pillars</span>
@@ -106,16 +216,35 @@ function About() {
           <div className="architect-label">THE ARCHITECT</div>
           <div className="architect-content">
             <div className="architect-info">
-              <h3>Neelesh Bhatnagar</h3>
-              <p className="role">CEO & Founder</p>
+              <h3 style={{ color: "white" }}>Neelesh Bhatnagar</h3>
+              <p className="role" style={{ color: "red" }}>
+                CEO & Founder
+              </p>
               <p>
                 Entrepreneur with over three decades of experience spanning the
                 Middle East and India.
               </p>
+              <button
+                className="architect-read-more"
+                onClick={() => setCeoOpen(true)}
+              >
+                Read More →
+              </button>
             </div>
           </div>
         </div>
       </section>
+
+      {ceoOpen && (
+        <Modal
+          person={{
+            name: "Neelesh Bhatnagar",
+            role: "CEO & Founder",
+            writeup: ceoWriteup,
+          }}
+          onClose={() => setCeoOpen(false)}
+        />
+      )}
 
       {/* DIRECTOR PILLARS */}
       <section className="section pillars-section">
@@ -123,29 +252,14 @@ function About() {
           <div className="section-title-wrap">
             <span className="section-title">Director Pillars</span>
           </div>
-
           <div className="directors-grid">
             {allDirectors.slice(0, 3).map((d, i) => (
-              <div key={i} className="director-card">
-                <div className="director-photo">
-                  <div className="director-label">Director</div>
-                </div>
-                <p className="director-name">{d.name}</p>
-                <p className="director-role-text">{d.role}</p>
-                {d.desc && <p className="director-desc">{d.desc}</p>}
-              </div>
+              <PersonCard key={i} person={d} labelType="Director" />
             ))}
           </div>
-
           <div className="directors-grid-2">
             {allDirectors.slice(3, 5).map((d, i) => (
-              <div key={i} className="director-card">
-                <div className="director-photo">
-                  <div className="director-label">Director</div>
-                </div>
-                <p className="director-name">{d.name}</p>
-                <p className="director-role-text">{d.role}</p>
-              </div>
+              <PersonCard key={i} person={d} labelType="Director" />
             ))}
           </div>
         </div>
@@ -159,12 +273,7 @@ function About() {
           </div>
           <div className="partners-grid">
             {allPartners.map((p, i) => (
-              <div key={i} className="director-card">
-                <div className="director-photo">
-                  <div className="director-label">Partner</div>
-                </div>
-                <p className="director-name">{p.name}</p>
-              </div>
+              <PersonCard key={i} person={p} labelType="Partner" />
             ))}
           </div>
         </div>

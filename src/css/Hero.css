@@ -1,91 +1,169 @@
+/* ───────────────── HERO BASE ───────────────── */
+
 .hero {
   width: 100%;
   height: 70vh;
-  min-height: 500px;
+  min-height: 520px;
   position: relative;
   overflow: hidden;
 }
 
-/* FULL BACKGROUND IMAGE */
+/* IMAGE */
 .hero-img {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
 }
 
-/* DARK OVERLAY (for readability) */
+/* DARK OVERLAY */
 .hero::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.45);
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.65),
+    rgba(0, 0, 0, 0.25)
+  );
   z-index: 1;
 }
 
-/* LEFT SIDE TEXT INSIDE IMAGE */
+/* ───────────────── CONTENT (DESKTOP) ───────────────── */
+
 .hero-content {
   position: absolute;
   z-index: 2;
   left: 80px;
   top: 50%;
   transform: translateY(-50%);
-
   max-width: 600px;
+  color: white;
 }
 
+/* TEXT */
 .hero-content h1 {
   font-family: var(--font-heading);
-  font-size: 48px;
+  font-size: 52px;
   font-weight: 800;
-  line-height: 1.2;
-  margin-bottom: 12px;
-  color: white;
+  line-height: 1.15;
+  margin-bottom: 14px;
 }
 
 .hero-content p {
-  font-size: 16px;
-  margin-bottom: 24px;
+  font-size: 17px;
   opacity: 0.9;
-  color: white;
+  margin-bottom: 26px;
 }
 
 /* BUTTON */
 .hero-content .btn {
-  width: fit-content;
-  padding: 12px 28px;
-  border-radius: 999px; /* capsule shape */
+  padding: 12px 30px;
+  border-radius: 999px;
   background: #b71c1c;
   color: #fff;
   border: none;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .hero-content .btn:hover {
   background: #8e1414;
   transform: translateY(-2px);
 }
-/* RESPONSIVE */
+
+/* ───────────────── TABLET ───────────────── */
+
+@media (max-width: 992px) {
+  .hero {
+    height: 60vh;
+    min-height: 450px;
+  }
+
+  .hero-content {
+    left: 50px;
+    max-width: 80%;
+  }
+
+  .hero-content h1 {
+    font-size: 40px;
+  }
+
+  .hero-content p {
+    font-size: 15px;
+  }
+}
+
+/* ───────────────── SMALL TABLET ───────────────── */
+
 @media (max-width: 768px) {
+  .hero {
+    height: 55vh;
+    min-height: 420px;
+  }
+
+  /* MOVE TEXT AWAY FROM CENTER FACE AREA */
   .hero-content {
     left: 30px;
     right: 30px;
+    top: auto;
+    bottom: 60px;
+    transform: none;
     max-width: 100%;
   }
 
   .hero-content h1 {
-    font-size: 32px;
+    font-size: 34px;
+    line-height: 1.2;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+    margin-bottom: 18px;
   }
 }
 
+/* ───────────────── MOBILE ───────────────── */
+
 @media (max-width: 480px) {
+  .hero {
+    height: 60vh;
+    min-height: 380px;
+  }
+
+  .hero-content {
+    left: 20px;
+    right: 20px;
+    bottom: 40px;
+    text-align: left;
+  }
+
   .hero-content h1 {
-    font-size: 24px;
+    font-size: 26px;
+  }
+
+  .hero-content p {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .hero-content .btn {
+    padding: 10px 22px;
+    font-size: 13px;
   }
 }
-/* .btn {
-  text-decoration: none;
-} */
+
+/* ───────────────── VERY SMALL ───────────────── */
+
+@media (max-width: 360px) {
+  .hero-content h1 {
+    font-size: 22px;
+  }
+
+  .hero-content p {
+    font-size: 12px;
+  }
+}
