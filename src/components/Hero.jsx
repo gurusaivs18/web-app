@@ -10,8 +10,10 @@ function Hero() {
       <img src={heroImage} alt="Hero" className="hero-img" />
 
       <div className="hero-content">
-        <h1>From Dreams to Reality</h1>
-        <p>The Unstoppable Force of Purposeful Action</p>
+        <h1 style={{ color: "white" }}>From Dreams to Reality</h1>
+        <p style={{ color: "white" }}>
+          The Unstoppable Force of Purposeful Action
+        </p>
 
         <button className="btn" onClick={() => navigate("/verticals")}>
           Know More
