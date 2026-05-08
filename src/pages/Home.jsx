@@ -548,6 +548,8 @@
 
 // export default Home;
 
+// first and second
+
 import { useEffect, useRef, useState } from "react";
 import Hero from "../components/Hero";
 import { companyInfo } from "../data/company";
@@ -1153,3 +1155,265 @@ function Home() {
 }
 
 export default Home;
+
+// import { useEffect, useRef, useState } from "react";
+// import { Link } from "react-router-dom";
+
+// import Hero from "../components/Hero";
+// import { companyInfo } from "../data/company";
+// import { stats } from "../data/stats";
+
+// import "../css/Home.css";
+// import "../css/ScrollReveal.css";
+
+// import { useScrollReveal } from "../hooks/useScrollReveal";
+
+// import ceoImage from "../assets/jsbGroupWebsite/jsbgroupwebsite-01.webp";
+
+// import uaeBulls from "../assets/Brand-Logos/UAE bulls-2025.webp";
+// import motiv8 from "../assets/Brand-Logos/Motiv8 (4).webp";
+// import pressmans from "../assets/Brand-Logos/Pressmans logo (11).webp";
+// import vkTech from "../assets/Brand-Logos/VKTECHNOLOGIES LOGO (3).webp";
+// import targetOne from "../assets/Brand-Logos/targetone.webp";
+// import nbVentures from "../assets/Brand-Logos/NB VENTURES Logo-02 (3).webp";
+// import denaster from "../assets/Brand-Logos/Denaster Logo.webp";
+
+// import rushab from "../assets/Partners/Rushab.JPG.webp";
+// import sinha from "../assets/Partners/Sanjeev Sir 1.webp";
+// import sanal from "../assets/Partners/Sanal Sir 1.webp";
+// import deep from "../assets/Partners/Deep 1.webp";
+
+// const statIcons = [
+//   <svg viewBox="0 0 24 24">
+//     <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z" />
+//   </svg>,
+//   <svg viewBox="0 0 24 24">
+//     <path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z" />
+//   </svg>,
+//   <svg viewBox="0 0 24 24">
+//     <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+//   </svg>,
+//   <svg viewBox="0 0 24 24">
+//     <path d="M20 4H4v2l8 5 8-5V4zM4 13v7h7v-5h2v5h7v-7L12 8z" />
+//   </svg>,
+// ];
+
+// const brandLogos = [
+//   {
+//     img: uaeBulls,
+//     url: "https://uaebulls.ae",
+//     order: 1,
+//     name: "UAE Bulls",
+//     slug: "uae-bulls",
+//     desc: "Neelesh Bhatnagar's passion for cricket led him to own the Delhi Bulls team. After eight seasons, the U.A.E. Bulls achieved a historic milestone — Champions of Season 9 (2025–26).",
+//   },
+//   {
+//     img: motiv8,
+//     url: "https://motiv8.ae/",
+//     order: 2,
+//     name: "Motiv8",
+//     slug: "motiv8",
+//     desc: "An athleisure multi-designer women's-only retail store.",
+//   },
+//   {
+//     img: pressmans,
+//     url: "https://pressmans.com/",
+//     order: 3,
+//     name: "Pressman's Sandwiches",
+//     slug: "pressmans",
+//     desc: "A homegrown brand specializing in healthy and fresh sandwiches and salads.",
+//   },
+// ];
+
+// const directors = [
+//   {
+//     name: "Rushab Bhatnagar",
+//     role: "Co-Founder & CEO",
+//     bio: "Leads NB Ventures' portfolio of 70+ Indian start-ups.",
+//     slug: "rushab-bhatnagar",
+//     img: rushab,
+//   },
+//   {
+//     name: "Deep Bhogal",
+//     role: "Managing Director, Denaster",
+//     bio: "30+ years in supply and distribution.",
+//     slug: "deep-bhogal",
+//     img: deep,
+//   },
+//   {
+//     name: "Sanjeev Sinha",
+//     role: "Director",
+//     bio: "Strategic growth leader across verticals.",
+//     slug: "sanjeev-sinha",
+//     img: sinha,
+//   },
+//   {
+//     name: "Sanal Kumar",
+//     role: "Director",
+//     bio: "Contributes strategic direction and expertise.",
+//     slug: "sanal-kumar",
+//     img: sanal,
+//   },
+// ];
+
+// function Home() {
+//   useScrollReveal();
+
+//   const sectionRef = useRef(null);
+//   const [triggered, setTriggered] = useState(false);
+
+//   useEffect(() => {
+//     const observer = new IntersectionObserver(
+//       ([entry]) => {
+//         if (entry.isIntersecting) {
+//           setTriggered(true);
+//         }
+//       },
+//       { threshold: 0.2 },
+//     );
+
+//     if (sectionRef.current) {
+//       observer.observe(sectionRef.current);
+//     }
+
+//     return () => observer.disconnect();
+//   }, []);
+
+//   return (
+//     <>
+//       <Hero />
+
+//       {/* INTRO */}
+//       <section className="section home-intro">
+//         <div className="container">
+//           <div className="home-intro-text">
+//             <h2 data-reveal="up">
+//               An Organisation Inspired by Dreams &amp; Led by Purpose.
+//             </h2>
+
+//             <p data-reveal="up" data-delay="200">
+//               {companyInfo.about}
+//             </p>
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* CEO */}
+//       <section className="ceo-section" data-reveal="fade">
+//         <div className="ceo-content">
+//           <img src={ceoImage} alt="CEO" className="ceo-img" loading="lazy" />
+
+//           <div className="ceo-info">
+//             <h3 data-reveal="right">Neelesh Bhatnagar</h3>
+
+//             <p
+//               className="ceo-role"
+//               style={{ color: "red" }}
+//               data-reveal="right"
+//               data-delay="150"
+//             >
+//               CEO &amp; Founder
+//             </p>
+
+//             <p data-reveal="right" data-delay="250">
+//               Entrepreneur with over three decades of experience spanning the
+//               Middle East and India.
+//             </p>
+
+//             {/* FIXED INTERNAL LINK */}
+//             <Link
+//               to="/about"
+//               className="read-more-link"
+//               data-reveal="right"
+//               data-delay="350"
+//             >
+//               Read More
+//             </Link>
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* DIRECTORS */}
+//       <section className="directors-section">
+//         <div className="container">
+//           <div className="section-title-wrap" data-reveal="fade">
+//             <span className="section-title">Pillars</span>
+//           </div>
+//         </div>
+
+//         <div className="directors-marquee" data-reveal="up">
+//           <div className="directors-track-marquee">
+//             {[...directors, ...directors].map((d, i) => (
+//               <div key={d.slug + i} className="director-card">
+//                 <div className="director-photo-wrap">
+//                   <img
+//                     src={d.img}
+//                     alt={d.name}
+//                     className="director-photo"
+//                     loading="lazy"
+//                   />
+//                 </div>
+
+//                 <div className="director-text-col">
+//                   <h4 className="director-name">{d.name}</h4>
+
+//                   <p className="director-role">{d.role}</p>
+
+//                   <p className="director-bio">{d.bio}</p>
+
+//                   {/* FIXED INTERNAL LINK */}
+//                   <Link to={`/about#${d.slug}`} className="director-know-more">
+//                     Know More →
+//                   </Link>
+//                 </div>
+//               </div>
+//             ))}
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* VERTICALS */}
+//       <section className="home-verticals-logos">
+//         <div className="container">
+//           <div className="section-title-wrap" data-reveal="fade">
+//             <span className="section-title">Verticals</span>
+//           </div>
+//         </div>
+
+//         <div className="verticals-slider-outer">
+//           <div className="verticals-track">
+//             {[...brandLogos, ...brandLogos].map((logo, i) => (
+//               <div key={i} className="vertical-slide-item">
+//                 <div className="vertical-logo-box">
+//                   {/* FIXED EXTERNAL LINK */}
+//                   <a href={logo.url} target="_blank" rel="noopener noreferrer">
+//                     <img src={logo.img} alt={logo.name} loading="lazy" />
+//                   </a>
+//                 </div>
+
+//                 <div className="vertical-card-divider" />
+
+//                 <div className="vertical-card-body">
+//                   <p className="vertical-brand-name">{logo.name}</p>
+
+//                   <p className="vertical-brand-desc">{logo.desc}</p>
+
+//                   <a
+//                     href={logo.url}
+//                     target="_blank"
+//                     rel="noopener noreferrer"
+//                     className="vertical-know-more"
+//                   >
+//                     Know More →
+//                   </a>
+//                 </div>
+//               </div>
+//             ))}
+//           </div>
+//         </div>
+//       </section>
+//     </>
+//   );
+// }
+
+// export default Home;
