@@ -1,26 +1,38 @@
-.verticals-logo-strip {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 24px;
-  padding: 20px 0 10px;
+.vertical-page-title {
+  text-align: center;
+  margin-top: 5px;
+  font-size: clamp(38px, 5vw, 58px);
+  font-weight: 700;
+  color: var(--color-body);
+}
+
+.vertical-page-intro {
+  max-width: 1000px;
+  margin: 25px auto 0;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.9;
+  color: var(--text-mid);
+  padding: 0 20px;
 }
 
 /* ========================= CATEGORY SECTION ========================= */
+
 .vertical-category {
   background: var(--white);
   padding: 90px 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
-.vertical-category:last-child {
-  border-bottom: none;
-}
+
 .vertical-category:nth-child(even) {
   background: var(--gray-light);
 }
 
-/* ========================= VERTICAL CONTENT ========================= */
+.vertical-category:last-child {
+  border-bottom: none;
+}
+
+/* ========================= CONTENT ========================= */
 
 .vertical-content {
   text-align: center;
@@ -37,37 +49,27 @@
 }
 
 .vertical-description {
-  max-width: 780px;
-  margin: 0 auto 28px;
-  font-size: 16px;
+  max-width: 850px;
+  margin: 0 auto 22px;
+  font-size: 17px;
   line-height: 1.9;
   color: var(--text-mid);
 }
 
-/* ========================= READ MORE BUTTON ========================= */
-
-.vertical-readmore {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 13px 28px;
-  border-radius: 6px;
-  background: var(--black);
-  color: var(--white);
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: 0.4px;
-  transition:
-    transform 0.3s ease,
-    background 0.3s ease,
-    box-shadow 0.3s ease;
+.vertical-readmore-box {
+  max-width: 980px;
+  margin: 0 auto;
+  background: var(--gray-light);
+  border-radius: 14px;
+  padding: 28px;
+  text-align: left;
+  border: 1px solid rgba(0, 0, 0, 0.06);
 }
 
-.vertical-readmore:hover {
-  background: #222;
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+.vertical-readmore-box p {
+  font-size: 15px;
+  line-height: 1.95;
+  color: var(--text-mid);
 }
 
 /* ========================= BRAND GRID ========================= */
@@ -78,9 +80,10 @@
   align-items: center;
   justify-content: center;
   gap: 24px;
+  margin-top: 45px;
 }
 
-/* ========================= SHARED LOGO CARD ========================= */
+/* ========================= LOGO CARD ========================= */
 
 .logo-card {
   width: 170px;
@@ -91,9 +94,9 @@
   justify-content: center;
 
   padding: 16px;
-  border-radius: 10px;
+  border-radius: 12px;
 
-  background: var(--gray-light);
+  background: var(--white);
   text-decoration: none;
   cursor: pointer;
   position: relative;
@@ -105,48 +108,19 @@
     transform 0.35s ease,
     box-shadow 0.35s ease,
     background 0.35s ease;
+
   box-sizing: border-box;
   flex-shrink: 0;
+
+  border: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 .logo-card:hover {
   transform: translateY(-8px) scale(1.05);
 
-  background: var(--white);
-
   box-shadow:
     0 14px 35px rgba(0, 0, 0, 0.1),
     0 5px 15px rgba(0, 0, 0, 0.06);
-}
-
-/* ========================= SHIMMER EFFECT ========================= */
-
-.logo-card::before {
-  content: "";
-
-  position: absolute;
-  top: 0;
-  left: -80%;
-
-  width: 45%;
-  height: 100%;
-
-  background: linear-gradient(
-    120deg,
-    transparent,
-    rgba(0, 0, 0, 0.06),
-    transparent
-  );
-
-  transform: skewX(-20deg);
-
-  opacity: 0;
-  pointer-events: none;
-}
-
-.logo-card:hover::before {
-  opacity: 1;
-  animation: shineDark 0.7s ease;
 }
 
 /* ========================= IMAGE WRAPPER ========================= */
@@ -177,9 +151,11 @@
 
 .logo-card:hover .logo-card-img-wrap img {
   transform: scale(1.08);
-  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.15));
 }
-
+.page-hero {
+  padding-top: var(--sp-16);
+  padding-bottom: var(--sp-12);
+}
 /* ========================= TEXT FALLBACK ========================= */
 
 .logo-card-text {
@@ -192,18 +168,9 @@
   text-transform: uppercase;
   letter-spacing: 0.5px;
   line-height: 1.5;
-
-  word-break: break-word;
-  hyphens: auto;
 }
 
-/* ========================= ANIMATIONS ========================= */
-
-@keyframes shineDark {
-  100% {
-    left: 130%;
-  }
-}
+/* ========================= ANIMATION ========================= */
 
 @keyframes fadeUp {
   from {
@@ -217,24 +184,19 @@
   }
 }
 
-/* ========================= LARGE TABLET ========================= */
+/* ========================= RESPONSIVE ========================= */
 
 @media (max-width: 992px) {
   .vertical-category {
     padding: 75px 0;
   }
 
-  .vertical-content {
-    margin-bottom: 40px;
-  }
-
-  .vertical-heading {
-    font-size: clamp(26px, 5vw, 38px);
-  }
-
   .vertical-description {
     font-size: 15px;
-    line-height: 1.8;
+  }
+
+  .vertical-readmore-box {
+    padding: 24px;
   }
 
   .logo-card {
@@ -243,21 +205,22 @@
   }
 }
 
-/* ========================= TABLET ========================= */
-
 @media (max-width: 768px) {
   .vertical-category {
     padding: 65px 0;
   }
 
-  .verticals-logo-strip,
   .vertical-brands-grid {
     gap: 18px;
   }
 
-  .vertical-description {
+  .vertical-page-intro {
     font-size: 15px;
-    padding: 0 10px;
+    line-height: 1.8;
+  }
+
+  .vertical-readmore-box p {
+    font-size: 14px;
   }
 
   .logo-card {
@@ -267,16 +230,9 @@
   }
 }
 
-/* ========================= MOBILE ========================= */
-
 @media (max-width: 600px) {
-  .vertical-content {
-    margin-bottom: 35px;
-  }
-
   .vertical-heading {
     font-size: 28px;
-    margin-bottom: 14px;
   }
 
   .vertical-description {
@@ -284,9 +240,12 @@
     line-height: 1.7;
   }
 
-  .vertical-readmore {
-    padding: 12px 24px;
-    font-size: 13px;
+  .vertical-readmore-box {
+    padding: 20px;
+  }
+
+  .vertical-readmore-box p {
+    line-height: 1.8;
   }
 
   .logo-card {
@@ -295,14 +254,7 @@
   }
 }
 
-/* ========================= SMALL MOBILE ========================= */
-
 @media (max-width: 360px) {
-  .verticals-logo-strip,
-  .vertical-brands-grid {
-    gap: 12px;
-  }
-
   .logo-card {
     width: 100%;
     max-width: 100%;

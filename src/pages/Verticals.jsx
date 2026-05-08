@@ -1,134 +1,31 @@
-
 import "../css/Verticals.css";
+import { verticals } from "../data/verticals";
 
 import uaeBulls from "../assets/Brand-Logos/UAE bulls-2025.webp";
 import motiv8 from "../assets/Brand-Logos/Motiv8 (4).webp";
-import monkeyBox from "../assets/Brand-Logos/Monkey Box logo.webp";
 import pressmans from "../assets/Brand-Logos/Pressmans logo (11).webp";
 import vkTech from "../assets/Brand-Logos/VKTECHNOLOGIES LOGO (3).webp";
-import nbVentures from "../assets/Brand-Logos/NB VENTURES Logo-02 (3).webp";
 import targetOne from "../assets/Brand-Logos/targetone.webp";
-
 import denaster from "../assets/Brand-Logos/Denaster Logo.webp";
 import inov8 from "../assets/Brand-Logos/Inov8.webp";
 import garmin from "../assets/Brand-Logos/Garmin Black Logo.webp";
 import zeroG from "../assets/Brand-Logos/zerog arabic english-01 (3).webp";
-import vipCosm from "../assets/Brand-Logos/VIP logo png.webp";
 import bvb from "../assets/Brand-Logos/Artworks_BVB PRo League-15.webp";
 import snap from "../assets/Brand-Logos/snap-fitness.webp";
 
-const allBrandLogos = [
-  { name: "UAE BULLS", logo: uaeBulls, url: "https://uaebulls.ae/" },
-  { name: "Motiv8", logo: motiv8, url: "https://motiv8.ae/" },
-  { name: "MONKEY BOX", logo: monkeyBox, url: "https://monkeybox.ai/" },
-  { name: "PRESSMAN'S", logo: pressmans, url: "https://pressmans.com/" },
-  {
-    name: "VK TECHNOLOGIES",
-    logo: vkTech,
-    url: "https://vktechnologiesme.com/",
-  },
-  { name: "TARGET ONE", logo: targetOne, url: "https://targetoneme.com/" },
-  { name: "NB VENTURES", logo: nbVentures, url: "https://nbventuresme.com/" },
-];
-
-const categories = [
-  {
-    title: "Distribution",
-    description:
-      "Delivering premium global brands across the region through strategic distribution partnerships and market expertise.",
-    readMore: "/distribution",
-    brands: [
-      { name: "Target One", logo: targetOne, url: "https://targetoneme.com/" },
-      { name: "Denaster", logo: denaster, url: "https://www.denaster.com/" },
-      { name: "Harrison / Inov8", logo: inov8, url: "https://www.inov8.ae/" },
-      { name: "Garmin by Activ8", logo: garmin, url: "https://www.garmin.ae/" },
-    ],
-  },
-
-  {
-    title: "Retail",
-    description:
-      "Creating customer-focused retail experiences with innovative lifestyle and wellness brands.",
-    readMore: "/retail",
-    brands: [
-      { name: "Motiv8", logo: motiv8, url: "https://motiv8.ae/" },
-      { name: "Garmin by Activ8", logo: garmin, url: "https://www.garmin.ae/" },
-      { name: "ZeroG Beds", logo: zeroG, url: "https://zerogmattress.ae/" },
-      { name: "VIP Cosmetics", logo: vipCosm, url: null },
-    ],
-  },
-
-  {
-    title: "Technology",
-    description:
-      "Providing advanced technology solutions that support digital transformation and operational efficiency.",
-    readMore: "/technology",
-    brands: [
-      {
-        name: "VK Technology",
-        logo: vkTech,
-        url: "https://vktechnologiesme.com/",
-      },
-    ],
-  },
-
-  {
-    title: "Sports & Fitness",
-    description:
-      "Driving sports, wellness, and fitness initiatives through world-class facilities, leagues, and partnerships.",
-    readMore: "/sports-fitness",
-    brands: [
-      {
-        name: "Snap Fitness",
-        logo: snap,
-        url: "https://www.snapfitness.com/ae",
-      },
-      { name: "U-Pro", logo: null, url: "https://unitedprosports.ae/dubai/" },
-      { name: "UAE Bulls", logo: uaeBulls, url: "https://uaebulls.ae/" },
-      { name: "BVB League", logo: bvb, url: "https://bvbpro.com/" },
-    ],
-  },
-
-  {
-    title: "Food & Beverage",
-    description:
-      "Building strong food and beverage concepts that combine quality, convenience, and customer experience.",
-    readMore: "/food-beverage",
-    brands: [
-      {
-        name: "Pressman's Sandwiches",
-        logo: pressmans,
-        url: "https://pressmans.com/",
-      },
-    ],
-  },
-
-  {
-    title: "Fittings & Fitouts",
-    description:
-      "Delivering premium fit-out and interior solutions for commercial and residential environments.",
-    readMore: "/fitouts",
-    brands: [
-      { name: "Epic Fitouts", logo: null, url: "https://www.epicoutdoor.ae/" },
-    ],
-  },
-
-  {
-    title: "Venture Capital",
-    description:
-      "Investing in scalable businesses and innovative ventures with long-term growth potential.",
-    readMore: "/venture-capital",
-    brands: [
-      {
-        name: "NB Ventures",
-        logo: nbVentures,
-        url: "https://nbventuresme.com/",
-      },
-    ],
-  },
-];
-
-/* ========================= REUSABLE LOGO CARD ========================= */
+const logoMap = {
+  "Pressman's Sandwiches": pressmans,
+  "Target One": targetOne,
+  Denaster: denaster,
+  "Harrison / Inov8": inov8,
+  "Garmin by Activ8": garmin,
+  Motiv8: motiv8,
+  "ZeroG Beds": zeroG,
+  "Snap Fitness": snap,
+  "UAE Bulls": uaeBulls,
+  "BVB League": bvb,
+  "VK Technology": vkTech,
+};
 
 function LogoCard({ name, logo, url, delay = 0 }) {
   const content = logo ? (
@@ -153,53 +50,58 @@ function LogoCard({ name, logo, url, delay = 0 }) {
   );
 }
 
-/* ========================= PAGE ========================= */
-
 function Verticals() {
   return (
     <>
-      <div className="page-hero">
-        <h1 style={{ textAlign: "center", marginTop: "5px" }}>
-          Verticals
-        </h1>
+      <div className="page-hero container text-center py-12">
+        {/* Main title with red lines */}
+        <div className="page-hero">
+          <h1
+            style={{ textAlign: "center", marginTop: "5px", color: "darkred" }}
+          >
+            Verticals
+          </h1>
+        </div>
+
+        {/* Sub heading */}
+        <div className="section-title-wrap">
+          <span className="section-title">The Group Portfolio</span>
+        </div>
+
+        <p className="vertical-page-intro">
+          In the vibrant landscape of UAE's business arena, JSB Group founded in
+          2015 has emerged as a dynamic conglomerate across multiple sectors
+          including Distribution, Retail, F&B, Fitness, Technology, Interior
+          Fitouts & Outdoor Furniture. With a strong portfolio of 15+ brands,
+          JSB Group continues redefining success through innovation, excellence,
+          and purpose-driven leadership.
+        </p>
       </div>
 
-      {/* ========================= TOP LOGO STRIP ========================= */}
-
-      <section className="section">
-        <div className="container">
-          <div className="verticals-logo-strip">
-            {allBrandLogos.map((item, i) => (
-              <LogoCard key={i} {...item} delay={i * 0.07} />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ========================= CATEGORY SECTIONS ========================= */}
-
-      {categories.map((cat, i) => (
+      {verticals.map((cat, i) => (
         <section key={i} className="vertical-category">
           <div className="container">
-
             <div className="vertical-content">
               <h2 className="vertical-heading">{cat.title}</h2>
 
-              <p className="vertical-description">
-                {cat.description}
-              </p>
+              <p className="vertical-description">{cat.description}</p>
 
-              <a href={cat.readMore} className="vertical-readmore">
-                Read More
-              </a>
+              <div className="vertical-readmore-box">
+                <p>{cat.readMore}</p>
+              </div>
             </div>
 
             <div className="vertical-brands-grid">
-              {cat.brands.map((brand, j) => (
-                <LogoCard key={j} {...brand} delay={j * 0.07} />
+              {cat.items.map((brand, j) => (
+                <LogoCard
+                  key={j}
+                  name={brand.name}
+                  url={brand.link}
+                  logo={logoMap[brand.name]}
+                  delay={j * 0.07}
+                />
               ))}
             </div>
-
           </div>
         </section>
       ))}

@@ -34,7 +34,9 @@ function Careers() {
   return (
     <>
       <div className="page-hero">
-        <h1 style={{ textAlign: "center", marginTop: "5px" }}>Careers</h1>
+        <h1 style={{ textAlign: "center", marginTop: "5px", color: "darkred" }}>
+          Careers
+        </h1>
       </div>
 
       <section className="section">

@@ -36,9 +36,10 @@ const news = [
 function Newsroom() {
   return (
     <>
-    
       <div className="page-hero">
-        <h1 style={{ textAlign: "center", marginTop: "5px" }}>Newsroom</h1>
+        <h1 style={{ textAlign: "center", marginTop: "5px", color: "darkred" }}>
+          Newsroom
+        </h1>
       </div>
 
       <section className="section">
