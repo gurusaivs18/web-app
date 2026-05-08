@@ -1,3 +1,4 @@
+
 import "../css/Verticals.css";
 
 import uaeBulls from "../assets/Brand-Logos/UAE bulls-2025.webp";
@@ -33,6 +34,9 @@ const allBrandLogos = [
 const categories = [
   {
     title: "Distribution",
+    description:
+      "Delivering premium global brands across the region through strategic distribution partnerships and market expertise.",
+    readMore: "/distribution",
     brands: [
       { name: "Target One", logo: targetOne, url: "https://targetoneme.com/" },
       { name: "Denaster", logo: denaster, url: "https://www.denaster.com/" },
@@ -40,8 +44,12 @@ const categories = [
       { name: "Garmin by Activ8", logo: garmin, url: "https://www.garmin.ae/" },
     ],
   },
+
   {
     title: "Retail",
+    description:
+      "Creating customer-focused retail experiences with innovative lifestyle and wellness brands.",
+    readMore: "/retail",
     brands: [
       { name: "Motiv8", logo: motiv8, url: "https://motiv8.ae/" },
       { name: "Garmin by Activ8", logo: garmin, url: "https://www.garmin.ae/" },
@@ -49,8 +57,12 @@ const categories = [
       { name: "VIP Cosmetics", logo: vipCosm, url: null },
     ],
   },
+
   {
     title: "Technology",
+    description:
+      "Providing advanced technology solutions that support digital transformation and operational efficiency.",
+    readMore: "/technology",
     brands: [
       {
         name: "VK Technology",
@@ -59,8 +71,12 @@ const categories = [
       },
     ],
   },
+
   {
     title: "Sports & Fitness",
+    description:
+      "Driving sports, wellness, and fitness initiatives through world-class facilities, leagues, and partnerships.",
+    readMore: "/sports-fitness",
     brands: [
       {
         name: "Snap Fitness",
@@ -72,8 +88,12 @@ const categories = [
       { name: "BVB League", logo: bvb, url: "https://bvbpro.com/" },
     ],
   },
+
   {
     title: "Food & Beverage",
+    description:
+      "Building strong food and beverage concepts that combine quality, convenience, and customer experience.",
+    readMore: "/food-beverage",
     brands: [
       {
         name: "Pressman's Sandwiches",
@@ -82,14 +102,22 @@ const categories = [
       },
     ],
   },
+
   {
     title: "Fittings & Fitouts",
+    description:
+      "Delivering premium fit-out and interior solutions for commercial and residential environments.",
+    readMore: "/fitouts",
     brands: [
       { name: "Epic Fitouts", logo: null, url: "https://www.epicoutdoor.ae/" },
     ],
   },
+
   {
-    title: "Venture Capitalist",
+    title: "Venture Capital",
+    description:
+      "Investing in scalable businesses and innovative ventures with long-term growth potential.",
+    readMore: "/venture-capital",
     brands: [
       {
         name: "NB Ventures",
@@ -100,7 +128,8 @@ const categories = [
   },
 ];
 
-/* Reusable logo card — identical treatment everywhere */
+/* ========================= REUSABLE LOGO CARD ========================= */
+
 function LogoCard({ name, logo, url, delay = 0 }) {
   const content = logo ? (
     <div className="logo-card-img-wrap">
@@ -124,14 +153,19 @@ function LogoCard({ name, logo, url, delay = 0 }) {
   );
 }
 
+/* ========================= PAGE ========================= */
+
 function Verticals() {
   return (
     <>
       <div className="page-hero">
-        <h1 style={{ textAlign: "center", marginTop: "5px" }}>Verticals</h1>
+        <h1 style={{ textAlign: "center", marginTop: "5px" }}>
+          Verticals
+        </h1>
       </div>
 
-      {/* ── ALL BRAND LOGOS strip ── */}
+      {/* ========================= TOP LOGO STRIP ========================= */}
+
       <section className="section">
         <div className="container">
           <div className="verticals-logo-strip">
@@ -142,18 +176,30 @@ function Verticals() {
         </div>
       </section>
 
-      {/* ── CATEGORY SECTIONS ── */}
+      {/* ========================= CATEGORY SECTIONS ========================= */}
+
       {categories.map((cat, i) => (
         <section key={i} className="vertical-category">
           <div className="container">
-            <div className="section-title-wrap">
-              <span className="section-title">{cat.title}</span>
+
+            <div className="vertical-content">
+              <h2 className="vertical-heading">{cat.title}</h2>
+
+              <p className="vertical-description">
+                {cat.description}
+              </p>
+
+              <a href={cat.readMore} className="vertical-readmore">
+                Read More
+              </a>
             </div>
+
             <div className="vertical-brands-grid">
               {cat.brands.map((brand, j) => (
                 <LogoCard key={j} {...brand} delay={j * 0.07} />
               ))}
             </div>
+
           </div>
         </section>
       ))}
