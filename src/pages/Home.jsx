@@ -724,13 +724,13 @@ const testimonials = [
 
 const contactBlocks = [
   {
-    text: "Lorem ipsum dolor sit amet, consectetuer ing elit sed diam nonummy nibh euismo tincidunt ut laoreet dolore magna.",
+    text: "JSB Group operates across multiple sectors including F&B, Retail, Distribution, Fitness, Technology, Venture Capital, Interior Fitouts, and Outdoor Furniture across the UAE. ",
   },
   {
-    text: "Lorem ipsum dolor sit amet, consectetuer ing elit sed diam nonummy nibh euismo tincidunt ut laoreet dolore magna.",
+    text: " Our group is built on innovation, excellence, and purpose-driven leadership across all business verticals. ",
   },
   {
-    text: "Lorem ipsum dolor sit amet, consectetuer ing elit sed diam nonummy nibh euismo tincidunt ut laoreet dolore magna.",
+    text: "For business inquiries, partnerships, or collaborations, JSB Group welcomes opportunities to connect with global and regional partners.",
   },
 ];
 
@@ -799,11 +799,6 @@ function StatBox({ item, icon, index, trigger }) {
         {suffix}
       </h2>
       <p className="stat-label">{item.label}</p>
-      <p className="stat-desc">
-        Lorem ipsum dolor sit amet,
-        <br />
-        Lorem ipsum
-      </p>
     </div>
   );
 }
@@ -1021,9 +1016,8 @@ function Home() {
             <span className="section-title">Impact</span>
           </div>
           <p className="impact-intro" data-reveal="up" data-delay="150">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation
+            Crafting Tomorrow's Experiences: Bridging F&B, Retail, Distribution,
+            and Technology for a Brighter Future.
           </p>
           <div className="stats-grid">
             {stats.map((item, i) => (
@@ -1093,8 +1087,8 @@ function Home() {
                   data-reveal="up"
                   data-delay="200"
                 >
-                  Lorem ipsum dolor sit amet, consectetuer ing elit sed diam
-                  nonummy nibh euismo tincidunt ut laoreet dolore magna.
+                  {/* Lorem ipsum dolor sit amet, consectetuer ing elit sed diam
+                  nonummy nibh euismo tincidunt ut laoreet dolore magna. */}
                 </p>
               </div>
               <div className="testimonials-cards">

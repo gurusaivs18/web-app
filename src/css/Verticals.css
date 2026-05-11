@@ -107,9 +107,7 @@
   transition:
     transform 0.35s ease,
     box-shadow 0.35s ease,
-    background 0.35s ease,
-    width 0.35s ease,
-    height 0.35s ease;
+    background 0.35s ease;
 
   box-sizing: border-box;
   flex-shrink: 0;
@@ -121,64 +119,9 @@
 
 .logo-card:hover {
   transform: translateY(-8px) scale(1.05);
-
   box-shadow:
     0 14px 35px rgba(0, 0, 0, 0.1),
     0 5px 15px rgba(0, 0, 0, 0.06);
-}
-
-.logo-card.expanded {
-  width: 320px;
-  min-height: 240px;
-  height: auto;
-  padding: 24px;
-
-  transform: none !important;
-}
-
-/* ========================= EXPANDED CARD ========================= */
-
-.logo-card-expanded {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  width: 100%;
-  height: 100%;
-
-  text-align: center;
-}
-
-.logo-card-message {
-  font-size: 14px;
-  line-height: 1.8;
-  color: var(--text-mid);
-  margin-bottom: 18px;
-}
-
-.logo-card-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  padding: 10px 18px;
-  border-radius: 8px;
-
-  background: darkred;
-  color: #fff;
-  text-decoration: none;
-  font-size: 13px;
-  font-weight: 600;
-
-  transition:
-    background 0.3s ease,
-    transform 0.3s ease;
-}
-
-.logo-card-btn:hover {
-  background: #8b0000;
-  transform: translateY(-2px);
 }
 
 /* ========================= IMAGE WRAPPER ========================= */
@@ -195,10 +138,8 @@
 .logo-card-img-wrap img {
   max-width: 100%;
   max-height: 100%;
-
   width: auto;
   height: auto;
-
   object-fit: contain;
   display: block;
 
@@ -209,11 +150,6 @@
 
 .logo-card:hover .logo-card-img-wrap img {
   transform: scale(1.08);
-}
-
-.page-hero {
-  padding-top: var(--sp-16);
-  padding-bottom: var(--sp-12);
 }
 
 /* ========================= TEXT FALLBACK ========================= */
@@ -237,7 +173,6 @@
     opacity: 0;
     transform: translateY(14px);
   }
-
   to {
     opacity: 1;
     transform: translateY(0);
@@ -262,10 +197,6 @@
   .logo-card {
     width: 155px;
     height: 100px;
-  }
-
-  .logo-card.expanded {
-    width: 300px;
   }
 }
 
@@ -292,11 +223,6 @@
     max-width: 180px;
     height: 95px;
   }
-
-  .logo-card.expanded {
-    width: 100%;
-    max-width: 340px;
-  }
 }
 
 @media (max-width: 600px) {
@@ -321,15 +247,6 @@
     height: 88px;
     padding: 12px;
   }
-
-  .logo-card.expanded {
-    min-height: 220px;
-    padding: 20px;
-  }
-
-  .logo-card-message {
-    font-size: 13px;
-  }
 }
 
 @media (max-width: 360px) {
@@ -339,39 +256,80 @@
     height: 82px;
   }
 
-  .logo-card.expanded {
-    min-height: 210px;
-  }
-
   .logo-card-text {
     font-size: 10px;
   }
 }
-.brand-modal-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.55);
 
-  display: flex;
+/* ========================= BUTTON ========================= */
+
+.logo-card-message {
+  font-size: 14px;
+  color: var(--text-dark);
+  margin-bottom: 14px;
+  line-height: 1.5;
+}
+
+.logo-card-btn {
+  display: inline-flex;
   align-items: center;
   justify-content: center;
 
-  padding: 20px;
+  padding: 10px 16px;
+  border-radius: 8px;
+
+  background: darkred;
+  color: white;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+
+  transition: background 0.3s ease;
+}
+
+.logo-card-btn:hover {
+  background: #8b0000;
+}
+
+/* ========================= MODAL FIX (IMPORTANT) ========================= */
+
+.brand-modal-overlay {
+  position: fixed;
+  inset: 0;
+
+  display: flex;
+  align-items: flex-start; /* FIX: enables proper scroll */
+  justify-content: center;
+
+  padding: 40px 20px;
+
   z-index: 9999;
 
-  backdrop-filter: blur(4px);
+  background: transparent;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  overflow-y: auto; /* FIX: allows scroll when content exceeds screen */
 }
 
 .brand-modal {
   position: relative;
 
-  width: 100%;
+  width: min(600px, 90%);
   max-width: 720px;
 
-  background: white;
-  border-radius: 20px;
+  max-height: 85vh;
 
-  padding: 40px;
+  overflow-y: auto; /* FIX: internal scroll enabled */
+  -webkit-overflow-scrolling: touch;
+
+  display: flex;
+  flex-direction: column;
+
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+
+  padding: 24px;
 
   box-shadow: 0 25px 80px rgba(0, 0, 0, 0.18);
 
@@ -392,11 +350,9 @@
 
 .brand-modal-text {
   font-size: 15px;
-  line-height: 1.9;
+  line-height: 1.6;
   color: var(--text-mid);
-
   text-align: center;
-
   margin-bottom: 30px;
 }
 
@@ -422,7 +378,6 @@
     opacity: 0;
     transform: translateY(12px) scale(0.98);
   }
-
   to {
     opacity: 1;
     transform: translateY(0) scale(1);
