@@ -971,3 +971,240 @@
 .verticals-slider-outer {
   scrollbar-width: none;
 }
+/* =================================================================
+   HOME.CSS  –  JSB Group Homepage (UPDATED FIXED VERSION)
+   ================================================================= */
+
+/* ================= GLOBAL SAFETY FIX ================= */
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+/* ================= INTRO ================= */
+.home-intro {
+  background: var(--white);
+  text-align: center;
+}
+
+.home-intro-text {
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.home-intro-text h2 {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-dark);
+  margin-bottom: 24px;
+}
+
+.home-intro-text p {
+  font-size: 14px;
+  color: var(--text-mid);
+  line-height: 1.9;
+  text-align: center;
+}
+
+/* ================= CEO SECTION ================= */
+.ceo-section {
+  width: 100%;
+}
+
+.ceo-content {
+  position: relative;
+  width: 100%;
+  height: clamp(420px, 35vw, 650px);
+  overflow: hidden;
+}
+
+.ceo-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.ceo-content::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.ceo-info {
+  position: absolute;
+  top: 50%;
+  right: 60px;
+  transform: translateY(-50%);
+  max-width: 420px;
+  text-align: right;
+  z-index: 2;
+}
+
+/* ================= DIRECTORS SLIDER ================= */
+.directors-section {
+  background: var(--white);
+  padding: 60px 0 50px;
+}
+
+/* FIX: removed width:auto + added safe padding */
+.directors-marquee {
+  overflow: hidden;
+  width: 100%;
+  margin: 36px 0;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.directors-track-marquee {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  animation: directorScroll 35s linear infinite;
+  align-items: stretch;
+  will-change: transform;
+}
+
+.directors-track-marquee:hover {
+  animation-play-state: paused;
+}
+
+@keyframes directorScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* ================= DIRECTOR CARD ================= */
+.director-card {
+  background: var(--white);
+  border: 1px solid var(--gray-mid);
+  border-radius: 14px;
+  overflow: hidden;
+  width: 220px;
+  flex: 0 0 220px;
+  display: flex;
+  flex-direction: column;
+  transition: 0.28s ease;
+}
+
+/* ================= VERTICALS SLIDER ================= */
+.home-verticals-logos {
+  background: var(--white);
+  padding: 60px 0;
+  overflow: hidden;
+}
+
+/* FIX: removed auto width + added safe padding */
+.verticals-slider-outer {
+  overflow: hidden;
+  width: 100%;
+  margin: 36px 0;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.verticals-track {
+  display: flex;
+  width: max-content;
+  animation: verticalScroll 40s linear infinite;
+  will-change: transform;
+}
+
+.verticals-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes verticalScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* ================= VERTICAL CARD ================= */
+.vertical-slide-item {
+  width: 220px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  background: var(--white);
+  border: 1px solid var(--gray-mid);
+  border-radius: 12px;
+  margin-right: 20px;
+}
+
+/* ================= IMPACT ================= */
+.home-impact {
+  background: var(--gray-light);
+  padding: var(--section-padding);
+}
+
+/* ================= GROUP PHOTOS ================= */
+.home-group-photos {
+  background: var(--white);
+  padding: 60px 0;
+}
+
+/* ================= TESTIMONIALS ================= */
+.home-testimonials {
+  position: relative;
+  background: url("../assets/jsbGroupWebsite/jsbgroupwebsite-03.webp")
+    center/cover no-repeat;
+}
+
+/* ================= CONTACT ================= */
+.home-contact {
+  background: var(--black);
+  padding: clamp(40px, 6vw, 80px) 0;
+}
+
+/* ================= MOBILE FIX (IMPORTANT) ================= */
+@media (max-width: 900px) {
+  .directors-marquee,
+  .verticals-slider-outer {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 0 12px;
+  }
+
+  .directors-track-marquee,
+  .verticals-track {
+    animation: none !important;
+    width: max-content;
+    display: flex;
+  }
+
+  .director-card,
+  .vertical-slide-item {
+    scroll-snap-align: start;
+  }
+
+  .directors-track-marquee,
+  .verticals-track {
+    scroll-snap-type: x mandatory;
+  }
+}
+
+/* hide scrollbar */
+.directors-marquee::-webkit-scrollbar,
+.verticals-slider-outer::-webkit-scrollbar {
+  display: none;
+}
+
+.directors-marquee,
+.verticals-slider-outer {
+  scrollbar-width: none;
+}
