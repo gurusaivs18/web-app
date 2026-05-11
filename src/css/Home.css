@@ -938,14 +938,36 @@
 /* ================= MOBILE HOVER FIX (SLIDERS) ================= */
 /* Prevent hover/tap from breaking autoplay on mobile devices */
 
-@media (hover: none) and (pointer: coarse) {
-  /* Directors slider */
-  .directors-track-marquee:hover {
-    animation-play-state: running !important;
+@media (max-width: 900px) {
+  .directors-marquee,
+  .verticals-slider-outer {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
-  /* Verticals slider */
-  .verticals-track:hover {
-    animation-play-state: running !important;
+  .directors-track-marquee,
+  .verticals-track {
+    animation: none !important;
+    width: max-content;
+    display: flex;
   }
+
+  .director-card,
+  .vertical-slide-item {
+    scroll-snap-align: start;
+  }
+
+  .directors-track-marquee,
+  .verticals-track {
+    scroll-snap-type: x mandatory;
+  }
+}
+.directors-marquee::-webkit-scrollbar,
+.verticals-slider-outer::-webkit-scrollbar {
+  display: none;
+}
+
+.directors-marquee,
+.verticals-slider-outer {
+  scrollbar-width: none;
 }

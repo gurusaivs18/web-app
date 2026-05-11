@@ -557,8 +557,10 @@ import { stats } from "../data/stats";
 import "../css/Home.css";
 import "../css/ScrollReveal.css"; // ← import the reveal stylesheet
 
-import { useScrollReveal } from "../hooks/useScrollReveal"; // ← import the hook
+import { useScrollReveal } from "../hooks/useScrollReveal";
+// ← import the hook
 
+import { useAutoScroll } from "../hooks/useAutoScroll";
 import ceoImage from "../assets/jsbGroupWebsite/jsbgroupwebsite-01.webp";
 
 import uaeBulls from "../assets/Brand-Logos/UAE bulls-2025.webp";
@@ -836,7 +838,11 @@ function PhotoPlaceholder({ label = "Add Group Photo" }) {
 
 /* ─── Directors Slider ───────────────────────────────────────── */
 function DirectorsSlider() {
+  const trackRef = useRef();
+  useAutoScroll(trackRef, 0.4);
+
   const doubled = [...directors, ...directors];
+
   return (
     <section id="pillars" className="directors-section">
       <div className="container">
@@ -845,9 +851,8 @@ function DirectorsSlider() {
         </div>
       </div>
 
-      {/* The whole marquee wrapper slides up as a unit */}
       <div className="directors-marquee" data-reveal="up" data-delay="150">
-        <div className="directors-track-marquee">
+        <div className="directors-track-marquee" ref={trackRef}>
           {doubled.map((d, i) => (
             <div key={d.slug + i} className="director-card">
               <div className="director-photo-wrap">
@@ -869,6 +874,7 @@ function DirectorsSlider() {
                 )}
                 <div className="director-photo-accent" />
               </div>
+
               <div className="director-text-col">
                 <h4 className="director-name">{d.name}</h4>
                 <p className="director-role">{d.role}</p>
@@ -887,6 +893,9 @@ function DirectorsSlider() {
 
 /* ─── Auto-sliding Verticals ────────────────────────────────── */
 function VerticalsSlider() {
+  const trackRef = useRef();
+  useAutoScroll(trackRef, 0.4);
+
   const sorted = [...brandLogos].sort((a, b) => a.order - b.order);
   const doubled = [...sorted, ...sorted];
 
@@ -898,9 +907,8 @@ function VerticalsSlider() {
         </div>
       </div>
 
-      {/* Slider wrapper fades + rises in */}
       <div className="verticals-slider-outer" data-reveal="up" data-delay="200">
-        <div className="verticals-track">
+        <div className="verticals-track" ref={trackRef}>
           {doubled.map((logo, i) => (
             <div key={i} className="vertical-slide-item">
               <div className="vertical-logo-box">
@@ -913,7 +921,9 @@ function VerticalsSlider() {
                   <img src={logo.img} alt={logo.name} loading="lazy" />
                 </a>
               </div>
+
               <div className="vertical-card-divider" />
+
               <div className="vertical-card-body">
                 <p className="vertical-brand-name">{logo.name}</p>
                 <p className="vertical-brand-desc">{logo.desc}</p>
@@ -933,7 +943,6 @@ function VerticalsSlider() {
     </section>
   );
 }
-
 /* ─── Main component ─────────────────────────────────────────── */
 function Home() {
   // ── Activate the scroll reveal system ──
