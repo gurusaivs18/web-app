@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "../css/Verticals.css";
 import { verticals } from "../data/verticals";
 
@@ -7,6 +8,7 @@ import pressmans from "../assets/Brand-Logos/Pressmans logo (11).webp";
 import vkTech from "../assets/Brand-Logos/VKTECHNOLOGIES LOGO (3).webp";
 import targetOne from "../assets/Brand-Logos/targetone.webp";
 import denaster from "../assets/Brand-Logos/Denaster Logo.webp";
+
 import inov8 from "../assets/Brand-Logos/Inov8.webp";
 import garmin from "../assets/Brand-Logos/Garmin Black Logo.webp";
 import zeroG from "../assets/Brand-Logos/zerog arabic english-01 (3).webp";
@@ -27,7 +29,15 @@ const logoMap = {
   "VK Technology": vkTech,
 };
 
-function LogoCard({ name, logo, url, delay = 0 }) {
+function LogoCard({
+  name,
+  logo,
+  url,
+  description,
+  delay = 0,
+  expanded,
+  onToggle,
+}) {
   const content = logo ? (
     <div className="logo-card-img-wrap">
       <img src={logo} alt={name} loading="lazy" />
@@ -37,24 +47,40 @@ function LogoCard({ name, logo, url, delay = 0 }) {
   );
 
   return (
-    <a
-      href={url || "#"}
-      target={url ? "_blank" : "_self"}
-      rel="noopener noreferrer"
-      className="logo-card"
+    <div
+      className={`logo-card ${expanded ? "expanded" : ""}`}
       aria-label={name}
       style={{ animationDelay: `${delay}s` }}
+      onClick={onToggle}
     >
-      {content}
-    </a>
+      {!expanded && content}
+
+      {expanded && (
+        <div className="logo-card-expanded">
+          <p className="logo-card-message">{description}</p>
+
+          {url && (
+            <a
+              href={url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="logo-card-btn"
+              onClick={(e) => e.stopPropagation()}
+            >
+              Go to Brand Website
+            </a>
+          )}
+        </div>
+      )}
+    </div>
   );
 }
 
 function Verticals() {
+  const [selectedBrand, setSelectedBrand] = useState(null);
   return (
     <>
       <div className="page-hero container text-center py-12">
-        {/* Main title with red lines */}
         <div className="page-hero">
           <h1
             style={{ textAlign: "center", marginTop: "5px", color: "darkred" }}
@@ -63,7 +89,6 @@ function Verticals() {
           </h1>
         </div>
 
-        {/* Sub heading */}
         <div className="section-title-wrap">
           <span className="section-title">The Group Portfolio</span>
         </div>
@@ -80,6 +105,36 @@ function Verticals() {
 
       {verticals.map((cat, i) => (
         <section key={i} className="vertical-category">
+          {selectedBrand && (
+            <div
+              className="brand-modal-overlay"
+              onClick={() => setSelectedBrand(null)}
+            >
+              <div className="brand-modal" onClick={(e) => e.stopPropagation()}>
+                <button
+                  className="brand-modal-close"
+                  onClick={() => setSelectedBrand(null)}
+                >
+                  ×
+                </button>
+
+                <div className="brand-modal-logo">
+                  <img src={selectedBrand.logo} alt={selectedBrand.name} />
+                </div>
+
+                <p className="brand-modal-text">{selectedBrand.description}</p>
+
+                <a
+                  href={selectedBrand.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="logo-card-btn"
+                >
+                  Go to Brand Website
+                </a>
+              </div>
+            </div>
+          )}
           <div className="container">
             <div className="vertical-content">
               <h2 className="vertical-heading">{cat.title}</h2>
@@ -93,13 +148,27 @@ function Verticals() {
 
             <div className="vertical-brands-grid">
               {cat.items.map((brand, j) => (
-                <LogoCard
+                <div
                   key={j}
-                  name={brand.name}
-                  url={brand.link}
-                  logo={logoMap[brand.name]}
-                  delay={j * 0.07}
-                />
+                  className="logo-card"
+                  style={{ animationDelay: `${j * 0.07}s` }}
+                  onClick={() =>
+                    setSelectedBrand({
+                      name: brand.name,
+                      url: brand.link,
+                      logo: logoMap[brand.name],
+                      description: `${cat.description} ${cat.readMore}`,
+                    })
+                  }
+                >
+                  <div className="logo-card-img-wrap">
+                    <img
+                      src={logoMap[brand.name]}
+                      alt={brand.name}
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
               ))}
             </div>
           </div>
