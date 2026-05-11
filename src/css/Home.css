@@ -935,3 +935,17 @@
     padding: 24px;
   }
 }
+/* ================= MOBILE HOVER FIX (SLIDERS) ================= */
+/* Prevent hover/tap from breaking autoplay on mobile devices */
+
+@media (hover: none) and (pointer: coarse) {
+  /* Directors slider */
+  .directors-track-marquee:hover {
+    animation-play-state: running !important;
+  }
+
+  /* Verticals slider */
+  .verticals-track:hover {
+    animation-play-state: running !important;
+  }
+}
