@@ -833,7 +833,7 @@ function PhotoPlaceholder({ label = "Add Group Photo" }) {
 function DirectorsSlider() {
   const doubled = [...directors, ...directors];
   return (
-    <section className="directors-section">
+    <section id="pillars" className="directors-section">
       <div className="container">
         <div className="section-title-wrap" data-reveal="fade">
           <span className="section-title">Pillars</span>
@@ -1004,7 +1004,9 @@ function Home() {
       </section>
 
       {/* ── DIRECTORS SLIDER ── */}
-      <DirectorsSlider />
+      <div id="pillars">
+        <DirectorsSlider />
+      </div>
 
       {/* ── VERTICALS SLIDER ── */}
       <VerticalsSlider />

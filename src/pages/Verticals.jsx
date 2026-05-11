@@ -29,61 +29,20 @@ const logoMap = {
   "VK Technology": vkTech,
 };
 
-function LogoCard({
-  name,
-  logo,
-  url,
-  description,
-  delay = 0,
-  expanded,
-  onToggle,
-}) {
-  const content = logo ? (
-    <div className="logo-card-img-wrap">
-      <img src={logo} alt={name} loading="lazy" />
-    </div>
-  ) : (
-    <span className="logo-card-text">{name}</span>
-  );
-
-  return (
-    <div
-      className={`logo-card ${expanded ? "expanded" : ""}`}
-      aria-label={name}
-      style={{ animationDelay: `${delay}s` }}
-      onClick={onToggle}
-    >
-      {!expanded && content}
-
-      {expanded && (
-        <div className="logo-card-expanded">
-          <p className="logo-card-message">{description}</p>
-
-          {url && (
-            <a
-              href={url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="logo-card-btn"
-              onClick={(e) => e.stopPropagation()}
-            >
-              Go to Brand Website
-            </a>
-          )}
-        </div>
-      )}
-    </div>
-  );
-}
-
 function Verticals() {
   const [selectedBrand, setSelectedBrand] = useState(null);
+
   return (
     <>
+      {/* HERO */}
       <div className="page-hero container text-center py-12">
         <div className="page-hero">
           <h1
-            style={{ textAlign: "center", marginTop: "5px", color: "darkred" }}
+            style={{
+              textAlign: "center",
+              marginTop: "5px",
+              color: "darkred",
+            }}
           >
             Verticals
           </h1>
@@ -103,39 +62,43 @@ function Verticals() {
         </p>
       </div>
 
-      {verticals.map((cat, i) => (
-        <section key={i} className="vertical-category">
-          {selectedBrand && (
-            <div
-              className="brand-modal-overlay"
+      {/* MODAL */}
+      {selectedBrand && (
+        <div
+          className="brand-modal-overlay"
+          onClick={() => setSelectedBrand(null)}
+        >
+          <div className="brand-modal" onClick={(e) => e.stopPropagation()}>
+            <button
+              className="brand-modal-close"
               onClick={() => setSelectedBrand(null)}
             >
-              <div className="brand-modal" onClick={(e) => e.stopPropagation()}>
-                <button
-                  className="brand-modal-close"
-                  onClick={() => setSelectedBrand(null)}
-                >
-                  ×
-                </button>
+              ×
+            </button>
 
-                <div className="brand-modal-logo">
-                  <img src={selectedBrand.logo} alt={selectedBrand.name} />
-                </div>
-
-                <p className="brand-modal-text">{selectedBrand.description}</p>
-
-                <a
-                  href={selectedBrand.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="logo-card-btn"
-                >
-                  Go to Brand Website
-                </a>
-              </div>
+            <div className="brand-modal-logo">
+              <img src={selectedBrand.logo} alt={selectedBrand.name} />
             </div>
-          )}
+
+            <p className="brand-modal-text">{selectedBrand.description}</p>
+
+            <a
+              href={selectedBrand.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="logo-card-btn"
+            >
+              Go to Brand Website
+            </a>
+          </div>
+        </div>
+      )}
+
+      {/* CATEGORIES */}
+      {verticals.map((cat, i) => (
+        <section key={i} className="vertical-category">
           <div className="container">
+            {/* CONTENT */}
             <div className="vertical-content">
               <h2 className="vertical-heading">{cat.title}</h2>
 
@@ -146,12 +109,15 @@ function Verticals() {
               </div>
             </div>
 
+            {/* BRAND GRID */}
             <div className="vertical-brands-grid">
               {cat.items.map((brand, j) => (
                 <div
                   key={j}
                   className="logo-card"
-                  style={{ animationDelay: `${j * 0.07}s` }}
+                  style={{
+                    animationDelay: `${j * 0.07}s`,
+                  }}
                   onClick={() =>
                     setSelectedBrand({
                       name: brand.name,
