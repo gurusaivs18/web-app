@@ -14,19 +14,23 @@ const statIcons = [
   <svg viewBox="0 0 24 24">
     <path d="M20 4H4v2l8 5 8-5V4zM4 13v7h7v-5h2v5h7v-7L12 8z" />
   </svg>,
+  <svg viewBox="0 0 24 24">
+    <path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z" />
+  </svg>,
 ];
+
 const stories = [
   {
-    title: "Community Growth",
-    desc: "Building stronger communities through strategic business expansion across multiple sectors in UAE and beyond.",
+    title: "Diversified Growth",
+    desc: "JSB Group has expanded across F&B, Retail, Technology, Fitness, and Distribution, building a strong multi-sector ecosystem in the UAE.",
   },
   {
-    title: "Employment",
-    desc: "Creating thousands of meaningful jobs across F&B, Retail, Technology, Fitness, and Distribution sectors.",
+    title: "Employment Creation",
+    desc: "Through 15+ companies and 30+ outlets, the group generates thousands of jobs and career opportunities across multiple industries.",
   },
   {
-    title: "Innovation",
-    desc: "Driving technology and business transformation with cutting-edge solutions that empower businesses and enrich lives.",
+    title: "Innovation & Transformation",
+    desc: "From tech platforms to retail expansion and fitness ecosystems, JSB Group continuously drives innovation-led transformation.",
   },
 ];
 
@@ -34,48 +38,38 @@ function Impact() {
   return (
     <>
       <div className="page-hero">
-        <h1 style={{ textAlign: "center", marginTop: "5px", color: "darkred" }}>
-          Impact
-        </h1>
+        <h1 className="impact-page-title">Impact</h1>
       </div>
 
       <section className="section">
         <div className="container">
           <div className="section-title-wrap">
-            <span className="section-title">Impact</span>
+            <span className="section-title">Our Impact</span>
           </div>
-          <p
-            style={{
-              textAlign: "center",
-              maxWidth: 640,
-              margin: "0 auto 48px",
-              fontSize: 14,
-              color: "var(--text-mid)",
-              lineHeight: 1.8,
-            }}
-          >
-            Through strategic growth across multiple sectors, JSB Group
-            continues to create lasting impact — in business, communities, and
-            lives across the UAE and beyond.
+
+          <p className="impact-intro">
+            Since 2015, JSB Group has grown into a diversified conglomerate
+            delivering measurable impact across industries, communities, and
+            economies through innovation, leadership, and sustainable expansion.
           </p>
 
+          {/* STATS */}
           <div className="impact-stats-grid">
             {stats.map((item, i) => (
               <div key={i} className="impact-stat-box">
                 <div className="impact-stat-icon">{statIcons[i]}</div>
                 <h2>{item.value}</h2>
                 <p>{item.label}</p>
-                <small>Lorem ipsum dolor sit amet, Lorem ipsum</small>
+                <small>{item.desc}</small>
               </div>
             ))}
           </div>
 
+          {/* STORIES */}
           <div className="impact-stories">
             {stories.map((s, i) => (
               <div key={i} className="impact-story-card">
-                <div className="impact-story-img">
-                  {/* <img src={img} alt={s.title} /> */}
-                </div>
+                <div className="impact-story-top-line"></div>
                 <div className="impact-story-body">
                   <h3>{s.title}</h3>
                   <p>{s.desc}</p>

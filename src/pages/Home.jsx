@@ -573,7 +573,6 @@ import rushab from "../assets/Partners/Rushab.JPG.webp";
 import sinha from "../assets/Partners/Sanjeev Sir 1.webp";
 import sanal from "../assets/Partners/Sanal Sir 1.webp";
 import deep from "../assets/Partners/Deep 1.webp";
-
 const statIcons = [
   <svg viewBox="0 0 24 24">
     <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z" />
@@ -587,8 +586,11 @@ const statIcons = [
   <svg viewBox="0 0 24 24">
     <path d="M20 4H4v2l8 5 8-5V4zM4 13v7h7v-5h2v5h7v-7L12 8z" />
   </svg>,
+  // NEW ICON for "Companies"
+  <svg viewBox="0 0 24 24">
+    <path d="M3 21h18v-2H3v2zm2-4h3V7H5v10zm5 0h3V3h-3v14zm5 0h3v-8h-3v8z" />
+  </svg>,
 ];
-
 const brandLogos = [
   {
     img: uaeBulls,
@@ -781,28 +783,31 @@ function useCountAnimation(
   }, [trigger, target, duration, delay]);
   return value;
 }
-
 function StatBox({ item, icon, index, trigger }) {
   const { prefix, numeric, suffix } = parseStatValue(item.value);
   const animated = useCountAnimation(numeric, 1800, index * 120, trigger);
+
   return (
-    /* Each stat box slides up with a staggered delay */
     <div
       className="stat-box"
       data-reveal="up"
       data-delay={String(index * 150 + 100)}
     >
       <div className="stat-icon">{icon}</div>
+
       <h2>
         {prefix}
         {animated.toLocaleString()}
         {suffix}
       </h2>
+
       <p className="stat-label">{item.label}</p>
+
+      {/* THIS WAS MISSING VISIBILITY STYLE EARLIER */}
+      <small className="stat-desc">{item.desc}</small>
     </div>
   );
 }
-
 function PhotoPlaceholder({ label = "Add Group Photo" }) {
   return (
     <div className="group-photo-placeholder">
