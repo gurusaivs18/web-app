@@ -7,7 +7,7 @@ export const verticals = [
 
     items: [
       {
-        name: "Pressman’s Sandwiches",
+        name: "Pressman's Sandwiches",
 
         link: "https://pressmans.com/",
 

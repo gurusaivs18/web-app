@@ -19,25 +19,39 @@ import monkey from "../assets/Brand-Logos/Monkey Box logo.webp";
 import biriyani from "../assets/Brand-Logos/biryani logo 1080x1080.webp";
 import activ from "../assets/Brand-Logos/Activ8 Logo.webp";
 import ventures from "../assets/Brand-Logos/NB VENTURES Logo-02 (3).webp";
+
 const logoMap = {
-  "Pressman’s Sandwiches": pressmans,
+  "Pressman's Sandwiches": pressmans, // straight apostrophe — matches verticals.js
+  "Biriyani Box": biriyani,
   "Target One": targetOne,
+  "VIP Cosmetics": vip,
   Denaster: denaster,
+  "Monkey Box": monkey,
   "Harrison / Inov8": inov8,
+  "Harrison Digital": harrison,
   "Garmin by Activ8": garmin,
   Activ8: activ,
+  Motiv8: motiv8,
   "ZeroG Beds & Mattresses": zeroG,
   "Snap Fitness": snap,
+  "United Pro Sports (U-Pro)": snap, // no dedicated logo yet — swap when available
   "UAE Bulls": uaeBulls,
   "BVB League": bvb,
   "VK Technology": vkTech,
-  "VIP Cosmetics": vip,
-  "Monkey Box": monkey,
-  "Biriyani Box": biriyani,
-  Motiv8: motiv8,
-  "Harrison Digital": harrison,
-  "Nb Ventures": ventures,
+  "Nb Ventures": ventures, // lowercase 'b' — matches verticals.js exactly
 };
+
+const featuredBrands = [
+  "Nb Ventures",
+  "VK Technology",
+  "Target One",
+  "UAE Bulls",
+  "Snap Fitness",
+  "Motiv8",
+  "Pressman's Sandwiches",
+  "VIP Cosmetics",
+  "Denaster",
+];
 
 function Verticals() {
   const [selectedBrand, setSelectedBrand] = useState(null);
@@ -52,6 +66,36 @@ function Verticals() {
 
         <div className="section-title-wrap">
           <span className="section-title">The Group Portfolio</span>
+        </div>
+
+        {/* FEATURED / MAJOR LOGOS */}
+        <div className="featured-logos-section container">
+          <h2 className="featured-title">Featured Brands</h2>
+
+          <div className="featured-logos-grid">
+            {featuredBrands.map((name, i) => (
+              <div
+                key={i}
+                className="featured-logo-card"
+                onClick={() =>
+                  setSelectedBrand({
+                    name,
+                    url: verticals
+                      .flatMap((v) => v.items)
+                      .find((b) => b.name === name)?.link,
+                    logo: logoMap[name],
+                    description:
+                      verticals
+                        .flatMap((v) => v.items)
+                        .find((b) => b.name === name)?.description || "",
+                  })
+                }
+              >
+                <img src={logoMap[name]} alt={name} />
+                <span>{name}</span>
+              </div>
+            ))}
+          </div>
         </div>
 
         <p className="vertical-page-intro">
@@ -77,11 +121,9 @@ function Verticals() {
             </button>
             <div className="brand-modal-logo">
               <img src={selectedBrand.logo} alt={selectedBrand.name} />
-
               <h3 className="brand-modal-title">{selectedBrand.name}</h3>
             </div>
             <p className="brand-modal-text">{selectedBrand.description}</p>
-
             <a
               href={selectedBrand.url}
               target="_blank"
@@ -98,13 +140,11 @@ function Verticals() {
       {verticals.map((cat, i) => (
         <section key={i} className="vertical-category">
           <div className="container">
-            {/* TEXT */}
             <div className="vertical-content">
               <h2 className="vertical-heading">{cat.title}</h2>
               <p className="vertical-description">{cat.description}</p>
             </div>
 
-            {/* BRANDS GRID */}
             <div className="vertical-brands-grid">
               {cat.items.map((brand, j) => (
                 <div
@@ -116,7 +156,7 @@ function Verticals() {
                       name: brand.name,
                       url: brand.link,
                       logo: logoMap[brand.name],
-                      description: `${cat.description} ${cat.readMore}`,
+                      description: brand.description,
                     })
                   }
                 >
@@ -127,8 +167,6 @@ function Verticals() {
                       loading="lazy"
                     />
                   </div>
-
-                  {/* ✅ BRAND NAME FIXED */}
                   <div className="logo-card-text">{brand.name}</div>
                 </div>
               ))}

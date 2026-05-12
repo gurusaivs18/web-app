@@ -76,7 +76,8 @@ function Careers() {
               We are always on the lookout for passionate, driven individuals
               who want to make a real difference.
             </p>
-            <button className="btn btn-white">View Open Positions</button>
+            {/* Fixed: use global btn--white class so hover works correctly */}
+            <button className="btn btn--white">View Open Positions</button>
           </div>
         </div>
       </section>

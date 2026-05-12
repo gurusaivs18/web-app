@@ -19,9 +19,4 @@ export const stats = [
     label: "Outlets",
     desc: "Expanding retail, F&B, and fitness footprint across the UAE.",
   },
-  {
-    value: "15+",
-    label: "Companies",
-    desc: "A diversified group portfolio across multiple business verticals.",
-  },
 ];
