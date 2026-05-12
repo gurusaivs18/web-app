@@ -75,11 +75,11 @@ function Verticals() {
             >
               ×
             </button>
-
             <div className="brand-modal-logo">
               <img src={selectedBrand.logo} alt={selectedBrand.name} />
-            </div>
 
+              <h3 className="brand-modal-title">{selectedBrand.name}</h3>
+            </div>
             <p className="brand-modal-text">{selectedBrand.description}</p>
 
             <a
@@ -132,9 +132,6 @@ function Verticals() {
                   <div className="logo-card-text">{brand.name}</div>
                 </div>
               ))}
-              <div className="vertical-readmore-box">
-                <p>{cat.readMore}</p>
-              </div>
             </div>
           </div>
         </section>
