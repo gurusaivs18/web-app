@@ -18,7 +18,7 @@ import harrison from "../assets/Brand-Logos/Harrison Digital.webp";
 import monkey from "../assets/Brand-Logos/Monkey Box logo.webp";
 import biriyani from "../assets/Brand-Logos/biryani logo 1080x1080.webp";
 import activ from "../assets/Brand-Logos/Activ8 Logo.webp";
-
+import ventures from "../assets/Brand-Logos/NB VENTURES Logo-02 (3).webp";
 const logoMap = {
   "Pressman’s Sandwiches": pressmans,
   "Target One": targetOne,
@@ -36,6 +36,7 @@ const logoMap = {
   "Biriyani Box": biriyani,
   Motiv8: motiv8,
   "Harrison Digital": harrison,
+  "Nb Ventures": ventures,
 };
 
 function Verticals() {

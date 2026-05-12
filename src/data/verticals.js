@@ -205,4 +205,21 @@ export const verticals = [
       },
     ],
   },
+  {
+    title: "Venture Capitalist",
+
+    description:
+      "Our technology division develops customized software solutions that help businesses improve operational efficiency and digital transformation.",
+
+    items: [
+      {
+        name: "Nb Ventures",
+
+        link: "https://nbventuresme.com/",
+
+        description:
+          "Nb Ventures is a leading venture capital firm that invests in innovative startups and emerging businesses across various industries.",
+      },
+    ],
+  },
 ];
