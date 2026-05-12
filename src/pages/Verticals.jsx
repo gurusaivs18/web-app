@@ -13,19 +13,29 @@ import garmin from "../assets/Brand-Logos/Garmin Black Logo.webp";
 import zeroG from "../assets/Brand-Logos/zerog arabic english-01 (3).webp";
 import bvb from "../assets/Brand-Logos/Artworks_BVB PRo League-15.webp";
 import snap from "../assets/Brand-Logos/snap-fitness.webp";
+import vip from "../assets/Brand-Logos/VIP logo png.webp";
+import harrison from "../assets/Brand-Logos/Harrison Digital.webp";
+import monkey from "../assets/Brand-Logos/Monkey Box logo.webp";
+import biriyani from "../assets/Brand-Logos/biryani logo 1080x1080.webp";
+import activ from "../assets/Brand-Logos/Activ8 Logo.webp";
 
 const logoMap = {
-  "Pressman's Sandwiches": pressmans,
+  "Pressman’s Sandwiches": pressmans,
   "Target One": targetOne,
   Denaster: denaster,
   "Harrison / Inov8": inov8,
   "Garmin by Activ8": garmin,
-  Motiv8: motiv8,
-  "ZeroG Beds": zeroG,
+  Activ8: activ,
+  "ZeroG Beds & Mattresses": zeroG,
   "Snap Fitness": snap,
   "UAE Bulls": uaeBulls,
   "BVB League": bvb,
   "VK Technology": vkTech,
+  "VIP Cosmetics": vip,
+  "Monkey Box": monkey,
+  "Biriyani Box": biriyani,
+  Motiv8: motiv8,
+  "Harrison Digital": harrison,
 };
 
 function Verticals() {
