@@ -1,5 +1,7 @@
 import { useState } from "react";
 import "../css/Verticals.css";
+import "../css/ScrollReveal.css";
+import { useScrollReveal } from "../hooks/useScrollReveal";
 import { verticals } from "../data/verticals";
 
 import uaeBulls from "../assets/Brand-Logos/UAE bulls-2025.webp";
@@ -21,7 +23,7 @@ import activ from "../assets/Brand-Logos/Activ8 Logo.webp";
 import ventures from "../assets/Brand-Logos/NB VENTURES Logo-02 (3).webp";
 
 const logoMap = {
-  "Pressman's Sandwiches": pressmans, // straight apostrophe — matches verticals.js
+  "Pressman's Sandwiches": pressmans,
   "Biriyani Box": biriyani,
   "Target One": targetOne,
   "VIP Cosmetics": vip,
@@ -34,11 +36,11 @@ const logoMap = {
   Motiv8: motiv8,
   "ZeroG Beds & Mattresses": zeroG,
   "Snap Fitness": snap,
-  "United Pro Sports (U-Pro)": snap, // no dedicated logo yet — swap when available
+  "United Pro Sports (U-Pro)": snap,
   "UAE Bulls": uaeBulls,
   "BVB League": bvb,
   "VK Technology": vkTech,
-  "Nb Ventures": ventures, // lowercase 'b' — matches verticals.js exactly
+  "Nb Ventures": ventures,
 };
 
 const featuredBrands = [
@@ -54,55 +56,61 @@ const featuredBrands = [
 ];
 
 function Verticals() {
+  useScrollReveal();
+
   const [selectedBrand, setSelectedBrand] = useState(null);
 
   return (
     <>
       {/* HERO */}
-      <div className="page-hero container text-center py-12">
+      <div className="page-hero container text-center py-12" data-reveal="fade">
         <h1 style={{ textAlign: "center", marginTop: "5px", color: "darkred" }}>
           Verticals
         </h1>
+      </div>
 
-        <div className="section-title-wrap">
+      {/* FEATURED BRANDS */}
+      <div className="featured-logos-section container">
+        <div className="section-title-wrap" data-reveal="fade">
           <span className="section-title">The Group Portfolio</span>
         </div>
 
-        {/* FEATURED / MAJOR LOGOS */}
-        <div className="featured-logos-section container">
-          <h2 className="featured-title">Featured Brands</h2>
+        <h2 className="featured-title" data-reveal="fade" data-delay="100">
+          Featured Brands
+        </h2>
 
-          <div className="featured-logos-grid">
-            {featuredBrands.map((name, i) => (
-              <div
-                key={i}
-                className="featured-logo-card"
-                onClick={() =>
-                  setSelectedBrand({
-                    name,
-                    url: verticals
+        <div className="featured-logos-grid">
+          {featuredBrands.map((name, i) => (
+            <div
+              key={i}
+              className="featured-logo-card"
+              data-reveal="up"
+              data-delay={String((i % 3) * 150 + 100)}
+              onClick={() =>
+                setSelectedBrand({
+                  name,
+                  url: verticals
+                    .flatMap((v) => v.items)
+                    .find((b) => b.name === name)?.link,
+                  logo: logoMap[name],
+                  description:
+                    verticals
                       .flatMap((v) => v.items)
-                      .find((b) => b.name === name)?.link,
-                    logo: logoMap[name],
-                    description:
-                      verticals
-                        .flatMap((v) => v.items)
-                        .find((b) => b.name === name)?.description || "",
-                  })
-                }
-              >
-                <img src={logoMap[name]} alt={name} />
-                <span>{name}</span>
-              </div>
-            ))}
-          </div>
+                      .find((b) => b.name === name)?.description || "",
+                })
+              }
+            >
+              <img src={logoMap[name]} alt={name} />
+              <span>{name}</span>
+            </div>
+          ))}
         </div>
 
-        <p className="vertical-page-intro">
+        <p className="vertical-page-intro" data-reveal="up" data-delay="150">
           In the vibrant landscape of UAE's business arena, JSB Group founded in
           2015 has emerged as a dynamic conglomerate across multiple sectors
           including Distribution, Retail, F&B, Fitness, Technology, Interior
-          Fitouts & Outdoor Furniture.
+          Fitouts &amp; Outdoor Furniture.
         </p>
       </div>
 
@@ -140,17 +148,20 @@ function Verticals() {
       {verticals.map((cat, i) => (
         <section key={i} className="vertical-category">
           <div className="container">
-            <div className="vertical-content">
+            {/* Category heading slides in from left */}
+            <div className="vertical-content" data-reveal="left">
               <h2 className="vertical-heading">{cat.title}</h2>
               <p className="vertical-description">{cat.description}</p>
             </div>
 
+            {/* Brand logo cards stagger up */}
             <div className="vertical-brands-grid">
               {cat.items.map((brand, j) => (
                 <div
                   key={j}
                   className="logo-card"
-                  style={{ animationDelay: `${j * 0.07}s` }}
+                  data-reveal="up"
+                  data-delay={String((j % 4) * 120 + 100)}
                   onClick={() =>
                     setSelectedBrand({
                       name: brand.name,

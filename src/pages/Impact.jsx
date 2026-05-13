@@ -1,5 +1,7 @@
 import { stats } from "../data/stats";
 import "../css/Impact.css";
+import "../css/ScrollReveal.css";
+import { useScrollReveal } from "../hooks/useScrollReveal";
 
 const statIcons = [
   <svg viewBox="0 0 24 24">
@@ -35,19 +37,21 @@ const stories = [
 ];
 
 function Impact() {
+  useScrollReveal();
+
   return (
     <>
-      <div className="page-hero">
+      <div className="page-hero" data-reveal="fade">
         <h1 className="impact-page-title">Impact</h1>
       </div>
 
       <section className="section">
         <div className="container">
-          <div className="section-title-wrap">
+          <div className="section-title-wrap" data-reveal="fade">
             <span className="section-title">Our Impact</span>
           </div>
 
-          <p className="impact-intro">
+          <p className="impact-intro" data-reveal="up" data-delay="150">
             Since 2015, JSB Group has grown into a diversified conglomerate
             delivering measurable impact across industries, communities, and
             economies through innovation, leadership, and sustainable expansion.
@@ -56,7 +60,12 @@ function Impact() {
           {/* STATS */}
           <div className="impact-stats-grid">
             {stats.map((item, i) => (
-              <div key={i} className="impact-stat-box">
+              <div
+                key={i}
+                className="impact-stat-box"
+                data-reveal="up"
+                data-delay={String(i * 150 + 100)}
+              >
                 <div className="impact-stat-icon">{statIcons[i]}</div>
                 <h2>{item.value}</h2>
                 <p>{item.label}</p>
@@ -68,7 +77,12 @@ function Impact() {
           {/* STORIES */}
           <div className="impact-stories">
             {stories.map((s, i) => (
-              <div key={i} className="impact-story-card">
+              <div
+                key={i}
+                className="impact-story-card"
+                data-reveal="up"
+                data-delay={String(i * 150 + 100)}
+              >
                 <div className="impact-story-top-line"></div>
                 <div className="impact-story-body">
                   <h3>{s.title}</h3>

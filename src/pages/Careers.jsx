@@ -1,4 +1,6 @@
 import "../css/Careers.css";
+import "../css/ScrollReveal.css";
+import { useScrollReveal } from "../hooks/useScrollReveal";
 
 const perks = [
   {
@@ -31,9 +33,11 @@ const perks = [
 ];
 
 function Careers() {
+  useScrollReveal();
+
   return (
     <>
-      <div className="page-hero">
+      <div className="page-hero" data-reveal="fade">
         <h1 style={{ textAlign: "center", marginTop: "5px", color: "darkred" }}>
           Careers
         </h1>
@@ -41,11 +45,13 @@ function Careers() {
 
       <section className="section">
         <div className="container">
-          <div className="section-title-wrap">
+          <div className="section-title-wrap" data-reveal="fade">
             <span className="section-title">Careers at JSB Group</span>
           </div>
 
           <p
+            data-reveal="up"
+            data-delay="150"
             style={{
               textAlign: "center",
               maxWidth: 640,
@@ -62,7 +68,12 @@ function Careers() {
 
           <div className="careers-perks">
             {perks.map((p, i) => (
-              <div key={i} className="perk-card">
+              <div
+                key={i}
+                className="perk-card"
+                data-reveal="up"
+                data-delay={String(i * 150 + 100)}
+              >
                 <div className="perk-icon">{p.icon}</div>
                 <h3>{p.title}</h3>
                 <p>{p.desc}</p>
@@ -70,13 +81,12 @@ function Careers() {
             ))}
           </div>
 
-          <div className="careers-cta">
+          <div className="careers-cta" data-reveal="up" data-delay="200">
             <h2>Join Our Team</h2>
             <p>
               We are always on the lookout for passionate, driven individuals
               who want to make a real difference.
             </p>
-            {/* Fixed: use global btn--white class so hover works correctly */}
             <button className="btn btn--white">View Open Positions</button>
           </div>
         </div>

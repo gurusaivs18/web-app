@@ -1,4 +1,6 @@
 import "../css/Newsroom.css";
+import "../css/ScrollReveal.css";
+import { useScrollReveal } from "../hooks/useScrollReveal";
 
 const news = [
   {
@@ -34,9 +36,11 @@ const news = [
 ];
 
 function Newsroom() {
+  useScrollReveal();
+
   return (
     <>
-      <div className="page-hero">
+      <div className="page-hero" data-reveal="fade">
         <h1 style={{ textAlign: "center", marginTop: "5px", color: "darkred" }}>
           Newsroom
         </h1>
@@ -44,12 +48,18 @@ function Newsroom() {
 
       <section className="section">
         <div className="container">
-          <div className="section-title-wrap">
+          <div className="section-title-wrap" data-reveal="fade">
             <span className="section-title">Latest News</span>
           </div>
+
           <div className="newsroom-grid">
             {news.map((item, i) => (
-              <div key={i} className="news-card">
+              <div
+                key={i}
+                className="news-card"
+                data-reveal="up"
+                data-delay={String((i % 3) * 150 + 100)}
+              >
                 <div className="news-card-img">
                   {/* <img src={img} alt={item.title} /> */}
                 </div>
