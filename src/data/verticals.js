@@ -144,7 +144,7 @@ export const verticals = [
       {
         name: "United Pro Sports (U-Pro)",
 
-        link: "https://www.upro.ae/",
+        link: "https://upro.ae/",
 
         description:
           "United Pro Sports (U-Pro) was launched in 2020 as a world-class indoor sports facility located in Al Quoz, Dubai. Spanning over 46,000 sq ft, the venue includes two FIFA-approved 5-a-side football pitches, four indoor cricket pitches, two multipurpose courts for basketball, volleyball, badminton, and table tennis, along with three practice pitches including one equipped with a cricket bowling machine.",
@@ -162,7 +162,7 @@ export const verticals = [
       {
         name: "BVB League",
 
-        link: "https://www.bvbleague.ae/",
+        link: "https://bvbpro.com/",
 
         description:
           "BVB – Beach Volleyball Pro League was envisioned as a first-of-its-kind franchise-based beach volleyball league designed to elevate the sport on a global stage. Introduced through a showcase event in Dubai, the league combines elite sports, entertainment, and lifestyle experiences, with its official UAE launch planned for 2027.",
