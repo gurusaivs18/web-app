@@ -99,7 +99,7 @@ export const verticals = [
       {
         name: "Activ8",
 
-        link: "",
+        link: "https://activ8.ae/",
 
         description:
           "Activ8 is part of JSB Group’s retail portfolio and supports premium fitness, wellness, and technology retail concepts across the UAE market.",
