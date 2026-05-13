@@ -14,7 +14,7 @@ import inov8 from "../assets/Brand-Logos/Inov8.webp";
 import garmin from "../assets/Brand-Logos/Garmin Black Logo.webp";
 import zeroG from "../assets/Brand-Logos/zerog arabic english-01 (3).webp";
 import bvb from "../assets/Brand-Logos/Artworks_BVB PRo League-15.webp";
-import snap from "../assets/Brand-Logos/snap-fitness.webp";
+import snap from "../assets/Brand-Logos//snap-fitness.webp";
 import vip from "../assets/Brand-Logos/VIP logo png.webp";
 import harrison from "../assets/Brand-Logos/Harrison Digital.webp";
 import monkey from "../assets/Brand-Logos/Monkey Box logo.webp";
@@ -36,7 +36,7 @@ const logoMap = {
   Motiv8: motiv8,
   "ZeroG Beds & Mattresses": zeroG,
   "Snap Fitness": snap,
-  "United Pro Sports (U-Pro)": snap,
+  "United Pro Sports (U-Pro)": null,
   "UAE Bulls": uaeBulls,
   "BVB League": bvb,
   "VK Technology": vkTech,
