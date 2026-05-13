@@ -6,21 +6,22 @@ export const team = {
   },
   leadership: [
     {
-      name: "Praveen Bhatnagar",
-      role: "Director",
-      desc: "CPA with expertise in finance and business strategy across Retail, Fitness, Hospitality, and Healthcare.",
-    },
-    {
       name: "Rushab Bhatnagar",
       role: "Director",
       desc: "Co-Founder and CEO of NOVO Labs. Strategic Director for NB Ventures.",
     },
     {
+      name: "Praveen Bhatnagar",
+      role: "Director",
+      desc: "CPA with expertise in finance and business strategy across Retail, Fitness, Hospitality, and Healthcare.",
+    },
+    { name: "Sanjeev Sinha", role: "Director" },
+
+    {
       name: "Deep Bhogal",
       role: "Managing Director",
       desc: "30+ years in retail and distribution. Managing Director of Denaster.",
     },
-    { name: "Sanjeev Sinha", role: "Director" },
     { name: "Mohammed Ashik", role: "Director" },
   ],
   partners: [
@@ -35,5 +36,10 @@ export const team = {
       desc: "23+ years in Health and Wellness. UAE Master Franchise for Snap Fitness.",
     },
     { name: "Sanal Kumar", role: "Partner", desc: "" },
+    {
+      name: "Manish Kishore",
+      role: "Partner",
+      desc: "",
+    },
   ],
 };

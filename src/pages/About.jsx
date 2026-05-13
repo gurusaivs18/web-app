@@ -320,17 +320,18 @@ His journey is one of resilience, vision, and an unwavering belief in the power 
 
 const allDirectors = [
   {
-    name: "Praveen Bhatnagar",
-    role: "Director",
-    img: null,
-    writeup: `Praveen Bhatnagar is a Certified Public Accountant (CPA) with deep expertise in finance and business strategy. Over the course of his career, he has worked across Retail, Fitness, Hospitality, and Healthcare sectors, bringing financial rigour and strategic clarity to each venture he has been part of.\n\nAs a Director at JSB Group, Praveen plays a key role in shaping the financial architecture of the group's diverse portfolio, ensuring sustainable growth and sound governance across all business units.`,
-  },
-  {
     name: "Rushab Bhatnagar",
     role: "Director",
     img: rushabImg,
     writeup: `Rushab Bhatnagar is the Co-Founder and CEO of NOVO Labs, and serves as Strategic Director for NB Ventures. With a sharp focus on innovation and technology-driven business models, Rushab brings a forward-thinking perspective to the JSB Group board.\n\nHis work spans venture building, strategic investments, and scaling early-stage companies into market leaders.`,
   },
+  {
+    name: "Praveen Bhatnagar",
+    role: "Director",
+    img: null,
+    writeup: `Praveen Bhatnagar is a Certified Public Accountant (CPA) with deep expertise in finance and business strategy. Over the course of his career, he has worked across Retail, Fitness, Hospitality, and Healthcare sectors, bringing financial rigour and strategic clarity to each venture he has been part of.\n\nAs a Director at JSB Group, Praveen plays a key role in shaping the financial architecture of the group's diverse portfolio, ensuring sustainable growth and sound governance across all business units.`,
+  },
+
   {
     name: "Deep Bhogal",
     role: "Managing Director",
@@ -353,6 +354,13 @@ const allDirectors = [
 
 const allPartners = [
   {
+    name: "Manish Kishore",
+    role: "Partner",
+    img: null,
+
+    writeup: ``,
+  },
+  {
     name: "Naz Ayat",
     role: "Partner",
     img: null,
@@ -369,12 +377,6 @@ const allPartners = [
     role: "Partner",
     img: sanalImg,
     writeup: `Sanal Kumar is a Partner at JSB Group, bringing deep professional experience and commitment to the group's values and vision.`,
-  },
-  {
-    name: "Manish Kishore",
-    role: "Partner",
-    img: null,
-    writeup: ``,
   },
 ];
 

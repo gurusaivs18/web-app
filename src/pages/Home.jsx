@@ -1531,18 +1531,44 @@ const brandLogos = [
 
 const directors = [
   {
-    name: "Praveen Bhatnagar",
-    role: "Business Consultant",
-    bio: "Certified Public Accountant (U.S.) & Chartered Accountant (India). Owner of ZeroG Beds and Mattresses. Specializes in Retail, Fitness, Hospitality, and Healthcare business strategy.",
-    slug: "praveen-bhatnagar",
-    img: null,
-  },
-  {
     name: "Rushab Bhatnagar",
     role: "Co-Founder & CEO, NOVO Labs | Strategic Director, NB Ventures",
     bio: "Bachelor's in Business & Economics from Exeter, Master's in Strategic Marketing from Imperial College. Leads NB Ventures' portfolio of 70+ Indian start-ups.",
     slug: "rushab-bhatnagar",
     img: rushab,
+    order: 1,
+  },
+  {
+    name: "Praveen Bhatnagar",
+    role: "Business Consultant",
+    bio: "Certified Public Accountant (U.S.) & Chartered Accountant (India). Owner of ZeroG Beds and Mattresses. Specializes in Retail, Fitness, Hospitality, and Healthcare business strategy.",
+    slug: "praveen-bhatnagar",
+    img: null,
+    order: 2,
+  },
+  {
+    name: "Sanjeev Sinha",
+    role: "Director",
+    bio: "Senior director at JSB Group contributing to the group's strategic growth across verticals.",
+    slug: "sanjeev-sinha",
+    img: sinha,
+    order: 3,
+  },
+  {
+    name: "Sanal Kumar",
+    role: "Director",
+    bio: "Contributes strategic direction and expertise to JSB Group's expanding business verticals.",
+    slug: "sanal-kumar",
+    img: sanal,
+    order: 4,
+  },
+  {
+    name: "Mohammed Ashik",
+    role: "Director",
+    bio: "Key leadership member driving operational excellence across JSB Group's diverse portfolio.",
+    slug: "mohammed-ashik",
+    img: null,
+    order: 5,
   },
   {
     name: "Deep Bhogal",
@@ -1550,6 +1576,7 @@ const directors = [
     bio: "Over 30 years in supply and distribution across retail, software, and electronics. Led Denaster to become a multimillion-dollar SME with 100+ employees.",
     slug: "deep-bhogal",
     img: deep,
+    order: 7,
   },
   {
     name: "Naz Ayat",
@@ -1564,27 +1591,15 @@ const directors = [
     bio: "23+ years in Health and Fitness. One of the first in India to achieve ACSM Certification (2005). Spearheaded Snap Fitness UAE Master Franchise.",
     slug: "afshad-mistry",
     img: null,
+    order: 8,
   },
   {
-    name: "Sanjeev Sinha",
-    role: "Director",
-    bio: "Senior director at JSB Group contributing to the group's strategic growth across verticals.",
-    slug: "sanjeev-sinha",
-    img: sinha,
-  },
-  {
-    name: "Mohammed Ashik",
-    role: "Director",
-    bio: "Key leadership member driving operational excellence across JSB Group's diverse portfolio.",
-    slug: "mohammed-ashik",
+    name: "Manish Kishore",
+    role: "Partner",
+    bio: "test",
+    slug: "",
     img: null,
-  },
-  {
-    name: "Sanal Kumar",
-    role: "Director",
-    bio: "Contributes strategic direction and expertise to JSB Group's expanding business verticals.",
-    slug: "sanal-kumar",
-    img: sanal,
+    order: 6,
   },
 ];
 
@@ -1781,11 +1796,20 @@ function BrandModal({ brand, onClose }) {
 }
 
 /* ─── Directors Slider ───────────────────────────────────────── */
-/* ─── Directors Slider ───────────────────────────────────────── */
 function DirectorsSlider({ onSelect }) {
   const trackRef = useRef();
+
   useAutoScroll(trackRef, 0.4);
-  const doubled = [...directors, ...directors];
+
+  // ORDER CONTROL
+  const sortedDirectors = [...directors].sort(
+    (a, b) => (a.order || 999) - (b.order || 999),
+  );
+
+  // INFINITE LOOP
+  const doubled = [...sortedDirectors, ...sortedDirectors];
+
+  const slideAmount = 340;
 
   return (
     <section id="pillars" className="directors-section">
@@ -1796,24 +1820,26 @@ function DirectorsSlider({ onSelect }) {
       </div>
 
       <div className="directors-slider-wrap">
+        {/* LEFT BUTTON */}
         <button
           className="slider-nav slider-nav-left"
           onClick={() => {
-            trackRef.current.scrollLeft -= 260;
+            trackRef.current.scrollLeft -= slideAmount;
           }}
         >
           ‹
         </button>
 
+        {/* SLIDER */}
         <div className="directors-marquee" data-reveal="up" data-delay="150">
           <div className="directors-track-marquee" ref={trackRef}>
             {doubled.map((d, i) => (
               <div
-                key={d.slug + i}
+                key={`${d.slug}-${i}`}
                 className="director-card"
                 onClick={() => onSelect(d)}
-                style={{ cursor: "pointer" }}
               >
+                {/* IMAGE */}
                 <div className="director-photo-wrap">
                   {d.img ? (
                     <img
@@ -1835,6 +1861,7 @@ function DirectorsSlider({ onSelect }) {
                   <div className="director-photo-accent" />
                 </div>
 
+                {/* CONTENT */}
                 <div className="director-text-col">
                   <h4 className="director-name">{d.name}</h4>
 
@@ -1857,10 +1884,11 @@ function DirectorsSlider({ onSelect }) {
           </div>
         </div>
 
+        {/* RIGHT BUTTON */}
         <button
           className="slider-nav slider-nav-right"
           onClick={() => {
-            trackRef.current.scrollLeft += 260;
+            trackRef.current.scrollLeft += slideAmount;
           }}
         >
           ›
