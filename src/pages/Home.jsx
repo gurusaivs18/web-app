@@ -1710,32 +1710,6 @@ function PhotoPlaceholder({ label = "Add Group Photo" }) {
   );
 }
 
-/* ─── Arrow Button ───────────────────────────────────────────── */
-function ArrowBtn({ direction, onClick }) {
-  return (
-    <button
-      className={`slider-arrow slider-arrow--${direction}`}
-      onClick={onClick}
-      aria-label={direction === "left" ? "Previous" : "Next"}
-    >
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        {direction === "left" ? (
-          <polyline points="15 18 9 12 15 6" />
-        ) : (
-          <polyline points="9 18 15 12 9 6" />
-        )}
-      </svg>
-    </button>
-  );
-}
-
 /* ─── Director Modal ─────────────────────────────────────────── */
 function DirectorModal({ director, onClose }) {
   if (!director) return null;
@@ -1745,6 +1719,7 @@ function DirectorModal({ director, onClose }) {
         <button className="home-modal-close" onClick={onClose}>
           ×
         </button>
+
         <div className="home-modal-header">
           <div className="home-modal-avatar">
             {director.img ? (
@@ -1764,7 +1739,9 @@ function DirectorModal({ director, onClose }) {
             <p className="home-modal-role">{director.role}</p>
           </div>
         </div>
+
         <p className="home-modal-bio">{director.bio}</p>
+
         <a href={`/about#${director.slug}`} className="home-modal-btn">
           Know More
         </a>
@@ -1782,11 +1759,14 @@ function BrandModal({ brand, onClose }) {
         <button className="home-modal-close" onClick={onClose}>
           ×
         </button>
+
         <div className="home-modal-logo-wrap">
           <img src={brand.img} alt={brand.name} />
         </div>
+
         <h3 className="home-modal-name">{brand.name}</h3>
         <p className="home-modal-bio">{brand.desc}</p>
+
         <a
           href={brand.url}
           target="_blank"
@@ -1801,26 +1781,11 @@ function BrandModal({ brand, onClose }) {
 }
 
 /* ─── Directors Slider ───────────────────────────────────────── */
+/* ─── Directors Slider ───────────────────────────────────────── */
 function DirectorsSlider({ onSelect }) {
   const trackRef = useRef();
-  const pausedRef = useRef(false);
-  const CARD_WIDTH = 240; // card width + gap
-
   useAutoScroll(trackRef, 0.4);
-
   const doubled = [...directors, ...directors];
-
-  const scroll = (dir) => {
-    const el = trackRef.current;
-    if (!el) return;
-    pausedRef.current = true;
-    el.scrollLeft += dir * CARD_WIDTH;
-    // resume auto-scroll after 2s of inactivity
-    clearTimeout(pausedRef._timer);
-    pausedRef._timer = setTimeout(() => {
-      pausedRef.current = false;
-    }, 2000);
-  };
 
   return (
     <section id="pillars" className="directors-section">
@@ -1830,11 +1795,17 @@ function DirectorsSlider({ onSelect }) {
         </div>
       </div>
 
-      {/* Wrapper that holds arrows + marquee together */}
-      <div className="slider-with-arrows" data-reveal="up" data-delay="150">
-        <ArrowBtn direction="left" onClick={() => scroll(-1)} />
+      <div className="directors-slider-wrap">
+        <button
+          className="slider-nav slider-nav-left"
+          onClick={() => {
+            trackRef.current.scrollLeft -= 260;
+          }}
+        >
+          ‹
+        </button>
 
-        <div className="directors-marquee">
+        <div className="directors-marquee" data-reveal="up" data-delay="150">
           <div className="directors-track-marquee" ref={trackRef}>
             {doubled.map((d, i) => (
               <div
@@ -1860,12 +1831,17 @@ function DirectorsSlider({ onSelect }) {
                         .slice(0, 2)}
                     </div>
                   )}
+
                   <div className="director-photo-accent" />
                 </div>
+
                 <div className="director-text-col">
                   <h4 className="director-name">{d.name}</h4>
+
                   <p className="director-role">{d.role}</p>
+
                   <p className="director-bio">{d.bio}</p>
+
                   <span
                     className="director-know-more"
                     onClick={(e) => {
@@ -1881,33 +1857,28 @@ function DirectorsSlider({ onSelect }) {
           </div>
         </div>
 
-        <ArrowBtn direction="right" onClick={() => scroll(1)} />
+        <button
+          className="slider-nav slider-nav-right"
+          onClick={() => {
+            trackRef.current.scrollLeft += 260;
+          }}
+        >
+          ›
+        </button>
       </div>
     </section>
   );
 }
 
-/* ─── Verticals Slider ──────────────────────────────────────── */
+/* ─── Auto-sliding Verticals ────────────────────────────────── */
 function VerticalsSlider({ onSelect }) {
   const trackRef = useRef();
-  const pausedRef = useRef(false);
-  const CARD_WIDTH = 240;
 
   useAutoScroll(trackRef, 0.4);
 
   const sorted = [...brandLogos].sort((a, b) => a.order - b.order);
-  const doubled = [...sorted, ...sorted];
 
-  const scroll = (dir) => {
-    const el = trackRef.current;
-    if (!el) return;
-    pausedRef.current = true;
-    el.scrollLeft += dir * CARD_WIDTH;
-    clearTimeout(pausedRef._timer);
-    pausedRef._timer = setTimeout(() => {
-      pausedRef.current = false;
-    }, 2000);
-  };
+  const doubled = [...sorted, ...sorted];
 
   return (
     <section className="home-verticals-logos">
@@ -1917,10 +1888,21 @@ function VerticalsSlider({ onSelect }) {
         </div>
       </div>
 
-      <div className="slider-with-arrows" data-reveal="up" data-delay="200">
-        <ArrowBtn direction="left" onClick={() => scroll(-1)} />
+      <div className="verticals-slider-wrap">
+        <button
+          className="slider-nav slider-nav-left"
+          onClick={() => {
+            trackRef.current.scrollLeft -= 260;
+          }}
+        >
+          ‹
+        </button>
 
-        <div className="verticals-slider-outer">
+        <div
+          className="verticals-slider-outer"
+          data-reveal="up"
+          data-delay="200"
+        >
           <div className="verticals-track" ref={trackRef}>
             {doubled.map((logo, i) => (
               <div
@@ -1932,10 +1914,14 @@ function VerticalsSlider({ onSelect }) {
                 <div className="vertical-logo-box">
                   <img src={logo.img} alt={logo.name} loading="lazy" />
                 </div>
+
                 <div className="vertical-card-divider" />
+
                 <div className="vertical-card-body">
                   <p className="vertical-brand-name">{logo.name}</p>
+
                   <p className="vertical-brand-desc">{logo.desc}</p>
+
                   <span
                     className="vertical-know-more"
                     onClick={(e) => {
@@ -1951,21 +1937,30 @@ function VerticalsSlider({ onSelect }) {
           </div>
         </div>
 
-        <ArrowBtn direction="right" onClick={() => scroll(1)} />
+        <button
+          className="slider-nav slider-nav-right"
+          onClick={() => {
+            trackRef.current.scrollLeft += 260;
+          }}
+        >
+          ›
+        </button>
       </div>
     </section>
   );
 }
-
 /* ─── Main component ─────────────────────────────────────────── */
 function Home() {
   useScrollReveal();
 
   const sectionRef = useRef(null);
   const [triggered, setTriggered] = useState(false);
+
+  // Modal state
   const [selectedDirector, setSelectedDirector] = useState(null);
   const [selectedBrand, setSelectedBrand] = useState(null);
 
+  // Close on Escape key
   useEffect(() => {
     const handleKey = (e) => {
       if (e.key === "Escape") {
@@ -1977,6 +1972,7 @@ function Home() {
     return () => window.removeEventListener("keydown", handleKey);
   }, []);
 
+  // Lock body scroll when modal is open
   useEffect(() => {
     if (selectedDirector || selectedBrand) {
       document.body.style.overflow = "hidden";
