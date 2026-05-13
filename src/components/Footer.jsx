@@ -30,7 +30,18 @@ function Footer() {
                 <Link to="/about">About Us</Link>
               </li>
               <li>
-                <Link to="/about">Team</Link>
+                <Link
+                  to="/#pillars"
+                  onClick={() => {
+                    setTimeout(() => {
+                      document
+                        .getElementById("pillars")
+                        ?.scrollIntoView({ behavior: "smooth" });
+                    }, 100);
+                  }}
+                >
+                  Team
+                </Link>
               </li>
               <li>
                 <Link to="/verticals">Services</Link>
