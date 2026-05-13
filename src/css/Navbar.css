@@ -4,8 +4,9 @@
   width: 100%;
   background-color: rgb(12, 12, 12);
 
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
   z-index: 10000;
 
   height: 70px;
@@ -14,12 +15,20 @@
   align-items: center;
 
   box-shadow: 0 6px 10px rgba(17, 16, 16, 0.25);
-
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
   backdrop-filter: blur(10px);
+
+  transition: transform 0.35s ease;
+}
+.nav-show {
+  transform: translateY(0);
 }
 
-/* ───────────────── CONTAINER ───────────────── */
+.nav-hide {
+  transform: translateY(-100%);
+}
+/* ──────────
+─────── CONTAINER ───────────────── */
 
 .nav-container {
   max-width: var(--max-width);
@@ -216,6 +225,9 @@
 /* ───────────────── MOBILE SMALL ───────────────── */
 
 @media (max-width: 480px) {
+  body {
+    padding-top: 64px;
+  }
   .navbar {
     height: 64px;
   }

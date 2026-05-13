@@ -5,6 +5,11 @@ import Logo from "./Logo";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+
+  // SHOW / HIDE NAVBAR
+  const [showNavbar, setShowNavbar] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
   const location = useLocation();
   const menuRef = useRef(null);
   const navigate = useNavigate();
@@ -26,16 +31,22 @@ function Navbar() {
 
       setTimeout(() => {
         const el = document.getElementById("pillars");
+
         if (el) {
-          el.scrollIntoView({ behavior: "smooth", block: "start" });
+          el.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
         }
       }, 200);
+
       return;
     }
 
     navigate(to);
   };
 
+  // CLOSE MENU OUTSIDE CLICK
   useEffect(() => {
     function handleClickOutside(event) {
       if (menuRef.current && !menuRef.current.contains(event.target)) {
@@ -44,11 +55,42 @@ function Navbar() {
     }
 
     document.addEventListener("mousedown", handleClickOutside);
+
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
+  // NAVBAR SHOW/HIDE ON SCROLL
+  useEffect(() => {
+    const handleScroll = () => {
+      // ALWAYS SHOW AT TOP
+      if (window.scrollY < 40) {
+        setShowNavbar(true);
+        setLastScrollY(window.scrollY);
+        return;
+      }
+
+      // SCROLL DOWN → HIDE
+      if (window.scrollY > lastScrollY + 10) {
+        setShowNavbar(false);
+      }
+
+      // SCROLL UP → SHOW
+      else if (window.scrollY < lastScrollY - 10) {
+        setShowNavbar(true);
+      }
+
+      setLastScrollY(window.scrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [lastScrollY]);
+
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${showNavbar ? "nav-show" : "nav-hide"}`}>
       <div className="nav-container">
         <Link className="logo-link" to="/" onClick={() => setMenuOpen(false)}>
           <Logo />
