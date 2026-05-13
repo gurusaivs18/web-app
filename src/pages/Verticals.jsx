@@ -64,7 +64,9 @@ function Verticals() {
     <>
       {/* HERO */}
       <div className="page-hero container text-center py-12" data-reveal="fade">
-        <h1 style={{ textAlign: "center", marginTop: "5px", color: "darkred" }}>
+        <h1
+          style={{ textAlign: "center", marginTop: "25px", color: "darkred" }}
+        >
           Verticals
         </h1>
       </div>

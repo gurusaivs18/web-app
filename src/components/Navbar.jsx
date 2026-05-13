@@ -84,7 +84,53 @@ function Navbar() {
   return (
     <nav className={`navbar ${showNavbar ? "nav-show" : "nav-hide"}`}>
       <div className="nav-container">
-        <Link className="logo-link" to="/" onClick={() => setMenuOpen(false)}>
+        <Link
+          className="logo-link"
+          to="/"
+          onClick={(e) => {
+            e.preventDefault();
+
+            setMenuOpen(false);
+
+            // IF ALREADY ON HOME PAGE
+            if (location.pathname === "/") {
+              const hero = document.getElementById("hero");
+
+              if (hero) {
+                hero.scrollIntoView({
+                  behavior: "smooth",
+                  block: "start",
+                });
+              } else {
+                window.scrollTo({
+                  top: 0,
+                  behavior: "smooth",
+                });
+              }
+            }
+
+            // IF COMING FROM ANOTHER PAGE
+            else {
+              navigate("/");
+
+              setTimeout(() => {
+                const hero = document.getElementById("hero");
+
+                if (hero) {
+                  hero.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                  });
+                } else {
+                  window.scrollTo({
+                    top: 0,
+                    behavior: "smooth",
+                  });
+                }
+              }, 150);
+            }
+          }}
+        >
           <Logo />
         </Link>
 
