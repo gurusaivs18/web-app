@@ -191,3 +191,27 @@
     font-size: 16px;
   }
 }
+/* ───────────────── MOBILE FIX (IMPORTANT) ───────────────── */
+
+@media (max-width: 768px) {
+  .contact-wrapper {
+    justify-content: flex-start; /* instead of center */
+    align-items: center;
+
+    padding: 40px 16px;
+    min-height: auto; /* remove forced full height */
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-wrapper {
+    justify-content: flex-start;
+    padding: 30px 12px;
+    min-height: auto;
+  }
+
+  .contact-form {
+    width: 100%;
+    max-width: 100%;
+  }
+}
