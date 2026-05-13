@@ -5,10 +5,9 @@ import Logo from "./Logo";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
-
-  // SHOW / HIDE NAVBAR
   const [showNavbar, setShowNavbar] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
+
+  const lastScrollY = useRef(0); // ✅ ref instead of state — no stale closure
 
   const location = useLocation();
   const menuRef = useRef(null);
@@ -28,66 +27,59 @@ function Navbar() {
 
     if (to === "/pillars") {
       navigate("/");
-
       setTimeout(() => {
         const el = document.getElementById("pillars");
-
         if (el) {
-          el.scrollIntoView({
-            behavior: "smooth",
-            block: "start",
-          });
+          el.scrollIntoView({ behavior: "smooth", block: "start" });
         }
       }, 200);
-
       return;
     }
 
     navigate(to);
   };
 
-  // CLOSE MENU OUTSIDE CLICK
+  // CLOSE MENU ON OUTSIDE CLICK
   useEffect(() => {
     function handleClickOutside(event) {
       if (menuRef.current && !menuRef.current.contains(event.target)) {
         setMenuOpen(false);
       }
     }
-
     document.addEventListener("mousedown", handleClickOutside);
-
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
   // NAVBAR SHOW/HIDE ON SCROLL
   useEffect(() => {
     const handleScroll = () => {
+      // CLOSE MOBILE MENU ON SCROLL
+      setMenuOpen(false);
+
+      const currentY = window.scrollY;
+
       // ALWAYS SHOW AT TOP
-      if (window.scrollY < 40) {
+      if (currentY < 40) {
         setShowNavbar(true);
-        setLastScrollY(window.scrollY);
+        lastScrollY.current = currentY;
         return;
       }
 
       // SCROLL DOWN → HIDE
-      if (window.scrollY > lastScrollY + 10) {
+      if (currentY > lastScrollY.current + 10) {
         setShowNavbar(false);
       }
-
       // SCROLL UP → SHOW
-      else if (window.scrollY < lastScrollY - 10) {
+      else if (currentY < lastScrollY.current - 10) {
         setShowNavbar(true);
       }
 
-      setLastScrollY(window.scrollY);
+      lastScrollY.current = currentY;
     };
 
     window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [lastScrollY]);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []); // ✅ empty deps — safe now with ref
 
   return (
     <nav className={`navbar ${showNavbar ? "nav-show" : "nav-hide"}`}>
