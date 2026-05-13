@@ -1,5 +1,39 @@
 export const verticals = [
   {
+    title: "Venture Capitalist",
+
+    description:
+      "Our technology division develops customized software solutions that help businesses improve operational efficiency and digital transformation.",
+
+    items: [
+      {
+        name: "Nb Ventures",
+
+        link: "https://nbventuresme.com/",
+
+        description:
+          "Nb Ventures is a leading venture capital firm that invests in innovative startups and emerging businesses across various industries.",
+      },
+    ],
+  },
+  {
+    title: "Technology",
+
+    description:
+      "Our technology division develops customized software solutions that help businesses improve operational efficiency and digital transformation.",
+
+    items: [
+      {
+        name: "VK Technology",
+
+        link: "https://vktechnologiesme.com/",
+
+        description:
+          "VK Technology specializes in delivering customized software solutions aligned with business processes and transformed into technical functionalities. Services include POS systems, reporting systems, e-commerce website development, and ERP integrations with platforms such as Oracle NetSuite and Zoho Inventory & Books.",
+      },
+    ],
+  },
+  {
     title: "Food & Beverage (F&B)",
 
     description:
@@ -171,24 +205,6 @@ export const verticals = [
   },
 
   {
-    title: "Technology",
-
-    description:
-      "Our technology division develops customized software solutions that help businesses improve operational efficiency and digital transformation.",
-
-    items: [
-      {
-        name: "VK Technology",
-
-        link: "https://vktechnologiesme.com/",
-
-        description:
-          "VK Technology specializes in delivering customized software solutions aligned with business processes and transformed into technical functionalities. Services include POS systems, reporting systems, e-commerce website development, and ERP integrations with platforms such as Oracle NetSuite and Zoho Inventory & Books.",
-      },
-    ],
-  },
-
-  {
     title: "Interior Fitout & Outdoor Furniture",
 
     description:
@@ -202,23 +218,6 @@ export const verticals = [
 
         description:
           "Epic Fitouts is a premier provider of interior design, fitout services, and outdoor furniture solutions. The company specializes in transforming residential, commercial, and hospitality spaces through bespoke interior solutions, comprehensive fitout execution, and customized outdoor furniture designed to enhance exterior environments.",
-      },
-    ],
-  },
-  {
-    title: "Venture Capitalist",
-
-    description:
-      "Our technology division develops customized software solutions that help businesses improve operational efficiency and digital transformation.",
-
-    items: [
-      {
-        name: "Nb Ventures",
-
-        link: "https://nbventuresme.com/",
-
-        description:
-          "Nb Ventures is a leading venture capital firm that invests in innovative startups and emerging businesses across various industries.",
       },
     ],
   },
