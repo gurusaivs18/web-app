@@ -1,17 +1,65 @@
-import "../css/Contact.css";
+import "../css/ContactUs.css";
+import { Formik, Form, Field, ErrorMessage } from "formik";
+import * as Yup from "yup";
+
+// Validation schema
+const contactSchema = Yup.object({
+  name: Yup.string()
+    .min(4, "Name must be at least 4 characters")
+    .required("Field is Required"),
+
+  email: Yup.string()
+    .email("Invalid email format")
+    .required("Field is required"),
+
+  message: Yup.string()
+    .min(8, "Message must be atleast 8 characters")
+    .required("Message Must be in 8 Characters "),
+});
 
 function Contact() {
   return (
     <div className="contact-wrapper">
-      <h1>Contact Us</h1>
+      <h1 style={{ color: "#8e1414", fontWeight: 200 }}>Contact Us</h1>
 
-      <form className="contact-form">
-        <input type="text" placeholder="Your Name" />
-        <input type="email" placeholder="Your Email" />
-        <textarea placeholder="Your Message" rows="5"></textarea>
+      <Formik
+        initialValues={{
+          name: "",
+          email: "",
+          message: "",
+        }}
+        validationSchema={contactSchema}
+        onSubmit={(values, { resetForm }) => {
+          console.log("Form Data:", values);
+          resetForm();
+        }}
+      >
+        {() => (
+          <Form className="contact-form">
+            <Field type="text" name="name" placeholder="Your Name" />
+            <div className="error">
+              <ErrorMessage name="name" />
+            </div>
 
-        <button type="submit">Send Message</button>
-      </form>
+            <Field type="email" name="email" placeholder="Your Email" />
+            <div className="error">
+              <ErrorMessage name="email" />
+            </div>
+
+            <Field
+              as="textarea"
+              name="message"
+              placeholder="Your Message"
+              rows="5"
+            />
+            <div className="error">
+              <ErrorMessage name="message" />
+            </div>
+
+            <button type="submit">Send Message</button>
+          </Form>
+        )}
+      </Formik>
     </div>
   );
 }

@@ -9,7 +9,7 @@ import Impact from "./pages/Impact";
 import Newsroom from "./pages/Newsroom";
 import "./css/global.css";
 import Home from "./pages/Home";
-import ContactUs from "./pages/ContactUs";
+import ContactUs from "./components/ContactUs";
 import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
