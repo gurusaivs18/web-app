@@ -660,4 +660,20 @@
   .ceo-modal-name {
     font-size: 20px;
   }
+} /* Verticals — description now sits below logos */
+.vertical-content {
+  margin-top: var(--sp-10);
+  margin-bottom: 0;
+}
+/* ── Verticals — separator lines ── */
+
+/* line below Featured Brands section */
+.featured-logos-section {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  padding-bottom: var(--sp-12);
+}
+
+/* line above first category section */
+.vertical-category:first-of-type {
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
 }

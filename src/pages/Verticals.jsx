@@ -146,13 +146,7 @@ function Verticals() {
       {verticals.map((cat, i) => (
         <section key={i} className="vertical-category">
           <div className="container">
-            {/* Category heading slides in from left */}
-            <div className="vertical-content" data-reveal="left">
-              <h2 className="vertical-heading">{cat.title}</h2>
-              <p className="vertical-description">{cat.description}</p>
-            </div>
-
-            {/* Brand logo cards stagger up */}
+            {/* logos first */}
             <div className="vertical-brands-grid">
               {cat.items.map((brand, j) => (
                 <div
@@ -179,6 +173,12 @@ function Verticals() {
                   <div className="logo-card-text">{brand.name}</div>
                 </div>
               ))}
+            </div>
+
+            {/* description below */}
+            <div className="vertical-content" data-reveal="up" data-delay="100">
+              <h2 className="vertical-heading">{cat.title}</h2>
+              <p className="vertical-description">{cat.description}</p>
             </div>
           </div>
         </section>
