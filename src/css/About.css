@@ -402,6 +402,25 @@
 /* ───────────────── RESPONSIVE ───────────────── */
 
 @media (max-width: 992px) {
+  .about-who-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .vmp-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .architect-content {
+    padding: 35px;
+  }
+
+  .architect-info h3 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* ── Architect — stack text below image ── */
   .architect-banner {
     height: auto;
     display: flex;
@@ -412,6 +431,7 @@
     position: relative;
     width: 100%;
     height: 300px;
+    object-fit: cover;
     object-position: left top;
   }
 
@@ -442,44 +462,45 @@
     top: 14px;
     right: 14px;
   }
-}
 
-@media (max-width: 480px) {
+  /* ── Directors / Partners grids ── */
   .directors-grid,
   .directors-grid-2,
   .partners-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+
+  .director-card {
+    max-width: 100%;
   }
 
   .director-photo {
-    height: 280px;
+    height: 240px;
   }
 
-  .architect-content {
-    padding: 20px;
+  .modal-box {
+    padding: 30px 22px;
   }
-  .architect-banner-bg {
-    object-position: left top;
-  }
-  .architect-label {
-    top: 14px;
-    right: 14px;
-    font-size: 11px;
-  }
+}
+
+@media (max-width: 480px) {
+  /* ── Architect ── */
   .architect-banner-bg {
     height: 260px;
     object-position: 20% top;
   }
 
-  .architect-info h3 {
-    font-size: 18px;
+  .architect-content {
+    padding: 20px;
   }
-  .architect-info {
-    max-width: 100%;
+
+  .architect-label {
+    font-size: 11px;
   }
 
   .architect-info h3 {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .architect-info .role {
@@ -490,6 +511,18 @@
     font-size: 13px;
   }
 
+  /* ── Directors / Partners grids ── */
+  .directors-grid,
+  .directors-grid-2,
+  .partners-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .director-photo {
+    height: 280px;
+  }
+
+  /* ── Modal ── */
   .modal-name {
     font-size: 22px;
   }
