@@ -317,7 +317,7 @@
   /* Slider margins tighten on mobile */
   .directors-marquee,
   .verticals-slider-outer {
-    margin-inline: var(--sp-8);
+    margin-inline: var(--sp-8); /* 2rem instead of 80px */
     margin-block: var(--sp-6);
   }
 
@@ -339,54 +339,6 @@
   /* Verticals category */
   .vertical-category {
     padding-block: var(--sp-16);
-  }
-
-  /* ── CEO SECTION — text inside image, bottom-anchored ── */
-  .ceo-content {
-    height: 420px;
-  }
-
-  .ceo-content::after {
-    background: linear-gradient(
-      to top,
-      rgba(0, 0, 0, 0.88) 0%,
-      rgba(0, 0, 0, 0.55) 45%,
-      rgba(0, 0, 0, 0.15) 100%
-    );
-  }
-
-  .ceo-info {
-    top: auto;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    transform: none;
-    max-width: 100%;
-    text-align: left;
-    padding: var(--sp-6);
-  }
-
-  .ceo-info h3 {
-    font-size: 20px;
-    color: white;
-  }
-
-  .ceo-info .ceo-role {
-    font-size: 13px;
-  }
-
-  .ceo-info p {
-    font-size: 13px;
-    line-height: 1.6;
-    color: rgba(255, 255, 255, 0.9);
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
-
-  .read-more-link {
-    color: white;
   }
 }
 
@@ -418,17 +370,294 @@
   .director-card-body {
     padding: var(--sp-4) var(--sp-4) var(--sp-6);
   }
+}
+.page-hero h1 {
+  margin-top: var(--sp-6); /* 1.5rem ≈ 24px — matches Verticals' 25px */
+  text-align: center;
+  color: darkred;
+}
+/* Directors slider — remove bottom track margin so the gap
+   between Directors→Verticals matches Verticals→Impact */
+.directors-section {
+  padding-bottom: var(--sp-12); /* tighten bottom slightly */
+}
 
-  /* ── CEO SECTION — tighter on small phones ── */
+.home-verticals-logos {
+  padding-top: var(--sp-12); /* match the tightened top */
+}
+
+.directors-marquee {
+  margin-bottom: 0; /* kill the extra bottom margin */
+}
+/* ─────────────────────────────────────────────
+   CEO SECTION — Mobile stacked layout
+   ───────────────────────────────────────────── */
+@media (max-width: 768px) {
   .ceo-content {
-    height: 380px;
+    height: auto; /* release fixed height */
+    display: flex;
+    flex-direction: column;
+  }
+
+  .ceo-img {
+    position: relative; /* pull out of absolute */
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  .ceo-content::after {
+    display: none; /* remove dark overlay */
+  }
+
+  .ceo-info {
+    position: relative; /* pull out of absolute */
+    top: auto;
+    right: auto;
+    transform: none;
+    max-width: 100%;
+    text-align: left;
+    color: var(--color-dark);
+    padding: var(--sp-6);
+    background: var(--color-white);
+  }
+
+  .ceo-info h3 {
+    color: var(--color-dark);
+    font-size: 22px;
+  }
+
+  .ceo-info p {
+    color: var(--color-body);
+  }
+
+  .ceo-info .ceo-role {
+    color: var(--color-primary) !important;
+  }
+
+  .read-more-link {
+    color: var(--color-primary);
+  }
+}
+
+@media (max-width: 480px) {
+  .ceo-img {
+    height: 260px;
   }
 
   .ceo-info {
     padding: var(--sp-4) var(--sp-4) var(--sp-6);
   }
+}
+/* =================================================================
+   CEO MODAL — Premium cinematic style
+   ================================================================= */
 
-  .ceo-info h3 {
-    font-size: 18px;
+.ceo-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.ceo-modal {
+  position: relative;
+  width: min(900px, 95%);
+  max-height: 90vh;
+  overflow: hidden;
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  background: #0d0d0d;
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.6);
+  animation: ceoModalIn 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes ceoModalIn {
+  from {
+    opacity: 0;
+    transform: scale(0.94) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* ── LEFT — image panel ── */
+.ceo-modal-img-panel {
+  position: relative;
+  overflow: hidden;
+}
+
+.ceo-modal-img-panel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+
+.ceo-modal-img-panel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, transparent 60%, #0d0d0d 100%);
+}
+
+/* Red accent bar on left edge */
+.ceo-modal-img-panel::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: #9b1c1c;
+  z-index: 2;
+}
+
+/* ── RIGHT — content panel ── */
+.ceo-modal-content {
+  padding: 48px 40px 40px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-height: 90vh;
+}
+
+/* Tag */
+.ceo-modal-tag {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #9b1c1c;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ceo-modal-tag::before {
+  content: "";
+  width: 24px;
+  height: 2px;
+  background: #9b1c1c;
+  display: inline-block;
+}
+
+/* Name */
+.ceo-modal-name {
+  font-size: 32px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
+  color: #ffffff;
+  line-height: 1.1;
+  margin: 0;
+}
+
+/* Role */
+.ceo-modal-role {
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.45);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin: 0;
+}
+
+/* Divider */
+.ceo-modal-divider {
+  width: 40px;
+  height: 2px;
+  background: #9b1c1c;
+}
+
+/* Bio paragraphs */
+.ceo-modal-bio {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  flex: 1;
+}
+
+.ceo-modal-bio p {
+  font-size: 14px;
+  line-height: 1.85;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+}
+
+/* Close button */
+.ceo-modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  z-index: 10;
+}
+
+.ceo-modal-close:hover {
+  background: #9b1c1c;
+  border-color: #9b1c1c;
+  color: #fff;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .ceo-modal {
+    grid-template-columns: 1fr;
+    grid-template-rows: 280px 1fr;
+    width: min(500px, 95%);
+    max-height: 88vh;
+  }
+
+  .ceo-modal-img-panel::after {
+    background: linear-gradient(to top, #0d0d0d 10%, transparent 60%);
+  }
+
+  .ceo-modal-content {
+    padding: 28px 24px 32px;
+    max-height: unset;
+  }
+
+  .ceo-modal-name {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ceo-modal {
+    grid-template-rows: 240px 1fr;
+    border-radius: 14px;
+  }
+
+  .ceo-modal-content {
+    padding: 22px 20px 28px;
+    gap: 14px;
+  }
+
+  .ceo-modal-name {
+    font-size: 20px;
   }
 }
