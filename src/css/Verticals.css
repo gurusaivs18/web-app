@@ -48,6 +48,9 @@
   color: var(--text-dark);
   margin-bottom: 18px;
   line-height: 1.2;
+    text-align: center;   /* ADD THIS */
+  width: 100%;          /* ADD THIS */
+  display: block; 
 }
 
 .vertical-description {

@@ -32,6 +32,7 @@ import pizza from "../assets/Brand-Logos/pizza tales-03.webp";
 import kichdi from "../assets/Brand-Logos/khichdi tales.webp";
 import thalitales from "../assets/Brand-Logos/thali tales-01.webp";
 import beijing from "../assets/Brand-Logos/Beijing Lu Logo.webp";
+import epic from "../assets/Brand-Logos/epicfitout.png";
 const logoMap = {
   "Pressman's Sandwiches": pressmans,
   "Biriyani Box": biriyani,
@@ -58,6 +59,7 @@ const logoMap = {
   "Thali Tales": thalitales,
   "beijing Lu": beijing,
   "Booster Juice": boosterjuice,
+  "Epic Fitouts": epic,
 };
 
 const featuredBrands = [
@@ -164,7 +166,7 @@ function Verticals() {
         <section
           key={i}
           className={`vertical-category${i === 0 ? " vertical-category--first" : ""}`}
-        >
+        >  <h2 className="vertical-heading">{cat.title}</h2>
           <div className="container">
             {/* logos first */}
             <div className="vertical-brands-grid">
@@ -197,7 +199,7 @@ function Verticals() {
 
             {/* description below */}
             <div className="vertical-content" data-reveal="up" data-delay="100">
-              <h2 className="vertical-heading">{cat.title}</h2>
+            
               <p className="vertical-description">{cat.description}</p>
             </div>
           </div>
