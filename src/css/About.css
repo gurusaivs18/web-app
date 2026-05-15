@@ -114,7 +114,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: left center; /* ← shows face on all screens */
 }
 
 .architect-banner::after {
@@ -425,6 +425,9 @@
   .partners-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 18px;
+    .architect-banner-bg {
+      object-position: left top;
+    }
   }
 
   .director-card {
@@ -466,7 +469,9 @@
   .architect-content {
     padding: 20px;
   }
-
+  .architect-banner-bg {
+    object-position: left top;
+  }
   .architect-label {
     top: 14px;
     right: 14px;
