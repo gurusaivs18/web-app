@@ -1441,8 +1441,6 @@ function Home() {
             </p>
             <button
               className="read-more-link"
-              data-reveal="right"
-              data-delay="350"
               onClick={() => setCeoModalOpen(true)}
             >
               Read More
