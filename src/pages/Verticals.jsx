@@ -144,7 +144,7 @@ function Verticals() {
 
       {/* CATEGORIES */}
       {verticals.map((cat, i) => (
-        <section key={i} className="vertical-category">
+    <section key={i} className={`vertical-category${i === 0 ? " vertical-category--first" : ""}`}>
           <div className="container">
             {/* logos first */}
             <div className="vertical-brands-grid">

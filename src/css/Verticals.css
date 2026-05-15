@@ -31,7 +31,9 @@
 .vertical-category:last-child {
   border-bottom: none;
 }
-
+.vertical-category--first {
+  padding-top: 0 !important;
+}
 /* ========================= CONTENT ========================= */
 
 .vertical-content {
