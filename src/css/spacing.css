@@ -134,8 +134,9 @@
 .featured-logos-section {
   padding-block: var(--sp-12);
   margin-top: 0;
-  margin-bottom: var(--sp-4); /* was var(--sp-12) — too much gap below */
+  margin-bottom: 0 !important;
 }
+
 /* Full-width separator below featured section */
 .featured-logos-section::after {
   content: "";
@@ -143,10 +144,9 @@
   width: 100vw;
   height: 1px;
   background: rgba(0, 0, 0, 0.08);
-  margin-top: var(--sp-6); /* was var(--sp-12) — halved */
+  margin-top: var(--sp-4) !important;
   margin-left: calc(-50vw + 50%);
 }
-
 .featured-title {
   margin-bottom: var(--sp-8);
 }
@@ -162,12 +162,12 @@
 }
 
 .vertical-page-intro {
-  margin-top: var(--sp-4); /* was var(--sp-8) */
-  margin-bottom: 0;
+  margin-top: var(--sp-2) !important;
+  margin-bottom: 0 !important;
 }
 .vertical-category {
-  padding-top: var(--sp-8);
-  padding-bottom: var(--sp-20);
+  padding-top: 30px !important;
+  padding-bottom: 90px !important;
 }
 .vertical-content {
   margin-top: var(--sp-12);
@@ -175,7 +175,7 @@
 }
 
 .vertical-brands-grid {
-  margin-top: var(--sp-8); /* ← was sp-10, reduces gap above logo cards */
+  margin-top: 0 !important;
   margin-bottom: var(--sp-12);
   gap: var(--sp-6);
 }
