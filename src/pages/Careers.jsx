@@ -38,9 +38,7 @@ function Careers() {
   return (
     <>
       <div className="page-hero" data-reveal="fade">
-        <h1 style={{ textAlign: "center", marginTop: "5px", color: "darkred" }}>
-          Careers
-        </h1>
+        <h1>Careers</h1>
       </div>
 
       <section className="section">

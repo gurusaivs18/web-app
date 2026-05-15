@@ -11,7 +11,7 @@ import "./css/global.css";
 import Home from "./pages/Home";
 import ContactUs from "./components/ContactUs";
 import ScrollToTop from "./components/ScrollToTop";
-
+import "./css/spacing.css";
 function App() {
   return (
     <>

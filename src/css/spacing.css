@@ -1,0 +1,378 @@
+/* =================================================================
+   JSB GROUP — SPACING UNIFORMITY PATCH
+   Applies on top of global.css + page CSS files.
+   ONLY spacing, padding, margin, alignment — zero logic/color changes.
+   ================================================================= */
+
+/* ─────────────────────────────────────────────
+   1. PAGE HERO  (shared across all pages)
+   All pages: About, Verticals, Careers, Impact, Newsroom
+   ───────────────────────────────────────────── */
+.page-hero {
+  padding-top: var(--sp-16); /* 4rem — consistent top breath */
+  padding-bottom: var(--sp-10); /* 2.5rem — consistent bottom breath */
+  text-align: center;
+}
+
+/* Verticals page adds container + py-12 inline — neutralise the double padding */
+.page-hero.container {
+  padding-top: var(--sp-16);
+  padding-bottom: var(--sp-10);
+}
+
+/* ─────────────────────────────────────────────
+   2. SECTION-TITLE WRAP  (the flanking-lines row)
+   Global .section-title already has margin-bottom: var(--sp-12).
+   Enforce the wrap always sits flush inside .container.
+   ───────────────────────────────────────────── */
+.section-title-wrap {
+  /* no extra margin — the section's padding-block handles top space */
+  margin-bottom: 0; /* heading gap is owned by .section-title itself */
+}
+
+/* ─────────────────────────────────────────────
+   3. INTRO PARAGRAPHS  (the centred subheading
+   below section-title on several pages)
+   ───────────────────────────────────────────── */
+.impact-intro,            /* Home & Impact pages  */
+.vertical-page-intro {
+  /* Verticals page       */
+  max-width: 680px;
+  margin-inline: auto;
+  margin-bottom: var(--sp-12); /* 3rem — uniform gap before content */
+  text-align: center;
+}
+
+/* Careers inline style sets margin-bottom: 48px — match with token */
+/* (handled via .careers-intro class below; add to JSX if desired) */
+.careers-intro {
+  max-width: 640px;
+  margin-inline: auto;
+  margin-bottom: var(--sp-12);
+  text-align: center;
+}
+
+/* ─────────────────────────────────────────────
+   4. HOME PAGE — section-by-section rhythm
+   ───────────────────────────────────────────── */
+
+/* 4a. Intro section already uses .section (global padding-block: var(--sp-20)) — OK */
+
+/* 4b. CEO section — full-bleed, no container needed, keep as-is */
+
+/* 4c. Directors slider — align top/bottom padding with section rhythm */
+.directors-section {
+  padding-block: var(--sp-20); /* was: 60px 0 / 50px — now unified */
+}
+
+/* Slider track margin: uniform horizontal breathing room */
+.directors-marquee,
+.verticals-slider-outer {
+  margin-block: var(--sp-8); /* was: 36px — now token-based */
+  margin-inline: 80px;
+}
+
+/* 4d. Verticals slider */
+.home-verticals-logos {
+  padding-block: var(--sp-20); /* was: 60px — unified */
+}
+
+/* 4e. Impact/Stats section — already uses .section, no override needed */
+
+/* 4f. Group photos — uniform vertical rhythm */
+.home-group-photos {
+  padding-block: var(--sp-20); /* was: 60px — unified */
+}
+
+/* 4g. Testimonials overlay — uniform vertical rhythm */
+.testimonials-overlay {
+  padding-block: var(--sp-20); /* was: clamp(60px,8vw,100px) — simplified */
+}
+
+/* 4h. Contact section */
+.home-contact {
+  padding-block: var(--sp-20); /* was: clamp(40px,6vw,80px) — unified */
+}
+
+/* Stats grid: add top spacing after intro paragraph */
+.stats-grid {
+  margin-top: var(--sp-12); /* was: nothing explicit */
+}
+
+/* ─────────────────────────────────────────────
+   5. ABOUT PAGE
+   ───────────────────────────────────────────── */
+
+/* 5a. Who We Are grid gap */
+.about-who-grid {
+  gap: var(--sp-16); /* was: 60px — now token (4rem) */
+}
+
+/* 5b. VMP (Vision/Mission/Purpose) grid */
+.vmp-grid {
+  gap: var(--sp-6); /* was: 24px — now var(--sp-6) = 1.5rem */
+}
+
+/* 5c. Architect section — container-based padding
+   Remove raw padding on .architect-section (uses .section already) */
+.architect-section {
+  padding-inline: 0; /* let .container handle horizontal */
+}
+
+/* Architect banner: consistent inner padding */
+.architect-content {
+  padding: var(--sp-12); /* was: 50px raw — now token (3rem) */
+}
+
+/* 5d. Director / Partner grids — consistent top margin + gap */
+.directors-grid,
+.directors-grid-2,
+.partners-grid {
+  margin-top: var(--sp-8); /* was: 28px raw — token (2rem) */
+  gap: var(--sp-8); /* was: 28px raw — token (2rem) */
+}
+
+/* Spacing between Director Pillars and Partner Pillars sections */
+.pillars-section + .pillars-section {
+  padding-top: var(--sp-12); /* replaces inline style paddingTop:0 override */
+}
+
+/* 5e. Card body internal spacing */
+.director-card-body {
+  padding: var(--sp-6) var(--sp-4) var(--sp-6); /* was: 20px 16px 22px */
+}
+
+.director-role-text {
+  margin-bottom: var(--sp-4); /* was: 18px raw */
+}
+
+/* ─────────────────────────────────────────────
+   6. VERTICALS PAGE
+   ───────────────────────────────────────────── */
+
+/* 6a. Featured logos section — uniform vertical spacing */
+.featured-logos-section {
+  padding-block: var(--sp-12); /* was: margin-top:10px, margin-bottom:60px */
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* 6b. Featured title spacing */
+.featured-title {
+  margin-bottom: var(--sp-8); /* was: 25px raw */
+}
+
+/* 6c. Featured logos grid gap */
+.featured-logos-grid {
+  gap: var(--sp-6); /* was: 18px raw */
+  margin-bottom: var(--sp-8); /* space before intro paragraph */
+}
+
+/* 6d. Vertical intro paragraph */
+.vertical-page-intro {
+  margin-top: var(--sp-8); /* was: 25px raw */
+  margin-bottom: 0;
+}
+
+/* 6e. Category sections */
+.vertical-category {
+  padding-block: var(--sp-20); /* was: 90px raw */
+}
+
+/* 6f. Category content block spacing */
+.vertical-content {
+  margin-bottom: var(--sp-12); /* was: 50px raw */
+}
+
+/* 6g. Brand grid */
+.vertical-brands-grid {
+  margin-top: var(--sp-10); /* was: 45px raw */
+  gap: var(--sp-6); /* was: 18px raw */
+}
+
+/* ─────────────────────────────────────────────
+   7. CAREERS PAGE
+   ───────────────────────────────────────────── */
+
+/* 7a. Perks grid gap + bottom margin */
+.careers-perks {
+  gap: var(--sp-6); /* was: 24px raw */
+  margin-bottom: var(--sp-16); /* was: 60px raw */
+}
+
+/* 7b. Perk card internal padding */
+.perk-card {
+  padding: var(--sp-10) var(--sp-8); /* was: 32px 24px raw */
+}
+
+/* 7c. Perk icon bottom margin */
+.perk-icon {
+  margin-bottom: var(--sp-4); /* was: 16px raw */
+}
+
+/* 7d. CTA block */
+.careers-cta {
+  padding: var(--sp-16) var(--sp-12); /* was: 60px 40px raw */
+}
+
+.careers-cta h2 {
+  margin-bottom: var(--sp-4); /* was: 14px raw */
+}
+
+.careers-cta p {
+  margin-bottom: var(--sp-8); /* was: 28px raw */
+}
+
+/* ─────────────────────────────────────────────
+   8. IMPACT PAGE
+   ───────────────────────────────────────────── */
+
+/* 8a. Impact page title internal padding */
+.impact-page-title {
+  padding-block: var(--sp-6); /* was: 20px raw */
+}
+
+/* 8b. Stats grid gap + bottom margin */
+.impact-stats-grid {
+  gap: var(--sp-6); /* was: 24px raw */
+  margin-bottom: var(--sp-16); /* was: 60px raw */
+}
+
+/* 8c. Stat box internal padding */
+.impact-stat-box {
+  padding: var(--sp-10) var(--sp-6); /* was: 36px 20px raw */
+}
+
+/* 8d. Stat icon bottom margin */
+.impact-stat-icon {
+  margin-bottom: var(--sp-4); /* was: 16px raw */
+}
+
+/* 8e. Stories grid gap */
+.impact-stories {
+  gap: var(--sp-8); /* was: 28px raw */
+}
+
+/* 8f. Story card body padding */
+.impact-story-body {
+  padding: var(--sp-6); /* was: 20px raw */
+}
+
+/* ─────────────────────────────────────────────
+   9. NEWSROOM PAGE
+   ───────────────────────────────────────────── */
+
+/* 9a. News grid gap */
+.newsroom-grid {
+  gap: var(--sp-8); /* was: 28px raw */
+}
+
+/* 9b. News card body padding */
+.news-card-body {
+  padding: var(--sp-6); /* was: 20px raw */
+}
+
+/* 9c. News tag bottom margin */
+.news-tag {
+  margin-bottom: var(--sp-3); /* was: 10px raw */
+}
+
+/* 9d. News card heading bottom margin */
+.news-card-body h3 {
+  margin-bottom: var(--sp-3); /* was: 10px raw */
+}
+
+/* 9e. News card paragraph bottom margin */
+.news-card-body p {
+  margin-bottom: var(--sp-4); /* was: 14px raw */
+}
+
+/* ─────────────────────────────────────────────
+   10. HOME CONTACT SECTION — internal spacing
+   ───────────────────────────────────────────── */
+.contact-red-panel {
+  padding: var(--sp-8) var(--sp-8); /* was: 32px 28px raw */
+  gap: var(--sp-6); /* was: 18px raw */
+}
+
+.contact-text-blocks {
+  gap: var(--sp-6); /* was: 20px raw */
+}
+
+.contact-text-block {
+  padding-bottom: var(--sp-6); /* was: 20px raw */
+}
+
+/* ─────────────────────────────────────────────
+   11. RESPONSIVE OVERRIDES — keep token-based
+   ───────────────────────────────────────────── */
+@media (max-width: 768px) {
+  /* Hero consistent on mobile */
+  .page-hero,
+  .page-hero.container {
+    padding-top: var(--sp-12);
+    padding-bottom: var(--sp-8);
+  }
+
+  /* Slider margins tighten on mobile */
+  .directors-marquee,
+  .verticals-slider-outer {
+    margin-inline: var(--sp-8); /* 2rem instead of 80px */
+    margin-block: var(--sp-6);
+  }
+
+  /* Careers CTA padding */
+  .careers-cta {
+    padding: var(--sp-10) var(--sp-6);
+  }
+
+  /* Architect content padding */
+  .architect-content {
+    padding: var(--sp-8);
+  }
+
+  /* Impact stats padding */
+  .impact-stat-box {
+    padding: var(--sp-8) var(--sp-4);
+  }
+
+  /* Verticals category */
+  .vertical-category {
+    padding-block: var(--sp-16);
+  }
+}
+
+@media (max-width: 480px) {
+  /* Hero even tighter */
+  .page-hero,
+  .page-hero.container {
+    padding-top: var(--sp-10);
+    padding-bottom: var(--sp-6);
+  }
+
+  /* Slider full-width on small screens */
+  .directors-marquee,
+  .verticals-slider-outer {
+    margin-inline: var(--sp-4);
+  }
+
+  /* Contact red panel */
+  .contact-red-panel {
+    padding: var(--sp-6);
+  }
+
+  /* Perk card */
+  .perk-card {
+    padding: var(--sp-8) var(--sp-6);
+  }
+
+  /* Director card body */
+  .director-card-body {
+    padding: var(--sp-4) var(--sp-4) var(--sp-6);
+  }
+}
+.page-hero h1 {
+  margin-top: var(--sp-6); /* 1.5rem ≈ 24px — matches Verticals' 25px */
+  text-align: center;
+  color: darkred;
+}
