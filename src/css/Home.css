@@ -1469,3 +1469,52 @@
     align-items: flex-start;
   }
 }
+/* Subtle entrance fade on the card image */
+.director-photo-img {
+  transition:
+    transform 0.4s ease,
+    filter 0.4s ease;
+  filter: grayscale(15%);
+}
+.director-card:hover .director-photo-img {
+  filter: grayscale(0%);
+  transform: scale(1.04);
+}
+
+/* Red accent line slides in on hover */
+.director-photo-accent {
+  background: var(--red);
+  transition: width 0.4s ease;
+  width: 0;
+}
+.director-card:hover .director-photo-accent {
+  width: 100%;
+}
+/* Logo subtle pulse on hover */
+.vertical-logo-box img {
+  transition:
+    transform 0.4s ease,
+    opacity 0.3s ease;
+  opacity: 0.85;
+}
+.vertical-slide-item:hover .vertical-logo-box img {
+  transform: scale(1.08);
+  opacity: 1;
+}
+.directors-slider-wrap,
+.verticals-slider-wrap {
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 8%,
+    black 92%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 8%,
+    black 92%,
+    transparent 100%
+  );
+}

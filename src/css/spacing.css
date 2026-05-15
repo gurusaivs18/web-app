@@ -376,3 +376,16 @@
   text-align: center;
   color: darkred;
 }
+/* Directors slider — remove bottom track margin so the gap
+   between Directors→Verticals matches Verticals→Impact */
+.directors-section {
+  padding-bottom: var(--sp-12); /* tighten bottom slightly */
+}
+
+.home-verticals-logos {
+  padding-top: var(--sp-12); /* match the tightened top */
+}
+
+.directors-marquee {
+  margin-bottom: 0; /* kill the extra bottom margin */
+}
