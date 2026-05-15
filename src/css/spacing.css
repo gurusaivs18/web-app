@@ -150,60 +150,578 @@
    6. VERTICALS PAGE
    ───────────────────────────────────────────── */
 
-/* 6a. Featured logos section */
+/* 6a. Featured logos section — uniform vertical spacing */
 .featured-logos-section {
-  padding-block: var(--sp-12);
+  padding-block: var(--sp-12); /* was: margin-top:10px, margin-bottom:60px */
   margin-top: 0;
-  margin-bottom: var(--sp-12);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 0;
 }
 
 /* 6b. Featured title spacing */
 .featured-title {
-  margin-bottom: var(--sp-8);
+  margin-bottom: var(--sp-8); /* was: 25px raw */
 }
 
 /* 6c. Featured logos grid gap */
 .featured-logos-grid {
-  gap: var(--sp-6);
-  margin-top: var(--sp-8);
-  margin-bottom: var(--sp-8);
+  gap: var(--sp-6); /* was: 18px raw */
+  margin-bottom: var(--sp-8); /* space before intro paragraph */
 }
 
-/* 6d. Featured card internal — image to name gap */
-.featured-logo-card img {
-  margin-bottom: var(--sp-2);
-}
-
-/* 6e. Vertical intro paragraph */
+/* 6d. Vertical intro paragraph */
 .vertical-page-intro {
-  margin-top: var(--sp-8);
+  margin-top: var(--sp-8); /* was: 25px raw */
   margin-bottom: 0;
 }
 
-/* 6f. Category sections */
+/* 6e. Category sections */
 .vertical-category {
-  padding-block: var(--sp-20);
+  padding-block: var(--sp-20); /* was: 90px raw */
 }
 
-/* 6g. Category content block */
+/* 6f. Category content block spacing */
+.vertical-content {
+  margin-bottom: var(--sp-12); /* was: 50px raw */
+}
+
+/* 6g. Brand grid */
+.vertical-brands-grid {
+  margin-top: var(--sp-10); /* was: 45px raw */
+  gap: var(--sp-6); /* was: 18px raw */
+}
+
+/* ─────────────────────────────────────────────
+   7. CAREERS PAGE
+   ───────────────────────────────────────────── */
+
+/* 7a. Perks grid gap + bottom margin */
+.careers-perks {
+  gap: var(--sp-6); /* was: 24px raw */
+  margin-bottom: var(--sp-16); /* was: 60px raw */
+}
+
+/* 7b. Perk card internal padding */
+.perk-card {
+  padding: var(--sp-10) var(--sp-8); /* was: 32px 24px raw */
+}
+
+/* 7c. Perk icon bottom margin */
+.perk-icon {
+  margin-bottom: var(--sp-4); /* was: 16px raw */
+}
+
+/* 7d. CTA block */
+.careers-cta {
+  padding: var(--sp-16) var(--sp-12); /* was: 60px 40px raw */
+}
+
+.careers-cta h2 {
+  margin-bottom: var(--sp-4); /* was: 14px raw */
+}
+
+.careers-cta p {
+  margin-bottom: var(--sp-8); /* was: 28px raw */
+}
+
+/* ─────────────────────────────────────────────
+   8. IMPACT PAGE
+   ───────────────────────────────────────────── */
+
+/* 8a. Impact page title internal padding */
+.impact-page-title {
+  padding-block: var(--sp-6); /* was: 20px raw */
+}
+
+/* 8b. Stats grid gap + bottom margin */
+.impact-stats-grid {
+  gap: var(--sp-6); /* was: 24px raw */
+  margin-bottom: var(--sp-16); /* was: 60px raw */
+}
+
+/* 8c. Stat box internal padding */
+.impact-stat-box {
+  padding: var(--sp-10) var(--sp-6); /* was: 36px 20px raw */
+}
+
+/* 8d. Stat icon bottom margin */
+.impact-stat-icon {
+  margin-bottom: var(--sp-4); /* was: 16px raw */
+}
+
+/* 8e. Stories grid gap */
+.impact-stories {
+  gap: var(--sp-8); /* was: 28px raw */
+}
+
+/* 8f. Story card body padding */
+.impact-story-body {
+  padding: var(--sp-6); /* was: 20px raw */
+}
+
+/* ─────────────────────────────────────────────
+   9. NEWSROOM PAGE
+   ───────────────────────────────────────────── */
+
+/* 9a. News grid gap */
+.newsroom-grid {
+  gap: var(--sp-8); /* was: 28px raw */
+}
+
+/* 9b. News card body padding */
+.news-card-body {
+  padding: var(--sp-6); /* was: 20px raw */
+}
+
+/* 9c. News tag bottom margin */
+.news-tag {
+  margin-bottom: var(--sp-3); /* was: 10px raw */
+}
+
+/* 9d. News card heading bottom margin */
+.news-card-body h3 {
+  margin-bottom: var(--sp-3); /* was: 10px raw */
+}
+
+/* 9e. News card paragraph bottom margin */
+.news-card-body p {
+  margin-bottom: var(--sp-4); /* was: 14px raw */
+}
+
+/* ─────────────────────────────────────────────
+   10. HOME CONTACT SECTION — internal spacing
+   ───────────────────────────────────────────── */
+.contact-red-panel {
+  padding: var(--sp-8) var(--sp-8); /* was: 32px 28px raw */
+  gap: var(--sp-6); /* was: 18px raw */
+}
+
+.contact-text-blocks {
+  gap: var(--sp-6); /* was: 20px raw */
+}
+
+.contact-text-block {
+  padding-bottom: var(--sp-6); /* was: 20px raw */
+}
+
+/* ─────────────────────────────────────────────
+   11. RESPONSIVE OVERRIDES — keep token-based
+   ───────────────────────────────────────────── */
+@media (max-width: 768px) {
+  /* Hero consistent on mobile */
+  .page-hero,
+  .page-hero.container {
+    padding-top: var(--sp-12);
+    padding-bottom: var(--sp-8);
+  }
+
+  /* Slider margins tighten on mobile */
+  .directors-marquee,
+  .verticals-slider-outer {
+    margin-inline: var(--sp-8); /* 2rem instead of 80px */
+    margin-block: var(--sp-6);
+  }
+
+  /* Careers CTA padding */
+  .careers-cta {
+    padding: var(--sp-10) var(--sp-6);
+  }
+
+  /* Architect content padding */
+  .architect-content {
+    padding: var(--sp-8);
+  }
+
+  /* Impact stats padding */
+  .impact-stat-box {
+    padding: var(--sp-8) var(--sp-4);
+  }
+
+  /* Verticals category */
+  .vertical-category {
+    padding-block: var(--sp-16);
+  }
+}
+
+@media (max-width: 480px) {
+  /* Hero even tighter */
+  .page-hero,
+  .page-hero.container {
+    padding-top: var(--sp-10);
+    padding-bottom: var(--sp-6);
+  }
+
+  /* Slider full-width on small screens */
+  .directors-marquee,
+  .verticals-slider-outer {
+    margin-inline: var(--sp-4);
+  }
+
+  /* Contact red panel */
+  .contact-red-panel {
+    padding: var(--sp-6);
+  }
+
+  /* Perk card */
+  .perk-card {
+    padding: var(--sp-8) var(--sp-6);
+  }
+
+  /* Director card body */
+  .director-card-body {
+    padding: var(--sp-4) var(--sp-4) var(--sp-6);
+  }
+}
+.page-hero h1 {
+  margin-top: var(--sp-6); /* 1.5rem ≈ 24px — matches Verticals' 25px */
+  text-align: center;
+  color: darkred;
+}
+/* Directors slider — remove bottom track margin so the gap
+   between Directors→Verticals matches Verticals→Impact */
+.directors-section {
+  padding-bottom: var(--sp-12); /* tighten bottom slightly */
+}
+
+.home-verticals-logos {
+  padding-top: var(--sp-12); /* match the tightened top */
+}
+
+.directors-marquee {
+  margin-bottom: 0; /* kill the extra bottom margin */
+}
+/* ─────────────────────────────────────────────
+   CEO SECTION — Mobile stacked layout
+   ───────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .ceo-content {
+    height: auto; /* release fixed height */
+    display: flex;
+    flex-direction: column;
+  }
+
+  .ceo-img {
+    position: relative; /* pull out of absolute */
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  .ceo-content::after {
+    display: none; /* remove dark overlay */
+  }
+
+  .ceo-info {
+    position: relative; /* pull out of absolute */
+    top: auto;
+    right: auto;
+    transform: none;
+    max-width: 100%;
+    text-align: left;
+    color: var(--color-dark);
+    padding: var(--sp-6);
+    background: var(--color-white);
+  }
+
+  .ceo-info h3 {
+    color: var(--color-dark);
+    font-size: 22px;
+  }
+
+  .ceo-info p {
+    color: var(--color-body);
+  }
+
+  .ceo-info .ceo-role {
+    color: var(--color-primary) !important;
+  }
+
+  .read-more-link {
+    color: var(--color-primary);
+  }
+}
+
+@media (max-width: 480px) {
+  .ceo-img {
+    height: 260px;
+  }
+
+  .ceo-info {
+    padding: var(--sp-4) var(--sp-4) var(--sp-6);
+  }
+}
+/* =================================================================
+   CEO MODAL — Premium cinematic style
+   ================================================================= */
+
+.ceo-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.ceo-modal {
+  position: relative;
+  width: min(900px, 95%);
+  max-height: 90vh;
+  overflow: hidden;
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  background: #0d0d0d;
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.6);
+  animation: ceoModalIn 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes ceoModalIn {
+  from {
+    opacity: 0;
+    transform: scale(0.94) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* ── LEFT — image panel ── */
+.ceo-modal-img-panel {
+  position: relative;
+  overflow: hidden;
+}
+
+.ceo-modal-img-panel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+
+.ceo-modal-img-panel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, transparent 60%, #0d0d0d 100%);
+}
+
+/* Red accent bar on left edge */
+.ceo-modal-img-panel::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: #9b1c1c;
+  z-index: 2;
+}
+
+/* ── RIGHT — content panel ── */
+.ceo-modal-content {
+  padding: 48px 40px 40px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-height: 90vh;
+}
+
+/* Tag */
+.ceo-modal-tag {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #9b1c1c;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ceo-modal-tag::before {
+  content: "";
+  width: 24px;
+  height: 2px;
+  background: #9b1c1c;
+  display: inline-block;
+}
+
+/* Name */
+.ceo-modal-name {
+  font-size: 32px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
+  color: #ffffff;
+  line-height: 1.1;
+  margin: 0;
+}
+
+/* Role */
+.ceo-modal-role {
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.45);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin: 0;
+}
+
+/* Divider */
+.ceo-modal-divider {
+  width: 40px;
+  height: 2px;
+  background: #9b1c1c;
+}
+
+/* Bio paragraphs */
+.ceo-modal-bio {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  flex: 1;
+}
+
+.ceo-modal-bio p {
+  font-size: 14px;
+  line-height: 1.85;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+}
+
+/* Close button */
+.ceo-modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  z-index: 10;
+}
+
+.ceo-modal-close:hover {
+  background: #9b1c1c;
+  border-color: #9b1c1c;
+  color: #fff;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .ceo-modal {
+    grid-template-columns: 1fr;
+    grid-template-rows: 280px 1fr;
+    width: min(500px, 95%);
+    max-height: 88vh;
+  }
+
+  .ceo-modal-img-panel::after {
+    background: linear-gradient(to top, #0d0d0d 10%, transparent 60%);
+  }
+
+  .ceo-modal-content {
+    padding: 28px 24px 32px;
+    max-height: unset;
+  }
+
+  .ceo-modal-name {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ceo-modal {
+    grid-template-rows: 240px 1fr;
+    border-radius: 14px;
+  }
+
+  .ceo-modal-content {
+    padding: 22px 20px 28px;
+    gap: 14px;
+  }
+
+  .ceo-modal-name {
+    font-size: 20px;
+  }
+}
+/* ─────────────────────────────────────────────
+   VERTICALS PAGE — featured/category separator
+   + logo card internal spacing
+   ───────────────────────────────────────────── */
+
+/* Separator line between Featured Brands and first category */
+.featured-logos-section {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: var(--sp-12);
+  margin-bottom: var(--sp-12);
+}
+
+/* Gap between logo image and brand title inside each logo card */
+.vertical-logo-box {
+  margin-bottom: var(--sp-4); /* 1rem gap below logo image */
+}
+
+.vertical-card-body {
+  padding-top: var(--sp-4); /* breathing room above brand name */
+  gap: var(--sp-3); /* consistent gap between name, desc, link */
+}
+/* ─────────────────────────────────────────────
+   VERTICALS PAGE — logo card to category title gap
+   ───────────────────────────────────────────── */
+.vertical-logo-wrap {
+  margin-bottom: var(--sp-8);
+}
+
+.vertical-category .vertical-logo-box {
+  margin-bottom: var(--sp-8);
+}
+
 .vertical-content {
   margin-top: var(--sp-12);
-  margin-bottom: var(--sp-12);
 }
+/* ─────────────────────────────────────────────
+   VERTICALS — uniform logo-to-title gap
+   across featured section + all categories
+   ───────────────────────────────────────────── */
 
-/* 6h. Brand grid */
+/* Gap between logo grid and category heading below */
 .vertical-brands-grid {
-  margin-top: var(--sp-10);
-  margin-bottom: var(--sp-12);
-  gap: var(--sp-6);
+  margin-bottom: var(--sp-12); /* space between logos and title below */
 }
 
-/* 6i. Logo card internal — image to name gap */
+/* Same gap between featured logos grid and featured title above */
+.featured-logos-grid {
+  margin-top: var(--sp-8); /* space below "Featured Brands" h2 */
+  margin-bottom: var(--sp-8); /* space above intro paragraph */
+}
+
+/* Logo card internal — image to name gap */
 .logo-card-img-wrap {
   margin-bottom: var(--sp-2);
 }
 
 .logo-card-text {
   margin-top: 0;
+}
+
+/* Featured card internal — same image to name gap */
+.featured-logo-card img {
+  margin-bottom: var(--sp-2);
 }
