@@ -928,7 +928,7 @@ const directors = [
     bio: "Contributes strategic direction and expertise to JSB Group's expanding business verticals.",
     slug: "sanal-kumar",
     img: sanal,
-    order: 4,
+    order: 8,
   },
   {
     name: "Mohammed Ashik",
@@ -944,7 +944,7 @@ const directors = [
     bio: "Over 30 years in supply and distribution across retail, software, and electronics. Led Denaster to become a multimillion-dollar SME with 100+ employees.",
     slug: "deep-bhogal",
     img: deep,
-    order: 7,
+    order: 4,
   },
   {
     name: "Naz Ayat",
@@ -952,6 +952,7 @@ const directors = [
     bio: "30+ years in software and electronics industries. Worked with major UK and international retailers including Amazon and HMV. Expert in distribution channels.",
     slug: "naz-ayat",
     img: null,
+    order: 6,
   },
   {
     name: "Afshad Mistry",
@@ -959,7 +960,7 @@ const directors = [
     bio: "23+ years in Health and Fitness. One of the first in India to achieve ACSM Certification (2005). Spearheaded Snap Fitness UAE Master Franchise.",
     slug: "afshad-mistry",
     img: null,
-    order: 8,
+    order: 7,
   },
   {
     name: "Manish Kishore",
@@ -967,7 +968,7 @@ const directors = [
     bio: "test",
     slug: "",
     img: null,
-    order: 6,
+    order: 9,
   },
 ];
 
