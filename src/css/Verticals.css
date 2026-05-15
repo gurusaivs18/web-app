@@ -20,7 +20,8 @@
 
 .vertical-category {
   background: var(--white);
-  padding: 90px 0;
+  padding-top: 32px;      /* was 90px — tight top to match separator gap */
+  padding-bottom: 90px;   /* keep generous bottom */
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
@@ -344,7 +345,8 @@
 
 @media (max-width: 992px) {
   .vertical-category {
-    padding: 75px 0;
+    padding-top: 28px;      /* was 75px */
+    padding-bottom: 75px;
   }
 
   .vertical-description {
@@ -358,7 +360,8 @@
 
 @media (max-width: 768px) {
   .vertical-category {
-    padding: 65px 0;
+    padding-top: 24px;      /* was 65px */
+    padding-bottom: 65px;
   }
 
   .vertical-brands-grid {
