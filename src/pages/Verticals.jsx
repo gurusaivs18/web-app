@@ -5,23 +5,33 @@ import { useScrollReveal } from "../hooks/useScrollReveal";
 import { verticals } from "../data/verticals";
 
 import uaeBulls from "../assets/Brand-Logos/UAE bulls-2025.webp";
-import motiv8 from "../assets/Brand-Logos/Motiv8 (4).webp";
-import pressmans from "../assets/Brand-Logos/Pressmans logo (11).webp";
-import vkTech from "../assets/Brand-Logos/VKTECHNOLOGIES LOGO (3).webp";
+import motiv8 from "../assets/Brand-Logos/Motiv8.webp";
+import pressmans from "../assets/Brand-Logos/Pressmans logo.webp";
+import vkTech from "../assets/Brand-Logos/Vanity Kart Logo English-01.webp";
 import targetOne from "../assets/Brand-Logos/targetone.webp";
+
 import denaster from "../assets/Brand-Logos/Denaster Logo.webp";
 import inov8 from "../assets/Brand-Logos/Inov8.webp";
-import garmin from "../assets/Brand-Logos/Garmin Black Logo.webp";
-import zeroG from "../assets/Brand-Logos/zerog arabic english-01 (3).webp";
+import garmin from "../assets/Brand-Logos/Garmin-Logo-new.png";
+import zeroG from "../assets/Brand-Logos/Zero-G-new.jpg";
 import bvb from "../assets/Brand-Logos/Artworks_BVB PRo League-15.webp";
-import snap from "../assets/Brand-Logos//snap-fitness.webp";
+import snap from "../assets/Brand-Logos/logo-01 (2).webp";
 import vip from "../assets/Brand-Logos/VIP logo png.webp";
 import harrison from "../assets/Brand-Logos/Harrison Digital.webp";
-import monkey from "../assets/Brand-Logos/Monkey Box logo.webp";
+import monkey from "../assets/Brand-Logos/Monkey Box logo.png";
 import biriyani from "../assets/Brand-Logos/biryani logo 1080x1080.webp";
 import activ from "../assets/Brand-Logos/Activ8 Logo.webp";
-import ventures from "../assets/Brand-Logos/NB VENTURES Logo-02 (3).webp";
 
+import ventures from "../assets/Brand-Logos/NB VENTURES Logo-02.webp";
+
+// --hiii--
+import yellowchilly from "../assets/Brand-Logos/tyc logo.webp";
+import boosterjuice from "../assets/Brand-Logos/Booster Juice Final Logo.webp";
+import hongkong from "../assets/Brand-Logos/HK Logo  English.webp";
+import pizza from "../assets/Brand-Logos/pizza tales-03.webp";
+import kichdi from "../assets/Brand-Logos/khichdi tales.webp";
+import thalitales from "../assets/Brand-Logos/thali tales-01.webp";
+import beijing from "../assets/Brand-Logos/Beijing Lu Logo.webp";
 const logoMap = {
   "Pressman's Sandwiches": pressmans,
   "Biriyani Box": biriyani,
@@ -41,6 +51,13 @@ const logoMap = {
   "BVB League": bvb,
   "VK Technology": vkTech,
   "Nb Ventures": ventures,
+  "Yellow Chilli": yellowchilly,
+  "Hong Kong": hongkong,
+  "kichdi Tales": kichdi,
+  "Pizza Tales": pizza,
+  "Thali Tales": thalitales,
+  "beijing Lu": beijing,
+  "Booster Juice": boosterjuice,
 };
 
 const featuredBrands = [
@@ -144,7 +161,10 @@ function Verticals() {
 
       {/* CATEGORIES */}
       {verticals.map((cat, i) => (
-    <section key={i} className={`vertical-category${i === 0 ? " vertical-category--first" : ""}`}>
+        <section
+          key={i}
+          className={`vertical-category${i === 0 ? " vertical-category--first" : ""}`}
+        >
           <div className="container">
             {/* logos first */}
             <div className="vertical-brands-grid">

@@ -799,11 +799,11 @@ import { useAutoScroll } from "../hooks/useAutoScroll";
 import ceoImage from "../assets/jsbGroupWebsite/jsbgroupwebsite-01.webp";
 
 import uaeBulls from "../assets/Brand-Logos/UAE bulls-2025.webp";
-import motiv8 from "../assets/Brand-Logos/Motiv8 (4).webp";
-import pressmans from "../assets/Brand-Logos/Pressmans logo (11).webp";
-import vkTech from "../assets/Brand-Logos/VKTECHNOLOGIES LOGO (3).webp";
+import motiv8 from "../assets/Brand-Logos/Motiv8.webp";
+import pressmans from "../assets/Brand-Logos/Pressmans logo.webp";
+import vkTech from "../assets/Brand-Logos/Vanity Kart Logo English-01.webp";
 import targetOne from "../assets/Brand-Logos/targetone.webp";
-import nbVentures from "../assets/Brand-Logos/NB VENTURES Logo-02 (3).webp";
+import ventures from "../assets/Brand-Logos/NB VENTURES Logo-02.webp";
 import denaster from "../assets/Brand-Logos/Denaster Logo.webp";
 
 import rushab from "../assets/Partners/Rushab.JPG.webp";
@@ -880,7 +880,7 @@ const brandLogos = [
     desc: "Established 2016. Leading distributor of world-class electronic brands — Marshall, Jabra, Titan, Ugreen, JLab, Dicota, Alogic, and more across the region.",
   },
   {
-    img: nbVentures,
+    img: ventures,
     url: "https://nbventuresme.com/",
     order: 6,
     name: "NB Ventures",
