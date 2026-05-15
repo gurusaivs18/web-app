@@ -389,3 +389,64 @@
 .directors-marquee {
   margin-bottom: 0; /* kill the extra bottom margin */
 }
+/* ─────────────────────────────────────────────
+   CEO SECTION — Mobile stacked layout
+   ───────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .ceo-content {
+    height: auto;           /* release fixed height */
+    display: flex;
+    flex-direction: column;
+  }
+
+  .ceo-img {
+    position: relative;     /* pull out of absolute */
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  .ceo-content::after {
+    display: none;          /* remove dark overlay */
+  }
+
+  .ceo-info {
+    position: relative;     /* pull out of absolute */
+    top: auto;
+    right: auto;
+    transform: none;
+    max-width: 100%;
+    text-align: left;
+    color: var(--color-dark);
+    padding: var(--sp-6);
+    background: var(--color-white);
+  }
+
+  .ceo-info h3 {
+    color: var(--color-dark);
+    font-size: 22px;
+  }
+
+  .ceo-info p {
+    color: var(--color-body);
+  }
+
+  .ceo-info .ceo-role {
+    color: var(--color-primary) !important;
+  }
+
+  .read-more-link {
+    color: var(--color-primary);
+  }
+}
+
+@media (max-width: 480px) {
+  .ceo-img {
+    height: 260px;
+  }
+
+  .ceo-info {
+    padding: var(--sp-4) var(--sp-4) var(--sp-6);
+  }
+}
