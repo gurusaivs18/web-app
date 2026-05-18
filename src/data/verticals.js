@@ -233,57 +233,49 @@ export const verticals = [
   {
     title: "Indian Verticals",
 
-    description:
-      "JSB Group delivers premium interior fitout and outdoor furniture solutions for residential, commercial, and hospitality environments.",
-
+    description: "Write up Pending........ ",
     items: [
       {
         name: "Yellow Chilli",
 
         link: "https://theyellowchilli.com/",
 
-        description:
-          "Epic Fitouts is a premier provider of interior design, fitout services, and outdoor furniture solutions. The company specializes in transforming residential, commercial, and hospitality spaces through bespoke interior solutions, comprehensive fitout execution, and customized outdoor furniture designed to enhance exterior environments.",
+        description: "Write up Pending........",
       },
       {
         name: "Hong Kong",
 
         link: "https://www.epicfitout.com/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnsRsXK25Epx8amKDdi9dYvJqJvs0xyBTYXqC2AZkfMw7fdiEvUNINKRicG1I_aem_YWdncwCkyZlQH6QaBeqo2_PWf2t7&brid=YWdncwGWv0Jl4e8gPrYY76YhJpFg",
 
-        description:
-          "Epic Fitouts is a premier provider of interior design, fitout services, and outdoor furniture solutions. The company specializes in transforming residential, commercial, and hospitality spaces through bespoke interior solutions, comprehensive fitout execution, and customized outdoor furniture designed to enhance exterior environments.",
+        description: "Write up Pending........",
       },
       {
         name: "Pizza Tales",
 
         link: "https://www.epicfitout.com/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnsRsXK25Epx8amKDdi9dYvJqJvs0xyBTYXqC2AZkfMw7fdiEvUNINKRicG1I_aem_YWdncwCkyZlQH6QaBeqo2_PWf2t7&brid=YWdncwGWv0Jl4e8gPrYY76YhJpFg",
 
-        description:
-          "Epic Fitouts is a premier provider of interior design, fitout services, and outdoor furniture solutions. The company specializes in transforming residential, commercial, and hospitality spaces through bespoke interior solutions, comprehensive fitout execution, and customized outdoor furniture designed to enhance exterior environments.",
+        description: "Write up Pending........",
       },
       {
         name: "kichdi Tales",
 
         link: "https://www.epicfitout.com/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnsRsXK25Epx8amKDdi9dYvJqJvs0xyBTYXqC2AZkfMw7fdiEvUNINKRicG1I_aem_YWdncwCkyZlQH6QaBeqo2_PWf2t7&brid=YWdncwGWv0Jl4e8gPrYY76YhJpFg",
 
-        description:
-          "Epic Fitouts is a premier provider of interior design, fitout services, and outdoor furniture solutions. The company specializes in transforming residential, commercial, and hospitality spaces through bespoke interior solutions, comprehensive fitout execution, and customized outdoor furniture designed to enhance exterior environments.",
+        description: "Write up Pending........",
       },
       {
         name: "Thali Tales",
 
         link: "https://www.epicfitout.com/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnsRsXK25Epx8amKDdi9dYvJqJvs0xyBTYXqC2AZkfMw7fdiEvUNINKRicG1I_aem_YWdncwCkyZlQH6QaBeqo2_PWf2t7&brid=YWdncwGWv0Jl4e8gPrYY76YhJpFg",
 
-        description:
-          "Epic Fitouts is a premier provider of interior design, fitout services, and outdoor furniture solutions. The company specializes in transforming residential, commercial, and hospitality spaces through bespoke interior solutions, comprehensive fitout execution, and customized outdoor furniture designed to enhance exterior environments.",
+        description: "Write up Pending........",
       },
       {
         name: "beijing Lu",
 
         link: "https://www.epicfitout.com/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnsRsXK25Epx8amKDdi9dYvJqJvs0xyBTYXqC2AZkfMw7fdiEvUNINKRicG1I_aem_YWdncwCkyZlQH6QaBeqo2_PWf2t7&brid=YWdncwGWv0Jl4e8gPrYY76YhJpFg",
 
-        description:
-          "Epic Fitouts is a premier provider of interior design, fitout services, and outdoor furniture solutions. The company specializes in transforming residential, commercial, and hospitality spaces through bespoke interior solutions, comprehensive fitout execution, and customized outdoor furniture designed to enhance exterior environments.",
+        description: "Write up Pending........",
       },
     ],
   },
