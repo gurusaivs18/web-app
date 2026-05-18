@@ -28,7 +28,7 @@ async function convertImages() {
       const ext = path.extname(file).toLowerCase();
       const baseName = path.basename(file, ext);
 
-      // Only convert jpg/jpeg/png
+      // Only process jpg/jpeg/png
       if (![".jpg", ".jpeg", ".png"].includes(ext)) {
         continue;
       }
@@ -36,20 +36,22 @@ async function convertImages() {
       const inputPath = path.join(folderPath, file);
       const outputPath = path.join(folderPath, `${baseName}.webp`);
 
-      // Skip existing webp
-      if (fs.existsSync(outputPath)) {
-        console.log(`Skipping ${file} → ${baseName}.webp already exists`);
-        continue;
-      }
-
       try {
+        // If webp already exists, just delete original
+        if (fs.existsSync(outputPath)) {
+          fs.unlinkSync(inputPath);
+          console.log(`Deleted original: ${file}`);
+          continue;
+        }
+
+        // Load image safely
         const image = sharp(inputPath, {
           limitInputPixels: false,
         });
 
         const metadata = await image.metadata();
 
-        // Resize extremely large images
+        // Resize huge images if needed
         if (metadata.width > 16000 || metadata.height > 16000) {
           image.resize({
             width: 16000,
@@ -59,6 +61,7 @@ async function convertImages() {
           });
         }
 
+        // Convert to webp
         await image
           .webp({
             quality: 90,
@@ -66,6 +69,10 @@ async function convertImages() {
           .toFile(outputPath);
 
         console.log(`Converted: ${file} → ${baseName}.webp`);
+
+        // Delete original image
+        fs.unlinkSync(inputPath);
+        console.log(`Deleted original: ${file}`);
       } catch (err) {
         console.log(`Skipped ${file}: ${err.message}`);
       }

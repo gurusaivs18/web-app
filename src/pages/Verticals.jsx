@@ -15,7 +15,7 @@ import inov8 from "../assets/Brand-Logos/Inov8.webp";
 import garmin from "../assets/Brand-Logos/Garmin-Logo-new.webp";
 import zeroG from "../assets/Brand-Logos/Zero-G-new.webp";
 import bvb from "../assets/Brand-Logos/Artworks_BVB PRo League-15.webp";
-import snap from "../assets/Brand-Logos/logo-01 (2).webp";
+import snap from "../assets/Brand-Logos/snap_new.webp";
 import vip from "../assets/Brand-Logos/VIP logo png.webp";
 import harrison from "../assets/Brand-Logos/Harrison Digital.webp";
 import monkey from "../assets/Brand-Logos/Monkey Box logo.webp";
