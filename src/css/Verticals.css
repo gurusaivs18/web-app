@@ -48,9 +48,9 @@
   color: var(--text-dark);
   margin-bottom: 18px;
   line-height: 1.2;
-    text-align: center;   /* ADD THIS */
-  width: 100%;          /* ADD THIS */
-  display: block; 
+  text-align: center; /* ADD THIS */
+  width: 100%; /* ADD THIS */
+  display: block;
 }
 
 .vertical-description {
@@ -428,5 +428,204 @@
 
   .logo-card-text {
     font-size: 10px;
+  }
+}
+/* ================================================================
+   LOGO UNIFORMITY PATCH v2 — paste at the BOTTOM of Verticals.css
+   Fixes: card proportions, dark-bg logos, long name truncation
+   ================================================================ */
+
+/* ── One source of truth ── */
+:root {
+  --logo-card-w: 160px;
+  --logo-card-h: 115px;
+  --logo-img-h: 58px; /* image area height inside every card */
+  --logo-card-pad: 14px 12px 10px;
+}
+
+/* ================================================================
+   CATEGORY LOGO CARDS
+   ================================================================ */
+
+.logo-card {
+  width: var(--logo-card-w);
+  height: var(--logo-card-h);
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--logo-card-pad);
+  border-radius: 12px;
+  background: var(--white);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  cursor: pointer;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.logo-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Fixed-height image wrapper */
+.logo-card-img-wrap {
+  width: 100%;
+  height: var(--logo-img-h);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.logo-card-img-wrap img {
+  display: block;
+  width: auto;
+  height: 100%;
+  max-width: 90%;
+  max-height: 100%;
+  object-fit: contain;
+  object-position: center;
+  transition: transform 0.3s ease;
+
+  /*
+    mix-blend-mode: multiply  →  makes white/light bg on images transparent
+    so logos like Target One won't show a harsh black rectangle.
+    Works on white card backgrounds. Comment out if any logo looks wrong.
+  */
+  mix-blend-mode: multiply;
+}
+
+.logo-card:hover .logo-card-img-wrap img {
+  transform: scale(1.06);
+}
+
+/* Label */
+.logo-card-text {
+  width: 100%;
+  font-family: var(--font-heading);
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--text-mid);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  line-height: 1.3;
+  margin-top: 0;
+  /* Prevent overflow */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ================================================================
+   FEATURED LOGO CARDS — same rules, identical sizing
+   ================================================================ */
+
+.featured-logo-card {
+  width: var(--logo-card-w);
+  height: var(--logo-card-h);
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--logo-card-pad);
+  border-radius: 12px;
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.featured-logo-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.featured-logo-card img {
+  display: block;
+  width: auto;
+  height: var(--logo-img-h);
+  max-width: 90%;
+  max-height: var(--logo-img-h);
+  object-fit: contain;
+  object-position: center;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+
+  /* Same blend fix for dark-bg logos */
+  mix-blend-mode: multiply;
+}
+
+.featured-logo-card:hover img {
+  transform: scale(1.06);
+}
+
+.featured-logo-card span {
+  width: 100%;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: var(--text-mid, #1a1a1a);
+  line-height: 1.3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ================================================================
+   MODAL IMAGE
+   ================================================================ */
+
+.brand-modal-logo img {
+  width: 180px;
+  height: 90px;
+  object-fit: contain;
+  object-position: center;
+  mix-blend-mode: multiply;
+}
+
+/* ================================================================
+   RESPONSIVE
+   ================================================================ */
+
+@media (max-width: 768px) {
+  :root {
+    --logo-card-w: 140px;
+    --logo-card-h: 105px;
+    --logo-img-h: 50px;
+    --logo-card-pad: 12px 10px 8px;
+  }
+}
+
+@media (max-width: 600px) {
+  :root {
+    --logo-card-w: 128px;
+    --logo-card-h: 96px;
+    --logo-img-h: 44px;
+    --logo-card-pad: 10px 8px 8px;
+  }
+}
+
+@media (max-width: 400px) {
+  :root {
+    --logo-card-w: calc(50% - 9px);
+    --logo-card-h: 88px;
+    --logo-img-h: 40px;
+    --logo-card-pad: 10px 8px 8px;
+  }
+
+  .logo-card,
+  .featured-logo-card {
+    width: var(--logo-card-w);
   }
 }

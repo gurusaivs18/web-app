@@ -65,13 +65,13 @@ const logoMap = {
 const featuredBrands = [
   "Nb Ventures",
   "VK Technology",
-  "Target One",
-  "UAE Bulls",
-  "Snap Fitness",
-  "Motiv8",
-  "Pressman's Sandwiches",
-  "VIP Cosmetics",
   "Denaster",
+  "Target One",
+  "Motiv8",
+  "Harrison / Inov8",
+  "Activ8",
+  "Pressman's Sandwiches",
+  "Snap Fitness",
 ];
 
 function Verticals() {

@@ -1518,3 +1518,77 @@
     transparent 100%
   );
 }
+/* ================================================================
+   HOME.CSS — LOGO UNIFORMITY PATCH
+   Paste at the BOTTOM of Home.css
+   Only touches: .vertical-logo-box and .home-modal-logo-wrap
+   Everything else (animations, card layout, text) untouched.
+   ================================================================ */
+
+/* ── Verticals sliding card — logo zone ── */
+.vertical-logo-box {
+  width: 100%;
+  height: 110px;          /* fixed height — same for every card */
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 20px;
+  background: var(--white);
+  box-sizing: border-box;
+}
+
+.vertical-logo-box a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* THE KEY FIX:
+   - width/height 100% fills the padded box
+   - object-fit: contain  →  scales proportionally, never stretches
+   - mix-blend-mode: multiply  →  removes harsh dark backgrounds
+     (Target One, any logo with a solid bg) on white cards            */
+.vertical-logo-box img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  object-position: center;
+  box-sizing: border-box;
+  mix-blend-mode: multiply;  /* hides black/white backgrounds */
+
+  /* Override the existing hover transform — keep it consistent */
+  transition: transform 0.4s ease, opacity 0.3s ease;
+  opacity: 0.88;
+}
+
+.vertical-slide-item:hover .vertical-logo-box img {
+  transform: scale(1.07);
+  opacity: 1;
+}
+
+/* ── Brand modal logo — also uniform ── */
+.home-modal-logo-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 90px;             /* fixed height in modal too */
+  padding: 8px 0;
+}
+
+.home-modal-logo-wrap img {
+  display: block;
+  width: auto;
+  height: 100%;
+  max-width: 200px;
+  max-height: 70px;
+  object-fit: contain;
+  object-position: center;
+  mix-blend-mode: multiply;
+}
