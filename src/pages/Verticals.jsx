@@ -9,7 +9,6 @@ import motiv8 from "../assets/Brand-Logos/Motiv8.webp";
 import pressmans from "../assets/Brand-Logos/Pressmans logo.webp";
 import vkTech from "../assets/Brand-Logos/Vanity Kart Logo English-01.webp";
 import targetOne from "../assets/Brand-Logos/targetone.webp";
-
 import denaster from "../assets/Brand-Logos/Denaster Logo.webp";
 import inov8 from "../assets/Brand-Logos/Inov8.webp";
 import garmin from "../assets/Brand-Logos/Garmin-Logo-new.webp";
@@ -21,10 +20,7 @@ import harrison from "../assets/Brand-Logos/Harrison Digital.webp";
 import monkey from "../assets/Brand-Logos/Monkey Box logo.webp";
 import biriyani from "../assets/Brand-Logos/biryani logo 1080x1080.webp";
 import activ from "../assets/Brand-Logos/Activ8 Logo.webp";
-
 import ventures from "../assets/Brand-Logos/NB VENTURES Logo-02.webp";
-
-// --hiii--
 import yellowchilly from "../assets/Brand-Logos/tyc logo.webp";
 import boosterjuice from "../assets/Brand-Logos/Booster Juice Final Logo.webp";
 import hongkong from "../assets/Brand-Logos/HK Logo  English.webp";
