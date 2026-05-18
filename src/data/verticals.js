@@ -106,7 +106,7 @@ export const verticals = [
       {
         name: "Monkey Box",
 
-        link: "",
+        link: "https://monkeyboxforkids.in/",
 
         description:
           "Monkey Box is part of JSB Group’s expanding retail and distribution ecosystem, contributing to the group’s growing portfolio of lifestyle and consumer-focused brands.",
@@ -240,7 +240,7 @@ export const verticals = [
       {
         name: "Yellow Chilli",
 
-        link: "",
+        link: "https://theyellowchilli.com/",
 
         description:
           "Epic Fitouts is a premier provider of interior design, fitout services, and outdoor furniture solutions. The company specializes in transforming residential, commercial, and hospitality spaces through bespoke interior solutions, comprehensive fitout execution, and customized outdoor furniture designed to enhance exterior environments.",
