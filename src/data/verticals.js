@@ -77,24 +77,6 @@ export const verticals = [
 
     items: [
       {
-        name: "Target One",
-
-        link: "https://targetoneme.com/",
-
-        description:
-          "Established in 2016, Target One is one of the leading distributors of world-class electronic brands in the region. Under its umbrella, the company distributes brands like Marshall (Sweden), Jabra (Denmark), Titan (India), Ugreen (China), myFirst (Singapore), JLab (U.S.A.), Dicota (Germany), and Alogic (Australia).",
-      },
-
-      {
-        name: "VIP Cosmetics",
-
-        link: "",
-
-        description:
-          "VIP Cosmetics functions as the skincare distribution arm under Target One, representing premium beauty and skincare products within the region.",
-      },
-
-      {
         name: "Denaster",
 
         link: "https://www.denaster.com/",
@@ -104,12 +86,21 @@ export const verticals = [
       },
 
       {
-        name: "Monkey Box",
+        name: "Target One",
 
-        link: "https://monkeyboxforkids.in/",
+        link: "https://targetoneme.com/",
 
         description:
-          "Monkey Box is part of JSB Group’s expanding retail and distribution ecosystem, contributing to the group’s growing portfolio of lifestyle and consumer-focused brands.",
+          "Established in 2016, Target One is one of the leading distributors of world-class electronic brands in the region. Under its umbrella, the company distributes brands like Marshall (Sweden), Jabra (Denmark), Titan (India), Ugreen (China), myFirst (Singapore), JLab (U.S.A.), Dicota (Germany), and Alogic (Australia).",
+      },
+
+      {
+        name: "Motiv8",
+
+        link: "https://motiv8.ae/",
+
+        description:
+          "Motiv8 is an athleisure multi-designer women’s retail concept that launched its first store in July 2024, with four more stores planned. Brands under Motiv8 include Michi (Canada), Port De Bras (Venezuela), Yoga Democracy (U.S.A.), SquatWolf (U.A.E.), Dignitii (Canada), Manduka (U.S.A.), Bala (U.S.A.), Women's Best (Austria), and Z&M (U.A.E.).",
       },
 
       {
@@ -120,7 +111,14 @@ export const verticals = [
         description:
           "Harrison operates duty-free retail under the brand Inov8 with its presence across Dubai Duty Free (all terminals), Abu Dhabi Duty Free, and Qatar Duty Free.",
       },
+      {
+        name: "Activ8",
 
+        link: "https://activ8.ae/",
+
+        description:
+          "Activ8 is part of JSB Group’s retail portfolio and supports premium fitness, wellness, and technology retail concepts across the UAE market.",
+      },
       {
         name: "Harrison Digital",
 
@@ -138,25 +136,6 @@ export const verticals = [
         description:
           "Garmin by Activ8 is an authorized retailer for Garmin watches and also carries the Shokz brand, with six active retail locations across the UAE.",
       },
-
-      {
-        name: "Activ8",
-
-        link: "https://activ8.ae/",
-
-        description:
-          "Activ8 is part of JSB Group’s retail portfolio and supports premium fitness, wellness, and technology retail concepts across the UAE market.",
-      },
-
-      {
-        name: "Motiv8",
-
-        link: "https://motiv8.ae/",
-
-        description:
-          "Motiv8 is an athleisure multi-designer women’s retail concept that launched its first store in July 2024, with four more stores planned. Brands under Motiv8 include Michi (Canada), Port De Bras (Venezuela), Yoga Democracy (U.S.A.), SquatWolf (U.A.E.), Dignitii (Canada), Manduka (U.S.A.), Bala (U.S.A.), Women's Best (Austria), and Z&M (U.A.E.).",
-      },
-
       {
         name: "ZeroG Beds & Mattresses",
 
@@ -164,6 +143,22 @@ export const verticals = [
 
         description:
           "ZeroG Beds & Mattresses is JSB Group’s homegrown sleep and wellness brand focused on delivering mattresses and bedding solutions tailored to health needs and modern living spaces.",
+      },
+      {
+        name: "VIP Cosmetics",
+
+        link: "",
+
+        description:
+          "VIP Cosmetics functions as the skincare distribution arm under Target One, representing premium beauty and skincare products within the region.",
+      },
+      {
+        name: "Monkey Box",
+
+        link: "https://monkeyboxforkids.in/",
+
+        description:
+          "Monkey Box is part of JSB Group’s expanding retail and distribution ecosystem, contributing to the group’s growing portfolio of lifestyle and consumer-focused brands.",
       },
     ],
   },
@@ -242,13 +237,7 @@ export const verticals = [
 
         description: "Write up Pending........",
       },
-      {
-        name: "Hong Kong",
 
-        link: "https://www.epicfitout.com/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnsRsXK25Epx8amKDdi9dYvJqJvs0xyBTYXqC2AZkfMw7fdiEvUNINKRicG1I_aem_YWdncwCkyZlQH6QaBeqo2_PWf2t7&brid=YWdncwGWv0Jl4e8gPrYY76YhJpFg",
-
-        description: "Write up Pending........",
-      },
       {
         name: "Pizza Tales",
 
@@ -265,6 +254,13 @@ export const verticals = [
       },
       {
         name: "Thali Tales",
+
+        link: "https://www.epicfitout.com/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnsRsXK25Epx8amKDdi9dYvJqJvs0xyBTYXqC2AZkfMw7fdiEvUNINKRicG1I_aem_YWdncwCkyZlQH6QaBeqo2_PWf2t7&brid=YWdncwGWv0Jl4e8gPrYY76YhJpFg",
+
+        description: "Write up Pending........",
+      },
+      {
+        name: "Hong Kong",
 
         link: "https://www.epicfitout.com/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnsRsXK25Epx8amKDdi9dYvJqJvs0xyBTYXqC2AZkfMw7fdiEvUNINKRicG1I_aem_YWdncwCkyZlQH6QaBeqo2_PWf2t7&brid=YWdncwGWv0Jl4e8gPrYY76YhJpFg",
 
