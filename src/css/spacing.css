@@ -643,3 +643,15 @@
   margin-top: var(--sp-10);
   margin-bottom: 0;
 }
+/* ── CEO Modal image — show face, not background ── */
+.ceo-modal-img-panel img {
+  object-position: 10% top; /* pulls left (face) side into view */
+}
+
+/* Mobile: stacked layout — face still centered */
+@media (max-width: 1024px) {
+  .ceo-modal-img-panel img {
+    object-position: 10% top;
+  }
+}
+/* important 10% for img ui display */

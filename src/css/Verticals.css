@@ -7,11 +7,11 @@
 }
 
 .vertical-page-intro {
-  max-width: 1000px;
-  margin: 25px auto 0;
+  max-width: 720px;
+  margin: 32px auto 0;
   text-align: center;
-  font-size: 16px;
-  line-height: 1.9;
+  font-size: 15px;
+  line-height: 1.85;
   color: var(--text-mid);
   padding: 0 20px;
 }
@@ -20,7 +20,7 @@
 
 .vertical-category {
   background: var(--white);
-  padding: 30px 0 90px !important; /* ← !important forces override */
+  padding: 90px 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
@@ -31,33 +31,37 @@
 .vertical-category:last-child {
   border-bottom: none;
 }
+
 .vertical-category--first {
-  padding-top: 0 !important;
+  padding-top: 48px;
 }
+
 /* ========================= CONTENT ========================= */
 
 .vertical-content {
   text-align: center;
-  margin-bottom: 50px;
+  margin-top: 40px;
+  margin-bottom: 0;
 }
 
 .vertical-heading {
   font-family: var(--font-heading);
-  font-size: clamp(30px, 4vw, 44px);
+  font-size: clamp(26px, 3.5vw, 38px);
   font-weight: 700;
   color: var(--text-dark);
-  margin-bottom: 18px;
+  margin-top: 0;
+  margin-bottom: 28px;
   line-height: 1.2;
-  text-align: center; /* ADD THIS */
-  width: 100%; /* ADD THIS */
+  text-align: center;
+  width: 100%;
   display: block;
 }
 
 .vertical-description {
-  max-width: 850px;
-  margin: 0 auto 22px;
-  font-size: 17px;
-  line-height: 1.9;
+  max-width: 720px;
+  margin: 0 auto;
+  font-size: 15px;
+  line-height: 1.85;
   color: var(--text-mid);
 }
 
@@ -83,30 +87,26 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 18px;
-  margin-top: 0 !important;
+  gap: 20px;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 /* ========================= LOGO CARD ========================= */
 
 .logo-card {
   width: 160px;
-  height: 110px;
+  height: 115px;
   flex-shrink: 0;
-
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  text-align: center;
-  gap: 8px;
-
-  padding: 14px;
+  justify-content: space-between;
+  padding: 14px 12px 10px;
   border-radius: 12px;
   background: var(--white);
   border: 1px solid rgba(0, 0, 0, 0.06);
   overflow: hidden;
-
   cursor: pointer;
   transition:
     transform 0.3s ease,
@@ -122,44 +122,50 @@
 
 .logo-card-img-wrap {
   width: 100%;
-  height: 70%;
-
+  height: 58px;
+  flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .logo-card-img-wrap img {
-  max-width: 80%;
-  max-height: 80%;
+  width: auto;
+  height: 100%;
+  max-width: 90%;
+  max-height: 100%;
   object-fit: contain;
-  margin: auto;
+  object-position: center;
+  mix-blend-mode: multiply;
   transition: transform 0.3s ease;
 }
 
 .logo-card:hover .logo-card-img-wrap img {
-  transform: scale(1.08);
+  transform: scale(1.07);
 }
 
 /* ========================= CARD TEXT ========================= */
 
 .logo-card-text {
+  width: 100%;
   font-family: var(--font-heading);
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 700;
   color: var(--text-mid);
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  line-height: 1.5;
-  margin-top: 6px;
+  line-height: 1.3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* ========================= PAGE HERO ========================= */
 
 .page-hero {
-  padding-top: var(--sp-16);
-  padding-bottom: var(--sp-12);
+  padding-top: 90px;
+  padding-bottom: 48px;
 }
 
 /* ========================= CTA BUTTON ========================= */
@@ -231,9 +237,11 @@
 }
 
 .brand-modal-logo img {
-  max-width: 180px;
-  max-height: 80px;
+  width: 180px;
+  height: 90px;
   object-fit: contain;
+  object-position: center;
+  mix-blend-mode: multiply;
 }
 
 .brand-modal-title {
@@ -278,31 +286,20 @@
   }
 }
 
-/* ========================= ANIMATION ========================= */
-
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(14px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 /* ========================= FEATURED LOGOS ========================= */
 
 .featured-logos-section {
   text-align: center;
-  margin-top: 10px;
-  margin-bottom: 20px;
+  padding: 90px 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .featured-title {
-  font-size: 28px;
+  font-size: clamp(22px, 2.5vw, 28px);
   font-weight: 700;
-  margin-bottom: 25px;
+  margin-top: 0;
+  margin-bottom: 28px;
   color: var(--text-dark);
 }
 
@@ -310,262 +307,36 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 18px;
+  gap: 20px;
 }
 
 .featured-logo-card {
   width: 160px;
-  height: 110px;
+  height: 115px;
   background: white;
   border-radius: 12px;
   border: 1px solid rgba(0, 0, 0, 0.08);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: 0.3s ease;
-}
-
-.featured-logo-card img {
-  max-width: 80%;
-  max-height: 55%;
-  object-fit: contain;
-}
-
-.featured-logo-card span {
-  font-size: 12px;
-  margin-top: 6px;
-  font-weight: 600;
-  text-transform: uppercase;
-}
-
-.featured-logo-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
-}
-
-/* ========================= RESPONSIVE ========================= */
-
-@media (max-width: 992px) {
-  .vertical-category {
-    padding-top: 28px; /* was 75px */
-    padding-bottom: 75px;
-  }
-
-  .vertical-description {
-    font-size: 15px;
-  }
-
-  .vertical-readmore-box {
-    padding: 24px;
-  }
-}
-
-@media (max-width: 768px) {
-  .vertical-category {
-    padding-top: 24px; /* was 65px */
-    padding-bottom: 65px;
-  }
-
-  .vertical-brands-grid {
-    gap: 14px;
-  }
-
-  .vertical-page-intro {
-    font-size: 15px;
-    line-height: 1.8;
-  }
-
-  .vertical-readmore-box p {
-    font-size: 14px;
-  }
-
-  .brand-modal {
-    padding: 28px 22px;
-  }
-
-  .brand-modal-text {
-    font-size: 14px;
-    line-height: 1.8;
-  }
-
-  .logo-card {
-    width: 140px;
-    height: 95px;
-  }
-}
-
-@media (max-width: 600px) {
-  .vertical-heading {
-    font-size: 28px;
-  }
-
-  .vertical-description {
-    font-size: 14px;
-    line-height: 1.7;
-  }
-
-  .vertical-readmore-box {
-    padding: 20px;
-  }
-
-  .vertical-readmore-box p {
-    line-height: 1.8;
-  }
-
-  .logo-card {
-    width: 130px;
-    height: 88px;
-  }
-}
-
-@media (max-width: 400px) {
-  .logo-card {
-    width: calc(50% - 9px);
-    height: 82px;
-  }
-
-  .logo-card-text {
-    font-size: 10px;
-  }
-}
-/* ================================================================
-   LOGO UNIFORMITY PATCH v2 — paste at the BOTTOM of Verticals.css
-   Fixes: card proportions, dark-bg logos, long name truncation
-   ================================================================ */
-
-/* ── One source of truth ── */
-:root {
-  --logo-card-w: 160px;
-  --logo-card-h: 115px;
-  --logo-img-h: 58px; /* image area height inside every card */
-  --logo-card-pad: 14px 12px 10px;
-}
-
-/* ================================================================
-   CATEGORY LOGO CARDS
-   ================================================================ */
-
-.logo-card {
-  width: var(--logo-card-w);
-  height: var(--logo-card-h);
-  flex-shrink: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: space-between;
-  padding: var(--logo-card-pad);
-  border-radius: 12px;
-  background: var(--white);
-  border: 1px solid rgba(0, 0, 0, 0.06);
-  overflow: hidden;
+  padding: 14px 12px 10px;
   cursor: pointer;
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
 }
 
-.logo-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
-}
-
-/* Fixed-height image wrapper */
-.logo-card-img-wrap {
-  width: 100%;
-  height: var(--logo-img-h);
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-
-.logo-card-img-wrap img {
-  display: block;
-  width: auto;
-  height: 100%;
-  max-width: 90%;
-  max-height: 100%;
-  object-fit: contain;
-  object-position: center;
-  transition: transform 0.3s ease;
-
-  /*
-    mix-blend-mode: multiply  →  makes white/light bg on images transparent
-    so logos like Target One won't show a harsh black rectangle.
-    Works on white card backgrounds. Comment out if any logo looks wrong.
-  */
-  mix-blend-mode: multiply;
-}
-
-.logo-card:hover .logo-card-img-wrap img {
-  transform: scale(1.06);
-}
-
-/* Label */
-.logo-card-text {
-  width: 100%;
-  font-family: var(--font-heading);
-  font-size: 10px;
-  font-weight: 700;
-  color: var(--text-mid);
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  line-height: 1.3;
-  margin-top: 0;
-  /* Prevent overflow */
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-/* ================================================================
-   FEATURED LOGO CARDS — same rules, identical sizing
-   ================================================================ */
-
-.featured-logo-card {
-  width: var(--logo-card-w);
-  height: var(--logo-card-h);
-  flex-shrink: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  padding: var(--logo-card-pad);
-  border-radius: 12px;
-  background: white;
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  cursor: pointer;
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
-}
-
-.featured-logo-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
-}
-
 .featured-logo-card img {
-  display: block;
   width: auto;
-  height: var(--logo-img-h);
+  height: 58px;
   max-width: 90%;
-  max-height: var(--logo-img-h);
+  max-height: 58px;
   object-fit: contain;
   object-position: center;
   flex-shrink: 0;
-  transition: transform 0.3s ease;
-
-  /* Same blend fix for dark-bg logos */
   mix-blend-mode: multiply;
-}
-
-.featured-logo-card:hover img {
-  transform: scale(1.06);
+  transition: transform 0.3s ease;
 }
 
 .featured-logo-card span {
@@ -582,50 +353,116 @@
   text-overflow: ellipsis;
 }
 
-/* ================================================================
-   MODAL IMAGE
-   ================================================================ */
-
-.brand-modal-logo img {
-  width: 180px;
-  height: 90px;
-  object-fit: contain;
-  object-position: center;
-  mix-blend-mode: multiply;
+.featured-logo-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
 }
 
-/* ================================================================
-   RESPONSIVE
-   ================================================================ */
+.featured-logo-card:hover img {
+  transform: scale(1.06);
+}
+
+/* ========================= RESPONSIVE ========================= */
+
+@media (max-width: 992px) {
+  .vertical-category {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .vertical-description {
+    font-size: 15px;
+  }
+}
 
 @media (max-width: 768px) {
-  :root {
-    --logo-card-w: 140px;
-    --logo-card-h: 105px;
-    --logo-img-h: 50px;
-    --logo-card-pad: 12px 10px 8px;
+  .vertical-category {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .featured-logos-section {
+    padding: 60px 0;
+  }
+  .vertical-brands-grid {
+    gap: 14px;
+  }
+  .vertical-page-intro {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+  .brand-modal {
+    padding: 28px 22px;
+  }
+  .brand-modal-text {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+  .logo-card {
+    width: 140px;
+    height: 105px;
+  }
+  .featured-logo-card {
+    width: 140px;
+    height: 105px;
+  }
+  .logo-card-img-wrap {
+    height: 50px;
+  }
+  .featured-logo-card img {
+    height: 50px;
+    max-height: 50px;
   }
 }
 
 @media (max-width: 600px) {
-  :root {
-    --logo-card-w: 128px;
-    --logo-card-h: 96px;
-    --logo-img-h: 44px;
-    --logo-card-pad: 10px 8px 8px;
+  .vertical-heading {
+    font-size: 24px;
+  }
+  .vertical-description {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+  .logo-card {
+    width: 130px;
+    height: 96px;
+  }
+  .featured-logo-card {
+    width: 130px;
+    height: 96px;
+  }
+  .logo-card-img-wrap {
+    height: 46px;
+  }
+  .featured-logo-card img {
+    height: 46px;
+    max-height: 46px;
   }
 }
 
-@media (max-width: 400px) {
-  :root {
-    --logo-card-w: calc(50% - 9px);
-    --logo-card-h: 88px;
-    --logo-img-h: 40px;
-    --logo-card-pad: 10px 8px 8px;
+@media (max-width: 480px) {
+  .vertical-category {
+    padding-top: 44px;
+    padding-bottom: 44px;
   }
-
-  .logo-card,
+  .featured-logos-section {
+    padding: 44px 0;
+  }
+  .logo-card {
+    width: calc(50% - 10px);
+    height: 90px;
+  }
   .featured-logo-card {
-    width: var(--logo-card-w);
+    width: calc(50% - 10px);
+    height: 90px;
+  }
+  .logo-card-img-wrap {
+    height: 42px;
+  }
+  .featured-logo-card img {
+    height: 42px;
+    max-height: 42px;
+  }
+  .logo-card-text,
+  .featured-logo-card span {
+    font-size: 9px;
   }
 }

@@ -1528,7 +1528,7 @@
 /* ── Verticals sliding card — logo zone ── */
 .vertical-logo-box {
   width: 100%;
-  height: 110px;          /* fixed height — same for every card */
+  height: 110px; /* fixed height — same for every card */
   flex-shrink: 0;
   display: flex;
   align-items: center;
@@ -1560,10 +1560,12 @@
   object-fit: contain;
   object-position: center;
   box-sizing: border-box;
-  mix-blend-mode: multiply;  /* hides black/white backgrounds */
+  mix-blend-mode: multiply; /* hides black/white backgrounds */
 
   /* Override the existing hover transform — keep it consistent */
-  transition: transform 0.4s ease, opacity 0.3s ease;
+  transition:
+    transform 0.4s ease,
+    opacity 0.3s ease;
   opacity: 0.88;
 }
 
@@ -1578,7 +1580,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 90px;             /* fixed height in modal too */
+  height: 90px; /* fixed height in modal too */
   padding: 8px 0;
 }
 
