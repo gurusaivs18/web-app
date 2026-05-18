@@ -12,13 +12,13 @@ import targetOne from "../assets/Brand-Logos/targetone.webp";
 
 import denaster from "../assets/Brand-Logos/Denaster Logo.webp";
 import inov8 from "../assets/Brand-Logos/Inov8.webp";
-import garmin from "../assets/Brand-Logos/Garmin-Logo-new.png";
-import zeroG from "../assets/Brand-Logos/Zero-G-new.jpg";
+import garmin from "../assets/Brand-Logos/Garmin-Logo-new.webp";
+import zeroG from "../assets/Brand-Logos/Zero-G-new.webp";
 import bvb from "../assets/Brand-Logos/Artworks_BVB PRo League-15.webp";
 import snap from "../assets/Brand-Logos/logo-01 (2).webp";
 import vip from "../assets/Brand-Logos/VIP logo png.webp";
 import harrison from "../assets/Brand-Logos/Harrison Digital.webp";
-import monkey from "../assets/Brand-Logos/Monkey Box logo.png";
+import monkey from "../assets/Brand-Logos/Monkey Box logo.webp";
 import biriyani from "../assets/Brand-Logos/biryani logo 1080x1080.webp";
 import activ from "../assets/Brand-Logos/Activ8 Logo.webp";
 
@@ -32,7 +32,7 @@ import pizza from "../assets/Brand-Logos/pizza tales-03.webp";
 import kichdi from "../assets/Brand-Logos/khichdi tales.webp";
 import thalitales from "../assets/Brand-Logos/thali tales-01.webp";
 import beijing from "../assets/Brand-Logos/Beijing Lu Logo.webp";
-import epic from "../assets/Brand-Logos/epicfitout1.png";
+import epic from "../assets/Brand-Logos/epicfitout1.webp";
 const logoMap = {
   "Pressman's Sandwiches": pressmans,
   "Biriyani Box": biriyani,
