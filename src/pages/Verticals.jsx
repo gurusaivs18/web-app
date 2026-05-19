@@ -29,6 +29,8 @@ import kichdi from "../assets/Brand-Logos/khichdi tales.webp";
 import thalitales from "../assets/Brand-Logos/thali tales-01.webp";
 import beijing from "../assets/Brand-Logos/Beijing Lu Logo.webp";
 import epic from "../assets/Brand-Logos/epicfitout1.webp";
+import upro from "../assets/Brand-Logos/upro-new-logo.png";
+
 const logoMap = {
   "Pressman's Sandwiches": pressmans,
   "Biriyani Box": biriyani,
@@ -43,7 +45,7 @@ const logoMap = {
   Motiv8: motiv8,
   "ZeroG Beds & Mattresses": zeroG,
   "Snap Fitness": snap,
-  "United Pro Sports (U-Pro)": null,
+  "United Pro Sports (U-Pro)": upro,
   "UAE Bulls": uaeBulls,
   "BVB League": bvb,
   "VK Technology": vkTech,
@@ -68,6 +70,7 @@ const featuredBrands = [
   "Activ8",
   "Pressman's Sandwiches",
   "Snap Fitness",
+  "United Pro Sports (U-Pro)"
 ];
 
 function Verticals() {
