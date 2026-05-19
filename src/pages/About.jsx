@@ -1,8 +1,8 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { companyInfo } from "../data/company";
 import "../css/About.css";
-import "../css/ScrollReveal.css"; // ← add this import
-import { useScrollReveal } from "../hooks/useScrollReveal"; // ← add this import
+import "../css/ScrollReveal.css";
+import { useScrollReveal } from "../hooks/useScrollReveal";
 import ceoImage from "../assets/jsbGroupWebsite/jsbgroupwebsite-01.webp";
 
 // ── Director images ──
@@ -44,7 +44,6 @@ const allDirectors = [
     img: null,
     writeup: `Praveen Bhatnagar is a Certified Public Accountant (CPA) with deep expertise in finance and business strategy. Over the course of his career, he has worked across Retail, Fitness, Hospitality, and Healthcare sectors, bringing financial rigour and strategic clarity to each venture he has been part of.\n\nAs a Director at JSB Group, Praveen plays a key role in shaping the financial architecture of the group's diverse portfolio, ensuring sustainable growth and sound governance across all business units.`,
   },
-
   {
     name: "Deep Bhogal",
     role: "Managing Director",
@@ -70,7 +69,6 @@ const allPartners = [
     name: "Manish Kishore",
     role: "Partner",
     img: null,
-
     writeup: ``,
   },
   {
@@ -93,63 +91,161 @@ const allPartners = [
   },
 ];
 
-function Modal({ person, onClose }) {
+/* ─────────────────────────────────────────────────────────────
+   CEO MODAL — identical to Home.jsx CeoModal
+   Real photo on left, content on right
+───────────────────────────────────────────────────────────── */
+function CeoModal({ onClose }) {
   return (
-    <div className="modal-overlay" onClick={onClose}>
-      <div className="modal-box" onClick={(e) => e.stopPropagation()}>
-        <button className="modal-close" onClick={onClose}>
+    <div className="ceo-modal-overlay" onClick={onClose}>
+      <div className="ceo-modal" onClick={(e) => e.stopPropagation()}>
+        {/* White circle ✕ — sits top-right of the whole modal */}
+        <button className="ceo-modal-close" onClick={onClose}>
           ✕
         </button>
-        <h3 className="modal-name">{person.name}</h3>
-        <p className="modal-role">{person.role}</p>
-        <div className="modal-writeup">
-          {person.writeup.split("\n\n").map((para, i) => (
-            <p key={i}>{para}</p>
-          ))}
+
+        {/* LEFT — his actual photo */}
+        <div className="ceo-modal-img-panel">
+          <img src={ceoImage} alt="Neelesh Bhatnagar" />
+        </div>
+
+        {/* RIGHT — text content */}
+        <div className="ceo-modal-content">
+          <span className="ceo-modal-tag">The Architect</span>
+          <h2 className="ceo-modal-name">Neelesh Bhatnagar</h2>
+          <p className="ceo-modal-role">CEO & Founder, JSB Group</p>
+          <div className="ceo-modal-divider" />
+          <div className="ceo-modal-bio">
+            {ceoWriteup.split("\n\n").map((para, i) => (
+              <p key={i}>{para}</p>
+            ))}
+          </div>
         </div>
       </div>
     </div>
   );
 }
 
-function PersonCard({ person, labelType, delay = "0" }) {
-  const [open, setOpen] = useState(false);
+/* ─────────────────────────────────────────────────────────────
+   PRO MODAL — directors & partners
+───────────────────────────────────────────────────────────── */
+function ProModal({ person, onClose }) {
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    requestAnimationFrame(() => requestAnimationFrame(() => setVisible(true)));
+  }, []);
+
+  const handleClose = () => {
+    setVisible(false);
+    setTimeout(onClose, 420);
+  };
+
+  const initials = person.name
+    .split(" ")
+    .map((w) => w[0])
+    .join("")
+    .slice(0, 2);
+
   return (
-    <>
-      {/* Each card slides up with its own stagger delay */}
-      <div className="director-card" data-reveal="up" data-delay={delay}>
-        <div className="director-photo">
-          {person.img ? (
-            <img
-              src={person.img}
-              alt={person.name}
-              className="director-photo-img"
-            />
-          ) : (
-            <div className="director-photo-placeholder" />
-          )}
-          <div className="director-label">{labelType}</div>
+    <div className="modal-overlay" onClick={handleClose}>
+      <div
+        className={`modal-pro-box ${visible ? "modal-pro-show" : ""}`}
+        onClick={(e) => e.stopPropagation()}
+      >
+        <div className="mp-top">
+          <div className="mp-avatar">{initials}</div>
+          <div className="mp-head">
+            <h3 className="mp-name">{person.name}</h3>
+            <span className="mp-role-pill">{person.role}</span>
+          </div>
+          <button className="mp-close-btn" onClick={handleClose}>
+            ✕
+          </button>
         </div>
-        <div className="director-card-body">
-          <p className="director-name">{person.name}</p>
-          <p className="director-role-text">{person.role}</p>
-          {person.writeup && person.writeup.trim() !== "" && (
-            <button className="read-more-btn" onClick={() => setOpen(true)}>
-              Read More →
-            </button>
-          )}
+        <div className="mp-accent-bar" />
+        <div className="mp-body">
+          {person.writeup.split("\n\n").map((para, i) => (
+            <p key={i}>{para}</p>
+          ))}
+        </div>
+        <div className="mp-footer">
+          <button className="mp-dismiss-btn" onClick={handleClose}>
+            Close
+          </button>
         </div>
       </div>
-      {open && <Modal person={person} onClose={() => setOpen(false)} />}
+    </div>
+  );
+}
+
+/* ─────────────────────────────────────────────────────────────
+   PERSON CARD — NO flip, hover lift + accent bar only
+───────────────────────────────────────────────────────────── */
+function PersonCard({ person, labelType, delay = "0" }) {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <>
+      <div className="director-card-scene" data-reveal="up" data-delay={delay}>
+        <div className="director-card">
+          <div className="director-photo">
+            {person.img ? (
+              <img
+                src={person.img}
+                alt={person.name}
+                className="director-photo-img"
+              />
+            ) : (
+              <div className="director-photo-placeholder" />
+            )}
+            <div className="director-label">{labelType}</div>
+            <div className="director-photo-accent" />
+          </div>
+
+          <div className="director-card-body">
+            <p className="director-name">{person.name}</p>
+            <p className="director-role-text">{person.role}</p>
+            {person.writeup && person.writeup.trim() !== "" && (
+              <button className="read-more-btn" onClick={() => setOpen(true)}>
+                Read More →
+              </button>
+            )}
+          </div>
+        </div>
+      </div>
+
+      {open && <ProModal person={person} onClose={() => setOpen(false)} />}
     </>
   );
 }
 
+/* ─────────────────────────────────────────────────────────────
+   ABOUT PAGE
+───────────────────────────────────────────────────────────── */
 function About() {
-  // ── Activate the scroll reveal system ──
   useScrollReveal();
 
   const [ceoOpen, setCeoOpen] = useState(false);
+  const [archFlipping, setArchFlipping] = useState(false);
+
+  useEffect(() => {
+    document.body.style.overflow = ceoOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [ceoOpen]);
+
+  useEffect(() => {
+    const handler = (e) => {
+      if (e.key === "Escape" && ceoOpen) {
+        setCeoOpen(false);
+        setTimeout(() => setArchFlipping(false), 150);
+      }
+    };
+    window.addEventListener("keydown", handler);
+    return () => window.removeEventListener("keydown", handler);
+  }, [ceoOpen]);
 
   return (
     <>
@@ -165,11 +261,9 @@ function About() {
             <span className="section-title">Who We Are</span>
           </div>
           <div className="about-who-grid">
-            {/* Image placeholder slides in from left */}
             <div className="about-who-img-placeholder" data-reveal="left">
               Organisation Image
             </div>
-            {/* Text slides in from right */}
             <div
               className="about-who-text"
               data-reveal="right"
@@ -196,7 +290,6 @@ function About() {
               { label: "Mission", text: companyInfo.mission },
               { label: "Purpose", text: companyInfo.purpose },
             ].map(({ label, text }, i) => (
-              /* Each card rises up with staggered delay */
               <div
                 key={label}
                 className="vmp-card"
@@ -216,64 +309,73 @@ function About() {
         </div>
       </section>
 
-      {/* ── THE ARCHITECT — CEO ── */}
+      {/* ── THE ARCHITECT ── */}
       <section className="section architect-section">
         <div className="section-title-wrap" data-reveal="fade">
           <span className="section-title">The Architect & Pillars</span>
         </div>
 
-        {/* Banner fades + scales in */}
-        <div className="architect-banner" data-reveal="scale" data-delay="150">
-          <img
-            src={ceoImage}
-            alt="Neelesh Bhatnagar"
-            className="architect-banner-bg"
-          />
-          <div className="architect-gradient" />
-          <div className="architect-label">THE ARCHITECT</div>
-          <div className="architect-content">
-            <div className="architect-info">
-              {/* Info inside slides in from right */}
-              <h3
-                data-reveal="right"
-                data-delay="300"
-                style={{ color: "white" }}
-              >
-                Neelesh Bhatnagar
-              </h3>
-              <p
-                className="role"
-                data-reveal="right"
-                data-delay="400"
-                style={{ color: "red" }}
-              >
-                CEO & Founder
-              </p>
-              <p data-reveal="right" data-delay="500">
-                Entrepreneur with over three decades of experience spanning the
-                Middle East and India.
-              </p>
-              <button
-                className="architect-read-more"
-                data-reveal="right"
-                data-delay="600"
-                onClick={() => setCeoOpen(true)}
-              >
-                Read More →
-              </button>
+        <div className="arch-flip-scene" data-reveal="scale" data-delay="150">
+          <div className={`arch-flip-inner ${archFlipping ? "flipped" : ""}`}>
+            {/* FRONT */}
+            <div className="arch-flip-front">
+              <div className="architect-banner">
+                <img
+                  src={ceoImage}
+                  alt="Neelesh Bhatnagar"
+                  className="architect-banner-bg"
+                />
+                <div className="architect-gradient" />
+                <div className="architect-label">THE ARCHITECT</div>
+                <div className="architect-content">
+                  <div className="architect-info">
+                    <h3
+                      data-reveal="right"
+                      data-delay="300"
+                      style={{ color: "white" }}
+                    >
+                      Neelesh Bhatnagar
+                    </h3>
+                    <p
+                      className="role"
+                      data-reveal="right"
+                      data-delay="400"
+                      style={{ color: "red" }}
+                    >
+                      CEO & Founder
+                    </p>
+                    <p data-reveal="right" data-delay="500">
+                      Entrepreneur with over three decades of experience
+                      spanning the Middle East and India.
+                    </p>
+                    <button
+                      className="architect-read-more"
+                      data-reveal="right"
+                      data-delay="600"
+                      onClick={() => {
+                        setArchFlipping(true);
+                        setTimeout(() => setCeoOpen(true), 520);
+                      }}
+                    >
+                      Read More →
+                    </button>
+                  </div>
+                </div>
+              </div>
             </div>
+
+            {/* BACK — visible during the flip */}
           </div>
         </div>
       </section>
 
+      {/* CEO modal fires after flip completes */}
       {ceoOpen && (
-        <Modal
-          person={{
-            name: "Neelesh Bhatnagar",
-            role: "CEO & Founder",
-            writeup: ceoWriteup,
+        <CeoModal
+          onClose={() => {
+            setCeoOpen(false);
+            setTimeout(() => setArchFlipping(false), 150);
           }}
-          onClose={() => setCeoOpen(false)}
         />
       )}
 
