@@ -104,12 +104,6 @@ function Modal({ person, onClose }) {
     setTimeout(onClose, 420);
   };
 
-  const initials = person.name
-    .split(" ")
-    .map((w) => w[0])
-    .join("")
-    .slice(0, 2);
-
   return (
     <div className="modal-overlay" onClick={handleClose}>
       <div
@@ -117,7 +111,6 @@ function Modal({ person, onClose }) {
         onClick={(e) => e.stopPropagation()}
       >
         <div className="mp-top">
-          <div className="mp-avatar">{initials}</div>
           <div className="mp-head">
             <h3 className="mp-name">{person.name}</h3>
             <span className="mp-role-pill">{person.role}</span>
@@ -283,7 +276,7 @@ function About() {
             alt="Neelesh Bhatnagar"
             className="architect-banner-bg"
           />
-          <div className="architect-gradient" />
+
           <div className="architect-label">THE ARCHITECT</div>
           <div className="architect-content">
             <div className="architect-info">
