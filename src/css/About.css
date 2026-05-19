@@ -532,7 +532,17 @@
   letter-spacing: 2px;
 }
 /* ───────────────── RESPONSIVE ───────────────── */
-
+@media (min-width: 769px) {
+  .directors-grid,
+  .directors-grid-2,
+  .partners-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 28px;
+    align-items: start;
+    justify-items: center;
+  }
+}
 @media (max-width: 992px) {
   .about-who-grid {
     grid-template-columns: 1fr;
@@ -599,10 +609,16 @@
   .directors-grid,
   .directors-grid-2,
   .partners-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 18px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
   }
-
+  .director-card-scene {
+    flex: 0 1 260px;
+    display: flex;
+    justify-content: center;
+  }
   .director-card {
     max-width: 100%;
   }
