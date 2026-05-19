@@ -30,25 +30,33 @@ export function useScrollReveal() {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add("is-visible");
-            // Un-observe after first reveal for performance
             io.unobserve(entry.target);
           }
         });
       },
       {
-        threshold: 0.12, // trigger when 12 % of element is visible
-        rootMargin: "0px 0px -40px 0px", // slight bottom offset for feel
+        threshold: 0.12,
+        rootMargin: "0px 0px -40px 0px",
       },
     );
 
-    // Observe all current elements
+    const observed = new WeakSet(); // ← track what's already observed
+
     const attach = () => {
-      document.querySelectorAll(selectors).forEach((el) => io.observe(el));
+      document.querySelectorAll(selectors).forEach((el) => {
+        if (!observed.has(el)) {
+          // ← only observe NEW elements
+          observed.add(el);
+          io.observe(el);
+        }
+      });
     };
 
-    attach();
+    // ← wait one frame so opacity:0 paints BEFORE observer fires
+    requestAnimationFrame(() => {
+      requestAnimationFrame(attach); // double rAF = after browser paint
+    });
 
-    // Also watch for dynamically added elements (route changes, lazy loads)
     const mo = new MutationObserver(attach);
     mo.observe(document.body, { childList: true, subtree: true });
 
