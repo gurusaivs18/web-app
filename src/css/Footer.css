@@ -160,9 +160,6 @@
 /* =========================
    MOBILE
 ========================= */
-/* =========================
-   MOBILE
-========================= */
 @media (max-width: 600px) {
   .footer {
     padding: 45px 16px 20px;
@@ -170,35 +167,24 @@
 
   .footer-grid {
     display: grid;
-    grid-template-columns: 1.2fr 1fr;
-    gap: 25px 20px;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 25px 15px;
     align-items: start;
   }
 
   /* Logo + Address */
   .footer-about {
-    grid-column: auto;
     text-align: left;
   }
 
-  /* Company */
+  /* Company section aligned with address block */
   .footer-col:nth-child(2) {
-    grid-column: auto;
+    padding-top: 55px;
   }
 
-  /* Brands section full width */
+  /* Quick Links full width */
   .footer-col:nth-child(3) {
     grid-column: 1 / -1;
-  }
-
-  /* Social section full width */
-  .footer-col:nth-child(4) {
-    grid-column: 1 / -1;
-    text-align: center;
-  }
-
-  .socials {
-    justify-content: center;
   }
 
   .quick-links-list {
@@ -207,9 +193,23 @@
     gap: 8px 12px;
   }
 
+  .quick-links-list li {
+    margin-bottom: 4px;
+  }
+
   .quick-links-list li a {
     font-size: 12px;
     line-height: 1.4;
+  }
+
+  /* Social full width */
+  .footer-col:nth-child(4) {
+    grid-column: 1 / -1;
+    text-align: center;
+  }
+
+  .socials {
+    justify-content: center;
   }
 
   .footer-about p,
