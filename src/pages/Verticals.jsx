@@ -70,7 +70,7 @@ const featuredBrands = [
   "Activ8",
   "Pressman's Sandwiches",
   "Snap Fitness",
-  "United Pro Sports (U-Pro)"
+  "United Pro Sports (U-Pro)",
 ];
 
 function Verticals() {
