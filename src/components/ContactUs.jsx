@@ -13,7 +13,7 @@ const contactSchema = Yup.object({
     .required("Field is required"),
 
   message: Yup.string()
-    .min(8, "Minimum , 8 characters required")
+    .min(8, "Minimum 8 characters required")
     .required("Message is required"),
 });
 
@@ -30,7 +30,22 @@ function Contact() {
         }}
         validationSchema={contactSchema}
         onSubmit={(values, { resetForm }) => {
-          console.log("Form Data:", values);
+          const subject = encodeURIComponent(
+            `Contact Request from ${values.name}`,
+          );
+
+          const body = encodeURIComponent(
+            `Name: ${values.name}\n\nEmail: ${values.email}\n\nMessage:\n${values.message}`,
+          );
+
+          window.open(
+            `https://mail.google.com/mail/?view=cm&fs=1&to=archita@nbventuresme.com&su=${subject}&body=${body}`,
+            "_blank",
+          );
+          console.log(
+            `https://mail.google.com/mail/?view=cm&fs=1&to=archita@nbventuresme.com&su=${subject}&body=${body}`,
+          );
+
           resetForm();
         }}
       >
