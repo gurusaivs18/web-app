@@ -1,7 +1,7 @@
 import "../css/Careers.css";
 import "../css/ScrollReveal.css";
 import { useScrollReveal } from "../hooks/useScrollReveal";
-
+import { Link } from "react-router-dom";
 const perks = [
   {
     title: "Growth & Development",
@@ -85,7 +85,9 @@ function Careers() {
               We are always on the lookout for passionate, driven individuals
               who want to make a real difference.
             </p>
-            <button className="btn btn--white">View Open Positions</button>
+            <Link to="/contact" className="btn btn--white">
+              CONTACT US
+            </Link>
           </div>
         </div>
       </section>

@@ -13,8 +13,8 @@ const contactSchema = Yup.object({
     .required("Field is required"),
 
   message: Yup.string()
-    .min(8, "Message must be atleast 8 characters")
-    .required("Message Must be in 8 Characters "),
+    .min(8, "Minimum , 8 characters required")
+    .required("Message is required"),
 });
 
 function Contact() {

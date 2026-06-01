@@ -26,13 +26,7 @@ function Navbar() {
     setMenuOpen(false);
 
     if (to === "/pillars") {
-      navigate("/");
-      setTimeout(() => {
-        const el = document.getElementById("pillars");
-        if (el) {
-          el.scrollIntoView({ behavior: "smooth", block: "start" });
-        }
-      }, 200);
+      navigate("/about#architect");
       return;
     }
 

@@ -4,7 +4,7 @@ import "../css/About.css";
 import "../css/ScrollReveal.css"; // ← add this import
 import { useScrollReveal } from "../hooks/useScrollReveal"; // ← add this import
 import ceoImage from "../assets/jsbGroupWebsite/jsbgroupwebsite-01.webp";
-
+import { useLocation } from "react-router-dom";
 // ── Director images ──
 import rushabImg from "../assets/Partners/Rushab.JPG.webp";
 import deepImg from "../assets/Partners/Deep 2.webp";
@@ -198,6 +198,22 @@ function About() {
 
   const [ceoOpen, setCeoOpen] = useState(false);
 
+  const location = useLocation();
+  useEffect(() => {
+    if (location.hash === "#architect") {
+      setTimeout(() => {
+        const section = document.getElementById("architect");
+
+        if (section) {
+          section.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }
+      }, 100);
+    }
+  }, [location]);
+
   return (
     <>
       {/* PAGE HERO */}
@@ -264,7 +280,7 @@ function About() {
       </section>
 
       {/* ── THE ARCHITECT — CEO ── */}
-      <section className="section architect-section">
+      <section id="architect" className="section architect-section">
         <div className="section-title-wrap" data-reveal="fade">
           <span className="section-title">The Architect & Pillars</span>
         </div>
