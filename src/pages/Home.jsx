@@ -805,6 +805,31 @@ import vkTech from "../assets/Brand-Logos/Vanity Kart Logo English-01.webp";
 import targetOne from "../assets/Brand-Logos/targetone.webp";
 import ventures from "../assets/Brand-Logos/NB VENTURES Logo-02.webp";
 import denaster from "../assets/Brand-Logos/Denaster Logo.webp";
+import activ8 from "../assets/Brand-Logos/Activ8 Logo.webp";
+import bvbLeague from "../assets/Brand-Logos/Artworks_BVB PRo League-15.webp";
+import beijingLu from "../assets/Brand-Logos/Beijing Lu Logo.webp";
+import biriyaniBox from "../assets/Brand-Logos/biryani logo 1080x1080.webp";
+import boosterJuice from "../assets/Brand-Logos/Booster Juice Final Logo.webp";
+import epicFitouts from "../assets/Brand-Logos/epicfitout1.webp";
+import garmin from "../assets/Brand-Logos/Garmin-Logo-new.webp";
+import harrisonDigital from "../assets/Brand-Logos/Harrison Digital.webp";
+import hongKong from "../assets/Brand-Logos/HK Logo  English.webp";
+import inov8 from "../assets/Brand-Logos/Inov8.webp";
+import khichdiTales from "../assets/Brand-Logos/khichdi tales.webp";
+import zeroG from "../assets/Brand-Logos/Zero-G-new.webp";
+import monkeyBox from "../assets/Brand-Logos/Monkey Box logo.webp";
+
+import pizzaTales from "../assets/Brand-Logos/pizza tales-03.webp";
+
+import snapFitness from "../assets/Brand-Logos/snap_new.webp";
+
+import thaliTales from "../assets/Brand-Logos/thali tales-01.webp";
+import yellowChilli from "../assets/Brand-Logos/TYC - logo.webp";
+
+import uPro from "../assets/Brand-Logos/upro-new-logo.png";
+import vipCosmetics from "../assets/Brand-Logos/VIP logo png.webp";
+
+// break
 
 import rushab from "../assets/Partners/Rushab.JPG.webp";
 import sinha from "../assets/Partners/Sanjeev Sir 1.webp";
@@ -842,7 +867,7 @@ const brandLogos = [
   {
     img: uaeBulls,
     url: "https://uaebulls.ae",
-    order: 1,
+    order: 6,
     name: "UAE Bulls",
     slug: "uae-bulls",
     desc: "Neelesh Bhatnagar's passion for cricket led him to own the Delhi Bulls team. After eight seasons, the U.A.E. Bulls achieved a historic milestone — Champions of Season 9 (2025–26).",
@@ -882,7 +907,7 @@ const brandLogos = [
   {
     img: ventures,
     url: "https://nbventuresme.com/",
-    order: 6,
+    order: 1,
     name: "NB Ventures",
     slug: "nb-ventures",
     desc: "A growth-stage venture fund based in the U.A.E. with a portfolio of 70+ Indian start-ups. Strategic Director Rushab Bhatnagar spearheads the Bangalore office.",
@@ -894,6 +919,158 @@ const brandLogos = [
     name: "Denaster",
     slug: "denaster",
     desc: "Joined the group in 2021. Distributes Shokz, GoCube, Sphero, Eilik, thinOptics, Ring, Boxbollen, ShiftCam, and Ampere across the region.",
+  },
+  {
+    img: biriyaniBox,
+    url: "",
+    order: 8,
+    name: "Biriyani Box",
+    slug: "biriyani-box",
+    desc: "Part of JSB Group's growing Food & Beverage portfolio, focused on delivering flavorful and authentic biriyani experiences.",
+  },
+  {
+    img: boosterJuice,
+    url: "https://boosterjuice.com/",
+    order: 9,
+    name: "Booster Juice",
+    slug: "booster-juice",
+    desc: "International smoothie and healthy beverage brand operating under JSB Group's F&B portfolio.",
+  },
+  {
+    img: inov8,
+    url: "https://www.inov8.ae/",
+    order: 10,
+    name: "Harrison / Inov8",
+    slug: "inov8",
+    desc: "Duty-free retail operator with presence across Dubai, Abu Dhabi, and Qatar Duty Free locations.",
+  },
+  {
+    img: activ8,
+    url: "https://activ8.ae/",
+    order: 11,
+    name: "Activ8",
+    slug: "activ8",
+    desc: "Retail business supporting premium fitness, wellness, and technology retail concepts across the UAE.",
+  },
+  {
+    img: harrisonDigital,
+    url: "",
+    order: 12,
+    name: "Harrison Digital",
+    slug: "harrison-digital",
+    desc: "Part of the group's digital retail and distribution ecosystem supporting brand expansion initiatives.",
+  },
+  {
+    img: garmin,
+    url: "https://www.garmin.ae/",
+    order: 13,
+    name: "Garmin by Activ8",
+    slug: "garmin-by-activ8",
+    desc: "Authorized Garmin retailer with multiple stores across the UAE carrying Garmin and Shokz products.",
+  },
+  {
+    img: zeroG,
+    url: "https://zerogmattress.ae/",
+    order: 14,
+    name: "ZeroG Beds & Mattresses",
+    slug: "zerog-beds",
+    desc: "Homegrown sleep and wellness brand delivering premium mattresses and bedding solutions.",
+  },
+  {
+    img: vipCosmetics,
+    url: "",
+    order: 15,
+    name: "VIP Cosmetics",
+    slug: "vip-cosmetics",
+    desc: "Skincare distribution arm under Target One representing premium beauty and skincare brands.",
+  },
+  {
+    img: monkeyBox,
+    url: "https://monkeyboxforkids.in/",
+    order: 16,
+    name: "Monkey Box",
+    slug: "monkey-box",
+    desc: "Lifestyle and consumer-focused brand within JSB Group's retail and distribution ecosystem.",
+  },
+  {
+    img: snapFitness,
+    url: "https://www.snapfitness.com/ae",
+    order: 17,
+    name: "Snap Fitness",
+    slug: "snap-fitness",
+    desc: "Global fitness franchise with multiple locations across the UAE promoting healthy lifestyles.",
+  },
+  {
+    img: uPro,
+    url: "https://upro.ae/",
+    order: 18,
+    name: "United Pro Sports",
+    slug: "u-pro",
+    desc: "World-class indoor sports facility featuring football, cricket, basketball, volleyball, badminton, and more.",
+  },
+  {
+    img: bvbLeague,
+    url: "https://bvbpro.com/",
+    order: 19,
+    name: "BVB League",
+    slug: "bvb-league",
+    desc: "Franchise-based beach volleyball league combining elite sports, entertainment, and lifestyle experiences.",
+  },
+  {
+    img: epicFitouts,
+    url: "https://www.epicfitout.com/",
+    order: 20,
+    name: "Epic Fitouts",
+    slug: "epic-fitouts",
+    desc: "Provider of premium interior design, fitout services, and customized outdoor furniture solutions.",
+  },
+  {
+    img: yellowChilli,
+    url: "https://theyellowchilli.com/",
+    order: 21,
+    name: "Yellow Chilli",
+    slug: "yellow-chilli",
+    desc: "Indian restaurant brand operating under JSB Group's India vertical.",
+  },
+  {
+    img: pizzaTales,
+    url: "",
+    order: 22,
+    name: "Pizza Tales",
+    slug: "pizza-tales",
+    desc: "Part of JSB Group's India food and beverage portfolio.",
+  },
+  {
+    img: khichdiTales,
+    url: "",
+    order: 23,
+    name: "Khichdi Tales",
+    slug: "khichdi-tales",
+    desc: "Indian food concept focused on comfort and traditional meals.",
+  },
+  {
+    img: thaliTales,
+    url: "",
+    order: 24,
+    name: "Thali Tales",
+    slug: "thali-tales",
+    desc: "Traditional Indian dining concept within JSB Group's India operations.",
+  },
+  {
+    img: hongKong,
+    url: "",
+    order: 25,
+    name: "Hong Kong",
+    slug: "hong-kong",
+    desc: "Part of JSB Group's India hospitality and restaurant portfolio.",
+  },
+  {
+    img: beijingLu,
+    url: "",
+    order: 26,
+    name: "Beijing Lu",
+    slug: "beijing-lu",
+    desc: "Asian dining concept under JSB Group's India vertical.",
   },
 ];
 
