@@ -160,27 +160,38 @@
 /* =========================
    MOBILE
 ========================= */
+/* =========================
+   MOBILE
+========================= */
 @media (max-width: 600px) {
   .footer {
     padding: 45px 16px 20px;
   }
 
   .footer-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 25px 15px;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 25px 20px;
+    align-items: start;
   }
 
+  /* Logo + Address */
   .footer-about {
-    grid-column: 1 / -1;
-    text-align: center;
+    grid-column: auto;
+    text-align: left;
   }
 
-  /* Quick Links full width */
+  /* Company */
+  .footer-col:nth-child(2) {
+    grid-column: auto;
+  }
+
+  /* Brands section full width */
   .footer-col:nth-child(3) {
     grid-column: 1 / -1;
   }
 
-  /* Social full width */
+  /* Social section full width */
   .footer-col:nth-child(4) {
     grid-column: 1 / -1;
     text-align: center;
@@ -191,12 +202,9 @@
   }
 
   .quick-links-list {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 8px 12px;
-  }
-
-  .quick-links-list li {
-    margin-bottom: 4px;
   }
 
   .quick-links-list li a {
@@ -204,8 +212,18 @@
     line-height: 1.4;
   }
 
+  .footer-about p,
+  .footer-col ul li a {
+    font-size: 12px;
+  }
+
   .footer-col h4 {
-    margin-bottom: 12px;
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+
+  .footer-col ul li {
+    margin-bottom: 8px;
   }
 
   .footer-col ul li a::after {
@@ -214,10 +232,9 @@
 
   .footer-bottom {
     margin-top: 30px;
-    padding-top: 16px;
+    padding-top: 15px;
   }
 }
-
 /* =========================
    EXTRA SMALL DEVICES
 ========================= */
