@@ -1076,6 +1076,14 @@ const brandLogos = [
 
 const directors = [
   {
+    name: "Manish Kishore",
+    role: "Partner",
+    bio: "test",
+    slug: "",
+    img: null,
+    order: 1,
+  },
+  {
     name: "Rushab Bhatnagar",
     role: "Co-Founder & CEO, NOVO Labs | Strategic Director, NB Ventures",
     bio: "Bachelor's in Business & Economics from Exeter, Master's in Strategic Marketing from Imperial College. Leads NB Ventures' portfolio of 70+ Indian start-ups.",
@@ -1100,12 +1108,12 @@ const directors = [
     order: 3,
   },
   {
-    name: "Sanal Kumar",
-    role: "Director",
-    bio: "Contributes strategic direction and expertise to JSB Group's expanding business verticals.",
-    slug: "sanal-kumar",
-    img: sanal,
-    order: 8,
+    name: "Deep Bhogal",
+    role: "Managing Director, Denaster",
+    bio: "Over 30 years in supply and distribution across retail, software, and electronics. Led Denaster to become a multimillion-dollar SME with 100+ employees.",
+    slug: "deep-bhogal",
+    img: deep,
+    order: 4,
   },
   {
     name: "Mohammed Ashik",
@@ -1114,14 +1122,6 @@ const directors = [
     slug: "mohammed-ashik",
     img: null,
     order: 5,
-  },
-  {
-    name: "Deep Bhogal",
-    role: "Managing Director, Denaster",
-    bio: "Over 30 years in supply and distribution across retail, software, and electronics. Led Denaster to become a multimillion-dollar SME with 100+ employees.",
-    slug: "deep-bhogal",
-    img: deep,
-    order: 4,
   },
   {
     name: "Naz Ayat",
@@ -1140,12 +1140,12 @@ const directors = [
     order: 7,
   },
   {
-    name: "Manish Kishore",
-    role: "Partner",
-    bio: "test",
-    slug: "",
-    img: null,
-    order: 9,
+    name: "Sanal Kumar",
+    role: "Director",
+    bio: "Contributes strategic direction and expertise to JSB Group's expanding business verticals.",
+    slug: "sanal-kumar",
+    img: sanal,
+    order: 8,
   },
 ];
 
@@ -1373,7 +1373,7 @@ function BrandModal({ brand, onClose }) {
 /* ─── Directors Slider ───────────────────────────────────────── */
 function DirectorsSlider({ onSelect }) {
   const trackRef = useRef();
-  useAutoScroll(trackRef, 0.4);
+  useAutoScroll(trackRef, 0.2);
 
   const sortedDirectors = [...directors].sort(
     (a, b) => (a.order || 999) - (b.order || 999),
@@ -1461,7 +1461,7 @@ function DirectorsSlider({ onSelect }) {
 /* ─── Verticals Slider ───────────────────────────────────────── */
 function VerticalsSlider({ onSelect }) {
   const trackRef = useRef();
-  useAutoScroll(trackRef, 0.4);
+  useAutoScroll(trackRef, 0.2);
 
   const sorted = [...brandLogos].sort((a, b) => a.order - b.order);
   const doubled = [...sorted, ...sorted];
