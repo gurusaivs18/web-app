@@ -244,20 +244,19 @@
 }
 
 /* ========================= CARD TEXT ========================= */
-
 .logo-card-text {
   width: 100%;
   font-family: var(--font-heading);
-  font-size: 10px;
+  font-size: 14px;
   font-weight: 700;
   color: var(--text-mid);
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   line-height: 1.3;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  white-space: normal;
+  overflow: visible;
+  text-overflow: unset;
 }
 
 /* ========================= PAGE HERO ========================= */
@@ -793,7 +792,7 @@
 
   .logo-card-text,
   .featured-logo-card .logo-card-text {
-    font-size: 8px;
+    font-size: 11px;
     letter-spacing: 0.2px;
     margin-top: 4px;
   }
@@ -883,10 +882,9 @@
     height: auto !important;
     scale: 1;
   }
-
   .logo-card-text,
   .featured-logo-card .logo-card-text {
-    font-size: 7.5px;
+    font-size: 10px;
     letter-spacing: 0.15px;
     margin-top: 3px;
   }
@@ -971,7 +969,7 @@
 
   .logo-card-text,
   .featured-logo-card .logo-card-text {
-    font-size: 7px;
+    font-size: 9px;
     letter-spacing: 0.1px;
     margin-top: 2px;
   }
