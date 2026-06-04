@@ -594,24 +594,25 @@
 
   .vertical-brands-grid,
   .featured-logos-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 10px;
-    justify-items: center;
   }
 
   .logo-card,
   .featured-logo-card {
-    width: 100%;
+    width: calc(25% - 10px);
+    min-width: 72px;
+    max-width: 100px;
     min-height: 80px;
     height: auto;
     padding: 8px 6px 6px;
   }
 
-  /* clamp all logos to fit the small card */
   .logo-card-img-wrap {
-    min-height: 44px;
-    max-height: 52px;
+    min-height: 40px;
+    max-height: 50px;
     overflow: hidden;
   }
 
@@ -643,15 +644,17 @@
 
   .vertical-brands-grid,
   .featured-logos-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 8px;
-    justify-items: center;
   }
 
   .logo-card,
   .featured-logo-card {
-    width: 100%;
+    width: calc(33.33% - 8px);
+    min-width: 88px;
+    max-width: 110px;
     min-height: 72px;
     height: auto;
     padding: 6px 4px 6px;
@@ -659,7 +662,7 @@
   }
 
   .logo-card-img-wrap {
-    min-height: 38px;
+    min-height: 36px;
     max-height: 44px;
     overflow: hidden;
   }
@@ -684,28 +687,42 @@
 @media (max-width: 360px) {
   .vertical-brands-grid,
   .featured-logos-grid {
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 6px;
   }
 
   .logo-card,
   .featured-logo-card {
+    width: calc(33.33% - 6px);
+    min-width: 76px;
+    max-width: 96px;
     min-height: 66px;
+    height: auto;
     padding: 5px 3px 5px;
+    border-radius: 8px;
   }
 
   .logo-card-img-wrap {
-    max-height: 36px;
+    min-height: 32px;
+    max-height: 38px;
     overflow: hidden;
   }
 
   .logo-card-img-wrap img,
   .featured-logo-card .logo-card-img-wrap img {
+    max-width: 100% !important;
     max-height: 32px !important;
+    width: auto !important;
+    height: auto !important;
+    scale: 1;
   }
 
   .logo-card-text,
   .featured-logo-card .logo-card-text {
     font-size: 7px;
+    letter-spacing: 0.1px;
+    margin-top: 2px;
   }
 }
