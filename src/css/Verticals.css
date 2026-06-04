@@ -93,10 +93,10 @@
 }
 
 /* ========================= LOGO CARD ========================= */
-
 .logo-card {
   width: 160px;
-  height: 115px;
+  min-height: 115px;
+  height: auto;
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
@@ -105,41 +105,140 @@
   padding: 14px 12px 10px;
   border-radius: 12px;
   background: var(--white);
-  border: 1px solid rgba(0, 0, 0, 0.06);
-  overflow: hidden;
+  overflow: visible;
   cursor: pointer;
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
 }
 
-.logo-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
-}
-
 /* ========================= IMAGE WRAPPER ========================= */
-
 .logo-card-img-wrap {
   width: 100%;
-  height: 58px;
-  flex-shrink: 0;
+  height: auto;
+  min-height: 60px;
+  flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: visible;
 }
 
+/* Default */
 .logo-card-img-wrap img {
-  width: auto;
-  height: 100%;
-  max-width: 90%;
-  max-height: 100%;
+  display: block;
+  max-width: none;
+  max-height: none;
   object-fit: contain;
-  object-position: center;
   mix-blend-mode: multiply;
   transition: transform 0.3s ease;
 }
 
+/* ========================= PER BRAND SIZES ========================= */
+.logo-card-img-wrap img[data-brand="Pressman's Sandwiches"] {
+  height: auto;
+  width: 100px;
+}
+.logo-card-img-wrap img[data-brand="Biriyani Box"] {
+  height: 90px;
+  width: auto;
+}
+.logo-card-img-wrap img[data-brand="Target One"] {
+  height: 90px;
+  width: auto;
+}
+.logo-card-img-wrap img[data-brand="VIP Cosmetics"] {
+  height: 90px;
+  width: auto;
+}
+.logo-card-img-wrap img[data-brand="Denaster"] {
+  height: 110px;
+  width: auto;
+}
+.logo-card-img-wrap img[data-brand="Monkey Box"] {
+  height: 90px;
+  width: auto;
+}
+.logo-card-img-wrap img[data-brand="Harrison / Inov8"] {
+  height: 58px;
+  width: auto;
+}
+.logo-card-img-wrap img[data-brand="Harrison Digital"] {
+  height: auto;
+  width: 160px;
+}
+.logo-card-img-wrap img[data-brand="Garmin by Activ8"] {
+  height: 110px;
+  width: auto;
+}
+.logo-card-img-wrap img[data-brand="Activ8"] {
+  height: 79px;
+  width: auto;
+}
+.logo-card-img-wrap img[data-brand="Motiv8"] {
+  height: 58px;
+  width: auto;
+}
+.logo-card-img-wrap img[data-brand="ZeroG Beds & Mattresses"] {
+  height: 120px;
+  width: auto;
+}
+.logo-card-img-wrap img[data-brand="Snap Fitness"] {
+  height: 65px;
+  width: auto;
+}
+.logo-card-img-wrap img[data-brand="United Pro Sports (U-Pro)"] {
+  height: 70px;
+  width: auto;
+}
+.logo-card-img-wrap img[data-brand="UAE Bulls"] {
+  height: 75px;
+  width: auto;
+}
+.logo-card-img-wrap img[data-brand="BVB League"] {
+  height: 80px;
+  width: auto;
+}
+.logo-card-img-wrap img[data-brand="VK Technology"] {
+  height: auto;
+  width: 220px;
+}
+.logo-card-img-wrap img[data-brand="Nb Ventures"] {
+  height: auto;
+  width: 140px;
+}
+.logo-card-img-wrap img[data-brand="Yellow Chilli"] {
+  height: 100px;
+  width: auto;
+}
+.logo-card-img-wrap img[data-brand="Hong Kong"] {
+  height: 54px;
+  width: auto;
+}
+.logo-card-img-wrap img[data-brand="kichdi Tales"] {
+  height: 88px;
+  width: auto;
+}
+.logo-card-img-wrap img[data-brand="Pizza Tales"] {
+  height: 88px;
+  width: auto;
+}
+.logo-card-img-wrap img[data-brand="Thali Tales"] {
+  height: 110px;
+  width: 188px;
+}
+.logo-card-img-wrap img[data-brand="beijing Lu"] {
+  height: 60px;
+  width: auto;
+}
+.logo-card-img-wrap img[data-brand="Booster Juice"] {
+  height: auto;
+  width: 200px;
+}
+.logo-card-img-wrap img[data-brand="Epic Fitouts"] {
+  height: 60px;
+  width: auto;
+}
 .logo-card:hover .logo-card-img-wrap img {
   transform: scale(1.07);
 }
@@ -287,14 +386,12 @@
 }
 
 /* ========================= FEATURED LOGOS ========================= */
-
 .featured-logos-section {
   text-align: center;
   padding: 90px 0;
   margin-top: 0;
   margin-bottom: 0;
 }
-
 .featured-title {
   font-size: clamp(22px, 2.5vw, 28px);
   font-weight: 700;
@@ -302,7 +399,6 @@
   margin-bottom: 28px;
   color: var(--text-dark);
 }
-
 .featured-logos-grid {
   display: flex;
   justify-content: center;
@@ -312,33 +408,134 @@
 
 .featured-logo-card {
   width: 160px;
-  height: 115px;
-  background: white;
-  border-radius: 12px;
-  border: 1px solid rgba(0, 0, 0, 0.08);
+  min-height: 115px;
+  height: auto;
+  flex-shrink: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   padding: 14px 12px 10px;
+  border-radius: 12px;
+  background: transparent;
+  overflow: visible;
   cursor: pointer;
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
 }
-
 .featured-logo-card img {
-  width: auto;
-  height: 58px;
-  max-width: 90%;
-  max-height: 58px;
+  display: block;
+  max-width: none; /* ← remove cap */
+  max-height: none; /* ← remove cap */
   object-fit: contain;
-  object-position: center;
-  flex-shrink: 0;
   mix-blend-mode: multiply;
   transition: transform 0.3s ease;
 }
-
+.featured-logo-card img[data-brand="Pressman's Sandwiches"] {
+  height: auto;
+  width: 100px;
+}
+.featured-logo-card img[data-brand="Biriyani Box"] {
+  height: 90px;
+  width: auto;
+}
+.featured-logo-card img[data-brand="Target One"] {
+  height: 90px;
+  width: auto;
+}
+.featured-logo-card img[data-brand="VIP Cosmetics"] {
+  height: 90px;
+  width: auto;
+}
+.featured-logo-card img[data-brand="Denaster"] {
+  height: 110px;
+  width: auto;
+}
+.featured-logo-card img[data-brand="Monkey Box"] {
+  height: 90px;
+  width: auto;
+}
+.featured-logo-card img[data-brand="Harrison / Inov8"] {
+  height: 58px;
+  width: auto;
+}
+.featured-logo-card img[data-brand="Harrison Digital"] {
+  height: auto;
+  width: 160px;
+}
+.featured-logo-card img[data-brand="Garmin by Activ8"] {
+  height: 110px;
+  width: auto;
+}
+.featured-logo-card img[data-brand="Activ8"] {
+  height: 79px;
+  width: auto;
+}
+.featured-logo-card img[data-brand="Motiv8"] {
+  height: 58px;
+  width: auto;
+}
+.featured-logo-card img[data-brand="ZeroG Beds & Mattresses"] {
+  height: 120px;
+  width: auto;
+}
+.featured-logo-card img[data-brand="Snap Fitness"] {
+  height: 65px;
+  width: auto;
+}
+.featured-logo-card img[data-brand="United Pro Sports (U-Pro)"] {
+  height: 70px;
+  width: auto;
+}
+.featured-logo-card img[data-brand="UAE Bulls"] {
+  height: 75px;
+  width: auto;
+}
+.featured-logo-card img[data-brand="BVB League"] {
+  height: 80px;
+  width: auto;
+}
+.featured-logo-card img[data-brand="VK Technology"] {
+  height: auto;
+  width: 220px;
+}
+.featured-logo-card img[data-brand="Nb Ventures"] {
+  height: auto;
+  width: 140px;
+}
+.featured-logo-card img[data-brand="Yellow Chilli"] {
+  height: 100px;
+  width: auto;
+}
+.featured-logo-card img[data-brand="Hong Kong"] {
+  height: 54px;
+  width: auto;
+}
+.featured-logo-card img[data-brand="kichdi Tales"] {
+  height: 88px;
+  width: auto;
+}
+.featured-logo-card img[data-brand="Pizza Tales"] {
+  height: 88px;
+  width: auto;
+}
+.featured-logo-card img[data-brand="Thali Tales"] {
+  height: 110px;
+  width: 188px;
+}
+.featured-logo-card img[data-brand="beijing Lu"] {
+  height: 60px;
+  width: auto;
+}
+.featured-logo-card img[data-brand="Booster Juice"] {
+  height: auto;
+  width: 200px;
+}
+.featured-logo-card img[data-brand="Epic Fitouts"] {
+  height: 60px;
+  width: auto;
+}
 .featured-logo-card span {
   width: 100%;
   font-size: 10px;
@@ -352,16 +549,17 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
 .featured-logo-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+  box-shadow: 0;
 }
 
 .featured-logo-card:hover img {
   transform: scale(1.06);
 }
-
+.featured-logo-card:hover .logo-card-img-wrap img {
+  transform: scale(1.06);
+}
 /* ========================= RESPONSIVE ========================= */
 
 @media (max-width: 992px) {
@@ -385,6 +583,9 @@
   .vertical-brands-grid {
     gap: 14px;
   }
+  .featured-logos-grid {
+    gap: 14px;
+  }
   .vertical-page-intro {
     font-size: 14px;
     line-height: 1.8;
@@ -396,20 +597,29 @@
     font-size: 14px;
     line-height: 1.8;
   }
+
+  /* cards — width only, never fixed height */
   .logo-card {
     width: 140px;
-    height: 105px;
+    min-height: 105px;
+    height: auto;
   }
   .featured-logo-card {
     width: 140px;
-    height: 105px;
+    min-height: 105px;
+    height: auto;
   }
-  .logo-card-img-wrap {
-    height: 50px;
+
+  /* scale logos down proportionally inside smaller cards */
+  .logo-card-img-wrap img,
+  .featured-logo-card .logo-card-img-wrap img {
+    transform-origin: center;
+    scale: 0.85;
   }
-  .featured-logo-card img {
-    height: 50px;
-    max-height: 50px;
+  .logo-card:hover .logo-card-img-wrap img,
+  .featured-logo-card:hover .logo-card-img-wrap img {
+    transform: scale(1.07);
+    scale: 0.85;
   }
 }
 
@@ -422,19 +632,23 @@
     line-height: 1.7;
   }
   .logo-card {
-    width: 130px;
-    height: 96px;
+    width: 120px;
+    min-height: 96px;
+    height: auto;
   }
   .featured-logo-card {
-    width: 130px;
-    height: 96px;
+    width: 120px;
+    min-height: 96px;
+    height: auto;
   }
-  .logo-card-img-wrap {
-    height: 46px;
+  .logo-card-img-wrap img,
+  .featured-logo-card .logo-card-img-wrap img {
+    scale: 0.75;
   }
-  .featured-logo-card img {
-    height: 46px;
-    max-height: 46px;
+  .logo-card-text,
+  .featured-logo-card .logo-card-text {
+    font-size: 9px;
+    letter-spacing: 0.3px;
   }
 }
 
@@ -446,23 +660,46 @@
   .featured-logos-section {
     padding: 44px 0;
   }
+  .vertical-brands-grid {
+    gap: 10px;
+  }
+  .featured-logos-grid {
+    gap: 10px;
+  }
+
+  /* 2 columns on small mobile */
   .logo-card {
-    width: calc(50% - 10px);
-    height: 90px;
+    width: calc(50% - 8px);
+    min-height: 90px;
+    height: auto;
   }
   .featured-logo-card {
-    width: calc(50% - 10px);
-    height: 90px;
+    width: calc(50% - 8px);
+    min-height: 90px;
+    height: auto;
   }
-  .logo-card-img-wrap {
-    height: 42px;
-  }
-  .featured-logo-card img {
-    height: 42px;
-    max-height: 42px;
+  .logo-card-img-wrap img,
+  .featured-logo-card .logo-card-img-wrap img {
+    scale: 0.7;
   }
   .logo-card-text,
-  .featured-logo-card span {
-    font-size: 9px;
+  .featured-logo-card .logo-card-text {
+    font-size: 8px;
+    letter-spacing: 0.2px;
+  }
+}
+
+@media (max-width: 360px) {
+  .logo-card {
+    width: calc(50% - 6px);
+    min-height: 80px;
+  }
+  .featured-logo-card {
+    width: calc(50% - 6px);
+    min-height: 80px;
+  }
+  .logo-card-img-wrap img,
+  .featured-logo-card .logo-card-img-wrap img {
+    scale: 0.62;
   }
 }

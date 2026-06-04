@@ -75,7 +75,6 @@ const featuredBrands = [
 
 function Verticals() {
   useScrollReveal();
-
   const [selectedBrand, setSelectedBrand] = useState(null);
 
   return (
@@ -116,8 +115,10 @@ function Verticals() {
                 })
               }
             >
-              <img src={logoMap[name]} alt={name} />
-              <span>{name}</span>
+              <div className="logo-card-img-wrap">
+                <img src={logoMap[name]} alt={name} data-brand={name} />
+              </div>
+              <div className="logo-card-text">{name}</div>
             </div>
           ))}
         </div>
@@ -166,10 +167,8 @@ function Verticals() {
           key={i}
           className={`vertical-category${i === 0 ? " vertical-category--first" : ""}`}
         >
-          {" "}
           <h2 className="vertical-heading">{cat.title}</h2>
           <div className="container">
-            {/* logos first */}
             <div className="vertical-brands-grid">
               {cat.items.map((brand, j) => (
                 <div
@@ -191,6 +190,7 @@ function Verticals() {
                       src={logoMap[brand.name]}
                       alt={brand.name}
                       loading="lazy"
+                      data-brand={brand.name}
                     />
                   </div>
                   <div className="logo-card-text">{brand.name}</div>
@@ -198,7 +198,6 @@ function Verticals() {
               ))}
             </div>
 
-            {/* description below */}
             <div className="vertical-content" data-reveal="up" data-delay="100">
               <p className="vertical-description">{cat.description}</p>
             </div>
