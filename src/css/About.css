@@ -573,30 +573,44 @@
     right: 14px;
   }
 
-  .directors-grid,
-  .directors-grid-2,
-  .partners-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 24px;
-  }
+  @media (max-width: 768px) {
+    .directors-grid,
+    .directors-grid-2,
+    .partners-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      justify-items: center;
+    }
 
-  .director-card-scene {
-    flex: 0 1 260px;
-    display: flex;
-    justify-content: center;
-  }
+    .director-card-scene {
+      width: 100%;
+      max-width: 180px;
+    }
 
-  .director-card {
-    max-width: 100%;
-  }
+    .director-card {
+      width: 100%;
+      max-width: 180px;
+    }
 
-  .director-photo {
-    height: 240px;
+    .director-photo {
+      height: 200px;
+    }
+
+    .director-name {
+      font-size: 14px;
+    }
+
+    .director-role-text {
+      font-size: 12px;
+    }
+
+    .read-more-btn {
+      font-size: 12px;
+      padding: 8px 14px;
+    }
   }
 }
-
 @media (max-width: 480px) {
   .architect-banner-bg {
     height: 260px;
@@ -626,28 +640,24 @@
   .directors-grid,
   .directors-grid-2,
   .partners-grid {
-    gap: 24px;
-    align-items: flex-start;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .director-card-scene,
+  .director-card {
+    max-width: 160px;
   }
 
   .director-photo {
-    height: 280px;
+    height: 180px;
   }
 
-  .director-card-inner {
-    width: 100%;
-    max-width: 300px;
+  .director-name {
+    font-size: 13px;
   }
 
-  .director-card-scene {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-
-  .director-card {
-    width: 100%;
-    max-width: 300px;
-    margin-inline: auto;
+  .director-role-text {
+    font-size: 11px;
   }
 }
