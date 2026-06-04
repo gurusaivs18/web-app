@@ -574,17 +574,11 @@
 
 @media (max-width: 768px) {
   .vertical-category {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
   .featured-logos-section {
     padding: 60px 0;
-  }
-  .vertical-brands-grid {
-    gap: 14px;
-  }
-  .featured-logos-grid {
-    gap: 14px;
   }
   .vertical-page-intro {
     font-size: 14px;
@@ -598,53 +592,28 @@
     line-height: 1.8;
   }
 
-  /* cards — width only, never fixed height */
-  .logo-card {
-    width: 140px;
-    min-height: 105px;
-    height: auto;
-  }
-  .featured-logo-card {
-    width: 140px;
-    min-height: 105px;
-    height: auto;
+  /* switch both grids to CSS grid — 3 equal columns */
+  .vertical-brands-grid,
+  .featured-logos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    justify-items: center;
   }
 
-  /* scale logos down proportionally inside smaller cards */
-  .logo-card-img-wrap img,
-  .featured-logo-card .logo-card-img-wrap img {
-    transform-origin: center;
-    scale: 0.85;
-  }
-  .logo-card:hover .logo-card-img-wrap img,
-  .featured-logo-card:hover .logo-card-img-wrap img {
-    transform: scale(1.07);
-    scale: 0.85;
-  }
-}
-
-@media (max-width: 600px) {
-  .vertical-heading {
-    font-size: 24px;
-  }
-  .vertical-description {
-    font-size: 14px;
-    line-height: 1.7;
-  }
-  .logo-card {
-    width: 120px;
-    min-height: 96px;
-    height: auto;
-  }
+  .logo-card,
   .featured-logo-card {
-    width: 120px;
-    min-height: 96px;
+    width: 100%;
+    min-height: 90px;
     height: auto;
+    padding: 10px 8px 8px;
   }
+
   .logo-card-img-wrap img,
   .featured-logo-card .logo-card-img-wrap img {
-    scale: 0.75;
+    scale: 0.8;
   }
+
   .logo-card-text,
   .featured-logo-card .logo-card-text {
     font-size: 9px;
@@ -654,34 +623,40 @@
 
 @media (max-width: 480px) {
   .vertical-category {
-    padding-top: 44px;
-    padding-bottom: 44px;
+    padding-top: 36px;
+    padding-bottom: 36px;
   }
   .featured-logos-section {
-    padding: 44px 0;
-  }
-  .vertical-brands-grid {
-    gap: 10px;
-  }
-  .featured-logos-grid {
-    gap: 10px;
+    padding: 36px 0;
   }
 
-  /* 2 columns on small mobile */
-  .logo-card {
-    width: calc(50% - 8px);
-    min-height: 90px;
-    height: auto;
+  /* 3 columns on small mobile too */
+  .vertical-brands-grid,
+  .featured-logos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    justify-items: center;
   }
+
+  .logo-card,
   .featured-logo-card {
-    width: calc(50% - 8px);
-    min-height: 90px;
+    width: 100%;
+    min-height: 80px;
     height: auto;
+    padding: 8px 6px 6px;
+    border-radius: 8px;
   }
+
+  .logo-card-img-wrap {
+    min-height: 44px;
+  }
+
   .logo-card-img-wrap img,
   .featured-logo-card .logo-card-img-wrap img {
-    scale: 0.7;
+    scale: 0.65;
   }
+
   .logo-card-text,
   .featured-logo-card .logo-card-text {
     font-size: 8px;
@@ -690,16 +665,25 @@
 }
 
 @media (max-width: 360px) {
-  .logo-card {
-    width: calc(50% - 6px);
-    min-height: 80px;
+  .vertical-brands-grid,
+  .featured-logos-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
   }
+
+  .logo-card,
   .featured-logo-card {
-    width: calc(50% - 6px);
-    min-height: 80px;
+    min-height: 72px;
+    padding: 6px 4px 6px;
   }
+
   .logo-card-img-wrap img,
   .featured-logo-card .logo-card-img-wrap img {
-    scale: 0.62;
+    scale: 0.58;
+  }
+
+  .logo-card-text,
+  .featured-logo-card .logo-card-text {
+    font-size: 7px;
   }
 }
