@@ -356,7 +356,9 @@
 /* ─────────────────────────────────────────────
    CEO SECTION — Mobile stacked layout
    ───────────────────────────────────────────── */
-@media (max-width: 768px) {
+
+/* this is where i changed for css spacing with read more btn and next section */
+/* @media (max-width: 768px) {
   .ceo-content {
     height: auto;
     display: flex;
@@ -403,6 +405,16 @@
   .read-more-link {
     color: var(--color-primary);
   }
+  .ceo-section {
+    margin-bottom: 0;
+  }
+  .ceo-info {
+    padding-bottom: var(--sp-6);
+    margin-bottom: 0;
+  }
+  .directors-section {
+    padding-top: var(--sp-10);
+  }
 }
 
 @media (max-width: 480px) {
@@ -413,7 +425,10 @@
   .ceo-info {
     padding: var(--sp-4) var(--sp-4) var(--sp-6);
   }
-}
+  .directors-section {
+    padding-top: var(--sp-8);
+  }
+} */
 
 /* =================================================================
    CEO MODAL — Premium cinematic style

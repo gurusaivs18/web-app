@@ -1768,3 +1768,295 @@
   object-position: center;
   mix-blend-mode: multiply;
 }
+
+/* just in case if responsive needed */
+/* ================================================================
+   VERTICALS SLIDER — RESPONSIVE LOGO SIZES
+   ================================================================ */
+
+@media (max-width: 768px) {
+  .verticals-slider-outer {
+    margin-inline: 32px;
+  }
+
+  .vertical-slide-item {
+    width: 180px;
+    margin-right: 14px;
+  }
+
+  .vertical-logo-box {
+    height: 130px;
+    padding: 12px 16px;
+  }
+
+  /* Scale all per-brand heights/widths down ~80% */
+  .vertical-logo-box img[data-brand="Pressman's Sandwiches"] {
+    width: 72px !important;
+  }
+  .vertical-logo-box img[data-brand="Biriyani Box"] {
+    height: 72px !important;
+  }
+  .vertical-logo-box img[data-brand="Target One"] {
+    height: 72px !important;
+  }
+  .vertical-logo-box img[data-brand="VIP Cosmetics"] {
+    height: 72px !important;
+  }
+  .vertical-logo-box img[data-brand="Denaster"] {
+    height: 96px !important;
+  }
+  .vertical-logo-box img[data-brand="Monkey Box"] {
+    height: 72px !important;
+  }
+  .vertical-logo-box img[data-brand="Harrison / Inov8"] {
+    height: 46px !important;
+  }
+  .vertical-logo-box img[data-brand="Harrison Digital"] {
+    width: 152px !important;
+  }
+  .vertical-logo-box img[data-brand="Garmin by Activ8"] {
+    height: 96px !important;
+  }
+  .vertical-logo-box img[data-brand="Activ8"] {
+    height: 63px !important;
+  }
+  .vertical-logo-box img[data-brand="Motiv8"] {
+    height: 48px !important;
+  }
+  .vertical-logo-box img[data-brand="ZeroG Beds & Mattresses"] {
+    height: 96px !important;
+  }
+  .vertical-logo-box img[data-brand="Snap Fitness"] {
+    height: 56px !important;
+  }
+  .vertical-logo-box img[data-brand="United Pro Sports"] {
+    height: 50px !important;
+  }
+  .vertical-logo-box img[data-brand="UAE Bulls"] {
+    height: 68px !important;
+  }
+  .vertical-logo-box img[data-brand="BVB League"] {
+    height: 72px !important;
+  }
+  .vertical-logo-box img[data-brand="VK Technologies"] {
+    width: 176px !important;
+  }
+  .vertical-logo-box img[data-brand="NB Ventures"] {
+    width: 104px !important;
+  }
+  .vertical-logo-box img[data-brand="Yellow Chilli"] {
+    height: 104px !important;
+  }
+  .vertical-logo-box img[data-brand="Hong Kong"] {
+    height: 51px !important;
+  }
+  .vertical-logo-box img[data-brand="Khichdi Tales"] {
+    height: 70px !important;
+  }
+  .vertical-logo-box img[data-brand="Pizza Tales"] {
+    height: 75px !important;
+  }
+  .vertical-logo-box img[data-brand="Thali Tales"] {
+    height: 100px !important;
+    width: 176px !important;
+  }
+  .vertical-logo-box img[data-brand="Beijing Lu"] {
+    height: 64px !important;
+  }
+  .vertical-logo-box img[data-brand="Booster Juice"] {
+    width: 168px !important;
+  }
+  .vertical-logo-box img[data-brand="Epic Fitouts"] {
+    height: 48px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .verticals-slider-outer {
+    margin-inline: 16px;
+  }
+
+  .vertical-slide-item {
+    width: 150px;
+    margin-right: 10px;
+  }
+
+  .vertical-logo-box {
+    height: 110px;
+    padding: 10px 12px;
+  }
+
+  /* Scale down ~65% of desktop */
+  .vertical-logo-box img[data-brand="Pressman's Sandwiches"] {
+    width: 58px !important;
+  }
+  .vertical-logo-box img[data-brand="Biriyani Box"] {
+    height: 58px !important;
+  }
+  .vertical-logo-box img[data-brand="Target One"] {
+    height: 58px !important;
+  }
+  .vertical-logo-box img[data-brand="VIP Cosmetics"] {
+    height: 58px !important;
+  }
+  .vertical-logo-box img[data-brand="Denaster"] {
+    height: 78px !important;
+  }
+  .vertical-logo-box img[data-brand="Monkey Box"] {
+    height: 58px !important;
+  }
+  .vertical-logo-box img[data-brand="Harrison / Inov8"] {
+    height: 38px !important;
+  }
+  .vertical-logo-box img[data-brand="Harrison Digital"] {
+    width: 124px !important;
+  }
+  .vertical-logo-box img[data-brand="Garmin by Activ8"] {
+    height: 78px !important;
+  }
+  .vertical-logo-box img[data-brand="Activ8"] {
+    height: 51px !important;
+  }
+  .vertical-logo-box img[data-brand="Motiv8"] {
+    height: 39px !important;
+  }
+  .vertical-logo-box img[data-brand="ZeroG Beds & Mattresses"] {
+    height: 78px !important;
+  }
+  .vertical-logo-box img[data-brand="Snap Fitness"] {
+    height: 46px !important;
+  }
+  .vertical-logo-box img[data-brand="United Pro Sports"] {
+    height: 40px !important;
+  }
+  .vertical-logo-box img[data-brand="UAE Bulls"] {
+    height: 55px !important;
+  }
+  .vertical-logo-box img[data-brand="BVB League"] {
+    height: 58px !important;
+  }
+  .vertical-logo-box img[data-brand="VK Technologies"] {
+    width: 143px !important;
+  }
+  .vertical-logo-box img[data-brand="NB Ventures"] {
+    width: 85px !important;
+  }
+  .vertical-logo-box img[data-brand="Yellow Chilli"] {
+    height: 85px !important;
+  }
+  .vertical-logo-box img[data-brand="Hong Kong"] {
+    height: 42px !important;
+  }
+  .vertical-logo-box img[data-brand="Khichdi Tales"] {
+    height: 57px !important;
+  }
+  .vertical-logo-box img[data-brand="Pizza Tales"] {
+    height: 61px !important;
+  }
+  .vertical-logo-box img[data-brand="Thali Tales"] {
+    height: 81px !important;
+    width: 143px !important;
+  }
+  .vertical-logo-box img[data-brand="Beijing Lu"] {
+    height: 52px !important;
+  }
+  .vertical-logo-box img[data-brand="Booster Juice"] {
+    width: 137px !important;
+  }
+  .vertical-logo-box img[data-brand="Epic Fitouts"] {
+    height: 39px !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .vertical-slide-item {
+    width: 130px;
+    margin-right: 8px;
+  }
+
+  .vertical-logo-box {
+    height: 90px;
+    padding: 8px 10px;
+  }
+
+  /* Scale down ~55% of desktop */
+  .vertical-logo-box img[data-brand="Pressman's Sandwiches"] {
+    width: 50px !important;
+  }
+  .vertical-logo-box img[data-brand="Biriyani Box"] {
+    height: 50px !important;
+  }
+  .vertical-logo-box img[data-brand="Target One"] {
+    height: 50px !important;
+  }
+  .vertical-logo-box img[data-brand="VIP Cosmetics"] {
+    height: 50px !important;
+  }
+  .vertical-logo-box img[data-brand="Denaster"] {
+    height: 66px !important;
+  }
+  .vertical-logo-box img[data-brand="Monkey Box"] {
+    height: 50px !important;
+  }
+  .vertical-logo-box img[data-brand="Harrison / Inov8"] {
+    height: 32px !important;
+  }
+  .vertical-logo-box img[data-brand="Harrison Digital"] {
+    width: 104px !important;
+  }
+  .vertical-logo-box img[data-brand="Garmin by Activ8"] {
+    height: 66px !important;
+  }
+  .vertical-logo-box img[data-brand="Activ8"] {
+    height: 43px !important;
+  }
+  .vertical-logo-box img[data-brand="Motiv8"] {
+    height: 33px !important;
+  }
+  .vertical-logo-box img[data-brand="ZeroG Beds & Mattresses"] {
+    height: 66px !important;
+  }
+  .vertical-logo-box img[data-brand="Snap Fitness"] {
+    height: 38px !important;
+  }
+  .vertical-logo-box img[data-brand="United Pro Sports"] {
+    height: 34px !important;
+  }
+  .vertical-logo-box img[data-brand="UAE Bulls"] {
+    height: 47px !important;
+  }
+  .vertical-logo-box img[data-brand="BVB League"] {
+    height: 50px !important;
+  }
+  .vertical-logo-box img[data-brand="VK Technologies"] {
+    width: 121px !important;
+  }
+  .vertical-logo-box img[data-brand="NB Ventures"] {
+    width: 72px !important;
+  }
+  .vertical-logo-box img[data-brand="Yellow Chilli"] {
+    height: 72px !important;
+  }
+  .vertical-logo-box img[data-brand="Hong Kong"] {
+    height: 35px !important;
+  }
+  .vertical-logo-box img[data-brand="Khichdi Tales"] {
+    height: 48px !important;
+  }
+  .vertical-logo-box img[data-brand="Pizza Tales"] {
+    height: 52px !important;
+  }
+  .vertical-logo-box img[data-brand="Thali Tales"] {
+    height: 66px !important;
+    width: 110px !important;
+  }
+  .vertical-logo-box img[data-brand="Beijing Lu"] {
+    height: 44px !important;
+  }
+  .vertical-logo-box img[data-brand="Booster Juice"] {
+    width: 115px !important;
+  }
+  .vertical-logo-box img[data-brand="Epic Fitouts"] {
+    height: 33px !important;
+  }
+}
