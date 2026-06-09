@@ -408,9 +408,10 @@
 }
 
 /* Logo zone — all logos fill the same box equally */
+/* ── Verticals sliding card — logo zone ── */
 .vertical-logo-box {
   width: 100%;
-  height: 120px;
+  height: 160px;
   flex-shrink: 0;
   display: flex;
   align-items: center;
@@ -418,8 +419,8 @@
   padding: 16px 20px;
   background: var(--white);
   box-sizing: border-box;
+  overflow: visible;
 }
-
 .vertical-logo-box a {
   display: flex;
   align-items: center;
@@ -427,15 +428,181 @@
   width: 100%;
   height: 100%;
 }
-
-/* Every logo fills the same padded box — object-fit: contain
-   keeps the aspect ratio so nothing gets stretched or squashed */
 .vertical-logo-box img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
   display: block;
-  box-sizing: border-box;
+  max-width: 160px !important;
+  max-height: 100px !important;
+  width: auto !important;
+  height: auto !important;
+  object-fit: contain;
+  object-position: center;
+  mix-blend-mode: multiply;
+  transition:
+    transform 0.4s ease,
+    opacity 0.3s ease;
+  opacity: 0.88;
+}
+
+.vertical-slide-item:hover .vertical-logo-box img {
+  transform: scale(1.07);
+  opacity: 1;
+}
+/* ── Per-brand sizes — unrestricted ── */
+.vertical-logo-box img[data-brand="Pressman's Sandwiches"] {
+  width: 90px !important;
+  height: auto !important;
+  max-width: none !important;
+  max-height: none !important;
+}
+.vertical-logo-box img[data-brand="Biriyani Box"] {
+  height: 90px !important;
+  width: auto !important;
+  max-width: none !important;
+  max-height: none !important;
+}
+.vertical-logo-box img[data-brand="Target One"] {
+  height: 90px !important;
+  width: auto !important;
+  max-width: none !important;
+  max-height: none !important;
+}
+.vertical-logo-box img[data-brand="VIP Cosmetics"] {
+  height: 90px !important;
+  width: auto !important;
+  max-width: none !important;
+  max-height: none !important;
+}
+.vertical-logo-box img[data-brand="Denaster"] {
+  height: 120px !important;
+  width: auto !important;
+  max-width: none !important;
+  max-height: none !important;
+}
+.vertical-logo-box img[data-brand="Monkey Box"] {
+  height: 90px !important;
+  width: auto !important;
+  max-width: none !important;
+  max-height: none !important;
+}
+.vertical-logo-box img[data-brand="Harrison / Inov8"] {
+  height: 58px !important;
+  width: auto !important;
+  max-width: none !important;
+  max-height: none !important;
+}
+.vertical-logo-box img[data-brand="Harrison Digital"] {
+  width: 190px !important;
+  height: auto !important;
+  max-width: none !important;
+  max-height: none !important;
+}
+.vertical-logo-box img[data-brand="Garmin by Activ8"] {
+  height: 120px !important;
+  width: auto !important;
+  max-width: none !important;
+  max-height: none !important;
+}
+.vertical-logo-box img[data-brand="Activ8"] {
+  height: 79px !important;
+  width: auto !important;
+  max-width: none !important;
+  max-height: none !important;
+}
+.vertical-logo-box img[data-brand="Motiv8"] {
+  height: 60px !important;
+  width: auto !important;
+  max-width: none !important;
+  max-height: none !important;
+}
+.vertical-logo-box img[data-brand="ZeroG Beds & Mattresses"] {
+  height: 120px !important;
+  width: auto !important;
+  max-width: none !important;
+  max-height: none !important;
+}
+.vertical-logo-box img[data-brand="Snap Fitness"] {
+  height: 70px !important;
+  width: auto !important;
+  max-width: none !important;
+  max-height: none !important;
+}
+.vertical-logo-box img[data-brand="United Pro Sports"] {
+  height: 62px !important;
+  width: auto !important;
+  max-width: none !important;
+  max-height: none !important;
+}
+.vertical-logo-box img[data-brand="UAE Bulls"] {
+  height: 85px !important;
+  width: auto !important;
+  max-width: none !important;
+  max-height: none !important;
+}
+.vertical-logo-box img[data-brand="BVB League"] {
+  height: 90px !important;
+  width: auto !important;
+  max-width: none !important;
+  max-height: none !important;
+}
+.vertical-logo-box img[data-brand="VK Technologies"] {
+  width: 220px !important;
+  height: auto !important;
+  max-width: none !important;
+  max-height: none !important;
+}
+.vertical-logo-box img[data-brand="NB Ventures"] {
+  width: 130px !important;
+  height: auto !important;
+  max-width: none !important;
+  max-height: none !important;
+}
+.vertical-logo-box img[data-brand="Yellow Chilli"] {
+  height: 130px !important;
+  width: auto !important;
+  max-width: none !important;
+  max-height: none !important;
+}
+.vertical-logo-box img[data-brand="Hong Kong"] {
+  height: 64px !important;
+  width: auto !important;
+  max-width: none !important;
+  max-height: none !important;
+}
+.vertical-logo-box img[data-brand="Khichdi Tales"] {
+  height: 88px !important;
+  width: auto !important;
+  max-width: none !important;
+  max-height: none !important;
+}
+.vertical-logo-box img[data-brand="Pizza Tales"] {
+  height: 94px !important;
+  width: auto !important;
+  max-width: none !important;
+  max-height: none !important;
+}
+.vertical-logo-box img[data-brand="Thali Tales"] {
+  height: 125px !important;
+  width: 220px !important;
+  max-width: none !important;
+  max-height: none !important;
+}
+.vertical-logo-box img[data-brand="Beijing Lu"] {
+  height: 80px !important;
+  width: auto !important;
+  max-width: none !important;
+  max-height: none !important;
+}
+.vertical-logo-box img[data-brand="Booster Juice"] {
+  width: 210px !important;
+  height: auto !important;
+  max-width: none !important;
+  max-height: none !important;
+}
+.vertical-logo-box img[data-brand="Epic Fitouts"] {
+  height: 60px !important;
+  width: auto !important;
+  max-width: none !important;
+  max-height: none !important;
 }
 
 /* Divider between logo and text */
@@ -1041,13 +1208,20 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80px;
+  width: 100%;
+  height: 90px;
+  padding: 8px 0;
 }
 
 .home-modal-logo-wrap img {
-  max-width: 160px;
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 200px;
   max-height: 70px;
   object-fit: contain;
+  object-position: center;
+  mix-blend-mode: multiply;
 }
 
 /* ── Shared text styles ── */
