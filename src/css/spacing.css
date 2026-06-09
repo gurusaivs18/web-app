@@ -670,3 +670,120 @@
   }
 }
 /* ── Scroll reveal — staggered delays via data-delay attribute ── */
+@media (max-width: 480px) {
+  .ceo-img {
+    height: 250px;
+    position: relative; /* ensure it's in flow */
+  }
+
+  .ceo-content {
+    height: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    overflow: visible !important;
+  }
+
+  .ceo-info {
+    position: relative !important;
+    top: auto !important;
+    right: auto !important;
+    transform: none !important;
+    max-width: 100% !important;
+    text-align: left;
+    padding: var(--sp-4) var(--sp-4) var(--sp-4);
+    background: var(--color-white);
+    color: var(--color-dark);
+  }
+
+  .ceo-info h3 {
+    color: var(--color-dark) !important;
+    font-size: 18px;
+  }
+
+  .ceo-info p {
+    color: var(--color-body) !important;
+    font-size: 12px;
+  }
+
+  .ceo-info .ceo-role {
+    color: var(--color-primary) !important;
+    font-size: 12px;
+  }
+
+  .ceo-content::after {
+    display: none !important;
+  }
+
+  .directors-section {
+    padding-top: var(--sp-10);
+    padding-bottom: var(--sp-6);
+  }
+
+  .home-verticals-logos {
+    padding-top: var(--sp-6);
+    padding-bottom: var(--sp-10);
+  }
+}
+
+/* jn */
+
+
+
+
+
+/* 
+ldmkond */
+@media (max-width: 480px) {
+  .ceo-img {
+    height: 250px;
+    position: relative; /* ensure it's in flow */
+  }
+
+  .ceo-content {
+    height: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    overflow: visible !important;
+  }
+
+  .ceo-info {
+    position: relative !important;
+    top: auto !important;
+    right: auto !important;
+    transform: none !important;
+    max-width: 100% !important;
+    text-align: left;
+    padding: var(--sp-4) var(--sp-4) var(--sp-4);
+    background: var(--color-white);
+    color: var(--color-dark);
+  }
+
+  .ceo-info h3 {
+    color: var(--color-dark) !important;
+    font-size: 18px;
+  }
+
+  .ceo-info p {
+    color: var(--color-body) !important;
+    font-size: 12px;
+  }
+
+  .ceo-info .ceo-role {
+    color: var(--color-primary) !important;
+    font-size: 12px;
+  }
+
+  .ceo-content::after {
+    display: none !important;
+  }
+
+  .directors-section {
+    padding-top: var(--sp-10);
+    padding-bottom: var(--sp-6);
+  }
+
+  .home-verticals-logos {
+    padding-top: var(--sp-6);
+    padding-bottom: var(--sp-10);
+  }
+}
