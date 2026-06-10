@@ -571,67 +571,6 @@
   }
 }
 
-@media (max-width: 768px) {
-  .vertical-category {
-    padding-top: 50px;
-    padding-bottom: 50px;
-  }
-  .featured-logos-section {
-    padding: 50px 0;
-  }
-  .vertical-page-intro {
-    font-size: 14px;
-    line-height: 1.8;
-  }
-  .brand-modal {
-    padding: 28px 22px;
-  }
-  .brand-modal-text {
-    font-size: 14px;
-    line-height: 1.8;
-  }
-
-  .vertical-brands-grid,
-  .featured-logos-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-  }
-
-  .logo-card,
-  .featured-logo-card {
-    width: calc(25% - 10px);
-    min-width: 72px;
-    max-width: 100px;
-    min-height: 80px;
-    height: auto;
-    padding: 8px 6px 6px;
-  }
-
-  .logo-card-img-wrap {
-    min-height: 40px;
-    max-height: 50px;
-    overflow: hidden;
-  }
-
-  .logo-card-img-wrap img,
-  .featured-logo-card .logo-card-img-wrap img {
-    max-width: 100% !important;
-    max-height: 44px !important;
-    width: auto !important;
-    height: auto !important;
-    scale: 1;
-  }
-
-  .logo-card-text,
-  .featured-logo-card .logo-card-text {
-    font-size: 8px;
-    letter-spacing: 0.2px;
-    margin-top: 4px;
-  }
-}
-
 @media (max-width: 480px) {
   .vertical-category {
     padding-top: 36px;
@@ -737,24 +676,13 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   .vertical-category {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 36px;
+    padding-bottom: 36px;
   }
   .featured-logos-section {
-    padding: 50px 0;
-  }
-  .vertical-page-intro {
-    font-size: 14px;
-    line-height: 1.8;
-  }
-  .brand-modal {
-    padding: 28px 22px;
-  }
-  .brand-modal-text {
-    font-size: 14px;
-    line-height: 1.8;
+    padding: 36px 0;
   }
 
   .vertical-brands-grid,
@@ -762,315 +690,165 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
+    gap: 8px;
   }
 
   .logo-card,
   .featured-logo-card {
-    width: calc(25% - 10px);
-    min-width: 72px;
-    max-width: 100px;
-    min-height: 80px;
+    width: calc(33.33% - 8px);
+    min-width: 88px;
+    max-width: 110px;
+    min-height: 72px;
     height: auto;
-    padding: 8px 6px 6px;
+    padding: 6px 4px 6px;
+    border-radius: 8px;
   }
 
   .logo-card-img-wrap {
-    min-height: 60px;
+    min-height: 36px;
     max-height: none;
     overflow: visible;
   }
 
-  /* Base size */
   .logo-card-img-wrap img,
   .featured-logo-card .logo-card-img-wrap img {
+    max-width: 100% !important;
+    max-height: 38px !important;
     width: auto !important;
     height: auto !important;
-    max-width: none !important;
+    scale: 1;
+  }
+  .logo-card-text,
+  .featured-logo-card .logo-card-text {
+    font-size: 10px;
+    letter-spacing: 0.15px;
+    margin-top: 3px;
+  }
+
+  /* ── Brand overrides at 480px ── */
+  .logo-card-img-wrap img[data-brand="Nb Ventures"] {
+    width: 80px !important;
+    height: auto !important;
     max-height: none !important;
   }
-
-  /* ===== Custom logo sizes for 768px ===== */
-
-  .logo-card-img-wrap img[data-brand="Pressman's Sandwiches"] {
-    width: 90px !important;
-  }
-
-  .logo-card-img-wrap img[data-brand="Target One"] {
-    height: 75px !important;
-  }
-
-  .logo-card-img-wrap img[data-brand="VIP Cosmetics"] {
-    height: 75px !important;
-  }
-
-  .logo-card-img-wrap img[data-brand="Denaster"] {
-    height: 85px !important;
-  }
-
-  .logo-card-img-wrap img[data-brand="Monkey Box"] {
-    height: 75px !important;
-  }
-
-  .logo-card-img-wrap img[data-brand="Harrison / Inov8"] {
-    height: 50px !important;
-  }
-  .logo-card-img-wrap img[data-brand="Biriyani Box"] {
-    height: 67px !important;
+  .logo-card-img-wrap img[data-brand="VK Technology"] {
+    width: 80px !important;
+    height: auto !important;
+    max-height: none !important;
   }
   .logo-card-img-wrap img[data-brand="Harrison Digital"] {
-    width: 120px !important;
+    width: 75px !important;
+    height: auto !important;
+    max-height: none !important;
   }
-
-  .logo-card-img-wrap img[data-brand="Garmin by Activ8"] {
-    height: 85px !important;
-  }
-
-  .logo-card-img-wrap img[data-brand="Activ8"] {
-    height: 65px !important;
-  }
-
-  .logo-card-img-wrap img[data-brand="Motiv8"] {
-    height: 50px !important;
-  }
-
-  .logo-card-img-wrap img[data-brand="ZeroG Beds & Mattresses"] {
-    height: 90px !important;
-  }
-
-  .logo-card-img-wrap img[data-brand="Snap Fitness"] {
-    height: 56px !important;
-  }
-
-  .logo-card-img-wrap img[data-brand="United Pro Sports (U-Pro)"] {
-    height: 50px !important;
-  }
-
-  .logo-card-img-wrap img[data-brand="UAE Bulls"] {
-    height: 65px !important;
-  }
-
-  .logo-card-img-wrap img[data-brand="BVB League"] {
-    height: 65px !important;
-  }
-
-  .logo-card-img-wrap img[data-brand="VK Technology"] {
-    width: 140px !important;
-  }
-
-  .logo-card-img-wrap img[data-brand="Nb Ventures"] {
-    width: 110px !important;
-  }
-
-  .logo-card-img-wrap img[data-brand="Yellow Chilli"] {
-    height: 85px !important;
-  }
-
-  .logo-card-img-wrap img[data-brand="Hong Kong"] {
-    height: 45px !important;
-  }
-
-  .logo-card-img-wrap img[data-brand="kichdi Tales"] {
-    height: 70px !important;
-  }
-
-  .logo-card-img-wrap img[data-brand="Pizza Tales"] {
-    height: 80px !important;
-  }
-
-  .logo-card-img-wrap img[data-brand="Thali Tales"] {
-    width: 168px !important;
-  }
-
-  .logo-card-img-wrap img[data-brand="beijing Lu"] {
-    height: 58px !important;
-  }
-
   .logo-card-img-wrap img[data-brand="Booster Juice"] {
-    width: 170px !important;
+    width: 75px !important;
+    height: auto !important;
+    max-height: none !important;
+  }
+  .logo-card-img-wrap img[data-brand="Denaster"] {
+    max-height: 48px !important;
+    width: auto !important;
+    max-width: none !important;
+  }
+  .logo-card-img-wrap img[data-brand="Monkey Box"] {
+    max-height: 48px !important;
+    width: auto !important;
+    max-width: none !important;
+  }
+  .logo-card-img-wrap img[data-brand="ZeroG Beds & Mattresses"] {
+    max-height: 48px !important;
+    width: auto !important;
+    max-width: none !important;
+  }
+  .logo-card-img-wrap img[data-brand="Garmin by Activ8"] {
+    max-height: 48px !important;
+    width: auto !important;
+    max-width: none !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .vertical-brands-grid,
+  .featured-logos-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
   }
 
-  .logo-card-img-wrap img[data-brand="Epic Fitouts"] {
-    height: 50px !important;
-  }
-  .logo-card-img-wrap img[data-brand="Pressman's Sandwiches"] {
-    height: 68px !important;
-  }
-
-  @media (max-width: 480px) {
-    .vertical-category {
-      padding-top: 36px;
-      padding-bottom: 36px;
-    }
-    .featured-logos-section {
-      padding: 36px 0;
-    }
-
-    .vertical-brands-grid,
-    .featured-logos-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 8px;
-    }
-
-    .logo-card,
-    .featured-logo-card {
-      width: calc(33.33% - 8px);
-      min-width: 88px;
-      max-width: 110px;
-      min-height: 72px;
-      height: auto;
-      padding: 6px 4px 6px;
-      border-radius: 8px;
-    }
-
-    .logo-card-img-wrap {
-      min-height: 36px;
-      max-height: none;
-      overflow: visible;
-    }
-
-    .logo-card-img-wrap img,
-    .featured-logo-card .logo-card-img-wrap img {
-      max-width: 100% !important;
-      max-height: 38px !important;
-      width: auto !important;
-      height: auto !important;
-      scale: 1;
-    }
-    .logo-card-text,
-    .featured-logo-card .logo-card-text {
-      font-size: 10px;
-      letter-spacing: 0.15px;
-      margin-top: 3px;
-    }
-
-    /* ── Brand overrides at 480px ── */
-    .logo-card-img-wrap img[data-brand="Nb Ventures"] {
-      width: 80px !important;
-      height: auto !important;
-      max-height: none !important;
-    }
-    .logo-card-img-wrap img[data-brand="VK Technology"] {
-      width: 80px !important;
-      height: auto !important;
-      max-height: none !important;
-    }
-    .logo-card-img-wrap img[data-brand="Harrison Digital"] {
-      width: 75px !important;
-      height: auto !important;
-      max-height: none !important;
-    }
-    .logo-card-img-wrap img[data-brand="Booster Juice"] {
-      width: 75px !important;
-      height: auto !important;
-      max-height: none !important;
-    }
-    .logo-card-img-wrap img[data-brand="Denaster"] {
-      max-height: 48px !important;
-      width: auto !important;
-      max-width: none !important;
-    }
-    .logo-card-img-wrap img[data-brand="Monkey Box"] {
-      max-height: 48px !important;
-      width: auto !important;
-      max-width: none !important;
-    }
-    .logo-card-img-wrap img[data-brand="ZeroG Beds & Mattresses"] {
-      max-height: 48px !important;
-      width: auto !important;
-      max-width: none !important;
-    }
-    .logo-card-img-wrap img[data-brand="Garmin by Activ8"] {
-      max-height: 48px !important;
-      width: auto !important;
-      max-width: none !important;
-    }
+  .logo-card,
+  .featured-logo-card {
+    width: calc(33.33% - 6px);
+    min-width: 76px;
+    max-width: 96px;
+    min-height: 66px;
+    height: auto;
+    padding: 5px 3px 5px;
+    border-radius: 8px;
   }
 
-  @media (max-width: 360px) {
-    .vertical-brands-grid,
-    .featured-logos-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 6px;
-    }
+  .logo-card-img-wrap {
+    min-height: 32px;
+    max-height: none;
+    overflow: visible;
+  }
 
-    .logo-card,
-    .featured-logo-card {
-      width: calc(33.33% - 6px);
-      min-width: 76px;
-      max-width: 96px;
-      min-height: 66px;
-      height: auto;
-      padding: 5px 3px 5px;
-      border-radius: 8px;
-    }
+  .logo-card-img-wrap img,
+  .featured-logo-card .logo-card-img-wrap img {
+    max-width: 100% !important;
+    max-height: 32px !important;
+    width: auto !important;
+    height: auto !important;
+    scale: 1;
+  }
 
-    .logo-card-img-wrap {
-      min-height: 32px;
-      max-height: none;
-      overflow: visible;
-    }
+  .logo-card-text,
+  .featured-logo-card .logo-card-text {
+    font-size: 9px;
+    letter-spacing: 0.1px;
+    margin-top: 2px;
+  }
 
-    .logo-card-img-wrap img,
-    .featured-logo-card .logo-card-img-wrap img {
-      max-width: 100% !important;
-      max-height: 32px !important;
-      width: auto !important;
-      height: auto !important;
-      scale: 1;
-    }
-
-    .logo-card-text,
-    .featured-logo-card .logo-card-text {
-      font-size: 9px;
-      letter-spacing: 0.1px;
-      margin-top: 2px;
-    }
-
-    /* ── Brand overrides at 360px ── */
-    .logo-card-img-wrap img[data-brand="Nb Ventures"] {
-      width: 70px !important;
-      height: auto !important;
-      max-height: none !important;
-    }
-    .logo-card-img-wrap img[data-brand="VK Technology"] {
-      width: 70px !important;
-      height: auto !important;
-      max-height: none !important;
-    }
-    .logo-card-img-wrap img[data-brand="Harrison Digital"] {
-      width: 65px !important;
-      height: auto !important;
-      max-height: none !important;
-    }
-    .logo-card-img-wrap img[data-brand="Booster Juice"] {
-      width: 65px !important;
-      height: auto !important;
-      max-height: none !important;
-    }
-    .logo-card-img-wrap img[data-brand="Denaster"] {
-      max-height: 40px !important;
-      width: auto !important;
-      max-width: none !important;
-    }
-    .logo-card-img-wrap img[data-brand="Monkey Box"] {
-      max-height: 40px !important;
-      width: auto !important;
-      max-width: none !important;
-    }
-    .logo-card-img-wrap img[data-brand="ZeroG Beds & Mattresses"] {
-      max-height: 40px !important;
-      width: auto !important;
-      max-width: none !important;
-    }
-    .logo-card-img-wrap img[data-brand="Garmin by Activ8"] {
-      max-height: 40px !important;
-      width: auto !important;
-      max-width: none !important;
-    }
+  /* ── Brand overrides at 360px ── */
+  .logo-card-img-wrap img[data-brand="Nb Ventures"] {
+    width: 70px !important;
+    height: auto !important;
+    max-height: none !important;
+  }
+  .logo-card-img-wrap img[data-brand="VK Technology"] {
+    width: 70px !important;
+    height: auto !important;
+    max-height: none !important;
+  }
+  .logo-card-img-wrap img[data-brand="Harrison Digital"] {
+    width: 65px !important;
+    height: auto !important;
+    max-height: none !important;
+  }
+  .logo-card-img-wrap img[data-brand="Booster Juice"] {
+    width: 65px !important;
+    height: auto !important;
+    max-height: none !important;
+  }
+  .logo-card-img-wrap img[data-brand="Denaster"] {
+    max-height: 40px !important;
+    width: auto !important;
+    max-width: none !important;
+  }
+  .logo-card-img-wrap img[data-brand="Monkey Box"] {
+    max-height: 40px !important;
+    width: auto !important;
+    max-width: none !important;
+  }
+  .logo-card-img-wrap img[data-brand="ZeroG Beds & Mattresses"] {
+    max-height: 40px !important;
+    width: auto !important;
+    max-width: none !important;
+  }
+  .logo-card-img-wrap img[data-brand="Garmin by Activ8"] {
+    max-height: 40px !important;
+    width: auto !important;
+    max-width: none !important;
   }
 }
