@@ -71,7 +71,7 @@
 }
 
 .impact-story-card {
-  border: 1px solid var(--gray-mid);
+  border: 2.5px solid  darkred;
   border-radius: 8px;
   overflow: hidden;
 }
