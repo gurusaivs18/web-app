@@ -1008,7 +1008,6 @@
 }
 
 /* ================= GET IN TOUCH ================= */
-/* ================= GET IN TOUCH ================= */
 .home-contact {
   background: var(--black);
   padding: clamp(40px, 6vw, 80px) 0;
@@ -1802,7 +1801,7 @@
   max-height: none !important;
 }
 .home-modal-logo-wrap img[data-brand="NB Ventures"] {
-  width: 320px !important;
+  width: 200px !important;
   height: auto !important;
   max-width: none !important;
   max-height: none !important;
