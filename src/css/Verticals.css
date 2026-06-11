@@ -310,7 +310,7 @@
 
 .brand-modal {
   position: relative;
-  max-height: 85vh;
+  max-height: 120vh;
   width: min(600px, 90%);
   max-width: 720px;
   overflow-y: auto;
@@ -335,8 +335,10 @@
 }
 
 .brand-modal-logo img {
-  width: 180px;
-  height: 90px;
+  max-width: 280px;
+  max-height: 140px;
+  width: auto;
+  height: auto;
   object-fit: contain;
   object-position: center;
   mix-blend-mode: multiply;
@@ -372,7 +374,29 @@
 .brand-modal-close:hover {
   color: black;
 }
+.brand-modal-logo img[data-brand="VK Technology"] {
+  max-width: 320px;
+}
 
+.brand-modal-logo img[data-brand="Nb Ventures"] {
+  max-width: px;
+}
+
+.brand-modal-logo img[data-brand="Booster Juice"] {
+  max-width: 280px;
+}
+
+.brand-modal-logo img[data-brand="Harrison Digital"] {
+  max-width: 260px;
+}
+
+.brand-modal-logo img[data-brand="Denaster"] {
+  max-height: 160px;
+}
+
+.brand-modal-logo img[data-brand="ZeroG Beds & Mattresses"] {
+  max-height: 160px;
+}
 @keyframes modalFade {
   from {
     opacity: 0;

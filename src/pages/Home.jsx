@@ -562,7 +562,7 @@ function BrandModal({ brand, onClose }) {
         </button>
 
         <div className="home-modal-logo-wrap">
-          <img src={brand.img} alt={brand.name} />
+          <img src={brand.img} alt={brand.name} data-brand={brand.name} />
         </div>
 
         <h3 className="home-modal-name">{brand.name}</h3>

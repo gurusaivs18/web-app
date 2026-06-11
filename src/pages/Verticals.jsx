@@ -145,7 +145,11 @@ function Verticals() {
               ×
             </button>
             <div className="brand-modal-logo">
-              <img src={selectedBrand.logo} alt={selectedBrand.name} />
+              <img
+                src={selectedBrand.logo}
+                alt={selectedBrand.name}
+                data-brand={selectedBrand.name}
+              />{" "}
               <h3 className="brand-modal-title">{selectedBrand.name}</h3>
             </div>
             <p className="brand-modal-text">{selectedBrand.description}</p>
