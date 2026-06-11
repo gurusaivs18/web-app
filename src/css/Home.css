@@ -1486,6 +1486,8 @@
 
   background: rgba(255, 255, 255, 0.96);
   border-radius: 14px;
+  border-style: solid;
+  color: rgb(0, 0, 0);
   padding: 32px 28px 28px;
   box-shadow: 0 25px 80px rgba(0, 0, 0, 0.2);
 
@@ -1517,11 +1519,11 @@
   font-size: 30px;
   line-height: 1;
   cursor: pointer;
-  color: #999;
+  color: #000000;
   transition: color 0.2s;
 }
 .home-modal-close:hover {
-  color: #111;
+  color: #f30808;
 }
 
 /* ── Director modal header (photo + name/role side by side) ── */
