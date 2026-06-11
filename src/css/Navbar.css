@@ -152,22 +152,8 @@
 }
 
 /* ───────────────── TABLET & MOBILE ───────────────── */
-/* TABLET */
+
 @media (max-width: 900px) {
-  .nav-container {
-    padding: 0 18px;
-  }
-
-  .nav-menu {
-    gap: 20px;
-  }
-
-  .nav-menu li span {
-    font-size: 12px;
-    letter-spacing: 0.05em;
-  }
-}
-@media (max-width: 768px) {
   .nav-container {
     padding: 0 20px;
   }
