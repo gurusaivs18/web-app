@@ -86,7 +86,7 @@ const brandLogos = [
   {
     img: motiv8,
     url: "https://motiv8.ae/",
-    order: 7,
+    order: 8,
     name: "Motiv8",
     slug: "motiv8",
     desc: "An athleisure multi-designer women's-only retail store. Brands include Michi, Port De Bras, Yoga Democracy, SquatWolf, Manduka, Bala, Women's Best, and more.",
@@ -102,7 +102,7 @@ const brandLogos = [
   {
     img: vkTech,
     url: "https://vktechnologiesme.com/",
-    order: 6,
+    order: 7,
     name: "VK Technologies",
     slug: "vk-technologies",
     desc: "Customized software solutions — POS systems, reporting tools, e-commerce development, and seamless ERP integration including Oracle NetSuite and Zoho.",
@@ -110,7 +110,7 @@ const brandLogos = [
   {
     img: targetOne,
     url: "https://targetoneme.com/",
-    order: 4,
+    order: 5,
     name: "Target One",
     slug: "target-one",
     desc: "Established 2016. Leading distributor of world-class electronic brands — Marshall, Jabra, Titan, Ugreen, JLab, Dicota, Alogic, and more across the region.",
@@ -118,7 +118,7 @@ const brandLogos = [
   {
     img: ventures,
     url: "https://nbventuresme.com/",
-    order: 3,
+    order: 4,
     name: "NB Ventures",
     slug: "nb-ventures",
     desc: "A growth-stage venture fund based in the U.A.E. with a portfolio of 70+ Indian start-ups. Strategic Director Rushab Bhatnagar spearheads the Bangalore office.",
@@ -126,7 +126,7 @@ const brandLogos = [
   {
     img: denaster,
     url: "https://www.denaster.com/",
-    order: 5,
+    order: 6,
     name: "Denaster",
     slug: "denaster",
     desc: "Joined the group in 2021. Distributes Shokz, GoCube, Sphero, Eilik, thinOptics, Ring, Boxbollen, ShiftCam, and Ampere across the region.",
@@ -150,7 +150,7 @@ const brandLogos = [
   {
     img: inov8,
     url: "https://www.inov8.ae/",
-    order: 8,
+    order: 9,
     name: "Harrison / Inov8",
     slug: "inov8",
     desc: "Duty-free retail operator with presence across Dubai, Abu Dhabi, and Qatar Duty Free locations.",
@@ -158,7 +158,7 @@ const brandLogos = [
   {
     img: activ8,
     url: "https://activ8.ae/",
-    order: 9,
+    order: 10,
     name: "Activ8",
     slug: "activ8",
     desc: "Retail business supporting premium fitness, wellness, and technology retail concepts across the UAE.",
@@ -166,7 +166,7 @@ const brandLogos = [
   {
     img: harrisonDigital,
     url: "",
-    order: 12,
+    order: 13,
     name: "Harrison Digital",
     slug: "harrison-digital",
     desc: "Part of the group's digital retail and distribution ecosystem supporting brand expansion initiatives.",
@@ -174,7 +174,7 @@ const brandLogos = [
   {
     img: garmin,
     url: "https://www.garmin.ae/",
-    order: 10,
+    order: 11,
     name: "Garmin by Activ8",
     slug: "garmin-by-activ8",
     desc: "Authorized Garmin retailer with multiple stores across the UAE carrying Garmin and Shokz products.",
@@ -182,7 +182,7 @@ const brandLogos = [
   {
     img: zeroG,
     url: "https://zerogmattress.ae/",
-    order: 13,
+    order: 14,
     name: "ZeroG Beds & Mattresses",
     slug: "zerog-beds",
     desc: "Homegrown sleep and wellness brand delivering premium mattresses and bedding solutions.",
@@ -190,7 +190,7 @@ const brandLogos = [
   {
     img: vipCosmetics,
     url: "",
-    order: 14,
+    order: 15,
     name: "VIP Cosmetics",
     slug: "vip-cosmetics",
     desc: "Skincare distribution arm under Target One representing premium beauty and skincare brands.",
@@ -206,7 +206,7 @@ const brandLogos = [
   {
     img: snapFitness,
     url: "https://www.snapfitness.com/ae",
-    order: 11,
+    order: 12,
     name: "Snap Fitness",
     slug: "snap-fitness",
     desc: "Global fitness franchise with multiple locations across the UAE promoting healthy lifestyles.",
@@ -262,7 +262,7 @@ const brandLogos = [
   {
     img: thaliTales,
     url: "",
-    order: 26,
+    order: 3,
     name: "Thali Tales",
     slug: "thali-tales",
     desc: "Traditional Indian dining concept within JSB Group's India operations.",
