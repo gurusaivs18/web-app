@@ -78,7 +78,7 @@ const brandLogos = [
   {
     img: uaeBulls,
     url: "https://uaebulls.ae",
-    order: 6,
+    order: 20,
     name: "UAE Bulls",
     slug: "uae-bulls",
     desc: "Neelesh Bhatnagar's passion for cricket led him to own the Delhi Bulls team. After eight seasons, the U.A.E. Bulls achieved a historic milestone — Champions of Season 9 (2025–26).",
@@ -86,7 +86,7 @@ const brandLogos = [
   {
     img: motiv8,
     url: "https://motiv8.ae/",
-    order: 2,
+    order: 7,
     name: "Motiv8",
     slug: "motiv8",
     desc: "An athleisure multi-designer women's-only retail store. Brands include Michi, Port De Bras, Yoga Democracy, SquatWolf, Manduka, Bala, Women's Best, and more.",
@@ -94,7 +94,7 @@ const brandLogos = [
   {
     img: pressmans,
     url: "https://pressmans.com/",
-    order: 3,
+    order: 19,
     name: "Pressman's Sandwiches",
     slug: "pressmans",
     desc: "A homegrown brand specializing in healthy and fresh sandwiches and salads. 10 live locations across the U.A.E. and expanding in India through the cloud kitchen space.",
@@ -102,7 +102,7 @@ const brandLogos = [
   {
     img: vkTech,
     url: "https://vktechnologiesme.com/",
-    order: 4,
+    order: 6,
     name: "VK Technologies",
     slug: "vk-technologies",
     desc: "Customized software solutions — POS systems, reporting tools, e-commerce development, and seamless ERP integration including Oracle NetSuite and Zoho.",
@@ -110,7 +110,7 @@ const brandLogos = [
   {
     img: targetOne,
     url: "https://targetoneme.com/",
-    order: 5,
+    order: 4,
     name: "Target One",
     slug: "target-one",
     desc: "Established 2016. Leading distributor of world-class electronic brands — Marshall, Jabra, Titan, Ugreen, JLab, Dicota, Alogic, and more across the region.",
@@ -118,7 +118,7 @@ const brandLogos = [
   {
     img: ventures,
     url: "https://nbventuresme.com/",
-    order: 1,
+    order: 3,
     name: "NB Ventures",
     slug: "nb-ventures",
     desc: "A growth-stage venture fund based in the U.A.E. with a portfolio of 70+ Indian start-ups. Strategic Director Rushab Bhatnagar spearheads the Bangalore office.",
@@ -126,7 +126,7 @@ const brandLogos = [
   {
     img: denaster,
     url: "https://www.denaster.com/",
-    order: 7,
+    order: 5,
     name: "Denaster",
     slug: "denaster",
     desc: "Joined the group in 2021. Distributes Shokz, GoCube, Sphero, Eilik, thinOptics, Ring, Boxbollen, ShiftCam, and Ampere across the region.",
@@ -134,7 +134,7 @@ const brandLogos = [
   {
     img: biriyaniBox,
     url: "",
-    order: 8,
+    order: 18,
     name: "Biriyani Box",
     slug: "biriyani-box",
     desc: "Part of JSB Group's growing Food & Beverage portfolio, focused on delivering flavorful and authentic biriyani experiences.",
@@ -142,7 +142,7 @@ const brandLogos = [
   {
     img: boosterJuice,
     url: "https://boosterjuice.com/",
-    order: 9,
+    order: 21,
     name: "Booster Juice",
     slug: "booster-juice",
     desc: "International smoothie and healthy beverage brand operating under JSB Group's F&B portfolio.",
@@ -150,7 +150,7 @@ const brandLogos = [
   {
     img: inov8,
     url: "https://www.inov8.ae/",
-    order: 10,
+    order: 8,
     name: "Harrison / Inov8",
     slug: "inov8",
     desc: "Duty-free retail operator with presence across Dubai, Abu Dhabi, and Qatar Duty Free locations.",
@@ -158,7 +158,7 @@ const brandLogos = [
   {
     img: activ8,
     url: "https://activ8.ae/",
-    order: 11,
+    order: 9,
     name: "Activ8",
     slug: "activ8",
     desc: "Retail business supporting premium fitness, wellness, and technology retail concepts across the UAE.",
@@ -174,7 +174,7 @@ const brandLogos = [
   {
     img: garmin,
     url: "https://www.garmin.ae/",
-    order: 13,
+    order: 10,
     name: "Garmin by Activ8",
     slug: "garmin-by-activ8",
     desc: "Authorized Garmin retailer with multiple stores across the UAE carrying Garmin and Shokz products.",
@@ -182,7 +182,7 @@ const brandLogos = [
   {
     img: zeroG,
     url: "https://zerogmattress.ae/",
-    order: 14,
+    order: 13,
     name: "ZeroG Beds & Mattresses",
     slug: "zerog-beds",
     desc: "Homegrown sleep and wellness brand delivering premium mattresses and bedding solutions.",
@@ -190,7 +190,7 @@ const brandLogos = [
   {
     img: vipCosmetics,
     url: "",
-    order: 15,
+    order: 14,
     name: "VIP Cosmetics",
     slug: "vip-cosmetics",
     desc: "Skincare distribution arm under Target One representing premium beauty and skincare brands.",
@@ -198,7 +198,7 @@ const brandLogos = [
   {
     img: monkeyBox,
     url: "https://monkeyboxforkids.in/",
-    order: 16,
+    order: 22,
     name: "Monkey Box",
     slug: "monkey-box",
     desc: "Lifestyle and consumer-focused brand within JSB Group's retail and distribution ecosystem.",
@@ -206,7 +206,7 @@ const brandLogos = [
   {
     img: snapFitness,
     url: "https://www.snapfitness.com/ae",
-    order: 17,
+    order: 11,
     name: "Snap Fitness",
     slug: "snap-fitness",
     desc: "Global fitness franchise with multiple locations across the UAE promoting healthy lifestyles.",
@@ -214,7 +214,7 @@ const brandLogos = [
   {
     img: uPro,
     url: "https://upro.ae/",
-    order: 18,
+    order: 15,
     name: "United Pro Sports",
     slug: "u-pro",
     desc: "World-class indoor sports facility featuring football, cricket, basketball, volleyball, badminton, and more.",
@@ -222,7 +222,7 @@ const brandLogos = [
   {
     img: bvbLeague,
     url: "https://bvbpro.com/",
-    order: 19,
+    order: 16,
     name: "BVB League",
     slug: "bvb-league",
     desc: "Franchise-based beach volleyball league combining elite sports, entertainment, and lifestyle experiences.",
@@ -230,7 +230,7 @@ const brandLogos = [
   {
     img: epicFitouts,
     url: "https://www.epicfitout.com/",
-    order: 20,
+    order: 17,
     name: "Epic Fitouts",
     slug: "epic-fitouts",
     desc: "Provider of premium interior design, fitout services, and customized outdoor furniture solutions.",
@@ -238,7 +238,7 @@ const brandLogos = [
   {
     img: yellowChilli,
     url: "https://theyellowchilli.com/",
-    order: 21,
+    order: 23,
     name: "Yellow Chilli",
     slug: "yellow-chilli",
     desc: "Indian restaurant brand operating under JSB Group's India vertical.",
@@ -246,7 +246,7 @@ const brandLogos = [
   {
     img: pizzaTales,
     url: "",
-    order: 22,
+    order: 24,
     name: "Pizza Tales",
     slug: "pizza-tales",
     desc: "Part of JSB Group's India food and beverage portfolio.",
@@ -254,7 +254,7 @@ const brandLogos = [
   {
     img: khichdiTales,
     url: "",
-    order: 23,
+    order: 25,
     name: "Khichdi Tales",
     slug: "khichdi-tales",
     desc: "Indian food concept focused on comfort and traditional meals.",
@@ -262,7 +262,7 @@ const brandLogos = [
   {
     img: thaliTales,
     url: "",
-    order: 24,
+    order: 26,
     name: "Thali Tales",
     slug: "thali-tales",
     desc: "Traditional Indian dining concept within JSB Group's India operations.",
@@ -270,7 +270,7 @@ const brandLogos = [
   {
     img: hongKong,
     url: "",
-    order: 25,
+    order: 2,
     name: "Hong Kong",
     slug: "hong-kong",
     desc: "Part of JSB Group's India hospitality and restaurant portfolio.",
@@ -278,7 +278,7 @@ const brandLogos = [
   {
     img: beijingLu,
     url: "",
-    order: 26,
+    order: 1,
     name: "Beijing Lu",
     slug: "beijing-lu",
     desc: "Asian dining concept under JSB Group's India vertical.",
