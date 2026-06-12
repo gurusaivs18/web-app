@@ -158,6 +158,7 @@ function Verticals() {
               target="_blank"
               rel="noopener noreferrer"
               className="logo-card-btn"
+              onClick={() => setSelectedBrand(null)}
             >
               Go to Brand Website
             </a>
