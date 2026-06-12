@@ -271,10 +271,9 @@
 }
 
 .director-name {
-  font-family: var(--font-heading);
-  font-size: 13px;
-  font-weight: 800;
-  color: var(--text-dark);
+  font-family: serif;
+  /* font-size: 13px; */
+  /* font-weight: 250; */
   margin: 0 0 4px 0;
   line-height: 1.3;
   display: -webkit-box;
@@ -623,8 +622,8 @@
 
 .vertical-brand-name {
   font-family: var(--font-heading);
-  font-size: 12px;
-  font-weight: 800;
+  font-size: 12.5px;
+  font-weight: 550;
   text-transform: uppercase;
   letter-spacing: 0.8px;
   color: var(--text-dark);
@@ -643,7 +642,7 @@
 }
 
 .vertical-know-more {
-  font-size: 11px;
+  font-size: 12.8px;
   font-weight: 700;
   color: var(--red);
   text-decoration: none;

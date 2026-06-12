@@ -212,5 +212,4 @@ function Verticals() {
     </>
   );
 }
-
 export default Verticals;
