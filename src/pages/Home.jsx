@@ -543,7 +543,11 @@ function DirectorModal({ director, onClose }) {
 
         <p className="home-modal-bio">{director.bio}</p>
 
-        <a href={`/about#${director.slug}`} className="home-modal-btn">
+        <a
+          href={`/about#${director.slug}`}
+          className="home-modal-btn"
+          onClick={onClose}
+        >
           Know More
         </a>
       </div>
@@ -568,14 +572,19 @@ function BrandModal({ brand, onClose }) {
         <h3 className="home-modal-name">{brand.name}</h3>
         <p className="home-modal-bio">{brand.desc}</p>
 
-        <a
-          href={brand.url}
-          target="_blank"
-          rel="noopener noreferrer"
+        <button
           className="home-modal-btn"
+          onClick={() => {
+            const url = brand.url;
+            onClose(); // close instantly
+
+            setTimeout(() => {
+              window.open(url, "_blank", "noopener,noreferrer");
+            }, 50);
+          }}
         >
           Visit Website
-        </a>
+        </button>
       </div>
     </div>
   );
@@ -769,7 +778,21 @@ function Home() {
     window.addEventListener("keydown", handleKey);
     return () => window.removeEventListener("keydown", handleKey);
   }, []);
+  useEffect(() => {
+    const handleVisibilityChange = () => {
+      if (document.hidden) {
+        setCeoModalOpen(false);
+        setSelectedDirector(null);
+        setSelectedBrand(null);
+      }
+    };
 
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+
+    return () => {
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
+    };
+  }, []);
   useEffect(() => {
     if (ceoModalOpen || selectedDirector || selectedBrand) {
       document.body.style.overflow = "hidden";

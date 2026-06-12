@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "../css/Verticals.css";
 import "../css/ScrollReveal.css";
 import { useScrollReveal } from "../hooks/useScrollReveal";
@@ -76,6 +76,19 @@ const featuredBrands = [
 function Verticals() {
   useScrollReveal();
   const [selectedBrand, setSelectedBrand] = useState(null);
+  useEffect(() => {
+    const handleVisibilityChange = () => {
+      if (document.hidden) {
+        setSelectedBrand(null);
+      }
+    };
+
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+
+    return () => {
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
+    };
+  }, []);
 
   return (
     <>
