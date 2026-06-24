@@ -9,36 +9,36 @@ import { useScrollReveal } from "../hooks/useScrollReveal";
 import { useAutoScroll } from "../hooks/useAutoScroll";
 import ceoImage from "../assets/jsbGroupWebsite/jsbgroupwebsite-01.webp";
 
-import uaeBulls from "../assets/Brand-Logos/uae-bulls.jpg";
-import motiv8 from "../assets/Brand-Logos/motiv8.jpg";
-import pressmans from "../assets/Brand-Logos/pressmans (2).jpg";
-import vkTech from "../assets/Brand-Logos/vanityKart.jpg";
-import targetOne from "../assets/Brand-Logos/target1.jpeg";
-import ventures from "../assets/Brand-Logos/nbVentures.jpg";
-import denaster from "../assets/Brand-Logos/denaster.jpg";
-import activ8 from "../assets/Brand-Logos/activ8.jpeg";
-import bvbLeague from "../assets/Brand-Logos/bvb.jpg";
-import beijingLu from "../assets/Brand-Logos/beijing-lu.jpg";
-import biriyaniBox from "../assets/Brand-Logos/biriyani.jpg";
-import boosterJuice from "../assets/Brand-Logos/boosterjuice.jpg";
-import epicFitouts from "../assets/Brand-Logos/epicfitouts.jpg";
-import garmin from "../assets/Brand-Logos/garmin.jpeg";
-import harrisonDigital from "../assets/Brand-Logos/Harrison.jpg";
-import hongKong from "../assets/Brand-Logos/hongkong.jpg";
-import inov8 from "../assets/Brand-Logos/inov8.jpeg";
-import khichdiTales from "../assets/Brand-Logos/kichdi-tales.jpg";
-import zeroG from "../assets/Brand-Logos/zeroG.jpg";
-import monkeyBox from "../assets/Brand-Logos/monkeybox.jpg";
+import uaeBulls from "../assets/Brand-Logos/uae-bulls.webp";
+import motiv8 from "../assets/Brand-Logos/motiv8.webp";
+import pressmans from "../assets/Brand-Logos/pressmans (2).webp";
+import vkTech from "../assets/Brand-Logos/vanityKart.webp";
+import targetOne from "../assets/Brand-Logos/target1.webp";
+import ventures from "../assets/Brand-Logos/nbVentures.webp";
+import denaster from "../assets/Brand-Logos/denaster.webp";
+import activ8 from "../assets/Brand-Logos/activ8.webp";
+import bvbLeague from "../assets/Brand-Logos/bvb.webp";
+import beijingLu from "../assets/Brand-Logos/beijing-lu.webp";
+import biriyaniBox from "../assets/Brand-Logos/biriyani.webp";
+import boosterJuice from "../assets/Brand-Logos/boosterjuice.webp";
+import epicFitouts from "../assets/Brand-Logos/epicfitouts.webp";
+import garmin from "../assets/Brand-Logos/garmin.webp";
+import harrisonDigital from "../assets/Brand-Logos/Harrison.webp";
+import hongKong from "../assets/Brand-Logos/hongkong.webp";
+import inov8 from "../assets/Brand-Logos/inov8.webp";
+import khichdiTales from "../assets/Brand-Logos/kichdi-tales.webp";
+import zeroG from "../assets/Brand-Logos/zeroG.webp";
+import monkeyBox from "../assets/Brand-Logos/monkeybox.webp";
 
-import pizzaTales from "../assets/Brand-Logos/pizza-tales.jpg";
+import pizzaTales from "../assets/Brand-Logos/pizza-tales.webp";
 
-import snapFitness from "../assets/Brand-Logos/snapFitness.jpg";
+import snapFitness from "../assets/Brand-Logos/snapFitness.webp";
 
-import thaliTales from "../assets/Brand-Logos/thali-tales.jpg";
-import yellowChilli from "../assets/Brand-Logos/yellow-chilly.jpg";
+import thaliTales from "../assets/Brand-Logos/thali-tales.webp";
+import yellowChilli from "../assets/Brand-Logos/yellow-chilly.webp";
 
-import uPro from "../assets/Brand-Logos/upro.jpeg";
-import vipCosmetics from "../assets/Brand-Logos/vipcosmo.jpeg";
+import uPro from "../assets/Brand-Logos/upro.webp";
+import vipCosmetics from "../assets/Brand-Logos/vipcosmo.webp";
 
 // break
 
@@ -153,7 +153,7 @@ const brandLogos = [
     order: 9,
     name: "Harrison / Inov8",
     slug: "inov8",
-    
+
     desc: "Duty-free retail operator with presence across Dubai, Abu Dhabi, and Qatar Duty Free locations.",
   },
   {

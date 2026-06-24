@@ -21,13 +21,15 @@ async function convertImages(dir) {
     if ([".png", ".jpg", ".jpeg"].includes(ext)) {
       const output = fullPath.replace(ext, ".webp");
 
-      await sharp(fullPath).webp({ quality: 85 }).toFile(output);
+      await sharp(fullPath)
+        .webp({ quality: 85 })
+        .toFile(output);
 
-      console.log(`✓ Converted: ${file}`);
+      console.log(`Converted: ${file}`);
     }
   }
 }
 
 convertImages(logosDir)
-  .then(() => console.log("Brand-Logos conversion completed"))
+  .then(() => console.log("Done"))
   .catch(console.error);
