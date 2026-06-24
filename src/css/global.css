@@ -1,17 +1,8 @@
-/* 
-   JSB GROUP — Global Stylesheet
-
-   SCOPE: Design tokens · Base reset · Shared reusable classes only.
-    */
-
-/* 
-   1. DESIGN TOKENS
-    */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 html,
 body {
   overflow-x: hidden;
   width: 100%;
-  
 }
 :root {
   /* ── Brand Colors ── */
@@ -32,8 +23,8 @@ body {
   --color-white: #ffffff;
 
   /* ── Typography ── */
-  --font-primary: "Inter", "Helvetica Neue", Arial, sans-serif;
-  --font-heading: "Inter", "Helvetica Neue", Arial, sans-serif;
+  --font-primary: "Poppins", "Helvetica Neue", Arial, sans-serif;
+  --font-heading: "Poppins", "Helvetica Neue", Arial, sans-serif;
 
   --fw-regular: 400;
   --fw-medium: 500;

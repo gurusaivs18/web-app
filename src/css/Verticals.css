@@ -137,7 +137,7 @@
 /* ========================= PER BRAND SIZES ========================= */
 .logo-card-img-wrap img[data-brand="Pressman's Sandwiches"] {
   height: auto;
-  width: 100px;
+  width: 200px;
 }
 .logo-card-img-wrap img[data-brand="Biriyani Box"] {
   height: 90px;
@@ -152,7 +152,7 @@
   width: auto;
 }
 .logo-card-img-wrap img[data-brand="Denaster"] {
-  height: 110px;
+  height: 100px;
   width: auto;
 }
 .logo-card-img-wrap img[data-brand="Monkey Box"] {
@@ -160,7 +160,7 @@
   width: auto;
 }
 .logo-card-img-wrap img[data-brand="Harrison / Inov8"] {
-  height: 58px;
+  height: 85px;
   width: auto;
 }
 .logo-card-img-wrap img[data-brand="Harrison Digital"] {
@@ -168,7 +168,7 @@
   width: 160px;
 }
 .logo-card-img-wrap img[data-brand="Garmin by Activ8"] {
-  height: 110px;
+  height: 85px;
   width: auto;
 }
 .logo-card-img-wrap img[data-brand="Activ8"] {
@@ -176,15 +176,15 @@
   width: auto;
 }
 .logo-card-img-wrap img[data-brand="Motiv8"] {
-  height: 58px;
+  height: 90px;
   width: auto;
 }
 .logo-card-img-wrap img[data-brand="ZeroG Beds & Mattresses"] {
-  height: 120px;
+  height: 95px;
   width: auto;
 }
 .logo-card-img-wrap img[data-brand="Snap Fitness"] {
-  height: 65px;
+  height: 90px;
   width: auto;
 }
 .logo-card-img-wrap img[data-brand="United Pro Sports (U-Pro)"] {
@@ -192,11 +192,11 @@
   width: auto;
 }
 .logo-card-img-wrap img[data-brand="UAE Bulls"] {
-  height: 75px;
+  height: 90px;
   width: auto;
 }
 .logo-card-img-wrap img[data-brand="BVB League"] {
-  height: 80px;
+  height: 115px;
   width: auto;
 }
 .logo-card-img-wrap img[data-brand="VK Technology"] {
@@ -205,30 +205,30 @@
 }
 .logo-card-img-wrap img[data-brand="Nb Ventures"] {
   height: auto;
-  width: 140px;
+  width: 214px;
 }
 .logo-card-img-wrap img[data-brand="Yellow Chilli"] {
-  height: 120px;
+  height: 80px;
   width: auto;
 }
 .logo-card-img-wrap img[data-brand="Hong Kong"] {
-  height: 54px;
+  height: 84px;
   width: auto;
 }
 .logo-card-img-wrap img[data-brand="kichdi Tales"] {
-  height: 88px;
+  height: 84px;
   width: auto;
 }
 .logo-card-img-wrap img[data-brand="Pizza Tales"] {
-  height: 100px;
+  height: 90px;
   width: auto;
 }
 .logo-card-img-wrap img[data-brand="Thali Tales"] {
   height: 140px;
-  width: 220px;
+  width: 190px;
 }
 .logo-card-img-wrap img[data-brand="beijing Lu"] {
-  height: 60px;
+  height: 84px;
   width: auto;
 }
 .logo-card-img-wrap img[data-brand="Booster Juice"] {
@@ -236,7 +236,7 @@
   width: 200px;
 }
 .logo-card-img-wrap img[data-brand="Epic Fitouts"] {
-  height: 60px;
+  height: 100px;
   width: auto;
 }
 .logo-card:hover .logo-card-img-wrap img {
@@ -248,7 +248,7 @@
   width: 100%;
   font-family: serif;
   font-size: 14px;
-  font-weight:350;
+  font-weight: 350;
   color: var(--text-mid);
   text-align: center;
   text-transform: uppercase;
@@ -458,8 +458,8 @@
   transition: transform 0.3s ease;
 }
 .featured-logo-card img[data-brand="Pressman's Sandwiches"] {
-  height: auto;
-  width: 100px;
+  height: 100px;
+  width: 170px;
 }
 .featured-logo-card img[data-brand="Biriyani Box"] {
   height: 90px;
@@ -474,7 +474,7 @@
   width: auto;
 }
 .featured-logo-card img[data-brand="Denaster"] {
-  height: 110px;
+  height: 100px;
   width: auto;
 }
 .featured-logo-card img[data-brand="Monkey Box"] {
@@ -482,7 +482,7 @@
   width: auto;
 }
 .featured-logo-card img[data-brand="Harrison / Inov8"] {
-  height: 58px;
+  height: 80px;
   width: auto;
 }
 .featured-logo-card img[data-brand="Harrison Digital"] {
@@ -498,7 +498,7 @@
   width: auto;
 }
 .featured-logo-card img[data-brand="Motiv8"] {
-  height: 58px;
+  height: 85px;
   width: auto;
 }
 .featured-logo-card img[data-brand="ZeroG Beds & Mattresses"] {
@@ -506,7 +506,7 @@
   width: auto;
 }
 .featured-logo-card img[data-brand="Snap Fitness"] {
-  height: 65px;
+  height: 85px;
   width: auto;
 }
 .featured-logo-card img[data-brand="United Pro Sports (U-Pro)"] {
@@ -523,11 +523,11 @@
 }
 .featured-logo-card img[data-brand="VK Technology"] {
   height: auto;
-  width: 220px;
+  width: 135px;
 }
 .featured-logo-card img[data-brand="Nb Ventures"] {
   height: auto;
-  width: 140px;
+  width: 210px;
 }
 .featured-logo-card img[data-brand="Yellow Chilli"] {
   height: 100px;
