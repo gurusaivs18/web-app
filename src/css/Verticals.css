@@ -246,7 +246,7 @@
 /* ========================= CARD TEXT ========================= */
 .logo-card-text {
   width: 100%;
-  font-family: serif;
+  font-family: "Poppins", sans-serif;
   font-size: 14px;
   font-weight: 350;
   color: var(--text-mid);
