@@ -1780,6 +1780,12 @@
   max-width: none !important;
   max-height: none !important;
 }
+.home-modal-logo-wrap img[data-brand="Thali Tales"] {
+  width: px !important;
+  height: auto !important;
+  max-width: none !important;
+  max-height: none !important;
+}
 .home-modal-logo-wrap img[data-brand="VK Technologies"] {
   width: 365px !important;
   height: auto !important;
@@ -1796,7 +1802,7 @@
 }
 
 .home-modal-logo-wrap img[data-brand="Pizza Tales"] {
-  width: 180px !important;
+  width: 210px !important;
   height: auto !important;
   max-width: none !important;
   max-height: none !important;
@@ -1820,43 +1826,43 @@
   max-height: none !important;
 }
 .home-modal-logo-wrap img[data-brand="UAE Bulls"] {
-  width: 130px !important;
+  width: 250px !important;
   height: auto !important;
   max-width: none !important;
   max-height: none !important;
 }
 .home-modal-logo-wrap img[data-brand="Garmin by Activ8"] {
-  width: 340px !important;
+  width: 290px !important;
   height: auto !important;
   max-width: none !important;
   max-height: none !important;
 }
 .home-modal-logo-wrap img[data-brand="Monkey Box"] {
-  width: 165px !important;
+  width: 250px !important;
   height: auto !important;
   max-width: none !important;
   max-height: none !important;
 }
 .home-modal-logo-wrap img[data-brand="Thali Tales"] {
-  width: 300px !important;
+  width: 250px !important;
   height: auto !important;
   max-width: none !important;
   max-height: none !important;
 }
 .home-modal-logo-wrap img[data-brand="VIP Cosmetics"] {
-  width: 165px !important;
+  width: 205px !important;
   height: auto !important;
   max-width: none !important;
   max-height: none !important;
 }
 .home-modal-logo-wrap img[data-brand="BVB League"] {
-  width: 165px !important;
+  width: 295px !important;
   height: auto !important;
   max-width: none !important;
   max-height: none !important;
 }
 .home-modal-logo-wrap img[data-brand="Pressman's Sandwiches"] {
-  width: 165px !important;
+  width: 220px !important;
   height: auto !important;
   max-width: none !important;
   max-height: none !important;
