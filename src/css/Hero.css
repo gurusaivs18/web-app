@@ -2,20 +2,18 @@
 
 .hero {
   width: 100%;
-  height: 70vh;
-  min-height: 520px;
   position: relative;
+  /* NO fixed height — image drives the height */
   overflow: hidden;
 }
 
-/* IMAGE */
+/* IMAGE — normal flow, not absolute */
 .hero-img {
-  position: absolute;
-  inset: 0;
+  display: block;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
+  height: auto;
+  /* NOT position: absolute */
+  margin-bottom: -90px;
 }
 
 /* DARK OVERLAY */
@@ -69,7 +67,6 @@
   cursor: pointer;
   transition: 0.3s ease;
 }
-
 .hero-content .btn:hover {
   background: #8e1414;
   transform: translateY(-2px);
@@ -78,20 +75,13 @@
 /* ───────────────── TABLET ───────────────── */
 
 @media (max-width: 992px) {
-  .hero {
-    height: 60vh;
-    min-height: 450px;
-  }
-
   .hero-content {
     left: 50px;
     max-width: 80%;
   }
-
   .hero-content h1 {
     font-size: 40px;
   }
-
   .hero-content p {
     font-size: 15px;
   }
@@ -100,12 +90,6 @@
 /* ───────────────── SMALL TABLET ───────────────── */
 
 @media (max-width: 768px) {
-  .hero {
-    height: 55vh;
-    min-height: 420px;
-  }
-
-  /* MOVE TEXT AWAY FROM CENTER FACE AREA */
   .hero-content {
     left: 30px;
     right: 30px;
@@ -114,12 +98,10 @@
     transform: none;
     max-width: 100%;
   }
-
   .hero-content h1 {
     font-size: 34px;
     line-height: 1.2;
   }
-
   .hero-content p {
     font-size: 14px;
     margin-bottom: 18px;
@@ -129,27 +111,19 @@
 /* ───────────────── MOBILE ───────────────── */
 
 @media (max-width: 480px) {
-  .hero {
-    height: 60vh;
-    min-height: 380px;
-  }
-
   .hero-content {
     left: 20px;
     right: 20px;
     bottom: 40px;
     text-align: left;
   }
-
   .hero-content h1 {
     font-size: 26px;
   }
-
   .hero-content p {
     font-size: 13px;
     line-height: 1.5;
   }
-
   .hero-content .btn {
     padding: 10px 22px;
     font-size: 13px;
@@ -162,7 +136,6 @@
   .hero-content h1 {
     font-size: 22px;
   }
-
   .hero-content p {
     font-size: 12px;
   }
