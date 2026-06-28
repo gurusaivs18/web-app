@@ -7,7 +7,7 @@ import "../css/ScrollReveal.css";
 
 import { useScrollReveal } from "../hooks/useScrollReveal";
 import { useAutoScroll } from "../hooks/useAutoScroll";
-import ceoImage from "../assets/jsbGroupWebsite/jsbgroupwebsite-01.webp";
+import ceoImage from "../assets/jsbGroupWebsite/assets-jsb.png";
 
 import uaeBulls from "../assets/Brand-Logos/uae-bulls.webp";
 import motiv8 from "../assets/Brand-Logos/motiv8.webp";

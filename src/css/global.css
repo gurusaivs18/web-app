@@ -611,9 +611,8 @@ textarea.form-control {
   }
 
   .section {
-    padding-block: var(--sp-12);
+    padding-block: var(--sp-8); /* was --sp-12, reduce it */
   }
-
   .grid--2,
   .grid--3,
   .grid--4 {
@@ -638,5 +637,8 @@ textarea.form-control {
   .btn {
     padding: 9px var(--sp-6);
     font-size: var(--text-xs);
+  }
+  .section {
+    padding-block: var(--sp-6);
   }
 }
