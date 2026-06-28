@@ -1,15 +1,18 @@
 /* ───────────────── HERO BASE ───────────────── */
 
 .hero {
-  width: 100%;
   position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 600px;
   overflow: hidden;
 }
 
 .hero-img {
-  display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 /* DARK OVERLAY */
@@ -25,129 +28,35 @@
   z-index: 1;
 }
 
-/* ───────────────── CONTENT (DESKTOP) ───────────────── */
-
+/* Keep hero content above overlay.
+   Actual styling will be in Home.css */
 .hero-content {
   position: absolute;
   z-index: 2;
-  left: 80px;
-  top: 50%;
-  transform: translateY(-50%);
-  max-width: 600px;
-  color: white;
 }
 
-.hero-content h1 {
-  font-family: var(--font-heading);
-  font-size: 52px;
-  font-weight: 800;
-  line-height: 1.15;
-  margin-bottom: 14px;
-}
-
-.hero-content p {
-  font-size: 17px;
-  opacity: 0.9;
-  margin-bottom: 26px;
-}
-
-.hero-content .btn {
-  padding: 12px 30px;
-  border-radius: 999px;
-  background: #b71c1c;
-  color: #fff;
-  border: none;
-  font-weight: 600;
-  cursor: pointer;
-  transition: 0.3s ease;
-}
-.hero-content .btn:hover {
-  background: #8e1414;
-  transform: translateY(-2px);
-}
-
-/* ───────────────── TABLET ───────────────── */
+/* ───────────────── RESPONSIVE ───────────────── */
 
 @media (max-width: 992px) {
-  .hero-img {
-    margin-bottom: -180px;
-  }
-  .hero-content {
-    left: 50px;
-    max-width: 80%;
-  }
-  .hero-content h1 {
-    font-size: 40px;
-  }
-  .hero-content p {
-    font-size: 15px;
+  .hero {
+    min-height: 550px;
   }
 }
-
-/* ───────────────── SMALL TABLET ───────────────── */
 
 @media (max-width: 768px) {
-  .hero-img {
-    margin-bottom: -100px;
-  }
-  .hero-content {
-    left: 30px;
-    right: 30px;
-    top: 50%; /* ← center vertically */
-    bottom: auto; /* ← remove bottom anchor */
-    transform: translateY(-50%);
-    max-width: 100%;
-  }
-  .hero-content h1 {
-    font-size: 34px;
-    line-height: 1.2;
-  }
-  .hero-content p {
-    font-size: 14px;
-    margin-bottom: 18px;
+  .hero {
+    min-height: 500px;
   }
 }
-/* ───────────────── MOBILE ───────────────── */
 
 @media (max-width: 480px) {
-  .hero-img {
-    margin-bottom: -40px; /* less crop so hero stays tall enough */
-  }
-  .hero-content {
-    left: 20px;
-    right: 20px;
-    bottom: auto; /* remove bottom positioning */
-    top: 50%;
-    transform: translateY(-50%); /* back to vertical center */
-    text-align: left;
-  }
-  .hero-content h1 {
-    font-size: 26px;
-  }
-  .hero-content p {
-    font-size: 13px;
-    line-height: 1.5;
-  }
-  .hero-content .btn {
-    padding: 10px 22px;
-    font-size: 13px;
+  .hero {
+    min-height: 450px;
   }
 }
-/* ───────────────── VERY SMALL ───────────────── */
 
 @media (max-width: 360px) {
-  .hero-img {
-    margin-bottom: -30px;
-  }
-  .hero-content {
-    top: 50%;
-    transform: translateY(-50%);
-    bottom: auto;
-  }
-  .hero-content h1 {
-    font-size: 22px;
-  }
-  .hero-content p {
-    font-size: 12px;
+  .hero {
+    min-height: 420px;
   }
 }

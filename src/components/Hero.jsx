@@ -10,14 +10,16 @@ function Hero() {
       <img src={heroImage} alt="Hero" className="hero-img" />
 
       <div className="hero-content">
-        <h1 style={{ color: "white" }}>From Dreams to Reality</h1>
-        <p style={{ color: "white" }}>
+        <h1 className="hero-title">
+          <span>From</span> <span className="red-box">Dreams</span>{" "}
+          <span>to</span> <span className="red-box">Reality</span>
+        </h1>
+
+        <p className="hero-subtitle">
           The Unstoppable Force of Purposeful Action
         </p>
 
-        <button className="btn" onClick={() => navigate("/verticals")}>
-          Know More
-        </button>
+        <button className="hero-btn">Know More</button>
       </div>
     </section>
   );
