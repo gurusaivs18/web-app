@@ -1,6 +1,6 @@
 import "../css/Hero.css";
 import { useNavigate } from "react-router-dom";
-import heroImage from "../assets/jsbGroupWebsite/assets-jsb3.png";
+import heroImage from "../assets/jsbGroupWebsite/assets-jsb3.webp";
 
 function Hero() {
   const navigate = useNavigate();

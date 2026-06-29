@@ -6,12 +6,12 @@ import { useScrollReveal } from "../hooks/useScrollReveal"; // ← add this impo
 import ceoImage from "../assets/jsbGroupWebsite/jsbgroupwebsite-01.webp";
 import { useLocation } from "react-router-dom";
 // ── Director images ──
-import rushabImg from "../assets/Partners/rushab-assets-1.jpeg";
-import deepImg from "../assets/Partners/deep-asset-1.jpeg";
-import sanjeevImg from "../assets/Partners/sanjeev-assets-1.jpeg";
+import rushabImg from "../assets/Partners/rushab-assets-1.webp";
+import deepImg from "../assets/Partners/deep-asset-1.webp";
+import sanjeevImg from "../assets/Partners/sanjeev-assets-1.webp";
 
 // ── Partner images ──
-import sanalImg from "../assets/Partners/sanal-assets-1.jpeg";
+import sanalImg from "../assets/Partners/sanal-assets-1.webp";
 
 const CloudIcon = () => (
   <svg

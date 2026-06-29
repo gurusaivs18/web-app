@@ -1,21 +1,17 @@
 import fs from "fs";
 import path from "path";
-import sharp from "sharp";
 import { fileURLToPath } from "url";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const TARGET_FOLDERS = ["src/assets/Partners", "src/assets/jsbGroupWebsite"];
+const TARGET_FOLDERS = ["assets/Partners", "assets/jsbGroupWebsite"];
 
-const SUPPORTED_EXTENSIONS = [
-  ".jpg",
-  ".jpeg",
-  ".png",
-  ".avif",
-  ".bmp",
-  ".tiff",
-];
+// keep only webp
+const KEEP = ".webp";
+
+// delete these formats
+const DELETE_EXTENSIONS = [".jpg", ".jpeg", ".png", ".avif", ".bmp", ".tiff"];
 
 function getAllFiles(dir) {
   let results = [];
@@ -33,25 +29,18 @@ function getAllFiles(dir) {
   return results;
 }
 
-async function convertToWebp(filePath) {
+function deleteOldImages(filePath) {
   const ext = path.extname(filePath).toLowerCase();
 
-  if (!SUPPORTED_EXTENSIONS.includes(ext)) return;
-
-  const outputPath = filePath.replace(ext, ".webp");
-
-  try {
-    await sharp(filePath).webp({ quality: 80 }).toFile(outputPath);
-
-    console.log(`✓ Converted: ${filePath} → ${outputPath}`);
-  } catch (err) {
-    console.error(`✗ Failed: ${filePath}`, err.message);
+  if (DELETE_EXTENSIONS.includes(ext)) {
+    fs.unlinkSync(filePath);
+    console.log(`🗑 Deleted: ${filePath}`);
   }
 }
 
-async function run() {
+function run() {
   for (const folder of TARGET_FOLDERS) {
-    const fullFolder = path.join(__dirname, "..", folder);
+    const fullFolder = path.join(__dirname, folder);
 
     if (!fs.existsSync(fullFolder)) {
       console.warn(`Folder not found: ${fullFolder}`);
@@ -61,11 +50,11 @@ async function run() {
     const files = getAllFiles(fullFolder);
 
     for (const file of files) {
-      await convertToWebp(file);
+      deleteOldImages(file);
     }
   }
 
-  console.log("🎉 All conversions completed");
+  console.log("🎉 Cleanup completed (only .webp kept)");
 }
 
 run();

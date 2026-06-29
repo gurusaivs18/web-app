@@ -3,6 +3,7 @@ import "../css/Verticals.css";
 import "../css/ScrollReveal.css";
 import { useScrollReveal } from "../hooks/useScrollReveal";
 import { verticals } from "../data/verticals";
+import { useLocation } from "react-router-dom";
 
 import uaeBulls from "../assets/Brand-Logos/uae-bulls.webp";
 import motiv8 from "../assets/Brand-Logos/motiv8.webp";
@@ -73,6 +74,22 @@ const featuredBrands = [
 ];
 
 function Verticals() {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (!location.state?.scrollTo) return;
+
+    const id = location.state.scrollTo;
+
+    const el = document.getElementById(id);
+
+    if (el) {
+      setTimeout(() => {
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 300);
+    }
+  }, [location]);
+
   useScrollReveal();
   const [selectedBrand, setSelectedBrand] = useState(null);
   useEffect(() => {

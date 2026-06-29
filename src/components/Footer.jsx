@@ -1,10 +1,21 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FaLinkedinIn } from "react-icons/fa";
 import "../css/Footer.css";
 import Logo from "./Logo";
 import { verticals } from "../data/verticals";
-
 function Footer() {
+  const navigate = useNavigate();
+
+  const handleScroll = (id) => {
+    navigate("/verticals", { state: { scrollTo: id } });
+
+    setTimeout(() => {
+      document.getElementById(id)?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }, 300); // important delay for render
+  };
   const getId = (title) => title.toLowerCase().replace(/[^a-z0-9]+/g, "-");
   return (
     <footer className="footer">
@@ -62,10 +73,10 @@ function Footer() {
 
             <ul className="quick-links-list">
               {verticals.map((section, i) => (
-                <li key={i}>
-                  <a href={`/verticals#${getId(section.title)}`}>
+                <li>
+                  <button onClick={() => handleScroll(getId(section.title))}>
                     {section.title}
-                  </a>
+                  </button>
                 </li>
               ))}
             </ul>

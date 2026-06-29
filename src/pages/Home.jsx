@@ -7,7 +7,7 @@ import "../css/ScrollReveal.css";
 
 import { useScrollReveal } from "../hooks/useScrollReveal";
 import { useAutoScroll } from "../hooks/useAutoScroll";
-import ceoImage from "../assets/jsbGroupWebsite/assets-jsb.png";
+import ceoImage from "../assets/jsbGroupWebsite/assets-jsb.webp";
 
 import uaeBulls from "../assets/Brand-Logos/uae-bulls.webp";
 import motiv8 from "../assets/Brand-Logos/motiv8.webp";
@@ -42,10 +42,10 @@ import vipCosmetics from "../assets/Brand-Logos/vipcosmo.webp";
 
 // break
 
-import rushab from "../assets/Partners/rushab-assets-1.jpeg";
-import sinha from "../assets/Partners/sanjeev-assets-1.jpeg";
-import sanal from "../assets/Partners/sanal-assets-1.jpeg";
-import deep from "../assets/Partners/deep-asset-1.jpeg";
+import rushab from "../assets/Partners/rushab-assets-1.webp";
+import sinha from "../assets/Partners/sanjeev-assets-1.webp";
+import sanal from "../assets/Partners/sanal-assets-1.webp";
+import deep from "../assets/Partners/deep-asset-1.webp";
 
 /* ─── CEO Writeup ─────────────────────────────────────────────── */
 const ceoWriteup = `Neelesh Bhatnagar is an entrepreneur with over three decades of experience spanning the Middle East and India. As the CEO & Founder of JSB Group, he has built a diversified conglomerate with interests across retail, fitness, hospitality, healthcare, and technology.
