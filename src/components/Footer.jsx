@@ -73,7 +73,7 @@ function Footer() {
 
             <ul className="quick-links-list">
               {verticals.map((section, i) => (
-                <li>
+                <li key={`${section.title}-${i}`}>
                   <button onClick={() => handleScroll(getId(section.title))}>
                     {section.title}
                   </button>

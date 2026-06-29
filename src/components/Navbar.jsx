@@ -14,6 +14,7 @@ function Navbar() {
   const navigate = useNavigate();
 
   const links = [
+    { to: "/", label: "Home" },
     { to: "/about", label: "ABOUT US" },
     { to: "/pillars", label: "PILLARS" },
     { to: "/verticals", label: "VERTICALS" },
@@ -25,14 +26,25 @@ function Navbar() {
   const handleNav = (to) => {
     setMenuOpen(false);
 
+    // ✅ special case: Pillars → About section
     if (to === "/pillars") {
       navigate("/about#architect");
+
+      setTimeout(() => {
+        const el = document.getElementById("architect");
+        el?.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 200);
+
       return;
     }
 
+    // default navigation
     navigate(to);
-  };
 
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }, 150);
+  };
   // CLOSE MENU ON OUTSIDE CLICK
   useEffect(() => {
     function handleClickOutside(event) {

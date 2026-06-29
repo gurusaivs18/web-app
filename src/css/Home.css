@@ -42,32 +42,30 @@
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* fills the whole area, no gaps */
-  object-position: left center; /* keeps face anchored left */
-  background: #d3d3d3;
+  object-fit: cover;
+  object-position: left center;
+  z-index: 0;
 }
-
-.ceo-content::after {
+.ceo-content::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0.05) 30%,
-    /* nearly transparent over photo */ rgba(211, 211, 211, 0.6) 55%,
-    rgba(211, 211, 211, 0.92) 72%,
-    rgba(211, 211, 211, 1) 85%
-  );
   z-index: 1;
+
+  background:
+    radial-gradient(
+      circle at 30% 40%,
+      rgba(255, 255, 255, 0.1),
+      transparent 60%
+    ),
+    radial-gradient(circle at 80% 30%, rgba(0, 0, 0, 0.08), transparent 55%),
+    radial-gradient(circle at 50% 90%, rgba(0, 0, 0, 0.12), transparent 60%);
 }
 .ceo-info {
   position: absolute;
   top: 50%;
   right: 60px;
   transform: translateY(-50%);
-  max-width: 420px;
-  text-align: right;
-  color: #fff;
   z-index: 2;
 }
 .ceo-info h3 {
@@ -1253,7 +1251,7 @@
 /* Prevent hover/tap from breaking autoplay on mobile devices */
 /* ================= HOME MODALS (Directors & Brands) ================= */
 
-.home-modal-overlay {
+/* .home-modal-overlay {
   position: fixed;
   inset: 0;
   z-index: 9999;
@@ -1435,37 +1433,8 @@
   }
 } /* ================= HOME MODALS (Directors & Brands) ================= */
 
-.home-modal-overlay {
-  position: fixed;
-  inset: 0;
-  z-index: 9999;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  background: rgba(0, 0, 0, 0.35);
-}
 
-.home-modal {
-  position: relative;
-  width: min(480px, 92%);
-  max-height: 85vh;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
 
-  background: rgba(255, 255, 255, 0.96);
-  border-radius: 14px;
-  padding: 32px 28px 28px;
-  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.2);
-
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-
-  animation: homemodalFade 0.28s ease;
-}
 
 @keyframes homemodalFade {
   from {
@@ -1772,7 +1741,7 @@
 
 .home-modal-btn:hover {
   background: #8b0000;
-}
+} */
 
 /* Make sure span-based Know More links look and feel clickable */
 .director-know-more,
