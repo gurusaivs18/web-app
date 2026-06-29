@@ -32,26 +32,16 @@
   width: 100%;
 }
 .ceo-content {
-  position: relative;
-  display: block;
-  width: 100%;
-  background: transparent !important;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  line-height: 0;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 .ceo-img {
-  display: block;
   width: 100%;
-  height: auto;
-  margin: 0;
-  padding: 0;
-}
-.ceo-section {
-  margin: 0;
-  padding: 0;
-  background: transparent;
+  height: 100%;
+  object-fit: contain;
 }
 .ceo-content::before {
   content: "";
@@ -137,7 +127,6 @@
 @media (max-width: 992px) {
   .ceo-content {
     height: 500px;
-    background: transparent;
   }
 
   .ceo-img {
@@ -171,30 +160,23 @@
     flex-direction: column;
     height: auto;
     overflow: visible;
-    /* background: #000; */
     background: transparent;
   }
   .read-more-link {
-    color: rgb(255, 0, 0); /* or #d60000 */
-  }
-  .ceo-img {
-    opacity: 0.75; /* Adjust between 0.6 and 0.85 as needed */
-  }
-  .read-more-link::after {
-    background: var(--red);
+    color: rgb(255, 0, 0);
   }
   .ceo-img {
     position: relative;
     width: 100%;
     height: auto;
-    object-fit: contain;
-    object-position: center top;
+    aspect-ratio: 4 / 3; /* crops out the dark band, keeps just the photo */
+    object-fit: cover;
+    object-position: left top;
+    opacity: 1;
   }
-
-  .ceo-content::after {
-    display: none;
+  .read-more-link::after {
+    background: var(--red);
   }
-
   .ceo-info {
     position: relative;
     top: auto;
@@ -205,34 +187,36 @@
     text-align: center;
     background: #111;
   }
-
+  .ceo-info h3,
+  .ceo-info p {
+    color: #fff;
+  }
   .ceo-info h3 {
     font-size: 24px;
   }
-
   .ceo-info p {
     font-size: 14px;
   }
 }
+
 @media (max-width: 480px) {
+  .ceo-img {
+    aspect-ratio: 1 / 1;
+  }
   .ceo-info {
     padding: 22px 18px;
   }
-
   .ceo-info h3 {
     font-size: 21px;
   }
-
   .ceo-info .ceo-role {
     font-size: 14px;
   }
-
   .ceo-info p {
     font-size: 13px;
     line-height: 1.7;
   }
 }
-
 /* ================= DIRECTORS SLIDER ================= */
 .directors-section {
   background: var(--white);
