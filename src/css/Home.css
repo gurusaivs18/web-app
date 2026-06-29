@@ -163,7 +163,7 @@
     background: #000;
   }
   .read-more-link {
-    color: var(--red); /* or #d60000 */
+    color: rgb(255, 0, 0); /* or #d60000 */
   }
   .ceo-img {
     opacity: 0.75; /* Adjust between 0.6 and 0.85 as needed */
