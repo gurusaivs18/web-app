@@ -159,15 +159,21 @@
     display: flex;
     flex-direction: column;
     height: auto;
-    overflow: visible;
     background: #000;
   }
+
   .read-more-link {
     color: darkred; /* or #d60000 */
   }
   .ceo-img {
-    opacity: 0.75; /* Adjust between 0.6 and 0.85 as needed */
+    position: relative;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center top;
+    opacity: 1; /* full opacity — text overlays instead */
   }
+
   .read-more-link::after {
     background: var(--red);
   }
@@ -182,24 +188,41 @@
   .ceo-content::after {
     display: none;
   }
+  .ceo-info .ceo-role {
+    color: var(--red) !important;
+  }
 
   .ceo-info {
-    position: relative;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
     top: auto;
-    right: auto;
     transform: none;
+    padding: 24px 20px;
+    text-align: left;
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.88) 0%,
+      rgba(0, 0, 0, 0.5) 60%,
+      transparent 100%
+    ); /* gradient fade — no hard black block */
     max-width: 100%;
-    padding: 28px 22px;
-    text-align: center;
-    background: #111;
   }
-
   .ceo-info h3 {
-    font-size: 24px;
+    font-size: 22px;
+    color: #fff;
   }
-
   .ceo-info p {
-    font-size: 14px;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.85);
+  }
+  .read-more-link {
+    color: #fff;
+    font-weight: 700;
+  }
+  .read-more-link::after {
+    background: var(--red);
   }
 }
 @media (max-width: 480px) {
@@ -1039,7 +1062,165 @@
     flex-direction: row;
   }
 }
+/* ================= CEO MODAL ================= */
+.ceo-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 99999; /* above navbar */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.ceo-modal {
+  position: relative;
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  grid-template-rows: 1fr; /* ADD — let rows fill naturally */
+  width: min(900px, 92vw);
+  height: min(580px, 88vh); /* fixed height instead of max-height */
+  overflow: hidden;
+  border-radius: 14px;
+  background: #111;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+  animation: homemodalFade 0.28s ease;
+}
 
+/* ── Image panel ── */
+
+.ceo-modal-img-panel {
+  position: relative; /* ADD */
+  width: 100%;
+  height: 100%; /* fills the grid row */
+  min-height: unset; /* remove the 480px min */
+  overflow: hidden;
+}
+
+.ceo-modal-img-panel img {
+  position: absolute; /* ADD — fills panel absolutely */
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+
+/* ── Content panel ── */
+.ceo-modal-content {
+  padding: 40px 36px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: #111;
+  color: #fff;
+  height: 100%; /* ADD */
+  box-sizing: border-box;
+}
+
+.ceo-modal-tag {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--red);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.ceo-modal-tag::before {
+  content: "";
+  display: inline-block;
+  width: 28px;
+  height: 2px;
+  background: var(--red);
+}
+
+.ceo-modal-name {
+  font-family: var(--font-heading);
+  font-size: clamp(22px, 3vw, 32px);
+  font-weight: 900;
+  color: #fff;
+  text-transform: uppercase;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.ceo-modal-role {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #aaa;
+  margin: 0;
+}
+
+.ceo-modal-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.12);
+  margin: 4px 0;
+}
+
+.ceo-modal-bio {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.ceo-modal-bio p {
+  font-size: 14px;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.75);
+  margin: 0;
+}
+
+/* ── Close button ── */
+.ceo-modal-close {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  z-index: 10;
+  border: none;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 24px;
+  line-height: 1;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+.ceo-modal-close:hover {
+  background: var(--red);
+}
+
+/* ── Responsive ── */
+@media (max-width: 700px) {
+  .ceo-modal {
+    grid-template-columns: 1fr;
+    grid-template-rows: 280px 1fr; /* explicit row heights */
+    height: auto;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+  .ceo-modal-img-panel {
+    height: 280px; /* explicit, not auto */
+  }
+  .ceo-modal-content {
+    padding: 28px 22px;
+  }
+  .ceo-modal-content {
+    height: auto;
+    padding: 28px 22px;
+  }
+}
 /* ================= TESTIMONIALS ================= */
 .home-testimonials {
   position: relative;
@@ -1531,7 +1712,7 @@
 .home-modal-overlay {
   position: fixed;
   inset: 0;
-  z-index: 9999;
+  z-index: 99999;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1690,7 +1871,6 @@
   background: #8b0000;
 }
 
-
 /* Make sure span-based Know More links look and feel clickable */
 .director-know-more,
 .vertical-know-more {
@@ -1827,7 +2007,6 @@
   object-position: center;
   mix-blend-mode: multiply;
 }
-
 
 .home-modal-logo-wrap img[data-brand="Harrison Digital"] {
   width: 320px !important;
