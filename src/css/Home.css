@@ -1428,7 +1428,7 @@
     flex-direction: column;
     align-items: flex-start;
   }
-} /* ================= HOME MODALS (Directors & Brands) ================= */
+}
 
 @keyframes homemodalFade {
   from {
@@ -1573,7 +1573,7 @@
     flex-direction: column;
     align-items: flex-start;
   }
-} /* ================= HOME MODALS (Directors & Brands) ================= */
+}
 
 .home-modal-overlay {
   position: fixed;
