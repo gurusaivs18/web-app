@@ -357,6 +357,17 @@
   pointer-events: none;
 }
 
+.director-photo-accent {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 3px;
+
+  z-index: 2;
+  transition: width 0.35s ease;
+}
+
 .director-card:hover .director-photo-accent {
   width: 100%;
 }
@@ -1215,6 +1226,19 @@
 /* Prevent hover/tap from breaking autoplay on mobile devices */
 /* ================= HOME MODALS (Directors & Brands) ================= */
 
+/* .home-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.35);
+}
+
 .home-modal {
   position: relative;
   width: min(480px, 92%);
@@ -1244,6 +1268,14 @@
     transform: translateY(0) scale(1);
   }
 }
+
+/* Close button */
+/* .home-modal {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: min(720px, 92%);
+} */
 
 .home-modal-close:hover {
   color: #111;
@@ -1287,6 +1319,14 @@
 }
 
 /* ── Brand modal logo ── */
+.home-modal-logo-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 120px;
+  padding: 12px;
+}
 
 .home-modal-logo-wrap img {
   display: block;
@@ -1413,6 +1453,12 @@
 }
 
 /* ── Brand modal logo ── */
+.home-modal-logo-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+}
 
 .home-modal-logo-wrap img {
   max-width: 160px;
@@ -1498,6 +1544,27 @@
   -webkit-backdrop-filter: blur(10px);
   background: rgba(0, 0, 0, 0.35);
 }
+
+/* .home-modal {
+  position: relative;
+  width: min(480px, 92%);
+  max-height: 85vh;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: 14px;
+  border-style: solid;
+  color: rgb(0, 0, 0);
+  padding: 32px 28px 28px;
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.2);
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  animation: homemodalFade 0.28s ease;
+} */
 
 @keyframes homemodalFade {
   from {
@@ -1695,6 +1762,17 @@
    ================================================================ */
 
 /* ── Verticals sliding card — logo zone ── */
+.vertical-logo-box {
+  width: 100%;
+  height: 110px; /* fixed height — same for every card */
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 20px;
+  background: var(--white);
+  box-sizing: border-box;
+}
 
 .vertical-logo-box a {
   display: flex;
