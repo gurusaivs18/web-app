@@ -145,25 +145,38 @@
   }
 }
 @media (max-width: 768px) {
-  .ceo-content {
+  /* .ceo-content {
     position: relative;
     display: flex;
     flex-direction: column;
     height: auto;
     overflow: visible;
     background: transparent;
+  } */
+  .ceo-content {
+    display: block;
+    background: transparent;
+    line-height: 0;
   }
+
   .read-more-link {
     color: rgb(255, 0, 0);
   }
-  .ceo-img {
+  /* .ceo-img {
     position: relative;
     width: 100%;
     height: auto;
-    aspect-ratio: 4 / 3; /* crops out the dark band, keeps just the photo */
+    aspect-ratio: 4 / 3; 
     object-fit: cover;
     object-position: left top;
     opacity: 1;
+  } */
+  .ceo-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: auto;
   }
   .read-more-link::after {
     background: var(--red);
@@ -173,7 +186,7 @@
     top: auto;
     right: auto;
     transform: none;
-    width: 100%; /* was relying on max-width only — make it explicit */
+    width: 100%;
     max-width: 100%;
     box-sizing: border-box; /* so the 28px/22px padding doesn't push it past the edge */
     padding: 28px 22px;
@@ -197,7 +210,7 @@
     aspect-ratio: 1 / 1;
   }
   .ceo-info {
-    padding: 22px 18px;
+    /* padding: 22px 18px; */
   }
   .ceo-info h3 {
     font-size: 21px;
