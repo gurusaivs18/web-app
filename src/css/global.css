@@ -647,3 +647,403 @@ textarea.form-control {
     padding-block: var(--sp-6);
   }
 }
+/* ==========================================================================
+   BACKGROUND DECORATIONS  v2
+   — Default .section + 4 modifiers, each fully isolated
+   — Extra coverage for page-hero, vertical-category, careers-cta, architect-section
+   ========================================================================== */
+
+/* ── 1. Positioning scaffold ── */
+.section,
+[class*="section--"],
+.page-hero,
+.vertical-category,
+.careers-cta,
+.architect-section {
+  position: relative;
+  overflow: hidden;
+}
+
+/* ── 2. Pseudo base — shared reset ── */
+.section::before,
+.section::after,
+[class*="section--"]::before,
+[class*="section--"]::after,
+.page-hero::before,
+.page-hero::after,
+.vertical-category::before,
+.vertical-category::after,
+.careers-cta::before,
+.careers-cta::after,
+.architect-section::before,
+.architect-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  /* reset everything so modifiers start clean */
+  background-image: none;
+  background-size: auto;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
+/* ── 3. Lift content above decorations ── */
+.section > *,
+[class*="section--"] > *,
+.page-hero > *,
+.vertical-category > *,
+.careers-cta > *,
+.architect-section > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ==========================================================================
+   A. DEFAULT / WHITE section  (.section only, no modifier)
+   Motif: concentric rings top-right  +  diagonal hatching  +  dot grid bottom-left
+   ========================================================================== */
+.section:not([class*="section--"])::before {
+  background-image:
+    /* Concentric rings — top right */
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='340' height='340' viewBox='0 0 340 340'%3E%3Ccircle cx='320' cy='20' r='220' fill='none' stroke='%239b1c1c' stroke-width='1' opacity='0.07'/%3E%3Ccircle cx='320' cy='20' r='155' fill='none' stroke='%239b1c1c' stroke-width='0.8' opacity='0.06'/%3E%3Ccircle cx='320' cy='20' r='90' fill='none' stroke='%239b1c1c' stroke-width='0.6' opacity='0.05'/%3E%3Ccircle cx='320' cy='20' r='38' fill='none' stroke='%239b1c1c' stroke-width='0.5' opacity='0.05'/%3E%3C/svg%3E"),
+    /* Diagonal hatching full-width */
+    repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 40px,
+        rgba(155, 28, 28, 0.025) 40px,
+        rgba(155, 28, 28, 0.025) 41px
+      );
+  background-size:
+    340px 340px,
+    100% 100%;
+  background-position:
+    top right,
+    0 0;
+  background-repeat: no-repeat, repeat;
+}
+
+.section:not([class*="section--"])::after {
+  /* Dot grid — bottom left */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3E%3Ccircle cx='1.5' cy='1.5' r='1.2' fill='%239b1c1c' opacity='0.09'/%3E%3C/svg%3E");
+  background-size: 30px 30px;
+  background-position: bottom left;
+  background-repeat: repeat;
+  /* Fade dot grid so it only shows bottom-left quadrant */
+  -webkit-mask-image: radial-gradient(
+    ellipse 55% 45% at 0% 100%,
+    black 0%,
+    transparent 75%
+  );
+  mask-image: radial-gradient(
+    ellipse 55% 45% at 0% 100%,
+    black 0%,
+    transparent 75%
+  );
+}
+
+/* ==========================================================================
+   B. LIGHT GREY  (.section--grey)
+   Motif: sine wave border (bottom)  +  corner half-circle (top-left)  +  cross-hatch (top-right)
+   ========================================================================== */
+.section--grey::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='900' height='110' viewBox='0 0 900 110'%3E%3Cpath d='M0 55 Q112 5 225 55 Q337 105 450 55 Q562 5 675 55 Q787 105 900 55' fill='none' stroke='%239b1c1c' stroke-width='1.1' opacity='0.11'/%3E%3Cpath d='M0 72 Q112 22 225 72 Q337 122 450 72 Q562 22 675 72 Q787 122 900 72' fill='none' stroke='%239b1c1c' stroke-width='0.7' opacity='0.07'/%3E%3Cpath d='M0 89 Q112 39 225 89 Q337 139 450 89 Q562 39 675 89 Q787 139 900 89' fill='none' stroke='%239b1c1c' stroke-width='0.5' opacity='0.05'/%3E%3C/svg%3E");
+  background-size: 900px 110px;
+  background-position: bottom left;
+  background-repeat: repeat-x;
+}
+
+.section--grey::after {
+  background-image:
+    /* Half-circle burst — top left */
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260' viewBox='0 0 260 260'%3E%3Ccircle cx='0' cy='0' r='220' fill='none' stroke='%239b1c1c' stroke-width='0.9' opacity='0.08'/%3E%3Ccircle cx='0' cy='0' r='155' fill='none' stroke='%239b1c1c' stroke-width='0.7' opacity='0.06'/%3E%3Ccircle cx='0' cy='0' r='90' fill='%239b1c1c' opacity='0.03'/%3E%3C/svg%3E"),
+    /* Cross-hatch — top right (two repeating-linear overlaid) */
+    repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 28px,
+        rgba(155, 28, 28, 0.03) 28px,
+        rgba(155, 28, 28, 0.03) 29px
+      ),
+    repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 28px,
+      rgba(155, 28, 28, 0.03) 28px,
+      rgba(155, 28, 28, 0.03) 29px
+    );
+  background-size:
+    260px 260px,
+    100% 100%,
+    100% 100%;
+  background-position:
+    top left,
+    0 0,
+    0 0;
+  background-repeat: no-repeat, repeat, repeat;
+}
+
+/* ==========================================================================
+   C. MID GREY  (.section--mid-grey)
+   Motif: spiral (center-left)  +  starburst lines (bottom-right)  +  dashed orbit (top-right)
+   ========================================================================== */
+.section--mid-grey::before {
+  background-image:
+    /* Spiral — center left */
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Cpath d='M100 100 m0,-9 a9,9 0 1,1 0,18 a20,20 0 1,0 0,-40 a31,31 0 1,1 0,62 a42,42 0 1,0 0,-84 a53,53 0 1,1 0,106 a64,64 0 1,0 0,-128 a75,75 0 1,1 0,150' fill='none' stroke='%239b1c1c' stroke-width='0.9' opacity='0.13'/%3E%3C/svg%3E"),
+    /* Dashed orbit arc — top right */
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='280' height='280' viewBox='0 0 280 280'%3E%3Ccircle cx='280' cy='0' r='180' fill='none' stroke='%239b1c1c' stroke-width='0.8' opacity='0.1' stroke-dasharray='6 8'/%3E%3Ccircle cx='280' cy='0' r='110' fill='none' stroke='%239b1c1c' stroke-width='0.6' opacity='0.08' stroke-dasharray='4 7'/%3E%3Ccircle cx='280' cy='0' r='50' fill='none' stroke='%239b1c1c' stroke-width='0.5' opacity='0.06' stroke-dasharray='3 6'/%3E%3C/svg%3E");
+  background-size:
+    200px 200px,
+    280px 280px;
+  background-position:
+    left center,
+    top right;
+  background-repeat: no-repeat, no-repeat;
+}
+
+.section--mid-grey::after {
+  /* Starburst lines radiating from bottom-right */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='320' viewBox='0 0 320 320'%3E%3Cline x1='320' y1='320' x2='0' y2='0' stroke='%239b1c1c' stroke-width='0.6' opacity='0.07'/%3E%3Cline x1='320' y1='320' x2='60' y2='0' stroke='%239b1c1c' stroke-width='0.5' opacity='0.06'/%3E%3Cline x1='320' y1='320' x2='140' y2='0' stroke='%239b1c1c' stroke-width='0.5' opacity='0.05'/%3E%3Cline x1='320' y1='320' x2='220' y2='0' stroke='%239b1c1c' stroke-width='0.4' opacity='0.04'/%3E%3Cline x1='320' y1='320' x2='320' y2='60' stroke='%239b1c1c' stroke-width='0.5' opacity='0.05'/%3E%3Cline x1='320' y1='320' x2='320' y2='160' stroke='%239b1c1c' stroke-width='0.4' opacity='0.04'/%3E%3C/svg%3E");
+  background-size: 320px 320px;
+  background-position: bottom right;
+  background-repeat: no-repeat;
+}
+
+/* ==========================================================================
+   D. DARK  (.section--dark)
+   Motif: corner ring burst + red glow (bottom-center) + diamond trellis
+   ========================================================================== */
+.section--dark::before {
+  background-image:
+    /* Corner burst rings — top left */
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='320' viewBox='0 0 320 320'%3E%3Ccircle cx='0' cy='0' r='240' fill='none' stroke='%239b1c1c' stroke-width='1.3' opacity='0.25'/%3E%3Ccircle cx='0' cy='0' r='165' fill='none' stroke='%239b1c1c' stroke-width='1' opacity='0.2'/%3E%3Ccircle cx='0' cy='0' r='90' fill='none' stroke='%239b1c1c' stroke-width='0.8' opacity='0.16'/%3E%3Ccircle cx='0' cy='0' r='35' fill='%239b1c1c' opacity='0.2'/%3E%3C/svg%3E"),
+    /* Diamond trellis */
+    repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 55px,
+        rgba(255, 255, 255, 0.018) 55px,
+        rgba(255, 255, 255, 0.018) 56px
+      ),
+    repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 55px,
+      rgba(255, 255, 255, 0.018) 55px,
+      rgba(255, 255, 255, 0.018) 56px
+    );
+  background-size:
+    320px 320px,
+    100% 100%,
+    100% 100%;
+  background-position:
+    top left,
+    0 0,
+    0 0;
+  background-repeat: no-repeat, repeat, repeat;
+}
+
+.section--dark::after {
+  background-image:
+    /* Rotated square frames — bottom right */
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Crect x='12' y='12' width='136' height='136' rx='6' fill='none' stroke='%239b1c1c' stroke-width='1.1' opacity='0.25' transform='rotate(18 80 80)'/%3E%3Crect x='32' y='32' width='96' height='96' rx='4' fill='none' stroke='%239b1c1c' stroke-width='0.7' opacity='0.17' transform='rotate(18 80 80)'/%3E%3Crect x='52' y='52' width='56' height='56' rx='3' fill='none' stroke='%239b1c1c' stroke-width='0.5' opacity='0.12' transform='rotate(18 80 80)'/%3E%3C/svg%3E"),
+    /* Red glow — bottom center */
+    radial-gradient(
+        ellipse 50% 35% at 50% 100%,
+        rgba(155, 28, 28, 0.22) 0%,
+        transparent 65%
+      );
+  background-size:
+    160px 160px,
+    100% 100%;
+  background-position:
+    bottom right,
+    0 0;
+  background-repeat: no-repeat, no-repeat;
+}
+
+/* ==========================================================================
+   E. RED / PRIMARY  (.section--red)
+   Motif: flowing triple wave (top)  +  large ring burst (right)  +  triangle grid (left)
+   ========================================================================== */
+.section--red::before {
+  background-image:
+    /* Triple wave — top */
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='900' height='130' viewBox='0 0 900 130'%3E%3Cpath d='M0 40 Q225 -10 450 40 Q675 90 900 40' fill='none' stroke='%23ffffff' stroke-width='1.1' opacity='0.11'/%3E%3Cpath d='M0 65 Q225 15 450 65 Q675 115 900 65' fill='none' stroke='%23ffffff' stroke-width='0.75' opacity='0.08'/%3E%3Cpath d='M0 90 Q225 40 450 90 Q675 140 900 90' fill='none' stroke='%23ffffff' stroke-width='0.5' opacity='0.05'/%3E%3C/svg%3E"),
+    /* Triangle grid — left */
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='70' viewBox='0 0 80 70'%3E%3Cpolygon points='40,5 75,65 5,65' fill='none' stroke='%23ffffff' stroke-width='0.7' opacity='0.1'/%3E%3C/svg%3E");
+  background-size:
+    900px 130px,
+    80px 70px;
+  background-position:
+    top center,
+    left top;
+  background-repeat: repeat-x, repeat-y;
+}
+
+.section--red::after {
+  background-image:
+    /* Large concentric rings — right */
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='380' height='380' viewBox='0 0 380 380'%3E%3Ccircle cx='380' cy='190' r='260' fill='none' stroke='%23ffffff' stroke-width='1.1' opacity='0.1'/%3E%3Ccircle cx='380' cy='190' r='185' fill='none' stroke='%23ffffff' stroke-width='0.85' opacity='0.08'/%3E%3Ccircle cx='380' cy='190' r='110' fill='none' stroke='%23ffffff' stroke-width='0.65' opacity='0.06'/%3E%3Ccircle cx='380' cy='190' r='48' fill='%23ffffff' opacity='0.05'/%3E%3C/svg%3E"),
+    /* Dark vignette — bottom left corner */
+    radial-gradient(
+        ellipse 40% 45% at 0% 100%,
+        rgba(100, 14, 14, 0.55) 0%,
+        transparent 60%
+      );
+  background-size:
+    380px 380px,
+    100% 100%;
+  background-position:
+    center right,
+    0 0;
+  background-repeat: no-repeat, no-repeat;
+}
+
+/* ==========================================================================
+   F. PAGE HERO  (.page-hero)
+   Motif: horizontal ruled lines (top) + large offset circle (bottom-right) + X marks (top-left)
+   ========================================================================== */
+.page-hero::before {
+  background-image:
+    /* Horizontal ruled lines — top band */
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='24' viewBox='0 0 100 24'%3E%3Cline x1='0' y1='12' x2='100' y2='12' stroke='%239b1c1c' stroke-width='0.5' opacity='0.07'/%3E%3C/svg%3E"),
+    /* X-mark scatter — top left */
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cline x1='18' y1='18' x2='28' y2='28' stroke='%239b1c1c' stroke-width='0.8' opacity='0.1'/%3E%3Cline x1='28' y1='18' x2='18' y2='28' stroke='%239b1c1c' stroke-width='0.8' opacity='0.1'/%3E%3C/svg%3E");
+  background-size:
+    100px 24px,
+    60px 60px;
+  background-position:
+    top left,
+    top left;
+  background-repeat: repeat-x, repeat;
+  -webkit-mask-image: linear-gradient(to bottom, black 0%, transparent 60%);
+  mask-image: linear-gradient(to bottom, black 0%, transparent 60%);
+}
+
+.page-hero::after {
+  /* Large offset circle — bottom right */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 400 400'%3E%3Ccircle cx='380' cy='380' r='260' fill='none' stroke='%239b1c1c' stroke-width='1' opacity='0.07'/%3E%3Ccircle cx='380' cy='380' r='185' fill='none' stroke='%239b1c1c' stroke-width='0.7' opacity='0.05'/%3E%3Ccircle cx='380' cy='380' r='100' fill='none' stroke='%239b1c1c' stroke-width='0.5' opacity='0.04'/%3E%3C/svg%3E");
+  background-size: 400px 400px;
+  background-position: bottom right;
+  background-repeat: no-repeat;
+}
+
+/* ==========================================================================
+   G. VERTICAL CATEGORY  (.vertical-category)
+   Motif: plus-sign grid + left-edge accent stripe + bottom arc
+   ========================================================================== */
+.vertical-category::before {
+  background-image:
+    /* Plus grid */ url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 50 50'%3E%3Cline x1='25' y1='18' x2='25' y2='32' stroke='%239b1c1c' stroke-width='0.7' opacity='0.09'/%3E%3Cline x1='18' y1='25' x2='32' y2='25' stroke='%239b1c1c' stroke-width='0.7' opacity='0.09'/%3E%3C/svg%3E");
+  background-size: 50px 50px;
+  background-repeat: repeat;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 15%,
+    black 85%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 15%,
+    black 85%,
+    transparent 100%
+  );
+}
+
+.vertical-category::after {
+  background-image:
+    /* Bottom arc */
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='80' viewBox='0 0 600 80'%3E%3Cpath d='M-50 80 Q300 -10 650 80' fill='none' stroke='%239b1c1c' stroke-width='0.8' opacity='0.09'/%3E%3Cpath d='M-50 80 Q300 10 650 80' fill='none' stroke='%239b1c1c' stroke-width='0.5' opacity='0.05'/%3E%3C/svg%3E"),
+    /* Left edge vertical stripe */
+    linear-gradient(to right, rgba(155, 28, 28, 0.04) 0%, transparent 6%);
+  background-size:
+    600px 80px,
+    100% 100%;
+  background-position:
+    bottom center,
+    0 0;
+  background-repeat: no-repeat, no-repeat;
+}
+
+/* ==========================================================================
+   H. CAREERS CTA  (.careers-cta)
+   Motif: radiating corner lines + floating hexagon outlines
+   ========================================================================== */
+.careers-cta::before {
+  background-image:
+    /* Radiating lines — top left */ url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='280' height='280' viewBox='0 0 280 280'%3E%3Cline x1='0' y1='0' x2='280' y2='280' stroke='%239b1c1c' stroke-width='0.7' opacity='0.1'/%3E%3Cline x1='0' y1='0' x2='280' y2='200' stroke='%239b1c1c' stroke-width='0.6' opacity='0.07'/%3E%3Cline x1='0' y1='0' x2='280' y2='130' stroke='%239b1c1c' stroke-width='0.5' opacity='0.06'/%3E%3Cline x1='0' y1='0' x2='200' y2='280' stroke='%239b1c1c' stroke-width='0.5' opacity='0.06'/%3E%3Cline x1='0' y1='0' x2='110' y2='280' stroke='%239b1c1c' stroke-width='0.4' opacity='0.05'/%3E%3C/svg%3E");
+  background-size: 280px 280px;
+  background-position: top left;
+  background-repeat: no-repeat;
+}
+
+.careers-cta::after {
+  background-image:
+    /* Hexagon tiles — right */
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='110' height='110' viewBox='0 0 110 110'%3E%3Cpolygon points='55,6 100,30 100,80 55,104 10,80 10,30' fill='none' stroke='%239b1c1c' stroke-width='0.8' opacity='0.1'/%3E%3Cpolygon points='55,18 88,37 88,73 55,92 22,73 22,37' fill='none' stroke='%239b1c1c' stroke-width='0.5' opacity='0.06'/%3E%3C/svg%3E"),
+    /* Glow — bottom right */
+    radial-gradient(
+        ellipse 40% 40% at 100% 100%,
+        rgba(155, 28, 28, 0.1) 0%,
+        transparent 65%
+      );
+  background-size:
+    110px 110px,
+    100% 100%;
+  background-position:
+    right center,
+    0 0;
+  background-repeat: repeat-y, no-repeat;
+}
+
+/* ==========================================================================
+   I. ARCHITECT / FEATURE  (.architect-section)
+   Motif: large diagonal slash lines + dot cluster (bottom-left)
+   ========================================================================== */
+.architect-section::before {
+  background-image:
+    /* Wide diagonal slashes */ url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Cline x1='0' y1='200' x2='200' y2='0' stroke='%239b1c1c' stroke-width='0.6' opacity='0.07'/%3E%3Cline x1='30' y1='200' x2='200' y2='30' stroke='%239b1c1c' stroke-width='0.5' opacity='0.05'/%3E%3Cline x1='0' y1='160' x2='160' y2='0' stroke='%239b1c1c' stroke-width='0.4' opacity='0.04'/%3E%3C/svg%3E");
+  background-size: 200px 200px;
+  background-repeat: repeat;
+  -webkit-mask-image: linear-gradient(to right, black 0%, transparent 50%);
+  mask-image: linear-gradient(to right, black 0%, transparent 50%);
+}
+
+.architect-section::after {
+  /* Dot cluster — bottom left */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Ccircle cx='3' cy='3' r='1.5' fill='%239b1c1c' opacity='0.11'/%3E%3C/svg%3E");
+  background-size: 24px 24px;
+  background-repeat: repeat;
+  -webkit-mask-image: radial-gradient(
+    ellipse 50% 40% at 0% 100%,
+    black 0%,
+    transparent 70%
+  );
+  mask-image: radial-gradient(
+    ellipse 50% 40% at 0% 100%,
+    black 0%,
+    transparent 70%
+  );
+}
+
+/* ==========================================================================
+   MOBILE — scale down heavy patterns
+   ========================================================================== */
+@media (max-width: 768px) {
+  .section--dark::before,
+  .section--red::after {
+    background-size:
+      200px 200px,
+      100% 100%;
+  }
+  .page-hero::after {
+    background-size: 260px 260px;
+  }
+}

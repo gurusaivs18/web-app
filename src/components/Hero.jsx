@@ -11,15 +11,21 @@ function Hero() {
 
       <div className="hero-content">
         <h1 className="hero-title">
-          <span>From</span> <span className="red-box">Dreams</span>{" "}
-          <span>to</span> <span className="red-box">Reality</span>
+          <span className="hero-line">
+            From <span className="red-box">Dreams</span> to
+          </span>
+          <span className="hero-line">
+            <span className="red-box">Reality</span>
+          </span>
         </h1>
 
         <p className="hero-subtitle">
           The Unstoppable Force of Purposeful Action
         </p>
 
-        <button className="hero-btn">Know More</button>
+        <button className="hero-btn" onClick={() => navigate("/about")}>
+          Know More
+        </button>
       </div>
     </section>
   );

@@ -28,11 +28,64 @@
   z-index: 1;
 }
 
-/* Keep hero content above overlay.
-   Actual styling will be in Home.css */
+/* ───────────────── HERO CONTENT ───────────────── */
+
 .hero-content {
   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 2;
+  text-align: center;
+  width: min(90%, 1000px);
+  padding: 0 20px;
+}
+
+.hero-title {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(34px, 6vw, 72px);
+  font-weight: 800;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.hero-line {
+  display: block;
+  line-height: 1.2;
+}
+
+.hero-title .red-box {
+  display: inline-block;
+  background: #b31319;
+  padding: 0.08em 0.22em;
+  border-radius: 4px;
+  line-height: 1.2;
+}
+.hero-subtitle {
+  margin-top: 16px;
+  color: #fff;
+  font-size: clamp(14px, 2vw, 24px);
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.hero-btn {
+  margin-top: 28px;
+  background: #b31319;
+  color: #fff;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.hero-btn:hover {
+  background: #921015;
 }
 
 /* ───────────────── RESPONSIVE ───────────────── */
@@ -47,16 +100,89 @@
   .hero {
     min-height: 500px;
   }
+
+  .hero-content {
+    width: 92%;
+    padding: 0 16px;
+  }
+
+  .hero-title {
+    font-size: 32px;
+    gap: 8px;
+  }
+
+  .hero-title .red-box {
+    display: inline;
+    padding: 0.05em 0.18em;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+    margin-bottom: 0;
+  }
+
+  .hero-subtitle {
+    font-size: 14px;
+    margin-top: 12px;
+  }
+
+  .hero-btn {
+    margin-top: 20px;
+    padding: 11px 24px;
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 480px) {
   .hero {
     min-height: 450px;
   }
+
+  .hero-content {
+    width: 88%;
+    padding: 0 12px;
+  }
+
+  .hero-title {
+    font-size: 26px;
+    gap: 6px;
+  }
+
+  .hero-title .red-box {
+    display: inline;
+    padding: 0.04em 0.14em;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+    margin-bottom: 0;
+  }
+
+  .hero-subtitle {
+    font-size: 13px;
+    margin-top: 10px;
+  }
+
+  .hero-btn {
+    margin-top: 16px;
+    padding: 10px 20px;
+    font-size: 13px;
+    border-radius: 6px;
+  }
 }
 
 @media (max-width: 360px) {
   .hero {
     min-height: 420px;
+  }
+
+  .hero-title {
+    font-size: 22px;
+    gap: 4px;
+  }
+
+  .hero-subtitle {
+    font-size: 12px;
+  }
+
+  .hero-btn {
+    padding: 9px 18px;
+    font-size: 12px;
   }
 }

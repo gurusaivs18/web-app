@@ -50,7 +50,7 @@ function Newsroom() {
         <h1>Newsroom</h1>
       </div>
 
-      <section className="section">
+      <section className="section section--v1">
         <div className="container">
           <div className="section-title-wrap" data-reveal="fade">
             <span className="section-title">Latest News</span>
