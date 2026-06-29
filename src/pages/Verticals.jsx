@@ -58,7 +58,7 @@ const logoMap = {
   "Booster Juice": boosterjuice,
   "Epic Fitouts": epic,
 };
-
+const getId = (title) => title.toLowerCase().replace(/[^a-z0-9]+/g, "-");
 const featuredBrands = [
   "Nb Ventures",
   "VK Technology",
@@ -182,6 +182,7 @@ function Verticals() {
       {verticals.map((cat, i) => (
         <section
           key={i}
+          id={getId(cat.title)}
           className={`vertical-category${i === 0 ? " vertical-category--first" : ""}`}
         >
           <h2 className="vertical-heading">{cat.title}</h2>

@@ -5,6 +5,7 @@ import Logo from "./Logo";
 import { verticals } from "../data/verticals";
 
 function Footer() {
+  const getId = (title) => title.toLowerCase().replace(/[^a-z0-9]+/g, "-");
   return (
     <footer className="footer">
       <div className="footer-container">
@@ -60,15 +61,13 @@ function Footer() {
             <h4>Quick Links</h4>
 
             <ul className="quick-links-list">
-              {verticals.map((section, i) =>
-                section.items.map((item, j) => (
-                  <li key={`${i}-${j}`}>
-                    <a href={item.link || "#"} target="_blank" rel="noreferrer">
-                      {item.name}
-                    </a>
-                  </li>
-                )),
-              )}
+              {verticals.map((section, i) => (
+                <li key={i}>
+                  <a href={`/verticals#${getId(section.title)}`}>
+                    {section.title}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
