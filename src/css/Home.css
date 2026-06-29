@@ -1290,7 +1290,7 @@
   font-size: 30px;
   line-height: 1;
   cursor: pointer;
-  color: #999;
+  color: black;
   transition: color 0.2s;
 }
 .home-modal-close:hover {
