@@ -163,7 +163,7 @@
     background: #000;
   }
   .read-more-link {
-    color: darkred; 
+    color: darkred; /* or #d60000 */
   }
   .ceo-img {
     opacity: 0.75; /* Adjust between 0.6 and 0.85 as needed */
@@ -2205,16 +2205,16 @@
 
   /* Scale down ~55% of desktop */
   .vertical-logo-box img[data-brand="Pressman's Sandwiches"] {
-    width: 50px !important;
+    width: 150px !important;
   }
   .vertical-logo-box img[data-brand="Biriyani Box"] {
-    height: 50px !important;
+    height: 68px !important;
   }
   .vertical-logo-box img[data-brand="Target One"] {
     height: 50px !important;
   }
   .vertical-logo-box img[data-brand="VIP Cosmetics"] {
-    height: 50px !important;
+    height: 75px !important;
   }
   .vertical-logo-box img[data-brand="Denaster"] {
     height: 66px !important;
@@ -2223,7 +2223,7 @@
     height: 50px !important;
   }
   .vertical-logo-box img[data-brand="Harrison / Inov8"] {
-    height: 32px !important;
+    height: 65px !important;
   }
   .vertical-logo-box img[data-brand="Harrison Digital"] {
     width: 104px !important;
@@ -2232,56 +2232,56 @@
     height: 66px !important;
   }
   .vertical-logo-box img[data-brand="Activ8"] {
-    height: 43px !important;
+    height: 65px !important;
   }
   .vertical-logo-box img[data-brand="Motiv8"] {
-    height: 33px !important;
+    height: 65px !important;
   }
   .vertical-logo-box img[data-brand="ZeroG Beds & Mattresses"] {
     height: 66px !important;
   }
   .vertical-logo-box img[data-brand="Snap Fitness"] {
-    height: 38px !important;
+    height: 60px !important;
   }
   .vertical-logo-box img[data-brand="United Pro Sports"] {
-    height: 34px !important;
+    height: 60px !important;
   }
   .vertical-logo-box img[data-brand="UAE Bulls"] {
-    height: 47px !important;
+    height: 85px !important;
   }
   .vertical-logo-box img[data-brand="BVB League"] {
-    height: 50px !important;
+    height: 85px !important;
   }
   .vertical-logo-box img[data-brand="VK Technologies"] {
     width: 121px !important;
   }
   .vertical-logo-box img[data-brand="NB Ventures"] {
-    width: 72px !important;
+    width: 135px !important;
   }
   .vertical-logo-box img[data-brand="Yellow Chilli"] {
-    height: 72px !important;
+    height: 65px !important;
   }
   .vertical-logo-box img[data-brand="Hong Kong"] {
-    height: 35px !important;
+    height: 65px !important;
   }
   .vertical-logo-box img[data-brand="Khichdi Tales"] {
-    height: 48px !important;
+    height: 65px !important;
   }
   .vertical-logo-box img[data-brand="Pizza Tales"] {
-    height: 52px !important;
+    height: 65px !important;
   }
   .vertical-logo-box img[data-brand="Thali Tales"] {
-    height: 66px !important;
-    width: 110px !important;
+    height: 65px !important;
+    width: 130px !important;
   }
   .vertical-logo-box img[data-brand="Beijing Lu"] {
-    height: 44px !important;
+    height: 65px !important;
   }
   .vertical-logo-box img[data-brand="Booster Juice"] {
     width: 115px !important;
   }
   .vertical-logo-box img[data-brand="Epic Fitouts"] {
-    height: 33px !important;
+    height: 70px !important;
   }
 }
 @media (max-width: 1005.6px) {
