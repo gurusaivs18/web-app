@@ -1689,7 +1689,7 @@
 .home-modal-btn:hover {
   background: #8b0000;
 }
-*/
+
 
 /* Make sure span-based Know More links look and feel clickable */
 .director-know-more,
@@ -1784,11 +1784,6 @@
   height: 100%;
 }
 
-/* THE KEY FIX:
-   - width/height 100% fills the padded box
-   - object-fit: contain  →  scales proportionally, never stretches
-   - mix-blend-mode: multiply  →  removes harsh dark backgrounds
-     (Target One, any logo with a solid bg) on white cards            */
 .vertical-logo-box img {
   display: block;
   width: 100%;
@@ -1832,7 +1827,7 @@
   object-position: center;
   mix-blend-mode: multiply;
 }
-/* Modal Logo Custom Sizes */
+
 
 .home-modal-logo-wrap img[data-brand="Harrison Digital"] {
   width: 320px !important;
