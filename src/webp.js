@@ -2,7 +2,7 @@ import sharp from "sharp";
 import fs from "fs";
 import path from "path";
 
-const logosDir = path.join(process.cwd(), "src/assets/Brand-Logos");
+const logosDir = path.join(process.cwd(), "src/assets/jsbGroupWebsite");
 
 async function convertImages(dir) {
   const files = fs.readdirSync(dir);
