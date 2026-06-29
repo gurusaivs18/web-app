@@ -357,17 +357,6 @@
   pointer-events: none;
 }
 
-.director-photo-accent {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 40px;
-  height: 3px;
-
-  z-index: 2;
-  transition: width 0.35s ease;
-}
-
 .director-card:hover .director-photo-accent {
   width: 100%;
 }
@@ -542,18 +531,7 @@
 
 /* Logo zone — all logos fill the same box equally */
 /* ── Verticals sliding card — logo zone ── */
-.vertical-logo-box {
-  width: 100%;
-  height: 160px;
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 16px 20px;
-  background: var(--white);
-  box-sizing: border-box;
-  overflow: visible;
-}
+
 .vertical-logo-box a {
   display: flex;
   align-items: center;
@@ -1237,19 +1215,6 @@
 /* Prevent hover/tap from breaking autoplay on mobile devices */
 /* ================= HOME MODALS (Directors & Brands) ================= */
 
-/* .home-modal-overlay {
-  position: fixed;
-  inset: 0;
-  z-index: 9999;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  background: rgba(0, 0, 0, 0.35);
-}
-
 .home-modal {
   position: relative;
   width: min(480px, 92%);
@@ -1280,19 +1245,6 @@
   }
 }
 
-/* Close button */
-.home-modal-close {
-  position: absolute;
-  top: 14px;
-  right: 16px;
-  border: none;
-  background: transparent;
-  font-size: 30px;
-  line-height: 1;
-  cursor: pointer;
-  color: black;
-  transition: color 0.2s;
-}
 .home-modal-close:hover {
   color: #111;
 }
@@ -1300,10 +1252,10 @@
 /* ── Director modal header (photo + name/role side by side) ── */
 .home-modal-header {
   display: flex;
-  align-items: center;
-  gap: 16px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
 }
-
 .home-modal-avatar {
   width: 72px;
   height: 72px;
@@ -1317,7 +1269,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: top center;
+  object-position: 45% center;
 }
 
 .home-modal-avatar-fallback {
@@ -1335,14 +1287,6 @@
 }
 
 /* ── Brand modal logo ── */
-.home-modal-logo-wrap {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 120px;
-  padding: 12px;
-}
 
 .home-modal-logo-wrap img {
   display: block;
@@ -1431,28 +1375,12 @@
 }
 
 /* Close button */
-.home-modal-close {
-  position: absolute;
-  top: 14px;
-  right: 16px;
-  border: none;
-  background: transparent;
-  font-size: 30px;
-  line-height: 1;
-  cursor: pointer;
-  color: #999;
-  transition: color 0.2s;
-}
+
 .home-modal-close:hover {
   color: #111;
 }
 
 /* ── Director modal header (photo + name/role side by side) ── */
-.home-modal-header {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
 
 .home-modal-avatar {
   width: 72px;
@@ -1463,12 +1391,12 @@
   background: var(--gray-light);
 }
 
-.home-modal-avatar img {
+/* .home-modal-avatar img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: top center;
-}
+} */
 
 .home-modal-avatar-fallback {
   width: 100%;
@@ -1485,12 +1413,6 @@
 }
 
 /* ── Brand modal logo ── */
-.home-modal-logo-wrap {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 80px;
-}
 
 .home-modal-logo-wrap img {
   max-width: 160px;
@@ -1577,27 +1499,6 @@
   background: rgba(0, 0, 0, 0.35);
 }
 
-.home-modal {
-  position: relative;
-  width: min(480px, 92%);
-  max-height: 85vh;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-
-  background: rgba(255, 255, 255, 0.96);
-  border-radius: 14px;
-  border-style: solid;
-  color: rgb(0, 0, 0);
-  padding: 32px 28px 28px;
-  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.2);
-
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-
-  animation: homemodalFade 0.28s ease;
-}
-
 @keyframes homemodalFade {
   from {
     opacity: 0;
@@ -1627,11 +1528,6 @@
 }
 
 /* ── Director modal header (photo + name/role side by side) ── */
-.home-modal-header {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
 
 .home-modal-avatar {
   width: 72px;
@@ -1642,12 +1538,12 @@
   background: var(--gray-light);
 }
 
-.home-modal-avatar img {
+/* .home-modal-avatar img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: top center;
-}
+} */
 
 .home-modal-avatar-fallback {
   width: 100%;
@@ -1799,17 +1695,6 @@
    ================================================================ */
 
 /* ── Verticals sliding card — logo zone ── */
-.vertical-logo-box {
-  width: 100%;
-  height: 110px; /* fixed height — same for every card */
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 16px 20px;
-  background: var(--white);
-  box-sizing: border-box;
-}
 
 .vertical-logo-box a {
   display: flex;
@@ -1882,7 +1767,7 @@
   max-height: none !important;
 }
 .home-modal-logo-wrap img[data-brand="Thali Tales"] {
-  width: px !important;
+  width: 250px !important;
   height: auto !important;
   max-width: none !important;
   max-height: none !important;
