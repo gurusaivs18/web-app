@@ -542,7 +542,18 @@
 
 /* Logo zone — all logos fill the same box equally */
 /* ── Verticals sliding card — logo zone ── */
-
+.vertical-logo-box {
+  width: 100%;
+  height: 160px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 20px;
+  background: var(--white);
+  box-sizing: border-box;
+  overflow: visible;
+}
 .vertical-logo-box a {
   display: flex;
   align-items: center;
@@ -1270,12 +1281,6 @@
 }
 
 /* Close button */
-/* .home-modal {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-  width: min(720px, 92%);
-} */
 
 .home-modal-close:hover {
   color: #111;
@@ -1284,10 +1289,10 @@
 /* ── Director modal header (photo + name/role side by side) ── */
 .home-modal-header {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 14px;
+  align-items: center;
+  gap: 16px;
 }
+
 .home-modal-avatar {
   width: 72px;
   height: 72px;
@@ -1301,7 +1306,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 45% center;
+  object-position: top center;
 }
 
 .home-modal-avatar-fallback {
@@ -1421,6 +1426,11 @@
 }
 
 /* ── Director modal header (photo + name/role side by side) ── */
+.home-modal-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
 
 .home-modal-avatar {
   width: 72px;
@@ -1431,12 +1441,12 @@
   background: var(--gray-light);
 }
 
-/* .home-modal-avatar img {
+.home-modal-avatar img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: top center;
-} */
+}
 
 .home-modal-avatar-fallback {
   width: 100%;
@@ -1545,7 +1555,7 @@
   background: rgba(0, 0, 0, 0.35);
 }
 
-/* .home-modal {
+.home-modal {
   position: relative;
   width: min(480px, 92%);
   max-height: 85vh;
@@ -1564,7 +1574,7 @@
   gap: 16px;
 
   animation: homemodalFade 0.28s ease;
-} */
+}
 
 @keyframes homemodalFade {
   from {
@@ -1595,6 +1605,11 @@
 }
 
 /* ── Director modal header (photo + name/role side by side) ── */
+.home-modal-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
 
 .home-modal-avatar {
   width: 72px;
@@ -1605,12 +1620,12 @@
   background: var(--gray-light);
 }
 
-/* .home-modal-avatar img {
+.home-modal-avatar img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: top center;
-} */
+}
 
 .home-modal-avatar-fallback {
   width: 100%;
@@ -1845,7 +1860,7 @@
   max-height: none !important;
 }
 .home-modal-logo-wrap img[data-brand="Thali Tales"] {
-  width: 250px !important;
+  width: px !important;
   height: auto !important;
   max-width: none !important;
   max-height: none !important;
