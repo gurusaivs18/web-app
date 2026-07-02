@@ -114,14 +114,11 @@
 
 /* ========================= IMAGE WRAPPER ========================= */
 .logo-card-img-wrap {
-  width: 100%;
-  height: auto;
-  min-height: 60px;
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: visible;
+  width: auto; /* was width: 100% at the base level — override it here */
+  max-width: none;
+  min-height: 0;
+  max-height: none;
+  overflow: none;
 }
 
 /* Default */
@@ -617,28 +614,29 @@
 
   .logo-card,
   .featured-logo-card {
-    width: calc(33.33% - 8px);
-    min-width: 88px;
-    max-width: 120px;
+    flex: 0 0 auto; /* size to content, no more forced 33.33% column */
+    width: auto;
+    min-width: 88px; /* keep a floor so tiny logos don't collapse */
+    /* max-width intentionally removed — card grows to fit the image now */
     min-height: 85px;
     height: auto;
-    padding: 6px 4px 6px;
+    padding: 6px 8px;
     border-radius: 8px;
   }
 
   .logo-card-img-wrap {
-    min-height: none;
+    min-height: 0;
     max-height: none;
-    overflow: transparent;
+    overflow: visible;
   }
 
   .logo-card-img-wrap img,
   .featured-logo-card .logo-card-img-wrap img {
-    max-width: 100% !important;
-    max-height: none !important;
-    width: auto !important;
-    height: auto !important;
-    scale: 1;
+    width: auto;
+    height: auto;
+    /* no blanket max-width/max-height here anymore — your per-brand
+     data-brand overrides below now fully control size, and the
+     card resizes around whatever you give them */
   }
 
   .logo-card-text,
@@ -650,8 +648,8 @@
 
   /* ── Grid brand overrides at 480px ── */
   .logo-card-img-wrap img[data-brand="Pressman's Sandwiches"] {
-    width: px !important;
-    height: 60px !important;
+    width: 156px !important;
+    height:90px !important;
     max-height: none !important;
   }
   .logo-card-img-wrap img[data-brand="Biriyani Box"] {
@@ -731,12 +729,12 @@
   }
   .logo-card-img-wrap img[data-brand="VK Technology"] {
     width: 165px !important;
-    height: auto !important;
+    height: 90px !important;
     max-height: none !important;
   }
   .logo-card-img-wrap img[data-brand="Nb Ventures"] {
     width: 155px !important;
-    height: auto !important;
+    height: 90px !important;
     max-height: none !important;
   }
   .logo-card-img-wrap img[data-brand="Yellow Chilli"] {
@@ -841,7 +839,7 @@
     max-width: none !important;
   }
   .featured-logo-card img[data-brand="Snap Fitness"] {
-    max-height: 58px !important;
+    max-height: 68px !important;
     width: auto !important;
     max-width: none !important;
   }
@@ -861,8 +859,8 @@
     max-width: none !important;
   }
   .featured-logo-card img[data-brand="VK Technology"] {
-    width: 92px !important;
-    height: auto !important;
+    width: 160px !important;
+    height: auto!important;
     max-height: none !important;
   }
   .featured-logo-card img[data-brand="Nb Ventures"] {
@@ -922,28 +920,29 @@
 
   .logo-card,
   .featured-logo-card {
-    width: calc(33.33% - 6px);
-    min-width: 76px;
-    max-width: 96px;
-    min-height: 66px;
+    flex: 0 0 auto; /* size to content, no more forced 33.33% column */
+    width: auto;
+    min-width: 88px; /* keep a floor so tiny logos don't collapse */
+    /* max-width intentionally removed — card grows to fit the image now */
+    min-height: 85px;
     height: auto;
-    padding: 5px 3px 5px;
+    padding: 6px 8px;
     border-radius: 8px;
   }
 
   .logo-card-img-wrap {
-    min-height: 32px;
+    min-height: 0;
     max-height: none;
     overflow: visible;
   }
 
   .logo-card-img-wrap img,
   .featured-logo-card .logo-card-img-wrap img {
-    max-width: 100% !important;
-    max-height: 32px !important;
-    width: auto !important;
-    height: auto !important;
-    scale: 1;
+    width: auto;
+    height: auto;
+    /* no blanket max-width/max-height here anymore — your per-brand
+     data-brand overrides below now fully control size, and the
+     card resizes around whatever you give them */
   }
 
   .logo-card-text,
@@ -955,13 +954,13 @@
 
   /* ── Grid brand overrides at 360px ── */
   .logo-card-img-wrap img[data-brand="Pressman's Sandwiches"] {
-    width: 136px !important;
-    height: 51px !important;
+    width: 160px !important;
+    height: 90px !important;
     max-height: none !important;
   }
   .logo-card-img-wrap img[data-brand="Biriyani Box"] {
     max-height: 60px !important;
-    width: auto !important;
+    width: 165px !important;
     max-width: none !important;
   }
   .logo-card-img-wrap img[data-brand="Target One"] {
@@ -1016,7 +1015,7 @@
   }
   .logo-card-img-wrap img[data-brand="Snap Fitness"] {
     max-height: 58px !important;
-    width: auto !important;
+    width: 160px !important;
     max-width: none !important;
   }
   .logo-card-img-wrap img[data-brand="United Pro Sports (U-Pro)"] {
