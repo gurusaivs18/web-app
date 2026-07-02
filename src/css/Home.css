@@ -32,10 +32,11 @@
   width: 100%;
 }
 .ceo-content {
-  background: #000;
+  /* background: #000; */
   display: flex;
   justify-content: center;
   align-items: center;
+  background: transparent;
 }
 
 .ceo-img {
@@ -43,7 +44,7 @@
   height: 100%;
   object-fit: contain;
 }
-.ceo-content::before {
+/* .ceo-content::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -57,6 +58,9 @@
     ),
     radial-gradient(circle at 80% 30%, rgba(0, 0, 0, 0.08), transparent 55%),
     radial-gradient(circle at 50% 90%, rgba(0, 0, 0, 0.12), transparent 60%);
+} */
+.ceo-content::before {
+  display: none;
 }
 .ceo-info {
   position: absolute;
@@ -111,7 +115,7 @@
   .ceo-img {
     object-fit: contain;
     object-position: left center;
-    background: #000;
+    /* background: #000;     */
   }
 
   .ceo-info {
@@ -159,7 +163,7 @@
     display: flex;
     flex-direction: column;
     height: auto;
-    background: #000;
+    background: transparent;
   }
 
   .read-more-link {
@@ -177,13 +181,6 @@
   .read-more-link::after {
     background: var(--red);
   }
-  .ceo-img {
-    position: relative;
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    object-position: center top;
-  }
 
   .ceo-content::after {
     display: none;
@@ -193,7 +190,7 @@
   }
 
   .ceo-info {
-    position: absolute;
+    /* position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
@@ -206,8 +203,9 @@
       rgba(0, 0, 0, 0.88) 0%,
       rgba(0, 0, 0, 0.5) 60%,
       transparent 100%
-    ); /* gradient fade — no hard black block */
-    max-width: 100%;
+    ); 
+    max-width: 100%; */
+    background: transparent;
   }
   .ceo-info h3 {
     font-size: 22px;
@@ -217,10 +215,7 @@
     font-size: 13px;
     color: rgba(255, 255, 255, 0.85);
   }
-  .read-more-link {
-    color: #fff;
-    font-weight: 700;
-  }
+
   .read-more-link::after {
     background: var(--red);
   }
@@ -909,23 +904,6 @@
   }
   .stat-box {
     padding: 0 16px 24px;
-  }
-}
-@media (max-width: 480px) {
-  .stats-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 28px 0;
-  }
-  .stat-icon {
-    width: 64px;
-    height: 64px;
-  }
-  .stat-icon svg {
-    width: 28px;
-    height: 28px;
-  }
-  .stat-box h2 {
-    font-size: 24px;
   }
 }
 
@@ -1698,17 +1676,6 @@
   cursor: pointer;
 }
 
-@media (max-width: 480px) {
-  .home-modal {
-    padding: 28px 20px 24px;
-  }
-
-  .home-modal-header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
-
 .home-modal-overlay {
   position: fixed;
   inset: 0;
@@ -1877,16 +1844,6 @@
   cursor: pointer;
 }
 
-@media (max-width: 480px) {
-  .home-modal {
-    padding: 28px 20px 24px;
-  }
-
-  .home-modal-header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
 /* Subtle entrance fade on the card image */
 .director-photo-img {
   transition:
@@ -2239,83 +2196,83 @@
 
   /* Scale down ~65% of desktop */
   .vertical-logo-box img[data-brand="Pressman's Sandwiches"] {
-    width: 58px !important;
+    width: 160px !important;
   }
   .vertical-logo-box img[data-brand="Biriyani Box"] {
-    height: 58px !important;
+    height: 70px !important;
   }
   .vertical-logo-box img[data-brand="Target One"] {
     height: 58px !important;
   }
   .vertical-logo-box img[data-brand="VIP Cosmetics"] {
-    height: 58px !important;
+    height: 75px !important;
   }
   .vertical-logo-box img[data-brand="Denaster"] {
     height: 78px !important;
   }
   .vertical-logo-box img[data-brand="Monkey Box"] {
-    height: 58px !important;
+    height: 69px !important;
   }
   .vertical-logo-box img[data-brand="Harrison / Inov8"] {
-    height: 38px !important;
-  }
-  .vertical-logo-box img[data-brand="Harrison Digital"] {
-    width: 124px !important;
-  }
-  .vertical-logo-box img[data-brand="Garmin by Activ8"] {
     height: 78px !important;
   }
+  .vertical-logo-box img[data-brand="Harrison Digital"] {
+    width: 150px !important;
+  }
+  .vertical-logo-box img[data-brand="Garmin by Activ8"] {
+    height: 70px !important;
+  }
   .vertical-logo-box img[data-brand="Activ8"] {
-    height: 51px !important;
+    height: 78px !important;
   }
   .vertical-logo-box img[data-brand="Motiv8"] {
-    height: 39px !important;
+    height: 78px !important;
   }
   .vertical-logo-box img[data-brand="ZeroG Beds & Mattresses"] {
     height: 78px !important;
   }
   .vertical-logo-box img[data-brand="Snap Fitness"] {
-    height: 46px !important;
+    height: 68px !important;
   }
   .vertical-logo-box img[data-brand="United Pro Sports"] {
-    height: 40px !important;
+    height: 60px !important;
   }
   .vertical-logo-box img[data-brand="UAE Bulls"] {
-    height: 55px !important;
+    height: 80px !important;
   }
   .vertical-logo-box img[data-brand="BVB League"] {
-    height: 58px !important;
+    height: 95px !important;
   }
   .vertical-logo-box img[data-brand="VK Technologies"] {
     width: 143px !important;
   }
   .vertical-logo-box img[data-brand="NB Ventures"] {
-    width: 85px !important;
+    width: 155px !important;
   }
   .vertical-logo-box img[data-brand="Yellow Chilli"] {
-    height: 85px !important;
+    height: 75px !important;
   }
   .vertical-logo-box img[data-brand="Hong Kong"] {
-    height: 42px !important;
-  }
-  .vertical-logo-box img[data-brand="Khichdi Tales"] {
     height: 57px !important;
   }
+  .vertical-logo-box img[data-brand="Khichdi Tales"] {
+    height: 60px !important;
+  }
   .vertical-logo-box img[data-brand="Pizza Tales"] {
-    height: 61px !important;
+    height: 78px !important;
   }
   .vertical-logo-box img[data-brand="Thali Tales"] {
     height: 81px !important;
     width: 143px !important;
   }
   .vertical-logo-box img[data-brand="Beijing Lu"] {
-    height: 52px !important;
+    height: 68px !important;
   }
   .vertical-logo-box img[data-brand="Booster Juice"] {
-    width: 137px !important;
+    width: 148px !important;
   }
   .vertical-logo-box img[data-brand="Epic Fitouts"] {
-    height: 39px !important;
+    height: 65px !important;
   }
 }
 
