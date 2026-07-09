@@ -18,7 +18,7 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   color: var(--text-dark);
-  margin-bottom: 24px;
+  
 }
 .home-intro-text p {
   font-size: 14px;
@@ -64,13 +64,12 @@
   font-size: 20px;
   font-weight: 900;
   color: #8b0000;
-  margin-bottom: 12px;
+  /* margin-bottom: 12px; */
   letter-spacing: 0.5px;
 }
 .ceo-info p {
   font-size: 14px;
   line-height: 1.7;
-  margin-bottom: 16px;
   color: black;
 }
 .read-more-link {
@@ -260,7 +259,7 @@
 }
 
 .hero-subtitle {
-  margin-top: 16px;
+
   color: #fff;
   font-size: clamp(14px, 2vw, 24px);
   font-weight: 300;

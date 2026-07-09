@@ -6,39 +6,7 @@ import "../css/Home.css";
 import "../css/ScrollReveal.css";
 
 import { useScrollReveal } from "../hooks/useScrollReveal";
-import { useAutoScroll } from "../hooks/useAutoScroll";
 import ceoImage from "../assets/jsbGroupWebsite/assets-jsb.webp";
-
-import uaeBulls from "../assets/Brand-Logos/uae-bulls.webp";
-import motiv8 from "../assets/Brand-Logos/motiv8.webp";
-import pressmans from "../assets/Brand-Logos/pressmans (2).webp";
-import vkTech from "../assets/Brand-Logos/vanityKart.webp";
-import targetOne from "../assets/Brand-Logos/target1.webp";
-import ventures from "../assets/Brand-Logos/nbVentures.webp";
-import denaster from "../assets/Brand-Logos/denaster.webp";
-import activ8 from "../assets/Brand-Logos/activ8.webp";
-import bvbLeague from "../assets/Brand-Logos/bvb.webp";
-import beijingLu from "../assets/Brand-Logos/beijing-lu.webp";
-import biriyaniBox from "../assets/Brand-Logos/biriyani.webp";
-import boosterJuice from "../assets/Brand-Logos/boosterjuice.webp";
-import epicFitouts from "../assets/Brand-Logos/epicfitouts.webp";
-import garmin from "../assets/Brand-Logos/garmin.webp";
-import harrisonDigital from "../assets/Brand-Logos/Harrison.webp";
-import hongKong from "../assets/Brand-Logos/hongkong.webp";
-import inov8 from "../assets/Brand-Logos/inov8.webp";
-import khichdiTales from "../assets/Brand-Logos/kichdi-tales.webp";
-import zeroG from "../assets/Brand-Logos/zeroG.webp";
-import monkeyBox from "../assets/Brand-Logos/monkeybox.webp";
-
-import pizzaTales from "../assets/Brand-Logos/pizza-tales.webp";
-
-import snapFitness from "../assets/Brand-Logos/snapFitness.webp";
-
-import thaliTales from "../assets/Brand-Logos/thali-tales.webp";
-import yellowChilli from "../assets/Brand-Logos/yellow-chilly.webp";
-
-import uPro from "../assets/Brand-Logos/upro.webp";
-import vipCosmetics from "../assets/Brand-Logos/vipcosmo.webp";
 
 // break
 

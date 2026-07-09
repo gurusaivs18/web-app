@@ -3,7 +3,7 @@ import { companyInfo } from "../data/company";
 import "../css/About.css";
 import "../css/ScrollReveal.css"; // ← add this import
 import { useScrollReveal } from "../hooks/useScrollReveal"; // ← add this import
-import ceoImage from "../assets/jsbGroupWebsite/jsbgroupwebsite-01.webp";
+import ceoImage from "../assets/jsbGroupWebsite/assets-jsb.webp";
 import { useLocation } from "react-router-dom";
 // ── Director images ──
 import rushabImg from "../assets/Partners/rushab-assets-1.webp";
