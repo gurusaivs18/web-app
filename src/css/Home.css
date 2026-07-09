@@ -18,7 +18,6 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   color: var(--text-dark);
-  
 }
 .home-intro-text p {
   font-size: 14px;
@@ -73,24 +72,41 @@
   color: black;
 }
 .read-more-link {
-  position: relative;
-  text-decoration: none;
-  color: black;
-  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 18px;
+  padding: 12px 28px;
+
+  background: var(--red);
+  color: #fff;
+
+  border: none;
+  border-radius: 8px;
+
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
-.read-more-link::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: -3px;
-  width: 0%;
-  height: 2px;
-  background: darkred;
-  transform: translateX(-50%);
-  transition: 0.3s;
+
+.read-more-link:hover {
+  background: #8b0000;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(139, 0, 0, 0.25);
 }
-.read-more-link:hover::after {
-  width: 100%;
+
+.read-more-link:active {
+  transform: translateY(0);
+}
+
+.read-more-link:focus-visible {
+  outline: 3px solid rgba(179, 19, 25, 0.25);
+  outline-offset: 3px;
 }
 @media (max-width: 1200px) {
   .ceo-content {
@@ -151,7 +167,7 @@
   }
 
   .read-more-link {
-    color: darkred;
+    color: whitesmoke;
   }
   .ceo-img {
     position: relative;
@@ -259,7 +275,6 @@
 }
 
 .hero-subtitle {
-
   color: #fff;
   font-size: clamp(14px, 2vw, 24px);
   font-weight: 300;
