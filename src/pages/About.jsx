@@ -344,7 +344,7 @@ function About() {
       <section className="section pillars-section">
         <div className="container">
           <div className="section-title-wrap" data-reveal="fade">
-            <span className="section-title">Director Pillars</span>
+            <span className="section-title">Directors</span>
           </div>
           <div className="directors-grid">
             {allDirectors.slice(0, 3).map((d, i) => (
@@ -373,7 +373,7 @@ function About() {
       <section className="section pillars-section" style={{ paddingTop: 0 }}>
         <div className="container">
           <div className="section-title-wrap" data-reveal="fade">
-            <span className="section-title">Partner Pillars</span>
+            <span className="section-title">Partners</span>
           </div>
           <div className="partners-grid">
             {allPartners.map((p, i) => (
