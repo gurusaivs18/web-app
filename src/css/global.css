@@ -60,6 +60,12 @@ body {
   --sp-20: 5rem;
   --sp-24: 6rem;
 
+  /* ── Uniform spacing tokens (merged in) ──
+     Single source of truth for heading→content gap
+     and section→section rhythm, used site-wide. */
+  --sp-hero-gap: var(--sp-8);
+  --sp-section-gap: var(--sp-16);
+
   /* ── Layout ── */
   --max-width: 1200px;
   --border-radius: 6px;
@@ -203,7 +209,9 @@ p:last-child {
 }
 
 .section {
-  padding-block: var(--sp-20);
+  /* was: padding-block: var(--sp-20);  -> reduced for uniform,
+     less-scroll rhythm site-wide (see --sp-section-gap above) */
+  padding-block: var(--sp-section-gap);
 }
 
 .section--grey {
@@ -731,7 +739,6 @@ textarea.form-control {
   background-size: 30px 30px;
   background-position: bottom left;
   background-repeat: repeat;
-  /* Fade dot grid so it only shows bottom-left quadrant */
   -webkit-mask-image: radial-gradient(
     ellipse 55% 45% at 0% 100%,
     black 0%,
@@ -746,7 +753,6 @@ textarea.form-control {
 
 /* ==========================================================================
    B. LIGHT GREY  (.section--grey)
-   Motif: sine wave border (bottom)  +  corner half-circle (top-left)  +  cross-hatch (top-right)
    ========================================================================== */
 .section--grey::before {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='900' height='110' viewBox='0 0 900 110'%3E%3Cpath d='M0 55 Q112 5 225 55 Q337 105 450 55 Q562 5 675 55 Q787 105 900 55' fill='none' stroke='%239b1c1c' stroke-width='1.1' opacity='0.11'/%3E%3Cpath d='M0 72 Q112 22 225 72 Q337 122 450 72 Q562 22 675 72 Q787 122 900 72' fill='none' stroke='%239b1c1c' stroke-width='0.7' opacity='0.07'/%3E%3Cpath d='M0 89 Q112 39 225 89 Q337 139 450 89 Q562 39 675 89 Q787 139 900 89' fill='none' stroke='%239b1c1c' stroke-width='0.5' opacity='0.05'/%3E%3C/svg%3E");
@@ -757,9 +763,7 @@ textarea.form-control {
 
 .section--grey::after {
   background-image:
-    /* Half-circle burst — top left */
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260' viewBox='0 0 260 260'%3E%3Ccircle cx='0' cy='0' r='220' fill='none' stroke='%239b1c1c' stroke-width='0.9' opacity='0.08'/%3E%3Ccircle cx='0' cy='0' r='155' fill='none' stroke='%239b1c1c' stroke-width='0.7' opacity='0.06'/%3E%3Ccircle cx='0' cy='0' r='90' fill='%239b1c1c' opacity='0.03'/%3E%3C/svg%3E"),
-    /* Cross-hatch — top right (two repeating-linear overlaid) */
     repeating-linear-gradient(
         45deg,
         transparent,
@@ -787,13 +791,10 @@ textarea.form-control {
 
 /* ==========================================================================
    C. MID GREY  (.section--mid-grey)
-   Motif: spiral (center-left)  +  starburst lines (bottom-right)  +  dashed orbit (top-right)
    ========================================================================== */
 .section--mid-grey::before {
   background-image:
-    /* Spiral — center left */
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Cpath d='M100 100 m0,-9 a9,9 0 1,1 0,18 a20,20 0 1,0 0,-40 a31,31 0 1,1 0,62 a42,42 0 1,0 0,-84 a53,53 0 1,1 0,106 a64,64 0 1,0 0,-128 a75,75 0 1,1 0,150' fill='none' stroke='%239b1c1c' stroke-width='0.9' opacity='0.13'/%3E%3C/svg%3E"),
-    /* Dashed orbit arc — top right */
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='280' height='280' viewBox='0 0 280 280'%3E%3Ccircle cx='280' cy='0' r='180' fill='none' stroke='%239b1c1c' stroke-width='0.8' opacity='0.1' stroke-dasharray='6 8'/%3E%3Ccircle cx='280' cy='0' r='110' fill='none' stroke='%239b1c1c' stroke-width='0.6' opacity='0.08' stroke-dasharray='4 7'/%3E%3Ccircle cx='280' cy='0' r='50' fill='none' stroke='%239b1c1c' stroke-width='0.5' opacity='0.06' stroke-dasharray='3 6'/%3E%3C/svg%3E");
   background-size:
     200px 200px,
@@ -805,7 +806,6 @@ textarea.form-control {
 }
 
 .section--mid-grey::after {
-  /* Starburst lines radiating from bottom-right */
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='320' viewBox='0 0 320 320'%3E%3Cline x1='320' y1='320' x2='0' y2='0' stroke='%239b1c1c' stroke-width='0.6' opacity='0.07'/%3E%3Cline x1='320' y1='320' x2='60' y2='0' stroke='%239b1c1c' stroke-width='0.5' opacity='0.06'/%3E%3Cline x1='320' y1='320' x2='140' y2='0' stroke='%239b1c1c' stroke-width='0.5' opacity='0.05'/%3E%3Cline x1='320' y1='320' x2='220' y2='0' stroke='%239b1c1c' stroke-width='0.4' opacity='0.04'/%3E%3Cline x1='320' y1='320' x2='320' y2='60' stroke='%239b1c1c' stroke-width='0.5' opacity='0.05'/%3E%3Cline x1='320' y1='320' x2='320' y2='160' stroke='%239b1c1c' stroke-width='0.4' opacity='0.04'/%3E%3C/svg%3E");
   background-size: 320px 320px;
   background-position: bottom right;
@@ -814,13 +814,10 @@ textarea.form-control {
 
 /* ==========================================================================
    D. DARK  (.section--dark)
-   Motif: corner ring burst + red glow (bottom-center) + diamond trellis
    ========================================================================== */
 .section--dark::before {
   background-image:
-    /* Corner burst rings — top left */
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='320' viewBox='0 0 320 320'%3E%3Ccircle cx='0' cy='0' r='240' fill='none' stroke='%239b1c1c' stroke-width='1.3' opacity='0.25'/%3E%3Ccircle cx='0' cy='0' r='165' fill='none' stroke='%239b1c1c' stroke-width='1' opacity='0.2'/%3E%3Ccircle cx='0' cy='0' r='90' fill='none' stroke='%239b1c1c' stroke-width='0.8' opacity='0.16'/%3E%3Ccircle cx='0' cy='0' r='35' fill='%239b1c1c' opacity='0.2'/%3E%3C/svg%3E"),
-    /* Diamond trellis */
     repeating-linear-gradient(
         45deg,
         transparent,
@@ -848,9 +845,7 @@ textarea.form-control {
 
 .section--dark::after {
   background-image:
-    /* Rotated square frames — bottom right */
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Crect x='12' y='12' width='136' height='136' rx='6' fill='none' stroke='%239b1c1c' stroke-width='1.1' opacity='0.25' transform='rotate(18 80 80)'/%3E%3Crect x='32' y='32' width='96' height='96' rx='4' fill='none' stroke='%239b1c1c' stroke-width='0.7' opacity='0.17' transform='rotate(18 80 80)'/%3E%3Crect x='52' y='52' width='56' height='56' rx='3' fill='none' stroke='%239b1c1c' stroke-width='0.5' opacity='0.12' transform='rotate(18 80 80)'/%3E%3C/svg%3E"),
-    /* Red glow — bottom center */
     radial-gradient(
         ellipse 50% 35% at 50% 100%,
         rgba(155, 28, 28, 0.22) 0%,
@@ -867,13 +862,10 @@ textarea.form-control {
 
 /* ==========================================================================
    E. RED / PRIMARY  (.section--red)
-   Motif: flowing triple wave (top)  +  large ring burst (right)  +  triangle grid (left)
    ========================================================================== */
 .section--red::before {
   background-image:
-    /* Triple wave — top */
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='900' height='130' viewBox='0 0 900 130'%3E%3Cpath d='M0 40 Q225 -10 450 40 Q675 90 900 40' fill='none' stroke='%23ffffff' stroke-width='1.1' opacity='0.11'/%3E%3Cpath d='M0 65 Q225 15 450 65 Q675 115 900 65' fill='none' stroke='%23ffffff' stroke-width='0.75' opacity='0.08'/%3E%3Cpath d='M0 90 Q225 40 450 90 Q675 140 900 90' fill='none' stroke='%23ffffff' stroke-width='0.5' opacity='0.05'/%3E%3C/svg%3E"),
-    /* Triangle grid — left */
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='70' viewBox='0 0 80 70'%3E%3Cpolygon points='40,5 75,65 5,65' fill='none' stroke='%23ffffff' stroke-width='0.7' opacity='0.1'/%3E%3C/svg%3E");
   background-size:
     900px 130px,
@@ -886,9 +878,7 @@ textarea.form-control {
 
 .section--red::after {
   background-image:
-    /* Large concentric rings — right */
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='380' height='380' viewBox='0 0 380 380'%3E%3Ccircle cx='380' cy='190' r='260' fill='none' stroke='%23ffffff' stroke-width='1.1' opacity='0.1'/%3E%3Ccircle cx='380' cy='190' r='185' fill='none' stroke='%23ffffff' stroke-width='0.85' opacity='0.08'/%3E%3Ccircle cx='380' cy='190' r='110' fill='none' stroke='%23ffffff' stroke-width='0.65' opacity='0.06'/%3E%3Ccircle cx='380' cy='190' r='48' fill='%23ffffff' opacity='0.05'/%3E%3C/svg%3E"),
-    /* Dark vignette — bottom left corner */
     radial-gradient(
         ellipse 40% 45% at 0% 100%,
         rgba(100, 14, 14, 0.55) 0%,
@@ -905,13 +895,10 @@ textarea.form-control {
 
 /* ==========================================================================
    F. PAGE HERO  (.page-hero)
-   Motif: horizontal ruled lines (top) + large offset circle (bottom-right) + X marks (top-left)
    ========================================================================== */
 .page-hero::before {
   background-image:
-    /* Horizontal ruled lines — top band */
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='24' viewBox='0 0 100 24'%3E%3Cline x1='0' y1='12' x2='100' y2='12' stroke='%239b1c1c' stroke-width='0.5' opacity='0.07'/%3E%3C/svg%3E"),
-    /* X-mark scatter — top left */
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cline x1='18' y1='18' x2='28' y2='28' stroke='%239b1c1c' stroke-width='0.8' opacity='0.1'/%3E%3Cline x1='28' y1='18' x2='18' y2='28' stroke='%239b1c1c' stroke-width='0.8' opacity='0.1'/%3E%3C/svg%3E");
   background-size:
     100px 24px,
@@ -925,7 +912,6 @@ textarea.form-control {
 }
 
 .page-hero::after {
-  /* Large offset circle — bottom right */
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 400 400'%3E%3Ccircle cx='380' cy='380' r='260' fill='none' stroke='%239b1c1c' stroke-width='1' opacity='0.07'/%3E%3Ccircle cx='380' cy='380' r='185' fill='none' stroke='%239b1c1c' stroke-width='0.7' opacity='0.05'/%3E%3Ccircle cx='380' cy='380' r='100' fill='none' stroke='%239b1c1c' stroke-width='0.5' opacity='0.04'/%3E%3C/svg%3E");
   background-size: 400px 400px;
   background-position: bottom right;
@@ -934,11 +920,9 @@ textarea.form-control {
 
 /* ==========================================================================
    G. VERTICAL CATEGORY  (.vertical-category)
-   Motif: plus-sign grid + left-edge accent stripe + bottom arc
    ========================================================================== */
 .vertical-category::before {
-  background-image:
-    /* Plus grid */ url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 50 50'%3E%3Cline x1='25' y1='18' x2='25' y2='32' stroke='%239b1c1c' stroke-width='0.7' opacity='0.09'/%3E%3Cline x1='18' y1='25' x2='32' y2='25' stroke='%239b1c1c' stroke-width='0.7' opacity='0.09'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 50 50'%3E%3Cline x1='25' y1='18' x2='25' y2='32' stroke='%239b1c1c' stroke-width='0.7' opacity='0.09'/%3E%3Cline x1='18' y1='25' x2='32' y2='25' stroke='%239b1c1c' stroke-width='0.7' opacity='0.09'/%3E%3C/svg%3E");
   background-size: 50px 50px;
   background-repeat: repeat;
   -webkit-mask-image: linear-gradient(
@@ -959,9 +943,7 @@ textarea.form-control {
 
 .vertical-category::after {
   background-image:
-    /* Bottom arc */
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='80' viewBox='0 0 600 80'%3E%3Cpath d='M-50 80 Q300 -10 650 80' fill='none' stroke='%239b1c1c' stroke-width='0.8' opacity='0.09'/%3E%3Cpath d='M-50 80 Q300 10 650 80' fill='none' stroke='%239b1c1c' stroke-width='0.5' opacity='0.05'/%3E%3C/svg%3E"),
-    /* Left edge vertical stripe */
     linear-gradient(to right, rgba(155, 28, 28, 0.04) 0%, transparent 6%);
   background-size:
     600px 80px,
@@ -974,11 +956,9 @@ textarea.form-control {
 
 /* ==========================================================================
    H. CAREERS CTA  (.careers-cta)
-   Motif: radiating corner lines + floating hexagon outlines
    ========================================================================== */
 .careers-cta::before {
-  background-image:
-    /* Radiating lines — top left */ url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='280' height='280' viewBox='0 0 280 280'%3E%3Cline x1='0' y1='0' x2='280' y2='280' stroke='%239b1c1c' stroke-width='0.7' opacity='0.1'/%3E%3Cline x1='0' y1='0' x2='280' y2='200' stroke='%239b1c1c' stroke-width='0.6' opacity='0.07'/%3E%3Cline x1='0' y1='0' x2='280' y2='130' stroke='%239b1c1c' stroke-width='0.5' opacity='0.06'/%3E%3Cline x1='0' y1='0' x2='200' y2='280' stroke='%239b1c1c' stroke-width='0.5' opacity='0.06'/%3E%3Cline x1='0' y1='0' x2='110' y2='280' stroke='%239b1c1c' stroke-width='0.4' opacity='0.05'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='280' height='280' viewBox='0 0 280 280'%3E%3Cline x1='0' y1='0' x2='280' y2='280' stroke='%239b1c1c' stroke-width='0.7' opacity='0.1'/%3E%3Cline x1='0' y1='0' x2='280' y2='200' stroke='%239b1c1c' stroke-width='0.6' opacity='0.07'/%3E%3Cline x1='0' y1='0' x2='280' y2='130' stroke='%239b1c1c' stroke-width='0.5' opacity='0.06'/%3E%3Cline x1='0' y1='0' x2='200' y2='280' stroke='%239b1c1c' stroke-width='0.5' opacity='0.06'/%3E%3Cline x1='0' y1='0' x2='110' y2='280' stroke='%239b1c1c' stroke-width='0.4' opacity='0.05'/%3E%3C/svg%3E");
   background-size: 280px 280px;
   background-position: top left;
   background-repeat: no-repeat;
@@ -986,9 +966,7 @@ textarea.form-control {
 
 .careers-cta::after {
   background-image:
-    /* Hexagon tiles — right */
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='110' height='110' viewBox='0 0 110 110'%3E%3Cpolygon points='55,6 100,30 100,80 55,104 10,80 10,30' fill='none' stroke='%239b1c1c' stroke-width='0.8' opacity='0.1'/%3E%3Cpolygon points='55,18 88,37 88,73 55,92 22,73 22,37' fill='none' stroke='%239b1c1c' stroke-width='0.5' opacity='0.06'/%3E%3C/svg%3E"),
-    /* Glow — bottom right */
     radial-gradient(
         ellipse 40% 40% at 100% 100%,
         rgba(155, 28, 28, 0.1) 0%,
@@ -1005,11 +983,9 @@ textarea.form-control {
 
 /* ==========================================================================
    I. ARCHITECT / FEATURE  (.architect-section)
-   Motif: large diagonal slash lines + dot cluster (bottom-left)
    ========================================================================== */
 .architect-section::before {
-  background-image:
-    /* Wide diagonal slashes */ url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Cline x1='0' y1='200' x2='200' y2='0' stroke='%239b1c1c' stroke-width='0.6' opacity='0.07'/%3E%3Cline x1='30' y1='200' x2='200' y2='30' stroke='%239b1c1c' stroke-width='0.5' opacity='0.05'/%3E%3Cline x1='0' y1='160' x2='160' y2='0' stroke='%239b1c1c' stroke-width='0.4' opacity='0.04'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Cline x1='0' y1='200' x2='200' y2='0' stroke='%239b1c1c' stroke-width='0.6' opacity='0.07'/%3E%3Cline x1='30' y1='200' x2='200' y2='30' stroke='%239b1c1c' stroke-width='0.5' opacity='0.05'/%3E%3Cline x1='0' y1='160' x2='160' y2='0' stroke='%239b1c1c' stroke-width='0.4' opacity='0.04'/%3E%3C/svg%3E");
   background-size: 200px 200px;
   background-repeat: repeat;
   -webkit-mask-image: linear-gradient(to right, black 0%, transparent 50%);
@@ -1017,7 +993,6 @@ textarea.form-control {
 }
 
 .architect-section::after {
-  /* Dot cluster — bottom left */
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Ccircle cx='3' cy='3' r='1.5' fill='%239b1c1c' opacity='0.11'/%3E%3C/svg%3E");
   background-size: 24px 24px;
   background-repeat: repeat;
@@ -1045,5 +1020,419 @@ textarea.form-control {
   }
   .page-hero::after {
     background-size: 260px 260px;
+  }
+}
+
+/* =================================================================
+   SPACING FIXES — merged from spacing-uniform.css
+   Placed last on purpose so these rules win the cascade
+   for gap/padding/margin without touching anything above.
+   ================================================================= */
+/* =================================================================
+   JSB GROUP — UNIFORM SPACING SYSTEM (replaces old spacing patch file)
+   Load AFTER global.css, and DELETE the old
+   "spacing-uniformity-patch.css" — this file supersedes it entirely.
+
+   RULES THIS FILE ENFORCES:
+   1. Heading → first content gap is IDENTICAL on every page
+      (--sp-hero-gap), instead of stacking two different margins
+      (old hero padding-bottom + old intro margin-bottom, which
+      never matched each other).
+   2. Section → section rhythm is IDENTICAL everywhere
+      (--sp-section-gap), replacing the old mix of sp-20 / sp-16 /
+      sp-12 that made total page height inconsistent and made
+      scrolling feel longer on some pages than others.
+   3. No selector is defined twice. The old file defined
+      .vertical-page-intro and .vertical-content TWICE with
+      conflicting values (one silently overriding the other via
+      !important), and pasted the entire .ceo-img/.ceo-content
+      mobile block twice, verbatim. All duplicates removed here.
+   ================================================================= */
+
+/* ─────────────────────────────────────────────
+   1. PAGE HERO  (shared across all pages)
+   One rule for both .page-hero and .page-hero.container —
+   no more duplicate declarations that can drift apart.
+   ───────────────────────────────────────────── */
+.page-hero,
+.page-hero.container {
+  padding-top: var(--sp-section-gap);
+  padding-bottom: var(--sp-hero-gap);
+  text-align: center;
+}
+
+.page-hero h1 {
+  margin-top: var(--sp-6);
+  margin-bottom: 0;
+  text-align: center;
+}
+
+/* ─────────────────────────────────────────────
+   2. SECTION TITLE WRAP
+   ───────────────────────────────────────────── */
+.section-title-wrap {
+  margin-bottom: 0;
+}
+
+/* ─────────────────────────────────────────────
+   3. INTRO PARAGRAPHS — every page's intro now uses
+   the SAME gap under the hero. Old file had:
+     .impact-intro / .vertical-page-intro: margin-bottom sp-12
+     .vertical-page-intro (2nd def, !important): margin-top sp-2, margin-bottom 0
+     .careers-intro: margin-bottom sp-12
+   All replaced with one consistent rule.
+   ───────────────────────────────────────────── */
+.impact-intro,
+.vertical-page-intro,
+.careers-intro {
+  margin-inline: auto;
+  margin-top: 0;
+  margin-bottom: var(--sp-hero-gap);
+  text-align: center;
+}
+.impact-intro,
+.vertical-page-intro {
+  max-width: 680px;
+}
+.careers-intro {
+  max-width: 640px;
+}
+
+/* ─────────────────────────────────────────────
+   4. HOME PAGE — all major sections now share
+   --sp-section-gap instead of a mix of sp-20 with
+   one-off bottom overrides.
+   ───────────────────────────────────────────── */
+.directors-section {
+  padding-block: var(--sp-section-gap);
+}
+
+.directors-marquee,
+.verticals-slider-outer {
+  margin-block: var(--sp-8);
+  margin-inline: 80px;
+}
+.directors-marquee {
+  margin-bottom: 0;
+}
+
+.home-verticals-logos,
+.home-group-photos,
+.testimonials-overlay,
+.home-contact {
+  padding-block: var(--sp-section-gap);
+}
+
+.stats-grid {
+  margin-top: var(--sp-hero-gap);
+}
+
+/* ─────────────────────────────────────────────
+   5. ABOUT PAGE
+   ───────────────────────────────────────────── */
+.about-who-grid {
+  gap: var(--sp-16);
+}
+.vmp-grid {
+  gap: var(--sp-6);
+}
+.architect-section {
+  padding-inline: 0;
+}
+.architect-content {
+  padding: var(--sp-12);
+}
+.directors-grid,
+.directors-grid-2,
+.partners-grid {
+  margin-top: var(--sp-hero-gap);
+  gap: var(--sp-8);
+}
+.pillars-section + .pillars-section {
+  padding-top: var(--sp-section-gap);
+}
+.director-card-body {
+  padding: var(--sp-6) var(--sp-4) var(--sp-6);
+}
+.director-role-text {
+  margin-bottom: var(--sp-4);
+}
+
+/* ─────────────────────────────────────────────
+   6. VERTICALS PAGE
+   ───────────────────────────────────────────── */
+.featured-logos-section {
+  padding-block: var(--sp-hero-gap);
+  margin-block: 0;
+}
+.featured-logos-section::after {
+  content: "";
+  display: block;
+  width: 100vw;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.08);
+  margin-top: var(--sp-4);
+  margin-left: calc(-50vw + 50%);
+}
+.featured-title {
+  margin-bottom: var(--sp-hero-gap);
+}
+.featured-logos-grid {
+  gap: var(--sp-6);
+  margin-block: var(--sp-hero-gap);
+}
+.featured-logo-card img {
+  margin-bottom: var(--sp-2);
+}
+
+.vertical-category {
+  padding-block: var(--sp-section-gap);
+}
+
+/* Single definition — old file had this twice with different values */
+.vertical-content {
+  margin-block: var(--sp-hero-gap);
+}
+
+.vertical-brands-grid {
+  margin-top: 0;
+  margin-bottom: var(--sp-hero-gap);
+  gap: var(--sp-6);
+}
+.vertical-logo-wrap,
+.vertical-category .vertical-logo-box {
+  margin-bottom: var(--sp-hero-gap);
+}
+.vertical-card-body {
+  padding-top: var(--sp-4);
+  gap: var(--sp-3);
+}
+.logo-card-img-wrap {
+  margin-bottom: var(--sp-2);
+}
+.logo-card-text {
+  margin-top: 0;
+}
+
+/* ─────────────────────────────────────────────
+   7. CAREERS PAGE
+   ───────────────────────────────────────────── */
+.careers-perks {
+  gap: var(--sp-6);
+  margin-bottom: var(--sp-section-gap);
+}
+.perk-card {
+  padding: var(--sp-10) var(--sp-8);
+}
+.perk-icon {
+  margin-bottom: var(--sp-4);
+}
+.careers-cta {
+  padding: var(--sp-section-gap) var(--sp-12);
+}
+.careers-cta h2 {
+  margin-bottom: var(--sp-4);
+}
+.careers-cta p {
+  margin-bottom: var(--sp-hero-gap);
+}
+
+/* ─────────────────────────────────────────────
+   8. IMPACT PAGE
+   ───────────────────────────────────────────── */
+.impact-page-title {
+  padding-block: var(--sp-6);
+}
+.impact-stats-grid {
+  gap: var(--sp-6);
+  margin-bottom: var(--sp-section-gap);
+}
+.impact-stat-box {
+  padding: var(--sp-10) var(--sp-6);
+}
+.impact-stat-icon {
+  margin-bottom: var(--sp-4);
+}
+.impact-stories {
+  gap: var(--sp-8);
+}
+.impact-story-body {
+  padding: var(--sp-6);
+}
+
+/* ─────────────────────────────────────────────
+   9. NEWSROOM PAGE
+   ───────────────────────────────────────────── */
+.newsroom-grid {
+  gap: var(--sp-8);
+}
+.news-card-body {
+  padding: var(--sp-6);
+}
+.news-tag {
+  margin-bottom: var(--sp-3);
+}
+.news-card-body h3 {
+  margin-bottom: var(--sp-3);
+}
+.news-card-body p {
+  margin-bottom: var(--sp-4);
+}
+
+/* ─────────────────────────────────────────────
+   10. HOME CONTACT SECTION
+   ───────────────────────────────────────────── */
+.contact-red-panel {
+  padding: var(--sp-8);
+  gap: var(--sp-6);
+}
+.contact-text-blocks {
+  gap: var(--sp-6);
+}
+.contact-text-block {
+  padding-bottom: var(--sp-6);
+}
+
+/* ─────────────────────────────────────────────
+   11. CEO MODAL (unchanged logic, just de-duplicated)
+   ───────────────────────────────────────────── */
+.ceo-modal-img-panel img {
+  object-position: 23% 50%;
+}
+@media (max-width: 1024px) {
+  .ceo-modal-img-panel img {
+    object-position: 10% top;
+  }
+}
+
+/* ─────────────────────────────────────────────
+   12. RESPONSIVE OVERRIDES
+   Same tokens, scaled once — every breakpoint stays
+   proportional instead of using unrelated one-off values.
+   ───────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .page-hero,
+  .page-hero.container {
+    padding-top: var(--sp-12);
+    padding-bottom: var(--sp-6);
+  }
+
+  .directors-marquee,
+  .verticals-slider-outer {
+    margin-inline: var(--sp-8);
+    margin-block: var(--sp-6);
+  }
+
+  .directors-section,
+  .home-verticals-logos,
+  .home-group-photos,
+  .testimonials-overlay,
+  .home-contact,
+  .vertical-category {
+    padding-block: var(--sp-12);
+  }
+
+  .careers-cta {
+    padding: var(--sp-10) var(--sp-6);
+  }
+  .architect-content {
+    padding: var(--sp-8);
+  }
+  .impact-stat-box {
+    padding: var(--sp-8) var(--sp-4);
+  }
+
+  .ceo-modal {
+    grid-template-rows: 280px 1fr;
+    width: min(500px, 95%);
+    max-height: 88vh;
+  }
+  .ceo-modal-content {
+    padding: 28px 24px 32px;
+  }
+  .ceo-modal-name {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-hero,
+  .page-hero.container {
+    padding-top: var(--sp-10);
+    padding-bottom: var(--sp-4);
+  }
+
+  .directors-marquee,
+  .verticals-slider-outer {
+    margin-inline: var(--sp-4);
+  }
+
+  .directors-section,
+  .home-verticals-logos,
+  .home-group-photos,
+  .testimonials-overlay,
+  .home-contact,
+  .vertical-category {
+    padding-block: var(--sp-8);
+  }
+
+  .contact-red-panel {
+    padding: var(--sp-6);
+  }
+  .perk-card {
+    padding: var(--sp-8) var(--sp-6);
+  }
+  .director-card-body {
+    padding: var(--sp-4) var(--sp-4) var(--sp-6);
+  }
+
+  .ceo-modal {
+    grid-template-rows: 240px 1fr;
+    border-radius: 14px;
+    max-height: 92vh;
+  }
+  .ceo-modal-content {
+    padding: 22px 20px 28px;
+    gap: 14px;
+  }
+  .ceo-modal-name {
+    font-size: 20px;
+  }
+
+  .ceo-img {
+    height: 250px;
+    position: relative;
+  }
+  .ceo-content {
+    height: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    overflow: visible !important;
+  }
+  .ceo-info {
+    position: relative !important;
+    top: auto !important;
+    right: auto !important;
+    transform: none !important;
+    max-width: 100% !important;
+    text-align: left;
+    padding: var(--sp-4);
+    background: var(--color-white);
+    color: var(--color-dark);
+  }
+  .ceo-info h3 {
+    color: var(--color-dark) !important;
+    font-size: 18px;
+  }
+  .ceo-info p {
+    color: var(--color-body) !important;
+    font-size: 12px;
+  }
+  .ceo-info .ceo-role {
+    color: var(--color-primary) !important;
+    font-size: 12px;
+  }
+  .ceo-content::after {
+    display: none !important;
   }
 }

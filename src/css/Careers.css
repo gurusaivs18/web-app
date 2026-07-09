@@ -1,4 +1,4 @@
-.careers-perks {
+/* .careers-perks {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
@@ -63,6 +63,84 @@
   font-size: 14px;
   opacity: 0.9;
   margin-bottom: 28px;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--white);
+}
+
+
+@media (max-width: 768px) {
+  .careers-perks {
+    grid-template-columns: 1fr;
+  }
+} */
+
+.careers-perks {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* gap and margin-bottom now controlled by global.css (.careers-perks) */
+}
+
+.perk-card {
+  background: var(--gray-light);
+  border-radius: 8px;
+  /* padding now controlled by global.css (.perk-card) */
+  text-align: center;
+}
+
+.perk-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--red);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-inline: auto;
+  /* margin-bottom now controlled by global.css (.perk-icon) */
+}
+
+.perk-icon svg {
+  width: 22px;
+  height: 22px;
+  fill: white;
+}
+
+.perk-card h3 {
+  font-family: var(--font-heading);
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.perk-card p {
+  font-size: 13px;
+  color: var(--text-mid);
+  line-height: 1.6;
+}
+
+.careers-cta {
+  background: var(--red);
+  border-radius: 8px;
+  /* padding now controlled by global.css (.careers-cta) */
+  text-align: center;
+  color: var(--white);
+}
+
+.careers-cta h2 {
+  font-family: var(--font-heading);
+  font-size: 28px;
+  font-weight: 800;
+  text-transform: uppercase;
+  /* margin-bottom now controlled by global.css (.careers-cta h2) */
+  color: var(--white);
+}
+
+.careers-cta p {
+  font-size: 14px;
+  opacity: 0.9;
+  /* margin-bottom now controlled by global.css (.careers-cta p) */
   max-width: 480px;
   margin-left: auto;
   margin-right: auto;

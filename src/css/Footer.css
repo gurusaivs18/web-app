@@ -61,7 +61,6 @@
 }
 
 .footer-col ul li {
-  margin-bottom: 10px;
   font-family: var(--font-primary);
 }
 
@@ -77,12 +76,10 @@
 /* QUICK LINKS */
 .quick-links-list {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px 25px;
+  grid-template-columns: 1fr;
 }
-
 .footer-col ul li a:hover {
-  color: #ff2e2e;
+  color: darkred;
 }
 
 /* UNDERLINE EFFECT */
@@ -93,7 +90,7 @@
   bottom: -4px;
   width: 0%;
   height: 2px;
-  background: #ff2e2e;
+  background: darkred;
   transition: 0.3s ease;
 }
 
@@ -120,7 +117,7 @@
 }
 
 .socials a:hover {
-  background: #ff2e2e;
+  background: darkred;
   transform: translateY(-3px);
 }
 
@@ -152,8 +149,8 @@
   }
 
   .quick-links-list {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px 20px;
+    grid-template-columns: 1fr;
+    gap: 10px;
   }
 }
 
@@ -187,19 +184,24 @@
     grid-column: 1 / -1;
   }
 
-  .quick-links-list {
+  /* .quick-links-list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 8px 12px;
+  } */
+  .quick-links-list {
+    display: flex;
+    flex-direction: column;
   }
 
   .quick-links-list li {
-    margin-bottom: 4px;
+    margin-bottom: 0;
   }
 
   .quick-links-list li a {
     font-size: 12px;
     line-height: 1.4;
+    margin-bottom: 10px;
   }
 
   /* Social full width */
@@ -226,9 +228,9 @@
     margin-bottom: 8px;
   }
 
-  .footer-col ul li a::after {
-    display: none;
-  }
+  /* .footer-col ul li a::after {
+
+  } */
 
   .footer-bottom {
     margin-top: 30px;
@@ -240,8 +242,8 @@
 ========================= */
 @media (max-width: 400px) {
   .quick-links-list {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 6px 8px;
+    grid-template-columns: 1fr;
+    gap: 10px;
   }
 
   .quick-links-list li a {
@@ -266,7 +268,7 @@
   font-family: var(--font-primary);
 }
 .quick-links-list li button:hover {
-  color: #ff2e2e;
+  color: darkred;
 }
 .quick-links-list li button::after {
   content: "";
@@ -275,7 +277,7 @@
   bottom: -4px;
   width: 0%;
   height: 2px;
-  background: #ff2e2e;
+  background: darkred;
   transition: 0.3s ease;
 }
 

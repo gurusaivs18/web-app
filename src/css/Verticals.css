@@ -7,9 +7,7 @@
 }
 
 .vertical-page-intro {
-  max-width: 720px;
-  margin: 32px auto 0;
-  text-align: center;
+  /* max-width, margin now controlled by global.css (.vertical-page-intro) */
   font-size: 15px;
   line-height: 1.85;
   color: var(--text-mid);
@@ -20,7 +18,7 @@
 
 .vertical-category {
   background: var(--white);
-  padding: 90px 0;
+  /* padding-block now controlled by global.css (.vertical-category) */
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
@@ -40,8 +38,7 @@
 
 .vertical-content {
   text-align: center;
-  margin-top: 40px;
-  margin-bottom: 0;
+  /* margin-top/margin-bottom now controlled by global.css (.vertical-content) */
 }
 
 .vertical-heading {
@@ -87,9 +84,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
-  margin-top: 0;
-  margin-bottom: 0;
+  /* gap, margin-top, margin-bottom now controlled by global.css (.vertical-brands-grid) */
 }
 
 /* ========================= LOGO CARD ========================= */
@@ -119,6 +114,7 @@
   min-height: 0;
   max-height: none;
   overflow: none;
+  /* margin-bottom now controlled by global.css (.logo-card-img-wrap) */
 }
 
 /* Default */
@@ -254,13 +250,13 @@
   white-space: normal;
   overflow: visible;
   text-overflow: unset;
+  /* margin-top now controlled by global.css (.logo-card-text) */
 }
 
 /* ========================= PAGE HERO ========================= */
 
 .page-hero {
-  padding-top: 90px;
-  padding-bottom: 48px;
+  /* padding-top/padding-bottom now controlled by global.css (.page-hero) */
 }
 
 /* ========================= CTA BUTTON ========================= */
@@ -410,22 +406,20 @@
 /* ========================= FEATURED LOGOS ========================= */
 .featured-logos-section {
   text-align: center;
-  padding: 90px 0;
-  margin-top: 0;
-  margin-bottom: 0;
+  /* padding-block, margin-block now controlled by global.css (.featured-logos-section) */
 }
 .featured-title {
   font-size: clamp(22px, 2.5vw, 28px);
   font-weight: 700;
   margin-top: 0;
-  margin-bottom: 28px;
+  /* margin-bottom now controlled by global.css (.featured-title) */
   color: var(--text-dark);
 }
 .featured-logos-grid {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 20px;
+  /* gap, margin-block now controlled by global.css (.featured-logos-grid) */
 }
 
 .featured-logo-card {
@@ -453,6 +447,7 @@
   object-fit: contain;
   mix-blend-mode: multiply;
   transition: transform 0.3s ease;
+  /* margin-bottom now controlled by global.css (.featured-logo-card img) */
 }
 .featured-logo-card img[data-brand="Pressman's Sandwiches"] {
   height: 100px;
@@ -586,24 +581,12 @@
 /* ========================= RESPONSIVE ========================= */
 
 @media (max-width: 992px) {
-  .vertical-category {
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
   .vertical-description {
     font-size: 15px;
   }
 }
 
 @media (max-width: 480px) {
-  .vertical-category {
-    padding-top: 36px;
-    padding-bottom: 36px;
-  }
-  .featured-logos-section {
-    padding: 36px 0;
-  }
-
   .vertical-brands-grid,
   .featured-logos-grid {
     display: flex;
@@ -940,9 +923,6 @@
   .featured-logo-card .logo-card-img-wrap img {
     width: auto;
     height: auto;
-    /* no blanket max-width/max-height here anymore — your per-brand
-     data-brand overrides below now fully control size, and the
-     card resizes around whatever you give them */
   }
 
   .logo-card-text,
@@ -952,7 +932,6 @@
     margin-top: 2px;
   }
 
-  /* ── Grid brand overrides at 360px ── */
   .logo-card-img-wrap img[data-brand="Pressman's Sandwiches"] {
     width: 160px !important;
     height: 90px !important;

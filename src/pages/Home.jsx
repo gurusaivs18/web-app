@@ -74,215 +74,178 @@ const statIcons = [
   </svg>,
 ];
 
-const brandLogos = [
+const verticalCategories = [
   {
-    img: uaeBulls,
-    url: "https://uaebulls.ae",
-    order: 20,
-    name: "UAE Bulls",
-    slug: "uae-bulls",
-    desc: "Neelesh Bhatnagar's passion for cricket led him to own the Delhi Bulls team. After eight seasons, the U.A.E. Bulls achieved a historic milestone — Champions of Season 9 (2025–26).",
+    label: "Interior Fitout & Outdoor Furniture",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none">
+        <path
+          d="M5 11V7a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v4"
+          stroke="currentColor"
+          strokeWidth="1.6"
+          strokeLinecap="round"
+        />
+        <rect
+          x="3"
+          y="11"
+          width="18"
+          height="6"
+          rx="1.5"
+          stroke="currentColor"
+          strokeWidth="1.6"
+        />
+        <path
+          d="M4 17v3M20 17v3"
+          stroke="currentColor"
+          strokeWidth="1.6"
+          strokeLinecap="round"
+        />
+      </svg>
+    ),
   },
   {
-    img: motiv8,
-    url: "https://motiv8.ae/",
-    order: 8,
-    name: "Motiv8",
-    slug: "motiv8",
-    desc: "An athleisure multi-designer women's-only retail store. Brands include Michi, Port De Bras, Yoga Democracy, SquatWolf, Manduka, Bala, Women's Best, and more.",
+    label: "Retail & Distribution",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none">
+        <path
+          d="M7 8V6a5 5 0 0 1 10 0v2"
+          stroke="currentColor"
+          strokeWidth="1.6"
+          strokeLinecap="round"
+        />
+        <rect
+          x="4"
+          y="8"
+          width="16"
+          height="13"
+          rx="1.5"
+          stroke="currentColor"
+          strokeWidth="1.6"
+        />
+        <path
+          d="M9 12a3 3 0 0 0 6 0"
+          stroke="currentColor"
+          strokeWidth="1.6"
+          strokeLinecap="round"
+        />
+      </svg>
+    ),
   },
   {
-    img: pressmans,
-    url: "https://pressmans.com/",
-    order: 19,
-    name: "Pressman's Sandwiches",
-    slug: "pressmans",
-    desc: "A homegrown brand specializing in healthy and fresh sandwiches and salads. 10 live locations across the U.A.E. and expanding in India through the cloud kitchen space.",
+    label: "Technology",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none">
+        <rect
+          x="7"
+          y="7"
+          width="10"
+          height="10"
+          rx="1.2"
+          stroke="currentColor"
+          strokeWidth="1.6"
+        />
+        <rect
+          x="10"
+          y="10"
+          width="4"
+          height="4"
+          rx="0.6"
+          stroke="currentColor"
+          strokeWidth="1.4"
+        />
+        <path
+          d="M9 3v2M12 3v2M15 3v2M9 19v2M12 19v2M15 19v2M3 9h2M3 12h2M3 15h2M19 9h2M19 12h2M19 15h2"
+          stroke="currentColor"
+          strokeWidth="1.6"
+          strokeLinecap="round"
+        />
+      </svg>
+    ),
   },
   {
-    img: vkTech,
-    url: "https://vktechnologiesme.com/",
-    order: 7,
-    name: "VK Technologies",
-    slug: "vk-technologies",
-    desc: "Customized software solutions — POS systems, reporting tools, e-commerce development, and seamless ERP integration including Oracle NetSuite and Zoho.",
+    label: "Sports & Fitness",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none">
+        <path
+          d="M4 10v4M20 10v4"
+          stroke="currentColor"
+          strokeWidth="1.8"
+          strokeLinecap="round"
+        />
+        <rect x="1.5" y="9" width="3" height="6" rx="1" fill="currentColor" />
+        <rect x="19.5" y="9" width="3" height="6" rx="1" fill="currentColor" />
+        <rect
+          x="5.5"
+          y="7.5"
+          width="2.5"
+          height="9"
+          rx="1"
+          fill="currentColor"
+        />
+        <rect
+          x="16"
+          y="7.5"
+          width="2.5"
+          height="9"
+          rx="1"
+          fill="currentColor"
+        />
+        <path
+          d="M8 12h8"
+          stroke="currentColor"
+          strokeWidth="1.8"
+          strokeLinecap="round"
+        />
+      </svg>
+    ),
   },
   {
-    img: targetOne,
-    url: "https://targetoneme.com/",
-    order: 5,
-    name: "Target One",
-    slug: "target-one",
-    desc: "Established 2016. Leading distributor of world-class electronic brands — Marshall, Jabra, Titan, Ugreen, JLab, Dicota, Alogic, and more across the region.",
+    label: "Food & Beverage (F&B)",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none">
+        <path
+          d="M7 3v7a2 2 0 0 0 2 2v9M7 3v5M9 3v5M11 3v7a2 2 0 0 1-2 2"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M17 3c-1.7 0-3 1.8-3 4s1.3 4 3 4v10"
+          stroke="currentColor"
+          strokeWidth="1.6"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    ),
   },
   {
-    img: ventures,
-    url: "https://nbventuresme.com/",
-    order: 4,
-    name: "NB Ventures",
-    slug: "nb-ventures",
-    desc: "A growth-stage venture fund based in the U.A.E. with a portfolio of 70+ Indian start-ups. Strategic Director Rushab Bhatnagar spearheads the Bangalore office.",
-  },
-  {
-    img: denaster,
-    url: "https://www.denaster.com/",
-    order: 6,
-    name: "Denaster",
-    slug: "denaster",
-    desc: "Joined the group in 2021. Distributes Shokz, GoCube, Sphero, Eilik, thinOptics, Ring, Boxbollen, ShiftCam, and Ampere across the region.",
-  },
-  {
-    img: biriyaniBox,
-    url: "",
-    order: 18,
-    name: "Biriyani Box",
-    slug: "biriyani-box",
-    desc: "Part of JSB Group's growing Food & Beverage portfolio, focused on delivering flavorful and authentic biriyani experiences.",
-  },
-  {
-    img: boosterJuice,
-    url: "https://boosterjuice.com/",
-    order: 21,
-    name: "Booster Juice",
-    slug: "booster-juice",
-    desc: "International smoothie and healthy beverage brand operating under JSB Group's F&B portfolio.",
-  },
-  {
-    img: inov8,
-    url: "https://www.inov8.ae/",
-    order: 9,
-    name: "Harrison / Inov8",
-    slug: "inov8",
-
-    desc: "Duty-free retail operator with presence across Dubai, Abu Dhabi, and Qatar Duty Free locations.",
-  },
-  {
-    img: activ8,
-    url: "https://activ8.ae/",
-    order: 10,
-    name: "Activ8",
-    slug: "activ8",
-    desc: "Retail business supporting premium fitness, wellness, and technology retail concepts across the UAE.",
-  },
-  {
-    img: harrisonDigital,
-    url: "",
-    order: 13,
-    name: "Harrison Digital",
-    slug: "harrison-digital",
-    desc: "Part of the group's digital retail and distribution ecosystem supporting brand expansion initiatives.",
-  },
-  {
-    img: garmin,
-    url: "https://www.garmin.ae/",
-    order: 11,
-    name: "Garmin by Activ8",
-    slug: "garmin-by-activ8",
-    desc: "Authorized Garmin retailer with multiple stores across the UAE carrying Garmin and Shokz products.",
-  },
-  {
-    img: zeroG,
-    url: "https://zerogmattress.ae/",
-    order: 14,
-    name: "ZeroG Beds & Mattresses",
-    slug: "zerog-beds",
-    desc: "Homegrown sleep and wellness brand delivering premium mattresses and bedding solutions.",
-  },
-  {
-    img: vipCosmetics,
-    url: "",
-    order: 15,
-    name: "VIP Cosmetics",
-    slug: "vip-cosmetics",
-    desc: "Skincare distribution arm under Target One representing premium beauty and skincare brands.",
-  },
-  {
-    img: monkeyBox,
-    url: "https://monkeyboxforkids.in/",
-    order: 22,
-    name: "Monkey Box",
-    slug: "monkey-box",
-    desc: "Lifestyle and consumer-focused brand within JSB Group's retail and distribution ecosystem.",
-  },
-  {
-    img: snapFitness,
-    url: "https://www.snapfitness.com/ae",
-    order: 12,
-    name: "Snap Fitness",
-    slug: "snap-fitness",
-    desc: "Global fitness franchise with multiple locations across the UAE promoting healthy lifestyles.",
-  },
-  {
-    img: uPro,
-    url: "https://upro.ae/",
-    order: 15,
-    name: "United Pro Sports",
-    slug: "u-pro",
-    desc: "World-class indoor sports facility featuring football, cricket, basketball, volleyball, badminton, and more.",
-  },
-  {
-    img: bvbLeague,
-    url: "https://bvbpro.com/",
-    order: 16,
-    name: "BVB League",
-    slug: "bvb-league",
-    desc: "Franchise-based beach volleyball league combining elite sports, entertainment, and lifestyle experiences.",
-  },
-  {
-    img: epicFitouts,
-    url: "https://www.epicfitout.com/",
-    order: 17,
-    name: "Epic Fitouts",
-    slug: "epic-fitouts",
-    desc: "Provider of premium interior design, fitout services, and customized outdoor furniture solutions.",
-  },
-  {
-    img: yellowChilli,
-    url: "https://theyellowchilli.com/",
-    order: 23,
-    name: "Yellow Chilli",
-    slug: "yellow-chilli",
-    desc: "Indian restaurant brand operating under JSB Group's India vertical.",
-  },
-  {
-    img: pizzaTales,
-    url: "",
-    order: 24,
-    name: "Pizza Tales",
-    slug: "pizza-tales",
-    desc: "Part of JSB Group's India food and beverage portfolio.",
-  },
-  {
-    img: khichdiTales,
-    url: "",
-    order: 25,
-    name: "Khichdi Tales",
-    slug: "khichdi-tales",
-    desc: "Indian food concept focused on comfort and traditional meals.",
-  },
-  {
-    img: thaliTales,
-    url: "",
-    order: 3,
-    name: "Thali Tales",
-    slug: "thali-tales",
-    desc: "Traditional Indian dining concept within JSB Group's India operations.",
-  },
-  {
-    img: hongKong,
-    url: "",
-    order: 2,
-    name: "Hong Kong",
-    slug: "hong-kong",
-    desc: "Part of JSB Group's India hospitality and restaurant portfolio.",
-  },
-  {
-    img: beijingLu,
-    url: "",
-    order: 1,
-    name: "Beijing Lu",
-    slug: "beijing-lu",
-    desc: "Asian dining concept under JSB Group's India vertical.",
+    label: "Venture Capitalist",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none">
+        <path
+          d="M3 20h18"
+          stroke="currentColor"
+          strokeWidth="1.8"
+          strokeLinecap="round"
+        />
+        <path
+          d="M4 16l5-5 4 3 7-8"
+          stroke="currentColor"
+          strokeWidth="1.8"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M15 6h5v5"
+          stroke="currentColor"
+          strokeWidth="1.8"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    ),
   },
 ];
 
@@ -594,7 +557,23 @@ function BrandModal({ brand, onClose }) {
 /* ─── Directors Slider ───────────────────────────────────────── */
 function DirectorsSlider({ onSelect }) {
   const trackRef = useRef();
-  useAutoScroll(trackRef, 0.2);
+  const wrapRef = useRef(); // NEW — measures the visible track area
+
+  const [cardWidth, setCardWidth] = useState(null); // NEW
+
+  useEffect(() => {
+    const VISIBLE = 4;
+    const GAP = 20;
+    const calc = () => {
+      if (!wrapRef.current) return;
+      const w = wrapRef.current.clientWidth;
+      setCardWidth((w - GAP * (VISIBLE - 1)) / VISIBLE);
+    };
+    calc();
+    const ro = new ResizeObserver(calc);
+    if (wrapRef.current) ro.observe(wrapRef.current);
+    return () => ro.disconnect();
+  }, []);
 
   const sortedDirectors = [...directors].sort(
     (a, b) => (a.order || 999) - (b.order || 999),
@@ -620,7 +599,13 @@ function DirectorsSlider({ onSelect }) {
           ‹
         </button>
 
-        <div className="directors-marquee" data-reveal="up" data-delay="150">
+        <div
+          className="directors-marquee"
+          ref={wrapRef}
+          data-reveal="up"
+          data-delay="150"
+          style={cardWidth ? { "--card-w": `${cardWidth}px` } : undefined}
+        >
           <div className="directors-track-marquee" ref={trackRef}>
             {doubled.map((d, i) => (
               <div
@@ -678,86 +663,33 @@ function DirectorsSlider({ onSelect }) {
     </section>
   );
 }
-
-/* ─── Verticals Slider ───────────────────────────────────────── */
-function VerticalsSlider({ onSelect }) {
-  const trackRef = useRef();
-  useAutoScroll(trackRef, 0.2);
-
-  const sorted = [...brandLogos].sort((a, b) => a.order - b.order);
-  const doubled = [...sorted, ...sorted];
-
+function VerticalsGrid() {
   return (
-    <section className="home-verticals-logos">
+    <section className="section home-verticals-grid">
       <div className="container">
         <div className="section-title-wrap" data-reveal="fade">
           <span className="section-title">Verticals</span>
         </div>
-      </div>
-
-      <div className="verticals-slider-wrap">
-        <button
-          className="slider-nav slider-nav-left"
-          onClick={() => {
-            trackRef.current.scrollLeft -= 260;
-          }}
-        >
-          ‹
-        </button>
-
-        <div
-          className="verticals-slider-outer"
-          data-reveal="up"
-          data-delay="200"
-        >
-          <div className="verticals-track" ref={trackRef}>
-            {doubled.map((logo, i) => (
-              <div
-                key={i}
-                className="vertical-slide-item"
-                onClick={() => onSelect(logo)}
-                style={{ cursor: "pointer" }}
-              >
-                <div className="vertical-logo-box">
-                  <img
-                    src={logo.img}
-                    alt={logo.name}
-                    data-brand={logo.name}
-                    loading="lazy"
-                  />
-                </div>
-                <div className="vertical-card-divider" />
-                <div className="vertical-card-body">
-                  <p className="vertical-brand-name">{logo.name}</p>
-                  <p className="vertical-brand-desc">{logo.desc}</p>
-                  <span
-                    className="vertical-know-more"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      onSelect(logo);
-                    }}
-                  >
-                    Know More →
-                  </span>
-                </div>
-              </div>
-            ))}
-          </div>
+        <p className="verticals-grid-intro" data-reveal="up" data-delay="150">
+          Multi brand operations and consumer focused services
+        </p>
+        <div className="verticals-grid">
+          {verticalCategories.map((cat, i) => (
+            <div
+              key={cat.label}
+              className="vertical-cat-card"
+              data-reveal="up"
+              data-delay={String(i * 100 + 100)}
+            >
+              <div className="vertical-cat-icon">{cat.icon}</div>
+              <p className="vertical-cat-label">{cat.label}</p>
+            </div>
+          ))}
         </div>
-
-        <button
-          className="slider-nav slider-nav-right"
-          onClick={() => {
-            trackRef.current.scrollLeft += 260;
-          }}
-        >
-          ›
-        </button>
       </div>
     </section>
   );
 }
-
 /* ─── Main component ─────────────────────────────────────────── */
 function Home() {
   useScrollReveal();
@@ -844,12 +776,7 @@ function Home() {
           <img src={ceoImage} alt="CEO" className="ceo-img" loading="lazy" />
           <div className="ceo-info">
             <h3 data-reveal="right">Neelesh Bhatnagar</h3>
-            <p
-              className="ceo-role"
-              style={{ color: "red" }}
-              data-reveal="right"
-              data-delay="150"
-            >
+            <p className="ceo-role" data-reveal="right" data-delay="150">
               CEO &amp; Founder
             </p>
             <p data-reveal="right" data-delay="250">
@@ -869,9 +796,8 @@ function Home() {
       {/* ── DIRECTORS SLIDER ── */}
       <DirectorsSlider onSelect={setSelectedDirector} />
 
-      {/* ── VERTICALS SLIDER ── */}
-      <VerticalsSlider onSelect={setSelectedBrand} />
-
+      {/* ── VERTICALS GRID ── */}
+      <VerticalsGrid />
       {/* ── IMPACT / STATS ── */}
       <section className="section home-impact" ref={sectionRef}>
         <div className="container">
