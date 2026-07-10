@@ -555,78 +555,78 @@ function DirectorsSlider({ onSelect }) {
         <div className="section-title-wrap" data-reveal="fade">
           <span className="section-title">Pillars</span>
         </div>
-      </div>
 
-      <div className="directors-slider-wrap">
-        <button
-          className="slider-nav slider-nav-left"
-          onClick={() => {
-            trackRef.current.scrollLeft -= slideAmount;
-          }}
-        >
-          ‹
-        </button>
+        <div className="directors-slider-wrap">
+          <button
+            className="slider-nav slider-nav-left"
+            onClick={() => {
+              trackRef.current.scrollLeft -= slideAmount;
+            }}
+          >
+            ‹
+          </button>
 
-        <div
-          className="directors-marquee"
-          ref={wrapRef}
-          data-reveal="up"
-          data-delay="150"
-          style={cardWidth ? { "--card-w": `${cardWidth}px` } : undefined}
-        >
-          <div className="directors-track-marquee" ref={trackRef}>
-            {doubled.map((d, i) => (
-              <div
-                key={`${d.slug}-${i}`}
-                className="director-card"
-                onClick={() => onSelect(d)}
-              >
-                <div className="director-photo-wrap">
-                  {d.img ? (
-                    <img
-                      src={d.img}
-                      alt={d.name}
-                      className="director-photo"
-                      loading="lazy"
-                    />
-                  ) : (
-                    <div className="director-avatar-fallback">
-                      {d.name
-                        .split(" ")
-                        .map((n) => n[0])
-                        .join("")
-                        .slice(0, 2)}
-                    </div>
-                  )}
-                  <div className="director-photo-accent" />
+          <div
+            className="directors-marquee"
+            ref={wrapRef}
+            data-reveal="up"
+            data-delay="150"
+            style={cardWidth ? { "--card-w": `${cardWidth}px` } : undefined}
+          >
+            <div className="directors-track-marquee" ref={trackRef}>
+              {doubled.map((d, i) => (
+                <div
+                  key={`${d.slug}-${i}`}
+                  className="director-card"
+                  onClick={() => onSelect(d)}
+                >
+                  <div className="director-photo-wrap">
+                    {d.img ? (
+                      <img
+                        src={d.img}
+                        alt={d.name}
+                        className="director-photo"
+                        loading="lazy"
+                      />
+                    ) : (
+                      <div className="director-avatar-fallback">
+                        {d.name
+                          .split(" ")
+                          .map((n) => n[0])
+                          .join("")
+                          .slice(0, 2)}
+                      </div>
+                    )}
+                    <div className="director-photo-accent" />
+                  </div>
+                  <div className="director-text-col">
+                    <h4 className="director-name">{d.name}</h4>
+                    <p className="director-role">{d.role}</p>
+                    <p className="director-bio">{d.bio}</p>
+                    <span
+                      className="director-know-more"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        onSelect(d);
+                      }}
+                    >
+                      Know More →
+                    </span>
+                  </div>
                 </div>
-                <div className="director-text-col">
-                  <h4 className="director-name">{d.name}</h4>
-                  <p className="director-role">{d.role}</p>
-                  <p className="director-bio">{d.bio}</p>
-                  <span
-                    className="director-know-more"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      onSelect(d);
-                    }}
-                  >
-                    Know More →
-                  </span>
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
 
-        <button
-          className="slider-nav slider-nav-right"
-          onClick={() => {
-            trackRef.current.scrollLeft += slideAmount;
-          }}
-        >
-          ›
-        </button>
+          <button
+            className="slider-nav slider-nav-right"
+            onClick={() => {
+              trackRef.current.scrollLeft += slideAmount;
+            }}
+          >
+            ›
+          </button>
+        </div>
       </div>
     </section>
   );

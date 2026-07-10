@@ -343,9 +343,8 @@
   border-radius: 14px;
   overflow: hidden;
 
-  width: 220px;
-  flex: 0 0 220px;
-
+  width: var(--card-w, 220px);
+  flex: 0 0 var(--card-w, 220px);
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -504,27 +503,14 @@
 /* =========================
    RESPONSIVE
 ========================= */
-@media (min-width: 1201px) {
-  .director-card {
-    width: var(--card-w, 220px);
-    flex: 0 0 var(--card-w, 220px);
-  }
-}
+
 @media (max-width: 900px) {
-  .director-card {
-    width: 200px;
-    flex: 0 0 200px;
-  }
   .director-photo-wrap {
     height: 190px;
   }
 }
 
 @media (max-width: 580px) {
-  .director-card {
-    width: 180px;
-    flex: 0 0 180px;
-  }
   .director-photo-wrap {
     height: 170px;
   }
