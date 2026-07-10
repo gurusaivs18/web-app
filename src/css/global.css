@@ -86,7 +86,7 @@ body {
   --black: white; /* Get In Touch section background           */
   --red: #9b1c1c;
   --text-mid: #1a1a1a; /* right panel p tags — black                */
-  --gray-mid: ; /* divider lines inside dark section 
+  --gray-mid: #e0e0e0; /* divider lines inside dark section 
           */
   --scroll-offset: 120px;
 }
@@ -1113,10 +1113,12 @@ textarea.form-control {
 .directors-marquee {
   margin-top: 0;
   margin-bottom: 0;
-
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
 }
-.directors-marquee {
-  margin-bottom: 0;
+.directors-marquee::-webkit-scrollbar {
+  display: none;
 }
 
 .home-verticals-logos,
@@ -1318,11 +1320,6 @@ textarea.form-control {
   .page-hero.container {
     padding-top: var(--sp-12);
     padding-bottom: var(--sp-6);
-  }
-
-  .directors-marquee {
-    margin-inline: var(--sp-8);
-    margin-block: var(--sp-6);
   }
 
   .home-verticals-logos,

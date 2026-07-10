@@ -7,6 +7,13 @@ import "../css/ScrollReveal.css";
 import { useNavigate } from "react-router-dom";
 import { useScrollReveal } from "../hooks/useScrollReveal";
 import ceoImage from "../assets/jsbGroupWebsite/assets-jsb.webp";
+// CARDS BACKGROUND  IMG IMPORTS
+// import interiorImg from "../assets/Verticals/interior-fitout.webp";
+// import retailImg from "../assets/Verticals/retail-distribution.webp";
+// import techImg from "../assets/Verticals/technology.webp";
+// import fitnessImg from "../assets/Verticals/sports-fitness.webp";
+// import fnbImg from "../assets/Verticals/fnb.webp";
+// import vcImg from "../assets/Verticals/venture-capital.webp";
 
 // break
 
@@ -45,6 +52,8 @@ const statIcons = [
 const verticalCategories = [
   {
     label: "Interior Fitout & Outdoor Furniture",
+    // img: interiorImg,
+
     icon: (
       <svg viewBox="0 0 24 24" fill="none">
         <path
@@ -73,6 +82,7 @@ const verticalCategories = [
   },
   {
     label: "Retail & Distribution",
+    // img: retailImg,
     icon: (
       <svg viewBox="0 0 24 24" fill="none">
         <path
@@ -101,6 +111,7 @@ const verticalCategories = [
   },
   {
     label: "Technology",
+    // img: techImg,
     icon: (
       <svg viewBox="0 0 24 24" fill="none">
         <rect
@@ -132,6 +143,7 @@ const verticalCategories = [
   },
   {
     label: "Sports & Fitness",
+    // img: fitnessImg,
     icon: (
       <svg viewBox="0 0 24 24" fill="none">
         <path
@@ -169,6 +181,7 @@ const verticalCategories = [
   },
   {
     label: "Food & Beverage (F&B)",
+    // img: fnbImg,
     icon: (
       <svg viewBox="0 0 24 24" fill="none">
         <path
@@ -190,6 +203,7 @@ const verticalCategories = [
   },
   {
     label: "Venture Capitalist",
+    // img: vcImg,
     icon: (
       <svg viewBox="0 0 24 24" fill="none">
         <path
@@ -527,22 +541,6 @@ function DirectorsSlider({ onSelect }) {
   const trackRef = useRef();
   const wrapRef = useRef(); // NEW — measures the visible track area
 
-  const [cardWidth, setCardWidth] = useState(null); // NEW
-
-  useEffect(() => {
-    const VISIBLE = 4;
-    const GAP = 20;
-    const calc = () => {
-      if (!wrapRef.current) return;
-      const w = wrapRef.current.clientWidth;
-      setCardWidth((w - GAP * (VISIBLE - 1)) / VISIBLE);
-    };
-    calc();
-    const ro = new ResizeObserver(calc);
-    if (wrapRef.current) ro.observe(wrapRef.current);
-    return () => ro.disconnect();
-  }, []);
-
   const sortedDirectors = [...directors].sort(
     (a, b) => (a.order || 999) - (b.order || 999),
   );
@@ -571,7 +569,6 @@ function DirectorsSlider({ onSelect }) {
             ref={wrapRef}
             data-reveal="up"
             data-delay="150"
-            style={cardWidth ? { "--card-w": `${cardWidth}px` } : undefined}
           >
             <div className="directors-track-marquee" ref={trackRef}>
               {doubled.map((d, i) => (
@@ -646,9 +643,13 @@ function VerticalsGrid({ onSelect }) {
               data-reveal="up"
               data-delay={String(i * 100 + 100)}
               onClick={() => onSelect(cat.label)}
+              style={{ backgroundImage: `url(${cat.img})` }}
             >
-              {cat.icon}
-              <h3>{cat.label}</h3>
+              <div className="vertical-cat-overlay" />
+              <div className="vertical-cat-content">
+                {cat.icon}
+                <h3>{cat.label}</h3>
+              </div>
             </div>
           ))}
         </div>

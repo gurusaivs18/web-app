@@ -215,19 +215,10 @@
 /* ───────────────── CARD ───────────────── */
 
 .director-card {
-  width: 100%;
-  max-width: 260px;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  background: #fff;
-  border: 2px solid #d7d7d7;
-  border-radius: 12px;
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+  scroll-snap-align: start;
+  width: 240px;        /* fixed, no --card-w variable needed */
+  flex: 0 0 240px;
 }
-
 .director-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);

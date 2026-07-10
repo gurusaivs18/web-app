@@ -343,8 +343,8 @@
   border-radius: 14px;
   overflow: hidden;
 
-  width: var(--card-w, 220px);
-  flex: 0 0 var(--card-w, 220px);
+  width: 240px;
+  flex: 0 0 240px;
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -364,15 +364,17 @@
 /* =========================
    PHOTO ZONE
 ========================= */
+/* =========================
+   PHOTO ZONE
+========================= */
 .director-photo-wrap {
   position: relative;
   width: 100%;
-  height: 210px;
+  aspect-ratio: 3 / 4;
   flex-shrink: 0;
   background: var(--gray-light);
   overflow: hidden;
 }
-
 .director-photo {
   width: 100%;
   height: 100%;
@@ -503,18 +505,6 @@
 /* =========================
    RESPONSIVE
 ========================= */
-
-@media (max-width: 900px) {
-  .director-photo-wrap {
-    height: 190px;
-  }
-}
-
-@media (max-width: 580px) {
-  .director-photo-wrap {
-    height: 170px;
-  }
-}
 
 /* ================= IMPACT ================= */
 .home-impact {
@@ -666,7 +656,23 @@
   background: grey;
 }
 .vertical-cat-card {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-color: var(
+    --color-primary
+  ); /* fallback while image loads / if missing */
+  border-radius: var(--border-radius-lg);
+  padding: 24px 16px;
+  min-height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
   cursor: pointer;
+  transition:
+    transform var(--ease-normal),
+    box-shadow var(--ease-normal);
 }
 .group-photo-placeholder {
   width: 100%;
@@ -1487,6 +1493,25 @@
   transform: translateY(-4px);
   box-shadow: var(--shadow-lg);
 }
+.vertical-cat-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(155, 28, 28, 0.55) 0%,
+    rgba(20, 5, 5, 0.75) 100%
+  );
+  z-index: 1;
+}
+.vertical-cat-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+}
 
 .vertical-cat-card svg {
   width: 32px;
@@ -1504,6 +1529,7 @@
   letter-spacing: 0.05em;
   line-height: 1.35;
   margin: 0;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4); /* extra readability insurance */
 }
 
 @media (max-width: 1024px) {
