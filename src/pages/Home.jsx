@@ -8,12 +8,12 @@ import { useNavigate } from "react-router-dom";
 import { useScrollReveal } from "../hooks/useScrollReveal";
 import ceoImage from "../assets/jsbGroupWebsite/assets-jsb.webp";
 // CARDS BACKGROUND  IMG IMPORTS
-// import interiorImg from "../assets/Verticals/interior-fitout.webp";
-// import retailImg from "../assets/Verticals/retail-distribution.webp";
-// import techImg from "../assets/Verticals/technology.webp";
-// import fitnessImg from "../assets/Verticals/sports-fitness.webp";
-// import fnbImg from "../assets/Verticals/fnb.webp";
-// import vcImg from "../assets/Verticals/venture-capital.webp";
+import interiorImg from "../assets/card-images/interior.png";
+import retailImg from "../assets/card-images/retail.png";
+import techImg from "../assets/card-images/techno.png";
+import fitnessImg from "../assets/card-images/sports_fitness1.png";
+import fnbImg from "../assets/card-images/fnb.png";
+import vcImg from "../assets/card-images/venture.png";
 
 // break
 
@@ -52,7 +52,7 @@ const statIcons = [
 const verticalCategories = [
   {
     label: "Interior Fitout & Outdoor Furniture",
-    // img: interiorImg,
+    img: interiorImg,
 
     icon: (
       <svg viewBox="0 0 24 24" fill="none">
@@ -82,7 +82,7 @@ const verticalCategories = [
   },
   {
     label: "Retail & Distribution",
-    // img: retailImg,
+    img: retailImg,
     icon: (
       <svg viewBox="0 0 24 24" fill="none">
         <path
@@ -111,7 +111,7 @@ const verticalCategories = [
   },
   {
     label: "Technology",
-    // img: techImg,
+    img: techImg,
     icon: (
       <svg viewBox="0 0 24 24" fill="none">
         <rect
@@ -143,7 +143,7 @@ const verticalCategories = [
   },
   {
     label: "Sports & Fitness",
-    // img: fitnessImg,
+    img: fitnessImg,
     icon: (
       <svg viewBox="0 0 24 24" fill="none">
         <path
@@ -181,7 +181,7 @@ const verticalCategories = [
   },
   {
     label: "Food & Beverage (F&B)",
-    // img: fnbImg,
+    img: fnbImg,
     icon: (
       <svg viewBox="0 0 24 24" fill="none">
         <path
@@ -203,7 +203,7 @@ const verticalCategories = [
   },
   {
     label: "Venture Capitalist",
-    // img: vcImg,
+    img: vcImg,
     icon: (
       <svg viewBox="0 0 24 24" fill="none">
         <path
