@@ -222,7 +222,7 @@ function About() {
       </div>
 
       {/* ── WHO WE ARE ── */}
-      <section className="section about-who">
+      <section className="section about-subheading">
         <div className="container">
           <div className="section-title-wrap" data-reveal="fade">
             <span className="section-title">Who We Are</span>

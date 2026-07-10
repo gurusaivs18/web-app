@@ -622,6 +622,8 @@
 /* ================= GROUP PHOTO GRID ================= */
 .home-group-photos {
   background: var(--white);
+  padding-top: 0;
+  margin-top: 0;
   /* padding now controlled by global.css (.home-group-photos) */
 }
 .group-photo-grid {
@@ -677,7 +679,9 @@
   flex: 1;
   background: grey;
 }
-
+.vertical-cat-card {
+  cursor: pointer;
+}
 .group-photo-placeholder {
   width: 100%;
   height: 100%;
@@ -1459,36 +1463,35 @@
   }
 }
 /* ================= VERTICALS — CATEGORY GRID ================= */
-.home-verticals-grid {
+.home-verticals {
   background: var(--white);
+  padding-top: 3.5rem; /* same value as .section-title's margin-bottom, so both gaps match */
+  padding-bottom: 3rem; /* keep bottom padding for content after the cards */
 }
-
-.verticals-grid-intro {
-  text-align: center;
-  font-size: 14px;
-  color: var(--text-mid);
-  max-width: 680px;
-  margin: 0 auto var(--sp-hero-gap);
-  line-height: 1.85;
+.section.home-impact {
+  padding-block: 2rem;
 }
-
-.verticals-grid {
+.vertical-cats-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: var(--sp-6);
+  gap: 20px;
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding-inline: var(--sp-6);
 }
 
 .vertical-cat-card {
   background: var(--color-primary);
   border-radius: var(--border-radius-lg);
-  padding: var(--sp-10) var(--sp-6);
-  min-height: 140px;
+  padding: 24px 16px;
+  min-height: 130px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: var(--sp-3);
+  gap: 12px;
   text-align: center;
+  cursor: pointer;
   transition:
     transform var(--ease-normal),
     box-shadow var(--ease-normal);
@@ -1499,83 +1502,38 @@
   box-shadow: var(--shadow-lg);
 }
 
-.vertical-cat-icon {
-  width: 44px;
-  height: 44px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.vertical-cat-card svg {
+  width: 32px;
+  height: 32px;
   color: var(--white);
+  flex-shrink: 0;
 }
 
-.vertical-cat-icon svg {
-  width: 30px;
-  height: 30px;
-}
-
-.vertical-cat-label {
+.vertical-cat-card h3 {
   color: var(--white);
   font-family: var(--font-heading);
   font-weight: 700;
   font-size: 13px;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  line-height: 1.4;
+  line-height: 1.35;
   margin: 0;
 }
 
-/* RESPONSIVE — follows the same breakpoints as global.css's .grid--3 / .grid--2 */
-/* RESPONSIVE — always keep at least 2 columns to avoid a long single-column stack */
 @media (max-width: 1024px) {
-  .verticals-grid {
+  .vertical-cats-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: var(--sp-4);
   }
 }
 
-@media (max-width: 768px) {
-  .verticals-grid {
-    grid-template-columns: repeat(2, 1fr);
+@media (max-width: 480px) {
+  .vertical-cats-grid {
+    grid-template-columns: 1fr;
     gap: var(--sp-3);
   }
   .vertical-cat-card {
-    padding: var(--sp-6) var(--sp-4);
+    padding: 20px 14px;
     min-height: 110px;
-    gap: var(--sp-2);
-  }
-  .vertical-cat-icon {
-    width: 36px;
-    height: 36px;
-  }
-  .vertical-cat-icon svg {
-    width: 24px;
-    height: 24px;
-  }
-  .vertical-cat-label {
-    font-size: 11.5px;
-    letter-spacing: 0.03em;
-  }
-}
-
-@media (max-width: 420px) {
-  .verticals-grid {
-    gap: var(--sp-2);
-  }
-  .vertical-cat-card {
-    padding: var(--sp-4) var(--sp-3);
-    min-height: 96px;
-    border-radius: var(--border-radius);
-  }
-  .vertical-cat-icon {
-    width: 30px;
-    height: 30px;
-  }
-  .vertical-cat-icon svg {
-    width: 20px;
-    height: 20px;
-  }
-  .vertical-cat-label {
-    font-size: 10.5px;
-    line-height: 1.3;
   }
 }

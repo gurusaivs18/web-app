@@ -4,7 +4,7 @@ import { companyInfo } from "../data/company";
 import { stats } from "../data/stats";
 import "../css/Home.css";
 import "../css/ScrollReveal.css";
-
+import { useNavigate } from "react-router-dom";
 import { useScrollReveal } from "../hooks/useScrollReveal";
 import ceoImage from "../assets/jsbGroupWebsite/assets-jsb.webp";
 
@@ -631,26 +631,24 @@ function DirectorsSlider({ onSelect }) {
     </section>
   );
 }
-function VerticalsGrid() {
+function VerticalsGrid({ onSelect }) {
   return (
-    <section className="section home-verticals-grid">
+    <section className="home-verticals">
       <div className="container">
         <div className="section-title-wrap" data-reveal="fade">
           <span className="section-title">Verticals</span>
         </div>
-        <p className="verticals-grid-intro" data-reveal="up" data-delay="150">
-          Multi brand operations and consumer focused services
-        </p>
-        <div className="verticals-grid">
+        <div className="vertical-cats-grid">
           {verticalCategories.map((cat, i) => (
             <div
               key={cat.label}
               className="vertical-cat-card"
               data-reveal="up"
               data-delay={String(i * 100 + 100)}
+              onClick={() => onSelect(cat.label)}
             >
-              <div className="vertical-cat-icon">{cat.icon}</div>
-              <p className="vertical-cat-label">{cat.label}</p>
+              {cat.icon}
+              <h3>{cat.label}</h3>
             </div>
           ))}
         </div>
@@ -661,6 +659,24 @@ function VerticalsGrid() {
 /* ─── Main component ─────────────────────────────────────────── */
 function Home() {
   useScrollReveal();
+  const navigate = useNavigate();
+
+  const getId = (title) => title.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+
+  const handleVerticalClick = (title) => {
+    const id = getId(title);
+
+    navigate("/verticals", {
+      state: { scrollTo: id },
+    });
+
+    setTimeout(() => {
+      document.getElementById(id)?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }, 300);
+  };
 
   const sectionRef = useRef(null);
   const [triggered, setTriggered] = useState(false);
@@ -723,7 +739,6 @@ function Home() {
   return (
     <>
       <Hero />
-
       {/* ── INTRO ── */}
       <section className="section home-intro">
         <div className="container">
@@ -737,7 +752,6 @@ function Home() {
           </div>
         </div>
       </section>
-
       {/* ── CEO ── */}
       <section className="ceo-section" data-reveal="fade">
         <div className="ceo-content">
@@ -760,12 +774,10 @@ function Home() {
           </div>
         </div>
       </section>
-
       {/* ── DIRECTORS SLIDER ── */}
       <DirectorsSlider onSelect={setSelectedDirector} />
-
       {/* ── VERTICALS GRID ── */}
-      <VerticalsGrid />
+      <VerticalsGrid onSelect={handleVerticalClick} />{" "}
       {/* ── IMPACT / STATS ── */}
       <section className="section home-impact" ref={sectionRef}>
         <div className="container">
@@ -789,7 +801,6 @@ function Home() {
           </div>
         </div>
       </section>
-
       {/* ── GROUP PHOTOS ── */}
       <section className="home-group-photos">
         <div className="container">
@@ -823,7 +834,6 @@ function Home() {
           </div>
         </div>
       </section>
-
       {/* ── TESTIMONIALS ── */}
       <section className="home-testimonials">
         <div className="testimonials-overlay">
@@ -859,7 +869,6 @@ function Home() {
           </div>
         </div>
       </section>
-
       {/* ── CONTACT ── */}
       <section className="home-contact">
         <div className="container">
@@ -890,10 +899,8 @@ function Home() {
           </div>
         </div>
       </section>
-
       {/* ── MODALS ── */}
       {ceoModalOpen && <CeoModal onClose={() => setCeoModalOpen(false)} />}
-
       <DirectorModal
         director={selectedDirector}
         onClose={() => setSelectedDirector(null)}

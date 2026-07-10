@@ -64,7 +64,7 @@ body {
      Single source of truth for heading→content gap
      and section→section rhythm, used site-wide. */
   --sp-hero-gap: var(--sp-8);
-  --sp-section-gap: var(--sp-16);
+  --sp-section-gap: var(--sp-12);
 
   /* ── Layout ── */
   --max-width: 1200px;
@@ -278,13 +278,13 @@ p:last-child {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: var(--sp-4);
+  gap: var(--sp-3);
   font-size: var(--text-lg);
   font-weight: var(--fw-bold);
   text-transform: uppercase;
   letter-spacing: 0.14em;
   color: var(--color-body);
-  margin-bottom: var(--sp-12);
+  margin-bottom: 3.5rem;
 }
 
 .section-title::before,
@@ -295,7 +295,9 @@ p:last-child {
   background-color: var(--color-primary);
   max-width: 180px;
 }
-
+.page-hero {
+  padding-bottom: 0;
+}
 /* --------------------------------------------------------------------------
    6. BUTTONS
    -------------------------------------------------------------------------- */
@@ -1056,13 +1058,13 @@ textarea.form-control {
    ───────────────────────────────────────────── */
 .page-hero,
 .page-hero.container {
-  padding-top: var(--sp-section-gap);
-  padding-bottom: var(--sp-hero-gap);
+  padding-top: 3rem;
+  padding-bottom: 0;
   text-align: center;
 }
 
 .page-hero h1 {
-  margin-top: var(--sp-6);
+  margin-top: 3rem;
   margin-bottom: 0;
   text-align: center;
 }
@@ -1104,11 +1106,13 @@ textarea.form-control {
    one-off bottom overrides.
    ───────────────────────────────────────────── */
 .directors-section {
-  padding-block: var(--sp-section-gap);
+  padding-block: 3.5rem;
+  padding-bottom: 0;
 }
 
 .directors-marquee {
-  margin-block: var(--sp-8);
+  margin-top: 0;
+  margin-bottom: 0;
   margin-inline: 80px;
 }
 .directors-marquee {
@@ -1119,7 +1123,7 @@ textarea.form-control {
 .home-group-photos,
 .testimonials-overlay,
 .home-contact {
-  padding-block: var(--sp-section-gap);
+  padding-block: 3rem;
 }
 
 .stats-grid {
@@ -1147,9 +1151,9 @@ textarea.form-control {
   margin-top: var(--sp-hero-gap);
   gap: var(--sp-8);
 }
-.pillars-section + .pillars-section {
-  padding-top: var(--sp-section-gap);
-}
+/* .pillars-section + .pillars-section {
+
+} */
 .director-card-body {
   padding: var(--sp-6) var(--sp-4) var(--sp-6);
 }
@@ -1321,13 +1325,12 @@ textarea.form-control {
     margin-block: var(--sp-6);
   }
 
-  .directors-section,
   .home-verticals-logos,
   .home-group-photos,
   .testimonials-overlay,
   .home-contact,
   .vertical-category {
-    padding-block: var(--sp-12);
+    padding-block: 3rem;
   }
 
   .careers-cta {
@@ -1364,13 +1367,12 @@ textarea.form-control {
     margin-inline: var(--sp-4);
   }
 
-  .directors-section,
   .home-verticals-logos,
   .home-group-photos,
   .testimonials-overlay,
   .home-contact,
   .vertical-category {
-    padding-block: var(--sp-8);
+    padding-block: 3rem;
   }
 
   .contact-red-panel {

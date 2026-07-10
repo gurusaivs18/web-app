@@ -42,7 +42,7 @@ function Impact() {
   return (
     <>
       <div className="page-hero" data-reveal="fade">
-        <h1 className="impact-page-title">Impact</h1>
+        <h1>Impact</h1>
       </div>
 
       <section className="section">
