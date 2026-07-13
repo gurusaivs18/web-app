@@ -1139,10 +1139,10 @@ textarea.form-control {
   gap: var(--sp-6);
 }
 .architect-section {
-  padding-inline: 0;
+  padding-block: .80rem;
 }
 .architect-content {
-  padding: var(--sp-12);
+  padding: var(--sp-16);
 }
 .directors-grid,
 .directors-grid-2,
