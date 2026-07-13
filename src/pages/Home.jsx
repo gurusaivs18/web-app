@@ -51,31 +51,29 @@ const statIcons = [
 
 const verticalCategories = [
   {
-    label: "Interior Fitout & Outdoor Furniture",
-    // img: interiorImg,
-
+    label: "Venture Capitalist",
+    // img: vcImg,
     icon: (
       <svg viewBox="0 0 24 24" fill="none">
         <path
-          d="M5 11V7a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v4"
+          d="M3 20h18"
           stroke="currentColor"
-          strokeWidth="1.6"
+          strokeWidth="1.8"
           strokeLinecap="round"
-        />
-        <rect
-          x="3"
-          y="11"
-          width="18"
-          height="6"
-          rx="1.5"
-          stroke="currentColor"
-          strokeWidth="1.6"
         />
         <path
-          d="M4 17v3M20 17v3"
+          d="M4 16l5-5 4 3 7-8"
           stroke="currentColor"
-          strokeWidth="1.6"
+          strokeWidth="1.8"
           strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M15 6h5v5"
+          stroke="currentColor"
+          strokeWidth="1.8"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
       </svg>
     ),
@@ -142,6 +140,59 @@ const verticalCategories = [
     ),
   },
   {
+    label: "Food & Beverage (F&B)",
+    // img: fnbImg,
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none">
+        <path
+          d="M7 3v7a2 2 0 0 0 2 2v9M7 3v5M9 3v5M11 3v7a2 2 0 0 1-2 2"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M17 3c-1.7 0-3 1.8-3 4s1.3 4 3 4v10"
+          stroke="currentColor"
+          strokeWidth="1.6"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    ),
+  },
+  {
+    label: "Interior Fitout & Outdoor Furniture",
+    // img: interiorImg,
+
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none">
+        <path
+          d="M5 11V7a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v4"
+          stroke="currentColor"
+          strokeWidth="1.6"
+          strokeLinecap="round"
+        />
+        <rect
+          x="3"
+          y="11"
+          width="18"
+          height="6"
+          rx="1.5"
+          stroke="currentColor"
+          strokeWidth="1.6"
+        />
+        <path
+          d="M4 17v3M20 17v3"
+          stroke="currentColor"
+          strokeWidth="1.6"
+          strokeLinecap="round"
+        />
+      </svg>
+    ),
+  },
+
+  {
     label: "Sports & Fitness",
     // img: fitnessImg,
     icon: (
@@ -175,56 +226,6 @@ const verticalCategories = [
           stroke="currentColor"
           strokeWidth="1.8"
           strokeLinecap="round"
-        />
-      </svg>
-    ),
-  },
-  {
-    label: "Food & Beverage (F&B)",
-    // img: fnbImg,
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none">
-        <path
-          d="M7 3v7a2 2 0 0 0 2 2v9M7 3v5M9 3v5M11 3v7a2 2 0 0 1-2 2"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-        <path
-          d="M17 3c-1.7 0-3 1.8-3 4s1.3 4 3 4v10"
-          stroke="currentColor"
-          strokeWidth="1.6"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </svg>
-    ),
-  },
-  {
-    label: "Venture Capitalist",
-    // img: vcImg,
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none">
-        <path
-          d="M3 20h18"
-          stroke="currentColor"
-          strokeWidth="1.8"
-          strokeLinecap="round"
-        />
-        <path
-          d="M4 16l5-5 4 3 7-8"
-          stroke="currentColor"
-          strokeWidth="1.8"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-        <path
-          d="M15 6h5v5"
-          stroke="currentColor"
-          strokeWidth="1.8"
-          strokeLinecap="round"
-          strokeLinejoin="round"
         />
       </svg>
     ),
