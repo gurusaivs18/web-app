@@ -121,10 +121,12 @@
 }
 
 .ceo-img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  object-position: left center; /* keeps image clear of the text panel */
+  object-fit: cover;
+  /* keeps image clear of the text panel */
 }
 @media (max-width: 1200px) {
   .ceo-content {
@@ -576,8 +578,7 @@
     --sp-section-gap
   ); /* fixed: was var(--section-padding), an undefined token */
 }
-.section
-.impact-intro {
+.section .impact-intro {
   text-align: center;
   font-size: 14px;
   color: var(--text-mid);
