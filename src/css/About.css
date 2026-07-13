@@ -204,14 +204,13 @@
 }
 
 /* ───────────────── DIRECTORS + PARTNERS ───────────────── */
-
 .directors-grid,
 .directors-grid-2,
 .partners-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  /* gap and margin-top now controlled by global.css (.directors-grid, .directors-grid-2, .partners-grid) */
-  justify-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* gap and margin-top still controlled by global.css (.directors-grid, .directors-grid-2, .partners-grid) */
 }
 
 /* ───────────────── CARD ───────────────── */
@@ -346,6 +345,7 @@
   overflow: hidden;
   background: rgba(255, 255, 255, 0.96);
   border-radius: 14px;
+  border: solid 1px black;
   border: none;
   box-shadow: 0 25px 80px rgba(0, 0, 0, 0.2);
   opacity: 0;
@@ -469,7 +469,7 @@
   width: 100%;
   max-width: 260px;
   perspective: 1000px;
-  border: solid 1px #a3161c;
+ 
 }
 
 .director-card-inner {
@@ -756,7 +756,7 @@
     max-width: 94%;
     max-height: 88vh;
   }
-  
+
   .mp-top {
     padding: 24px 20px 10px;
   }
