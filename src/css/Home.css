@@ -29,6 +29,7 @@
 /* ================= CEO SECTION ================= */
 .ceo-section {
   width: 100%;
+  margin-bottom: 1.5rem;
 }
 .ceo-content {
   display: flex;
@@ -391,18 +392,16 @@
 /* =========================
    CARD  –  vertical layout
 ========================= */
-.director-card {
+.pillar-card {
   background: var(--white);
   border: 1px solid var(--gray-mid);
   border-radius: 14px;
   overflow: hidden;
-
   width: 240px;
   flex: 0 0 240px;
   display: flex;
   flex-direction: column;
   align-items: stretch;
-
   box-sizing: border-box;
   transition:
     transform 0.28s ease,
@@ -410,18 +409,12 @@
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
 }
 
-.director-card:hover {
+.pillar-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 16px 36px rgba(0, 0, 0, 0.13);
 }
 
-/* =========================
-   PHOTO ZONE
-========================= */
-/* =========================
-   PHOTO ZONE
-========================= */
-.director-photo-wrap {
+.pillar-photo-wrap {
   position: relative;
   width: 100%;
   aspect-ratio: 3 / 4;
@@ -429,20 +422,23 @@
   background: var(--gray-light);
   overflow: hidden;
 }
-.director-photo {
+
+.pillar-photo {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: top center;
   display: block;
   transition: transform 0.4s ease;
+  filter: grayscale(15%);
 }
 
-.director-card:hover .director-photo {
+.pillar-card:hover .pillar-photo {
+  filter: grayscale(0%);
   transform: scale(1.04);
 }
 
-.director-photo-wrap::after {
+.pillar-photo-wrap::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -454,32 +450,29 @@
   pointer-events: none;
 }
 
-.director-photo-accent {
+.pillar-photo-accent {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 40px;
   height: 3px;
-
   z-index: 2;
   transition: width 0.35s ease;
 }
 
-.director-card:hover .director-photo-accent {
+.pillar-card:hover .pillar-photo-accent {
   width: 100%;
 }
-
-/* =========================
-   FALLBACK AVATAR
-========================= */
-.director-avatar-fallback {
+.directors-section1 {
+  padding-block: 3rem;
+}
+.pillar-avatar-fallback {
   width: 100%;
   height: 100%;
   background: linear-gradient(135deg, #1a1a1a 0%, #3a3a3a 100%);
   display: flex;
   align-items: center;
   justify-content: center;
-
   font-family: var(--font-heading);
   font-size: 42px;
   font-weight: 900;
@@ -488,18 +481,14 @@
   user-select: none;
 }
 
-/* =========================
-   TEXT BLOCK
-========================= */
-
-.director-text-col {
+.pillar-text-col {
   display: flex;
   flex-direction: column;
   padding: 16px 16px 14px;
   flex: 1;
 }
 
-.director-name {
+.pillar-name {
   margin: 0 0 4px;
   line-height: 1.3;
   display: -webkit-box;
@@ -510,7 +499,7 @@
   font-weight: 600;
 }
 
-.director-role {
+.pillar-role {
   font-size: 10px;
   font-weight: 700;
   color: var(--red);
@@ -524,7 +513,7 @@
   overflow: hidden;
 }
 
-.director-bio {
+.pillar-bio {
   font-size: 11px;
   color: var(--text-mid);
   line-height: 1.65;
@@ -536,7 +525,7 @@
   overflow: hidden;
 }
 
-.director-know-more {
+.pillar-know-more {
   display: inline-block;
   margin-top: 10px;
   font-size: 10.5px;
@@ -549,13 +538,16 @@
   transition:
     letter-spacing 0.2s ease,
     opacity 0.2s ease;
+  cursor: pointer;
 }
 
-.director-know-more:hover {
+.pillar-know-more:hover {
   letter-spacing: 1px;
   opacity: 0.8;
 }
-
+.directors-section .section-title {
+  margin-bottom: 1.5rem;
+}
 /* =========================
    RESPONSIVE
 ========================= */
@@ -1512,8 +1504,6 @@
 /* ================= VERTICALS — CATEGORY GRID ================= */
 .home-verticals {
   background: var(--white);
-  padding-top: 3.5rem; /* same value as .section-title's margin-bottom, so both gaps match */
-  padding-bottom: 3rem; /* keep bottom padding for content after the cards */
 }
 .section.home-impact {
   padding-block: 2rem;

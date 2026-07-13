@@ -1105,10 +1105,7 @@ textarea.form-control {
    --sp-section-gap instead of a mix of sp-20 with
    one-off bottom overrides.
    ───────────────────────────────────────────── */
-.directors-section {
-  padding-block: 3.5rem;
-  padding-bottom: 0;
-}
+
 
 .directors-marquee {
   margin-top: 0;

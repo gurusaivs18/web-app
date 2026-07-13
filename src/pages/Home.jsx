@@ -575,19 +575,19 @@ function DirectorsSlider({ onSelect }) {
               {doubled.map((d, i) => (
                 <div
                   key={`${d.slug}-${i}`}
-                  className="director-card"
+                  className="pillar-card"
                   onClick={() => onSelect(d)}
                 >
-                  <div className="director-photo-wrap">
+                  <div className="pillar-photo-wrap">
                     {d.img ? (
                       <img
                         src={d.img}
                         alt={d.name}
-                        className="director-photo"
+                        className="pillar-photo"
                         loading="lazy"
                       />
                     ) : (
-                      <div className="director-avatar-fallback">
+                      <div className="pillar-avatar-fallback">
                         {d.name
                           .split(" ")
                           .map((n) => n[0])
@@ -595,14 +595,14 @@ function DirectorsSlider({ onSelect }) {
                           .slice(0, 2)}
                       </div>
                     )}
-                    <div className="director-photo-accent" />
+                    <div className="pillar-photo-accent" />
                   </div>
-                  <div className="director-text-col">
-                    <h4 className="director-name">{d.name}</h4>
-                    <p className="director-role">{d.role}</p>
-                    <p className="director-bio">{d.bio}</p>
+                  <div className="pillar-text-col">
+                    <h4 className="pillar-name">{d.name}</h4>
+                    <p className="pillar-role">{d.role}</p>
+                    <p className="pillar-bio">{d.bio}</p>
                     <span
-                      className="director-know-more"
+                      className="pillar-know-more"
                       onClick={(e) => {
                         e.stopPropagation();
                         onSelect(d);
