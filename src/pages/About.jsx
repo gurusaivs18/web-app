@@ -308,7 +308,7 @@ function About() {
                 className="role"
                 data-reveal="right"
                 data-delay="400"
-                style={{ color: "red" }}
+           
               >
                 CEO & Founder
               </p>

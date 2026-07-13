@@ -168,7 +168,9 @@
   font-size: 16px;
   font-weight: 600;
   margin-bottom: 14px;
-  color: rgba(255, 255, 255, 0.9);
+  color: darkred;
+  font-weight: 800;
+  font-size: 27px;
 }
 
 .architect-info p {
@@ -216,7 +218,7 @@
 
 .director-card {
   scroll-snap-align: start;
-  width: 240px;        /* fixed, no --card-w variable needed */
+  width: 240px; /* fixed, no --card-w variable needed */
   flex: 0 0 240px;
 }
 .director-card:hover {
@@ -319,30 +321,33 @@
 }
 
 /* ───────────────── MODAL ───────────────── */
+/* ───────────────── MODAL (matches Home section styling) ───────────────── */
 
 .modal-overlay {
   position: fixed;
   inset: 0;
-  z-index: 1000;
+  z-index: 99999;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 20px;
-  background: rgba(0, 0, 0, 0.62);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.35);
 }
 
 .modal-pro-box {
+  position: relative;
   width: 100%;
   max-width: 600px;
-  max-height: 88vh;
+  max-height: 85vh;
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  background: #fff;
-  border-radius: 20px;
-  border-style: solid;
-  border-color: #000000;
-  border-width: 2.5px;
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: 14px;
+  border: none;
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.2);
   opacity: 0;
   transform: scale(0.75) translateY(32px);
   transition:
@@ -360,8 +365,8 @@
   display: flex;
   align-items: center;
   gap: 18px;
-  padding: 28px 28px 22px;
-  background: #a3161c;
+  padding: 32px 28px 12px;
+  background: transparent;
 }
 
 .mp-head {
@@ -369,63 +374,64 @@
 }
 
 .mp-name {
-  margin-bottom: 6px;
-  font-size: 21px;
+  margin-bottom: 4px;
+  font-family: var(--font-heading);
+  font-size: 16px;
   font-weight: 800;
-  color: #fff;
+  color: var(--text-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
 }
 
 .mp-role-pill {
   display: inline-block;
-  padding: 4px 12px;
-  border: 1px solid rgba(255, 255, 255, 0.28);
-  border-radius: 30px;
-  background: rgba(255, 255, 255, 0.18);
-  color: rgba(255, 255, 255, 0.92);
   font-size: 11px;
   font-weight: 700;
-  letter-spacing: 1.2px;
+  color: darkred;
   text-transform: uppercase;
+  letter-spacing: 0.6px;
+  background: none;
+  border: none;
+  padding: 0;
 }
 
 .mp-close-btn {
   position: absolute;
   top: 14px;
-  right: 14px;
-  width: 30px;
-  height: 30px;
+  right: 16px;
+  width: 36px;
+  height: 36px;
   display: flex;
   align-items: center;
   justify-content: center;
   border: none;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.15);
-  color: #fff;
-  font-size: 15px;
+  background: transparent;
+  color: #000;
+  font-size: 20px;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: color 0.2s;
 }
 
 .mp-close-btn:hover {
-  background: black;
+  color: #f30808;
 }
 
 .mp-accent-bar {
-  height: 3px;
-  background: linear-gradient(90deg, #a3161c, #e05050, #a3161c);
+  display: none;
 }
 
 .mp-body {
   flex: 1;
   overflow-y: auto;
-  padding: 26px 30px 28px;
+  padding: 8px 28px 24px;
 }
 
 .mp-body p {
   margin-bottom: 16px;
-  font-size: 15px;
-  line-height: 1.88;
-  color: #333;
+  font-size: 14px;
+  line-height: 1.75;
+  color: var(--text-mid);
 }
 
 .mp-body p:last-child {
@@ -434,30 +440,29 @@
 
 .mp-footer {
   display: flex;
-  justify-content: flex-end;
-  padding: 14px 30px;
-  border-top: 1px solid #f0f0f0;
+  justify-content: flex-start;
+  padding: 0 28px 28px;
+  border-top: none;
 }
 
 .mp-dismiss-btn {
-  padding: 10px 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
   border: none;
-  border-radius: 40px;
-  background: #a3161c;
+  border-radius: 8px;
+  background: darkred;
   color: #fff;
   font-size: 13px;
   font-weight: 600;
   cursor: pointer;
-  transition:
-    background 0.2s,
-    transform 0.15s;
+  transition: background 0.25s ease;
 }
 
 .mp-dismiss-btn:hover {
-  background: #7d1015;
-  transform: scale(1.03);
+  background: #8b0000;
 }
-
 /* ───────────────── CARD FLIP ───────────────── */
 
 .director-card-scene {

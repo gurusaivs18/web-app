@@ -62,7 +62,7 @@
 .ceo-info .ceo-role {
   font-size: 20px;
   font-weight: 900;
-  color: #8b0000;
+
   /* margin-bottom: 12px; */
   letter-spacing: 0.5px;
 }
@@ -169,33 +169,41 @@
   .read-more-link {
     color: whitesmoke;
   }
+
   .ceo-img {
     position: relative;
     width: 100%;
-    height: auto;
+    height: 300px;
     object-fit: cover;
-    object-position: center top;
+    object-position: left top;
     opacity: 1;
-  }
-
-  .read-more-link::after {
-    background: var(--red);
   }
 
   .ceo-content::after {
     display: none;
   }
+
+  .ceo-info {
+    position: relative;
+    inset: auto;
+    top: auto;
+    right: auto;
+    transform: none;
+    padding: 24px 20px;
+    background: #111;
+    text-align: left;
+    max-width: 100%;
+  }
+
   .ceo-info .ceo-role {
     color: var(--red) !important;
   }
 
-  .ceo-info {
-    background: transparent;
-  }
   .ceo-info h3 {
     font-size: 22px;
     color: #fff;
   }
+
   .ceo-info p {
     font-size: 13px;
     color: rgba(255, 255, 255, 0.85);
@@ -206,16 +214,21 @@
   }
 }
 @media (max-width: 480px) {
+  .ceo-img {
+    height: 260px;
+    object-position: 20% top;
+  }
+
   .ceo-info {
-    padding: 22px 18px;
+    padding: 20px;
   }
 
   .ceo-info h3 {
-    font-size: 21px;
+    font-size: 18px;
   }
 
   .ceo-info .ceo-role {
-    font-size: 14px;
+    font-size: 13px;
   }
 
   .ceo-info p {
@@ -227,21 +240,16 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-
     margin-top: 18px;
     padding: 12px 28px;
-
     background: var(--red);
     color: #fff;
-
     border: none;
     border-radius: 8px;
-
     font-size: 14px;
     font-weight: 700;
     letter-spacing: 0.5px;
     text-transform: uppercase;
-
     cursor: pointer;
     transition: all 0.3s ease;
   }
@@ -779,8 +787,10 @@
   position: relative;
   width: 100%;
   height: 100%;
-  min-height: unset;
+  min-height: 0; /* ← prevents grid item collapse */
+  align-self: stretch;
   overflow: hidden;
+  background: #1a1a1a; /* fallback so it never shows raw white/grey */
 }
 
 .ceo-modal-img-panel img {
@@ -789,10 +799,9 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 90% 10%;
+  object-position: 30% none; /* was 90% 10% */
   display: block;
 }
-
 .ceo-modal-content {
   padding: 40px 36px;
   overflow-y: auto;
@@ -909,9 +918,6 @@
   z-index: 1;
 }
 
-.testimonials-overlay {
-  /* padding now controlled by global.css (.testimonials-overlay) */
-}
 .home-testimonials::before {
   content: "";
   position: absolute;
@@ -1001,6 +1007,9 @@
   }
   .testimonials-sub {
     max-width: 100%;
+  }
+  .ceo-modal-img-panel img {
+    object-position: 23% 20%;
   }
 }
 @media (max-width: 600px) {
@@ -1520,7 +1529,6 @@
   flex-shrink: 0;
 }
 
-
 .vertical-cat-card h3 {
   color: var(--white);
   font-family: var(--font-heading);
@@ -1537,6 +1545,9 @@
   .vertical-cats-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: var(--sp-4);
+  }
+  .ceo-modal-img-panel img {
+    object-position: 22% 18%;
   }
 }
 
