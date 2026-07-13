@@ -644,9 +644,7 @@ function VerticalsGrid({ onSelect }) {
               data-reveal="up"
               data-delay={String(i * 100 + 100)}
               onClick={() => onSelect(cat.label)}
-              style={{ backgroundImage: `url(${cat.img})` }}
             >
-              <div className="vertical-cat-overlay" />
               <div className="vertical-cat-content">
                 {cat.icon}
                 <h3>{cat.label}</h3>

@@ -211,7 +211,7 @@ p:last-child {
 .section {
   /* was: padding-block: var(--sp-20);  -> reduced for uniform,
      less-scroll rhythm site-wide (see --sp-section-gap above) */
-  padding-block: var(--sp-section-gap);
+  padding-block: 1.5rem;
 }
 
 .section--grey {
@@ -284,7 +284,7 @@ p:last-child {
   text-transform: uppercase;
   letter-spacing: 0.14em;
   color: var(--color-body);
-  margin-bottom: 3.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .section-title::before,
@@ -1106,7 +1106,6 @@ textarea.form-control {
    one-off bottom overrides.
    ───────────────────────────────────────────── */
 
-
 .directors-marquee {
   margin-top: 0;
   margin-bottom: 0;
@@ -1139,7 +1138,7 @@ textarea.form-control {
   gap: var(--sp-6);
 }
 .architect-section {
-  padding-block: .80rem;
+  padding-block: 0.8rem;
 }
 .architect-content {
   padding: var(--sp-16);

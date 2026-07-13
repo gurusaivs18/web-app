@@ -109,6 +109,23 @@
   outline: 3px solid rgba(179, 19, 25, 0.25);
   outline-offset: 3px;
 }
+.ceo-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  position: relative; /* anchors .ceo-info */
+  width: 100%;
+  height: clamp(480px, 42vw, 680px); /* scales cleanly 1200px → 2560px+ */
+  overflow: hidden;
+}
+
+.ceo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: left center; /* keeps image clear of the text panel */
+}
 @media (max-width: 1200px) {
   .ceo-content {
     position: relative;
@@ -394,7 +411,7 @@
 ========================= */
 .pillar-card {
   background: var(--white);
-  border: 1px solid var(--gray-mid);
+  border: 1px solid darkred;
   border-radius: 14px;
   overflow: hidden;
   width: 240px;
