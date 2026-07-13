@@ -1218,10 +1218,7 @@ textarea.form-control {
 /* ─────────────────────────────────────────────
    7. CAREERS PAGE
    ───────────────────────────────────────────── */
-.careers-perks {
-  gap: var(--sp-6);
-  margin-bottom: var(--sp-section-gap);
-}
+
 .perk-card {
   padding: var(--sp-10) var(--sp-8);
 }

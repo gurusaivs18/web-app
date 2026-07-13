@@ -576,6 +576,7 @@
     --sp-section-gap
   ); /* fixed: was var(--section-padding), an undefined token */
 }
+.section
 .impact-intro {
   text-align: center;
   font-size: 14px;

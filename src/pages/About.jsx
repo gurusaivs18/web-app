@@ -9,6 +9,7 @@ import { useLocation } from "react-router-dom";
 import rushabImg from "../assets/Partners/rushab-assets-1.webp";
 import deepImg from "../assets/Partners/deep-asset-1.webp";
 import sanjeevImg from "../assets/Partners/sanjeev-assets-1.webp";
+import { createPortal } from "react-dom";
 
 // ── Partner images ──
 import sanalImg from "../assets/Partners/sanal-assets-1.webp";
@@ -46,12 +47,6 @@ const allDirectors = [
   },
 
   {
-    name: "Deep Bhogal",
-    role: "Managing Director",
-    img: deepImg,
-    writeup: `Deep Bhogal brings over 30 years of experience in retail and distribution to the JSB Group. As Managing Director of Denaster, he has built and led large-scale operations across multiple markets, with a reputation for operational excellence and commercial acumen.\n\nHis decades of experience make him a cornerstone of the group's operational leadership.`,
-  },
-  {
     name: "Sanjeev Sinha",
     role: "Director",
     img: sanjeevImg,
@@ -71,7 +66,19 @@ const allPartners = [
     role: "Partner",
     img: null,
 
-    writeup: ``,
+    writeup: `WRITE UP IS PENDING`,
+  },
+  {
+    name: "Sanal Kumar",
+    role: "Partner",
+    img: sanalImg,
+    writeup: `Sanal Kumar is a Partner at JSB Group, bringing deep professional experience and commitment to the group's values and vision.`,
+  },
+  {
+    name: "Deep Bhogal",
+    role: "Managing Director",
+    img: deepImg,
+    writeup: `Deep Bhogal brings over 30 years of experience in retail and distribution to the JSB Group. As Managing Director of Denaster, he has built and led large-scale operations across multiple markets, with a reputation for operational excellence and commercial acumen.\n\nHis decades of experience make him a cornerstone of the group's operational leadership.`,
   },
   {
     name: "Naz Ayat",
@@ -80,16 +87,10 @@ const allPartners = [
     writeup: `Naz Ayat is a Partner at JSB Group, contributing expertise and strategic guidance across the group's diverse business interests.`,
   },
   {
-    name: "Afshad Mistry",
+    name: "Sawan Ravani",
     role: "Partner",
     img: null,
-    writeup: `Afshad Mistry is a Partner at JSB Group, playing an integral role in supporting the group's mission and growth objectives.`,
-  },
-  {
-    name: "Sanal Kumar",
-    role: "Partner",
-    img: sanalImg,
-    writeup: `Sanal Kumar is a Partner at JSB Group, bringing deep professional experience and commitment to the group's values and vision.`,
+    writeup: `write up is pending `,
   },
 ];
 function Modal({ person, onClose }) {
@@ -99,12 +100,19 @@ function Modal({ person, onClose }) {
     requestAnimationFrame(() => requestAnimationFrame(() => setVisible(true)));
   }, []);
 
+  useEffect(() => {
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, []);
+
   const handleClose = () => {
     setVisible(false);
     setTimeout(onClose, 420);
   };
 
-  return (
+  return createPortal(
     <div className="modal-overlay" onClick={handleClose}>
       <div
         className={`modal-pro-box ${visible ? "modal-pro-show" : ""}`}
@@ -131,7 +139,8 @@ function Modal({ person, onClose }) {
           </button>
         </div>
       </div>
-    </div>
+    </div>,
+    document.body,
   );
 }
 
@@ -304,12 +313,7 @@ function About() {
               >
                 Neelesh Bhatnagar
               </h3>
-              <p
-                className="role"
-                data-reveal="right"
-                data-delay="400"
-           
-              >
+              <p className="role" data-reveal="right" data-delay="400">
                 CEO & Founder
               </p>
               <p data-reveal="right" data-delay="500">

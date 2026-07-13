@@ -234,10 +234,10 @@ const verticalCategories = [
 
 const directors = [
   {
-    name: "Manish Kishore",
-    role: "Partner",
-    bio: "test",
-    slug: "",
+    name: "Sawan Ravani",
+    role: "pending",
+    bio: "pending",
+    slug: "Sawan Ravani",
     img: null,
     order: 1,
   },
@@ -247,7 +247,7 @@ const directors = [
     bio: "Bachelor's in Business & Economics from Exeter, Master's in Strategic Marketing from Imperial College. Leads NB Ventures' portfolio of 70+ Indian start-ups.",
     slug: "rushab-bhatnagar",
     img: rushab,
-    order: 1,
+    order: 2,
   },
   {
     name: "Praveen Bhatnagar",
@@ -255,7 +255,7 @@ const directors = [
     bio: "Certified Public Accountant (U.S.) & Chartered Accountant (India). Owner of ZeroG Beds and Mattresses. Specializes in Retail, Fitness, Hospitality, and Healthcare business strategy.",
     slug: "praveen-bhatnagar",
     img: null,
-    order: 2,
+    order: 3,
   },
   {
     name: "Sanjeev Sinha",
@@ -263,14 +263,6 @@ const directors = [
     bio: "Senior director at JSB Group contributing to the group's strategic growth across verticals.",
     slug: "sanjeev-sinha",
     img: sinha,
-    order: 3,
-  },
-  {
-    name: "Deep Bhogal",
-    role: "Managing Director, Denaster",
-    bio: "Over 30 years in supply and distribution across retail, software, and electronics. Led Denaster to become a multimillion-dollar SME with 100+ employees.",
-    slug: "deep-bhogal",
-    img: deep,
     order: 4,
   },
   {
@@ -282,20 +274,12 @@ const directors = [
     order: 5,
   },
   {
-    name: "Naz Ayat",
-    role: "Sales Director",
-    bio: "30+ years in software and electronics industries. Worked with major UK and international retailers including Amazon and HMV. Expert in distribution channels.",
-    slug: "naz-ayat",
+    name: "Manish Kishore",
+    role: "Partner",
+    bio: "test",
+    slug: "Manish Kishore",
     img: null,
     order: 6,
-  },
-  {
-    name: "Afshad Mistry",
-    role: "Health & Wellness Lead",
-    bio: "23+ years in Health and Fitness. One of the first in India to achieve ACSM Certification (2005). Spearheaded Snap Fitness UAE Master Franchise.",
-    slug: "afshad-mistry",
-    img: null,
-    order: 7,
   },
   {
     name: "Sanal Kumar",
@@ -303,7 +287,25 @@ const directors = [
     bio: "Contributes strategic direction and expertise to JSB Group's expanding business verticals.",
     slug: "sanal-kumar",
     img: sanal,
+    order: 7,
+  },
+
+  {
+    name: "Deep Bhogal",
+    role: "Managing Director, Denaster",
+    bio: "Over 30 years in supply and distribution across retail, software, and electronics. Led Denaster to become a multimillion-dollar SME with 100+ employees.",
+    slug: "deep-bhogal",
+    img: deep,
     order: 8,
+  },
+
+  {
+    name: "Naz Ayat",
+    role: "Sales Director",
+    bio: "30+ years in software and electronics industries. Worked with major UK and international retailers including Amazon and HMV. Expert in distribution channels.",
+    slug: "naz-ayat",
+    img: null,
+    order: 9,
   },
 ];
 

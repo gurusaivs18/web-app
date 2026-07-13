@@ -79,7 +79,7 @@
 .careers-perks {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  /* gap and margin-bottom now controlled by global.css (.careers-perks) */
+  gap: var(--sp-6);
 }
 
 .perk-card {
