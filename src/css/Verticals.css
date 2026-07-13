@@ -1,6 +1,6 @@
 .vertical-page-title {
   text-align: center;
-  margin-top: 5px;
+
   font-size: clamp(38px, 5vw, 58px);
   font-weight: 700;
   color: var(--color-body);
@@ -11,7 +11,7 @@
   font-size: 15px;
   line-height: 1.85;
   color: var(--text-mid);
-  padding: 0 20px;
+ 
 }
 
 /* ========================= CATEGORY SECTION ========================= */
@@ -47,7 +47,7 @@
   font-weight: 700;
   color: var(--text-dark);
   margin-top: 0;
-  margin-bottom: 28px;
+  /* margin-bottom: 28px; */
   line-height: 1.2;
   text-align: center;
   width: 100%;

@@ -64,7 +64,7 @@ body {
      Single source of truth for heading→content gap
      and section→section rhythm, used site-wide. */
   --sp-hero-gap: var(--sp-8);
-  --sp-section-gap: var(--sp-12);
+  --sp-section-gap: var(--sp-6);
 
   /* ── Layout ── */
   --max-width: 1200px;

@@ -110,27 +110,55 @@
 }
 @media (max-width: 1200px) {
   .ceo-content {
+    position: relative;
     height: 520px;
+    overflow: hidden;
   }
 
   .ceo-img {
     object-fit: contain;
     object-position: left center;
+  }
+
+  .ceo-content::before {
+    content: "";
+    display: block;
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to left,
+      rgba(0, 0, 0, 0.6) 0%,
+      rgba(0, 0, 0, 0.15) 55%,
+      transparent 75%
+    );
+    z-index: 1;
   }
 
   .ceo-info {
     right: 40px;
     max-width: 360px;
+    z-index: 2;
   }
 
   .ceo-info h3 {
     font-size: 28px;
-    color: white;
+    color: #fff;
+  }
+
+  .ceo-info .ceo-role {
+    color: var(--red);
+  }
+
+  .ceo-info p {
+    color: rgba(255, 255, 255, 0.9);
   }
 }
+
 @media (max-width: 992px) {
   .ceo-content {
-    height: 500px;
+    position: relative;
+    height: 460px;
+    overflow: hidden;
   }
 
   .ceo-img {
@@ -138,23 +166,40 @@
     object-position: left center;
   }
 
+  .ceo-content::before {
+    content: "";
+    display: block;
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to left,
+      rgba(0, 0, 0, 0.65) 0%,
+      rgba(0, 0, 0, 0.2) 55%,
+      transparent 75%
+    );
+    z-index: 1;
+  }
+
   .ceo-info {
     right: 24px;
     max-width: 310px;
+    z-index: 2;
   }
 
   .ceo-info h3 {
     font-size: 24px;
+    color: #fff;
   }
 
   .ceo-info .ceo-role {
     font-size: 15px;
+    color: var(--red);
   }
 
   .ceo-info p {
     font-size: 13px;
     line-height: 1.6;
-    color: white;
+    color: rgba(255, 255, 255, 0.85);
   }
 }
 @media (max-width: 768px) {
@@ -225,6 +270,7 @@
 
   .ceo-info h3 {
     font-size: 18px;
+    color: #fff; /* was #aaa — this was making the name unreadable */
   }
 
   .ceo-info .ceo-role {
@@ -1553,11 +1599,18 @@
 
 @media (max-width: 480px) {
   .vertical-cats-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--sp-3);
   }
   .vertical-cat-card {
-    padding: 20px 14px;
-    min-height: 110px;
+    padding: 16px 10px;
+    min-height: 100px;
+  }
+  .vertical-cat-card h3 {
+    font-size: 11px;
+  }
+  .vertical-cat-card svg {
+    width: 26px;
+    height: 26px;
   }
 }
