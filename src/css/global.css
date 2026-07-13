@@ -1417,11 +1417,9 @@ textarea.form-control {
     color: var(--color-dark);
   }
   .ceo-info h3 {
-    color: var(--color-dark) !important;
     font-size: 18px;
   }
   .ceo-info p {
-    color: var(--color-body) !important;
     font-size: 12px;
   }
   .ceo-info .ceo-role {
