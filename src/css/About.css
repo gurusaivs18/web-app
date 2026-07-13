@@ -675,7 +675,7 @@
 
 /* ── Small mobile ── */
 @media (max-width: 480px) {
-  .about-who-img-placeholder {
+  /* .about-who-img-placeholder {
     height: 200px;
     font-size: 13px;
   }
@@ -687,7 +687,7 @@
   .about-who-text p {
     font-size: 13px;
     line-height: 1.75;
-  }
+  } */
 
   .vmp-card-img {
     height: 140px;

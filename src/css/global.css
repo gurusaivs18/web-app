@@ -64,7 +64,7 @@ body {
      Single source of truth for heading→content gap
      and section→section rhythm, used site-wide. */
   --sp-hero-gap: var(--sp-8);
-  --sp-section-gap: var(--sp-6);
+  --sp-section-gap: var(--sp-12);
 
   /* ── Layout ── */
   --max-width: 1200px;
@@ -1417,9 +1417,11 @@ textarea.form-control {
     color: var(--color-dark);
   }
   .ceo-info h3 {
+    color: var(--color-dark) !important;
     font-size: 18px;
   }
   .ceo-info p {
+    color: var(--color-body) !important;
     font-size: 12px;
   }
   .ceo-info .ceo-role {
