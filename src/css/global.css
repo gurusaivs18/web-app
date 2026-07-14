@@ -1163,7 +1163,7 @@ textarea.form-control {
    6. VERTICALS PAGE
    ───────────────────────────────────────────── */
 .featured-logos-section {
-  padding-block: var(--sp-hero-gap);
+  /* padding-block: var(--sp-hero-gap); */
   margin-block: 0;
 }
 .featured-logos-section::after {
@@ -1347,11 +1347,11 @@ textarea.form-control {
 }
 
 @media (max-width: 480px) {
-  /* .page-hero,
+ .page-hero, 
   .page-hero.container {
-    padding-top: var(--sp-10);
+    padding-top: var(--sp-1);
     padding-bottom: var(--sp-4);
-  } */
+  } 
 
   .directors-marquee {
     margin-inline: var(--sp-4);
