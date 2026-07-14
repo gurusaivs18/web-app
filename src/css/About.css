@@ -208,22 +208,35 @@
 
    Directors (4 cards) -> exactly 4 in one row on desktop
    Partners  (5 cards) -> 4 on top, 1 centered below        */
+
+/* ───────────────── CARD ───────────────── */
 .directors-grid,
 .partners-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
+  gap: var(--sp-8);
 }
 
-.directors-grid .director-card-scene,
-.partners-grid .director-card-scene {
-  flex: 0 1 calc((100% - 3 * var(--sp-8)) / 4);
+.directors-grid .director-card-scene {
+  flex: 0 0 calc((100% - 3 * var(--sp-8)) / 4);
   max-width: calc((100% - 3 * var(--sp-8)) / 4);
 }
 
-/* ───────────────── CARD ───────────────── */
+/* Cap the partners row to exactly 3 director-sized cards + 2
+   gaps, then center that capped row. This forces cards to be
+   the SAME px size as director cards (not a fresh 1/3 split),
+   and automatically wraps card 4-5 into a centered row below. */
+.partners-grid {
+  max-width: calc((3 * ((100% - 3 * var(--sp-8)) / 4)) + (2 * var(--sp-8)));
+  margin: 0 auto;
+}
 
+.partners-grid .director-card-scene {
+  flex: 0 0 calc((100% - 2 * var(--sp-8)) / 3);
+  max-width: calc((100% - 2 * var(--sp-8)) / 3);
+}
 .director-card {
   scroll-snap-align: start;
   width: 100%;
@@ -558,6 +571,10 @@
 
   /* 3-per-row at this breakpoint so 4-card row doesn't
      get too cramped before the 2-per-row tablet layout kicks in */
+  .partners-grid {
+    max-width: none;
+    margin: 0 auto;
+  }
   .directors-grid .director-card-scene,
   .partners-grid .director-card-scene {
     flex: 0 1 calc((100% - 2 * var(--sp-8)) / 3);
@@ -638,19 +655,31 @@
      use the same rule, so sizing stays identical. */
   .directors-grid,
   .partners-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 16px;
+    max-width: none;
+    margin: 0 auto;
   }
 
   .directors-grid .director-card-scene,
   .partners-grid .director-card-scene {
-    flex: 0 1 calc((100% - 16px) / 2);
-    max-width: calc((100% - 16px) / 2);
+    flex: none;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  /* Partners has 5 cards (odd) — center the leftover 5th card
+     instead of letting it sit stuck in column 1. */
+  .partners-grid > .director-card-scene:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: calc((100% - 16px) / 2);
   }
 
   .director-name {
     font-size: 14px;
   }
-
   .director-role-text {
     font-size: 12px;
   }
@@ -716,15 +745,25 @@
   /* still 2-per-row, matching this breakpoint's own 12px gap */
   .directors-grid,
   .partners-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 12px;
+    max-width: none;
+    margin: 0 auto;
   }
 
   .directors-grid .director-card-scene,
   .partners-grid .director-card-scene {
-    flex: 0 1 calc((100% - 12px) / 2);
-    max-width: calc((100% - 12px) / 2);
+    flex: none;
+    max-width: 100%;
+    width: 100%;
   }
 
+  .partners-grid > .director-card-scene:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: calc((100% - 12px) / 2);
+  }
   .director-name {
     font-size: 13px;
   }
