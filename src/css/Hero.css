@@ -47,8 +47,10 @@
   display: inline-block;
   background: #b31319;
   padding: 0.08em 0.22em;
+
   border-radius: 4px;
   line-height: 1.25;
+  border: 0.5px solid #fff;
 }
 
 .hero-subtitle {
@@ -78,6 +80,10 @@
 
 /* ───────────────── RESPONSIVE HEIGHT ADJUSTMENTS ───────────────── */
 
+.hero-break {
+  display: none;
+}
+
 @media (max-width: 992px) {
   .hero {
     min-height: 550px;
@@ -91,7 +97,49 @@
 
   .hero-content {
     width: 92%;
+    max-width: 100%;
     padding: 0 16px;
+    box-sizing: border-box;
+  }
+
+  /* Single line only while there's realistically room for it */
+  .hero-title {
+    white-space: nowrap;
+    font-size: clamp(20px, 4.8vw, 40px);
+    line-height: 1.25;
+  }
+
+  .hero-title .red-box {
+    padding: 0.05em 0.18em;
+  }
+}
+
+@media (max-width: 641px) {
+  .hero {
+    min-height: 460px;
+  }
+
+  .hero-content {
+    width: 90%;
+    padding: 0 14px;
+  }
+  .hero-title {
+    white-space: normal;
+    font-size: clamp(24px, 8vw, 34px);
+    line-height: 1.6;
+  }
+
+  .hero-break {
+    display: block;
+    height: 16px;
+    content: "";
+  }
+  /* Switch to controlled two-line layout — single line
+     physically cannot fit "From Dreams to Reality" below
+     this width without becoming unreadably small. */
+
+  .hero-title .red-box {
+    padding: 0.08em 0.22em;
   }
 }
 
@@ -104,10 +152,27 @@
     width: 88%;
     padding: 0 12px;
   }
+
+  .hero-title {
+    font-size: clamp(22px, 8vw, 30px);
+    line-height: 1.6;
+  }
+
+  .hero-break {
+    height: 12px;
+  }
 }
 
 @media (max-width: 360px) {
   .hero {
     min-height: 420px;
+  }
+
+  .hero-title {
+    font-size: clamp(20px, 7.5vw, 26px);
+  }
+
+  .hero-break {
+    height: 10px;
   }
 }

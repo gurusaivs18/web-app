@@ -11,10 +11,10 @@ function Hero() {
 
       <div className="hero-content">
         <h1 className="hero-title">
-          From <span className="red-box">Dreams</span> to{" "}
+          From <span className="red-box">Dreams</span>
+          <br className="hero-break" /> to{" "}
           <span className="red-box">Reality</span>
         </h1>
-
         <p className="hero-subtitle">
           The Unstoppable Force of Purposeful Action
         </p>
