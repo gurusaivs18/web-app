@@ -351,17 +351,7 @@ function About() {
             <span className="section-title">Directors</span>
           </div>
           <div className="directors-grid">
-            {allDirectors.slice(0, 3).map((d, i) => (
-              <PersonCard
-                key={i}
-                person={d}
-                labelType="Director"
-                delay={String(i * 150 + 100)}
-              />
-            ))}
-          </div>
-          <div className="directors-grid-2">
-            {allDirectors.slice(3, 5).map((d, i) => (
+            {allDirectors.map((d, i) => (
               <PersonCard
                 key={i}
                 person={d}
