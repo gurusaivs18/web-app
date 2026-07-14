@@ -146,6 +146,8 @@
 @media (max-width: 480px) {
   .hero {
     min-height: 450px;
+    align-items: flex-start;
+    padding-top: 15vh;
   }
 
   .hero-content {
@@ -160,19 +162,5 @@
 
   .hero-break {
     height: 12px;
-  }
-}
-
-@media (max-width: 360px) {
-  .hero {
-    min-height: 420px;
-  }
-
-  .hero-title {
-    font-size: clamp(20px, 7.5vw, 26px);
-  }
-
-  .hero-break {
-    height: 10px;
   }
 }
