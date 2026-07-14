@@ -9,7 +9,6 @@
 .about-who-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  /* gap now controlled by global.css (.about-who-grid) */
   align-items: center;
 }
 
@@ -50,7 +49,6 @@
 .vmp-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  /* gap now controlled by global.css (.vmp-grid) */
 }
 
 .vmp-card {
@@ -98,8 +96,6 @@
 
 .architect-section {
   background: var(--white);
-
-  /* padding-inline now controlled by global.css (.architect-section) */
 }
 
 .architect-banner {
@@ -147,7 +143,6 @@
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
-  /* padding now controlled by global.css (.architect-content) */
 }
 
 .architect-info {
@@ -203,35 +198,54 @@
   transform: translateY(-2px);
 }
 
-/* ───────────────── DIRECTORS + PARTNERS ───────────────── */
+/* ───────────────── DIRECTORS + PARTNERS ─────────────────
+   Flexbox (not grid): flex-wrap + justify-content:center
+   centers an incomplete last row as a group.
+
+   ONE shared formula (4-per-row) drives BOTH grids, so
+   card size is always identical between Directors and
+   Partners — no more mismatched sizes.
+
+   Directors (4 cards) -> exactly 4 in one row on desktop
+   Partners  (5 cards) -> 4 on top, 1 centered below        */
 .directors-grid,
-.directors-grid-2,
 .partners-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  /* gap and margin-top still controlled by global.css (.directors-grid, .directors-grid-2, .partners-grid) */
+  align-items: flex-start;
+}
+
+.directors-grid .director-card-scene,
+.partners-grid .director-card-scene {
+  flex: 0 1 calc((100% - 3 * var(--sp-8)) / 4);
+  max-width: calc((100% - 3 * var(--sp-8)) / 4);
 }
 
 /* ───────────────── CARD ───────────────── */
 
 .director-card {
   scroll-snap-align: start;
-  width: 240px; /* fixed, no --card-w variable needed */
-  flex: 0 0 240px;
+  width: 100%;
+  flex: none;
   border: solid 1px darkred;
+  box-sizing: border-box;
 }
 .director-card:hover {
   transform: translateY(-1.5px);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
 }
 
-/* ───────────────── PHOTO ───────────────── */
+/* ───────────────── PHOTO ─────────────────
+   aspect-ratio (not a fixed px height) keeps the photo's
+   proportions locked to the card's width at every screen
+   size, so the visible crop window never shifts and faces
+   never get cut off differently between breakpoints. */
 
 .director-photo {
   position: relative;
   width: 100%;
-  height: 280px;
+  aspect-ratio: 3 / 4;
   overflow: hidden;
   background: #d9d9d9;
 }
@@ -244,7 +258,7 @@
 
 .director-photo-img {
   object-fit: cover;
-  object-position: top center;
+  object-position: center top;
   display: block;
 }
 
@@ -278,7 +292,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  /* padding now controlled by global.css (.director-card-body) */
   text-align: center;
 }
 
@@ -291,7 +304,6 @@
 }
 
 .director-role-text {
-  /* margin-bottom now controlled by global.css (.director-role-text) */
   font-size: 14px;
   color: #777;
   text-transform: uppercase;
@@ -321,7 +333,6 @@
 }
 
 /* ───────────────── MODAL ───────────────── */
-/* ───────────────── MODAL (matches Home section styling) ───────────────── */
 
 .modal-overlay {
   position: fixed;
@@ -463,11 +474,12 @@
 .mp-dismiss-btn:hover {
   background: #8b0000;
 }
-/* ───────────────── CARD FLIP ───────────────── */
+
+/* ───────────────── CARD FLIP ─────────────────
+   Sizing comes from the .director-card-scene flex-basis
+   rule above (shared by both grids), not a fixed max-width. */
 
 .director-card-scene {
-  width: 100%;
-  max-width: 260px;
   perspective: 1000px;
 }
 
@@ -508,17 +520,6 @@
 
 /* ───────────────── RESPONSIVE ───────────────── */
 
-/* ───────────────── RESPONSIVE ───────────────── */
-
-@media (min-width: 769px) {
-  .directors-grid,
-  .directors-grid-2,
-  .partners-grid {
-    align-items: start;
-    justify-items: center;
-  }
-}
-
 /* ── Large tablet / small desktop ── */
 @media (max-width: 992px) {
   .about-who-grid {
@@ -553,6 +554,14 @@
 
   .architect-info p {
     font-size: 14px;
+  }
+
+  /* 3-per-row at this breakpoint so 4-card row doesn't
+     get too cramped before the 2-per-row tablet layout kicks in */
+  .directors-grid .director-card-scene,
+  .partners-grid .director-card-scene {
+    flex: 0 1 calc((100% - 2 * var(--sp-8)) / 3);
+    max-width: calc((100% - 2 * var(--sp-8)) / 3);
   }
 }
 
@@ -624,27 +633,18 @@
     right: 14px;
   }
 
+  /* Both grids drop to 2-per-row here, matching this
+     breakpoint's own 16px gap. Both directors and partners
+     use the same rule, so sizing stays identical. */
   .directors-grid,
-  .directors-grid-2,
   .partners-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
     gap: 16px;
-    justify-items: center;
   }
 
-  .director-card-scene {
-    width: 100%;
-    max-width: 180px;
-  }
-
-  .director-card {
-    width: 100%;
-    max-width: 180px;
-  }
-
-  .director-photo {
-    height: 200px;
+  .directors-grid .director-card-scene,
+  .partners-grid .director-card-scene {
+    flex: 0 1 calc((100% - 16px) / 2);
+    max-width: calc((100% - 16px) / 2);
   }
 
   .director-name {
@@ -675,20 +675,6 @@
 
 /* ── Small mobile ── */
 @media (max-width: 480px) {
-  /* .about-who-img-placeholder {
-    height: 200px;
-    font-size: 13px;
-  }
-
-  .about-who-text h3 {
-    font-size: 18px;
-  }
-
-  .about-who-text p {
-    font-size: 13px;
-    line-height: 1.75;
-  } */
-
   .vmp-card-img {
     height: 140px;
   }
@@ -727,20 +713,16 @@
     font-size: 12px;
   }
 
+  /* still 2-per-row, matching this breakpoint's own 12px gap */
   .directors-grid,
-  .directors-grid-2,
   .partners-grid {
-    grid-template-columns: repeat(2, 1fr);
     gap: 12px;
   }
 
-  .director-card-scene,
-  .director-card {
-    max-width: 160px;
-  }
-
-  .director-photo {
-    height: 180px;
+  .directors-grid .director-card-scene,
+  .partners-grid .director-card-scene {
+    flex: 0 1 calc((100% - 12px) / 2);
+    max-width: calc((100% - 12px) / 2);
   }
 
   .director-name {

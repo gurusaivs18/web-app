@@ -558,14 +558,14 @@ function DirectorsSlider({ onSelect }) {
         </div>
 
         <div className="directors-slider-wrap">
-          <button
+          {/* <button
             className="slider-nav slider-nav-left"
             onClick={() => {
               trackRef.current.scrollLeft -= slideAmount;
             }}
           >
             ‹
-          </button>
+          </button> */}
 
           <div
             className="directors-marquee"

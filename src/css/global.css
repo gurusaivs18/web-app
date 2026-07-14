@@ -1407,19 +1407,16 @@ textarea.form-control {
     text-align: left;
     padding: var(--sp-4);
     background: var(--color-white);
-    color: var(--color-dark);
   }
   .ceo-info h3 {
-    color: var(--color-dark) !important;
     font-size: 18px;
   }
   .ceo-info p {
-    color: var(--color-body) !important;
     font-size: 12px;
   }
   .ceo-info .ceo-role {
-    color: var(--color-primary) !important;
     font-size: 12px;
+    color: white;
   }
   .ceo-content::after {
     display: none !important;
