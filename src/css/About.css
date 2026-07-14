@@ -575,10 +575,33 @@
     max-width: none;
     margin: 0 auto;
   }
-  .directors-grid .director-card-scene,
+
+  /* Partners: 3-per-row at this breakpoint */
   .partners-grid .director-card-scene {
     flex: 0 1 calc((100% - 2 * var(--sp-8)) / 3);
     max-width: calc((100% - 2 * var(--sp-8)) / 3);
+  }
+
+  /* Directors: only 4 cards, so 3-per-row causes an
+     ugly 3+1 split. Force clean 2x2 instead. */
+  /* Directors: only 4 cards, so 3-per-row causes an
+     ugly 3+1 split — keep 2x2, but size cards using the
+     SAME formula as partners' 3-per-row cards (cap the
+     container to 2 partner-card-widths + 1 gap), so both
+     grids stay pixel-identical in card size at this breakpoint. */
+  .directors-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: var(--sp-8);
+    max-width: calc((2 * ((100% - 2 * var(--sp-8)) / 3)) + var(--sp-8));
+    margin: 0 auto;
+  }
+
+  .directors-grid .director-card-scene {
+    flex: 0 0 calc((100% - var(--sp-8)) / 2);
+    max-width: calc((100% - var(--sp-8)) / 2);
   }
 }
 
@@ -658,7 +681,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
-    max-width: none;
+    max-width: min(420px, 90%);
     margin: 0 auto;
   }
 
