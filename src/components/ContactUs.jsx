@@ -2,6 +2,7 @@ import "../css/ContactUs.css";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 
+
 // Validation schema
 const contactSchema = Yup.object({
   name: Yup.string()
@@ -20,7 +21,7 @@ const contactSchema = Yup.object({
 function Contact() {
   return (
     <div className="contact-wrapper">
-      <h1 style={{ color: "#8e1414", fontWeight: 200 }}>Contact Us</h1>
+      <h1 style={{fontWeight:"bolder"}}>Contact Us</h1>
 
       <Formik
         initialValues={{
