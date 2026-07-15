@@ -193,7 +193,7 @@
 }
 .logo-card-img-wrap img[data-brand="VK Technology"] {
   height: auto;
-  width: 220px;
+  width: 2px;
 }
 .logo-card-img-wrap img[data-brand="Nb Ventures"] {
   height: auto;
@@ -582,52 +582,45 @@
 }
 
 @media (max-width: 480px) {
-  .vertical-brands-grid,
-  .featured-logos-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-items: center;
-    align-items: start;
-    gap: 14px 10px;
-  }
-  .vertical-brands-grid > .logo-card:nth-child(odd):last-child,
-  .featured-logos-grid > .featured-logo-card:nth-child(odd):last-child {
-    grid-column: 1 / -1;
-  }
+  @media (max-width: 480px) {
+    .logo-card,
+    .featured-logo-card {
+      display: flex;
+      flex-direction: column;
+      min-height: 85px;
+      height: auto;
+      padding: 6px 8px;
+      border-radius: 8px;
+      justify-content: flex-start; /* was: first baseline → invalid, caused the randomness */
+      align-items: center;
+      gap: 0;
+    }
 
-  .logo-card,
-  .featured-logo-card {
-    min-height: 85px;
-    height: auto;
-    padding: 6px 8px;
-    border-radius: 8px;
-  }
+    .logo-card-img-wrap,
+    .featured-logo-card .logo-card-img-wrap {
+      width: 100%;
+      height: 62px; /* FIXED box — every logo now lives in the same size slot */
+      min-height: 62px;
+      max-height: 62px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: visible; /* tall logos can spill past the box, they just won't push text */
+    }
 
-  .logo-card-img-wrap {
-    min-height: 0;
-    max-height: none;
-    overflow: visible;
+    .logo-card-text,
+    .featured-logo-card .logo-card-text {
+      width: 100%;
+      min-height: 2.4em; /* reserves 2 lines so "United Pro Sports (U-Pro)" doesn't shift shorter names */
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      text-align: center;
+      font-size: 10px;
+      letter-spacing: 0.15px;
+      margin-top: 4px;
+    }
   }
-  .featured-logo-card img[data-brand="Motiv8"] {
-    height: 5px;
-    width: 5px;
-  }
-  .logo-card-img-wrap img,
-  .featured-logo-card .logo-card-img-wrap img {
-    width: auto;
-    height: auto;
-    /* no blanket max-width/max-height here anymore — your per-brand
-     data-brand overrides below now fully control size, and the
-     card resizes around whatever you give them */
-  }
-
-  .logo-card-text,
-  .featured-logo-card .logo-card-text {
-    font-size: 10px;
-    letter-spacing: 0.15px;
-    margin-top: 3px;
-  }
-
   /* ── Grid brand overrides at 480px ── */
   .logo-card-img-wrap img[data-brand="Pressman's Sandwiches"] {
     width: 156px !important;
