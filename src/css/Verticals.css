@@ -607,7 +607,10 @@
     max-height: none;
     overflow: visible;
   }
-
+  .featured-logo-card img[data-brand="Motiv8"] {
+    height: 5px;
+    width: 5px;
+  }
   .logo-card-img-wrap img,
   .featured-logo-card .logo-card-img-wrap img {
     width: auto;
@@ -655,10 +658,15 @@
     width: auto !important;
     max-width: none !important;
   }
-  .logo-card-img-wrap img[data-brand="Harrison / Inov8"] {
+  /* .logo-card-img-wrap img[data-brand="Harrison / Inov8"] {
     max-height: 78px !important;
     width: auto !important;
     max-width: none !important;
+  } */
+  .logo-card-img-wrap img[data-brand="Harrison / Inov8"] {
+    max-height: 78px !important;
+    width: auto !important;
+    max-width: 120px !important;
   }
   .logo-card-img-wrap img[data-brand="Harrison Digital"] {
     width: 150px !important;
@@ -675,11 +683,17 @@
     width: auto !important;
     max-width: none !important;
   }
-  .logo-card-img-wrap img[data-brand="Motiv8"] {
+  /* .logo-card-img-wrap img[data-brand="Motiv8"] {
     max-height: 78px !important;
     width: auto !important;
     max-width: none !important;
+  } */
+  .logo-card-img-wrap img[data-brand="Motiv8"] {
+    max-height: 78px !important;
+    width: auto !important;
+    max-width: 120px !important;
   }
+
   .logo-card-img-wrap img[data-brand="ZeroG Beds & Mattresses"] {
     max-height: 78px !important;
     width: auto !important;
@@ -695,15 +709,25 @@
     width: auto !important;
     max-width: none !important;
   }
-  .logo-card-img-wrap img[data-brand="UAE Bulls"] {
+  /* .logo-card-img-wrap img[data-brand="UAE Bulls"] {
     max-height: 80px !important;
     width: auto !important;
     max-width: none !important;
+  } */
+  .logo-card-img-wrap img[data-brand="UAE Bulls"] {
+    max-height: 80px !important;
+    width: auto !important;
+    max-width: 120px !important;
   }
-  .logo-card-img-wrap img[data-brand="BVB League"] {
+  /* .logo-card-img-wrap img[data-brand="BVB League"] {
     max-height: 95px !important;
     width: auto !important;
     max-width: none !important;
+  } */
+  .logo-card-img-wrap img[data-brand="BVB League"] {
+    max-height: 95px !important;
+    width: auto !important;
+    max-width: 110px !important;
   }
   .logo-card-img-wrap img[data-brand="VK Technology"] {
     width: 165px !important;
