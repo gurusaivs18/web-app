@@ -368,9 +368,9 @@
   max-width: 320px;
 }
 
-.brand-modal-logo img[data-brand="Nb Ventures"] {
+/* .brand-modal-logo img[data-brand="Nb Ventures"] {
   max-width: px;
-}
+} */
 
 .brand-modal-logo img[data-brand="Booster Juice"] {
   max-width: 280px;
@@ -652,10 +652,10 @@
   max-width: none !important;
 }
 .logo-card-img-wrap img[data-brand="Harrison / Inov8"] {
-    max-height: 84px !important;
-    width: auto !important;
-    max-width: none !important;
-  }
+  max-height: 84px !important;
+  width: auto !important;
+  max-width: none !important;
+}
 
 .logo-card-img-wrap img[data-brand="Harrison Digital"] {
   width: 150px !important;
@@ -672,11 +672,7 @@
   width: auto !important;
   max-width: none !important;
 }
-/* .logo-card-img-wrap img[data-brand="Motiv8"] {
-    max-height: 78px !important;
-    width: auto !important;
-    max-width: none !important;
-  } */
+
 .logo-card-img-wrap img[data-brand="Motiv8"] {
   max-height: 80px !important;
   width: auto !important;
@@ -698,21 +694,17 @@
   max-width: none !important;
 }
 .logo-card-img-wrap img[data-brand="UAE Bulls"] {
-    max-height: 92px !important;
-    width: auto !important;
-    max-width: none !important;
-  }
- 
- .logo-card-img-wrap img[data-brand="BVB League"] {
-    max-height: 110px !important;
-    width: auto !important;
-    max-width: none !important;
-  }
-/* .logo-card-img-wrap img[data-brand="BVB League"] {
-    max-height: 95px !important;
-    width: auto !important;
-    max-width: 110px !important;
-  } */
+  max-height: 92px !important;
+  width: auto !important;
+  max-width: none !important;
+}
+
+.logo-card-img-wrap img[data-brand="BVB League"] {
+  max-height: 110px !important;
+  width: auto !important;
+  max-width: none !important;
+}
+
 .logo-card-img-wrap img[data-brand="VK Technology"] {
   width: 165px !important;
   height: 90px !important;
