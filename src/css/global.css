@@ -1347,11 +1347,11 @@ textarea.form-control {
 }
 
 @media (max-width: 480px) {
- .page-hero, 
+  .page-hero,
   .page-hero.container {
     padding-top: var(--sp-1);
     padding-bottom: var(--sp-4);
-  } 
+  }
 
   .directors-marquee {
     margin-inline: var(--sp-4);
