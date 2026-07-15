@@ -651,16 +651,12 @@
   width: auto !important;
   max-width: none !important;
 }
-/* .logo-card-img-wrap img[data-brand="Harrison / Inov8"] {
-    max-height: 78px !important;
+.logo-card-img-wrap img[data-brand="Harrison / Inov8"] {
+    max-height: 84px !important;
     width: auto !important;
     max-width: none !important;
-  } */
-/* .logo-card-img-wrap img[data-brand="Harrison / Inov8"] {
-    max-height: 78px !important;
-    width: auto !important;
-    max-width: 120px !important;
-  } */
+  }
+
 .logo-card-img-wrap img[data-brand="Harrison Digital"] {
   width: 150px !important;
   height: auto !important;
@@ -672,7 +668,7 @@
   max-width: none !important;
 }
 .logo-card-img-wrap img[data-brand="Activ8"] {
-  max-height: 78px !important;
+  max-height: 74px !important;
   width: auto !important;
   max-width: none !important;
 }
@@ -682,7 +678,7 @@
     max-width: none !important;
   } */
 .logo-card-img-wrap img[data-brand="Motiv8"] {
-  max-height: 78px !important;
+  max-height: 80px !important;
   width: auto !important;
 }
 
@@ -692,7 +688,7 @@
   max-width: none !important;
 }
 .logo-card-img-wrap img[data-brand="Snap Fitness"] {
-  max-height: 68px !important;
+  max-height: 80px !important;
   width: auto !important;
   max-width: none !important;
 }
@@ -701,21 +697,17 @@
   width: auto !important;
   max-width: none !important;
 }
-/* .logo-card-img-wrap img[data-brand="UAE Bulls"] {
-    max-height: 80px !important;
+.logo-card-img-wrap img[data-brand="UAE Bulls"] {
+    max-height: 92px !important;
     width: auto !important;
     max-width: none !important;
-  } */
-/* .logo-card-img-wrap img[data-brand="UAE Bulls"] {
-    max-height: px !important;
-    width: auto !important;
-    max-width:px !important;
-  } */
-/* .logo-card-img-wrap img[data-brand="BVB League"] {
-    max-height: 95px !important;
+  }
+ 
+ .logo-card-img-wrap img[data-brand="BVB League"] {
+    max-height: 110px !important;
     width: auto !important;
     max-width: none !important;
-  } */
+  }
 /* .logo-card-img-wrap img[data-brand="BVB League"] {
     max-height: 95px !important;
     width: auto !important;
@@ -727,7 +719,7 @@
   max-height: none !important;
 }
 .logo-card-img-wrap img[data-brand="Nb Ventures"] {
-  width: 155px !important;
+  width: 185px !important;
   height: 90px !important;
   max-height: none !important;
 }
@@ -766,7 +758,7 @@
   max-height: none !important;
 }
 .logo-card-img-wrap img[data-brand="Epic Fitouts"] {
-  max-height: 65px !important;
+  max-height: 88px !important;
   width: auto !important;
   max-width: none !important;
 }
