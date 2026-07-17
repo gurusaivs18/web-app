@@ -1527,6 +1527,7 @@
 /* ================= VERTICALS — CATEGORY GRID ================= */
 .home-verticals {
   background: var(--white);
+  margin-bottom: 1.5rem;
 }
 .section.home-impact {
   padding-block: 2rem;
