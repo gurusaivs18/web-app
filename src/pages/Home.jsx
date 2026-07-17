@@ -776,10 +776,10 @@ function Home() {
           </div>
         </div>
       </section>
-      {/* ── DIRECTORS SLIDER ── */}
-      <DirectorsSlider onSelect={setSelectedDirector} />
       {/* ── VERTICALS GRID ── */}
       <VerticalsGrid onSelect={handleVerticalClick} />{" "}
+      {/* ── DIRECTORS SLIDER ── */}
+      <DirectorsSlider onSelect={setSelectedDirector} />
       {/* ── IMPACT / STATS ── */}
       <section className="section home-impact" ref={sectionRef}>
         <div className="container">
