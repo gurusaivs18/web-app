@@ -1474,13 +1474,6 @@
 
 .directors-slider-wrap,
 .verticals-slider-wrap {
-  -webkit-mask-image: linear-gradient(
-    to right,
-    transparent 0%,
-    black 3%,
-    black 97%,
-    transparent 100%
-  );
   mask-image: linear-gradient(
     to right,
     transparent 0%,
@@ -1488,6 +1481,8 @@
     black 97%,
     transparent 100%
   );
+  width: calc(100% - 72px);
+  margin: 0 auto;
 }
 
 /* ================================================================
