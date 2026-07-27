@@ -684,6 +684,12 @@
     max-width: min(420px, 90%);
     margin: 0 auto;
   }
+  .directors-grid > .director-card-scene:last-child:nth-child(odd),
+  .partners-grid > .director-card-scene:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: calc((100% - 16px) / 2);
+  }
 
   .directors-grid .director-card-scene,
   .partners-grid .director-card-scene {
@@ -774,7 +780,12 @@
     max-width: none;
     margin: 0 auto;
   }
-
+  .directors-grid > .director-card-scene:last-child:nth-child(odd),
+  .partners-grid > .director-card-scene:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: calc((100% - 16px) / 2);
+  }
   .directors-grid .director-card-scene,
   .partners-grid .director-card-scene {
     flex: none;
