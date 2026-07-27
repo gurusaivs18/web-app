@@ -17,9 +17,9 @@ export const team = {
     //   desc: "CPA with expertise in finance and business strategy across Retail, Fitness, Hospitality, and Healthcare.",
     //   order: 2,
     // },
-    { name: "Sanjeev Sinha", role: "Director", order: 3 },
+    { name: "Sanjeev K Sinha", role: "Group CFO", order: 3 },
 
-    { name: "Mohammed Ashik", role: "Director", order: 5 },
+    { name: "Mohammed Ashik", role: "Group CTO", order: 5 },
   ],
   partners: [
     {
@@ -29,7 +29,7 @@ export const team = {
       order: 6,
     },
 
-    { name: "Sanal Kumar", role: "Partner", desc: "", order: 8 },
+    { name: "Sanal Kumar", role: "Business Head", desc: "", order: 8 },
     // {
     //   name: "Manish Kishore",
     //   role: "Partner",
@@ -38,7 +38,7 @@ export const team = {
     // },
     {
       name: "Deep Bhogal",
-      role: "Managing Director",
+      role: "Partner",
       desc: "30+ years in retail and distribution. Managing Director of Denaster.",
       order: 4,
     },

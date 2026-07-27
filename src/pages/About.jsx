@@ -48,13 +48,13 @@ const allDirectors = [
 
   {
     name: "Sanjeev Sinha",
-    role: "Director",
+    role: "Group CFO",
     img: sanjeevImg,
     writeup: `Sanjeev Sinha is a seasoned business leader and Director at JSB Group, contributing strategic oversight and sector expertise to the group's growing portfolio of businesses.`,
   },
   {
     name: "Mohammed Ashik",
-    role: "Director",
+    role: "Group CTO",
     img: null,
     writeup: `Mohammed Ashik is a Director at JSB Group, bringing valuable regional expertise and leadership experience that supports the group's expansion across key markets.`,
   },
@@ -70,13 +70,13 @@ const allPartners = [
   // },
   {
     name: "Sanal Kumar",
-    role: "Partner",
+    role: "Business Head",
     img: sanalImg,
     writeup: `Sanal Kumar is a Partner at JSB Group, bringing deep professional experience and commitment to the group's values and vision.`,
   },
   {
     name: "Deep Bhogal",
-    role: "Managing Director",
+    role: "Partner",
     img: deepImg,
     writeup: `Deep Bhogal brings over 30 years of experience in retail and distribution to the JSB Group. As Managing Director of Denaster, he has built and led large-scale operations across multiple markets, with a reputation for operational excellence and commercial acumen.\n\nHis decades of experience make him a cornerstone of the group's operational leadership.`,
   },
