@@ -314,7 +314,7 @@ function About() {
                 Neelesh Bhatnagar
               </h3>
               <p className="role" data-reveal="right" data-delay="400">
-                CEO & Founder
+                Founder & CEO
               </p>
               <p data-reveal="right" data-delay="500">
                 Neelesh Bhatnagar is an entrepreneur with over three decades of
@@ -340,7 +340,7 @@ function About() {
         <Modal
           person={{
             name: "Neelesh Bhatnagar",
-            role: "CEO & Founder",
+            role: "Founder & CEO",
             writeup: ceoWriteup,
           }}
           onClose={() => setCeoOpen(false)}
