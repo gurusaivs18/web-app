@@ -235,7 +235,7 @@ const verticalCategories = [
 const directors = [
   {
     name: "Naz Ayat",
-    role: "Sales Director",
+    role: "Partner",
     bio: "30+ years in software and electronics industries. Worked with major UK and international retailers including Amazon and HMV. Expert in distribution channels.",
     slug: "naz-ayat",
     img: null,
@@ -266,8 +266,8 @@ const directors = [
   //   order: 3,
   // },
   {
-    name: "Sanjeev Sinha",
-    role: "Director",
+    name: "Sanjeev K Sinha",
+    role: "Group CFO",
     bio: "Senior director at JSB Group contributing to the group's strategic growth across verticals.",
     slug: "sanjeev-sinha",
     img: sinha,
@@ -275,7 +275,7 @@ const directors = [
   },
   {
     name: "Mohammed Ashik",
-    role: "Director",
+    role: "Group CTO",
     bio: "Key leadership member driving operational excellence across JSB Group's diverse portfolio.",
     slug: "mohammed-ashik",
     img: null,
@@ -291,7 +291,7 @@ const directors = [
   // },
   {
     name: "Sanal Kumar",
-    role: "Director",
+    role: "Business Head",
     bio: "Contributes strategic direction and expertise to JSB Group's expanding business verticals.",
     slug: "sanal-kumar",
     img: sanal,
@@ -300,7 +300,7 @@ const directors = [
 
   {
     name: "Deep Bhogal",
-    role: "Managing Director, Denaster",
+    role: "Partner",
     bio: "Over 30 years in supply and distribution across retail, software, and electronics. Led Denaster to become a multimillion-dollar SME with 100+ employees.",
     slug: "deep-bhogal",
     img: deep,
@@ -657,6 +657,59 @@ function VerticalsGrid({ onSelect }) {
     </section>
   );
 }
+function VisionMissionSection() {
+  const cards = [
+    {
+      label: "Vision",
+      text: companyInfo.vision,
+    },
+    {
+      label: "Mission",
+      text: companyInfo.mission,
+    },
+    {
+      label: "Purpose",
+      text: companyInfo.purpose,
+    },
+  ];
+
+  return (
+    <section className="section vmp-section home-vmp-section">
+      <div className="container">
+        <div className="section-title-wrap" data-reveal="fade">
+          <span className="section-title">Vision, Mission & Purpose</span>
+        </div>
+
+        <div className="vmp-grid">
+          {cards.map(({ label, text }, i) => (
+            <div
+              key={label}
+              className="vmp-card"
+              data-reveal="up"
+              data-delay={String(i * 150 + 100)}
+            >
+              <div className="vmp-card-img">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  width="48"
+                  height="48"
+                >
+                  <path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 17h-2v-2h2v2zm2.07-7.25-.9.92C13.45 13.4 13 14 13 15h-2v-.5c0-.8.45-1.55 1.17-2.28l1.24-1.26c.37-.36.59-.86.59-1.38a2 2 0 10-4 0H8a4 4 0 118 0c0 .94-.38 1.84-1.07 2.49z" />
+                </svg>
+              </div>
+
+              <div className="vmp-card-body">
+                <h3>{label}</h3>
+                <p>{text}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
 /* ─── Main component ─────────────────────────────────────────── */
 function Home() {
   useScrollReveal();
@@ -763,8 +816,11 @@ function Home() {
               FOUNDER & CEO
             </p>
             <p data-reveal="right" data-delay="250">
-              Entrepreneur with over three decades of experience spanning the
-              Middle East and India.
+              Neelesh Bhatnagar is an entrepreneur with over three decades of
+              experience spanning the Middle East and India. As the CEO &
+              Founder of JSB Group, he has built a diversified conglomerate with
+              interests across retail, fitness, hospitality, healthcare, and
+              technology.
             </p>
             <button
               className="read-more-link"
@@ -775,6 +831,8 @@ function Home() {
           </div>
         </div>
       </section>
+      {/* vision mission section  */}
+      <VisionMissionSection />
       {/* ── VERTICALS GRID ── */}
       <VerticalsGrid onSelect={handleVerticalClick} />{" "}
       {/* ── DIRECTORS SLIDER ── */}

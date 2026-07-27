@@ -2,7 +2,7 @@ export const team = {
   ceo: {
     name: "Neelesh Bhatnagar",
     role: "Founder & CEO",
-    desc: "Entrepreneur with 30+ years experience across the Middle East and India. Recognized by Forbes Middle East as one of the Top Indian Business Leaders 2018.",
+    desc: "Neelesh Bhatnagar is an entrepreneur with over three decades of experience spanning the Middle East and India. As the CEO & Founder of JSB Group, he has built a diversified conglomerate with interests across retail, fitness, hospitality, healthcare, and technology.",
   },
   leadership: [
     {
