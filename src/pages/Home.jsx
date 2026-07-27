@@ -239,7 +239,7 @@ const directors = [
     bio: "30+ years in software and electronics industries. Worked with major UK and international retailers including Amazon and HMV. Expert in distribution channels.",
     slug: "naz-ayat",
     img: null,
-    order: 9,
+    order: 6,
   },
   // {
   //   name: "Sawan Ravani",
@@ -279,7 +279,7 @@ const directors = [
     bio: "Key leadership member driving operational excellence across JSB Group's diverse portfolio.",
     slug: "mohammed-ashik",
     img: null,
-    order: 5,
+    order: 1,
   },
   // {
   //   name: "Manish Kishore",
@@ -295,7 +295,7 @@ const directors = [
     bio: "Contributes strategic direction and expertise to JSB Group's expanding business verticals.",
     slug: "sanal-kumar",
     img: sanal,
-    order: 7,
+    order: 3,
   },
 
   {
@@ -304,7 +304,7 @@ const directors = [
     bio: "Over 30 years in supply and distribution across retail, software, and electronics. Led Denaster to become a multimillion-dollar SME with 100+ employees.",
     slug: "deep-bhogal",
     img: deep,
-    order: 8,
+    order: 5,
   },
 ];
 
