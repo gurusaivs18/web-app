@@ -318,10 +318,11 @@
 }
 
 .director-role-text {
-  font-size: 14px;
+  font-size: 15px;
   color: #777;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  font-weight: 550;
 }
 
 /* ───────────────── READ MORE BUTTON ───────────────── */
@@ -711,7 +712,8 @@
     font-size: 14px;
   }
   .director-role-text {
-    font-size: 12px;
+    font-size: 15px;
+    font-weight: 500;
   }
 
   .read-more-btn {
