@@ -156,7 +156,7 @@ export const verticals = [
   },
 
   {
-    title: "Sports & Fitness",
+    title: "Fitness & Sports  ",
 
     description:
       "JSB Group actively promotes sports, wellness, and fitness through premium facilities, global franchises, and international sporting initiatives.",

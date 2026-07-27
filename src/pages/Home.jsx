@@ -51,7 +51,7 @@ const statIcons = [
 
 const verticalCategories = [
   {
-    label: "Venture Capitalist",
+    label: "Investment ",
     // img: vcImg,
     icon: (
       <svg viewBox="0 0 24 24" fill="none">
@@ -193,7 +193,7 @@ const verticalCategories = [
   },
 
   {
-    label: "Sports & Fitness",
+    label: "Fitness & Sports ",
     // img: fitnessImg,
     icon: (
       <svg viewBox="0 0 24 24" fill="none">
@@ -446,7 +446,7 @@ function CeoModal({ onClose }) {
         <div className="ceo-modal-content">
           <span className="ceo-modal-tag">The Architect</span>
           <h2 className="ceo-modal-name">Neelesh Bhatnagar</h2>
-          <p className="ceo-modal-role">CEO & Founder, JSB Group</p>
+          <p className="ceo-modal-role">Founder & CEO , JSB Group</p>
           <div className="ceo-modal-divider" />
           <div className="ceo-modal-bio">
             {ceoWriteup.split("\n\n").map((para, i) => (
@@ -760,7 +760,7 @@ function Home() {
           <div className="ceo-info">
             <h3 data-reveal="right">Neelesh Bhatnagar</h3>
             <p className="ceo-role" data-reveal="right" data-delay="150">
-              CEO &amp; Founder
+              FOUNDER & CEO
             </p>
             <p data-reveal="right" data-delay="250">
               Entrepreneur with over three decades of experience spanning the

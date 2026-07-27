@@ -1,7 +1,7 @@
 export const team = {
   ceo: {
     name: "Neelesh Bhatnagar",
-    role: "CEO & Founder",
+    role: "Founder & CEO",
     desc: "Entrepreneur with 30+ years experience across the Middle East and India. Recognized by Forbes Middle East as one of the Top Indian Business Leaders 2018.",
   },
   leadership: [
