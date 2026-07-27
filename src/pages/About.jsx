@@ -317,8 +317,11 @@ function About() {
                 CEO & Founder
               </p>
               <p data-reveal="right" data-delay="500">
-                Entrepreneur with over three decades of experience spanning the
-                Middle East and India.
+                Neelesh Bhatnagar is an entrepreneur with over three decades of
+                experience spanning the Middle East and India. As the CEO &
+                Founder of JSB Group, he has built a diversified conglomerate
+                with interests across retail, fitness, hospitality, healthcare,
+                and technology.
               </p>
               <button
                 className="architect-read-more"
