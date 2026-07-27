@@ -1,6 +1,6 @@
 export const verticals = [
   {
-    title: "Venture Capitalist",
+    title: "Investment",
 
     description:
       "Our technology division develops customized software solutions that help businesses improve operational efficiency and digital transformation.",

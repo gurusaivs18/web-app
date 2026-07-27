@@ -51,7 +51,7 @@ const statIcons = [
 
 const verticalCategories = [
   {
-    label: "Investment ",
+    label: "Investment",
     // img: vcImg,
     icon: (
       <svg viewBox="0 0 24 24" fill="none">
