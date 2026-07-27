@@ -234,13 +234,21 @@ const verticalCategories = [
 
 const directors = [
   {
-    name: "Sawan Ravani",
-    role: "pending",
-    bio: "pending",
-    slug: "Sawan Ravani",
+    name: "Naz Ayat",
+    role: "Sales Director",
+    bio: "30+ years in software and electronics industries. Worked with major UK and international retailers including Amazon and HMV. Expert in distribution channels.",
+    slug: "naz-ayat",
     img: null,
-    order: 1,
+    order: 9,
   },
+  // {
+  //   name: "Sawan Ravani",
+  //   role: "pending",
+  //   bio: "pending",
+  //   slug: "Sawan Ravani",
+  //   img: null,
+  //   order: 1,
+  // },
   {
     name: "Rushab Bhatnagar",
     role: "Co-Founder & CEO, NOVO Labs | Strategic Director, NB Ventures",
@@ -249,14 +257,14 @@ const directors = [
     img: rushab,
     order: 2,
   },
-  {
-    name: "Praveen Bhatnagar",
-    role: "Business Consultant",
-    bio: "Certified Public Accountant (U.S.) & Chartered Accountant (India). Owner of ZeroG Beds and Mattresses. Specializes in Retail, Fitness, Hospitality, and Healthcare business strategy.",
-    slug: "praveen-bhatnagar",
-    img: null,
-    order: 3,
-  },
+  // {
+  //   name: "Praveen Bhatnagar",
+  //   role: "Business Consultant",
+  //   bio: "Certified Public Accountant (U.S.) & Chartered Accountant (India). Owner of ZeroG Beds and Mattresses. Specializes in Retail, Fitness, Hospitality, and Healthcare business strategy.",
+  //   slug: "praveen-bhatnagar",
+  //   img: null,
+  //   order: 3,
+  // },
   {
     name: "Sanjeev Sinha",
     role: "Director",
@@ -273,14 +281,14 @@ const directors = [
     img: null,
     order: 5,
   },
-  {
-    name: "Manish Kishore",
-    role: "Partner",
-    bio: "test",
-    slug: "Manish Kishore",
-    img: null,
-    order: 6,
-  },
+  // {
+  //   name: "Manish Kishore",
+  //   role: "Partner",
+  //   bio: "test",
+  //   slug: "Manish Kishore",
+  //   img: null,
+  //   order: 6,
+  // },
   {
     name: "Sanal Kumar",
     role: "Director",
@@ -297,15 +305,6 @@ const directors = [
     slug: "deep-bhogal",
     img: deep,
     order: 8,
-  },
-
-  {
-    name: "Naz Ayat",
-    role: "Sales Director",
-    bio: "30+ years in software and electronics industries. Worked with major UK and international retailers including Amazon and HMV. Expert in distribution channels.",
-    slug: "naz-ayat",
-    img: null,
-    order: 9,
   },
 ];
 

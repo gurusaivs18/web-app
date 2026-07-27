@@ -39,12 +39,12 @@ const allDirectors = [
     img: rushabImg,
     writeup: `Rushab Bhatnagar is the Co-Founder and CEO of NOVO Labs, and serves as Strategic Director for NB Ventures. With a sharp focus on innovation and technology-driven business models, Rushab brings a forward-thinking perspective to the JSB Group board.\n\nHis work spans venture building, strategic investments, and scaling early-stage companies into market leaders.`,
   },
-  {
-    name: "Praveen Bhatnagar",
-    role: "Director",
-    img: null,
-    writeup: `Praveen Bhatnagar is a Certified Public Accountant (CPA) with deep expertise in finance and business strategy. Over the course of his career, he has worked across Retail, Fitness, Hospitality, and Healthcare sectors, bringing financial rigour and strategic clarity to each venture he has been part of.\n\nAs a Director at JSB Group, Praveen plays a key role in shaping the financial architecture of the group's diverse portfolio, ensuring sustainable growth and sound governance across all business units.`,
-  },
+  // {
+  //   name: "Praveen Bhatnagar",
+  //   role: "Director",
+  //   img: null,
+  //   writeup: `Praveen Bhatnagar is a Certified Public Accountant (CPA) with deep expertise in finance and business strategy. Over the course of his career, he has worked across Retail, Fitness, Hospitality, and Healthcare sectors, bringing financial rigour and strategic clarity to each venture he has been part of.\n\nAs a Director at JSB Group, Praveen plays a key role in shaping the financial architecture of the group's diverse portfolio, ensuring sustainable growth and sound governance across all business units.`,
+  // },
 
   {
     name: "Sanjeev Sinha",
@@ -61,13 +61,13 @@ const allDirectors = [
 ];
 
 const allPartners = [
-  {
-    name: "Manish Kishore",
-    role: "Partner",
-    img: null,
+  // {
+  //   name: "Manish Kishore",
+  //   role: "Partner",
+  //   img: null,
 
-    writeup: `WRITE UP IS PENDING`,
-  },
+  //   writeup: `WRITE UP IS PENDING`,
+  // },
   {
     name: "Sanal Kumar",
     role: "Partner",
@@ -86,12 +86,12 @@ const allPartners = [
     img: null,
     writeup: `Naz Ayat is a Partner at JSB Group, contributing expertise and strategic guidance across the group's diverse business interests.`,
   },
-  {
-    name: "Sawan Ravani",
-    role: "Partner",
-    img: null,
-    writeup: `write up is pending `,
-  },
+  // {
+  //   name: "Sawan Ravani",
+  //   role: "Partner",
+  //   img: null,
+  //   writeup: `write up is pending `,
+  // },
 ];
 function Modal({ person, onClose }) {
   const [visible, setVisible] = useState(false);
