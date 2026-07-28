@@ -95,7 +95,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding: 14px 12px 10px;
+  padding: 2.5px 12px 10px;
   border-radius: 12px;
   background: var(--white);
   overflow: visible;
@@ -616,6 +616,7 @@
     font-size: 10px;
     letter-spacing: 0.15px;
     margin-top: 4px;
+    padding-block: 0.5rem;
   }
 }
 /* ── Grid brand overrides at 480px ── */
@@ -811,7 +812,6 @@
   width: auto !important;
   max-width: none !important;
 }
-
 
 @media (max-width: 360px) {
   .vertical-brands-grid,

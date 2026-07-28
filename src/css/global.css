@@ -626,7 +626,7 @@ textarea.form-control {
   }
 
   .section {
-    padding-block: var(--sp-8); /* was --sp-12, reduce it */
+    padding-block: 1.5rem; /* matched to desktop .section */
   }
   .grid--2,
   .grid--3,
@@ -650,11 +650,11 @@ textarea.form-control {
     padding-inline: var(--sp-4);
   }
   .btn {
-    padding: 9px var(--sp-6);
+    padding: 10px var(--sp-6); /* vertical matched to desktop .btn (10px) */
     font-size: var(--text-xs);
   }
   .section {
-    padding-block: var(--sp-6);
+    padding-block: 0.5rem; /* matched to desktop .section */
   }
 }
 /* ==========================================================================
@@ -1146,7 +1146,7 @@ textarea.form-control {
 .directors-grid,
 .directors-grid-2,
 .partners-grid {
-  margin-top:0.5rem;
+  margin-top: 0.5rem;
   gap: var(--sp-8);
 }
 /* .pillars-section + .pillars-section {
@@ -1175,12 +1175,10 @@ textarea.form-control {
   margin-top: var(--sp-4);
   margin-left: calc(-50vw + 50%);
 }
-.featured-title {
-  /* margin-bottom: var(--sp-hero-gap); */
-}
+
 .featured-logos-grid {
   gap: var(--sp-6);
-  margin-block: 1rem;
+  margin-block: 0.2rem;
 }
 .featured-logo-card img {
   margin-bottom: var(--sp-2);
@@ -1302,27 +1300,34 @@ textarea.form-control {
    12. RESPONSIVE OVERRIDES
    Same tokens, scaled once — every breakpoint stays
    proportional instead of using unrelated one-off values.
+
+   NOTE: vertical spacing values (padding-top/bottom,
+   padding-block, margin-top/bottom) below have been
+   updated to match their desktop counterparts, per
+   request. Horizontal spacing / sizes left untouched.
    ───────────────────────────────────────────── */
 @media (max-width: 768px) {
   .page-hero,
   .page-hero.container {
-    padding-top: var(--sp-12);
-    padding-bottom: var(--sp-6);
+    padding-top: 3rem; /* matched to desktop */
+    padding-bottom: 0; /* matched to desktop */
   }
 
   .home-verticals-logos,
   .home-group-photos,
   .testimonials-overlay,
-  .home-contact,
-  .vertical-category {
+  .home-contact {
     padding-block: 3rem;
+  }
+  .vertical-category {
+    padding-block: 1.5rem; /* matched to desktop .vertical-category */
   }
 
   .careers-cta {
-    padding: var(--sp-10) var(--sp-6);
+    padding: var(--sp-section-gap) var(--sp-6); /* vertical matched to desktop */
   }
   .architect-content {
-    padding: var(--sp-8);
+    padding: var(--sp-16) var(--sp-8); /* vertical matched to desktop */
   }
   .impact-stat-box {
     padding: var(--sp-8) var(--sp-4);
@@ -1344,8 +1349,8 @@ textarea.form-control {
 @media (max-width: 480px) {
   .page-hero,
   .page-hero.container {
-    padding-top: var(--sp-1);
-    padding-bottom: var(--sp-4);
+    padding-bottom: 0; /* matched to desktop */
+    padding-block: 0.1rem;
   }
 
   .directors-marquee {
@@ -1355,19 +1360,22 @@ textarea.form-control {
   .home-verticals-logos,
   .home-group-photos,
   .testimonials-overlay,
-  .home-contact,
-  .vertical-category {
+  .home-contact {
     padding-block: 3rem;
   }
 
+  .vertical-category {
+    padding-block: 1.5rem; /* matched to desktop .vertical-category */
+  }
+
   .contact-red-panel {
-    padding: var(--sp-6);
+    padding: var(--sp-8) var(--sp-6); /* vertical matched to desktop */
   }
   .perk-card {
-    padding: var(--sp-8) var(--sp-6);
+    padding: 1rem var(--sp-6); /* vertical matched to desktop */
   }
   .director-card-body {
-    padding: var(--sp-4) var(--sp-4) var(--sp-6);
+    padding: var(--sp-6) var(--sp-4) var(--sp-6); /* vertical matched to desktop */
   }
 
   .ceo-modal {
