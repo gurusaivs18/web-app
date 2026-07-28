@@ -220,7 +220,7 @@
 @media (max-width: 480px) {
   .hero {
     min-height: 450px;
-
+    height: 10vh;
   }
   .hero-circle-wrap {
     width: clamp(170px, 68vw, 280px);
@@ -229,5 +229,4 @@
     font-size: 13px;
     padding: 10px 22px;
   }
-  
 }
