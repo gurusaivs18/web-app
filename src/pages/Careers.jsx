@@ -52,8 +52,6 @@ const perks = [
       </svg>
     ),
   },
-
-
 ];
 
 function Careers() {
@@ -81,6 +79,7 @@ function Careers() {
               >
                 <div className="perk-icon">{p.icon}</div>
                 <h3>{p.title}</h3>
+
                 <p>{p.desc}</p>
               </div>
             ))}

@@ -69,7 +69,7 @@ function Impact() {
                 <div className="impact-stat-icon">{statIcons[i]}</div>
                 <h2>{item.value}</h2>
                 <p>{item.label}</p>
-                <small>{item.desc}</small>
+                <p>{item.desc}</p>
               </div>
             ))}
           </div>

@@ -363,124 +363,7 @@
     transform: translateX(-50%);
   }
 }
-/* ================= HERO CONTENT ================= */
 
-/* .hero-content {
-  position: relative;
-  z-index: 2;
-  padding: 30px 40px;
-  background: rgba(0, 0, 0, 0.45);
-  border: 2px solid #fff;
-  border-radius: 12px;
-  backdrop-filter: blur(0.5px);
-} */
-
-/* ───────── HERO CIRCLE CONTENT PATCH ───────── */
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-
-  width: 520px;
-  height: 520px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  text-align: center;
-
-  background: rgba(0, 0, 0, 0.1);
-
-  border-radius: 50%;
-
-  border: 2px solid rgba(255, 255, 255, 0.9);
-
-  backdrop-filter: none;
-
-  box-shadow:
-    0 0 30px rgba(255, 255, 255, 0.25),
-    inset 0 0 40px rgba(255, 255, 255, 0.08);
-
-  padding: 60px;
-}
-
-.hero-content::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-
-  border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.35);
-
-  animation: pulseCircle 3s infinite ease-in-out;
-
-  pointer-events: none;
-}
-@keyframes pulseCircle {
-  0% {
-    transform: scale(1);
-    opacity: 0.8;
-  }
-
-  50% {
-    transform: scale(1.05);
-    opacity: 0.3;
-  }
-
-  100% {
-    transform: scale(1);
-    opacity: 0.8;
-  }
-}
-/* .hero-content {
-  position: relative;
-  z-index: 2;
-  max-width: 800px;
-  padding: clamp(24px, 4vw, 48px);
-  border: 2px solid rgba(255, 255, 255, 0.6);
-  border-radius: 12px;
-  background: rgba(0, 0, 0, 0.15);
-  text-align: center;
-} */
-.hero-title {
-  margin: 0;
-  color: #fff;
-  font-size: clamp(34px, 6vw, 72px);
-  font-weight: 800;
-  line-height: 1.1;
-}
-
-.hero-title .red-box {
-  display: inline-block;
-  background: #b31319;
-  padding: 0.08em 0.22em;
-  border-radius: 4px;
-}
-
-.hero-subtitle {
-  color: #fff;
-  font-size: clamp(14px, 2vw, 24px);
-  font-weight: 300;
-}
-
-.hero-btn {
-  margin-top: 28px;
-  background: #b31319;
-  color: #fff;
-  border: none;
-  padding: 12px 28px;
-  border-radius: 8px;
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.hero-btn:hover {
-  background: #921015;
-}
 /* =========================
    CARD  –  vertical layout
 ========================= */
@@ -638,7 +521,7 @@
   opacity: 0.8;
 }
 .directors-section .section-title {
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 /* =========================
    RESPONSIVE
@@ -1554,40 +1437,6 @@
   margin: 0 auto;
 }
 
-/* ================================================================
-   VERTICALS SLIDER — RESPONSIVE LOGO SIZES
-   ================================================================ */
-
-@media (max-width: 1005.6px) {
-  .hero-content {
-    width: 92%;
-  }
-}
-
-@media (max-width: 768px) {
-  .hero-title {
-    font-size: 42px;
-  }
-
-  .hero-subtitle {
-    font-size: 15px;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-title {
-    font-size: 30px;
-  }
-
-  .hero-subtitle {
-    font-size: 13px;
-  }
-
-  .hero-btn {
-    padding: 10px 24px;
-    font-size: 14px;
-  }
-}
 /* ================= VERTICALS — CATEGORY GRID ================= */
 .home-verticals {
   background: var(--white);

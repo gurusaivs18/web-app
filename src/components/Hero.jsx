@@ -10,14 +10,20 @@ function Hero() {
       <img src={heroImage} alt="Hero" className="hero-img" />
 
       <div className="hero-content">
-        <h1 className="hero-title">
-          From <span className="red-box">Dreams</span>
-          <br className="hero-break" /> to{" "}
-          <span className="red-box">Reality</span>
-        </h1>
-        <p className="hero-subtitle">
-          The Unstoppable Force of Purposeful Action
-        </p>
+        <div className="hero-circle-wrap">
+          <span className="hero-circle-glow" aria-hidden="true"></span>
+          <span className="hero-circle-ring" aria-hidden="true"></span>
+
+          <div className="hero-circle">
+            <h1 className="hero-title">
+              From <span className="red-box">Dreams</span> to{" "}
+              <span className="red-box">Reality</span>
+            </h1>
+            <p className="hero-subtitle">
+              The Unstoppable Force of Purposeful Action
+            </p>
+          </div>
+        </div>
 
         <button className="hero-btn" onClick={() => navigate("/about")}>
           Know More
