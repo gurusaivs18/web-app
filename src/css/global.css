@@ -1344,6 +1344,9 @@ textarea.form-control {
   .ceo-modal-name {
     font-size: 24px;
   }
+  .impact-stat-box {
+    padding: 1.5rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1423,5 +1426,8 @@ textarea.form-control {
   }
   .ceo-content::after {
     display: none !important;
+  }
+  .impact-stat-box {
+    padding: 1rem;
   }
 }
