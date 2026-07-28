@@ -608,7 +608,7 @@
   .logo-card-text,
   .featured-logo-card .logo-card-text {
     width: 100%;
-    min-height: 2.4em; /* reserves 2 lines so "United Pro Sports (U-Pro)" doesn't shift shorter names */
+     /* reserves 2 lines so "United Pro Sports (U-Pro)" doesn't shift shorter names */
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -616,6 +616,11 @@
     font-size: 10px;
     letter-spacing: 0.15px;
     margin-top: 4px;
+    padding-block: 1rem;
+   
+  }
+  .vertical-heading
+  {
     padding-block: 0.5rem;
   }
 }
