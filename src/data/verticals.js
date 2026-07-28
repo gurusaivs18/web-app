@@ -201,7 +201,7 @@ export const verticals = [
   },
 
   {
-    title: "Interior Fitout & Outdoor Furniture",
+    title: "Fittings & Fit out",
 
     description:
       "JSB Group delivers premium interior fitout and outdoor furniture solutions for residential, commercial, and hospitality environments.",

@@ -162,7 +162,7 @@ const verticalCategories = [
     ),
   },
   {
-    label: "Interior Fitout & Outdoor Furniture",
+    label: "Fittings & Fit out",
     // img: interiorImg,
 
     icon: (
