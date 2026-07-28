@@ -104,7 +104,7 @@ export const verticals = [
       },
 
       {
-        name: "Harrison / Inov8",
+        name: "Inov8",
 
         link: "https://www.inov8.ae/",
 

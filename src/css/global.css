@@ -1187,17 +1187,16 @@ textarea.form-control {
 }
 
 .vertical-category {
-  padding-block: var(--sp-section-gap);
+  padding-block: 1.5rem;
 }
 
 /* Single definition — old file had this twice with different values */
 .vertical-content {
-  margin-block: var(--sp-hero-gap);
+  margin-block: .5rem;
 }
 
 .vertical-brands-grid {
   margin-top: 0;
-  margin-bottom: var(--sp-hero-gap);
   gap: var(--sp-6);
 }
 .vertical-logo-wrap,
@@ -1209,7 +1208,7 @@ textarea.form-control {
   gap: var(--sp-3);
 }
 .logo-card-img-wrap {
-  margin-bottom: var(--sp-2);
+  /* margin-bottom: var(--sp-2); */
 }
 .logo-card-text {
   margin-top: 0;

@@ -37,7 +37,6 @@
 
 .vertical-content {
   text-align: center;
-  /* margin-top/margin-bottom now controlled by global.css (.vertical-content) */
 }
 
 .vertical-heading {
@@ -151,7 +150,7 @@
   height: 90px;
   width: auto;
 }
-.logo-card-img-wrap img[data-brand="Harrison / Inov8"] {
+.logo-card-img-wrap img[data-brand="Inov8"] {
   height: 85px;
   width: auto;
 }
@@ -405,7 +404,7 @@
 .featured-title {
   font-size: clamp(22px, 2.5vw, 28px);
   font-weight: 700;
-  margin-top: 0;
+  /* margin-top: 0; */
   /* margin-bottom now controlled by global.css (.featured-title) */
   color: var(--text-dark);
 }
@@ -467,7 +466,7 @@
   height: 90px;
   width: auto;
 }
-.featured-logo-card img[data-brand="Harrison / Inov8"] {
+.featured-logo-card img[data-brand="Inov8"] {
   height: 80px;
   width: auto;
 }
@@ -484,7 +483,7 @@
   width: auto;
 }
 .featured-logo-card img[data-brand="Motiv8"] {
-  height: 85px;
+  height: 88px;
   width: auto;
 }
 .featured-logo-card img[data-brand="ZeroG Beds & Mattresses"] {
@@ -650,7 +649,7 @@
   width: auto !important;
   max-width: none !important;
 }
-.logo-card-img-wrap img[data-brand="Harrison / Inov8"] {
+.logo-card-img-wrap img[data-brand="Inov8"] {
   max-height: 84px !important;
   width: auto !important;
   max-width: none !important;
@@ -673,7 +672,7 @@
 }
 
 .logo-card-img-wrap img[data-brand="Motiv8"] {
-  max-height: 80px !important;
+  max-height: 88px !important;
   width: auto !important;
 }
 
@@ -812,9 +811,7 @@
   width: auto !important;
   max-width: none !important;
 }
-.vertical-heading {
-  margin-bottom: 8.5px;
-}
+
 
 @media (max-width: 360px) {
   .vertical-brands-grid,
@@ -886,7 +883,7 @@
     width: auto !important;
     max-width: none !important;
   }
-  .logo-card-img-wrap img[data-brand="Harrison / Inov8"] {
+  .logo-card-img-wrap img[data-brand="Inov8"] {
     max-height: 66px !important;
     width: auto !important;
     max-width: none !important;
