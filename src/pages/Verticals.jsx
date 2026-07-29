@@ -8,7 +8,7 @@ import { useLocation } from "react-router-dom";
 import uaeBulls from "../assets/Brand-Logos/uae-bulls.webp";
 import motiv8 from "../assets/Brand-Logos/motiv8.webp";
 import pressmans from "../assets/Brand-Logos/pressmans (2).webp";
-import vkTech from "../assets/Brand-Logos/vkT.jpeg";
+import vkTech from "../assets/Brand-Logos/vkT.webp";
 import targetOne from "../assets/Brand-Logos/target1.webp";
 import denaster from "../assets/Brand-Logos/denaster.webp";
 import inov8 from "../assets/Brand-Logos/inov8.webp";

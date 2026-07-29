@@ -6,66 +6,32 @@ import { fileURLToPath } from "url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const TARGET_FOLDERS = ["src/assets/Partners", "src/assets/jsbGroupWebsite"];
+// Change this filename only
+const INPUT_FILE = path.join(
+  __dirname,
+  "../src/assets/Brand-Logos/vkT.jpeg",
+);
 
-const SUPPORTED_EXTENSIONS = [
-  ".jpg",
-  ".jpeg",
-  ".png",
-  ".avif",
-  ".bmp",
-  ".tiff",
-];
+async function convertToWebp() {
+  if (!fs.existsSync(INPUT_FILE)) {
+    console.error(`File not found: ${INPUT_FILE}`);
+    return;
+  }
 
-function getAllFiles(dir) {
-  let results = [];
-
-  fs.readdirSync(dir).forEach((file) => {
-    const fullPath = path.join(dir, file);
-
-    if (fs.statSync(fullPath).isDirectory()) {
-      results = results.concat(getAllFiles(fullPath));
-    } else {
-      results.push(fullPath);
-    }
-  });
-
-  return results;
-}
-
-async function convertToWebp(filePath) {
-  const ext = path.extname(filePath).toLowerCase();
-
-  if (!SUPPORTED_EXTENSIONS.includes(ext)) return;
-
-  const outputPath = filePath.replace(ext, ".webp");
+  const outputPath = INPUT_FILE.replace(path.extname(INPUT_FILE), ".webp");
 
   try {
-    await sharp(filePath).webp({ quality: 80 }).toFile(outputPath);
+    await sharp(INPUT_FILE).webp({ quality: 80 }).toFile(outputPath);
 
-    console.log(`✓ Converted: ${filePath} → ${outputPath}`);
+    // Delete old image after conversion
+    fs.unlinkSync(INPUT_FILE);
+
+    console.log(`✓ Converted: ${INPUT_FILE}`);
+    console.log(`✓ Deleted old file`);
+    console.log(`✓ Created: ${outputPath}`);
   } catch (err) {
-    console.error(`✗ Failed: ${filePath}`, err.message);
+    console.error("✗ Failed:", err.message);
   }
 }
 
-async function run() {
-  for (const folder of TARGET_FOLDERS) {
-    const fullFolder = path.join(__dirname, "..", folder);
-
-    if (!fs.existsSync(fullFolder)) {
-      console.warn(`Folder not found: ${fullFolder}`);
-      continue;
-    }
-
-    const files = getAllFiles(fullFolder);
-
-    for (const file of files) {
-      await convertToWebp(file);
-    }
-  }
-
-  console.log("🎉 All conversions completed");
-}
-
-run();
+convertToWebp();
