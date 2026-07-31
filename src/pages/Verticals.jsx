@@ -5,7 +5,7 @@ import { useScrollReveal } from "../hooks/useScrollReveal";
 import { verticals } from "../data/verticals";
 import { useLocation } from "react-router-dom";
 
-import uaeBulls from "../assets/Brand-Logos/uae-bulls.webp";
+import uaeBulls from "../assets/Brand-Logos/UAE_BULL_REAL.jpeg";
 import motiv8 from "../assets/Brand-Logos/motiv8.webp";
 import pressmans from "../assets/Brand-Logos/pressmans (2).webp";
 import vkTech from "../assets/Brand-Logos/vkT.webp";
@@ -14,7 +14,7 @@ import denaster from "../assets/Brand-Logos/denaster.webp";
 import inov8 from "../assets/Brand-Logos/inov8.webp";
 import garmin from "../assets/Brand-Logos/garmin.webp";
 import zeroG from "../assets/Brand-Logos/zeroG.webp";
-import bvb from "../assets/Brand-Logos/bvb.webp";
+import bvb from "../assets/Brand-Logos/bvb.jpeg";
 import snap from "../assets/Brand-Logos/snapFitness.webp";
 import vip from "../assets/Brand-Logos/vipcosmo.webp";
 import harrison from "../assets/Brand-Logos/Harrison.webp";
@@ -38,7 +38,7 @@ const logoMap = {
   "VIP Cosmetics": vip,
   Denaster: denaster,
   "Monkey Box": monkey,
-  "Inov8": inov8,
+  Inov8: inov8,
   "Harrison Digital": harrison,
   "Garmin by Activ8": garmin,
   Activ8: activ,
@@ -144,7 +144,7 @@ function Verticals() {
                 })
               }
             >
-              <div className="logo-card-img-wrap">
+              <div className="logo-card-img-wrap" data-brand={name}>
                 <img src={logoMap[name]} alt={name} data-brand={name} />
               </div>
               <div className="logo-card-text">{name}</div>
@@ -220,7 +220,15 @@ function Verticals() {
                     })
                   }
                 >
-                  <div className="logo-card-img-wrap">
+                  {/* <div className="logo-card-img-wrap">
+                    <img
+                      src={logoMap[brand.name]}
+                      alt={brand.name}
+                      loading="lazy"
+                      data-brand={brand.name}
+                    />
+                  </div> */}
+                  <div className="logo-card-img-wrap" data-brand={brand.name}>
                     <img
                       src={logoMap[brand.name]}
                       alt={brand.name}

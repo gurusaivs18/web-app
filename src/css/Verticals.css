@@ -107,12 +107,14 @@
 
 /* ========================= IMAGE WRAPPER ========================= */
 .logo-card-img-wrap {
-  width: auto; /* was width: 100% at the base level — override it here */
-  max-width: none;
-  min-height: 0;
-  max-height: none;
-  overflow: none;
-  /* margin-bottom now controlled by global.css (.logo-card-img-wrap) */
+  width: auto;
+  height: 100px; /* fixed slot — pick whatever fits your tallest logo comfortably */
+  min-height: 100px;
+  max-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible; /* keep this so extra-tall logos like BVB can still spill slightly if needed */
 }
 
 /* Default */
@@ -180,15 +182,20 @@
 }
 .logo-card-img-wrap img[data-brand="United Pro Sports (U-Pro)"] {
   height: 70px;
+  padding-left: 25px;
   width: auto;
 }
 .logo-card-img-wrap img[data-brand="UAE Bulls"] {
   height: 90px;
   width: auto;
+   padding-right:20px;
+
 }
+
 .logo-card-img-wrap img[data-brand="BVB League"] {
   height: 115px;
   width: auto;
+ padding-right: 60px;
 }
 .logo-card-img-wrap img[data-brand="VK Technology"] {
   height: auto;
@@ -608,7 +615,7 @@
   .logo-card-text,
   .featured-logo-card .logo-card-text {
     width: 100%;
-     /* reserves 2 lines so "United Pro Sports (U-Pro)" doesn't shift shorter names */
+    /* reserves 2 lines so "United Pro Sports (U-Pro)" doesn't shift shorter names */
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -617,10 +624,8 @@
     letter-spacing: 0.15px;
     margin-top: 4px;
     padding-block: 1rem;
-   
   }
-  .vertical-heading
-  {
+  .vertical-heading {
     padding-block: 0.5rem;
   }
 }
