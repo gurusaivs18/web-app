@@ -18,7 +18,7 @@ import ceoImage from "../assets/jsbGroupWebsite/assets-jsb.webp";
 // break
 
 import rushab from "../assets/Partners/rushab-assets-1.webp";
-import sinha from "../assets/Partners/sanjeev-assets-1.webp";
+import sinha from "../assets/Partners/Sanjeev.1.jpeg";
 import sanal from "../assets/Partners/sanal-assets-1.webp";
 import deep from "../assets/Partners/deep-asset-1.webp";
 
