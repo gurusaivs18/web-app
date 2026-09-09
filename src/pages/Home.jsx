@@ -6,7 +6,7 @@ import "../css/Home.css";
 import "../css/ScrollReveal.css";
 import { useNavigate } from "react-router-dom";
 import { useScrollReveal } from "../hooks/useScrollReveal";
-import ceoImage from "../assets/jsbGroupWebsite/assets-jsb.webp";
+import ceoImage from "../assets/jsbGroupWebsite/ceoHomeBanner.webp";
 // CARDS BACKGROUND  IMG IMPORTS
 // import interiorImg from "../assets/card-images/interior.png";
 // import retailImg from "../assets/card-images/retail.png";
