@@ -7,7 +7,7 @@ import ceoImage from "../assets/jsbGroupWebsite/ceoHomeBanner.webp";
 import { useLocation } from "react-router-dom";
 // ── Director images ──
 import rushabImg from "../assets/Partners/rushab-assets-1.webp";
-import deepImg from "../assets/Partners/deep-asset-1.webp";
+import deepImg from "../assets/Partners/deep01.jpeg";
 import sanjeevImg from "../assets/Partners/Sanjeev.1.jpeg";
 import { createPortal } from "react-dom";
 
