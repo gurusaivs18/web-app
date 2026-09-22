@@ -14,9 +14,9 @@ import sanalImg from "../assets/Partners/sanal-assets-1.webp";
 import supriyaImg from "../assets/Partners/supriya-assets-1.png";
 import naz from "../assets/Partners/Nas-asset-1.png";
 import ashik from "../assets/Partners/Ashik-asset-1.png";
-import visionImg from "../assets/About us/vision.png";
-import missionImg from "../assets/About us/mission.png";
-import purposeImg from "../assets/About us/purpose.png";
+import visionImg from "../assets/About us/Vision.png";
+import missionImg from "../assets/About us/Mission.png";
+import purposeImg from "../assets/About us/Purpose.png";
  import organisationImg from "../assets/About us/An Organisation.png";
 
  
