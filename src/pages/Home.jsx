@@ -16,16 +16,21 @@ import ceoImage from "../assets/jsbGroupWebsite/ceoHomeBanner.webp";
 // import vcImg from "../assets/card-images/venture.png";
 
 // break
-
+import visionImg from "../assets/About us/vision.png";
+import missionImg from "../assets/About us/mission.png";
+import purposeImg from "../assets/About us/purpose.png";
 import rushab from "../assets/Partners/rushab-assets-1.webp";
 import sinha from "../assets/Partners/Sanjeev.1.jpeg";
 import sanal from "../assets/Partners/sanal-assets-1.webp";
 import deep from "../assets/Partners/deep01.jpeg";
+   import supriyaImg from "../assets/Partners/supriya-assets-1.png";
+     import naz from "../assets/Partners/Nas-asset-1.png";
+        import ashik from "../assets/Partners/Ashik-asset-1.png";
 
 /* ─── CEO Writeup ─────────────────────────────────────────────── */
 const ceoWriteup = `Neelesh Bhatnagar is an entrepreneur with over three decades of experience spanning the Middle East and India. As the CEO & Founder of JSB Group, he has built a diversified conglomerate with interests across retail, fitness, hospitality, healthcare, and technology.
 
-His vision has been the driving force behind JSB Group's expansion into multiple verticals, creating an ecosystem of businesses that complement and strengthen one another. Under his leadership, JSB Group has grown from a single venture into a multi-faceted organisation with a presence across the UAE and beyond.
+His vision has been the driving force behind JSB Group's expansion into multiple verticals, csreating an ecosystem of businesses that complement and strengthen one another. Under his leadership, JSB Group has grown from a single venture into a multi-faceted organisation with a presence across the UAE and beyond.
 
 Neelesh is known for his ability to identify opportunities ahead of the curve, his hands-on leadership style, and his commitment to building businesses that create lasting value — not just for shareholders, but for communities and people.
 
@@ -238,8 +243,8 @@ const directors = [
     role: "Partner",
     bio: "30+ years in software and electronics industries. Worked with major UK and international retailers including Amazon and HMV. Expert in distribution channels.",
     slug: "naz-ayat",
-    img: null,
-    order: 6,
+    img:  naz,
+    order: 7,
   },
   // {
   //   name: "Sawan Ravani",
@@ -278,7 +283,7 @@ const directors = [
     role: "Group CTO",
     bio: "Key leadership member driving operational excellence across JSB Group's diverse portfolio.",
     slug: "mohammed-ashik",
-    img: null,
+    img: ashik,
     order: 1,
   },
   // {
@@ -304,6 +309,14 @@ const directors = [
     bio: "Over 30 years in supply and distribution across retail, software, and electronics. Led Denaster to become a multimillion-dollar SME with 100+ employees.",
     slug: "deep-bhogal",
     img: deep,
+    order: 6,
+  },
+   {
+    name: "Supriya Hurkat",
+    role: "Director",
+    bio: "WRITE UP PENDING",
+    slug: "supriya-hurkat",
+    img:  supriyaImg,
     order: 5,
   },
 ];
@@ -657,19 +670,22 @@ function VerticalsGrid({ onSelect }) {
     </section>
   );
 }
-function VisionMissionSection() {
+ function VisionMissionSection() {
   const cards = [
     {
       label: "Vision",
       text: companyInfo.vision,
+      image: visionImg,
     },
     {
       label: "Mission",
       text: companyInfo.mission,
+      image: missionImg,
     },
     {
       label: "Purpose",
       text: companyInfo.purpose,
+      image: purposeImg,
     },
   ];
 
@@ -681,7 +697,7 @@ function VisionMissionSection() {
         </div>
 
         <div className="vmp-grid">
-          {cards.map(({ label, text }, i) => (
+          {cards.map(({ label, text, image }, i) => (
             <div
               key={label}
               className="vmp-card"
@@ -689,14 +705,11 @@ function VisionMissionSection() {
               data-delay={String(i * 150 + 100)}
             >
               <div className="vmp-card-img">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  width="48"
-                  height="48"
-                >
-                  <path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 17h-2v-2h2v2zm2.07-7.25-.9.92C13.45 13.4 13 14 13 15h-2v-.5c0-.8.45-1.55 1.17-2.28l1.24-1.26c.37-.36.59-.86.59-1.38a2 2 0 10-4 0H8a4 4 0 118 0c0 .94-.38 1.84-1.07 2.49z" />
-                </svg>
+                <img
+                  src={image}
+                  alt={`${label} - JSB Group`}
+                  className="vmp-card-image"
+                />
               </div>
 
               <div className="vmp-card-body">
@@ -710,6 +723,8 @@ function VisionMissionSection() {
     </section>
   );
 }
+
+
 /* ─── Main component ─────────────────────────────────────────── */
 function Home() {
   useScrollReveal();

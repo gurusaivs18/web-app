@@ -18,6 +18,12 @@ export const team = {
     //   order: 2,
     // },
     { name: "Sanjeev K Sinha", role: "Group CFO", order: 3 },
+     {
+      name: " Supriya Hurkat",
+      role: "Director",
+      desc: " write up pending",
+      order: 7,
+    },
 
     { name: "Mohammed Ashik", role: "Group CTO", order: 5 },
   ],
