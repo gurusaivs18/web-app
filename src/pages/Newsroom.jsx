@@ -1,9 +1,9 @@
 import "../css/Newsroom.css";
 import "../css/ScrollReveal.css";
 import { useScrollReveal } from "../hooks/useScrollReveal";
-import newsroom01 from "../assets/Newsroom/newsroom-01.png";
-import newsroom02 from "../assets/Newsroom/newsroom-02.png";
-import newsroom03 from "../assets/Newsroom/newsroom-03.png";
+import newsroom01 from "../assets/newsroom/newsroom-01.png";
+import newsroom02 from "../assets/newsroom/newsroom-02.png";
+import newsroom03 from "../assets/newsroom/newsroom-03.png";
 
 const news = [
   {
