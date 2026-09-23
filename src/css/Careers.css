@@ -1,78 +1,186 @@
 .careers-perks {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--sp-6);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(20px, 2.5vw, 36px);
+  align-items: stretch;
 }
 
 .perk-card {
   background: var(--gray-light);
   border-radius: 8px;
-  /* padding now controlled by global.css (.perk-card) */
+  overflow: hidden;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
-.perk-icon {
+.perk-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.perk-image {
   width: 52px;
   height: 52px;
   border-radius: 50%;
+  overflow: hidden;
+  margin: 24px auto 16px;
   background: var(--red);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-inline: auto;
-  /* margin-bottom now controlled by global.css (.perk-icon) */
 }
 
-.perk-icon svg {
-  width: 22px;
-  height: 22px;
-  fill: white;
+.perk-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+.perk-card:hover .perk-image img {
+  transform: scale(1.04);
+}
+
+.perk-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 22px 26px;
 }
 
 .perk-card h3 {
   font-family: var(--font-heading);
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 700;
-  margin-bottom: 10px;
+  margin: 0 0 10px;
+  line-height: 1.4;
 }
 
 .perk-card p {
   font-size: 13px;
   color: var(--text-mid);
-  line-height: 1.6;
+  line-height: 1.65;
+  margin: 0;
+  max-width: 360px;
 }
 
+/* CTA */
+
 .careers-cta {
+  margin-top: clamp(35px, 5vw, 60px);
   background: var(--red);
   border-radius: 8px;
-  /* padding now controlled by global.css (.careers-cta) */
   text-align: center;
   color: var(--white);
+  padding: clamp(32px, 4vw, 48px) 24px;
 }
 
 .careers-cta h2 {
   font-family: var(--font-heading);
-  font-size: 28px;
+  font-size: clamp(22px, 2.5vw, 28px);
   font-weight: 800;
   text-transform: uppercase;
-  /* margin-bottom now controlled by global.css (.careers-cta h2) */
+  margin: 0 0 14px;
   color: var(--white);
 }
 
 .careers-cta p {
   font-size: 14px;
+  line-height: 1.7;
   opacity: 0.9;
-  /* margin-bottom now controlled by global.css (.careers-cta p) */
-  max-width: 480px;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 520px;
+  margin: 0 auto 22px;
   color: var(--white);
 }
 
-/* btn--white hover is handled entirely by global.css — no override needed here */
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 992px) {
+  .careers-perks {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+  }
+
+  .perk-image {
+    aspect-ratio: 16 / 10;
+  }
+}
+
+/* ================================
+   MOBILE
+================================ */
 
 @media (max-width: 768px) {
   .careers-perks {
     grid-template-columns: 1fr;
+    gap: 18px;
+    max-width: 520px;
+    margin-inline: auto;
+  }
+
+  .perk-card {
+    width: 100%;
+  }
+
+  .perk-image {
+    aspect-ratio: 16 / 9;
+  }
+
+  .perk-content {
+    padding: 22px 20px 24px;
+  }
+
+  .perk-card h3 {
+    font-size: 15px;
+  }
+
+  .perk-card p {
+    font-size: 13px;
+    max-width: 430px;
+  }
+
+  .careers-cta {
+    margin-top: 32px;
+    padding: 30px 20px;
+  }
+}
+
+/* ================================
+   SMALL MOBILE
+================================ */
+
+@media (max-width: 480px) {
+  .careers-perks {
+    gap: 14px;
+  }
+
+  .perk-content {
+    padding: 20px 16px 22px;
+  }
+
+  .perk-card h3 {
+    font-size: 14px;
+  }
+
+  .perk-card p {
+    font-size: 12.5px;
+    line-height: 1.6;
+  }
+
+  .careers-cta {
+    padding: 26px 16px;
+    border-radius: 8px;
+  }
+
+  .careers-cta h2 {
+    font-size: 20px;
+  }
+
+  .careers-cta p {
+    font-size: 13px;
   }
 }
