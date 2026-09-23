@@ -29,8 +29,8 @@
 }
 
 .impact-stat-icon {
-  width: 116px;
-  height: 116px;
+  width: 80px;
+  height: 80px;
 
   background: var(--red);
   border-radius: 50%;

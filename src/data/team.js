@@ -11,12 +11,7 @@ export const team = {
       desc: "Co-Founder and CEO of NOVO Labs. Strategic Director for NB Ventures.",
       order: 1,
     },
-    // {
-    //   name: "Praveen Bhatnagar",
-    //   role: "Director",
-    //   desc: "CPA with expertise in finance and business strategy across Retail, Fitness, Hospitality, and Healthcare.",
-    //   order: 2,
-    // },
+
     { name: "Sanjeev K Sinha", role: "Group CFO", order: 3 },
      {
       name: " Supriya Hurkat",
