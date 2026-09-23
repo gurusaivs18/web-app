@@ -3,10 +3,9 @@ import "../css/ScrollReveal.css";
 import { useScrollReveal } from "../hooks/useScrollReveal";
 import { Link } from "react-router-dom";
 
-import careers01 from "../assets/Careers/careers-01.png";
-import careers02 from "../assets/Careers/careers-02.png";
-import careers03 from "../assets/Careers/careers-03.png";
-
+import careers01 from "../assets/careers/careers-01.png";
+import careers02 from "../assets/careers/careers-02.png";
+import careers03 from "../assets/careers/careers-03.png";
 const perks = [
   {
     title: "General Inquiries",
