@@ -1,42 +1,42 @@
 import "../css/Newsroom.css";
 import "../css/ScrollReveal.css";
 import { useScrollReveal } from "../hooks/useScrollReveal";
+import newsroom01 from "../assets/Newsroom/newsroom-01.png";
+import newsroom02 from "../assets/Newsroom/newsroom-02.png";
+import newsroom03 from "../assets/Newsroom/newsroom-03.png";
 
 const news = [
   {
     tag: "Latest Update",
     title: "JSB Group Expands Into New Verticals in UAE",
-    // URL: "https://jsb.ae/",
+    image: newsroom01,
     desc: "Continuing its growth trajectory, JSB Group has announced strategic expansions across multiple sectors including Technology and Sports.",
   },
   {
     tag: "Press Release",
     title: "New Retail Partnerships Announced Globally",
-    // URL: "https://jsb.ae/",
+    image: newsroom02,
     desc: "JSB Group's retail arm has secured new international partnerships to strengthen its distribution network across the Middle East.",
   },
   {
     tag: "Media",
     title: "Featured in Leading Business Publications",
-    // URL: "https://jsb.ae/",
+    image: newsroom03,
     desc: "Neelesh Bhatnagar and JSB Group have been featured in Forbes Middle East and Arabian Business for their outstanding contributions.",
   },
   {
     tag: "Sports",
     title: "UAE Bulls Win Championship Season 9",
-    // URL: "https://jsb.ae/",
     desc: "The UAE Bulls cricket team made history by lifting the trophy as Champions of Season 9 (2025–26).",
   },
   {
     tag: "Fitness",
     title: "Snap Fitness Expands to Fourth UAE Location",
-    // URL: "https://jsb.ae/",
     desc: "Building on the success of its first UAE branch in 2018, Snap Fitness continues to bring world-class gym facilities to the Emirates.",
   },
   {
     tag: "F&B",
     title: "Pressman's Sandwiches Reaches 10 Locations",
-    // URL: "https://jsb.ae/",
     desc: "JSB Group's homegrown F&B brand Pressman's Sandwiches has reached a milestone of 10 live locations across the UAE.",
   },
 ];
@@ -64,9 +64,9 @@ function Newsroom() {
                 data-reveal="up"
                 data-delay={String((i % 3) * 150 + 100)}
               >
-                <div className="news-card-img">
-                  {/* <img src={img} alt={item.title} /> */}
-                </div>
+             <div className="news-card-img">
+  {item.image && <img src={item.image} alt={item.title} />}
+</div>
                 <div className="news-card-body">
                   <span className="news-tag">{item.tag}</span>
                   <h3>{item.title}</h3>
