@@ -27,17 +27,18 @@ function Navbar() {
     setMenuOpen(false);
 
     // ✅ special case: Pillars → About section
-    if (to === "/pillars") {
-      navigate("/about#architect");
+if (to === "/pillars") {
+  navigate("/pillars");
 
-      setTimeout(() => {
-        const el = document.getElementById("architect");
-        el?.scrollIntoView({ behavior: "smooth", block: "start" });
-      }, 200);
+  setTimeout(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, 150);
 
-      return;
-    }
-
+  return;
+}
     // default navigation
     navigate(to);
 

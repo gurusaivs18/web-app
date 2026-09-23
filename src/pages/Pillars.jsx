@@ -1,26 +1,17 @@
  
 import { useState, useEffect } from "react";
-import { companyInfo } from "../data/company";
-import "../css/About.css";
+import "../css/Pillars.css";
 import "../css/ScrollReveal.css";
 import { useScrollReveal } from "../hooks/useScrollReveal";
 import ceoImage from "../assets/jsbGroupWebsite/ceoHomeBanner.webp";
-import { useLocation } from "react-router-dom";
 import rushabImg from "../assets/Partners/rushab-assets-1.png";
 import deepImg from "../assets/Partners/deep01.jpeg";
 import sanjeevImg from "../assets/Partners/Sanjeev.1.jpeg";
-import { createPortal } from "react-dom";
-import sanalImg from  "../assets/Partners/sanal-assets-1.png";
+import sanalImg from "../assets/Partners/sanal-assets-1.png";
 import supriyaImg from "../assets/Partners/supriya-assets-1.png";
 import naz from "../assets/Partners/Nas-asset-1.png";
 import ashik from "../assets/Partners/Ashik-asset-1.png";
-import visionImg from "../assets/About us/Vision.png";
-import missionImg from "../assets/About us/Mission.png";
-import purposeImg from "../assets/About us/Purpose.png";
-import organisationImg from "../assets/About us/An Organisation.png";
-
- 
-
+import { createPortal } from "react-dom";
 
 const ceoWriteup = `Neelesh Bhatnagar is an entrepreneur with over three decades of experience spanning the Middle East and India. As the CEO & Founder of JSB Group, he has built a diversified conglomerate with interests across retail, fitness, hospitality, healthcare, and technology.
 
@@ -35,11 +26,10 @@ const allDirectors = [
     name: "Rushab Bhatnagar",
     role: "Director",
     img: rushabImg,
-    writeup: `Rushab Bhatnagar is the Co-Founder and CEO of NOVO Labs, and serves as Strategic Director for NB Ventures. With a sharp focus on innovation and technology-driven business models, Rushab brings a forward-thinking perspective to the JSB Group board.\n\nHis work spans venture building, strategic investments, and scaling early-stage companies into market leaders.`,
+    writeup: `Rushab Bhatnagar is the Co-Founder and CEO of NOVO Labs, and serves as Strategic Director for NB Ventures. With a sharp focus on innovation and technology-driven business models, Rushab brings a forward-thinking perspective to the JSB Group board.
+
+His work spans venture building, strategic investments, and scaling early-stage companies into market leaders.`,
   },
-
-
-
   {
     name: "Sanjeev Sinha",
     role: "Group CFO",
@@ -71,12 +61,14 @@ const allPartners = [
     name: "Deep Bhogal",
     role: "Partner",
     img: deepImg,
-    writeup: `Deep Bhogal brings over 30 years of experience in retail and distribution to the JSB Group. As Managing Director of Denaster, he has built and led large-scale operations across multiple markets, with a reputation for operational excellence and commercial acumen.\n\nHis decades of experience make him a cornerstone of the group's operational leadership.`,
+    writeup: `Deep Bhogal brings over 30 years of experience in retail and distribution to the JSB Group. As Managing Director of Denaster, he has built and led large-scale operations across multiple markets, with a reputation for operational excellence and commercial acumen.
+
+His decades of experience make him a cornerstone of the group's operational leadership.`,
   },
   {
     name: "Naz Ayat",
     role: "Partner",
-    img: naz ,
+    img: naz,
     writeup: `Naz Ayat is a Partner at JSB Group, contributing expertise and strategic guidance across the group's diverse business interests.`,
   },
 ];
@@ -85,7 +77,9 @@ function Modal({ person, onClose }) {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    requestAnimationFrame(() => requestAnimationFrame(() => setVisible(true)));
+    requestAnimationFrame(() =>
+      requestAnimationFrame(() => setVisible(true))
+    );
   }, []);
 
   useEffect(() => {
@@ -140,17 +134,13 @@ function Modal({ person, onClose }) {
 function PersonCard({ person, labelType, delay = "0" }) {
   const [open, setOpen] = useState(false);
 
-  const handleReadMore = () => {
-    setOpen(true);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-  };
-
   return (
     <>
-      <div className="director-card-scene" data-reveal="up" data-delay={delay}>
+      <div
+        className="director-card-scene"
+        data-reveal="up"
+        data-delay={delay}
+      >
         <div className="director-card-inner">
           <div className="director-card director-card-front">
             <div className="director-photo">
@@ -173,7 +163,10 @@ function PersonCard({ person, labelType, delay = "0" }) {
               <p className="director-role-text">{person.role}</p>
 
               {person.writeup && person.writeup.trim() !== "" && (
-                <button className="read-more-btn" onClick={handleReadMore}>
+                <button
+                  className="read-more-btn"
+                  onClick={() => setOpen(true)}
+                >
                   Read More →
                 </button>
               )}
@@ -182,139 +175,56 @@ function PersonCard({ person, labelType, delay = "0" }) {
         </div>
       </div>
 
-      {open && <Modal person={person} onClose={handleClose} />}
+      {open && (
+        <Modal
+          person={person}
+          onClose={() => setOpen(false)}
+        />
+      )}
     </>
   );
 }
 
-function About() {
+function Pillars() {
   useScrollReveal();
 
   const [ceoOpen, setCeoOpen] = useState(false);
 
-  const location = useLocation();
-
-  useEffect(() => {
-    if (location.hash === "#architect") {
-      setTimeout(() => {
-        const section = document.getElementById("architect");
-
-        if (section) {
-          section.scrollIntoView({
-            behavior: "smooth",
-            block: "start",
-          });
-        }
-      }, 100);
-    }
-  }, [location]);
-
   return (
     <>
-    <div className="page-hero" data-reveal="fade">
-  <h1>About Us</h1>
-</div>
+      {/* ───────────────── PAGE TITLE ───────────────── */}
 
-{/* ── WHO WE ARE ── */}
-<section className="section about-subheading">
-  <div className="container">
-    <div className="section-title-wrap" data-reveal="fade">
-      <span className="section-title">Who We Are</span>
-    </div>
-
-    <div className="about-who-grid">
-      <div className="about-who-img-placeholder" data-reveal="left">
-        <img
-          src={organisationImg}
-          alt="JSB Group Organisation"
-          className="about-who-image"
-        />
+      <div className="page-hero" data-reveal="fade">
+        <h1>Pillars</h1>
       </div>
 
-      <div
-        className="about-who-text"
-        data-reveal="right"
-        data-delay="150"
-      >
-        <h3>An Organisation</h3>
+      {/* ───────────────── THE ARCHITECT ───────────────── */}
 
-        <p>{companyInfo.about}</p>
-
-        <br />
-
-        <p>
-          Explore JSB Group and discover how we are redefining success
-          through innovation, excellence, and purpose-driven leadership.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-     {/* ── VISION / MISSION / PURPOSE ── */}
-<section className="section vmp-section">
-  <div className="container">
-    <div className="vmp-grid">
-      {[
-        {
-          label: "Vision",
-          text: companyInfo.vision,
-          image: visionImg,
-        },
-        {
-          label: "Mission",
-          text: companyInfo.mission,
-          image: missionImg,
-        },
-        {
-          label: "Purpose",
-          text: companyInfo.purpose,
-          image: purposeImg,
-        },
-      ].map(({ label, text, image }, i) => (
-        <div
-          key={label}
-          className="vmp-card"
-          data-reveal="up"
-          data-delay={String(i * 150 + 100)}
-        >
-          <div className="vmp-card-img">
-            <img
-              src={image}
-              alt={`${label} - JSB Group`}
-              className="vmp-card-image"
-            />
-          </div>
-
-          <div className="vmp-card-body">
-            <h3>{label}</h3>
-            <p>{text}</p>
-          </div>
-        </div>
-      ))}
-    </div>
-  </div>
-</section>
-
-      {/* ── THE ARCHITECT — CEO ── */}
-      <section id="architect" className="section architect-section">
+      <section className="section architect-section">
         <div className="section-title-wrap" data-reveal="fade">
-          <span className="section-title">The Architect & Pillars</span>
+          <span className="section-title">
+            The Architect & Pillars
+          </span>
         </div>
 
-        {/* Banner fades + scales in */}
-        <div className="architect-banner" data-reveal="scale" data-delay="150">
+        <div
+          className="architect-banner"
+          data-reveal="scale"
+          data-delay="150"
+        >
           <img
             src={ceoImage}
             alt="Neelesh Bhatnagar"
             className="architect-banner-bg"
           />
 
-          <div className="architect-label">THE ARCHITECT</div>
+          <div className="architect-label">
+            THE ARCHITECT
+          </div>
 
           <div className="architect-content">
             <div className="architect-info">
-              {/* Info inside slides in from right */}
+
               <h3
                 data-reveal="right"
                 data-delay="300"
@@ -323,15 +233,23 @@ function About() {
                 Neelesh Bhatnagar
               </h3>
 
-              <p className="role" data-reveal="right" data-delay="400">
+              <p
+                className="role"
+                data-reveal="right"
+                data-delay="400"
+              >
                 Founder & CEO
               </p>
 
-              <p data-reveal="right" data-delay="500">
-                Neelesh Bhatnagar is an entrepreneur with over three decades of
-                experience spanning the Middle East and India. As the CEO &
-                Founder of JSB Group, he has built a diversified conglomerate
-                with interests across retail, fitness, hospitality, healthcare,
+              <p
+                data-reveal="right"
+                data-delay="500"
+              >
+                Neelesh Bhatnagar is an entrepreneur with over
+                three decades of experience spanning the Middle East
+                and India. As the CEO & Founder of JSB Group, he has
+                built a diversified conglomerate with interests
+                across retail, fitness, hospitality, healthcare,
                 and technology.
               </p>
 
@@ -343,10 +261,13 @@ function About() {
               >
                 Read More →
               </button>
+
             </div>
           </div>
         </div>
       </section>
+
+      {/* ───────────────── CEO MODAL ───────────────── */}
 
       {ceoOpen && (
         <Modal
@@ -359,11 +280,18 @@ function About() {
         />
       )}
 
-      {/* ── DIRECTOR PILLARS ── */}
+      {/* ───────────────── DIRECTORS ───────────────── */}
+
       <section className="section pillars-section">
         <div className="container">
-          <div className="section-title-wrap" data-reveal="fade">
-            <span className="section-title">Directors</span>
+
+          <div
+            className="section-title-wrap"
+            data-reveal="fade"
+          >
+            <span className="section-title">
+              Directors
+            </span>
           </div>
 
           <div className="directors-grid">
@@ -376,17 +304,25 @@ function About() {
               />
             ))}
           </div>
+
         </div>
       </section>
 
-      {/* ── PARTNER PILLARS ── */}
+      {/* ───────────────── PARTNERS ───────────────── */}
+
       <section
         className="section pillars-section"
         style={{ paddingTop: 0 }}
       >
         <div className="container">
-          <div className="section-title-wrap" data-reveal="fade">
-            <span className="section-title">Partners</span>
+
+          <div
+            className="section-title-wrap"
+            data-reveal="fade"
+          >
+            <span className="section-title">
+              Partners
+            </span>
           </div>
 
           <div className="partners-grid">
@@ -399,11 +335,12 @@ function About() {
               />
             ))}
           </div>
+
         </div>
       </section>
     </>
   );
 }
 
-export default About;
+export default Pillars;
  

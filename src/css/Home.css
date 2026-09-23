@@ -369,7 +369,7 @@
 ========================= */
 .pillar-card {
   background: var(--white);
-  border: 1px solid darkred;
+border: 1px solid rgba(139, 0, 0, 0.45);
   border-radius: 14px;
   overflow: hidden;
   width: 240px;

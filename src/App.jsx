@@ -11,6 +11,7 @@ import "./css/global.css";
 import Home from "./pages/Home";
 import ContactUs from "./components/ContactUs";
 import ScrollToTop from "./components/ScrollToTop";
+import Pillars from "./pages/Pillars";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/pillars" element={<Pillars />} />
         <Route path="/verticals" element={<Verticals />} />
         <Route path="/careers" element={<Careers />} />
         <Route path="/impact" element={<Impact />} />
