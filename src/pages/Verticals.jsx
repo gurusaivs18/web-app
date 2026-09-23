@@ -31,6 +31,7 @@ import thalitales from "../assets/Brand-Logos/thali-tales.webp";
 import beijing from "../assets/Brand-Logos/beijing-lu.webp";
 import epic from "../assets/Brand-Logos/epicfitouts.webp";
 import upro from "../assets/Brand-Logos/upro.webp";
+
 const logoMap = {
   "Pressman's Sandwiches": pressmans,
   "Biriyani Box": biriyani,
@@ -59,7 +60,10 @@ const logoMap = {
   "Booster Juice": boosterjuice,
   "Epic Fitouts": epic,
 };
-const getId = (title) => title.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+
+const getId = (title) =>
+  title.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+
 const featuredBrands = [
   "Nb Ventures",
   "VK Technology",
@@ -85,13 +89,18 @@ function Verticals() {
 
     if (el) {
       setTimeout(() => {
-        el.scrollIntoView({ behavior: "smooth", block: "start" });
+        el.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
       }, 300);
     }
   }, [location]);
 
   useScrollReveal();
+
   const [selectedBrand, setSelectedBrand] = useState(null);
+
   useEffect(() => {
     const handleVisibilityChange = () => {
       if (document.hidden) {
@@ -99,17 +108,26 @@ function Verticals() {
       }
     };
 
-    document.addEventListener("visibilitychange", handleVisibilityChange);
+    document.addEventListener(
+      "visibilitychange",
+      handleVisibilityChange
+    );
 
     return () => {
-      document.removeEventListener("visibilitychange", handleVisibilityChange);
+      document.removeEventListener(
+        "visibilitychange",
+        handleVisibilityChange
+      );
     };
   }, []);
 
   return (
     <>
       {/* HERO */}
-      <div className="page-hero container text-center py-12" data-reveal="fade">
+      <div
+        className="page-hero container text-center py-12"
+        data-reveal="fade"
+      >
         <h1>Verticals</h1>
       </div>
 
@@ -119,10 +137,27 @@ function Verticals() {
           <span className="section-title">The Group Portfolio</span>
         </div>
 
-        <h2 className="featured-title" data-reveal="fade" data-delay="100">
+        <h2
+          className="featured-title"
+          data-reveal="fade"
+          data-delay="100"
+        >
           Featured Brands
         </h2>
 
+        {/* FEATURED BRANDS DESCRIPTION - ABOVE LOGOS */}
+        <p
+          className="vertical-page-intro"
+          data-reveal="up"
+          data-delay="150"
+        >
+          In the vibrant landscape of UAE's business arena, JSB Group
+          founded in 2015 has emerged as a dynamic conglomerate across
+          multiple sectors including Distribution, Retail, F&B, Fitness,
+          Technology, Interior Fitouts &amp; Outdoor Furniture.
+        </p>
+
+        {/* FEATURED BRAND LOGOS */}
         <div className="featured-logos-grid">
           {featuredBrands.map((name, i) => (
             <div
@@ -140,24 +175,28 @@ function Verticals() {
                   description:
                     verticals
                       .flatMap((v) => v.items)
-                      .find((b) => b.name === name)?.description || "",
+                      .find((b) => b.name === name)
+                      ?.description || "",
                 })
               }
             >
-              <div className="logo-card-img-wrap" data-brand={name}>
-                <img src={logoMap[name]} alt={name} data-brand={name} />
+              <div
+                className="logo-card-img-wrap"
+                data-brand={name}
+              >
+                <img
+                  src={logoMap[name]}
+                  alt={name}
+                  data-brand={name}
+                />
               </div>
-              <div className="logo-card-text">{name}</div>
+
+              <div className="logo-card-text">
+                {name}
+              </div>
             </div>
           ))}
         </div>
-
-        <p className="vertical-page-intro" data-reveal="up" data-delay="150">
-          In the vibrant landscape of UAE's business arena, JSB Group founded in
-          2015 has emerged as a dynamic conglomerate across multiple sectors
-          including Distribution, Retail, F&B, Fitness, Technology, Interior
-          Fitouts &amp; Outdoor Furniture.
-        </p>
       </div>
 
       {/* MODAL */}
@@ -166,22 +205,33 @@ function Verticals() {
           className="brand-modal-overlay"
           onClick={() => setSelectedBrand(null)}
         >
-          <div className="brand-modal" onClick={(e) => e.stopPropagation()}>
+          <div
+            className="brand-modal"
+            onClick={(e) => e.stopPropagation()}
+          >
             <button
               className="brand-modal-close"
               onClick={() => setSelectedBrand(null)}
             >
               ×
             </button>
+
             <div className="brand-modal-logo">
               <img
                 src={selectedBrand.logo}
                 alt={selectedBrand.name}
                 data-brand={selectedBrand.name}
-              />{" "}
-              <h3 className="brand-modal-title">{selectedBrand.name}</h3>
+              />
+
+              <h3 className="brand-modal-title">
+                {selectedBrand.name}
+              </h3>
             </div>
-            <p className="brand-modal-text">{selectedBrand.description}</p>
+
+            <p className="brand-modal-text">
+              {selectedBrand.description}
+            </p>
+
             <a
               href={selectedBrand.url}
               target="_blank"
@@ -200,17 +250,36 @@ function Verticals() {
         <section
           key={i}
           id={getId(cat.title)}
-          className={`vertical-category${i === 0 ? " vertical-category--first" : ""}`}
+          className={`vertical-category${
+            i === 0 ? " vertical-category--first" : ""
+          }`}
         >
-          <h2 className="vertical-heading">{cat.title}</h2>
+          <h2 className="vertical-heading">
+            {cat.title}
+          </h2>
+
           <div className="container">
+            {/* CATEGORY DESCRIPTION - ABOVE LOGOS */}
+            <div
+              className="vertical-content"
+              data-reveal="up"
+              data-delay="100"
+            >
+              <p className="vertical-description">
+                {cat.description}
+              </p>
+            </div>
+
+            {/* CATEGORY BRAND LOGOS */}
             <div className="vertical-brands-grid">
               {cat.items.map((brand, j) => (
                 <div
                   key={j}
                   className="logo-card"
                   data-reveal="up"
-                  data-delay={String((j % 4) * 120 + 100)}
+                  data-delay={String(
+                    (j % 4) * 120 + 100
+                  )}
                   onClick={() =>
                     setSelectedBrand({
                       name: brand.name,
@@ -220,15 +289,10 @@ function Verticals() {
                     })
                   }
                 >
-                  {/* <div className="logo-card-img-wrap">
-                    <img
-                      src={logoMap[brand.name]}
-                      alt={brand.name}
-                      loading="lazy"
-                      data-brand={brand.name}
-                    />
-                  </div> */}
-                  <div className="logo-card-img-wrap" data-brand={brand.name}>
+                  <div
+                    className="logo-card-img-wrap"
+                    data-brand={brand.name}
+                  >
                     <img
                       src={logoMap[brand.name]}
                       alt={brand.name}
@@ -236,13 +300,12 @@ function Verticals() {
                       data-brand={brand.name}
                     />
                   </div>
-                  <div className="logo-card-text">{brand.name}</div>
+
+                  <div className="logo-card-text">
+                    {brand.name}
+                  </div>
                 </div>
               ))}
-            </div>
-
-            <div className="vertical-content" data-reveal="up" data-delay="100">
-              <p className="vertical-description">{cat.description}</p>
             </div>
           </div>
         </section>
@@ -250,4 +313,5 @@ function Verticals() {
     </>
   );
 }
+
 export default Verticals;
