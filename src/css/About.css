@@ -65,18 +65,34 @@
    complete image remains visible on every screen.
 ───────────────────────────────────────── */
 
-.about-page-banner {
+/* .about-page-banner {
   position: relative;
   width: 100%;
   height:80%;
   overflow: hidden;
   line-height: 0;
+} */
+
+.about-page-banner {
+  position: relative;
+  width: 100%;
+  height: clamp(180px, 18vw, 300px);
+  overflow: hidden;
+  line-height: 0;
 }
 
-.about-page-banner-image {
+/* .about-page-banner-image {
   width: 100%;
   height: auto;
   object-fit: contain;
+  object-position: center;
+  display: block;
+} */
+
+.about-page-banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   object-position: center;
   display: block;
 }
@@ -699,7 +715,14 @@
 
   .about-page-banner {
     width: 100%;
-    height: auto;
+    height: 200px;
+  }
+
+  .about-page-banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
   }
 
   .about-page-banner-overlay {

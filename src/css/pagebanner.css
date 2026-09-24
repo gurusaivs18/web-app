@@ -1,0 +1,62 @@
+/* =========================================================
+   COMMON PAGE BANNER
+========================================================= */
+
+.about-page-banner {
+  position: relative;
+  width: 100%;
+  margin-top: 70px;
+  overflow: hidden;
+  line-height: 0;
+  height: auto;
+}
+
+.about-page-banner-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  object-position: center;
+  margin: 0;
+  padding: 0;
+}
+
+.about-page-banner-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.about-page-banner-overlay h1 {
+  margin: 0;
+  color: #fff;
+  font-family: var(--font-heading);
+  font-size: clamp(40px, 5vw, 68px);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   TABLET / MOBILE
+========================================================= */
+
+@media (max-width: 900px) {
+  .about-page-banner {
+    margin-top: 70px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-page-banner {
+    margin-top: 64px;
+  }
+
+  .about-page-banner-overlay h1 {
+    font-size: 32px;
+  }
+}

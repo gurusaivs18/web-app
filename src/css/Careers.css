@@ -17,10 +17,10 @@
   object-position: center;
   display: block;
 } */
- .about-page-banner {
+.about-page-banner {
   position: relative;
   width: 100%;
-  aspect-ratio: 2048 / 311;   /* reserve real space, no collapse */
+  height: clamp(180px, 18vw, 300px);
   overflow: hidden;
   line-height: 0;
 }
@@ -57,10 +57,17 @@
 }
 
 @media (max-width: 768px) {
-  .about-page-banner {
-    height: 300px;
+ .about-page-banner {
+    width: 100%;
+    height: 200px;
   }
 
+  .about-page-banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
   .about-page-banner-overlay h1 {
     font-size: 38px;
   }
