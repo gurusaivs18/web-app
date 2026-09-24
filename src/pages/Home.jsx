@@ -16,9 +16,9 @@ import ceoImage from "../assets/jsbGroupWebsite/ceoHomeBanner.webp";
 // import vcImg from "../assets/card-images/venture.png";
 
 // break
-import visionImg from "../assets/About us/Vision.png";
-import missionImg from "../assets/About us/Mission.png";
-import purposeImg from "../assets/About us/Purpose.png";
+import visionImg from "../assets/About us/visionnew.png";
+import missionImg from "../assets/About us/missionnew.png";
+import purposeImg from "../assets/About us/purposenew.png";
 import rushab from "../assets/Partners/rushab-assets-1.png";
 import sinha from "../assets/Partners/Sanjeev.1.jpeg";
 import sanal from "../assets/Partners/sanal-assets-1.png";

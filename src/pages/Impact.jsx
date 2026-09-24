@@ -11,6 +11,7 @@ import icon04 from "../assets/icons-impact/icon-04.png";
 import icon05 from "../assets/icons-impact/icon-05.png";
 import icon06 from "../assets/icons-impact/icon-06.png";
 import icon07 from "../assets/icons-impact/icon-07.png";
+import banner from "../assets/banners/impactnew.png";
 
 const statIcons = [
   icon01,
@@ -46,9 +47,18 @@ function Impact() {
   return (
     <>
       {/* PAGE TITLE */}
-      <div className="page-hero" data-reveal="fade">
-        <h1>Impact</h1>
-      </div>
+    {/* HERO */}
+<div className="about-page-banner" data-reveal="fade">
+  <img
+    src={banner}
+    alt="JSB Group Verticals"
+    className="about-page-banner-image"
+  />
+
+  <div className="about-page-banner-overlay">
+    <h1>Impact</h1>
+  </div>
+</div>
 
       <section className="section">
         <div className="container">

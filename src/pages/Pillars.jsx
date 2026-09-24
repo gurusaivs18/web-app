@@ -12,6 +12,7 @@ import supriyaImg from "../assets/Partners/supriya-assets-1.png";
 import naz from "../assets/Partners/Nas-asset-1.png";
 import ashik from "../assets/Partners/Ashik-asset-1.png";
 import { createPortal } from "react-dom";
+import banner from "../assets/banners/pillarsnew.png";
 
 const ceoWriteup = `Neelesh Bhatnagar is an entrepreneur with over three decades of experience spanning the Middle East and India. As the CEO & Founder of JSB Group, he has built a diversified conglomerate with interests across retail, fitness, hospitality, healthcare, and technology.
 
@@ -201,10 +202,17 @@ function Pillars() {
   return (
     <>
       {/* ───────────────── PAGE TITLE ───────────────── */}
+ <div className="about-page-banner" data-reveal="fade">
+  <img
+    src={banner}
+    alt="JSB Group Pillars"
+    className="about-page-banner-image"
+  />
 
-      <div className="page-hero" data-reveal="fade">
-        <h1>Pillars</h1>
-      </div>
+  <div className="about-page-banner-overlay">
+    <h1>Pillars</h1>
+  </div>
+</div>
 
       {/* ───────────────── THE ARCHITECT ───────────────── */}
 

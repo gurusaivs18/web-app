@@ -1162,8 +1162,8 @@ textarea.form-control {
 /* ─────────────────────────────────────────────
    6. VERTICALS PAGE
    ───────────────────────────────────────────── */
-.featured-logos-section {
-  /* padding-block: var(--sp-hero-gap); */
+/* .featured-logos-section {
+  padding-block: var(--sp-hero-gap);
   margin-block: 0;
 }
 .featured-logos-section::after {
@@ -1182,7 +1182,7 @@ textarea.form-control {
 }
 .featured-logo-card img {
   margin-bottom: var(--sp-2);
-}
+} */
 
 .vertical-category {
   padding-block: 1.5rem;

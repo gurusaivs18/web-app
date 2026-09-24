@@ -5,6 +5,8 @@ import { useScrollReveal } from "../hooks/useScrollReveal";
 import { verticals } from "../data/verticals";
 import { useLocation } from "react-router-dom";
 
+
+import banner from "../assets/banners/verticalsnew.png";
 import uaeBulls from "../assets/Brand-Logos/UAE_BULL_REAL.jpeg";
 import motiv8 from "../assets/Brand-Logos/motiv8.webp";
 import pressmans from "../assets/Brand-Logos/pressmans (2).webp";
@@ -64,18 +66,18 @@ const logoMap = {
 const getId = (title) =>
   title.toLowerCase().replace(/[^a-z0-9]+/g, "-");
 
-const featuredBrands = [
-  "Nb Ventures",
-  "VK Technology",
-  "Denaster",
-  "Target One",
-  "Motiv8",
-  "Inov8",
-  "Activ8",
-  "Pressman's Sandwiches",
-  "Snap Fitness",
-  "United Pro Sports (U-Pro)",
-];
+// const featuredBrands = [
+//   "Nb Ventures",
+//   "VK Technology",
+//   "Denaster",
+//   "Target One",
+//   "Motiv8",
+//   "Inov8",
+//   "Activ8",
+//   "Pressman's Sandwiches",
+//   "Snap Fitness",
+//   "United Pro Sports (U-Pro)",
+// ];
 
 function Verticals() {
   const location = useLocation();
@@ -123,16 +125,22 @@ function Verticals() {
 
   return (
     <>
-      {/* HERO */}
-      <div
-        className="page-hero container text-center py-12"
-        data-reveal="fade"
-      >
-        <h1>Verticals</h1>
-      </div>
+    
+    {/* HERO */}
+<div className="about-page-banner" data-reveal="fade">
+  <img
+    src={banner}
+    alt="JSB Group Verticals"
+    className="about-page-banner-image"
+  />
+
+  <div className="about-page-banner-overlay">
+    <h1>Verticals</h1>
+  </div>
+</div>
 
       {/* FEATURED BRANDS */}
-      <div className="featured-logos-section container">
+      {/* <div className="featured-logos-section container">
         <div className="section-title-wrap" data-reveal="fade">
           <span className="section-title">The Group Portfolio</span>
         </div>
@@ -145,7 +153,7 @@ function Verticals() {
           Featured Brands
         </h2>
 
-        {/* FEATURED BRANDS DESCRIPTION - ABOVE LOGOS */}
+  
         <p
           className="vertical-page-intro"
           data-reveal="up"
@@ -157,7 +165,7 @@ function Verticals() {
           Technology, Interior Fitouts &amp; Outdoor Furniture.
         </p>
 
-        {/* FEATURED BRAND LOGOS */}
+     
         <div className="featured-logos-grid">
           {featuredBrands.map((name, i) => (
             <div
@@ -193,7 +201,7 @@ function Verticals() {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
 
       {/* MODAL */}
       {selectedBrand && (

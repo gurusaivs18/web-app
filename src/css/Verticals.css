@@ -259,7 +259,79 @@
 }
 
 /* ========================= PAGE HERO ========================= */
+/* ========================= PAGE BANNER ========================= */
 
+/* .about-page-banner {
+  position: relative;
+  width: 100%;
+  height: 420px;
+  overflow: hidden;
+}
+
+.about-page-banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+} */
+  .about-page-banner {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 2048 / 311;   /* reserve real space, no collapse */
+  overflow: hidden;
+  line-height: 0;
+}
+
+
+.about-page-banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.about-page-banner-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.about-page-banner-overlay h1 {
+  margin: 0;
+  color: #fff;
+  font-family: var(--font-heading);
+  font-size: clamp(40px, 5vw, 68px);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ========================= RESPONSIVE BANNER ========================= */
+
+@media (max-width: 768px) {
+  .about-page-banner {
+    height: 300px;
+  }
+
+  .about-page-banner-overlay h1 {
+    font-size: 38px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-page-banner {
+    height: 240px;
+  }
+
+  .about-page-banner-overlay h1 {
+    font-size: 32px;
+  }
+}
 /* ========================= CTA BUTTON ========================= */
 
 .logo-card-message {

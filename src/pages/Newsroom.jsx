@@ -1,10 +1,11 @@
 import "../css/Newsroom.css";
 import "../css/ScrollReveal.css";
 import { useScrollReveal } from "../hooks/useScrollReveal";
+import banner from "../assets/banners/newsroomnew.png";
+
 import newsroom01 from "../assets/newsroom/newsroom-01.png";
 import newsroom02 from "../assets/newsroom/newsroom-02.png";
 import newsroom03 from "../assets/newsroom/newsroom-03.png";
-
 const news = [
   {
     tag: "Latest Update",
@@ -46,9 +47,17 @@ function Newsroom() {
 
   return (
     <>
-      <div className="page-hero" data-reveal="fade">
-        <h1>Newsroom</h1>
-      </div>
+     <div className="about-page-banner" data-reveal="fade">
+  <img
+    src={banner}
+    alt="JSB Group Newsroom"
+    className="about-page-banner-image"
+  />
+
+  <div className="about-page-banner-overlay">
+    <h1>Newsroom</h1>
+  </div>
+</div>
 
       <section className="section section--v1">
         <div className="container">

@@ -14,10 +14,12 @@ import sanalImg from  "../assets/Partners/sanal-assets-1.png";
 import supriyaImg from "../assets/Partners/supriya-assets-1.png";
 import naz from "../assets/Partners/Nas-asset-1.png";
 import ashik from "../assets/Partners/Ashik-asset-1.png";
-import visionImg from "../assets/About us/Vision.png";
-import missionImg from "../assets/About us/Mission.png";
-import purposeImg from "../assets/About us/Purpose.png";
-import organisationImg from "../assets/About us/An Organisation.png";
+ import visionImg from "../assets/About us/visionnew.png";
+import missionImg from "../assets/About us/missionnew.png";
+import purposeImg from "../assets/About us/purposenew.png";
+import organisationImg from "../assets/About us/organisationnew.png";
+import banner from "../assets/banners/aboutbannernew1.png";
+
 
  
 
@@ -223,8 +225,16 @@ function About() {
 
   return (
     <>
-    <div className="page-hero" data-reveal="fade">
-  <h1>About Us</h1>
+ <div className="about-page-banner" data-reveal="fade">
+  <img
+    src={banner}
+    alt="About JSB Group"
+    className="about-page-banner-image"
+  />
+
+  <div className="about-page-banner-overlay">
+    <h1>About Us</h1>
+  </div>
 </div>
 
 {/* ── WHO WE ARE ── */}

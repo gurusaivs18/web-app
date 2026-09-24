@@ -2,7 +2,7 @@ import "../css/Careers.css";
 import "../css/ScrollReveal.css";
 import { useScrollReveal } from "../hooks/useScrollReveal";
 import { Link } from "react-router-dom";
-
+import banner from "../assets/banners/careernew.png";
 import careers01 from "../assets/careers/careers-01.png";
 import careers02 from "../assets/careers/careers-02.png";
 import careers03 from "../assets/careers/careers-03.png";
@@ -29,9 +29,18 @@ function Careers() {
 
   return (
     <>
-      <div className="page-hero" data-reveal="fade">
-        <h1>Careers</h1>
-      </div>
+      {/* HERO */}
+<div className="about-page-banner" data-reveal="fade">
+  <img
+    src={banner}
+    alt="JSB Group Verticals"
+    className="about-page-banner-image"
+  />
+
+  <div className="about-page-banner-overlay">
+    <h1>Verticals</h1>
+  </div>
+</div>
 
       <section className="section">
         <div className="container">
