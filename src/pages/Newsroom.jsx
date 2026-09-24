@@ -8,6 +8,7 @@ import newsroom02 from "../assets/newsroom/newsroom-02.png";
 import newsroom03 from "../assets/newsroom/newsroom-03.png";
 import snapnews from "../assets/newsroom/snapnews.png";
 import pressmansnews from "../assets/newsroom/pressmansnews.png";
+import uaebullsnews from "../assets/newsroom/uaebullsnews.png";
 
 const news = [
   {
@@ -31,7 +32,7 @@ const news = [
   {
     tag: "Sports",
     title: "UAE Bulls Win Championship Season 9",
-    image: null,
+    image: uaebullsnews,
     desc: "The UAE Bulls cricket team made history by lifting the trophy as Champions of Season 9 (2025–26).",
   },
   {
