@@ -7,5 +7,5 @@ export const companyInfo = {
   vision:
     "Pioneering a Future Where F&B, Retail, Distribution, and Technology Seamlessly Merge to Enrich Lives and Transform Industries.",
   mission:
-    "To be the preferred provider of F&B, retail, distribution, and technology solutions, offering a diverse range of high-quality products and services tailored to meet the evolving needs of our customers, while maximizing value for all stakeholders and contributing positively to society.",
+    "Our mission is to be the preferred provider of F&B, retail, distribution, and technology solutions, offering a diverse range of high-quality products and services tailored to meet the evolving needs of our customers, while maximizing value for all stakeholders and contributing positively to society. ",
 };

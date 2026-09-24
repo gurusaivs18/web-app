@@ -13,7 +13,7 @@ import { createPortal } from "react-dom";
 import sanalImg from  "../assets/Partners/sanal-assets-1.png";
 import supriyaImg from "../assets/Partners/supriya-assets-1.png";
 import naz from "../assets/Partners/Nas-asset-1.png";
-import ashik from "../assets/Partners/Ashik-asset-1.png";
+import ashik from "../assets/Partners/ashiknew.png";
  import visionImg from "../assets/About us/visionnew.png";
 import missionImg from "../assets/About us/missionnew.png";
 import purposeImg from "../assets/About us/purposenew.png";

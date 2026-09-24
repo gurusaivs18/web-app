@@ -10,7 +10,7 @@ import sanjeevImg from "../assets/Partners/Sanjeev.1.jpeg";
 import sanalImg from "../assets/Partners/sanal-assets-1.png";
 import supriyaImg from "../assets/Partners/supriya-assets-1.png";
 import naz from "../assets/Partners/Nas-asset-1.png";
-import ashik from "../assets/Partners/Ashik-asset-1.png";
+import ashik from "../assets/Partners/ashiknew.png";
 import { createPortal } from "react-dom";
 import banner from "../assets/banners/pillarsnew.png";
 

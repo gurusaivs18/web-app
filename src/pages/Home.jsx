@@ -25,7 +25,7 @@ import sanal from "../assets/Partners/sanal-assets-1.png";
 import deep from "../assets/Partners/deep01.jpeg";
    import supriyaImg from "../assets/Partners/supriya-assets-1.png";
      import naz from "../assets/Partners/Nas-asset-1.png";
-        import ashik from "../assets/Partners/Ashik-asset-1.png";
+        import ashik from "../assets/Partners/ashiknew.png";
 
         // Impact icons
 import icon01 from "../assets/icons-impact/icon-01.png";

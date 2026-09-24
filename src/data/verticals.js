@@ -85,7 +85,9 @@ export const verticals = [
         link: "https://www.denaster.com/",
 
         description:
-          "Denaster joined the group in 2021 as a distribution company with innovative global brands such as Shokz (China), GoCube (Israel), Sphero (U.S.A.), Eilik (China), ThinOptics (U.S.A.), Ring (U.S.A.), Boxbollen (Sweden), ShiftCam (U.K.), and Ampere (U.S.A.).",
+          `Denaster:  joined the group in 2021. a distribution company with brands like shokz (China), gocube (Isreal), sphero (U.S.A), eilik (China), thinOptics (U.S.A.), Ring (U.S.A.), Boxbollen (Swedish), ShiftCam (U.K.), Ampere (U.S.A.) under its umbrella to name a few.  
+Harrison: Duty Free operator functioning under the brand Inov8 with its presence in Dubai Duty Free (all terminals) + Abu Dhabi Duty Free & Qatar Duty Free.  
+`,
       },
 
       {
@@ -138,7 +140,8 @@ export const verticals = [
         link: "https://www.garmin.ae/",
 
         description:
-          "Garmin by Activ8 is an authorized retailer for Garmin watches and also carries the Shokz brand, with six active retail locations across the UAE.",
+          `Its an authorized retailer for Garmin Watches & also carries the brand Shokz. It today has retail presence across U.A.E. with 6 active locations 
+`,
       },
       {
         name: "ZeroG Beds & Mattresses",
@@ -146,7 +149,8 @@ export const verticals = [
         link: "https://zerogmattress.ae/",
 
         description:
-          "ZeroG Beds & Mattresses is JSB Group’s homegrown sleep and wellness brand focused on delivering mattresses and bedding solutions tailored to health needs and modern living spaces.",
+          `Recognizing that good sleep is fundamental to health, we have launched our homegrown beds and mattresses brand. Our products are designed to help you find the perfect mattress tailored to your health needs and the specific space in your home. 
+`,
       },
       {
         name: "VIP Cosmetics",
@@ -172,7 +176,8 @@ export const verticals = [
         link: "https://www.snapfitness.com/ae",
 
         description:
-          "Recognizing the growing need for a healthier lifestyle in the UAE, JSB Group ventured into the globally recognized Snap Fitness franchise, which operates over 1,000 clubs across 20+ countries. The first branch in the UAE opened in 2018, and the brand has since expanded to four locations across the country.",
+          ` Recognizing the growing need for a healthier lifestyle in the U.A.E., we ventured into a global franchise of over 1,000 clubs across 20+ countries. We opened our first branch in the U.A.E. in 2018 and have since expanded to four locations throughout the country. 
+`,
       },
 
       {
@@ -181,7 +186,8 @@ export const verticals = [
         link: "https://upro.ae/",
 
         description:
-          "United Pro Sports (U-Pro) was launched in 2020 as a world-class indoor sports facility located in Al Quoz, Dubai. Spanning over 46,000 sq ft, the venue includes two FIFA-approved 5-a-side football pitches, four indoor cricket pitches, two multipurpose courts for basketball, volleyball, badminton, and table tennis, along with three practice pitches including one equipped with a cricket bowling machine.",
+          ` In response to the U.A.E.’s passion for sports and the need for indoor facilities, we launched U-Pro (United Pro Sports) in 2020. Spanning over 46,000 sq ft and conveniently located in Al Quoz, Dubai, U-Pro features state-of-the-art facilities including:2 FIFA-approved 5-a-side football pitches4 indoor cricket pitches2 multipurpose courts for sports such as 3x3 basketball, volleyball, badminton, and table tennis3 practice pitches, one equipped with a cricket bowling machine U-Pro is designed to cater to a wide range of sports enthusiasts, offering top-notch amenities in a versatile indoor environment. 
+`,
       },
 
       {
@@ -190,7 +196,7 @@ export const verticals = [
         link: "https://uaebulls.ae/",
 
         description:
-          "Driven by passion and leadership in sports, Neelesh Bhatnagar became the proud owner of the UAE Bulls cricket franchise. After eight seasons of perseverance and growth, the UAE Bulls achieved a historic milestone by winning Season 9 (2025–26), lifting the trophy for the first time.",
+          `An entrepreneur with proven leadership, integrity, and passion, Neelesh Bhatnagar possesses the vision, drive, and determination to foster positive change within complex organizations. His enthusiasm for sports, particularly cricket, led him to become the proud owner of the Delhi Bulls team. After eight seasons of perseverance and growth, the U.A.E. Bulls achieved a historic milestone by winning the league for the first time, lifting the trophy as Champions of Season 9 (2025–26). This landmark victory reflects Neelesh’s unwavering support, long-term vision, and commitment to excellence, propelling the team to new heights year after year.`,
       },
 
       {
@@ -199,7 +205,10 @@ export const verticals = [
         link: "https://bvbpro.com/",
 
         description:
-          "BVB – Beach Volleyball Pro League was envisioned as a first-of-its-kind franchise-based beach volleyball league designed to elevate the sport on a global stage. Introduced through a showcase event in Dubai, the league combines elite sports, entertainment, and lifestyle experiences, with its official UAE launch planned for 2027.",
+          `Driven by a deep passion for sports and long-term ecosystem building, Neelesh Bhatnagar envisioned BVB – Beach Volleyball Pro League as a platform to elevate beach volleyball on a global stage. As part of JSB Group’s Sports & Fitness vertical, the league was introduced with a showcase event in Dubai, bringing together elite international athletes and emerging local talent. Conceptualized as a first-of-its-kind franchise-based beach volleyball league, BVB blends high-performance sport with entertainment and lifestyle experiences. Backed by experienced leadership and global sporting expertise, the league is designed to travel across iconic beach destinations worldwide, with its official launch planned from the UAE in 2027. 
+
+ 
+`,
       },
     ],
   },
@@ -217,7 +226,8 @@ export const verticals = [
         link: "https://www.epicfitout.com/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnsRsXK25Epx8amKDdi9dYvJqJvs0xyBTYXqC2AZkfMw7fdiEvUNINKRicG1I_aem_YWdncwCkyZlQH6QaBeqo2_PWf2t7&brid=YWdncwGWv0Jl4e8gPrYY76YhJpFg",
 
         description:
-          "Epic Fitouts is a premier provider of interior design, fitout services, and outdoor furniture solutions. The company specializes in transforming residential, commercial, and hospitality spaces through bespoke interior solutions, comprehensive fitout execution, and customized outdoor furniture designed to enhance exterior environments.",
+          `Epic Fitouts: is a premier provider of interior design, fitout services, and outdoor furniture solutions. With a commitment to quality and innovation, we specialize in transforming residential, commercial, and hospitality spaces into stunning environments that reflect our clients' unique visions. 
+`,
       },
     ],
   },
