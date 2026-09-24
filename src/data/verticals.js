@@ -29,7 +29,10 @@ export const verticals = [
         link: "https://vktechnologiesme.com/",
 
         description:
-          "VK Technology specializes in delivering customized software solutions aligned with business processes and transformed into technical functionalities. Services include POS systems, reporting systems, e-commerce website development, and ERP integrations with platforms such as Oracle NetSuite and Zoho Inventory & Books.",
+          `we specialize in delivering customized software solutions aligned with your business processes transformed into technical functionalities. Unlike off-the-shelf solutions, we take a process-oriented approach to understand and meet our customers' unique requirements, offering limitless options to enhance efficiency, accuracy, and productivity in their operations. Our mission is to empower businesses with cutting-edge technology that streamlines operations, enhances customer experiences, and drives growth. 
+ 
+
+`,
       },
     ],
   },
@@ -125,7 +128,8 @@ export const verticals = [
         link: "",
 
         description:
-          "Harrison Digital is part of the group’s retail and technology-driven distribution ecosystem, supporting modern digital retail experiences and brand expansion initiatives.",
+          `Duty Free operator functioning under the brand Inov8 with its presence in Dubai Duty Free (all terminals) + Abu Dhabi Duty Free & Qatar Duty Free.  
+`,
       },
 
       {

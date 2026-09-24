@@ -26,9 +26,9 @@ const allDirectors = [
     name: "Rushab Bhatnagar",
     role: "Director",
     img: rushabImg,
-    writeup: `Rushab Bhatnagar is the Co-Founder and CEO of NOVO Labs, and serves as Strategic Director for NB Ventures. With a sharp focus on innovation and technology-driven business models, Rushab brings a forward-thinking perspective to the JSB Group board.
-
-His work spans venture building, strategic investments, and scaling early-stage companies into market leaders.`,
+    writeup: `Rushab holds a Bachelor’s degree in Business & Economics from Exeter and a Master’s in Strategic Marketing from Imperial College. As the Co-Founder and CEO of NOVO Labs, a pioneering food technology start-up based in Bangalore, leading an innovative portfolio that includes Monkey Box, Combo@Co, Khichdi Tales, Pressman’s Sandwiches, Thaali Tales, Beijing Lu, Paratha Tales, Pizza People, and Top Dog. 
+In addition to his role at NOVO Labs, Rushab is the Strategic Director for NB Ventures, where he spearheads the Bangalore office. NB Ventures is a growth-stage venture fund based in the U.A.E., with a robust portfolio of over 70 Indian start-ups. 
+`,
   },
   {
     name: "Sanjeev Sinha",
@@ -61,15 +61,23 @@ const allPartners = [
     name: "Deep Bhogal",
     role: "Partner",
     img: deepImg,
-    writeup: `Deep Bhogal brings over 30 years of experience in retail and distribution to the JSB Group. As Managing Director of Denaster, he has built and led large-scale operations across multiple markets, with a reputation for operational excellence and commercial acumen.
+    writeup: `With over 30 years of commercial experience in supply and distribution across retail, software, and electronics industries, Deep brings a wealth of expertise to his role as Managing Director of Denaster. Under his leadership for more than two decades, Denaster has evolved into a multimillion-dollar SME with a workforce of over 100 employees, establishing itself as a key supplier and operator in the Middle East Duty Free and retail sectors. 
 
-His decades of experience make him a cornerstone of the group's operational leadership.`,
+Deep's strategic vision and passion have driven Denaster to secure exclusive regional rights for renowned brands and leveraging his insights and industry knowledge to foster successful partnerships and drive growth. 
+ `,
   },
   {
     name: "Naz Ayat",
     role: "Partner",
     img: naz,
-    writeup: `Naz Ayat is a Partner at JSB Group, contributing expertise and strategic guidance across the group's diverse business interests.`,
+    writeup: `With a robust career spanning over 30 years in the software and electronics industries, I have developed a comprehensive skill set in sales management and strategic leadership. My journey began as a Sales Manager, where I honed my ability to drive revenue growth and build strong client relationships. As I progressed to the role of Sales Director, I led high-performing teams and crafted sales strategies that significantly enhanced market presence. 
+ 
+Throughout my career, I have had the privilege of working with major UK and international retailers, including Amazon and HMV. These experiences have provided me with valuable insights into diverse market dynamics and consumer behaviors, enabling me to tailor solutions that meet the unique needs of each client. 
+ 
+My expertise extends beyond traditional sales roles; I have been deeply involved in negotiating and securing major contracts, optimizing distribution channels, and implementing innovative sales techniques. This has allowed me to drive substantial growth for the organizations I’ve been part of, while also establishing enduring partnerships with key industry players. 
+ 
+My extensive background in both the software and electronics sectors, combined with my strategic vision and leadership skills, has equipped me to navigate complex market landscapes and deliver exceptional results. I am passionate about leveraging my experience to continue driving success and fostering growth in the ever-evolving technology landscape. 
+`,
   },
 ];
 
