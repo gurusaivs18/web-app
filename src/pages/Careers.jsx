@@ -33,12 +33,12 @@ function Careers() {
 <div className="about-page-banner" data-reveal="fade">
   <img
     src={banner}
-    alt="JSB Group Verticals"
+    alt="JSB Group Careers"
     className="about-page-banner-image"
   />
 
   <div className="about-page-banner-overlay">
-    <h1>Verticals</h1>
+    <h1>Careers</h1>
   </div>
 </div>
 
