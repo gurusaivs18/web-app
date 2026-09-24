@@ -6,6 +6,9 @@ import banner from "../assets/banners/newsroomnew.png";
 import newsroom01 from "../assets/newsroom/newsroom-01.png";
 import newsroom02 from "../assets/newsroom/newsroom-02.png";
 import newsroom03 from "../assets/newsroom/newsroom-03.png";
+import snapnews from "../assets/newsroom/snapnews.png";
+import pressmansnews from "../assets/newsroom/pressmansnews.png";
+
 const news = [
   {
     tag: "Latest Update",
@@ -28,16 +31,19 @@ const news = [
   {
     tag: "Sports",
     title: "UAE Bulls Win Championship Season 9",
+    image: null,
     desc: "The UAE Bulls cricket team made history by lifting the trophy as Champions of Season 9 (2025–26).",
   },
   {
     tag: "Fitness",
     title: "Snap Fitness Expands to Fourth UAE Location",
+     image: snapnews,
     desc: "Building on the success of its first UAE branch in 2018, Snap Fitness continues to bring world-class gym facilities to the Emirates.",
   },
   {
     tag: "F&B",
     title: "Pressman's Sandwiches Reaches 10 Locations",
+    image: pressmansnews,
     desc: "JSB Group's homegrown F&B brand Pressman's Sandwiches has reached a milestone of 10 live locations across the UAE.",
   },
 ];
