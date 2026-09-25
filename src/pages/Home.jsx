@@ -500,7 +500,7 @@ function DirectorModal({ director, onClose }) {
         <p className="home-modal-bio">{director.bio}</p>
 
         <a
-          href={`/about#${director.slug}`}
+          href={`/pillars#${director.slug}`}
           className="home-modal-btn"
           onClick={onClose}
         >

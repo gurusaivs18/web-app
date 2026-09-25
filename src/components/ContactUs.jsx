@@ -6,7 +6,7 @@ import * as Yup from "yup";
 // Validation schema
 const contactSchema = Yup.object({
   name: Yup.string()
-    // .min(4, "Name must be at least 4 characters")
+   
     .required("Field is Required"),
 
   email: Yup.string()
@@ -14,7 +14,7 @@ const contactSchema = Yup.object({
     .required("Field is required"),
 
   message: Yup.string()
-    .min(8, "Minimum 8 characters required")
+    .min(4, "Minimum 4 characters required")
     .required("Message is required"),
 });
 
