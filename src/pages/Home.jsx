@@ -239,7 +239,7 @@ const directors = [
     bio: "30+ years in software and electronics industries. Worked with major UK and international retailers including Amazon and HMV. Expert in distribution channels.",
     slug: "naz-ayat",
     img:  naz,
-    order: 7,
+    order: 1,
   },
   // {
   //   name: "Sawan Ravani",
@@ -279,16 +279,16 @@ const directors = [
     bio: "Key leadership member driving operational excellence across JSB Group's diverse portfolio.",
     slug: "mohammed-ashik",
     img: ashik,
-    order: 1,
+    order: 5,
   },
-  // {
-  //   name: "Manish Kishore",
-  //   role: "Partner",
-  //   bio: "test",
-  //   slug: "Manish Kishore",
-  //   img: null,
-  //   order: 6,
-  // },
+  {
+    name: "Manish Kishore",
+    role: "Partner",
+    bio: "test",
+    slug: "Manish Kishore",
+    img: null,
+    order: 8,
+  },
   {
     name: "Sanal Kumar",
     role: "Business Head",
@@ -304,7 +304,7 @@ const directors = [
     bio: "Over 30 years in supply and distribution across retail, software, and electronics. Led Denaster to become a multimillion-dollar SME with 100+ employees.",
     slug: "deep-bhogal",
     img: deep,
-    order: 6,
+    order: 7,
   },
    {
     name: "Supriya Hurkat",
@@ -312,7 +312,7 @@ const directors = [
     bio: "WRITE UP PENDING",
     slug: "supriya-hurkat",
     img:  supriyaImg,
-    order: 5,
+    order: 6,
   },
 ];
 
@@ -565,14 +565,7 @@ function DirectorsSlider({ onSelect }) {
         </div>
 
         <div className="directors-slider-wrap">
-          {/* <button
-            className="slider-nav slider-nav-left"
-            onClick={() => {
-              trackRef.current.scrollLeft -= slideAmount;
-            }}
-          >
-            ‹
-          </button> */}
+        
 
           <div
             className="directors-marquee"

@@ -50,18 +50,19 @@ In addition to his role at NOVO Labs, Rushab is the Strategic Director for NB Ve
     img: sanjeevImg,
     writeup: `Sanjeev Sinha is a seasoned business leader and Director at JSB Group, contributing strategic oversight and sector expertise to the group's growing portfolio of businesses.`,
   },
+   {
+    name: "Mohammed Ashik",
+    role: "Group CTO",
+    img: ashik,
+    writeup: `Mohammed Ashik is a Director at JSB Group, bringing valuable regional expertise and leadership experience that supports the group's expansion across key markets.`,
+  },
   {
     name: "Supriya Hurkat",
     role: "Director",
     img: supriyaImg,
     writeup: ` write up pending`,
   },
-  {
-    name: "Mohammed Ashik",
-    role: "Group CTO",
-    img: ashik,
-    writeup: `Mohammed Ashik is a Director at JSB Group, bringing valuable regional expertise and leadership experience that supports the group's expansion across key markets.`,
-  },
+ 
 ];
 
 const allPartners = [
