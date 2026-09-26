@@ -245,7 +245,7 @@
   inset: 0;
   z-index: 2;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: flex-end;
   padding: 48px 40px 40px;
 }

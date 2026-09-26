@@ -42,18 +42,9 @@ function Footer() {
                 <Link to="/about">About Us</Link>
               </li>
               <li>
-                <Link
-                  to="/#pillars"
-                  onClick={() => {
-                    setTimeout(() => {
-                      document
-                        .getElementById("pillars")
-                        ?.scrollIntoView({ behavior: "smooth" });
-                    }, 100);
-                  }}
-                >
-                  Team
-                </Link>
+             <li>
+                <Link to="/pillars">Our Team</Link>
+              </li>
               </li>
               <li>
                 <Link to="/verticals">Services</Link>

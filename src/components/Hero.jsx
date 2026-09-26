@@ -11,8 +11,8 @@ function Hero() {
 
       <div className="hero-content">
         <div className="hero-circle-wrap">
-          <span className="hero-circle-glow" aria-hidden="true"></span>
-          <span className="hero-circle-ring" aria-hidden="true"></span>
+          {/* <span className="hero-circle-glow" aria-hidden="true"></span>
+          <span className="hero-circle-ring" aria-hidden="true"></span> */}
 
           <div className="hero-circle">
             <h1 className="hero-title">

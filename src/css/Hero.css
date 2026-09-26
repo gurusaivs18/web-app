@@ -69,7 +69,7 @@
   border-radius: 50%;
 
   filter: blur(6px);
-  animation: hero-glow-pulse 0.5s ease-in-out infinite;
+  animation: hero-glow-pulse 0s ease-in-out infinite;
   pointer-events: none;
   z-index: 0;
 }

@@ -23,11 +23,11 @@ import rushab from "../assets/Partners/rushab-assets-1.png";
 import sinha from "../assets/Partners/Sanjeev.1.jpeg";
 import sanal from "../assets/Partners/sanal-assets-1.png";
 import deep from "../assets/Partners/deep01.jpeg";
-   import supriyaImg from "../assets/Partners/supriya-assets-1.png";
-     import naz from "../assets/Partners/Nas-asset-1.png";
-        import ashik from "../assets/Partners/ashiknew.png";
+import supriyaImg from "../assets/Partners/supriya-assets-1.png";
+import naz from "../assets/Partners/Nas-asset-1.png";
+import ashik from "../assets/Partners/ashiknew.png";
 
-        // Impact icons
+// Impact icons
 import icon01 from "../assets/icons-impact/icon-01.png";
 import icon02 from "../assets/icons-impact/icon-02.png";
 import icon03 from "../assets/icons-impact/icon-03.png";
@@ -52,7 +52,6 @@ const statIcons = [
 const verticalCategories = [
   {
     label: "Investment",
-    // img: vcImg,
     icon: (
       <svg viewBox="0 0 24 24" fill="none">
         <path
@@ -80,7 +79,6 @@ const verticalCategories = [
   },
   {
     label: "Retail & Distribution",
-    // img: retailImg,
     icon: (
       <svg viewBox="0 0 24 24" fill="none">
         <path
@@ -109,7 +107,6 @@ const verticalCategories = [
   },
   {
     label: "Technology",
-    // img: techImg,
     icon: (
       <svg viewBox="0 0 24 24" fill="none">
         <rect
@@ -141,7 +138,6 @@ const verticalCategories = [
   },
   {
     label: "Food & Beverage (F&B)",
-    // img: fnbImg,
     icon: (
       <svg viewBox="0 0 24 24" fill="none">
         <path
@@ -163,8 +159,6 @@ const verticalCategories = [
   },
   {
     label: "Fittings & Fit out",
-    // img: interiorImg,
-
     icon: (
       <svg viewBox="0 0 24 24" fill="none">
         <path
@@ -194,7 +188,6 @@ const verticalCategories = [
 
   {
     label: "Fitness & Sports ",
-    // img: fitnessImg,
     icon: (
       <svg viewBox="0 0 24 24" fill="none">
         <path
@@ -238,17 +231,9 @@ const directors = [
     role: "Partner",
     bio: "30+ years in software and electronics industries. Worked with major UK and international retailers including Amazon and HMV. Expert in distribution channels.",
     slug: "naz-ayat",
-    img:  naz,
+    img: naz,
     order: 1,
   },
-  // {
-  //   name: "Sawan Ravani",
-  //   role: "pending",
-  //   bio: "pending",
-  //   slug: "Sawan Ravani",
-  //   img: null,
-  //   order: 1,
-  // },
   {
     name: "Rushab Bhatnagar",
     role: "Co-Founder & CEO, NOVO Labs | Strategic Director, NB Ventures",
@@ -257,14 +242,6 @@ const directors = [
     img: rushab,
     order: 2,
   },
-  // {
-  //   name: "Praveen Bhatnagar",
-  //   role: "Business Consultant",
-  //   bio: "Certified Public Accountant (U.S.) & Chartered Accountant (India). Owner of ZeroG Beds and Mattresses. Specializes in Retail, Fitness, Hospitality, and Healthcare business strategy.",
-  //   slug: "praveen-bhatnagar",
-  //   img: null,
-  //   order: 3,
-  // },
   {
     name: "Sanjeev K Sinha",
     role: "Group CFO",
@@ -297,7 +274,6 @@ const directors = [
     img: sanal,
     order: 3,
   },
-
   {
     name: "Deep Bhogal",
     role: "Partner",
@@ -306,12 +282,12 @@ const directors = [
     img: deep,
     order: 7,
   },
-   {
+  {
     name: "Supriya Hurkat",
     role: "Director",
     bio: "WRITE UP PENDING",
     slug: "supriya-hurkat",
-    img:  supriyaImg,
+    img: supriyaImg,
     order: 6,
   },
 ];
@@ -456,56 +432,61 @@ function CeoModal({ onClose }) {
           <h2 className="ceo-modal-name">Neelesh Bhatnagar</h2>
           <p className="ceo-modal-role">Founder & CEO , JSB Group</p>
           <div className="ceo-modal-divider" />
-          <div className="ceo-modal-bio">
+             <div className="ceo-modal-bio">
             {ceoWriteup.split("\n\n").map((para, i) => (
               <p key={i}>{para}</p>
             ))}
           </div>
+          <a href="/pillars" className="home-modal-btn" onClick={onClose}>
+            The Pillars
+          </a>
         </div>
       </div>
     </div>
   );
 }
 
-/* ─── Director Modal ─────────────────────────────────────────── */
+/* ─── Director Modal (mirrors CeoModal exactly) ──────────────── */
 function DirectorModal({ director, onClose }) {
   if (!director) return null;
+
+  const initials = director.name
+    .split(" ")
+    .map((n) => n[0])
+    .join("")
+    .slice(0, 2);
+
   return (
-    <div className="home-modal-overlay" onClick={onClose}>
-      <div className="home-modal" onClick={(e) => e.stopPropagation()}>
-        <button className="home-modal-close" onClick={onClose}>
+    <div className="ceo-modal-overlay" onClick={onClose}>
+      <div className="ceo-modal" onClick={(e) => e.stopPropagation()}>
+        <button className="ceo-modal-close" onClick={onClose}>
           ×
         </button>
 
-        <div className="home-modal-header">
-          <div className="home-modal-avatar">
-            {director.img ? (
-              <img src={director.img} alt={director.name} />
-            ) : (
-              <div className="home-modal-avatar-fallback">
-                {director.name
-                  .split(" ")
-                  .map((n) => n[0])
-                  .join("")
-                  .slice(0, 2)}
-              </div>
-            )}
-          </div>
-          <div>
-            <h3 className="home-modal-name">{director.name}</h3>
-            <p className="home-modal-role">{director.role}</p>
-          </div>
+        <div className="ceo-modal-img-panel">
+          {director.img ? (
+            <img src={director.img} alt={director.name} />
+          ) : (
+            <div className="pillar-modal-fallback">{initials}</div>
+          )}
         </div>
 
-        <p className="home-modal-bio">{director.bio}</p>
-
-        <a
-          href={`/pillars#${director.slug}`}
-          className="home-modal-btn"
-          onClick={onClose}
-        >
-          Know More
-        </a>
+        <div className="ceo-modal-content">
+          <span className="ceo-modal-tag">Pillar</span>
+          <h2 className="ceo-modal-name">{director.name}</h2>
+          <p className="ceo-modal-role">{director.role}</p>
+          <div className="ceo-modal-divider" />
+          <div className="ceo-modal-bio">
+            <p>{director.bio}</p>
+          </div>
+          <a
+            href={`/pillars#${director.slug}`}
+            className="home-modal-btn"
+            onClick={onClose}
+          >
+            Know More
+          </a>
+        </div>
       </div>
     </div>
   );
@@ -532,7 +513,7 @@ function BrandModal({ brand, onClose }) {
           className="home-modal-btn"
           onClick={() => {
             const url = brand.url;
-            onClose(); // close instantly
+            onClose();
 
             setTimeout(() => {
               window.open(url, "_blank", "noopener,noreferrer");
@@ -549,7 +530,7 @@ function BrandModal({ brand, onClose }) {
 /* ─── Directors Slider ───────────────────────────────────────── */
 function DirectorsSlider({ onSelect }) {
   const trackRef = useRef();
-  const wrapRef = useRef(); // NEW — measures the visible track area
+  const wrapRef = useRef();
 
   const sortedDirectors = [...directors].sort(
     (a, b) => (a.order || 999) - (b.order || 999),
@@ -565,8 +546,6 @@ function DirectorsSlider({ onSelect }) {
         </div>
 
         <div className="directors-slider-wrap">
-        
-
           <div
             className="directors-marquee"
             ref={wrapRef}
@@ -631,6 +610,7 @@ function DirectorsSlider({ onSelect }) {
     </section>
   );
 }
+
 function VerticalsGrid({ onSelect }) {
   return (
     <section className="home-verticals">
@@ -658,7 +638,8 @@ function VerticalsGrid({ onSelect }) {
     </section>
   );
 }
- function VisionMissionSection() {
+
+function VisionMissionSection() {
   const cards = [
     {
       label: "Vision",
@@ -712,7 +693,6 @@ function VerticalsGrid({ onSelect }) {
   );
 }
 
-
 /* ─── Main component ─────────────────────────────────────────── */
 function Home() {
   useScrollReveal();
@@ -737,7 +717,7 @@ function Home() {
 
   const sectionRef = useRef(null);
   const [triggered, setTriggered] = useState(false);
-  const [ceoModalOpen, setCeoModalOpen] = useState(false); // ← CEO modal state
+  const [ceoModalOpen, setCeoModalOpen] = useState(false);
   const [selectedDirector, setSelectedDirector] = useState(null);
   const [selectedBrand, setSelectedBrand] = useState(null);
 
@@ -752,6 +732,7 @@ function Home() {
     window.addEventListener("keydown", handleKey);
     return () => window.removeEventListener("keydown", handleKey);
   }, []);
+
   useEffect(() => {
     const handleVisibilityChange = () => {
       if (document.hidden) {
@@ -764,9 +745,13 @@ function Home() {
     document.addEventListener("visibilitychange", handleVisibilityChange);
 
     return () => {
-      document.removeEventListener("visibilitychange", handleVisibilityChange);
+      document.removeEventListener(
+        "visibilitychange",
+        handleVisibilityChange,
+      );
     };
   }, []);
+
   useEffect(() => {
     if (ceoModalOpen || selectedDirector || selectedBrand) {
       document.body.style.overflow = "hidden";
@@ -821,9 +806,9 @@ function Home() {
             <p data-reveal="right" data-delay="250">
               Neelesh Bhatnagar is an entrepreneur with over three decades of
               experience spanning the Middle East and India. As the CEO &
-              Founder of JSB Group, he has built a diversified conglomerate with
-              interests across retail, fitness, hospitality, healthcare, and
-              technology.
+              Founder of JSB Group, he has built a diversified conglomerate
+              with interests across retail, fitness, hospitality, healthcare,
+              and technology.
             </p>
             <button
               className="read-more-link"
@@ -847,8 +832,8 @@ function Home() {
             <span className="section-title">Impact</span>
           </div>
           <p className="impact-intro" data-reveal="up" data-delay="150">
-            Crafting Tomorrow's Experiences: Bridging F&B, Retail, Distribution,
-            and Technology for a Brighter Future.
+            Crafting Tomorrow's Experiences: Bridging F&B, Retail,
+            Distribution, and Technology for a Brighter Future.
           </p>
           <div className="stats-grid">
             {stats.map((item, i) => (

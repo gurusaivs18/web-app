@@ -272,14 +272,7 @@ Harrison: Duty Free operator functioning under the brand Inov8 with its presence
 
         description: "Write up Pending........",
       },
-      {
-        name: "beijing Lu",
-
-        link: "https://www.epicfitout.com/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnsRsXK25Epx8amKDdi9dYvJqJvs0xyBTYXqC2AZkfMw7fdiEvUNINKRicG1I_aem_YWdncwCkyZlQH6QaBeqo2_PWf2t7&brid=YWdncwGWv0Jl4e8gPrYY76YhJpFg",
-
-        description: "Write up Pending........",
-      },
-      {
+          {
         name: "Monkey Box",
 
         link: "https://monkeyboxforkids.in/",
@@ -287,6 +280,14 @@ Harrison: Duty Free operator functioning under the brand Inov8 with its presence
         description:
           "Monkey Box is part of JSB Group’s expanding retail and distribution ecosystem, contributing to the group’s growing portfolio of lifestyle and consumer-focused brands.",
       },
+      {
+        name: "beijing Lu",
+
+        link: "https://www.epicfitout.com/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnsRsXK25Epx8amKDdi9dYvJqJvs0xyBTYXqC2AZkfMw7fdiEvUNINKRicG1I_aem_YWdncwCkyZlQH6QaBeqo2_PWf2t7&brid=YWdncwGWv0Jl4e8gPrYY76YhJpFg",
+
+        description: "Write up Pending........",
+      },
+  
     ],
   },
 ];

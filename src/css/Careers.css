@@ -3,20 +3,7 @@
    PAGE BANNER
 ================================ */
 
-/* .about-page-banner {
-  position: relative;
-  width: 100%;
-  height: 420px;
-  overflow: hidden;
-} */
-
-/* .about-page-banner-image {
-  width: 100%;
-  height: 80%;
-  object-fit: contain;
-  object-position: center;
-  display: block;
-} */
+ 
 .about-page-banner {
   position: relative;
   width: 100%;
@@ -93,6 +80,7 @@
 .perk-card {
   background: var(--gray-light);
   border-radius: 8px;
+  border: solid 1px darkred;
   overflow: hidden;
   text-align: center;
   display: flex;
