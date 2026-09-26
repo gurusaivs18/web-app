@@ -258,14 +258,14 @@ const directors = [
     img: ashik,
     order: 5,
   },
-  {
-    name: "Manish Kishore",
-    role: "Partner",
-    bio: "test",
-    slug: "Manish Kishore",
-    img: null,
-    order: 8,
-  },
+  // {
+  //   name: "Manish Kishore",
+  //   role: "Partner",
+  //   bio: "test",
+  //   slug: "Manish Kishore",
+  //   img: null,
+  //   order: 8,
+  // },
   {
     name: "Sanal Kumar",
     role: "Business Head",
