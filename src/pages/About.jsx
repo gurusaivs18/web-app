@@ -48,13 +48,21 @@ In addition to his role at NOVO Labs, Rushab is the Strategic Director for NB Ve
     name: "Sanjeev Sinha",
     role: "Group CFO",
     img: sanjeevImg,
-    writeup: `Sanjeev Sinha is a seasoned business leader and Director at JSB Group, contributing strategic oversight and sector expertise to the group's growing portfolio of businesses.`,
+    writeup: `I'm a Chartered Accountant with close to three decades of experience turning finance from a reporting function into a driver of profitability and growth. My remit today covers business strategy, the full accounting and finance function, IT, HR & Administration and Marketing — with a particular focus on operational efficiency and new business development. Designing the policies, procedures and controls that let a fast-moving group scale cleanly is where I do my best work. Over my career I've built and re-engineered finance and commercial functions at Landmark Group (EMAX), Sana Fashion, Samsung India and Mattel Inc. Core strengths: business & financial strategy, commercial finance, budgeting & forecasting, controls & SOP design, supply chain and working-capital management, ERP and process automation, and building teams that run the numbers well.`,
   },
    {
     name: "Mohammed Ashik",
     role: "Group CTO",
     img: ashik,
-    writeup: `Mohammed Ashik is a Director at JSB Group, bringing valuable regional expertise and leadership experience that supports the group's expansion across key markets.`,
+    writeup: `An accomplished MBA in Data Science and Applied AI - With over 15 years of experience in technology, enterprise systems and digital transformation, Mohammed Ashik is a strategic technology leader specializing in AI-enabled ERP and enterprise platform architecture across the retail, distribution, FMCG and fitness sectors. An accomplished PhD professional with an MBA in Data Science and Applied AI, he brings together strong academic expertise and extensive hands-on experience in building intelligent, scalable and data-driven technology ecosystems.
+
+His expertise encompasses ERP and POS systems, enterprise integrations, AI and ML-driven analytics, intelligent MIS platforms, eCommerce solutions, cloud and microservices architecture, and cross-platform digital applications. His approach focuses on transforming complex business operations into integrated, automated and decision-driven digital platforms, enabling organizations to leverage technology and data for greater visibility, efficiency and measurable business outcomes.
+
+As Chief Technology Officer at JSB Group, he leads the architecture and delivery of integrated technology platforms across multiple business functions and sectors. His responsibilities span enterprise system architecture, ERP and POS integration, AI-driven analytics, business intelligence, cloud infrastructure, eCommerce platforms and API-led system integration. He also heads technology for Vanitykart Technologies DMCC, the Group’s Technology Division, delivering commercial POS solutions, Business Intelligence platforms and technology integrations for external customers.
+
+With a strong focus on applied AI and decision intelligence, Mohammed has developed systems that transform enterprise data into actionable insights through intelligent dashboards, forecasting models and automated workflows. His expertise in designing secure API ecosystems, data pipelines and microservices enables seamless connectivity between ERP, POS, commerce, loyalty and operational platforms.
+
+His career reflects a commitment to using technology not simply as an operational function, but as a strategic enabler for innovation, scalability and business growth—bridging the intersection of business operations, enterprise architecture and applied artificial intelligence to build future-ready technology platforms.`,
   },
   {
     name: "Supriya Hurkat",
