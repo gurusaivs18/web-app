@@ -598,3 +598,12 @@
   .logo-card-img-wrap img[data-brand="Booster Juice"] { width: 126px !important; height: auto !important; max-height: none !important; }
   .logo-card-img-wrap img[data-brand="Epic Fitouts"] { max-height: 55px !important; width: auto !important; max-width: none !important; }
 }
+/* ========================= RED LOGO GLOW TEST ========================= */
+
+/* ========================= RED CARD SHADOW TEST ========================= */
+
+.logo-card {
+  box-shadow:
+    0 5px 15px rgba(155, 28, 28, 0.35),
+    0 0 12px rgba(155, 28, 28, 0.25);
+}
