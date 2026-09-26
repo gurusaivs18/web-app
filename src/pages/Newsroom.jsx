@@ -4,37 +4,39 @@ import "../css/ScrollReveal.css";
 import { useScrollReveal } from "../hooks/useScrollReveal";
 import banner from "../assets/banners/newsroomnew.png";
 
-import newsroom01 from "../assets/newsroom/newsroom-01.png";
-import newsroom02 from "../assets/newsroom/newsroom-02.png";
+// import newsroom01 from "../assets/newsroom/newsroom-01.png";
+// import newsroom02 from "../assets/newsroom/newsroom-02.png";
 import newsroom03 from "../assets/newsroom/neeeleshnews.png";
-import snapnews from "../assets/newsroom/snapnews.png";
+// import snapnews from "../assets/newsroom/snapnews.png";
 import pressmansnews from "../assets/newsroom/pressmansnews1.png";
 import uaebullsnews from "../assets/newsroom/uaebullsnews1.png";
 import arabiannews from "../assets/newsroom/arabiannewsneelesh.png";
 import gulfnews from "../assets/newsroom/gulfnewsneeleshwar.png";
 import uaebullsarabnews from "../assets/newsroom/uaebullsnews1.png";
 import uaebullsgulf from "../assets/newsroom/uaebullsgulf.png";
+import pressmanslatest from "../assets/newsroom/pressmansnewslatest.png";
+
 
 
 
 
 const news = [
-  {
-    tag: "Latest Update",
-    title: "JSB Group Expands Into New Verticals in UAE",
-    subtitle: null,
-    image: newsroom01,
-    desc: "Continuing its growth trajectory, JSB Group has announced strategic expansions across multiple sectors including Technology and Sports.",
-    url: "https://example.com/news-1",
-  },
-  {
-    tag: "Press Release",
-    title: "New Retail Partnerships Announced Globally",
-    subtitle: null,
-    image: newsroom02,
-    desc: "JSB Group's retail arm has secured new international partnerships to strengthen its distribution network across the Middle East.",
-    url: "https://example.com/news-2",
-  },
+  // {
+  //   tag: "Latest Update",
+  //   title: "JSB Group Expands Into New Verticals in UAE",
+  //   subtitle: null,
+  //   image: newsroom01,
+  //   desc: "Continuing its growth trajectory, JSB Group has announced strategic expansions across multiple sectors including Technology and Sports.",
+  //   url: "https://example.com/news-1",
+  // },
+  // {
+  //   tag: "Press Release",
+  //   title: "New Retail Partnerships Announced Globally",
+  //   subtitle: null,
+  //   image: newsroom02,
+  //   desc: "JSB Group's retail arm has secured new international partnerships to strengthen its distribution network across the Middle East.",
+  //   url: "https://example.com/news-2",
+  // },
   {
     tag: "Media",
     title: "Neelesh Bhatnagar",
@@ -67,14 +69,14 @@ const news = [
     desc: "UAE Bulls become first founding franchise confirmed for new era of Abu Dhabi T10",
     url: "https://www.arabnews.com/sport/uae-bulls-become-first-founding-franchise-confirmed-for-new-era-of-abu-dhabi-t10-3001652",
   },
-  {
-    tag: "Fitness",
-    title: "Snap Fitness Expands to Fourth UAE Location",
-    subtitle: null,
-    image: snapnews,
-    desc: "Building on the success of its first UAE branch in 2018, Snap Fitness continues to bring world-class gym facilities to the Emirates.",
-    url: "https://example.com/news-5",
-  },
+  // {
+  //   tag: "Fitness",
+  //   title: "Snap Fitness Expands to Fourth UAE Location",
+  //   subtitle: null,
+  //   image: snapnews,
+  //   desc: "Building on the success of its first UAE branch in 2018, Snap Fitness continues to bring world-class gym facilities to the Emirates.",
+  //   url: "https://example.com/news-5",
+  // },
       {
     tag: "Sports",
     title: "UAE Bulls Win Championship Season 9",
@@ -93,11 +95,19 @@ const news = [
   },
     {
     tag: "Sports",
-    title: "UAE Bulls Win Championship Season 9",
-    subtitle: `UAE Bulls are the reigning Abu Dhabi T10 champions. `,
+    title: "UAE Bulls are the reigning Abu Dhabi T10 champions. ",
+    subtitle: null,
     image: uaebullsarabnews,
     desc: "Defending champions secure place under new Emirates Cricket Board long-term 50-year license model with Abu Dhabi Cricket & Sports Hub",
     url: "https://www.arabnews.com/sport/uae-bulls-become-first-founding-franchise-confirmed-for-new-era-of-abu-dhabi-t10-3001652",
+  },
+    {
+    tag: "F&B",
+    title: "An ode to the superb sandwich at Pressman’s Dubai",
+    subtitle: null,
+    image: pressmanslatest,
+    desc: "From gourmet to everyday fillings, this UAE original focuses on nutrition and flavour",
+    url: "https://www.khaleejtimes.com/uae/an-ode-to-the-superb-sandwich-at-pressmans-dubai",
   },
 ];
 
