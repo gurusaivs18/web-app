@@ -225,9 +225,7 @@
 /* ───────────────── MOBILE SMALL ───────────────── */
 
 @media (max-width: 480px) {
-  body {
-    padding-top: 64px;
-  }
+ 
   .navbar {
     height: 64px;
   }
