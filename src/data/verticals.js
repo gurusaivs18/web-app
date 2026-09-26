@@ -234,7 +234,7 @@ Harrison: Duty Free operator functioning under the brand Inov8 with its presence
   {
     title: "Indian Verticals",
 
-    description: "Write up Pending........ ",
+    description: null,
     items: [
       {
         name: "Yellow Chilli",
