@@ -15,7 +15,10 @@ export const team = {
     { name: "Sanjeev K Sinha", role: "Group CFO", order: 3 },
   
 
-    { name: "Mohammed Ashik", role: "Group CTO", order: 5 ,desc:`An accomplished MBA in Data Science and Applied AI - With over 15 years of experience in technology, enterprise systems and digital transformation, Mohammed Ashik is a strategic technology leader specializing in AI-enabled ERP and enterprise platform architecture across the retail, distribution, FMCG and fitness sectors. An accomplished PhD professional with an MBA in Data Science and Applied AI, he brings together strong academic expertise and extensive hands-on experience in building intelligent, scalable and data-driven technology ecosystems.
+    { name: "Mohammed Ashik", 
+      role: "Group CTO", 
+      order: 5 ,
+      desc:`An accomplished MBA in Data Science and Applied AI - With over 15 years of experience in technology, enterprise systems and digital transformation, Mohammed Ashik is a strategic technology leader specializing in AI-enabled ERP and enterprise platform architecture across the retail, distribution, FMCG and fitness sectors. An accomplished PhD professional with an MBA in Data Science and Applied AI, he brings together strong academic expertise and extensive hands-on experience in building intelligent, scalable and data-driven technology ecosystems.
 
 His expertise encompasses ERP and POS systems, enterprise integrations, AI and ML-driven analytics, intelligent MIS platforms, eCommerce solutions, cloud and microservices architecture, and cross-platform digital applications. His approach focuses on transforming complex business operations into integrated, automated and decision-driven digital platforms, enabling organizations to leverage technology and data for greater visibility, efficiency and measurable business outcomes.
 
@@ -50,7 +53,7 @@ His career reflects a commitment to using technology not simply as an operationa
     {
       name: "Deep Bhogal",
       role: "Partner",
-      desc: "30+ years in retail and distribution. Managing Director of Denaster.",
+      desc: "With over 30 years of commercial experience in supply and distribution across retail, software, and electronics industries, Deep brings a wealth of expertise to his role as Managing Director of Denaster. Under his leadership for more than two decades, Denaster has evolvedinto a multimillion-dollar SME with a workforce of over 100 employees, establishing itself as a key supplier and operator in the Middle East Duty Free and retail sectors.Deep's strategic vision and passion have driven Denaster to secure exclusive regional rights for renowned brands and leveraging his insights and industry knowledge to foster successful partnerships and drive growth.",
       order: 4,
     },
   ],

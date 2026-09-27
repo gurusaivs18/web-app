@@ -277,7 +277,7 @@ const directors = [
   {
     name: "Deep Bhogal",
     role: "Partner",
-    bio: "Over 30 years in supply and distribution across retail, software, and electronics. Led Denaster to become a multimillion-dollar SME with 100+ employees.",
+    bio: "With over 30 years of commercial experience in supply and distribution across retail, software, and electronics industries, Deep brings a wealth of expertise to his role as Managing Director of Denaster. Under his leadership for more than two decades, Denaster has evolved into a multimillion-dollar SME with a workforce of over 100 employees, establishing itself as a key supplier and operator in the Middle East Duty Free and retail sectors.Deep's strategic vision and passion have driven Denaster to secure exclusive regional rights for renowned brands and leveraging his insights and industry knowledge to foster successful partnerships and drive growth.",
     slug: "deep-bhogal",
     img: deep,
     order: 7,
