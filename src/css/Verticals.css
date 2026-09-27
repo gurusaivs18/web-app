@@ -132,11 +132,15 @@
 }
 
 /* 7-card category */
+/* 7-card category - 4 top, 3 centered below */
 @media (min-width: 993px) {
   .vertical-brands-grid:has(> .logo-card:nth-child(7):last-child) {
-    max-width: 700px;
+    max-width: 920px;
     margin-inline: auto;
 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 12px;
   }
 }
