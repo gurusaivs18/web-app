@@ -22,8 +22,6 @@
 .vertical-category {
   background: var(--white);
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-
-  /* REDUCED SECTION SPACING */
   padding-block: 0.8rem !important;
 }
 
@@ -63,14 +61,12 @@
   width: 100%;
   display: block;
 
-  /* RED OUTER GLOW */
   text-shadow:
     0 3px 5px rgba(90, 15, 15, 0.45),
     0 5px 10px rgba(122, 21, 21, 0.28),
     0 0 8px rgba(122, 21, 21, 0.18);
 }
 
-/* Accent line */
 .vertical-heading::after {
   content: "";
   display: block;
@@ -127,12 +123,14 @@
 
   gap: 12px;
 
-  /* REDUCED SPACE ABOVE LOGOS */
   margin-top: 8px !important;
 }
 
-/* 7-card category */
-/* 7-card category - 4 top, 3 centered below */
+/* =========================================================
+   DESKTOP
+   7 CARDS = 4 TOP + 3 CENTERED BELOW
+   ========================================================= */
+
 @media (min-width: 993px) {
   .vertical-brands-grid:has(> .logo-card:nth-child(7):last-child) {
     max-width: 920px;
@@ -141,6 +139,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+
     gap: 12px;
   }
 }
@@ -150,7 +149,7 @@
    ========================================================= */
 
 .logo-card {
-  width:210px;
+  width: 210px;
   min-height: 115px;
   height: auto;
 
@@ -221,7 +220,11 @@
   max-height: none;
 
   object-fit: contain;
+  object-position: center;
+
   mix-blend-mode: multiply;
+
+  margin-inline: auto;
 
   transition: transform 0.3s ease;
 }
@@ -248,6 +251,7 @@
 .logo-card-img-wrap img[data-brand="VIP Cosmetics"] {
   height: 90px;
   width: auto;
+  margin-inline: auto;
 }
 
 .logo-card-img-wrap img[data-brand="Denaster"] {
@@ -498,6 +502,8 @@
   object-fit: contain;
   object-position: center;
 
+  margin-inline: auto;
+
   mix-blend-mode: multiply;
 }
 
@@ -626,6 +632,10 @@
   max-height: none;
 
   object-fit: contain;
+  object-position: center;
+
+  margin-inline: auto;
+
   mix-blend-mode: multiply;
 
   transition: transform 0.3s ease;
@@ -795,6 +805,7 @@
    ========================================================= */
 
 @media (max-width: 992px) {
+
   .vertical-description {
     font-size: 15px;
   }
@@ -810,12 +821,14 @@
 }
 
 /* =========================================================
-   MOBILE 480PX
+   MOBILE - 480PX
+   2 CARDS PER ROW
+   TALLER + NARROWER
+   ODD LAST CARD CENTERED
    ========================================================= */
 
 @media (max-width: 480px) {
 
-  /* COMPACT CATEGORY SPACING */
   .vertical-category {
     padding-top: 0.5rem !important;
     padding-bottom: 0.6rem !important;
@@ -836,7 +849,6 @@
 
     line-height: 1.1;
 
-    /* Slightly controlled glow */
     text-shadow:
       0 3px 5px rgba(90, 15, 15, 0.45),
       0 5px 10px rgba(122, 21, 21, 0.28),
@@ -857,68 +869,193 @@
     margin-bottom: 0 !important;
   }
 
-  .vertical-brands-grid {
-    gap: 7px;
+  /* =======================================================
+     MOBILE BRAND GRID
+     ======================================================= */
 
-    margin-top: 6px !important;
+  .vertical-brands-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 8px;
+
+    width: 100%;
+
+    margin-top: 7px !important;
+
+    justify-items: center;
   }
 
   /* =======================================================
-     LOGO CARDS
+     MOBILE FEATURED GRID
      ======================================================= */
 
-  .logo-card,
-  .featured-logo-card {
-    display: flex;
-    flex-direction: column;
+  .featured-logos-grid {
+    display: grid;
 
-    min-height: 85px;
-    height: auto;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
 
-    padding: 6px 8px;
+    gap: 8px;
+
+    width: 100%;
+
+    justify-items: center;
+  }
+
+  /* =======================================================
+     CENTER ODD LAST CARD
+     ======================================================= */
+
+  .vertical-brands-grid > .logo-card:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+
+    justify-self: center;
+
+    width: 42.5%;
+  }
+
+  .featured-logos-grid > .featured-logo-card:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+
+    justify-self: center;
+
+    width: 42.5%;
+  }
+
+  /* =======================================================
+     MOBILE LOGO CARDS
+     NARROWER + TALLER
+     ======================================================= */
+
+  .logo-card {
+    width: 85%;
+    min-width: 0;
+
+    min-height: 105px;
+    height: 105px;
+
+    padding: 7px 6px;
 
     border-radius: 8px;
+
+    display: flex;
+    flex-direction: column;
 
     justify-content: flex-start;
     align-items: center;
 
     gap: 0;
+
+    justify-self: center;
   }
+
+  .featured-logo-card {
+    width: 85%;
+    min-width: 0;
+
+    min-height: 105px;
+    height: 105px;
+
+    padding: 7px 6px;
+
+    border-radius: 8px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: flex-start;
+    align-items: center;
+
+    gap: 0;
+
+    justify-self: center;
+  }
+
+  /* =======================================================
+     MOBILE IMAGE WRAPPER
+     ======================================================= */
 
   .logo-card-img-wrap,
   .featured-logo-card .logo-card-img-wrap {
     width: 100%;
 
-    height: 62px;
-    min-height: 62px;
-    max-height: 62px;
+    height: 72px;
+    min-height: 72px;
+    max-height: 72px;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
     overflow: visible;
+
+    margin-inline: auto;
   }
+
+  .logo-card-img-wrap img,
+  .featured-logo-card img {
+    display: block;
+
+    object-fit: contain;
+    object-position: center;
+
+    margin-inline: auto;
+  }
+
+  /* =======================================================
+     VIP COSMETICS - EXPLICIT MOBILE CENTERING
+     ======================================================= */
+
+  .logo-card-img-wrap img[data-brand="VIP Cosmetics"] {
+    width: auto !important;
+    height: 75px !important;
+
+    /* max-width: 75px !important; */
+    max-height: 75px !important;
+
+    object-fit: contain;
+    object-position: center;
+
+    display: block;
+
+    margin-left: auto !important;
+    margin-right: auto !important;
+
+    transform: none;
+  }
+
+  /* =======================================================
+     MOBILE CARD TEXT
+     ======================================================= */
 
   .logo-card-text,
   .featured-logo-card .logo-card-text {
     width: 100%;
 
     display: flex;
-    align-items: flex-start;
+
+    align-items: center;
     justify-content: center;
 
     text-align: center;
 
     font-size: 10px;
+
     letter-spacing: 0.15px;
 
-    margin-top: 4px;
-    padding-block: 1rem;
+    line-height: 1.2;
+
+    margin-top: 3px;
+
+    padding-block: 0;
+
+    overflow: hidden;
   }
 
   /* =======================================================
-     LOGO GRID OVERRIDES
+     MOBILE LOGO SIZES
      ======================================================= */
 
   .logo-card-img-wrap img[data-brand="Pressman's Sandwiches"] {
@@ -935,12 +1072,6 @@
 
   .logo-card-img-wrap img[data-brand="Target One"] {
     max-height: 58px !important;
-    width: auto !important;
-    max-width: none !important;
-  }
-
-  .logo-card-img-wrap img[data-brand="VIP Cosmetics"] {
-    max-height: 75px !important;
     width: auto !important;
     max-width: none !important;
   }
@@ -1076,7 +1207,7 @@
   }
 
   /* =======================================================
-     FEATURED CARD OVERRIDES
+     FEATURED CARD LOGO SIZES
      ======================================================= */
 
   .featured-logo-card img[data-brand="Pressman's Sandwiches"] {
@@ -1141,7 +1272,7 @@
 }
 
 /* =========================================================
-   VERY SMALL MOBILE 360PX
+   VERY SMALL MOBILE - 360PX
    ========================================================= */
 
 @media (max-width: 360px) {
@@ -1153,7 +1284,6 @@
 
   .vertical-heading {
     font-size: 22px;
-
     margin-bottom: 2px !important;
   }
 
@@ -1162,38 +1292,126 @@
     line-height: 1.5;
   }
 
-  .vertical-brands-grid,
-  .featured-logos-grid {
-    display: flex;
-    flex-wrap: wrap;
+  /* =======================================================
+     2 COLUMN GRID
+     ======================================================= */
 
-    justify-content: center;
+  .vertical-brands-grid {
+    display: grid;
 
-    gap: 5px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 6px;
+
+    width: 100%;
 
     margin-top: 5px !important;
+
+    justify-items: center;
   }
 
-  .logo-card,
-  .featured-logo-card {
-    flex: 0 0 auto;
+  .featured-logos-grid {
+    display: grid;
 
-    width: auto;
-    min-width: 88px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
 
-    min-height: 85px;
-    height: auto;
+    gap: 6px;
 
-    padding: 6px 8px;
+    width: 100%;
+
+    justify-items: center;
+  }
+
+  /* =======================================================
+     CENTER ODD LAST CARD
+     ======================================================= */
+
+  .vertical-brands-grid > .logo-card:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+
+    justify-self: center;
+
+    width: 44%;
+  }
+
+  .featured-logos-grid > .featured-logo-card:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+
+    justify-self: center;
+
+    width: 44%;
+  }
+
+  /* =======================================================
+     360PX CARDS
+     ======================================================= */
+
+  .logo-card {
+    width: 88%;
+    min-width: 0;
+
+    min-height: 100px;
+    height: 100px;
+
+    padding: 6px 5px;
 
     border-radius: 8px;
+
+    justify-self: center;
   }
 
-  .logo-card-img-wrap {
-    min-height: 0;
-    max-height: none;
+  .featured-logo-card {
+    width: 88%;
+    min-width: 0;
+
+    min-height: 100px;
+    height: 100px;
+
+    padding: 6px 5px;
+
+    border-radius: 8px;
+
+    justify-self: center;
+  }
+
+  .logo-card-img-wrap,
+  .featured-logo-card .logo-card-img-wrap {
+    width: 100%;
+
+    height: 68px;
+    min-height: 68px;
+    max-height: 68px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
 
     overflow: visible;
+
+    margin-inline: auto;
+  }
+
+  /* =======================================================
+     VIP COSMETICS - 360PX
+     ======================================================= */
+
+  .logo-card-img-wrap img[data-brand="VIP Cosmetics"] {
+    width: auto !important;
+    height: 68px !important;
+
+    max-width: 68px !important;
+    max-height: 68px !important;
+
+    object-fit: contain;
+    object-position: center;
+
+    display: block;
+
+    margin-left: auto !important;
+    margin-right: auto !important;
+
+    transform: none;
   }
 
   .logo-card-img-wrap img,
@@ -1209,6 +1427,10 @@
     letter-spacing: 0.1px;
 
     margin-top: 2px;
+
+    padding-block: 0;
+
+    line-height: 1.15;
   }
 
   /* =======================================================
@@ -1233,12 +1455,7 @@
     max-width: none !important;
   }
 
-  .logo-card-img-wrap img[data-brand="VIP Cosmetics"] {
-    max-height: 64px !important;
-    width: auto !important;
-    max-width: none !important;
-  }
-
+  
   .logo-card-img-wrap img[data-brand="Denaster"] {
     max-height: 66px !important;
     width: auto !important;
