@@ -33,6 +33,14 @@ import icon02 from "../assets/icons-impact/icon-02.png";
 import icon03 from "../assets/icons-impact/icon-03.png";
 import icon04 from "../assets/icons-impact/icon-04.png";
 
+
+// home page image 
+import pressmanshomeimage from "../assets/homepageimg/pressmansimagehome.jpeg";
+// import groupPhoto2 from "../assets/group/group-photo-2.jpg";
+import motivimagehome from "../assets/homepageimg/motivimagehome.jpeg";
+import snapimagehome from "../assets/homepageimg/snapimagehome.jpeg";
+import zerogimagehome from "../assets/homepageimg/zerogimagehome.jpeg";
+
 /* ─── CEO Writeup ─────────────────────────────────────────────── */
 const ceoWriteup = `Neelesh Bhatnagar is an entrepreneur with over three decades of experience spanning the Middle East and India. As the CEO & Founder of JSB Group, he has built a diversified conglomerate with interests across retail, fitness, hospitality, healthcare, and technology.
 
@@ -388,29 +396,14 @@ function StatBox({ item, icon, index, trigger }) {
   );
 }
 
-function PhotoPlaceholder({ label = "Add Group Photo" }) {
+function GroupPhoto({ image, alt }) {
   return (
-    <div className="group-photo-placeholder">
-      <svg viewBox="0 0 48 48" fill="none">
-        <rect
-          x="4"
-          y="8"
-          width="40"
-          height="32"
-          rx="3"
-          stroke="currentColor"
-          strokeWidth="2"
-        />
-        <circle cx="18" cy="20" r="5" stroke="currentColor" strokeWidth="2" />
-        <path
-          d="M4 36l10-10 8 8 8-10 14 12"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinejoin="round"
-        />
-      </svg>
-      <span>{label}</span>
-    </div>
+    <img
+      src={image}
+      alt={alt}
+      className="group-photo-image"
+      loading="lazy"
+    />
   );
 }
 
@@ -848,39 +841,65 @@ function Home() {
           </div>
         </div>
       </section>
+    
       {/* ── GROUP PHOTOS ── */}
-      <section className="home-group-photos">
-        <div className="container">
-          <div className="group-photo-grid">
-            <div className="gp-col-left" data-reveal="left">
-              <div className="gp-card gp-card--tall">
-                <PhotoPlaceholder />
-              </div>
-            </div>
-            <div className="gp-col-mid" data-reveal="up" data-delay="150">
-              <div className="gp-card gp-card--mid">
-                <PhotoPlaceholder />
-              </div>
-            </div>
-            <div className="gp-col-right">
-              <div
-                className="gp-card gp-card--sm"
-                data-reveal="right"
-                data-delay="200"
-              >
-                <PhotoPlaceholder />
-              </div>
-              <div
-                className="gp-card gp-card--sm"
-                data-reveal="right"
-                data-delay="350"
-              >
-                <PhotoPlaceholder />
-              </div>
-            </div>
-          </div>
+<section className="home-group-photos">
+  <div className="container">
+    <div className="group-photo-grid">
+
+      {/* LEFT LARGE IMAGE */}
+      <div className="gp-col-left" data-reveal="left">
+        <div className="gp-card gp-card--tall">
+          <GroupPhoto
+            image={snapimagehome}
+            alt="JSB Group"
+          />
         </div>
-      </section>
+      </div>
+
+      {/* MIDDLE LARGE IMAGE */}
+      <div
+        className="gp-col-mid"
+        data-reveal="up"
+        data-delay="150"
+      >
+        <div className="gp-card gp-card--mid">
+          <GroupPhoto
+            image={zerogimagehome}
+            alt="JSB Group"
+          />
+        </div>
+      </div>
+
+      {/* RIGHT TWO IMAGES */}
+      <div className="gp-col-right">
+
+        <div
+          className="gp-card gp-card--sm"
+          data-reveal="right"
+          data-delay="200"
+        >
+          <GroupPhoto
+            image={pressmanshomeimage}
+            alt="JSB Group"
+          />
+        </div>
+
+        <div
+          className="gp-card gp-card--sm"
+          data-reveal="right"
+          data-delay="350"
+        >
+          <GroupPhoto
+            image={motivimagehome}
+            alt="JSB Group"
+          />
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
       {/* ── TESTIMONIALS ── */}
       <section className="home-testimonials">
         <div className="testimonials-overlay">

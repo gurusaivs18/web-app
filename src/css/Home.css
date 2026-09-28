@@ -616,159 +616,329 @@
   }
 }
 
-/* ================= GROUP PHOTO GRID ================= */
+
+/* =========================================================
+   GROUP PHOTO GRID
+   ========================================================= */
+
 .home-group-photos {
+  width: 100%;
   background: var(--white);
-  padding-top: 0;
-  margin-top: 0;
-  /* padding now controlled by global.css (.home-group-photos) */
+  padding: 40px 0;
+  margin: 0;
 }
+
+/* =========================================================
+   DESKTOP GRID
+   ========================================================= */
+
 .group-photo-grid {
   display: grid;
   grid-template-columns: 38fr 37fr 25fr;
   gap: 16px;
-  height: clamp(320px, 36vw, 560px);
+
+  width: 100%;
+  height: auto;
+
+  align-items: start;
 }
+
+/* LEFT + MIDDLE */
 
 .gp-col-left,
 .gp-col-mid {
-  display: flex;
-  flex-direction: column;
-  background: grey;
+  min-width: 0;
+  width: 100%;
+  height: auto;
+  display: block;
 }
+
+/* RIGHT COLUMN */
+
 .gp-col-right {
+  min-width: 0;
+  width: 100%;
+  height: auto;
+
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 
+/* =========================================================
+   IMAGE CARD
+   ========================================================= */
+
 .gp-card {
-  border-radius: 12px;
+  position: relative;
+
+  width: 100%;
+  height: auto;
+
   overflow: hidden;
 
-  position: relative;
-  flex-shrink: 0;
-}
-.gp-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  border-radius: 12px;
+
+  background: transparent;
+
   display: block;
+}
+
+/*
+   IMPORTANT:
+   The card does NOT have a fixed height.
+
+   The image controls the card height.
+   This prevents:
+   - white/grey space
+   - stretched cards
+   - cropped images
+*/
+
+.gp-card--tall,
+.gp-card--mid,
+.gp-col-right .gp-card--sm {
+  width: 100%;
+  height: auto;
+}
+
+/* =========================================================
+   ACTUAL IMAGE
+   ========================================================= */
+
+.group-photo-image {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  /*
+    Show the COMPLETE image.
+    No cropping.
+    No forced height.
+  */
+  object-fit: contain;
+  object-position: center;
+
+  background: transparent;
+
   transition: transform 0.5s ease;
 }
-.gp-card:hover img {
-  transform: scale(1.04);
+
+/* Prevent hover from creating unwanted visual overflow */
+
+.gp-card:hover .group-photo-image {
+  transform: scale(1.01);
 }
 
-.gp-card--tall {
-  flex: 1;
-  height: 100%;
-}
+/* =========================================================
+   REMOVE OLD PLACEHOLDER
+   ========================================================= */
 
-.gp-col-mid {
-  justify-content: center;
-}
-.gp-card--mid {
-  height: 82%;
-}
-
-.gp-card--sm {
-  flex: 1;
-  background: grey;
-}
-.vertical-cat-card {
-  position: relative;
-  background-size: cover;
-  background-position: center;
-  background-color: var(
-    --color-primary
-  ); /* fallback while image loads / if missing */
-  border-radius: var(--border-radius-lg);
-  padding: 24px 16px;
-  min-height: 130px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  cursor: pointer;
-  transition:
-    transform var(--ease-normal),
-    box-shadow var(--ease-normal);
-}
 .group-photo-placeholder {
-  width: 100%;
-  height: 100%;
-  background: var(--gray-light);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  color: var(--text-light);
-}
-.group-photo-placeholder svg {
-  width: 44px;
-  height: 44px;
-  color: var(--text-light);
-  opacity: 0.5;
-}
-.group-photo-placeholder span {
-  font-family: var(--font-heading);
-  font-size: 10px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  opacity: 0.5;
+  display: none;
 }
 
-@media (max-width: 900px) {
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+  .home-group-photos {
+    padding: 32px 0;
+  }
+
   .group-photo-grid {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
-    height: auto;
+    gap: 14px;
   }
+
+  /* LEFT */
+
   .gp-col-left {
     grid-column: 1;
     grid-row: 1 / 3;
-    height: 400px;
   }
+
+  /* MIDDLE */
+
   .gp-col-mid {
     grid-column: 2;
     grid-row: 1;
-    height: 190px;
   }
+
+  /* RIGHT */
+
   .gp-col-right {
     grid-column: 2;
     grid-row: 2;
-    height: 190px;
-    flex-direction: row;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 14px;
   }
-  .gp-card--mid {
-    height: 100%;
-  }
-}
-@media (max-width: 600px) {
-  .group-photo-grid {
-    grid-template-columns: 1fr;
+
+  .gp-col-right .gp-card--sm {
+    width: 100%;
     height: auto;
   }
-  .gp-col-left {
-    grid-column: 1;
-    grid-row: auto;
-    height: 220px;
-  }
-  .gp-col-mid {
-    grid-column: 1;
-    grid-row: auto;
-    height: 180px;
-  }
-  .gp-col-right {
-    grid-column: 1;
-    grid-row: auto;
-    height: 180px;
-    flex-direction: row;
+
+  .gp-card {
+    border-radius: 10px;
   }
 }
+
+
+/* =========================================================
+   SMALL TABLET
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  .home-group-photos {
+    padding: 28px 0;
+  }
+
+  .group-photo-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .gp-col-left {
+    grid-column: 1;
+    grid-row: 1 / 3;
+  }
+
+  .gp-col-mid {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .gp-col-right {
+    grid-column: 2;
+    grid-row: 2;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 12px;
+  }
+
+  .gp-card {
+    border-radius: 9px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .home-group-photos {
+    padding: 24px 0;
+  }
+
+  .group-photo-grid {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    height: auto;
+
+    gap: 12px;
+  }
+
+  /* LEFT IMAGE */
+
+  .gp-col-left {
+    width: 100%;
+    height: auto;
+
+    display: block;
+  }
+
+  /* MIDDLE IMAGE */
+
+  .gp-col-mid {
+    width: 100%;
+    height: auto;
+
+    display: block;
+  }
+
+  /* RIGHT IMAGES */
+
+  .gp-col-right {
+    width: 100%;
+    height: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 12px;
+  }
+
+  /* ALL CARDS */
+
+  .gp-card,
+  .gp-card--tall,
+  .gp-card--mid,
+  .gp-col-right .gp-card--sm {
+    width: 100%;
+    height: auto;
+
+    aspect-ratio: auto;
+  }
+
+  /* ALL IMAGES */
+
+  .group-photo-image {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    object-fit: contain;
+    object-position: center;
+
+    background: transparent;
+  }
+
+  .gp-card {
+    border-radius: 8px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+  .home-group-photos {
+    padding: 20px 0;
+  }
+
+  .group-photo-grid {
+    gap: 10px;
+  }
+
+  .gp-col-right {
+    gap: 10px;
+  }
+
+  .gp-card {
+    border-radius: 7px;
+  }
+}
+
+
 /* ================= CEO MODAL ================= */
 .ceo-modal-overlay {
   position: fixed;
