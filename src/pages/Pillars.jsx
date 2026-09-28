@@ -12,7 +12,7 @@ import supriyaImg from "../assets/Partners/supriya-assets-1.png";
 import naz from "../assets/Partners/Nas-asset-1.png";
 import ashik from "../assets/Partners/ashiknew.png";
 import { createPortal } from "react-dom";
-import banner from "../assets/banners/pillarsnew.png";
+import banner from "../assets/banners/pillarsupdated.jpeg";
 
 const ceoWriteup = `Neelesh Bhatnagar is an entrepreneur with over three decades of experience spanning the Middle East and India. As the CEO & Founder of JSB Group, he has built a diversified conglomerate with interests across retail, fitness, hospitality, healthcare, and technology.
 
