@@ -41,11 +41,11 @@ function Footer() {
               <li>
                 <Link to="/about">About Us</Link>
               </li>
-              <li>
+          
              <li>
                 <Link to="/pillars">Our Team</Link>
               </li>
-              </li>
+              
               <li>
                 <Link to="/verticals">Services</Link>
               </li>

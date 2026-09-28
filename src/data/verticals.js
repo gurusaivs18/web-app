@@ -3,7 +3,7 @@ export const verticals = [
     title: "Investment",
 
     description:
-      "Our technology division develops customized software solutions that help businesses improve operational efficiency and digital transformation.",
+      "Driving Innovation, Empowering Businesses! ",
 
     items: [
       {
@@ -12,7 +12,7 @@ export const verticals = [
         link: "https://nbventuresme.com/",
 
         description:
-          "Nb Ventures is a leading venture capital firm that invests in innovative startups and emerging businesses across various industries.",
+          "NB Ventures, rooted in the legacy and spirit of pioneering entrepreneurs, is a versatile venture capital company that funds fledgling startups and flourishing enterprises across diverse sectors. Our relentless pursuit of novelty propels us to collaborate with visionary founders who are at the helm of tomorrow's enterprises. We have invested in more than 50 startups and added tremendous value to the founders by working closely with them and helping them raise additional growth capital. With the robust backing of Mr. Neeleshwar Bhatnagar, we have been expanding and diversifying our investment portfolio since the year 2016.",
       },
     ],
   },
