@@ -80,7 +80,7 @@
 .perk-card {
   background: var(--gray-light);
   border-radius: 8px;
-  border: solid 1px darkred;
+  border: solid 0.5px lightgrey;
   overflow: hidden;
   text-align: center;
   display: flex;

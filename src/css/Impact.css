@@ -84,7 +84,7 @@
 
 .impact-stat-box {
   background: var(--gray-light);
-  border: 1.5px solid var(--red);
+  border: 0.5px solid lightgrey;
   border-radius: 8px;
   text-align: center;
 
@@ -179,7 +179,7 @@
 }
 
 .impact-story-card {
-  border: 1.5px solid var(--red);
+  border: 0.5px solid lightgrey;
   border-radius: 8px;
 
   min-height: 145px;
