@@ -20,7 +20,7 @@ import visionImg from "../assets/About us/visionnew.png";
 import missionImg from "../assets/About us/missionnew.png";
 import purposeImg from "../assets/About us/purposenew.png";
 import rushab from "../assets/Partners/rushab-assets-1.png";
-import sinha from "../assets/Partners/Sanjeev.1.jpeg";
+import sinha from "../assets/Partners/sanjeevupdated.jpeg";
 import sanal from "../assets/Partners/sanal-assets-1.png";
 import deep from "../assets/Partners/deep01.jpeg";
 import supriyaImg from "../assets/Partners/supriya-assets-1.png";

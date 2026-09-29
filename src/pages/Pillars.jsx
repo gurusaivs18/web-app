@@ -6,7 +6,7 @@ import { useScrollReveal } from "../hooks/useScrollReveal";
 import ceoImage from "../assets/jsbGroupWebsite/ceoHomeBanner.webp";
 import rushabImg from "../assets/Partners/rushab-assets-1.png";
 import deepImg from "../assets/Partners/deep01.jpeg";
-import sanjeevImg from "../assets/Partners/Sanjeev.1.jpeg";
+import sanjeevImg from "../assets/Partners/sanjeevupdated.jpeg";
 import sanalImg from "../assets/Partners/sanal-assets-1.png";
 import supriyaImg from "../assets/Partners/supriya-assets-1.png";
 import naz from "../assets/Partners/Nas-asset-1.png";
