@@ -17,7 +17,7 @@ import ashik from "../assets/Partners/ashiknew.png";
  import visionImg from "../assets/About us/visionnew.png";
 import missionImg from "../assets/About us/missionnew.png";
 import purposeImg from "../assets/About us/purposenew.png";
-import organisationVideo from "../assets/About us/anorganisationvideo.MP4";
+import organisationVideo from "../assets/About us/corporatevideo.mp4";
 import banner from "../assets/banners/aboutbannernew1.png";
 
 
