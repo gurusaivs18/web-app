@@ -17,7 +17,7 @@ import ashik from "../assets/Partners/ashiknew.png";
  import visionImg from "../assets/About us/visionnew.png";
 import missionImg from "../assets/About us/missionnew.png";
 import purposeImg from "../assets/About us/purposenew.png";
-import organisationImg from "../assets/About us/organisationnew.png";
+import organisationVideo from "../assets/About us/anorganisationvideo.MP4";
 import banner from "../assets/banners/aboutbannernew1.png";
 
 
@@ -254,14 +254,19 @@ function About() {
     </div>
 
     <div className="about-who-grid">
-      <div className="about-who-img-placeholder" data-reveal="left">
-        <img
-          src={organisationImg}
-          alt="JSB Group Organisation"
-          className="about-who-image"
-        />
-      </div>
-
+<div className="about-who-img-placeholder" data-reveal="left">
+  <video
+    className="about-who-video"
+    autoPlay
+    muted
+    loop
+    playsInline
+    preload="metadata"
+  >
+    <source src={organisationVideo} type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+</div>
       <div
         className="about-who-text"
         data-reveal="right"
