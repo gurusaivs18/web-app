@@ -16,30 +16,30 @@ import ceoImage from "../assets/jsbGroupWebsite/ceoHomeBanner.webp";
 // import vcImg from "../assets/card-images/venture.png";
 
 // break
-import visionImg from "../assets/About us/visionnew.png";
-import missionImg from "../assets/About us/missionnew.png";
-import purposeImg from "../assets/About us/purposenew.png";
-import rushab from "../assets/Partners/rushab-assets-1.png";
-import sinha from "../assets/Partners/sanjeevupdated.jpeg";
-import sanal from "../assets/Partners/sanal-assets-1.png";
-import deep from "../assets/Partners/deep01.jpeg";
-import supriyaImg from "../assets/Partners/supriya-assets-1.png";
-import naz from "../assets/Partners/Nas-asset-1.png";
-import ashik from "../assets/Partners/ashiknew.png";
+import visionImg from "../assets/About us/visionnew.webp";
+import missionImg from "../assets/About us/missionnew.webp";
+import purposeImg from "../assets/About us/purposenew.webp";
+import rushab from "../assets/Partners/rushab-assets-1.webp";
+import sinha from "../assets/Partners/sanjeevupdated.webp";
+import sanal from "../assets/Partners/sanal-assets-1.webp";
+import deep from "../assets/Partners/deep01.webp";
+import supriyaImg from "../assets/Partners/supriya-assets-1.webp";
+import naz from "../assets/Partners/Nas-asset-1.webp";
+import ashik from "../assets/Partners/ashiknew.webp";
 
 // Impact icons
-import icon01 from "../assets/icons-impact/icon-01.png";
-import icon02 from "../assets/icons-impact/icon-02.png";
-import icon03 from "../assets/icons-impact/icon-03.png";
-import icon04 from "../assets/icons-impact/icon-04.png";
+import icon01 from "../assets/icons-impact/icon-01.webp";
+import icon02 from "../assets/icons-impact/icon-02.webp";
+import icon03 from "../assets/icons-impact/icon-03.webp";
+import icon04 from "../assets/icons-impact/icon-04.webp";
 
 
 // home page image 
-import pressmanshomeimage from "../assets/homepageimg/pressmansimagehome.jpeg";
+import pressmanshomeimage from "../assets/homepageimg/pressmansimagehome.webp";
 // import groupPhoto2 from "../assets/group/group-photo-2.jpg";
-import motivimagehome from "../assets/homepageimg/motivimagehome.jpeg";
-import snapimagehome from "../assets/homepageimg/snapimagehome.jpeg";
-import zerogimagehome from "../assets/homepageimg/zerogimagehome.jpeg";
+import motivimagehome from "../assets/homepageimg/motivimagehome.webp";
+import snapimagehome from "../assets/homepageimg/snapimagehome.webp";
+import zerogimagehome from "../assets/homepageimg/zerogimagehome.webp";
 
 /* ─── CEO Writeup ─────────────────────────────────────────────── */
 const ceoWriteup = `Neelesh Bhatnagar is an entrepreneur with over three decades of experience spanning the Middle East and India. As the CEO & Founder of JSB Group, he has built a diversified conglomerate with interests across retail, fitness, hospitality, healthcare, and technology.

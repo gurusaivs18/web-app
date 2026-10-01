@@ -2,19 +2,19 @@
 import "../css/Newsroom.css";
 import "../css/ScrollReveal.css";
 import { useScrollReveal } from "../hooks/useScrollReveal";
-import banner from "../assets/banners/newsroomnew.png";
+import banner from "../assets/banners/newsroomnew.webp";
 
 // import newsroom01 from "../assets/newsroom/newsroom-01.png";
 // import newsroom02 from "../assets/newsroom/newsroom-02.png";
-import newsroom03 from "../assets/newsroom/neeeleshnews.png";
+import newsroom03 from "../assets/newsroom/neeeleshnews.webp";
 // import snapnews from "../assets/newsroom/snapnews.png";
-import pressmansnews from "../assets/newsroom/pressmansnews1.png";
-import uaebullsnews from "../assets/newsroom/uaebullsnews1.png";
-import arabiannews from "../assets/newsroom/arabiannewsneelesh.png";
-import gulfnews from "../assets/newsroom/gulfnewsneeleshwar.png";
-import uaebullsarabnews from "../assets/newsroom/uaebullsnews1.png";
-import uaebullsgulf from "../assets/newsroom/uaebullsgulf.png";
-import pressmanslatest from "../assets/newsroom/pressmansnewslatest.png";
+import pressmansnews from "../assets/newsroom/pressmansnews1.webp";
+import uaebullsnews from "../assets/newsroom/uaebullsnews1.webp";
+import arabiannews from "../assets/newsroom/arabiannewsneelesh.webp";
+import gulfnews from "../assets/newsroom/gulfnewsneeleshwar.webp";
+import uaebullsarabnews from "../assets/newsroom/uaebullsnews1.webp";
+import uaebullsgulf from "../assets/newsroom/uaebullsgulf.webp";
+import pressmanslatest from "../assets/newsroom/pressmansnewslatest.webp";
 
 
 

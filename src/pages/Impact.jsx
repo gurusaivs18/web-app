@@ -4,14 +4,14 @@ import "../css/ScrollReveal.css";
 import { useScrollReveal } from "../hooks/useScrollReveal";
 
 // Impact icons
-import icon01 from "../assets/icons-impact/icon-01.png";
-import icon02 from "../assets/icons-impact/icon-02.png";
-import icon03 from "../assets/icons-impact/icon-03.png";
-import icon04 from "../assets/icons-impact/icon-04.png";
-import icon05 from "../assets/icons-impact/icon-05.png";
-import icon06 from "../assets/icons-impact/icon-06.png";
-import icon07 from "../assets/icons-impact/icon-07.png";
-import banner from "../assets/banners/impactnew.png";
+import icon01 from "../assets/icons-impact/icon-01.webp";
+import icon02 from "../assets/icons-impact/icon-02.webp";
+import icon03 from "../assets/icons-impact/icon-03.webp";
+import icon04 from "../assets/icons-impact/icon-04.webp";
+import icon05 from "../assets/icons-impact/icon-05.webp";
+import icon06 from "../assets/icons-impact/icon-06.webp";
+import icon07 from "../assets/icons-impact/icon-07.webp";
+import banner from "../assets/banners/impactnew.webp";
 
 const statIcons = [
   icon01,

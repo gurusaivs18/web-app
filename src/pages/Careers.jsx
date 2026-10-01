@@ -2,10 +2,10 @@ import "../css/Careers.css";
 import "../css/ScrollReveal.css";
 import { useScrollReveal } from "../hooks/useScrollReveal";
 import { Link } from "react-router-dom";
-import banner from "../assets/banners/careernew.png";
-import careers01 from "../assets/careers/careers-01.png";
-import careers02 from "../assets/careers/careers-02.png";
-import careers03 from "../assets/careers/careers-03.png";
+import banner from "../assets/banners/careernew.webp";
+import careers01 from "../assets/careers/careers-01.webp";
+import careers02 from "../assets/careers/careers-02.webp";
+import careers03 from "../assets/careers/careers-03.webp";
 const perks = [
   {
     title: "General Inquiries",

@@ -6,8 +6,8 @@ import { verticals } from "../data/verticals";
 import { useLocation } from "react-router-dom";
 
 
-import banner from "../assets/banners/verticalsnew.png";
-import uaeBulls from "../assets/Brand-Logos/UAE_BULL_REAL.jpeg";
+import banner from "../assets/banners/verticalsnew.webp";
+import uaeBulls from "../assets/Brand-Logos/UAE_BULL_REAL.webp";
 import motiv8 from "../assets/Brand-Logos/motiv8.webp";
 import pressmans from "../assets/Brand-Logos/pressmans (2).webp";
 import vkTech from "../assets/Brand-Logos/vkT.webp";
@@ -16,7 +16,7 @@ import denaster from "../assets/Brand-Logos/denaster.webp";
 import inov8 from "../assets/Brand-Logos/inov8.webp";
 import garmin from "../assets/Brand-Logos/garmin.webp";
 import zeroG from "../assets/Brand-Logos/zeroG.webp";
-import bvb from "../assets/Brand-Logos/bvb.jpeg";
+import bvb from "../assets/Brand-Logos/bvb.webp";
 import snap from "../assets/Brand-Logos/snapFitness.webp";
 import vip from "../assets/Brand-Logos/vipcosmo.webp";
 import harrison from "../assets/Brand-Logos/Harrison.webp";

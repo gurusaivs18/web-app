@@ -78,7 +78,7 @@ function Footer() {
             <h4>Follow Us</h4>
 
             <div className="socials">
-              <a href="#" target="_blank" rel="noreferrer">
+              <a href="https://www.linkedin.com/company/jsb-groupme/home/" target="_blank" rel="noreferrer">
                 <FaLinkedinIn />
               </a>
             </div>

@@ -1098,7 +1098,7 @@
 /* ================= TESTIMONIALS ================= */
 .home-testimonials {
   position: relative;
-  background: url("../assets//Brand-Logos//bg-down.jpeg") center/cover
+  background: url("../assets//Brand-Logos//bg-down.webp") center/cover
     no-repeat;
   z-index: 1;
 }

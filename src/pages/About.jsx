@@ -6,19 +6,19 @@ import "../css/ScrollReveal.css";
 import { useScrollReveal } from "../hooks/useScrollReveal";
 import ceoImage from "../assets/jsbGroupWebsite/ceoHomeBanner.webp";
 import { useLocation } from "react-router-dom";
-import rushabImg from "../assets/Partners/rushab-assets-1.png";
-import deepImg from "../assets/Partners/deep01.jpeg";
-import sanjeevImg from "../assets/Partners/sanjeevupdated.jpeg";
+import rushabImg from "../assets/Partners/rushab-assets-1.webp";
+import deepImg from "../assets/Partners/deep01.webp";
+import sanjeevImg from "../assets/Partners/sanjeevupdated.webp";
 import { createPortal } from "react-dom";
-import sanalImg from  "../assets/Partners/sanal-assets-1.png";
-import supriyaImg from "../assets/Partners/supriya-assets-1.png";
-import naz from "../assets/Partners/Nas-asset-1.png";
-import ashik from "../assets/Partners/ashiknew.png";
- import visionImg from "../assets/About us/visionnew.png";
-import missionImg from "../assets/About us/missionnew.png";
-import purposeImg from "../assets/About us/purposenew.png";
+import sanalImg from  "../assets/Partners/sanal-assets-1.webp";
+import supriyaImg from "../assets/Partners/supriya-assets-1.webp";
+import naz from "../assets/Partners/Nas-asset-1.webp";
+import ashik from "../assets/Partners/ashiknew.webp";
+ import visionImg from "../assets/About us/visionnew.webp";
+import missionImg from "../assets/About us/missionnew.webp";
+import purposeImg from "../assets/About us/purposenew.webp";
 import organisationVideo from "../assets/About us/corporatevideo.mp4";
-import banner from "../assets/banners/aboutbannernew1.png";
+import banner from "../assets/banners/aboutbannernew1.webp";
 
 
  

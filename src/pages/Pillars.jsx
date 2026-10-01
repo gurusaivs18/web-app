@@ -4,15 +4,15 @@ import "../css/Pillars.css";
 import "../css/ScrollReveal.css";
 import { useScrollReveal } from "../hooks/useScrollReveal";
 import ceoImage from "../assets/jsbGroupWebsite/ceoHomeBanner.webp";
-import rushabImg from "../assets/Partners/rushab-assets-1.png";
-import deepImg from "../assets/Partners/deep01.jpeg";
-import sanjeevImg from "../assets/Partners/sanjeevupdated.jpeg";
-import sanalImg from "../assets/Partners/sanal-assets-1.png";
-import supriyaImg from "../assets/Partners/supriya-assets-1.png";
-import naz from "../assets/Partners/Nas-asset-1.png";
-import ashik from "../assets/Partners/ashiknew.png";
+import rushabImg from "../assets/Partners/rushab-assets-1.webp";
+import deepImg from "../assets/Partners/deep01.webp";
+import sanjeevImg from "../assets/Partners/sanjeevupdated.webp";
+import sanalImg from "../assets/Partners/sanal-assets-1.webp";
+import supriyaImg from "../assets/Partners/supriya-assets-1.webp";
+import naz from "../assets/Partners/Nas-asset-1.webp";
+import ashik from "../assets/Partners/ashiknew.webp";
 import { createPortal } from "react-dom";
-import banner from "../assets/banners/pillarsupdated.jpeg";
+import banner from "../assets/banners/pillarsupdated.webp";
 
 const ceoWriteup = `Neelesh Bhatnagar is an entrepreneur with over three decades of experience spanning the Middle East and India. As the CEO & Founder of JSB Group, he has built a diversified conglomerate with interests across retail, fitness, hospitality, healthcare, and technology.
 
