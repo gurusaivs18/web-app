@@ -39,15 +39,15 @@ function Hero() {
 
   return (
     <section className="hero">
-      <video
-        src={heroImage}
-        className="hero-img"
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="metadata"
-      />
+     <video
+  src={heroImage}
+  className="hero-img"
+  autoPlay
+  muted
+  loop
+  playsInline
+  preload="metadata"
+/>
 {/* 
       <div className="hero-content">
         <button
