@@ -7,7 +7,7 @@ function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [showNavbar, setShowNavbar] = useState(true);
 
-  const lastScrollY = useRef(0); // ✅ ref instead of state — no stale closure
+  const lastScrollY = useRef(0);  
 
   const location = useLocation();
   const menuRef = useRef(null);
@@ -16,7 +16,7 @@ function Navbar() {
   const links = [
     { to: "/", label: "Home" },
     { to: "/about", label: "ABOUT US" },
-    { to: "/pillars", label: "PILLARS" },
+    { to: "/pillars", label: "Team JSB" },
     { to: "/verticals", label: "VERTICALS" },
     { to: "/impact", label: "IMPACT" },
     { to: "/careers", label: "CAREERS" },

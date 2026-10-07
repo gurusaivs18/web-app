@@ -1,78 +1,4 @@
-export const verticals = [
-  {
-    title: "Investment",
-
-    description:
-      "Driving Innovation, Empowering Businesses! ",
-
-    items: [
-      {
-        name: "Nb Ventures",
-
-        link: "https://nbventuresme.com/",
-
-        description:
-          "NB Ventures, rooted in the legacy and spirit of pioneering entrepreneurs, is a versatile venture capital company that funds fledgling startups and flourishing enterprises across diverse sectors. Our relentless pursuit of novelty propels us to collaborate with visionary founders who are at the helm of tomorrow's enterprises. We have invested in more than 50 startups and added tremendous value to the founders by working closely with them and helping them raise additional growth capital. With the robust backing of Mr. Neeleshwar Bhatnagar, we have been expanding and diversifying our investment portfolio since the year 2016.",
-      },
-    ],
-  },
-  {
-    title: "Technology",
-
-    description:
-      "Our technology division develops customized software solutions that help businesses improve operational efficiency and digital transformation.",
-
-    items: [
-      {
-        name: "VK Technology",
-
-        link: "https://vktechnologiesme.com/",
-
-        description:
-          `we specialize in delivering customized software solutions aligned with your business processes transformed into technical functionalities. Unlike off-the-shelf solutions, we take a process-oriented approach to understand and meet our customers' unique requirements, offering limitless options to enhance efficiency, accuracy, and productivity in their operations. Our mission is to empower businesses with cutting-edge technology that streamlines operations, enhances customer experiences, and drives growth. 
- 
-
-`,
-      },
-    ],
-  },
-  {
-    title: "Food & Beverage (F&B)",
-
-    description:
-      "JSB Group’s Food & Beverage division focuses on delivering fresh, healthy, and convenient dining experiences through innovative homegrown concepts.",
-
-    items: [
-      {
-        name: "Pressman's Sandwiches",
-
-        link: "https://pressmans.com/",
-
-        description:
-          "Pressman’s Sandwiches is a homegrown brand specializing in healthy and fresh sandwiches and salads. The brand has successfully expanded to 10 live locations across the UAE and has also made its mark in India through the cloud kitchen space, continuing its mission to deliver nutritious and delicious meals.",
-      },
-
-      {
-        name: "Biriyani Box",
-
-        link: "",
-
-        description:
-          "Biriyani Box is part of JSB Group’s growing Food & Beverage portfolio, focused on delivering flavorful and authentic biriyani experiences through a modern and convenient dining concept.",
-      },
-
-      {
-        name: "Booster Juice",
-
-        link: " https://boosterjuice.com/?srsltid=AfmBOopAhG3vGGWuLXt_qvhEy6f0VaG1SNvL9GAlvBqRKDFQL6iCRwEb",
-
-        description:
-          "Biriyani Box is part of JSB Group’s growing Food & Beverage portfolio, focused on delivering flavorful and authentic biriyani experiences through a modern and convenient dining concept.",
-      },
-    ],
-  },
-
-  {
+export const verticals = [{
     title: "Retail & Distribution",
 
     description:
@@ -89,42 +15,7 @@ export const verticals = [
 Harrison: Duty Free operator functioning under the brand Inov8 with its presence in Dubai Duty Free (all terminals) + Abu Dhabi Duty Free & Qatar Duty Free.  
 `,
       },
-
-      {
-        name: "Target One",
-
-        link: "https://targetoneme.com/",
-
-        description:
-          "Established in 2016, Target One is one of the leading distributors of world-class electronic brands in the region. Under its umbrella, the company distributes brands like Marshall (Sweden), Jabra (Denmark), Titan (India), Ugreen (China), myFirst (Singapore), JLab (U.S.A.), Dicota (Germany), and Alogic (Australia).",
-      },
-
-      {
-        name: "Motiv8",
-
-        link: "https://motiv8.ae/",
-
-        description:
-          "Motiv8 is an athleisure multi-designer women’s retail concept that launched its first store in July 2024, with four more stores planned. Brands under Motiv8 include Michi (Canada), Port De Bras (Venezuela), Yoga Democracy (U.S.A.), SquatWolf (U.A.E.), Dignitii (Canada), Manduka (U.S.A.), Bala (U.S.A.), Women's Best (Austria), and Z&M (U.A.E.).",
-      },
-
-      {
-        name: "Inov8",
-
-        link: "https://www.inov8.ae/",
-
-        description:
-          "Harrison operates duty-free retail under the brand Inov8 with its presence across Dubai Duty Free (all terminals), Abu Dhabi Duty Free, and Qatar Duty Free.",
-      },
-      {
-        name: "Activ8",
-
-        link: "https://activ8.ae/",
-
-        description:
-          "Activ8 is part of JSB Group’s retail portfolio and supports premium fitness, wellness, and technology retail concepts across the UAE market.",
-      },
-      {
+        {
         name: "Harrison Digital",
 
         link: "",
@@ -135,14 +26,59 @@ Harrison: Duty Free operator functioning under the brand Inov8 with its presence
       },
 
       {
-        name: "Garmin by Activ8",
+        name: "Target One",
 
-        link: "https://www.garmin.ae/",
+        link: "https://targetoneme.com/",
 
         description:
-          `Its an authorized retailer for Garmin Watches & also carries the brand Shokz. It today has retail presence across U.A.E. with 6 active locations 
-`,
+          "Established in 2016, Target One is one of the leading distributors of world-class electronic brands in the region. Under its umbrella, the company distributes brands like Marshall (Sweden), Jabra (Denmark), Titan (India), Ugreen (China), myFirst (Singapore), JLab (U.S.A.), Dicota (Germany), and Alogic (Australia).",
       },
+{
+        name: "VIP Cosmetics",
+
+        link: "",
+
+        description:
+          "VIP Cosmetics functions as the skincare distribution arm under Target One, representing premium beauty and skincare products within the region.",
+      },
+         {
+        name: "Inov8",
+
+        link: "https://www.inov8.ae/",
+
+        description:
+          "Harrison operates duty-free retail under the brand Inov8 with its presence across Dubai Duty Free (all terminals), Abu Dhabi Duty Free, and Qatar Duty Free.",
+      },
+      
+      {
+        name: "Activ8",
+
+        link: "https://activ8.ae/",
+
+        description:
+          "Activ8 is part of JSB Group’s retail portfolio and supports premium fitness, wellness, and technology retail concepts across the UAE market.",
+      },
+      {
+        name: "Motiv8",
+
+        link: "https://motiv8.ae/",
+
+        description:
+          "Motiv8 is an athleisure multi-designer women’s retail concept that launched its first store in July 2024, with four more stores planned. Brands under Motiv8 include Michi (Canada), Port De Bras (Venezuela), Yoga Democracy (U.S.A.), SquatWolf (U.A.E.), Dignitii (Canada), Manduka (U.S.A.), Bala (U.S.A.), Women's Best (Austria), and Z&M (U.A.E.).",
+      },
+
+   
+    
+
+//       {
+//         name: "Garmin by Activ8",
+
+//         link: "https://www.garmin.ae/",
+
+//         description:
+//           `Its an authorized retailer for Garmin Watches & also carries the brand Shokz. It today has retail presence across U.A.E. with 6 active locations 
+// `,
+//       },
       {
         name: "ZeroG Beds & Mattresses",
 
@@ -152,19 +88,11 @@ Harrison: Duty Free operator functioning under the brand Inov8 with its presence
           `Recognizing that good sleep is fundamental to health, we have launched our homegrown beds and mattresses brand. Our products are designed to help you find the perfect mattress tailored to your health needs and the specific space in your home. 
 `,
       },
-      {
-        name: "VIP Cosmetics",
-
-        link: "",
-
-        description:
-          "VIP Cosmetics functions as the skincare distribution arm under Target One, representing premium beauty and skincare products within the region.",
-      },
+      
     ],
   },
-
-  {
-    title: "Fitness & Sports  ",
+{
+    title: "Sports & Fitness",
 
     description:
       "JSB Group actively promotes sports, wellness, and fitness through premium facilities, global franchises, and international sporting initiatives.",
@@ -212,9 +140,88 @@ Harrison: Duty Free operator functioning under the brand Inov8 with its presence
       },
     ],
   },
+  {
+    title: "Food & Beverage (F&B)",
+
+    description:
+      "JSB Group’s Food & Beverage division focuses on delivering fresh, healthy, and convenient dining experiences through innovative homegrown concepts.",
+
+    items: [
+      {
+        name: "Pressman's Sandwiches",
+
+        link: "https://pressmans.com/",
+
+        description:
+          "Pressman’s Sandwiches is a homegrown brand specializing in healthy and fresh sandwiches and salads. The brand has successfully expanded to 10 live locations across the UAE and has also made its mark in India through the cloud kitchen space, continuing its mission to deliver nutritious and delicious meals.",
+      },
+
+      {
+        name: "Biriyani Box",
+
+        link: "",
+
+        description:
+          "Biriyani Box is part of JSB Group’s growing Food & Beverage portfolio, focused on delivering flavorful and authentic biriyani experiences through a modern and convenient dining concept.",
+      },
+
+      {
+        name: "Booster Juice",
+
+        link: " https://boosterjuice.com/?srsltid=AfmBOopAhG3vGGWuLXt_qvhEy6f0VaG1SNvL9GAlvBqRKDFQL6iCRwEb",
+
+        description:
+          "Biriyani Box is part of JSB Group’s growing Food & Beverage portfolio, focused on delivering flavorful and authentic biriyani experiences through a modern and convenient dining concept.",
+      },
+    ],
+  },
+
 
   {
-    title: "Fittings & Fit out",
+    title: "Investment",
+
+    description:
+      "Driving Innovation, Empowering Businesses! ",
+
+    items: [
+
+
+      
+      {
+        name: "Nb Ventures",
+
+        link: "https://nbventuresme.com/",
+
+        description:
+          "NB Ventures, rooted in the legacy and spirit of pioneering entrepreneurs, is a versatile venture capital company that funds fledgling startups and flourishing enterprises across diverse sectors. Our relentless pursuit of novelty propels us to collaborate with visionary founders who are at the helm of tomorrow's enterprises. We have invested in more than 50 startups and added tremendous value to the founders by working closely with them and helping them raise additional growth capital. With the robust backing of Mr. Neeleshwar Bhatnagar, we have been expanding and diversifying our investment portfolio since the year 2016.",
+      },
+    ],
+  },
+  {
+    title: "Technology",
+
+    description:
+      "Our technology division develops customized software solutions that help businesses improve operational efficiency and digital transformation.",
+
+    items: [
+      {
+        name: "VK Technology",
+
+        link: "https://vktechnologiesme.com/",
+
+        description:
+          `we specialize in delivering customized software solutions aligned with your business processes transformed into technical functionalities. Unlike off-the-shelf solutions, we take a process-oriented approach to understand and meet our customers' unique requirements, offering limitless options to enhance efficiency, accuracy, and productivity in their operations. Our mission is to empower businesses with cutting-edge technology that streamlines operations, enhances customer experiences, and drives growth. 
+ 
+
+`,
+      },
+    ],
+  },
+  
+  
+  
+  {
+    title: "Turnkey Interiors",
 
     description:
       "JSB Group delivers premium interior fitout and outdoor furniture solutions for residential, commercial, and hospitality environments.",

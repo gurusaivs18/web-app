@@ -14,7 +14,7 @@ function Footer() {
         behavior: "smooth",
         block: "start",
       });
-    }, 300); // important delay for render
+    }, 300);
   };
   const getId = (title) => title.toLowerCase().replace(/[^a-z0-9]+/g, "-");
   return (
@@ -78,7 +78,7 @@ function Footer() {
             <h4>Follow Us</h4>
 
             <div className="socials">
-              <a href="https://www.linkedin.com/company/jsb-groupme/home/" target="_blank" rel="noreferrer">
+              <a href="https://www.linkedin.com/company/jsb-groupme/home/" target="_blank" rel="noreferrer" aria-label="linkedin">
                 <FaLinkedinIn />
               </a>
             </div>

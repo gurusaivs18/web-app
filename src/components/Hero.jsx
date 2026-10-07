@@ -1,34 +1,62 @@
+// import "../css/Hero.css";
+// import { useNavigate } from "react-router-dom";
+// import heroImage from "../assets/jsbGroupWebsite/1006.mp4";
+
+// function Hero() {
+//   const navigate = useNavigate();
+
+//   return (
+//     <section className="hero">
+//         <video
+//         src={heroImage}
+//         className="hero-img"
+//         autoPlay
+//         muted
+//         loop
+//         playsInline
+//         preload="auto"
+//       />
+
+//       <div className="hero-content">
+   
+
+//         <button className="hero-btn" onClick={() => navigate("/about")}>
+//           Know More
+//         </button>
+//       </div>
+//     </section>
+//   );
+// }
+
+// export default Hero;
+
 import "../css/Hero.css";
-import { useNavigate } from "react-router-dom";
-import heroImage from "../assets/jsbGroupWebsite/assets-jsb3.webp";
+// import { useNavigate } from "react-router-dom";
+import heroImage from "../assets/jsbGroupWebsite/1006.mp4";
 
 function Hero() {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   return (
     <section className="hero">
-      <img src={heroImage} alt="Hero" className="hero-img" />
-
+      <video
+        src={heroImage}
+        className="hero-img"
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="auto"
+      />
+{/* 
       <div className="hero-content">
-        <div className="hero-circle-wrap">
-          {/* <span className="hero-circle-glow" aria-hidden="true"></span>
-          <span className="hero-circle-ring" aria-hidden="true"></span> */}
-
-          <div className="hero-circle">
-            <h1 className="hero-title">
-              From <span className="red-box">Dreams</span> to{" "}
-              <span className="red-box">Reality</span>
-            </h1>
-            <p className="hero-subtitle">
-              The Unstoppable Force of Purposeful Action
-            </p>
-          </div>
-        </div>
-
-        <button className="hero-btn" onClick={() => navigate("/about")}>
+        <button
+          className="hero-btn"
+          onClick={() => navigate("/about")}
+        >
           Know More
         </button>
-      </div>
+      </div> */}
     </section>
   );
 }

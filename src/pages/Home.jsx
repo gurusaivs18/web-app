@@ -7,18 +7,12 @@ import "../css/ScrollReveal.css";
 import { useNavigate } from "react-router-dom";
 import { useScrollReveal } from "../hooks/useScrollReveal";
 import ceoImage from "../assets/jsbGroupWebsite/ceoHomeBanner.webp";
-// CARDS BACKGROUND  IMG IMPORTS
-// import interiorImg from "../assets/card-images/interior.png";
-// import retailImg from "../assets/card-images/retail.png";
-// import techImg from "../assets/card-images/techno.png";
-// import fitnessImg from "../assets/card-images/sports_fitness1.png";
-// import fnbImg from "../assets/card-images/fnb.png";
-// import vcImg from "../assets/card-images/venture.png";
+
 
 // break
-import visionImg from "../assets/About us/visionnew.webp";
-import missionImg from "../assets/About us/missionnew.webp";
-import purposeImg from "../assets/About us/purposenew.webp";
+import visionImg from "../assets/About us/VISION.png";
+import missionImg from "../assets/About us/MISSION__.png";
+import purposeImg from "../assets/About us/Purpose__.png";
 import rushab from "../assets/Partners/rushab-assets-1.webp";
 import sinha from "../assets/Partners/sanjeevupdated.webp";
 import sanal from "../assets/Partners/sanal-assets-1.webp";
@@ -42,14 +36,6 @@ import snapimagehome from "../assets/homepageimg/snapimagehome.webp";
 import zerogimagehome from "../assets/homepageimg/zerogimagehome.webp";
 
 /* ─── CEO Writeup ─────────────────────────────────────────────── */
-const ceoWriteup = `Neelesh Bhatnagar is an entrepreneur with over three decades of experience spanning the Middle East and India. As the CEO & Founder of JSB Group, he has built a diversified conglomerate with interests across retail, fitness, hospitality, healthcare, and technology.
-
-His vision has been the driving force behind JSB Group's expansion into multiple verticals, csreating an ecosystem of businesses that complement and strengthen one another. Under his leadership, JSB Group has grown from a single venture into a multi-faceted organisation with a presence across the UAE and beyond.
-
-Neelesh is known for his ability to identify opportunities ahead of the curve, his hands-on leadership style, and his commitment to building businesses that create lasting value — not just for shareholders, but for communities and people.
-
-His journey is one of resilience, vision, and an unwavering belief in the power of entrepreneurship to transform lives.`;
-
 const statIcons = [
   <img src={icon01} alt="" width="80" height="80" />,
   <img src={icon02} alt="" width="80" height="80" />,
@@ -166,7 +152,7 @@ const verticalCategories = [
     ),
   },
   {
-    label: "Fittings & Fit out",
+    label: "Turnkey Interiors ",
     icon: (
       <svg viewBox="0 0 24 24" fill="none">
         <path
@@ -234,21 +220,29 @@ const verticalCategories = [
 ];
 
 const directors = [
+
+    {
+      name: "Noel",
+      role: "Update Pending",
+      desc: "With over 30 years of commercial experience in supply and distribution across retail, software, and electronics industries, Deep brings a wealth of expertise to his role as Managing Director of Denaster.Under his leadership for more than two decades",
+      image: null,
+      order: 2,
+    },
   {
     name: "Naz Ayat",
     role: "Partner",
     bio: "30+ years in software and electronics industries. Worked with major UK and international retailers including Amazon and HMV. Expert in distribution channels.",
     slug: "naz-ayat",
     img: naz,
-    order: 1,
+    order: 4,
   },
   {
     name: "Rushab Bhatnagar",
     role: "Co-Founder & CEO, NOVO Labs | Strategic Director, NB Ventures",
-    bio: "Bachelor's in Business & Economics from Exeter, Master's in Strategic Marketing from Imperial College. Leads NB Ventures' portfolio of 70+ Indian start-ups.",
+    bio: "Rushab holds a Bachelor’s degree in Business & Economics from Exeter and a Master’s in Strategic Marketing from Imperial College. As the Co-Founder and CEO of NOVO Labs, a pioneering food technology start-up based in Bangalore, leading an innovative portfolio that includes Monkey Box, Combo@Co, Khichdi Tales, Pressman’s Sandwiches, Thaali Tales, Beijing Lu, Paratha Tales, Pizza People, and Top Dog. In addition to his role at NOVO Labs, Rushab is the Strategic Director for NB Ventures, where he spearheads the Bangalore office. NB Ventures is a growth-stage venture fund based in the U.A.E., with a robust portfolio of over 70 Indian start-ups.",
     slug: "rushab-bhatnagar",
     img: rushab,
-    order: 2,
+    order: 5,
   },
   {
     name: "Sanjeev K Sinha",
@@ -256,7 +250,7 @@ const directors = [
     bio: "I'm a Chartered Accountant with close to three decades of experience turning finance from a reporting function into a driver of profitability and growth. My remit today covers business strategy, the full accounting and finance function, IT, HR & Administration and Marketing — with a particular focus on operational efficiency and new business development. Designing the policies, procedures and controls that let a fast-moving group scale cleanly is where I do my best work. Over my career I've built and re-engineered finance and commercial functions at Landmark Group (EMAX), Sana Fashion, Samsung India and Mattel Inc. Core strengths: business & financial strategy, commercial finance, budgeting & forecasting, controls & SOP design, supply chain and working-capital management, ERP and process automation, and building teams that run the numbers well.",
     slug: "sanjeev-sinha",
     img: sinha,
-    order: 4,
+    order: 7,
   },
   {
     name: "Mohammed Ashik",
@@ -264,7 +258,7 @@ const directors = [
     bio: "An accomplished MBA in Data Science and Applied AI - With over 15 years of experience in technology, enterprise systems and digital transformation, Mohammed Ashik is a strategic technology leader specializing in AI-enabled ERP and enterprise platform architecture across the retail, distribution, FMCG and fitness sectors. An accomplished PhD professional with an MBA in Data Science and Applied AI, he brings together strong academic expertise and extensive hands-on experience in building intelligent, scalable and data-driven technology ecosystems.    His expertise encompasses ERP and POS systems, enterprise integrations, AI and ML-driven analytics, intelligent MIS platforms, eCommerce solutions, cloud and microservices architecture, and cross-platform digital applications. His approach focuses on transforming complex business operations into integrated, automated and decision-driven digital platforms, enabling organizations to leverage technology and data for greater visibility, efficiency and measurable business outcomes.As Chief Technology Officer at JSB Group, he leads the architecture and delivery of integrated technology platforms across multiple business functions and sectors. His responsibilities span enterprise system architecture, ERP and POS integration, AI-driven analytics, business intelligence, cloud infrastructure, eCommerce platforms and API-led system integration. He also heads technology for Vanitykart Technologies DMCC, the Group’s Technology Division, delivering commercial POS solutions, Business Intelligence platforms and technology integrations for external customers.With a strong focus on applied AI and decision intelligence, Mohammed has developed systems that transform enterprise data into actionable insights through intelligent dashboards, forecasting models and automated workflows. His expertise in designing secure API ecosystems, data pipelines and microservices enables seamless connectivity between ERP, POS, commerce, loyalty and operational platforms.His career reflects a commitment to using technology not simply as an operational function, but as a strategic enabler for innovation, scalability and business growth—bridging the intersection of business operations, enterprise architecture and applied artificial intelligence to build future-ready technology platforms.",
     slug: "mohammed-ashik",
     img: ashik,
-    order: 5,
+    order: 8,
   },
   // {
   //   name: "Manish Kishore",
@@ -280,7 +274,7 @@ const directors = [
     bio: "Contributes strategic direction and expertise to JSB Group's expanding business verticals.",
     slug: "sanal-kumar",
     img: sanal,
-    order: 3,
+    order: 6,
   },
   {
     name: "Deep Bhogal",
@@ -288,7 +282,7 @@ const directors = [
     bio: "With over 30 years of commercial experience in supply and distribution across retail, software, and electronics industries, Deep brings a wealth of expertise to his role as Managing Director of Denaster. Under his leadership for more than two decades, Denaster has evolved into a multimillion-dollar SME with a workforce of over 100 employees, establishing itself as a key supplier and operator in the Middle East Duty Free and retail sectors.Deep's strategic vision and passion have driven Denaster to secure exclusive regional rights for renowned brands and leveraging his insights and industry knowledge to foster successful partnerships and drive growth.",
     slug: "deep-bhogal",
     img: deep,
-    order: 7,
+    order: 3,
   },
   {
     name: "Supriya Hurkat",
@@ -296,7 +290,7 @@ const directors = [
     bio: "WRITE UP PENDING",
     slug: "supriya-hurkat",
     img: supriyaImg,
-    order: 6,
+    order: 1,
   },
 ];
 
@@ -425,11 +419,49 @@ function CeoModal({ onClose }) {
           <h2 className="ceo-modal-name">Neelesh Bhatnagar</h2>
           <p className="ceo-modal-role">Founder & CEO , JSB Group</p>
           <div className="ceo-modal-divider" />
-             <div className="ceo-modal-bio">
-            {ceoWriteup.split("\n\n").map((para, i) => (
-              <p key={i}>{para}</p>
-            ))}
-          </div>
+           <div className="ceo-modal-bio">
+  <p>
+    <span
+      style={{
+        color: "#7a1515",
+        fontStyle: "italic",
+        fontWeight: "700",
+      }}
+    >
+      Neelesh Bhatnagar doesn’t chase trends—he builds the next chapter of
+      commerce, capability, and growth.
+    </span>
+    <br />
+    Neelesh Bhatnagar is a seasoned entrepreneur with{" "}
+    <strong>30+ years of experience across the Middle East and India</strong>.
+    As <strong>CEO & Founder of JSB Group</strong>, he has built a diversified
+    conglomerate with a strong, execution-first focus on{" "}
+    <strong>Retail & Distribution</strong>, alongside interests in{" "}
+    <strong>fitness, hospitality, healthcare, and technology</strong>.
+  </p>
+
+  <p>
+    Under Neelesh’s leadership, JSB Group has grown into a multi-vertical
+    ecosystem where each business strengthens the other—driving scale,
+    operational efficiency, and long-term value creation. His vision has
+    guided the Group’s expansion across key markets, establishing meaningful
+    presence across the <strong>UAE, and beyond</strong>, while staying deeply connected to the
+    needs of customers, partners, and communities.
+  </p>
+
+  <p>
+    Known for spotting opportunities ahead of the curve, Neelesh leads with a <strong>hands-on style</strong>, decisive execution, and a clear commitment to building
+    brands and businesses that last. For him, entrepreneurship isn’t just about
+    growth—it’s about impact: creating value not only for shareholders, but for
+    the people and communities that power the economy every day.
+  </p>
+
+  <p>
+    Neelesh’s journey reflects resilience, foresight, and an unwavering belief
+    in the power of strong leadership and strategic entrepreneurship to
+    transform markets—and lives.
+  </p>
+</div>
           <a href="/pillars" className="home-modal-btn" onClick={onClose}>
             The Pillars
           </a>
@@ -775,18 +807,38 @@ function Home() {
     <>
       <Hero />
       {/* ── INTRO ── */}
-      <section className="section home-intro">
-        <div className="container">
-          <div className="home-intro-text">
-            <h2 data-reveal="up">
-              An Organisation Inspired by Dreams &amp; Led by Purpose.
-            </h2>
-            <p data-reveal="up" data-delay="200">
-              {companyInfo.about}
-            </p>
-          </div>
-        </div>
-      </section>
+<section className="section home-intro">
+  <div className="container">
+    <div className="home-intro-text">
+      <h2 data-reveal="up">
+        An Organisation Inspired by Dreams &amp; Led by Purpose.
+      </h2>
+
+{companyInfo.about.map((paragraph, index) => (
+  <p
+    key={index}
+    data-reveal="up"
+    data-delay={200 + index * 100}
+    className={index === 2 ? "about-highlight-red" : ""}
+  >
+    {paragraph
+      .split(
+        /(15\+ companies and brands|Investment & Technology, Food & Beverage, Retail & Distribution, Sports & Fitness, Fitness & Fitout, and India Verticals)/
+      )
+      .map((part, i) =>
+        part === "15+ companies and brands" ||
+        part ===
+          "Investment & Technology, Food & Beverage, Retail & Distribution, Sports & Fitness, Fitness & Fitout, and India Verticals" ? (
+          <strong key={i}>{part}</strong>
+        ) : (
+          part
+        )
+      )}
+  </p>
+))}
+    </div>
+  </div>
+</section>
       {/* ── CEO ── */}
       <section className="ceo-section" data-reveal="fade">
         <div className="ceo-content">
@@ -796,13 +848,24 @@ function Home() {
             <p className="ceo-role" data-reveal="right" data-delay="150">
               FOUNDER & CEO
             </p>
-            <p data-reveal="right" data-delay="250">
-              Neelesh Bhatnagar is an entrepreneur with over three decades of
-              experience spanning the Middle East and India. As the CEO &
-              Founder of JSB Group, he has built a diversified conglomerate
-              with interests across retail, fitness, hospitality, healthcare,
-              and technology.
-            </p>
+           <p data-reveal="right" data-delay="250">
+  <span
+    style={{
+      color: "#7a1515",
+      fontStyle: "italic",
+      fontWeight: "700",
+    }}
+  >
+    Neelesh Bhatnagar doesn’t chase trends—he builds the next chapter of commerce, capability, and growth.
+  </span>
+  <br />
+  Neelesh Bhatnagar is a seasoned entrepreneur with{" "}
+  <strong>30+ years of experience across the Middle East and India</strong>.
+  As <strong>CEO & Founder of JSB Group</strong>, he has built a diversified
+  conglomerate with a strong, execution-first focus on{" "}
+  <strong>Retail & Distribution</strong>, alongside interests in{" "}
+  <strong>fitness, hospitality, healthcare, and technology</strong>.
+</p>
             <button
               className="read-more-link"
               onClick={() => setCeoModalOpen(true)}

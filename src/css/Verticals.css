@@ -143,6 +143,24 @@
     gap: 12px;
   }
 }
+/* =========================================
+   RETAIL & DISTRIBUTION - 4 x 2 DESKTOP
+   ========================================= */
+
+@media (min-width: 993px) {
+  .vertical-category--retail-distribution .vertical-brands-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 210px);
+    justify-content: center;
+    gap: 12px;
+    max-width: 900px;
+    margin-inline: auto;
+  }
+
+  .vertical-category--retail-distribution .logo-card {
+    width: 210px;
+  }
+}
 
 /* =========================================================
    LOGO CARD

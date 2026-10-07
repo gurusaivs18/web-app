@@ -250,66 +250,89 @@ function Verticals() {
       )}
 
       {/* CATEGORIES */}
-      {verticals.map((cat, i) => (
-        <section
-          key={i}
-          id={getId(cat.title)}
-          className={`vertical-category${
-            i === 0 ? " vertical-category--first" : ""
-          }`}
+    {/* CATEGORIES */}
+{verticals.map((cat, i) => {
+  const isRetailDistribution =
+    cat.title.trim().toLowerCase() === "retail & distribution";
+
+  const retailOrder = [
+    "Denaster",
+    "Harrison Digital",
+    "Target One",
+    "VIP Cosmetics",
+    "Inov8",
+    "Activ8",
+    "Motiv8",
+    "ZeroG Beds & Mattresses",
+  ];
+
+  const displayItems = isRetailDistribution
+    ? retailOrder
+        .map((name) => cat.items.find((brand) => brand.name === name))
+        .filter(Boolean)
+    : cat.items;
+
+  return (
+    <section
+      key={i}
+      id={getId(cat.title)}
+      className={`vertical-category${
+        i === 0 ? " vertical-category--first" : ""
+      }${
+        isRetailDistribution
+          ? " vertical-category--retail-distribution"
+          : ""
+      }`}
+    >
+      <h2 className="vertical-heading">
+        {cat.title}
+      </h2>
+
+      <div className="container">
+        <div
+          className="vertical-content"
+          data-reveal="up"
+          data-delay="100"
         >
-          <h2 className="vertical-heading">
-            {cat.title}
-          </h2>
+          <p className="vertical-description">
+            {cat.description}
+          </p>
+        </div>
 
-          <div className="container">
-            {/* CATEGORY DESCRIPTION - ABOVE LOGOS */}
+        <div className="vertical-brands-grid">
+          {displayItems.map((brand, j) => (
             <div
-              className="vertical-content"
+              key={brand.name}
+              className="logo-card"
               data-reveal="up"
-              data-delay="100"
+              data-delay={String((j % 4) * 120 + 100)}
+              onClick={() =>
+                setSelectedBrand({
+                  name: brand.name,
+                  url: brand.link,
+                  logo: logoMap[brand.name],
+                  description: brand.description,
+                })
+              }
             >
-              <p className="vertical-description">
-                {cat.description}
-              </p>
+              <div
+                className="logo-card-img-wrap"
+                data-brand={brand.name}
+              >
+                <img
+                  src={logoMap[brand.name]}
+                  alt={brand.name}
+                  loading="lazy"
+                  data-brand={brand.name}
+                />
+              </div>
             </div>
-
-            {/* CATEGORY BRAND LOGOS */}
-            <div className="vertical-brands-grid">
-              {cat.items.map((brand, j) => (
-                <div
-                  key={j}
-                  className="logo-card"
-                  data-reveal="up"
-                  data-delay={String(
-                    (j % 4) * 120 + 100
-                  )}
-                  onClick={() =>
-                    setSelectedBrand({
-                      name: brand.name,
-                      url: brand.link,
-                      logo: logoMap[brand.name],
-                      description: brand.description,
-                    })
-                  }
-                >
-                  <div
-                    className="logo-card-img-wrap"
-                    data-brand={brand.name}
-                  >
-                    <img
-                      src={logoMap[brand.name]}
-                      alt={brand.name}
-                      loading="lazy"
-                      data-brand={brand.name}
-                    />
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-      ))}
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+})}
     </>
   );
 }
