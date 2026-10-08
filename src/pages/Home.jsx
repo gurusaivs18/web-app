@@ -20,6 +20,7 @@ import deep from "../assets/Partners/deep01.webp";
 import supriyaImg from "../assets/Partners/supriya-assets-1.webp";
 import naz from "../assets/Partners/Nas-asset-1.webp";
 import ashik from "../assets/Partners/ashiknew.webp";
+import noel from "../assets/Partners/noel.jpeg";
 
 // Impact icons
 import icon01 from "../assets/icons-impact/icon-01.webp";
@@ -225,7 +226,7 @@ const directors = [
       name: "Noel",
       role: "Update Pending",
       desc: "With over 30 years of commercial experience in supply and distribution across retail, software, and electronics industries, Deep brings a wealth of expertise to his role as Managing Director of Denaster.Under his leadership for more than two decades",
-      image: null,
+      img: noel,
       order: 2,
     },
   {

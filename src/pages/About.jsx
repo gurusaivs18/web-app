@@ -16,6 +16,8 @@ import sanalImg from "../assets/Partners/sanal-assets-1.webp";
 import supriyaImg from "../assets/Partners/supriya-assets-1.webp";
 import nazImg from "../assets/Partners/Nas-asset-1.webp";
 import ashikImg from "../assets/Partners/ashiknew.webp";
+import noel from "../assets/Partners/noel.jpeg";
+
 
 import visionImg from "../assets/About us/VISION.png";
 import missionImg from "../assets/About us/MISSION__.png";
@@ -37,7 +39,7 @@ import { team } from "../data/team";
 ───────────────────────────────────────── */
 
 const teamImages = {
-  "Noel": null,
+  "Noel": noel,
 
   "Deep Bhogal": deepImg,
 
