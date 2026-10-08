@@ -10,9 +10,9 @@ import ceoImage from "../assets/jsbGroupWebsite/ceoHomeBanner.webp";
 
 
 // break
-import visionImg from "../assets/About us/VISION.png";
-import missionImg from "../assets/About us/MISSION__.png";
-import purposeImg from "../assets/About us/Purpose__.png";
+import visionImg from "../assets/About us/Vision.webp";
+import missionImg from "../assets/About us/MISSION__.webp";
+import purposeImg from "../assets/About us/Purpose__.webp";
 import rushab from "../assets/Partners/rushab-assets-1.webp";
 import sinha from "../assets/Partners/sanjeevupdated.webp";
 import sanal from "../assets/Partners/sanal-assets-1.webp";
@@ -20,7 +20,7 @@ import deep from "../assets/Partners/deep01.webp";
 import supriyaImg from "../assets/Partners/supriya-assets-1.webp";
 import naz from "../assets/Partners/Nas-asset-1.webp";
 import ashik from "../assets/Partners/ashiknew.webp";
-import noel from "../assets/Partners/noel.jpeg";
+import noel from "../assets/Partners/noel.webp";
 
 // Impact icons
 import icon01 from "../assets/icons-impact/icon-01.webp";

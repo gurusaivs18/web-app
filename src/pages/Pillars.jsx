@@ -11,7 +11,7 @@ import sanalImg from "../assets/Partners/sanal-assets-1.webp";
 import supriyaImg from "../assets/Partners/supriya-assets-1.webp";
 import nazImg from "../assets/Partners/Nas-asset-1.webp";
 import ashikImg from "../assets/Partners/ashiknew.webp";
-import noel from "../assets/Partners/noel.jpeg";
+import noel from "../assets/Partners/noel.webp";
 
 import banner from "../assets/banners/pillarsupdated.webp";
 import { createPortal } from "react-dom";

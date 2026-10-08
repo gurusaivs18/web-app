@@ -16,12 +16,12 @@ import sanalImg from "../assets/Partners/sanal-assets-1.webp";
 import supriyaImg from "../assets/Partners/supriya-assets-1.webp";
 import nazImg from "../assets/Partners/Nas-asset-1.webp";
 import ashikImg from "../assets/Partners/ashiknew.webp";
-import noel from "../assets/Partners/noel.jpeg";
+import noel from "../assets/Partners/noel.webp";
 
 
-import visionImg from "../assets/About us/VISION.png";
-import missionImg from "../assets/About us/MISSION__.png";
-import purposeImg from "../assets/About us/Purpose__.png";
+import visionImg from "../assets/About us/Vision.webp";
+import missionImg from "../assets/About us/MISSION__.webp";
+import purposeImg from "../assets/About us/Purpose__.webp";
 
 import organisationVideo from "../assets/About us/corporatevideo.mp4";
 
