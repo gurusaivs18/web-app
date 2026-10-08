@@ -279,7 +279,7 @@ function Pillars() {
         <div className="about-page-banner-overlay">
 
           <h1>
-            Core Team
+            Team JSB
           </h1>
 
         </div>

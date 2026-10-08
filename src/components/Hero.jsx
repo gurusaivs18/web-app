@@ -33,3 +33,30 @@ function Hero() {
 }
 
 export default Hero;
+
+
+
+// import "../css/Hero.css";
+// // import { useNavigate } from "react-router-dom";
+// import heroImage from "../assets/jsbGroupWebsite/1006.mp4";
+
+// function Hero() {
+//   // const navigate = useNavigate();
+
+//   return (
+//     <section className="hero">
+//      <video
+//   src={heroImage}
+//   className="hero-img"
+//   autoPlay
+//   muted
+//   loop
+//   playsInline
+//   preload="metadata"
+// />
+
+//     </section>
+//   );
+// }
+
+// export default Hero;
