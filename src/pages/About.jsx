@@ -23,7 +23,7 @@ import visionImg from "../assets/About us/Vision.webp";
 import missionImg from "../assets/About us/MISSION__.webp";
 import purposeImg from "../assets/About us/Purpose__.webp";
 
-import organisationVideo from "../assets/About us/corporatevideo.mp4";
+import organisationVideo from "../assets/About us/anorganisationvideo.MP4";
 
 import banner from "../assets/banners/aboutbannernew1.webp";
 
