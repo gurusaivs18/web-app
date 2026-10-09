@@ -36,7 +36,7 @@ Harrison: Duty Free operator functioning under the brand Inov8 with its presence
 {
         name: "VIP Cosmetics",
 
-        link: "",
+        link: "https://www.vipcosmetics.co/",
 
         description:
           "VIP Cosmetics functions as the skincare distribution arm under Target One, representing premium beauty and skincare products within the region.",
