@@ -156,23 +156,23 @@ Harrison: Duty Free operator functioning under the brand Inov8 with its presence
           "Pressman’s Sandwiches is a homegrown brand specializing in healthy and fresh sandwiches and salads. The brand has successfully expanded to 10 live locations across the UAE and has also made its mark in India through the cloud kitchen space, continuing its mission to deliver nutritious and delicious meals.",
       },
 
-      {
-        name: "Biriyani Box",
+      // {
+      //   name: "Biriyani Box",
 
-        link: "",
+      //   link: "",
 
-        description:
-          "Biriyani Box is part of JSB Group’s growing Food & Beverage portfolio, focused on delivering flavorful and authentic biriyani experiences through a modern and convenient dining concept.",
-      },
+      //   description:
+      //     "Biriyani Box is part of JSB Group’s growing Food & Beverage portfolio, focused on delivering flavorful and authentic biriyani experiences through a modern and convenient dining concept.",
+      // },
 
-      {
-        name: "Booster Juice",
+      // {
+      //   name: "Booster Juice",
 
-        link: " https://boosterjuice.com/?srsltid=AfmBOopAhG3vGGWuLXt_qvhEy6f0VaG1SNvL9GAlvBqRKDFQL6iCRwEb",
+      //   link: " https://boosterjuice.com/?srsltid=AfmBOopAhG3vGGWuLXt_qvhEy6f0VaG1SNvL9GAlvBqRKDFQL6iCRwEb",
 
-        description:
-          "Biriyani Box is part of JSB Group’s growing Food & Beverage portfolio, focused on delivering flavorful and authentic biriyani experiences through a modern and convenient dining concept.",
-      },
+      //   description:
+      //     "Biriyani Box is part of JSB Group’s growing Food & Beverage portfolio, focused on delivering flavorful and authentic biriyani experiences through a modern and convenient dining concept.",
+      // },
     ],
   },
 
@@ -243,13 +243,13 @@ Harrison: Duty Free operator functioning under the brand Inov8 with its presence
 
     description: null,
     items: [
-      {
-        name: "Yellow Chilli",
+      // {
+      //   name: "Yellow Chilli",
 
-        link: "https://theyellowchilli.com/",
+      //   link: "https://theyellowchilli.com/",
 
-        description: "Write up Pending........",
-      },
+      //   description: "Write up Pending........",
+      // },
 
       {
         name: "Pizza Tales",
@@ -272,13 +272,13 @@ Harrison: Duty Free operator functioning under the brand Inov8 with its presence
 
         description: "Write up Pending........",
       },
-      {
-        name: "Hong Kong",
+      // {
+      //   name: "Hong Kong",
 
-        link: "https://www.epicfitout.com/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnsRsXK25Epx8amKDdi9dYvJqJvs0xyBTYXqC2AZkfMw7fdiEvUNINKRicG1I_aem_YWdncwCkyZlQH6QaBeqo2_PWf2t7&brid=YWdncwGWv0Jl4e8gPrYY76YhJpFg",
+      //   link: "https://www.epicfitout.com/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnsRsXK25Epx8amKDdi9dYvJqJvs0xyBTYXqC2AZkfMw7fdiEvUNINKRicG1I_aem_YWdncwCkyZlQH6QaBeqo2_PWf2t7&brid=YWdncwGWv0Jl4e8gPrYY76YhJpFg",
 
-        description: "Write up Pending........",
-      },
+      //   description: "Write up Pending........",
+      // },
           {
         name: "Monkey Box",
 
@@ -287,13 +287,13 @@ Harrison: Duty Free operator functioning under the brand Inov8 with its presence
         description:
           "Monkey Box is part of JSB Group’s expanding retail and distribution ecosystem, contributing to the group’s growing portfolio of lifestyle and consumer-focused brands.",
       },
-      {
-        name: "beijing Lu",
+      // {
+      //   name: "beijing Lu",
 
-        link: "https://www.epicfitout.com/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnsRsXK25Epx8amKDdi9dYvJqJvs0xyBTYXqC2AZkfMw7fdiEvUNINKRicG1I_aem_YWdncwCkyZlQH6QaBeqo2_PWf2t7&brid=YWdncwGWv0Jl4e8gPrYY76YhJpFg",
+      //   link: "https://www.epicfitout.com/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnsRsXK25Epx8amKDdi9dYvJqJvs0xyBTYXqC2AZkfMw7fdiEvUNINKRicG1I_aem_YWdncwCkyZlQH6QaBeqo2_PWf2t7&brid=YWdncwGWv0Jl4e8gPrYY76YhJpFg",
 
-        description: "Write up Pending........",
-      },
+      //   description: "Write up Pending........",
+      // },
   
     ],
   },
