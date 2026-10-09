@@ -40,8 +40,8 @@ const news = [
     title: "Neelesh Bhatnagar",
     subtitle: " CEO , NB Ventures",
     image:gulfnews,
-    desc: "A visionary with a strong relationship-driven and objective-focused approach, Bhatnagar is skilled in setting businesses from the ground up. ",
-    url: "https://www.arabianbusiness.com/lists/401745-icons-club-02-neelesh-bhatnagar",
+    desc: "Dubai's retail guru Neelesh Bhatnagar has cricket and food on his mind - and with good reason",
+    url: "https://gulfnews.com/business/retail/dubais-retail-guru-neelesh-bhatnagar-has-cricket-and-food-on-his-mind---and-with-good-reason-1.1620272182763",
   },
   {
     tag: "Sports",
@@ -51,14 +51,7 @@ const news = [
     desc: "UAE Bulls become first founding franchise confirmed for new era of Abu Dhabi T10",
     url: "https://www.arabnews.com/sport/uae-bulls-become-first-founding-franchise-confirmed-for-new-era-of-abu-dhabi-t10-3001652",
   },
-  // {
-  //   tag: "Fitness",
-  //   title: "Snap Fitness Expands to Fourth UAE Location",
-  //   subtitle: null,
-  //   image: snapnews,
-  //   desc: "Building on the success of its first UAE branch in 2018, Snap Fitness continues to bring world-class gym facilities to the Emirates.",
-  //   url: "https://example.com/news-5",
-  // },
+
       {
     tag: "Sports",
     title: "UAE Bulls Win Championship Season 9",
