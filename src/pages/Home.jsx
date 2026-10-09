@@ -822,19 +822,19 @@ function Home() {
     data-delay={200 + index * 100}
     className={index === 2 ? "about-highlight-red" : ""}
   >
-    {paragraph
-      .split(
-        /(15\+ companies and brands|Investment & Technology, Food & Beverage, Retail & Distribution, Sports & Fitness, Fitness & Fitout, and India Verticals)/
-      )
-      .map((part, i) =>
-        part === "15+ companies and brands" ||
-        part ===
-          "Investment & Technology, Food & Beverage, Retail & Distribution, Sports & Fitness, Fitness & Fitout, and India Verticals" ? (
-          <strong key={i}>{part}</strong>
-        ) : (
-          part
-        )
-      )}
+{paragraph
+  .split(
+    /(15\+ companies \/ brands|Investment & Technology, Food & Beverage, Retail & Distribution, Sports & Fitness, Fitness & Fitout, and India Verticals)/
+  )
+  .map((part, i) =>
+    part === "15+ companies / brands" ||
+    part ===
+      "Investment & Technology, Food & Beverage, Retail & Distribution, Sports & Fitness, Fitness & Fitout, and India Verticals" ? (
+      <strong key={i}>{part}</strong>
+    ) : (
+      part
+    )
+  )}
   </p>
 ))}
     </div>

@@ -4,7 +4,7 @@ export const companyInfo = {
   about: [
     "JSB Group was established in 2015 with a simple vision: build enduring businesses that elevate everyday experiences. From humble beginnings, we’ve grown into a home-grown conglomerate that thrives across the UAE and extends our footprint to Qatar, Bahrain, and India—uniting investment, technology, and consumer-focused industries under one shared standard of excellence.",
 
-    "Today, JSB Group comprises 15+ companies and brands, operating across multiple verticals including Investment & Technology, Food & Beverage, Retail & Distribution, Sports & Fitness, Fitness & Fitout, and India Verticals. Each vertical is guided by the same principles—innovation, operational excellence, and long-term value creation—while staying rooted in local market understanding.",
+    "Today, JSB Group comprises 15+ companies / brands, operating across multiple verticals including Investment & Technology, Food & Beverage, Retail & Distribution, Sports & Fitness, Fitness & Fitout, and India Verticals. Each vertical is guided by the same principles—innovation, operational excellence, and long-term value creation—while staying rooted in local market understanding.",
 
     "JSB Group doesn’t just build companies—we build ecosystems for growth, performance, and lifestyle innovation.",
 

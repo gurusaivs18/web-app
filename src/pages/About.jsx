@@ -609,20 +609,25 @@ function About() {
                 data-reveal="right"
                 data-delay="500"
               >
+               <div style={{ color: "black", fontWeight: "bold",fontStyle: "italic" }}>
+                Neelesh Bhatnagar doesn’t chase
+                trends—he builds the next chapter
+                of commerce, capability, and growth.
+               </div>
                 Neelesh Bhatnagar doesn’t chase
                 trends—he builds the next chapter
                 of commerce, capability, and growth.
 
                 Neelesh Bhatnagar is a seasoned
-                entrepreneur with 30+ years of
+                entrepreneur with <strong style={{ color: "black", fontStyle: "italic" }}>30+ years of
                 experience across the Middle East
-                and India. As CEO & Founder of JSB
-                Group, he has built a diversified
+                and India.</strong> As <strong style={{ color: "black", fontStyle: "italic" }}>CEO & Founder of JSB
+                Group</strong>, he has built a diversified
                 conglomerate with a strong,
-                execution-first focus on Retail &
-                Distribution, alongside interests
-                in fitness, hospitality, healthcare,
-                and technology.
+                execution-first focus on <strong style={{ color: "black", fontStyle: "italic" }}>Retail &
+                Distribution</strong>, alongside interests
+                in <strong style={{ color: "black", fontStyle: "italic" }}>fitness, hospitality, healthcare,
+                and technology</strong>.
               </p>
 
 
