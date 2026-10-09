@@ -4,10 +4,7 @@ import "../css/ScrollReveal.css";
 import { useScrollReveal } from "../hooks/useScrollReveal";
 import banner from "../assets/banners/newsroomnew.webp";
 
-// import newsroom01 from "../assets/newsroom/newsroom-01.png";
-// import newsroom02 from "../assets/newsroom/newsroom-02.png";
 import newsroom03 from "../assets/newsroom/neeeleshnews.webp";
-// import snapnews from "../assets/newsroom/snapnews.png";
 import pressmansnews from "../assets/newsroom/pressmansnews1.webp";
 import uaebullsnews from "../assets/newsroom/uaebullsnews1.webp";
 import arabiannews from "../assets/newsroom/arabiannewsneelesh.webp";
@@ -21,22 +18,7 @@ import pressmanslatest from "../assets/newsroom/pressmansnewslatest.webp";
 
 
 const news = [
-  // {
-  //   tag: "Latest Update",
-  //   title: "JSB Group Expands Into New Verticals in UAE",
-  //   subtitle: null,
-  //   image: newsroom01,
-  //   desc: "Continuing its growth trajectory, JSB Group has announced strategic expansions across multiple sectors including Technology and Sports.",
-  //   url: "https://example.com/news-1",
-  // },
-  // {
-  //   tag: "Press Release",
-  //   title: "New Retail Partnerships Announced Globally",
-  //   subtitle: null,
-  //   image: newsroom02,
-  //   desc: "JSB Group's retail arm has secured new international partnerships to strengthen its distribution network across the Middle East.",
-  //   url: "https://example.com/news-2",
-  // },
+
   {
     tag: "Media",
     title: "Neelesh Bhatnagar",

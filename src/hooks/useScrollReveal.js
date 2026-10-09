@@ -1,23 +1,4 @@
-/**
- * useScrollReveal.js  –  JSB Group
- * ----------------------------------
- * Drop-in scroll animation system.
- *
- * USAGE IN ANY COMPONENT:
- *   import { useScrollReveal } from "../hooks/useScrollReveal";
- *   useScrollReveal();          // call once per page
- *
- * MARKUP:
- *   <section data-reveal="up">...</section>
- *   <h2 data-reveal="blur" data-delay="200">Title</h2>
- *   <div data-reveal="left" data-delay="300">Card</div>
- *
- * data-reveal values:
- *   up | down | left | right | scale | fade | blur | clip
- *
- * data-delay values (ms):
- *   100 | 150 | 200 | 250 | 300 | 350 | 400 | 450 | 500 | 600 | 700 | 800
- */
+
 
 import { useEffect } from "react";
 

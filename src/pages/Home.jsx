@@ -224,7 +224,7 @@ const directors = [
 
     {
       name: "Noel",
-      role: "Update Pending",
+      role: "Partner",
       desc: "With over 30 years of commercial experience in supply and distribution across retail, software, and electronics industries, Deep brings a wealth of expertise to his role as Managing Director of Denaster.Under his leadership for more than two decades",
       img: noel,
       order: 2,

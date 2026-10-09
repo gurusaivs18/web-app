@@ -66,18 +66,7 @@ const logoMap = {
 const getId = (title) =>
   title.toLowerCase().replace(/[^a-z0-9]+/g, "-");
 
-// const featuredBrands = [
-//   "Nb Ventures",
-//   "VK Technology",
-//   "Denaster",
-//   "Target One",
-//   "Motiv8",
-//   "Inov8",
-//   "Activ8",
-//   "Pressman's Sandwiches",
-//   "Snap Fitness",
-//   "United Pro Sports (U-Pro)",
-// ];
+
 
 function Verticals() {
   const location = useLocation();
@@ -139,71 +128,6 @@ function Verticals() {
   </div>
 </div>
 
-      {/* FEATURED BRANDS */}
-      {/* <div className="featured-logos-section container">
-        <div className="section-title-wrap" data-reveal="fade">
-          <span className="section-title">The Group Portfolio</span>
-        </div>
-
-        <h2
-          className="featured-title"
-          data-reveal="fade"
-          data-delay="100"
-        >
-          Featured Brands
-        </h2>
-
-  
-        <p
-          className="vertical-page-intro"
-          data-reveal="up"
-          data-delay="150"
-        >
-          In the vibrant landscape of UAE's business arena, JSB Group
-          founded in 2015 has emerged as a dynamic conglomerate across
-          multiple sectors including Distribution, Retail, F&B, Fitness,
-          Technology, Interior Fitouts &amp; Outdoor Furniture.
-        </p>
-
-     
-        <div className="featured-logos-grid">
-          {featuredBrands.map((name, i) => (
-            <div
-              key={i}
-              className="featured-logo-card"
-              data-reveal="up"
-              data-delay={String((i % 3) * 150 + 100)}
-              onClick={() =>
-                setSelectedBrand({
-                  name,
-                  url: verticals
-                    .flatMap((v) => v.items)
-                    .find((b) => b.name === name)?.link,
-                  logo: logoMap[name],
-                  description:
-                    verticals
-                      .flatMap((v) => v.items)
-                      .find((b) => b.name === name)
-                      ?.description || "",
-                })
-              }
-            >
-              <div
-                className="logo-card-img-wrap"
-                data-brand={name}
-              >
-                <img
-                  src={logoMap[name]}
-                  alt={name}
-                  data-brand={name}
-                />
-              </div>
-            </div>
-          ))}
-        </div>
-      </div> */}
-
-      {/* MODAL */}
       {selectedBrand && (
         <div
           className="brand-modal-overlay"

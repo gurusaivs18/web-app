@@ -1,12 +1,11 @@
- 
 import sharp from "sharp";
 import fs from "fs";
 import path from "path";
 
-const assetsDir = path.join(process.cwd(), "src/assets");
+const assetsDir = path.join(process.cwd(), "assets");
 
 async function convertImages(dir) {
-  const files = fs.readdirSync(dir);
+  const files = fs.readdirSync(dir); 
 
   for (const file of files) {
     const fullPath = path.join(dir, file);
@@ -40,7 +39,7 @@ async function convertImages(dir) {
 
 convertImages(assetsDir)
   .then(() => {
-    console.log("\n✅ All images converted to WebP.");
+    console.log("\n All images converted to WebP.");
   })
   .catch((error) => {
     console.error("❌ Conversion failed:");
