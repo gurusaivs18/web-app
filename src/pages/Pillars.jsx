@@ -19,9 +19,9 @@ import noel from "../assets/Partners/noel.webp";
 import banner from "../assets/banners/pillarsupdated.webp";
 
 const teamImages = {
-  Noel: noel,
+  "Noel Harrison": noel,
   "Deep Bhogal": deepImg,
-  "Naz Ayat": nazImg,
+  "Naz Hayat": nazImg,
   "Rushab Bhatnagar": rushabImg,
   "Sanal Kumar": sanalImg,
   "Sanjeev K Sinha": sanjeevImg,
@@ -181,14 +181,14 @@ function PillarsCeoModal({ onClose }) {
               <strong>
                 30+ years of experience across the Middle East and India
               </strong>
-              . As <strong>CEO &amp; Founder of JSB Group</strong>, he has
+              . As <strong>Founder&amp; CEO of JSB Group</strong>, he has
               built a diversified conglomerate with a strong, execution-first
               focus on <strong>Retail &amp; Distribution</strong>, alongside
               interests in{" "}
               <strong>
                 fitness, hospitality, healthcare, and technology
               </strong>
-              .
+              
             </p>
 
             <p>
@@ -368,13 +368,13 @@ function Pillars() {
                   <strong>
                     30+ years of experience across the Middle East and India
                   </strong>
-                  . As <strong>CEO &amp; Founder of JSB Group</strong>, he has
+                  . As <strong>Founder &amp; CEO of JSB Group</strong>, he has
                   built a diversified conglomerate with a strong,
                   execution-first focus on{" "}
                   <strong>Retail &amp; Distribution</strong>, alongside
                   interests in{" "}
                   <strong>
-                    fitness, hospitality, healthcare, and technology
+                    fitness, Sports, hospitality, healthcare, and technology
                   </strong>
                   .
                 </p>

@@ -39,11 +39,11 @@ import { team } from "../data/team";
 ───────────────────────────────────────── */
 
 const teamImages = {
-  "Noel": noel,
+  "Noel Harrison": noel,
 
   "Deep Bhogal": deepImg,
 
-  "Naz Ayat": nazImg,
+  "Naz Hayat": nazImg,
 
   "Rushab Bhatnagar": rushabImg,
 
@@ -230,10 +230,10 @@ function AboutCeoModal({ onClose }) {
             <p>
               Neelesh Bhatnagar is a seasoned entrepreneur with{" "}
               <strong>30+ years of experience across the Middle East and India</strong>.
-              As <strong>CEO &amp; Founder of JSB Group</strong>, he has built a
+              As <strong>Founder &amp; CEO of JSB Group</strong>, he has built a
               diversified conglomerate with a strong, execution-first focus on{" "}
               <strong>Retail &amp; Distribution</strong>, alongside interests in{" "}
-              <strong>fitness, hospitality, healthcare, and technology</strong>.
+              <strong>fitness,Sports, hospitality, healthcare, and technology</strong>.
             </p>
 
             <p>
@@ -758,10 +758,10 @@ function About() {
                 <p className="architect-summary">
                   Neelesh Bhatnagar is a seasoned entrepreneur with{" "}
                   <strong>30+ years of experience across the Middle East and India</strong>.
-                  As <strong>CEO &amp; Founder of JSB Group</strong>, he has built a
+                  As <strong>Founder &amp; CEO of JSB Group</strong>, he has built a
                   diversified conglomerate with a strong, execution-first focus
                   on <strong>Retail &amp; Distribution</strong>, alongside interests
-                  in <strong>fitness, hospitality, healthcare, and technology</strong>.
+                  in <strong>fitness, Sports, hospitality, healthcare, and technology</strong>.
                 </p>
               </div>
 

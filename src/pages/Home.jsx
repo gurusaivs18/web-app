@@ -223,17 +223,17 @@ const verticalCategories = [
 const directors = [
 
     {
-      name: "Noel",
+      name: "Noel Harrison",
       role: "Partner",
       desc: "With over 30 years of commercial experience in supply and distribution across retail, software, and electronics industries, Deep brings a wealth of expertise to his role as Managing Director of Denaster.Under his leadership for more than two decades",
       img: noel,
       order: 2,
     },
   {
-    name: "Naz Ayat",
+    name: "Naz Hayat",
     role: "Partner",
     bio: "30+ years in software and electronics industries. Worked with major UK and international retailers including Amazon and HMV. Expert in distribution channels.",
-    slug: "naz-ayat",
+    slug: "naz-hayat",
     img: naz,
     order: 4,
   },
@@ -435,7 +435,7 @@ function CeoModal({ onClose }) {
     <br />
     Neelesh Bhatnagar is a seasoned entrepreneur with{" "}
     <strong>30+ years of experience across the Middle East and India</strong>.
-    As <strong>CEO & Founder of JSB Group</strong>, he has built a diversified
+    As <strong>FOUNDER & CEO of JSB Group</strong>, he has built a diversified
     conglomerate with a strong, execution-first focus on{" "}
     <strong>Retail & Distribution</strong>, alongside interests in{" "}
     <strong>fitness, hospitality, healthcare, and technology</strong>.
@@ -862,10 +862,10 @@ function Home() {
   <br />
   Neelesh Bhatnagar is a seasoned entrepreneur with{" "}
   <strong>30+ years of experience across the Middle East and India</strong>.
-  As <strong>CEO & Founder of JSB Group</strong>, he has built a diversified
+  As <strong>Founder & CEO of JSB Group</strong>, he has built a diversified
   conglomerate with a strong, execution-first focus on{" "}
   <strong>Retail & Distribution</strong>, alongside interests in{" "}
-  <strong>fitness, hospitality, healthcare, and technology</strong>.
+  <strong>fitness, Sports, hospitality, healthcare, and technology</strong>.
 </p>
             <button
               className="read-more-link"

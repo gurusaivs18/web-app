@@ -4,7 +4,7 @@ export const team = {
     role: "Founder & CEO",
     desc: `Neelesh Bhatnagar doesn’t chase trends—he builds the next chapter of commerce, capability, and growth.
 
-Neelesh Bhatnagar is a seasoned entrepreneur with 30+ years of experience across the Middle East and India. As CEO & Founder of JSB Group, he has built a diversified conglomerate with a strong, execution-first focus on Retail & Distribution, alongside interests in fitness, hospitality, healthcare, and technology.
+Neelesh Bhatnagar is a seasoned entrepreneur with 30+ years of experience across the Middle East and India. As FOUNDER & CEO of JSB Group, he has built a diversified conglomerate with a strong, execution-first focus on Retail & Distribution, alongside interests in fitness, hospitality, healthcare, and technology.
 
 Under Neelesh’s leadership, JSB Group has grown into a multi-vertical ecosystem where each business strengthens the other—driving scale, operational efficiency, and long-term value creation.
 
@@ -20,10 +20,9 @@ Neelesh’s journey reflects resilience, foresight, and an unwavering belief in 
   coreTeam: [
     // 1. NEW MEMBER
     {
-      name: "Noel",
+      name: "Noel Harrison",
       role: "Partner",
-      desc: "With over 30 years of commercial experience in supply and distribution across retail, software, and electronics industries, Deep brings a wealth of expertise to his role as Managing Director of Denaster.Under his leadership for more than two decades",
-      image: null,
+       desc: "With over 30 years of commercial experience in supply and distribution across retail, software, and electronics industries, Deep brings a wealth of expertise to his role as Managing Director of Denaster.Under his leadership for more than two decades",
       order: 1,
     },
 
@@ -41,7 +40,7 @@ Deep's strategic vision and passion have driven Denaster to secure exclusive reg
 
     // 3. NAZ
     {
-      name: "Naz Ayat",
+      name: "Naz Hayat",
       role: "Partner",
       desc: `With a robust career spanning over 30 years in the software and electronics industries, I have developed a comprehensive skill set in sales management and strategic leadership.
 
