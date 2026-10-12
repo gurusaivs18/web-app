@@ -526,34 +526,71 @@ function About() {
 
 
             {/* TEXT */}
+ 
+<div
+  className="about-who-text"
+  data-reveal="right"
+  data-delay="150"
+  style={{
+    width: "100%",
+    maxWidth: "900px",
+    margin: "0 auto",
+    textAlign: "center",
+    color: "#333",
+    lineHeight: 1.8,
+  }}
+>
+  <p style={{ margin: "0 0 14px" }}>
+    JSB Group was established in 2015 with a simple vision:
+    build enduring businesses that elevate everyday experiences.
+    From humble beginnings, we’ve grown into a home-grown
+    conglomerate that thrives across the UAE and extends our
+    footprint to Qatar, Bahrain, and India—uniting investment,
+    technology, and consumer-focused industries under one
+    shared standard of excellence.
+  </p>
 
-            <div
-              className="about-who-text"
-              data-reveal="right"
-              data-delay="150"
-            >
+  <p style={{ margin: "0 0 14px" }}>
+    Today, JSB Group comprises{" "}
+    <strong>15+ companies / brands</strong>, operating across
+    multiple verticals including{" "}
+    <strong>
+      Investment &amp; Technology, Food &amp; Beverage,
+      Retail &amp; Distribution, Sports &amp; Fitness,
+      Fitness &amp; Fitout, and India Verticals.
+    </strong>{" "}
+    Each vertical is guided by the same principles—innovation,
+    operational excellence, and long-term value creation—while
+    staying rooted in local market understanding.
+  </p>
 
-              <h3>
-                An Organisation
-              </h3>
+  <p
+    style={{
+      color: "#9b1c1c",
+      fontSize: "21px",
+      fontWeight: 800,
+      lineHeight: 1.8,
+      margin: "0 auto 14px",
+      maxWidth: "850px",
+    }}
+  >
+    JSB Group doesn’t just build companies—we build ecosystems
+    for growth, performance, and lifestyle innovation.
+  </p>
 
+  {/* <p style={{ margin: "0 0 14px" }}>
+    With a diversified portfolio and a clear forward strategy,
+    JSB Group continues to expand, strengthen partnerships,
+    and create meaningful brands that resonate across regions.
+  </p> */}
 
-              <p>
-                {companyInfo.about}
-              </p>
+  <p style={{ margin: 0 }}>
+    Explore JSB Group and discover how we are redefining success
+    through innovation, excellence, and purpose-driven leadership.
+  </p>
+</div>
+ 
 
-
-              <br />
-
-
-              <p>
-                Explore JSB Group and discover how
-                we are redefining success through
-                innovation, excellence, and
-                purpose-driven leadership.
-              </p>
-
-            </div>
 
           </div>
 
