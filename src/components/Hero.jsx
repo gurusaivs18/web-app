@@ -59,13 +59,14 @@ function Hero() {
 
       <div className="hero-indicators">
         {slides.map((_, i) => (
-          <button
-            key={i}
-            type="button"
-            aria-label={`Go to slide ${i + 1}`}
-            className={`hero-indicator ${i === current ? "active" : ""}`}
-            onClick={() => setCurrent(i)}
-          />
+        <button
+  key={i}
+  type="button"
+  aria-label={`Go to slide ${i + 1}`}
+  aria-current={i === current}
+  className={`hero-indicator ${i === current ? "active" : ""}`}
+  onClick={() => setCurrent(i)}
+/>
         ))}
       </div>
     </section>

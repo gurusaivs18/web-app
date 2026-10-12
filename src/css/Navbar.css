@@ -248,3 +248,11 @@
     width: 18px;
   }
 }
+ 
+.about-bold-underline {
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-color: #d92332;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 4px;
+}  

@@ -2171,4 +2171,8 @@
     flex-basis: 210px;
   }
 }
- 
+
+ .home-intro-text strong {
+  color: #000;
+  font-weight: 800;
+}

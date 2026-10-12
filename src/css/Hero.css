@@ -45,36 +45,48 @@
 
 .hero-indicators {
   position: absolute;
-  bottom: 24px;
-  left: 50%;
-  transform: translateX(-50%);
+  top: 50%;
+  right: clamp(14px, 2.5vw, 32px);
+  transform: translateY(-50%);
   display: flex;
-  gap: 10px;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
   z-index: 3;
 }
 
 .hero-indicator {
-  width: 40px;
-  height: 4px;
+  position: relative;
+  width: 14px;
+  height: 14px;
   padding: 0;
-  border: none;
-  border-radius: 2px;
-  background: rgba(255, 255, 255, 0.4);
+  border: 2px solid rgba(255, 255, 255, 0.85);
+  border-radius: 50%;
+  background: transparent;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
   cursor: pointer;
-  transition: background 0.3s ease, width 0.3s ease;
+}
+
+/* enlarges the tap target to ~34px without changing the look */
+.hero-indicator::after {
+  content: "";
+  position: absolute;
+  inset: -10px;
 }
 
 .hero-indicator.active {
   background: #b31319;
-  width: 56px;
+  border-color: #fff;
 }
 
 @media (max-width: 480px) {
-  .hero-indicator {
-    width: 28px;
+  .hero-indicators {
+    right: 10px;
+    gap: 12px;
   }
-  .hero-indicator.active {
-    width: 40px;
+  .hero-indicator {
+    width: 11px;
+    height: 11px;
   }
 }
 /* ───────────────── HERO CONTENT WRAPPER ───────────────── */
