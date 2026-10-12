@@ -253,7 +253,7 @@
   color: #fff;
 }
 
-/* .architect-info h3 {
+.architect-info h3 {
   font-family: var(--font-heading);
   font-size: 34px;
   font-weight: 800;
@@ -261,7 +261,7 @@
   margin: 0 0 4px;
   color: black;
   line-height: 1.2;
-} */
+}
 
 .architect-info .role {
   margin: 0 0 14px;
@@ -1420,4 +1420,43 @@
 
 .ceo-modal-bio strong {
   color: #fff;
+}
+@media (max-width: 768px) {
+
+  /* CEO name */
+  .architect-section .architect-info h3 {
+    color: #fff !important;
+    font-weight: 800;
+  }
+
+  /* Founder & CEO role */
+  .architect-section .architect-info .role {
+    color: #c52a32 !important;
+    font-weight: 800;
+  }
+
+  /* CEO tagline */
+  .architect-section .architect-info .architect-description .architect-tagline {
+    color: #c52a32 !important;
+    font-weight: 700;
+    font-style: italic;
+  }
+
+  /* Main description */
+  .architect-section .architect-info .architect-description .architect-summary {
+    color: #fff !important;
+    font-weight: 400;
+  }
+
+  /* Bold text inside the description */
+  .architect-section .architect-info .architect-description strong {
+    color: #fff !important;
+    font-weight: 800;
+  }
+
+  /* Read More button */
+  .architect-section .architect-read-more {
+    color: #fff;
+    border-color: #fff;
+  }
 }
