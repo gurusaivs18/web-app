@@ -25,11 +25,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to left,
-    rgba(0, 0, 0, 0.7),
-    rgba(0, 0, 0, 0.15)
-  );
+  background: none;
 }
 
 .architect-label {
@@ -42,7 +38,7 @@
   font-weight: 600;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #fff;
+  color: black;
 }
 
 .architect-content {
@@ -629,4 +625,322 @@
     padding: 0 20px 20px;
   }
 }
- 
+
+
+/* =========================================
+   PILLARS CEO DESCRIPTION — MATCH ABOUT PAGE
+   Does not change the directors/partners modal
+========================================= */
+
+.architect-description {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.architect-info .architect-description p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.architect-info .architect-description .architect-tagline {
+  color: #c52a32;
+  font-style: italic;
+  font-weight: 700;
+}
+
+.architect-info .architect-description .architect-summary strong {
+  font-weight: 800;
+}
+
+/* =========================================
+   PILLARS CEO MODAL — ABOUT-PAGE STYLE
+========================================= */
+
+.pillars-ceo-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.pillars-ceo-modal {
+  position: relative;
+  display: grid;
+  grid-template-columns: 340px minmax(0, 1fr);
+  width: min(900px, 92vw);
+  height: min(580px, 88vh);
+  min-height: 0;
+  overflow: hidden;
+  background: #111;
+  border: 1.6px solid darkred;
+  border-radius: 14px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+  animation: pillarsCeoModalFade 0.28s ease;
+}
+
+.pillars-ceo-modal-image {
+  position: relative;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  background: #1a1a1a;
+}
+
+.pillars-ceo-modal-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 23% center;
+}
+
+.pillars-ceo-modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  min-width: 0;
+  min-height: 0;
+  padding: 40px 36px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  background: #111;
+  color: #fff;
+}
+
+.pillars-ceo-modal-tag {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--red, #a3161c);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.pillars-ceo-modal-tag::before {
+  content: "";
+  width: 28px;
+  height: 2px;
+  flex-shrink: 0;
+  background: var(--red, #a3161c);
+}
+
+.pillars-ceo-modal-content h2 {
+  margin: 0;
+  padding-right: 24px;
+  color: #fff;
+  font-family: var(--font-heading);
+  font-size: clamp(22px, 3vw, 32px);
+  font-weight: 900;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.pillars-ceo-modal-role {
+  margin: 0;
+  color: #aaa;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  line-height: 1.6;
+  text-transform: uppercase;
+}
+
+.pillars-ceo-modal-divider {
+  width: 100%;
+  height: 1px;
+  flex-shrink: 0;
+  margin: 4px 0;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.pillars-ceo-modal-bio {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+}
+
+.pillars-ceo-modal-bio p {
+  margin: 0;
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.pillars-ceo-modal-bio .pillars-ceo-modal-tagline {
+  color: #c52a32;
+  font-style: italic;
+  font-weight: 700;
+}
+
+.pillars-ceo-modal-bio strong {
+  color: #fff;
+  font-weight: 800;
+}
+
+.pillars-ceo-modal-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 4px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  background: var(--red, #a3161c);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.pillars-ceo-modal-button:hover {
+  background: #8b0000;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.pillars-ceo-modal-close {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.65);
+  color: #fff;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.pillars-ceo-modal-close:hover {
+  background: var(--red, #a3161c);
+}
+
+@keyframes pillarsCeoModalFade {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Tablet and mobile CEO modal */
+
+@media (max-width: 992px) {
+  .architect-info .architect-description p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .architect-info .architect-description p {
+    font-size: 13px;
+  }
+
+  .pillars-ceo-modal {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: 220px minmax(0, 1fr);
+    width: min(92vw, 600px);
+    height: 90vh;
+    height: 90dvh;
+    max-height: 90vh;
+    max-height: 90dvh;
+  }
+
+  .pillars-ceo-modal-content {
+    padding: 26px 22px;
+    overflow-y: auto;
+  }
+
+  .pillars-ceo-modal-content h2 {
+    font-size: 25px;
+  }
+
+  .pillars-ceo-modal-bio p {
+    font-size: 13px;
+    line-height: 1.75;
+  }
+}
+
+@media (max-width: 480px) {
+  .architect-description {
+    gap: 8px;
+  }
+
+  .architect-info .architect-description p {
+    font-size: 13px;
+    line-height: 1.75;
+  }
+
+  .pillars-ceo-modal-overlay {
+    padding: 10px;
+  }
+
+  .pillars-ceo-modal {
+    width: 100%;
+    height: 94vh;
+    height: 94dvh;
+    max-height: 94vh;
+    max-height: 94dvh;
+    grid-template-rows: 180px minmax(0, 1fr);
+  }
+
+  .pillars-ceo-modal-content {
+    padding: 22px 17px;
+    gap: 10px;
+  }
+
+  .pillars-ceo-modal-content h2 {
+    font-size: 21px;
+  }
+}
+
+/* CEO description — Pillars page */
+
+.architect-info .architect-description .architect-tagline {
+  color: #7a1515;
+}
+
+.architect-info .architect-description .architect-summary {
+  color: black;
+}
+
+/* CEO modal description */
+.pillars-ceo-modal-bio .pillars-ceo-modal-tagline {
+  color: #7a1515;
+}
+
+.pillars-ceo-modal-bio p:not(.pillars-ceo-modal-tagline) {
+  color: #d3d3d3;
+}
+
+.pillars-ceo-modal-bio strong {
+  color: #fff;
+}

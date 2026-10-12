@@ -174,6 +174,109 @@ function Modal({ person, onClose }) {
 
 
 /* ─────────────────────────────────────────
+   ABOUT CEO MODAL — MATCHES HOME CEO MODAL
+───────────────────────────────────────── */
+function AboutCeoModal({ onClose }) {
+  useEffect(() => {
+    const previousOverflow = document.body.style.overflow;
+
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") onClose();
+    };
+
+    document.body.style.overflow = "hidden";
+    document.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [onClose]);
+
+  return createPortal(
+    <div className="about-ceo-modal-overlay" onClick={onClose}>
+      <div
+        className="about-ceo-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="about-ceo-modal-name"
+        onClick={(event) => event.stopPropagation()}
+      >
+        <button
+          type="button"
+          className="about-ceo-modal-close"
+          onClick={onClose}
+          aria-label="Close CEO biography"
+        >
+          ×
+        </button>
+
+        <div className="about-ceo-modal-image">
+          <img src={ceoImage} alt="Neelesh Bhatnagar" />
+        </div>
+
+        <div className="about-ceo-modal-content">
+          <span className="about-ceo-modal-tag">The Architect</span>
+          <h2 id="about-ceo-modal-name">Neelesh Bhatnagar</h2>
+          <p className="about-ceo-modal-role">Founder &amp; CEO, JSB Group</p>
+          <div className="about-ceo-modal-divider" />
+
+          <div className="about-ceo-modal-bio">
+            <p className="about-ceo-modal-tagline">
+              Neelesh Bhatnagar doesn’t chase trends—he builds the next
+              chapter of commerce, capability, and growth.
+            </p>
+
+            <p>
+              Neelesh Bhatnagar is a seasoned entrepreneur with{" "}
+              <strong>30+ years of experience across the Middle East and India</strong>.
+              As <strong>CEO &amp; Founder of JSB Group</strong>, he has built a
+              diversified conglomerate with a strong, execution-first focus on{" "}
+              <strong>Retail &amp; Distribution</strong>, alongside interests in{" "}
+              <strong>fitness, hospitality, healthcare, and technology</strong>.
+            </p>
+
+            <p>
+              Under Neelesh’s leadership, JSB Group has grown into a multi-vertical
+              ecosystem where each business strengthens the other—driving scale,
+              operational efficiency, and long-term value creation. His vision has
+              guided the Group’s expansion across key markets, establishing meaningful
+              presence across the <strong>UAE and beyond</strong>, while staying deeply
+              connected to the needs of customers, partners, and communities.
+            </p>
+
+            <p>
+              Known for spotting opportunities ahead of the curve, Neelesh leads with
+              a <strong>hands-on style</strong>, decisive execution, and a clear commitment
+              to building brands and businesses that last. For him, entrepreneurship
+              isn’t just about growth—it’s about impact: creating value not only for
+              shareholders, but for the people and communities that power the economy
+              every day.
+            </p>
+
+            <p>
+              Neelesh’s journey reflects resilience, foresight, and an unwavering belief
+              in the power of strong leadership and strategic entrepreneurship to
+              transform markets—and lives.
+            </p>
+          </div>
+
+          <a
+            href="/pillars"
+            className="about-ceo-modal-button"
+            onClick={onClose}
+          >
+            The Pillars
+          </a>
+        </div>
+      </div>
+    </div>,
+    document.body
+  );
+}
+
+
+/* ─────────────────────────────────────────
    PERSON CARD
 ───────────────────────────────────────── */
 
@@ -589,7 +692,7 @@ function About() {
                 data-reveal="right"
                 data-delay="300"
                 style={{
-                  color: "white",
+                  color: "black",
                 }}
               >
                 {team.ceo.name}
@@ -605,30 +708,25 @@ function About() {
               </p>
 
 
-              <p
+              <div
+                className="architect-description"
                 data-reveal="right"
                 data-delay="500"
               >
-               <div style={{ color: "black", fontWeight: "bold",fontStyle: "italic" }}>
-                Neelesh Bhatnagar doesn’t chase
-                trends—he builds the next chapter
-                of commerce, capability, and growth.
-               </div>
-                Neelesh Bhatnagar doesn’t chase
-                trends—he builds the next chapter
-                of commerce, capability, and growth.
+                <p className="architect-tagline">
+                  Neelesh Bhatnagar doesn’t chase trends—he builds the next
+                  chapter of commerce, capability, and growth.
+                </p>
 
-                Neelesh Bhatnagar is a seasoned
-                entrepreneur with <strong style={{ color: "black", fontStyle: "italic" }}>30+ years of
-                experience across the Middle East
-                and India.</strong> As <strong style={{ color: "black", fontStyle: "italic" }}>CEO & Founder of JSB
-                Group</strong>, he has built a diversified
-                conglomerate with a strong,
-                execution-first focus on <strong style={{ color: "black", fontStyle: "italic" }}>Retail &
-                Distribution</strong>, alongside interests
-                in <strong style={{ color: "black", fontStyle: "italic" }}>fitness, hospitality, healthcare,
-                and technology</strong>.
-              </p>
+                <p className="architect-summary">
+                  Neelesh Bhatnagar is a seasoned entrepreneur with{" "}
+                  <strong>30+ years of experience across the Middle East and India</strong>.
+                  As <strong>CEO &amp; Founder of JSB Group</strong>, he has built a
+                  diversified conglomerate with a strong, execution-first focus
+                  on <strong>Retail &amp; Distribution</strong>, alongside interests
+                  in <strong>fitness, hospitality, healthcare, and technology</strong>.
+                </p>
+              </div>
 
 
               <button
@@ -657,18 +755,7 @@ function About() {
       ═══════════════════════════════════════ */}
 
       {ceoOpen && (
-
-        <Modal
-          person={{
-            name: team.ceo.name,
-            role: team.ceo.role,
-            desc: team.ceo.desc,
-          }}
-          onClose={() =>
-            setCeoOpen(false)
-          }
-        />
-
+        <AboutCeoModal onClose={() => setCeoOpen(false)} />
       )}
 
 

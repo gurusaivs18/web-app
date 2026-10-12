@@ -1741,7 +1741,7 @@
   display: block;
 
   object-fit: cover;
-  object-position: 30% center;
+  object-position: 23% center;
 }
 
 .ceo-modal-content {
@@ -2022,92 +2022,6 @@
 }
 
 
-/* Specific brand sizes */
-
-/* .home-modal-logo-wrap img[data-brand="Harrison Digital"] {
-  width: 320px !important;
-  max-width: none !important;
-}
-
-.home-modal-logo-wrap img[data-brand="Khichdi Tales"] {
-  width: 200px !important;
-  max-width: none !important;
-}
-
-.home-modal-logo-wrap img[data-brand="Thali Tales"] {
-  width: 250px !important;
-  max-width: none !important;
-}
-
-.home-modal-logo-wrap img[data-brand="VK Technologies"] {
-  width: 365px !important;
-  max-width: none !important;
-}
-
-.home-modal-logo-wrap img[data-brand="Denaster"],
-.home-modal-logo-wrap img[data-brand="Yellow Chilli"] {
-  max-height: 140px !important;
-}
-
-.home-modal-logo-wrap img[data-brand="Pizza Tales"] {
-  width: 210px !important;
-  max-width: none !important;
-}
-
-.home-modal-logo-wrap img[data-brand="NB Ventures"] {
-  width: 200px !important;
-  max-width: none !important;
-}
-
-.home-modal-logo-wrap img[data-brand="Booster Juice"] {
-  width: 400px !important;
-  max-width: none !important;
-}
-
-.home-modal-logo-wrap img[data-brand="ZeroG Beds & Mattresses"] {
-  width: 320px !important;
-  max-width: none !important;
-}
-
-.home-modal-logo-wrap img[data-brand="UAE Bulls"] {
-  width: 250px !important;
-  max-width: none !important;
-}
-
-.home-modal-logo-wrap img[data-brand="Garmin by Activ8"] {
-  width: 290px !important;
-  max-width: none !important;
-}
-
-.home-modal-logo-wrap img[data-brand="Monkey Box"] {
-  width: 250px !important;
-  max-width: none !important;
-}
-
-.home-modal-logo-wrap img[data-brand="VIP Cosmetics"] {
-  width: 205px !important;
-  max-width: none !important;
-}
-
-.home-modal-logo-wrap img[data-brand="BVB League"] {
-  width: 295px !important;
-  max-width: none !important;
-}
-
-.home-modal-logo-wrap img[data-brand="Pressman's Sandwiches"] {
-  width: 220px !important;
-  max-width: none !important;
-}
-
-.home-modal-logo-wrap img[data-brand="Target One"] {
-  width: 255px !important;
-  max-width: none !important;
-}
-
-.home-modal-logo-wrap img[data-brand="Biriyani Box"] {
-  width: 255px !important;
-  max-width: none !important;
-} */
 
 
 /* Brand modal text */
@@ -2257,3 +2171,4 @@
     flex-basis: 210px;
   }
 }
+ 
