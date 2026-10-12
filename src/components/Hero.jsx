@@ -1,18 +1,46 @@
+ import { useState, useEffect } from "react";
 import "../css/Hero.css";
 import { useNavigate } from "react-router-dom";
-import heroImage from "../assets/jsbGroupWebsite/5555.mp4";
+
+// Change this path to your available image
+import slide1 from "../assets/jsbGroupWebsite/1000d.jpg.jpeg";
+
+// When the other images are ready, uncomment these and swap them into the array
+import slide2 from "../assets/jsbGroupWebsite/1213.jpeg";
+import slide3 from "../assets/jsbGroupWebsite/Banner_003.webp";
+
+// Same image used 3 times for now
+const slides = [slide1, slide2, slide3];
+// Later: const slides = [slide1, slide2, slide3];
+
+const AUTOPLAY_MS = 3000;
 
 function Hero() {
   const navigate = useNavigate();
+  const [current, setCurrent] = useState(0);
+
+  // Re-runs on every slide change, so clicking a bar resets the timer
+  useEffect(() => {
+    const id = setTimeout(
+      () => setCurrent((prev) => (prev + 1) % slides.length),
+      AUTOPLAY_MS
+    );
+    return () => clearTimeout(id);
+  }, [current]);
 
   return (
     <section className="hero">
-      <video src={heroImage} alt="Hero" className="hero-img" autoPlay muted loop />
+      {slides.map((src, i) => (
+        <img
+          key={i}
+          src={src}
+          alt={`Hero slide ${i + 1}`}
+          className={`hero-img hero-slide ${i === current ? "active" : ""}`}
+        />
+      ))}
 
       <div className="hero-content">
         <div className="hero-circle-wrap">
-
-
           <div className="hero-circle">
             <h1 className="hero-title">
               From <span className="red-box">Dreams</span> to{" "}
@@ -28,10 +56,20 @@ function Hero() {
           Know More
         </button>
       </div>
+
+      <div className="hero-indicators">
+        {slides.map((_, i) => (
+          <button
+            key={i}
+            type="button"
+            aria-label={`Go to slide ${i + 1}`}
+            className={`hero-indicator ${i === current ? "active" : ""}`}
+            onClick={() => setCurrent(i)}
+          />
+        ))}
+      </div>
     </section>
   );
 }
 
 export default Hero;
-
-
