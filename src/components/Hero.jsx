@@ -107,8 +107,7 @@ function Hero() {
 
         <div className="hero-side">
           <p className="hero-subtitle">
-            The Unstoppable Force of Purposeful Action. Turning bold ideas into
-            measurable results, built for teams that value speed and clarity.
+            <strong>The Unstoppable Force of Purposeful Action.</strong> JSB Group doesn’t just build companies—we build ecosystems for growth, performance, and lifestyle innovation.
           </p>
           <div className="hero-actions">
             <button
