@@ -5,8 +5,10 @@ import { useNavigate } from "react-router-dom";
 import slide1 from "../assets/jsbGroupWebsite/1000d.jpg.jpeg";
 import slide2 from "../assets/jsbGroupWebsite/1213.jpeg";
 import slide3 from "../assets/jsbGroupWebsite/Banner_003.webp";
+import slide4 from "../assets/jsbGroupWebsite/motiv8.jpeg";
 
-const slides = [slide1, slide2, slide3];
+
+const slides = [slide1, slide2, slide3, slide4];
 
 const AUTOPLAY_MS = 3000;
 const SLIDE_MS = 800; // must match the animation duration in Hero.css
