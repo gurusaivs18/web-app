@@ -1,15 +1,34 @@
+/* ───────────────── VARIABLES ───────────────── */
 
-/* ───────────────── HERO BASE ───────────────── */
+:root {
+  --header-h: 70px; /* set to your real navbar height */
+  --brand-red: #b31319;
+  --dark-red: #8b0000;
+  --hero-pad-x: clamp(20px, 3vw, 40px);
+}
+
+/* ───────────────── HERO BASE (desktop: full-bleed cover) ───────────────── */
 
 .hero {
   position: relative;
   width: 100%;
-  height: 100vh;
-  min-height: 600px;
+  height: 100vh; /* fallback */
+  height: 100svh; /* correct on mobile browsers with a moving address bar */
+  min-height: 620px;
   overflow: hidden;
   display: flex;
-  align-items: center;
+  align-items: flex-end; /* content anchored to the bottom */
   justify-content: center;
+  background: #0b0b0b;
+}
+
+/* ───────────────── MEDIA LAYER ───────────────── */
+
+.hero-media {
+  position: absolute;
+  inset: 0;
+  overflow: hidden; /* clips the translateX slide animation */
+  z-index: 0;
 }
 
 .hero-img {
@@ -21,18 +40,21 @@
   display: block;
 }
 
-.hero::after {
+/* Scrim: dark at the bottom (text), slight at the top (navbar) */
+.hero-media::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0.08),
-    rgba(0, 0, 0, 0.05)
-  );
   z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0.45) 40%,
+    rgba(0, 0, 0, 0.2) 70%,
+    rgba(0, 0, 0, 0.4) 100%
+  );
 }
-/* ───────────────── CAROUSEL ───────────────── */
 
 /* ───────────────── CAROUSEL (sliding) ───────────────── */
 
@@ -53,8 +75,8 @@
 .hero-slide.exit-to-right {
   opacity: 1;
   visibility: visible;
-  animation-duration: 0.8s; /* keep in sync with SLIDE_MS */
-  animation-timing-function: ease-in-out; /* use linear for constant speed */
+  animation-duration: 0.8s; /* keep in sync with SLIDE_MS in Hero.jsx */
+  animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
 }
 
@@ -71,6 +93,8 @@
 @media (prefers-reduced-motion: reduce) {
   .hero-slide { animation-duration: 0.01s !important; }
 }
+
+/* ───────────────── DOTS (centered on the image) ───────────────── */
 
 .hero-indicators {
   position: absolute;
@@ -104,8 +128,188 @@
 }
 
 .hero-indicator.active {
-  background: #b31319;
+  background: var(--brand-red);
   border-color: #fff;
+}
+
+/* ───────────────── CONTENT ───────────────── */
+
+.hero-content {
+  position: relative;
+  z-index: 2; /* above the scrim */
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: clamp(24px, 5vw, 80px);
+  padding: 0 var(--hero-pad-x) clamp(40px, 6vh, 72px);
+}
+
+.hero-title {
+  margin: 0;
+  flex: 1 1 auto;
+  max-width: 14ch; /* stacked 2-line headline */
+  color: #fff;
+  font-size: clamp(40px, 6.2vw, 92px);
+  font-weight: 500;
+  line-height: 1.4; /* extra line gap so the two red boxes never touch */
+  letter-spacing: -0.02em;
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.45);
+}
+
+.hero-title .red-box {
+  display: inline-block;
+  margin: 0.04em 0.1em; /* gap between the boxes, and between box and "to" */
+  padding: 0.04em 0.2em;
+  border-radius: 8px;
+  line-height: 1.1;
+  color: #fff;
+  background: var(--dark-red);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.45);
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.45),
+    0 10px 24px rgba(0, 0, 0, 0.55),
+    0 0 22px rgba(139, 0, 0, 0.55); /* soft red glow */
+}
+
+.hero-side {
+  flex: 0 0 auto;
+  width: min(380px, 100%);
+  padding-bottom: 6px;
+}
+
+.hero-subtitle {
+  margin: 0 0 clamp(16px, 2vw, 24px);
+  color: rgba(255, 255, 255, 0.95);
+  font-size: clamp(14px, 1.15vw, 17px);
+  font-weight: 400;
+  line-height: 1.55;
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* ───────────────── BUTTONS ───────────────── */
+
+.hero-btn {
+  border: none;
+  border-radius: 999px; /* pill */
+  padding: 14px 26px;
+  font-size: clamp(14px, 1.1vw, 16px);
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.25s ease, color 0.25s ease, transform 0.15s ease;
+}
+
+.hero-btn:active {
+  transform: scale(0.97);
+}
+
+.hero-btn-primary {
+  background: #fff;
+  color: #111;
+}
+
+.hero-btn-primary:hover,
+.hero-btn-primary:focus-visible {
+  background: var(--brand-red);
+  color: #fff;
+}
+
+.hero-btn-secondary {
+  background: rgba(255, 255, 255, 0.18);
+  color: #fff;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.hero-btn-secondary:hover,
+.hero-btn-secondary:focus-visible {
+  background: rgba(255, 255, 255, 0.32);
+}
+
+/* ───────────────── PLAY / PAUSE ───────────────── */
+
+.hero-pause {
+  position: absolute;
+  right: var(--hero-pad-x);
+  bottom: 16px;
+  z-index: 3;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  display: grid;
+  place-items: center;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+.hero-pause:hover,
+.hero-pause:focus-visible {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* ───────────────── TABLET + MOBILE (≤ 992px) ─────────────────
+   The image is shown in FULL (object-fit: contain, in a box with the
+   image's real aspect ratio). Text sits below it, never over it. */
+
+@media (max-width: 992px) {
+  .hero {
+    height: auto;
+    min-height: 0;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    padding-top: var(--header-h); /* clears the navbar */
+  }
+
+  .hero-media {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    aspect-ratio: var(--slide-ratio, 16 / 9);
+    max-height: 75svh; /* safety cap for tall/portrait images */
+    background: #0b0b0b;
+  }
+
+  .hero-img {
+    object-fit: contain; /* whole image visible, nothing cropped */
+  }
+
+  .hero-media::after {
+    display: none; /* text is off the image, no scrim needed */
+  }
+
+  .hero-content {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 28px var(--hero-pad-x) 72px; /* bottom clears the pause button */
+  }
+
+  .hero-title {
+    max-width: none;
+    font-size: clamp(32px, 8vw, 56px);
+  }
+
+  .hero-side {
+    width: 100%;
+    max-width: 480px;
+    padding-bottom: 0;
+  }
 }
 
 @media (max-width: 480px) {
@@ -113,211 +317,14 @@
     right: 10px;
     gap: 12px;
   }
+
   .hero-indicator {
     width: 11px;
     height: 11px;
   }
-}
-/* ───────────────── HERO CONTENT WRAPPER ───────────────── */
 
-.hero-content {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: clamp(20px, 4vw, 36px);
-  width: 100%;
-  padding: 0 16px;
-  box-sizing: border-box;
-  margin-top: 70px;
-}
-
-/* ───────────────── CIRCLE PATCH ───────────────── */
-
-.hero-circle-wrap {
-  position: relative;
-  width: clamp(220px, 32vw, 440px);
-  max-width: 90vw;
-  aspect-ratio: 1 / 1;
-  display: flex;
-  align-items: center; 
-  justify-content: center;
-  flex-shrink: 0;
-  container-type: inline-size; /* enables cqw units below */
-}
-
-/* Soft glow layer behind everything — pulses brighter/dimmer */
-.hero-circle-glow {
-  position: absolute;
-  inset: -6%;
-  border-radius: 50%;
-
-  filter: blur(6px);
-  animation: hero-glow-pulse 0s ease-in-out infinite;
-  pointer-events: none;
-  z-index: 0;
-}
-
-@keyframes hero-glow-pulse {
-  0%,
-  100% {
-    opacity: 0.5;
-    transform: scale(0.96);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(1.06);
-  }
-}
-
-/* Animated rotating outline (ring only, via mask) */
-.hero-circle-ring {
-  position: absolute;
-  inset: 0;
-  border-radius: 50%;
-  padding: 3px;
-  background: conic-gradient(
-    from 0deg,
-    #7b0303 0deg,
-    rgba(179, 19, 25, 0) 90deg,
-    #f5f4f4 360deg
-  );
-  -webkit-mask:
-    linear-gradient(#fff 0 0) content-box,
-    linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  animation: hero-ring-spin 6s linear infinite;
-  pointer-events: none;
-  z-index: 1;
-}
-
-@keyframes hero-ring-spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-/* Solid inner circle holding the content */
-.hero-circle {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  /* background: rgba(8, 8, 8, 0.2); */
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 14% 12%;
-  box-sizing: border-box;
-  overflow: hidden;
-  z-index: 2;
-
-  /* subtle brightening of the circle's own edge, in sync with glow */
-  animation: hero-circle-brighten 3.2s ease-in-out infinite;
-}
-
-@keyframes hero-circle-brighten {
-  0%,
-  100% {
-    box-shadow: 0 0 12px 2px rgba(179, 19, 25, 0.25);
-  }
-  50% {
-    box-shadow: 0 0 26px 6px rgba(179, 19, 25, 0.55);
-  }
-}
-
-/* ───────────────── TEXT (scales with circle size via cqw) ───────────────── */
-
-.hero-title {
-  margin: 0;
-  color:#FFFFFFCC;
-  font-size: clamp(16px, 11cqw, 34px);
-  font-weight: 800;
-  line-height: 1.3;
-  
-}
-
-.hero-title .red-box {
-  display: inline-block;
-  padding: 0.08em 0.22em;
-  border-radius: 4px;
-  line-height: 1.25;
-  border: 0.2px solid darkred;
-}
-
-.hero-subtitle {
-  margin-top: clamp(6px, 3cqw, 12px);
-  color: #fff;
-  font-size: clamp(10px, 4.2cqw, 16px);
-  font-weight: 300;
-  line-height: 1.5;
-}
-
-/* ───────────────── BUTTON (outside circle, bottom-center) ───────────────── */
-
-.hero-btn {
-  margin-top: clamp(20px, 4vw, 40px);
-  background: #b31319;
-  color: #fff;
-  border: none;
-  padding: clamp(10px, 1.5vw, 12px) clamp(20px, 3vw, 28px);
-  border-radius: 8px;
-  font-size: clamp(13px, 1.5vw, 16px);
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.hero-btn:hover {
-  background: rgb(142, 8, 8);
-}
-
-/* ───────────────── RESPONSIVE HEIGHT / SIZE ADJUSTMENTS ───────────────── */
-
-@media (max-width: 992px) {
-  .hero {
-    min-height: 550px;
-  }
-  .hero-content {
-    margin-top: 70px; /* increase/decrease to control how far down */
-  }
-}
-
-@media (max-width: 768px) {
-  .hero {
-    min-height: 500px;
-  }
-  .hero-circle-wrap {
-    width: clamp(200px, 46vw, 360px);
-  }
-}
-
-@media (max-width: 641px) {
-  .hero {
-    min-height: 460px;
-  }
-  .hero-circle-wrap {
-    width: clamp(190px, 58vw, 320px);
-  }
-}
-
-@media (max-width: 480px) {
-  .hero {
-    min-height: 450px;
-    height: 10vh;
-  }
-  .hero-circle-wrap {
-    width: clamp(170px, 68vw, 280px);
-  }
   .hero-btn {
-    font-size: 13px;
-    padding: 10px 22px;
+    padding: 12px 22px;
+    font-size: 14px;
   }
 }
-
