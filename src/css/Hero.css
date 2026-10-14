@@ -34,13 +34,42 @@
 }
 /* ───────────────── CAROUSEL ───────────────── */
 
+/* ───────────────── CAROUSEL (sliding) ───────────────── */
+
 .hero-slide {
   opacity: 0;
-  transition: opacity 0.8s ease-in-out;
+  visibility: hidden;
+  will-change: transform;
 }
 
 .hero-slide.active {
   opacity: 1;
+  visibility: visible;
+}
+
+.hero-slide.enter-from-right,
+.hero-slide.enter-from-left,
+.hero-slide.exit-to-left,
+.hero-slide.exit-to-right {
+  opacity: 1;
+  visibility: visible;
+  animation-duration: 0.8s; /* keep in sync with SLIDE_MS */
+  animation-timing-function: ease-in-out; /* use linear for constant speed */
+  animation-fill-mode: forwards;
+}
+
+.hero-slide.enter-from-right { animation-name: slide-in-right; }
+.hero-slide.enter-from-left  { animation-name: slide-in-left; }
+.hero-slide.exit-to-left     { animation-name: slide-out-left; }
+.hero-slide.exit-to-right    { animation-name: slide-out-right; }
+
+@keyframes slide-in-right  { from { transform: translateX(100%); }  to { transform: translateX(0); } }
+@keyframes slide-in-left   { from { transform: translateX(-100%); } to { transform: translateX(0); } }
+@keyframes slide-out-left  { from { transform: translateX(0); }     to { transform: translateX(-100%); } }
+@keyframes slide-out-right { from { transform: translateX(0); }     to { transform: translateX(100%); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-slide { animation-duration: 0.01s !important; }
 }
 
 .hero-indicators {
