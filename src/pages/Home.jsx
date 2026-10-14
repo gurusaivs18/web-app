@@ -248,7 +248,7 @@ const directors = [
   {
     name: "Sanjeev K Sinha",
     role: "Group CFO",
-    bio: "I'm a Chartered Accountant with close to three decades of experience turning finance from a reporting function into a driver of profitability and growth. My remit today covers business strategy, the full accounting and finance function, IT, HR & Administration and Marketing — with a particular focus on operational efficiency and new business development. Designing the policies, procedures and controls that let a fast-moving group scale cleanly is where I do my best work. Over my career I've built and re-engineered finance and commercial functions at Landmark Group (EMAX), Sana Fashion, Samsung India and Mattel Inc. Core strengths: business & financial strategy, commercial finance, budgeting & forecasting, controls & SOP design, supply chain and working-capital management, ERP and process automation, and building teams that run the numbers well.",
+    bio: "A Chartered Accountant with close to three decades of experience turning finance from a reporting function into a driver of profitability and growth. My remit today covers business strategy, the full accounting and finance function, IT, HR & Administration and Marketing — with a particular focus on operational efficiency and new business development. Designing the policies, procedures and controls that let a fast-moving group scale cleanly is where I do my best work. Over my career I've built and re-engineered finance and commercial functions at Landmark Group (EMAX), Sana Fashion, Samsung India and Mattel Inc. Core strengths: business & financial strategy, commercial finance, budgeting & forecasting, controls & SOP design, supply chain and working-capital management, ERP and process automation, and building teams that run the numbers well.",
     slug: "sanjeev-sinha",
     img: sinha,
     order: 7,
@@ -288,7 +288,7 @@ const directors = [
   {
     name: "Supriya Hurkat",
     role: "Director",
-    bio: "WRITE UP PENDING",
+    bio: "A Chartered Accountant (CA) and the accomplished Finance Manager at NB Venture. With a proven track record in financial management, Supriya brings a wealth of expertise to ensure the financial success and growth of our ventures. Her strategic insights, meticulous attention to detail, and ethical approach make her an invaluable asset to our team.",
     slug: "supriya-hurkat",
     img: supriyaImg,
     order: 1,

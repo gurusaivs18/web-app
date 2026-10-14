@@ -80,7 +80,7 @@ NB Ventures is a growth-stage venture fund based in the U.A.E., with a robust po
     {
       name: "Sanjeev K Sinha",
       role: "Group CFO",
-      desc: `I'm a Chartered Accountant with close to three decades of experience turning finance from a reporting function into a driver of profitability and growth.
+      desc: `A Chartered Accountant with close to three decades of experience turning finance from a reporting function into a driver of profitability and growth.
 
 My remit today covers business strategy, the full accounting and finance function, IT, HR & Administration and Marketing — with a particular focus on operational efficiency and new business development.
 
@@ -120,7 +120,7 @@ His career reflects a commitment to using technology not simply as an operationa
     {
       name: "Supriya Hurkat",
       role: "Director",
-      desc: "With over 30 years of commercial experience in supply and distribution across retail, software, and electronics industries, Deep brings a wealth of expertise to his role as Managing Director of Denaster.Under his leadership for more than two decades",
+      desc: "A Chartered Accountant (CA) and the accomplished Finance Manager at NB Venture. With a proven track record in financial management, Supriya brings a wealth of expertise to ensure the financial success and growth of our ventures. Her strategic insights, meticulous attention to detail, and ethical approach make her an invaluable asset to our team.",
       order: 8,
     },
   ],
