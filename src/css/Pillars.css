@@ -993,3 +993,35 @@
     border: 1px solid #fff;
   }
 }
+ 
+ 
+/* =========================================================
+   PILLARS PAGE — THE ARCHITECT DESCRIPTION
+========================================================= */
+
+/* Justify the main CEO description */
+.architect-info .architect-description .architect-summary {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/* =========================================================
+   PILLARS PAGE — CEO MODAL BIOGRAPHY
+========================================================= */
+
+/* Justify all biography paragraphs except the tagline */
+.pillars-ceo-modal-bio p:not(.pillars-ceo-modal-tagline) {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/* =========================================================
+   PILLARS PAGE — TEAM MEMBER MODALS
+========================================================= */
+
+/* Justify paragraphs in each team member's Read More modal */
+.modal-pro-box .mp-body p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+ 

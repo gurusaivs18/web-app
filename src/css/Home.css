@@ -148,12 +148,11 @@
 .ceo-info p {
   font-size: clamp(12px, 1.15vw, 14px);
   line-height: 1.7;
-
   color: #111;
-
   margin: 0;
+  text-align: justify;
+  text-justify: inter-word;
 }
-
 
 /* Read More */
 
@@ -1835,11 +1834,12 @@
 
 .ceo-modal-bio p {
   margin: 0;
-
   font-size: 14px;
   line-height: 1.8;
-
   color: #fff;
+  text-align: justify;
+  text-justify: inter-word;
+  overflow-wrap: break-word;
 }
 
 .ceo-modal-close {
@@ -2175,4 +2175,10 @@
  .home-intro-text strong {
   color: #000;
   font-weight: 800;
+}
+
+/* HOME PAGE — PARAGRAPH BELOW HERO IMAGE */
+.home-intro p {
+  text-align: justify;
+  text-justify: inter-word;
 }

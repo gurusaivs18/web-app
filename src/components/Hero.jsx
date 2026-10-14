@@ -40,8 +40,8 @@ function Hero() {
       ))}
 
       <div className="hero-content">
-        <div className="hero-circle-wrap">
-          <div className="hero-circle">
+      
+         
             <h1 className="hero-title">
               From <span className="red-box">Dreams</span> to{" "}
               <span className="red-box">Reality</span>
@@ -49,8 +49,8 @@ function Hero() {
             <p className="hero-subtitle">
               The Unstoppable Force of Purposeful Action
             </p>
-          </div>
-        </div>
+        
+      
 
         <button className="hero-btn" onClick={() => navigate("/about")}>
           Know More

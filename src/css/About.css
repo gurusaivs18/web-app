@@ -1460,3 +1460,41 @@
     border-color: #fff;
   }
 }
+
+/* =========================================================
+   THE ARCHITECT — JUSTIFIED DESCRIPTION
+========================================================= */
+
+.architect-info .architect-description .architect-summary {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/* =========================================================
+   THE ARCHITECT — CEO MODAL PARAGRAPHS
+========================================================= */
+
+.about-ceo-modal-bio p:not(.about-ceo-modal-tagline) {
+  text-align: justify;
+  text-justify: inter-word;
+}
+ 
+/* =========================================================
+   WHO WE ARE — JUSTIFIED PARAGRAPHS
+========================================================= */
+
+.about-who-text p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+
+/* =========================================================
+   CEO MODAL — JUSTIFIED BIOGRAPHY PARAGRAPHS
+========================================================= */
+
+.about-ceo-modal-bio p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+ 
