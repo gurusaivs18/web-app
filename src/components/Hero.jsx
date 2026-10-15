@@ -9,7 +9,7 @@ import slide4 from "../assets/jsbGroupWebsite/motiv8.jpeg";
 
 const slides = [slide1, slide2, slide3, slide4];
 
-const AUTOPLAY_MS = 4000;
+const AUTOPLAY_MS = 3000;
 const SLIDE_MS = 800; // must match animation-duration in Hero.css
 
 function Hero() {
