@@ -93,7 +93,9 @@ function Modal({ person, onClose }) {
 
         <div className="mp-body">
           {person.desc
-            ?.split("\n\n")
+            ?.split(/\n+/)
+            .map((paragraph) => paragraph.trim())
+            .filter(Boolean)
             .map((paragraph, index) => (
               <p key={index}>{paragraph}</p>
             ))}

@@ -142,7 +142,9 @@ function Modal({ person, onClose }) {
         <div className="mp-body">
 
           {person.desc
-            ?.split("\n\n")
+            ?.split(/\n+/)
+            .map((para) => para.trim())
+            .filter(Boolean)
             .map((para, i) => (
               <p key={i}>
                 {para}
@@ -568,7 +570,7 @@ function About() {
     style={{
       color: "#9b1c1c",
       fontSize: "21px",
-      fontWeight: 800,
+      fontWeight: 600,
       lineHeight: 1.8,
       margin: "0 auto 14px",
       maxWidth: "850px",

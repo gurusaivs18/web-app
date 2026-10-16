@@ -39,7 +39,7 @@
 
 .about-highlight-red {
   color: #8b1e2d !important;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 20px !important;
 }
 
@@ -2174,11 +2174,20 @@
 
  .home-intro-text strong {
   color: #000;
-  font-weight: 800;
+  font-weight: 600;
 }
 
 /* HOME PAGE — PARAGRAPH BELOW HERO IMAGE */
 .home-intro p {
   text-align: justify;
   text-justify: inter-word;
+}
+.ceo-info p strong {
+  font-weight: 600;
+}
+/* Large desktop: nudge CEO text left, toward the image */
+@media (min-width: 1400px) {
+  .ceo-info {
+    right: clamp(80px, 9vw, 200px);  /* was capped at 80px */
+  }
 }

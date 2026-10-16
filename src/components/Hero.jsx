@@ -73,7 +73,7 @@ function Hero() {
 
   return (
     <section className="hero" style={{ "--slide-ratio": ratio }}>
-      {/* Images + dots. Clipped so the slide animation never leaks. */}
+      {/* Images + patch + dots. Clipped so the slide animation never leaks. */}
       <div className="hero-media">
         {slides.map((src, i) => (
           <img
@@ -83,6 +83,30 @@ function Hero() {
             className={`hero-img hero-slide ${slideClass(i)}`}
           />
         ))}
+
+        {/* Circle patch: belongs to slide 1 only, slides in/out with it */}
+        <div className={`hero-patch-layer hero-slide ${slideClass(0)}`}>
+          <div className="hero-group">
+            <div className="hero-patch">
+              <h1 className="hero-title">
+                <span className="hero-from">From</span>
+                <span className="red-box">Dreams</span>
+                <span className="hero-to">to</span>
+                <span className="red-box">Reality</span>
+              </h1>
+            </div>
+            <p className="hero-subtitle">
+              <strong>The Unstoppable Force of Purposeful Action.</strong>
+            </p>
+            <button
+              type="button"
+              className="hero-btn hero-btn-primary"
+              onClick={() => navigate("/about")}
+            >
+              Know More
+            </button>
+          </div>
+        </div>
 
         <div className="hero-indicators">
           {slides.map((_, i) => (
@@ -95,36 +119,6 @@ function Hero() {
               onClick={() => goTo(i)}
             />
           ))}
-        </div>
-      </div>
-
-      {/* Headline left, copy + buttons right */}
-      <div className="hero-content">
-        <h1 className="hero-title">
-          From <span className="red-box">Dreams</span> to{" "}
-          <span className="red-box">Reality</span>
-        </h1>
-
-        <div className="hero-side">
-          <p className="hero-subtitle">
-            <strong>The Unstoppable Force of Purposeful Action.</strong> JSB Group doesn’t just build companies—we build ecosystems for growth, performance, and lifestyle innovation.
-          </p>
-          <div className="hero-actions">
-            <button
-              type="button"
-              className="hero-btn hero-btn-primary"
-              onClick={() => navigate("/about")}
-            >
-              Know More
-            </button>
-            <button
-              type="button"
-              className="hero-btn hero-btn-secondary"
-              onClick={() => navigate("/contact")}
-            >
-              Contact Us
-            </button>
-          </div>
         </div>
       </div>
 
