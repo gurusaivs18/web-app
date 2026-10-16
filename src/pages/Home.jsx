@@ -241,7 +241,7 @@ const directors = [
   {
     name: "Rushab Bhatnagar",
     role: "Director",
-    bio: "Rushab holds a Bachelor’s degree in Business & Economics from Exeter and a Master’s in Strategic Marketing from Imperial College. As the Co-Founder and CEO of NOVO Labs, a pioneering food technology start-up based in Bangalore, leading an innovative portfolio that includes Monkey Box, Combo@Co, Khichdi Tales, Pressman’s Sandwiches, Thaali Tales, Beijing Lu, Paratha Tales, Pizza People, and Top Dog. In addition to his role at NOVO Labs, Rushab is the Strategic Director for NB Ventures, where he spearheads the Bangalore office. NB Ventures is a growth-stage venture fund based in the U.A.E., with a robust portfolio of over 70 Indian start-ups.",
+    bio: "Master’s in strategic marketing from Imperial College, and a bachelor’s degree in Business & Economics from Exeter",
     slug: "rushab-bhatnagar",
     img: rushab,
     order: 5,
